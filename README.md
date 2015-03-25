@@ -6,7 +6,7 @@ Google Santa Tracker for Android
 [Google Santa Tracker app for Android][play-store] is an educational and entertaining tradition that brings joy to millions of children (and children at heart) across the world over the December holiday period. The app is a companion to the [Google Santa Tracker][santa-web] website, showcasing unique platform capabilities like Android Wear watchfaces, device notifications and more.
 ![Analytics](https://ga-beacon.appspot.com/UA-12846745-20/santa-tracker-android/readme?pixel)
 
-![Village Screenshot][res/village.png]
+![Village Screenshot](res/village.png)
 
 ## Features
 
@@ -24,6 +24,10 @@ It's simple. Plug your phone in (or fire up an emulator) and run:
 Alternatively, import the source code into Android Studio (File, Import Project).
 
 ## License
+All image and audio files (including *.png, *.jpg, *.svg, *.mp3, *.wav 
+and *.ogg) are licensed under the CC-BY-NC license. All other files are 
+licensed under the Apache 2 license. See the LICENSE file for details.
+
 
     Copyright 2015 Google Inc. All rights reserved.
     
@@ -42,4 +46,3 @@ Alternatively, import the source code into Android Studio (File, Import Project)
 
 [play-store]: https://play.google.com/store/apps/details?id=com.google.android.apps.santatracker
 [santa-web]: http://g.co/santatracker
-
