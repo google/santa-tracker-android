@@ -1,0 +1,141 @@
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.google.android.apps.santatracker"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permission required by the wearable app -->
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature
+            android:name="android.hardware.screen.landscape"
+            android:required="false"/>
+
+    <application
+            android:allowBackup="false"
+            android:icon="@drawable/ic_launcher_santa"
+            android:label="@string/app_name_santa"
+            tools:replace="android:allowBackup, icon, label"
+            android:largeHeap="true"
+            android:theme="@style/SantaTheme">
+
+        <!-- Google Play Games metadata tags -->
+        <meta-data
+                android:name="com.google.android.gms.games.APP_ID"
+                android:value="@string/app_id"/>
+        <meta-data
+                android:name="com.google.android.gms.appstate.APP_ID"
+                android:value="@string/app_id"/>
+
+        <!-- Play Services Version -->
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version"/>
+
+        <!-- Google Analytics global configuration -->
+        <meta-data
+                android:name="com.google.android.gms.analytics.globalConfigResource"
+                android:resource="@xml/config_analytics_global" />
+
+        <activity
+                android:name="com.google.android.apps.santatracker.launch.StartupActivity"
+                android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.SHOW_SANTA" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.PLAY_GAME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.PLAY_RANDOM_GAME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Jetpack game -->
+        <activity
+                android:name="com.google.android.apps.santatracker.games.jetpack.JetpackActivity"
+                android:label="@string/app_name_santa"
+                android:screenOrientation="sensorLandscape"
+                >
+                <intent-filter android:label="@string/app_name_santa">
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <!-- Accepts URIs that begin with "http://google.com/santatracker/android/jetpack" -->
+                    <data android:scheme="http"
+                          android:host="google.com"
+                          android:pathPrefix="/santatracker/android/jetpack" />
+                </intent-filter>
+        </activity>
+        <!-- Gumball game -->
+        <activity
+                android:name="com.google.android.apps.santatracker.games.GumballActivity"
+                android:label="@string/app_name_santa"
+                android:screenOrientation="sensorLandscape">
+                <intent-filter android:label="@string/app_name_santa">
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <!-- Accepts URIs that begin with "http://google.com/santatracker/android/gumball" -->
+                    <data android:scheme="http"
+                          android:host="google.com"
+                          android:pathPrefix="/santatracker/android/gumball" />
+                </intent-filter>
+        </activity>
+        <!-- Memory game -->
+        <activity
+                android:name="com.google.android.apps.santatracker.games.MemoryActivity"
+                android:label="@string/app_name_santa"
+                android:screenOrientation="sensorLandscape">
+                <intent-filter android:label="@string/app_name_santa">
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <!-- Accepts URIs that begin with "http://google.com/santatracker/android/memory" -->
+                    <data android:scheme="http"
+                          android:host="google.com"
+                          android:pathPrefix="/santatracker/android/memory" />
+                </intent-filter>
+         </activity>
+
+        <!-- Used for Google Play Store Campaign Measurement -->
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

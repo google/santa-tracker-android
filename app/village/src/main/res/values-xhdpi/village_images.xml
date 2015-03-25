@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <integer name="high_res">1</integer>
+    <integer name="med_res">2</integer>
+    <integer name="low_res">3</integer>
+
+    <!--Use high resolution images and values-->
+    <integer name="referenceHeight">@integer/hi_referenceHeight</integer>
+    <integer name="skyStart">@integer/hi_skyStart</integer>
+    <integer name="cloudsEnd">@integer/hi_cloudsEnd</integer>
+    <integer name="mountainsStart">@integer/hi_mountainsStart</integer>
+    <integer name="mountainsPaintStart">@integer/hi_mountainsPaintStart</integer>
+    <integer name="mountainsEnd">@integer/hi_mountainsEnd</integer>
+    <integer name="monorailStart">@integer/hi_monorailStart</integer>
+    <integer name="railStart">@integer/hi_railStart</integer>
+    <integer name="villageStart">@integer/hi_villageStart</integer>
+    <integer name="snowStart">@integer/hi_snowStart</integer>
+    <integer name="snowPaintStart">@integer/hi_snowPaintStart</integer>
+    <integer name="snowEnd">@integer/hi_snowEnd</integer>
+
+    <!--Images to use-->
+    <array name="mountainsDayIds">
+        <item>@drawable/hi_mountains_day_1</item>
+        <item>@drawable/hi_mountains_day_2</item>
+        <item>@drawable/hi_mountains_day_3</item>
+        <item>@drawable/hi_mountains_day_4</item>
+        <item>@drawable/hi_mountains_day_5</item>
+    </array>
+    <array name="mountainsNightIds">
+        <item>@drawable/hi_mountains_night_1</item>
+        <item>@drawable/hi_mountains_night_2</item>
+        <item>@drawable/hi_mountains_night_3</item>
+        <item>@drawable/hi_mountains_night_4</item>
+        <item>@drawable/hi_mountains_night_5</item>
+    </array>
+    <item type="drawable" name="rail">@drawable/hi_rail</item>
+    <array name="villageIds">
+        <item>@drawable/hi_village_1</item>
+        <item>@drawable/hi_village_2</item>
+        <item>@drawable/hi_village_3</item>
+        <item>@drawable/hi_village_4</item>
+        <item>@drawable/hi_village_5</item>
+    </array>
+    <array name="snowIds">
+        <item>@drawable/hi_snow_1</item>
+        <item>@drawable/hi_snow_2</item>
+        <item>@drawable/hi_snow_3</item>
+        <item>@drawable/hi_snow_4</item>
+        <item>@drawable/hi_snow_5</item>
+    </array>
+
+</resources>

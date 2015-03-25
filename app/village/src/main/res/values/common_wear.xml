@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <integer name="wear_scrollPercentagePerSecond">@integer/scrollPercentagePerSecond</integer>
+    <integer name="wear_monorailPercentagePerSecond">@integer/monorailPercentagePerSecond</integer>
+    <integer name="wear_planePercentagePerSecond">@integer/planePercentagePerSecond</integer>
+    <integer name="wear_ufoPercentagePerSecond">@integer/ufoPercentagePerSecond</integer>
+
+    <integer name="wear_parallaxDivider">@integer/parallaxDivider</integer>
+    <integer name="wear_villageParallax">@integer/villageParallax</integer>
+    <integer name="wear_mountainsParallax">@integer/mountainsParallax</integer>
+    <integer name="wear_cloudsParallax">@integer/cloudsParallax</integer>
+    <integer name="wear_railParallax">@integer/railParallax</integer>
+    <integer name="wear_skyParallax">@integer/skyParallax</integer>
+    <integer name="wear_snowParallax">@integer/snowParallax</integer>
+
+    <integer name="wear_skyReferenceHeight">@integer/skyReferenceHeight</integer>
+    <integer name="wear_sunReferenceHeight">@integer/sunReferenceHeight</integer>
+    <integer name="wear_sunHorizontalOffset">@integer/sunHorizontalOffset</integer>
+    <integer name="wear_sunVerticalOffset">@integer/sunVerticalOffset</integer>
+    <integer name="wear_moonHorizontalOffset">@integer/moonHorizontalOffset</integer>
+    <integer name="wear_moonVerticalOffset">@integer/moonVerticalOffset</integer>
+    <integer name="wear_ufoVerticalOffset">@integer/ufoVerticalOffset</integer>
+    <integer name="wear_planeVerticalOffset">@integer/planeVerticalOffset</integer>
+    <integer name="wear_numClouds">@integer/numClouds</integer>
+
+</resources>

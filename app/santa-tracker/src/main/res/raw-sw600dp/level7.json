@@ -1,0 +1,13 @@
+{"candycanes": [
+{ "type":10 , "xPos":1.5, "yPos":2.5 }, 
+{ "type":16 , "xPos":0.73, "yPos":3.23 }, 
+{ "type":18 , "xPos":4.262, "yPos":2.5 },
+
+{ "type":26 , "xPos":2.59, "yPos":1.92 }, 
+
+{ "type":27 , "xPos":5.9, "yPos":0.5 } 
+],
+"gumballs": [
+{ "xPos":2.0, "yPos":5.5 }
+]
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <style name="TextAppearance.Small" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">#AAFFFFFF</item>
+    </style>
+
+    <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">#FFFFFF</item>
+
+    </style>
+
+    <style name="TextAppearance.Large" parent="@android:style/TextAppearance.Large">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="DashboardViewSwitcher">
+        <item name="android:inAnimation">@anim/fade_in_dash</item>
+        <item name="android:outAnimation">@anim/fade_out_dash</item>
+    </style>
+
+    <style name="DashboardViewSwitcher.Location">
+        <item name="android:inAnimation">@anim/slide_in_bottom</item>
+        <item name="android:outAnimation">@anim/slide_out_top</item>
+    </style>
+
+</resources>

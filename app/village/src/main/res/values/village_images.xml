@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <integer name="high_res">3</integer>
+    <integer name="med_res">4</integer>
+    <integer name="low_res">5</integer>
+
+    <!--Use low resolution images and values-->
+    <integer name="referenceHeight">@integer/lo_referenceHeight</integer>
+    <integer name="skyStart">@integer/lo_skyStart</integer>
+    <integer name="cloudsEnd">@integer/lo_cloudsEnd</integer>
+    <integer name="mountainsStart">@integer/lo_mountainsStart</integer>
+    <integer name="mountainsPaintStart">@integer/lo_mountainsPaintStart</integer>
+    <integer name="mountainsEnd">@integer/lo_mountainsEnd</integer>
+    <integer name="monorailStart">@integer/lo_monorailStart</integer>
+    <integer name="railStart">@integer/lo_railStart</integer>
+    <integer name="villageStart">@integer/lo_villageStart</integer>
+    <integer name="snowStart">@integer/lo_snowStart</integer>
+    <integer name="snowPaintStart">@integer/lo_snowPaintStart</integer>
+    <integer name="snowEnd">@integer/lo_snowEnd</integer>
+
+    <!--Images to use-->
+    <array name="mountainsDayIds">
+        <item>@drawable/lo_mountains_day_2</item>
+        <item>@drawable/lo_mountains_day_3</item>
+        <item>@drawable/lo_mountains_day_4</item>
+    </array>
+    <array name="mountainsNightIds">
+        <item>@drawable/lo_mountains_night_2</item>
+        <item>@drawable/lo_mountains_night_3</item>
+        <item>@drawable/lo_mountains_night_4</item>
+    </array>
+    <item type="drawable" name="rail">@drawable/lo_rail</item>
+    <array name="villageIds">
+        <item>@drawable/lo_village_2</item>
+        <item>@drawable/lo_village_3</item>
+        <item>@drawable/lo_village_4</item>
+    </array>
+    <array name="snowIds">
+        <item>@drawable/lo_snow_2</item>
+        <item>@drawable/lo_snow_3</item>
+        <item>@drawable/lo_snow_4</item>
+    </array>
+
+</resources>

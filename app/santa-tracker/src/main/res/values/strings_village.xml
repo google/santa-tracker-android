@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Follow Santa on December 24th.</string>
+    <string name="gumball" translation_description="Name of Gumball game">Gumball</string>
+    <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Gumball will be available on December 1st.</string>
+    <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Gumball is currently unavailable.</string>
+    <string name="memory" translation_description="Name of Memory game">Memory</string>
+    <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Memory will be available on December 1st.</string>
+    <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Memory is currently unavailable.</string>
+    <string name="elf_jetpack" translation_description="Name of Elf Jetpack game">Elf Jetpack</string>
+    <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Elf Jetpack will be available on December 1st.</string>
+    <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Elf Jetpack is currently unavailable.</string>
+    <string name="video" translation_description="Description of a button that plays a video.">Video</string>
+    <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">Video will be unlocked on December %1$d.</string>
+    <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">Video is currently unavailable.</string>
+
+</resources>

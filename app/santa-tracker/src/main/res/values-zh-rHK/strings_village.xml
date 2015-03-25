@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">在 12 月 24 日追蹤聖誕老人。</string>
+    <string name="gumball" translation_description="Name of Gumball game">口香糖</string>
+    <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">「口香糖」即將在 12 月 1 日推出。</string>
+    <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">「口香糖」暫時無法提供服務。</string>
+    <string name="memory" translation_description="Name of Memory game">記憶</string>
+    <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">「回憶」即將在 12 月 1 日推出。</string>
+    <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">「記憶」暫時無法提供服務。</string>
+    <string name="elf_jetpack" translation_description="Name of Elf Jetpack game">小精靈飛行背包</string>
+    <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">「精靈的噴射器」即將在 12 月 1 日推出。</string>
+    <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">「小精靈飛行背包」暫時無法提供服務。</string>
+    <string name="rocket" translation_description="Name of Elf Rocket game">火箭雪橇</string>
+    <string name="video" translation_description="Description of a button that plays a video.">影片</string>
+    <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">影片將於 12 月解鎖%1$d。</string>
+    <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">影片目前無法提供。</string>
+</resources>

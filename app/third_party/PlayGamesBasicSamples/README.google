@@ -1,0 +1,13 @@
+URL: https://github.com/playgameservices/android-basic-samples/tarball/50e5d45ba60b3a2454b7c61738c3036dcba5e715
+Version: 50e5d45ba60b3a2454b7c61738c3036dcba5e715
+License: Apache 2.0
+License File: LICENSE
+
+Description:
+Android samples for Google Play game services that also contains the
+BaseGameUtil utility library.
+
+
+Local Modifications:
+Removed all samples to only include the BasicSamples/libraries/BaseGameUtils library project.
+Updated build.gradle to use hardcoded dependencies.

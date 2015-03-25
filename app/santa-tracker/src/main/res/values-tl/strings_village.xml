@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Sundan si Santa sa ika-24 ng Disyembre.</string>
+    <string name="gumball" translation_description="Name of Gumball game">Gumball</string>
+    <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Magiging available ang Gumball sa ika-1 ng Disyembre.</string>
+    <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Kasalukuyang hindi available ang Gumball.</string>
+    <string name="memory" translation_description="Name of Memory game">Memory</string>
+    <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Magiging available ang Memory sa ika-1 ng Disyembre.</string>
+    <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Kasalukuyang hindi available ang Memory.</string>
+    <string name="elf_jetpack" translation_description="Name of Elf Jetpack game">Elf Jetpack</string>
+    <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Magiging available ang Elf Jetpack sa ika-1 ng Disyembre.</string>
+    <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Kasalukuyang hindi available ang Elf Jetpack.</string>
+    <string name="rocket" translation_description="Name of Elf Rocket game">Rocket Sleigh</string>
+    <string name="video" translation_description="Description of a button that plays a video.">Video</string>
+    <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">Maa-unlock ang video sa Disyembre %1$d.</string>
+    <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">Kasalukuyang hind available ang video.</string>
+</resources>

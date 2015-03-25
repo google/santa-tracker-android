@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <color name="translucentLightBackground">#ddf3f3f3</color>
+    <color name="disabledMarker">#ff9c9c9c</color>
+    <color name="SantaBlue">#2196F3</color>
+    <color name="SantaBlueGreen">#009688</color>
+    <color name="SantaBlueDark">#283593</color>
+    <color name="SantaGreen">#4CAF50</color>
+    <color name="SantaGreenDark">#139538</color>
+    <color name="SantaOrange">#FF5722</color>
+    <color name="SantaOrangeDark">#D84315</color>
+    <color name="SantaPink">#cb78ad</color>
+    <color name="SantaPurple">#9C27B0</color>
+    <color name="SantaPurpleDark">#7c1873</color>
+    <color name="SantaRed">#fffb0007</color>
+    <color name="SantaRedDark">#ffba0004</color>
+    <color name="SantaYellow">#FDD835</color>
+    <color name="SantaYellowDark">#FFAB00</color>
+    <color name="SantaWhite">#FFFFFF</color>
+
+
+    <color name="brandSantaTracker">#E23B3B</color>
+    <color name="brandSantaTrackerDark">#CA222B</color>
+    <color name="brandSantaTrackerBlue">#6E97AE</color>
+
+</resources>

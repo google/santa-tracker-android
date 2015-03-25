@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+
+    <array name="backgroundIds">
+        <item>@drawable/santa_background</item>
+        <item>@drawable/santa_ambient_low_bit_background</item>
+        <item>@drawable/santa_ambient_low_bit_background</item>
+    </array>
+    <array name="figureIds">
+        <item>@drawable/santa_figure</item>
+        <item>@drawable/santa_ambient_figure</item>
+        <item>@drawable/santa_ambient_low_bit_figure</item>
+    </array>
+    <array name="faceIds">
+        <item>@drawable/santa_face</item>
+        <item>@drawable/santa_ambient_face</item>
+        <item>@drawable/santa_ambient_low_bit_face</item>
+    </array>
+    <array name="hourHandIds">
+        <item>@drawable/santa_hour_hand</item>
+        <item>@drawable/santa_ambient_hour_hand</item>
+        <item>@drawable/santa_ambient_low_bit_hour_hand</item>
+    </array>
+    <array name="minuteHandIds">
+        <item>@drawable/santa_minute_hand</item>
+        <item>@drawable/santa_ambient_minute_hand</item>
+        <item>@drawable/santa_ambient_low_bit_minute_hand</item>
+    </array>
+
+    <array name="cloudIds">
+        <item>@drawable/cloud1</item>
+        <item>@drawable/cloud7</item>
+        <item>@drawable/cloud6</item>
+        <item>@drawable/cloud5</item>
+        <item>@drawable/cloud4</item>
+        <item>@drawable/cloud3</item>
+        <item>@drawable/cloud2</item>
+    </array>
+
+    <integer-array name="cloudDegrees">
+        <item>330</item>
+        <item>285</item>
+        <item>250</item>
+        <item>168</item>
+        <item>105</item>
+        <item>70</item>
+        <item>37</item>
+    </integer-array>
+
+    <integer-array name="cloudSpeed">
+        <item>100</item>
+        <item>85</item>
+        <item>95</item>
+        <item>80</item>
+        <item>100</item>
+        <item>75</item>
+        <item>90</item>
+    </integer-array>
+
+    <integer-array name="cloudInitialStartingPercentage">
+        <item>100</item>
+        <item>95</item>
+        <item>150</item>
+        <item>95</item>
+        <item>130</item>
+        <item>100</item>
+        <item>120</item>
+    </integer-array>
+
+
+</resources>

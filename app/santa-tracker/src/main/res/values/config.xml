@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <!-- take-off and final arrival in s -->
+    <integer name="santa_takeoff" translatable="false">1419415200</integer>
+    <integer name="santa_arrival" translatable="false">1419505200</integer>
+
+    <!-- Game unlock times in s -->
+    <integer name="unlock_gumball" translatable="false">0</integer>
+    <integer name="unlock_memory" translatable="false">0</integer>
+    <integer name="unlock_jetpack" translatable="false">0</integer>
+
+    <!-- Video unlock times -->
+    <integer name="unlock_video1" translatable="false">0</integer>
+    <!-- Dec 15, 2014 -->
+    <integer name="unlock_video15" translatable="false">1418601600</integer>
+    <!-- Dec 23, 2014 -->
+    <integer name="unlock_video23" translatable="false">1419292800</integer>
+    <!-- App Indexing -->
+    <!-- Deep link intent filter entries in AndroidManifest.xml must match this prefix -->
+    <string name="santa_tracker_deep_link_prefix" translatable="false">http/google.com/santatracker/android</string>
+    <!-- deep link component names -->
+    <string name="gumball_game_id" translatable="false">gumball</string>
+    <string name="jetpack_game_id" translatable="false">jetpack</string>
+    <string name="memory_game_id" translatable="false">memory</string>
+
+</resources>

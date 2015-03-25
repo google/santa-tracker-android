@@ -1,0 +1,28 @@
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Stebėti Kalėdų Senelį</string>
+    <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Kalėdų Senelis užsiėmęs ruošdamasis kitiems metams.</string>
+    <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Bandoma susisiekti su Kalėdų Seneliu</string>
+    <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Vis dar bandoma susisiekti su Kalėdų Seneliu</string>
+    <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Teisinės nuostatos ir privatumas</string>
+    <string name="legal_notice_text" translation_description="Link for legal notices">Teisinė informacija</string>
+    <string name="privacy_policy" translation_description="Link for privacy policy">Privatumo politika</string>
+    <string name="terms_of_service" translation_description="Link for terms of services">Paslaugų teikimo sąlygos</string>
+    <string name="open_source_licenses" translation_description="Licenses for open source components">Atvirojo šaltinio licencijos</string>
+    <string name="sign_out">Atsijungti</string>
+</resources>

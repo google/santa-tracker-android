@@ -1,0 +1,28 @@
+<!--
+  Copyright (C) 2015 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">追蹤聖誕老人</string>
+    <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">聖誕老人正忙著為明年作好準備。</string>
+    <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">正在嘗試聯絡聖誕老人</string>
+    <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">仍在嘗試聯絡聖誕老人</string>
+    <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">法律與私隱</string>
+    <string name="legal_notice_text" translation_description="Link for legal notices">法律聲明</string>
+    <string name="privacy_policy" translation_description="Link for privacy policy">私隱權政策</string>
+    <string name="terms_of_service" translation_description="Link for terms of services">服務條款</string>
+    <string name="open_source_licenses" translation_description="Licenses for open source components">開放原始碼授權</string>
+    <string name="sign_out">登出</string>
+</resources>

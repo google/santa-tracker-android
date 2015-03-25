@@ -1,0 +1,11 @@
+URL: https://android.googlesource.com/platform/frameworks/volley/+archive/master.tar.gz
+Version: 35ce77836d8e1e951b8e4b2ec43e07fb7336dab6
+License: Apache 2.0
+License File: LICENSE
+Description:
+Volley is an HTTP library for Android applications. It provides thread
+scheduling of blocking I/O operations, multiple concurrent network
+connections, transparent response caching with standard HTTP cache coherency,
+request prioritization, and configurable retry policies.
+Local Modifications:
+No Modifications
