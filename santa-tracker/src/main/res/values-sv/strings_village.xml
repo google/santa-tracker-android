@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Följ tomten den 24 december.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Spelet Gumball går att spela den 1 december.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Gumball är inte tillgängligt just nu.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Spelet Memory går att spela den 1 december.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Memoryär inte tillgängligt just nu.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Spelet Elf Jetpack går att spela den 1 december.</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Tomtenisse-jetpack är inte tillgängligt just nu.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Spelet Snowglobe går att spela den 1 december.</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowglobe går inte att spela just nu.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Spelet Rocket Sleigh går att spela den 1 december.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Rocket Sleigh går inte att spela just nu</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Spelet Dasher Dancer går att spela den 1 december.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Dasher Dancer går inte att spela just nu.</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Spelet Snowball går att spela den 1 december.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Spelet Snowball går inte att spela just nu.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">Du kan spela Snowdown från den 1 december.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Det går inte att spela Snowdown just nu.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">Strömmad video</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">Vi låser upp videon den %1$d december.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">Videon går inte att spela upp just nu.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">Logga in så kan du se topplistor och resultat</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">Visa topplista</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">Spela</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">Titta</string>
+</resources>

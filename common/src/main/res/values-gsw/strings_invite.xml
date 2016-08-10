@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Freunde dazu einladen, die Reise des Weihnachtsmanns mit Google zu verfolgen</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Begib dich auf die Spuren des Weihnachtsmanns und verfolge ihn auf seinem Flug um die Welt!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Ich habe in \"Auf den Spuren des Weihnachtsmanns\" von Google das Spiel %2$s mit den Wichteln gespielt und %1$d Punkte erreicht. Schaffst du das auch?</string>
+</resources>

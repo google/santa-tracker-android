@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="planePercentagePerSecond">25</integer>
+    <integer name="ufoPercentagePerSecond">30</integer>
+    <integer name="cloudPercentagePerSecond">1</integer>
+    <integer name="cloudSpeedJitterPercent">25</integer>
+
+    <integer name="referenceHeight">1024</integer>
+    <integer name="ufoVerticalOffset">115</integer>
+    <integer name="planeVerticalOffset">120</integer>
+    <integer name="numClouds">5</integer>
+    <integer name="skyStart">0</integer>
+    <integer name="cloudsEnd">512</integer>
+</resources>

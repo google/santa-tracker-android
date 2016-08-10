@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="achievement_santas_dance_party" translatable="false">CgkIioKF2qwCEAIQGw</string>
+    <string name="achievement_elfs_dance_party" translatable="false">CgkIioKF2qwCEAIQHA</string>
+    <string name="achievement_rudolphs_dance_party" translatable="false">CgkIioKF2qwCEAIQHQ</string>
+    <string name="achievement_snowmans_dance_party" translatable="false">CgkIioKF2qwCEAIQHg</string>
+</resources>

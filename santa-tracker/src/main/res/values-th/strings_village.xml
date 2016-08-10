@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">ติดตามซานต้าในวันที่ 24 ธันวาคม</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Gumball จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Gumball ไม่สามารถเล่นได้ในขณะนี้</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Memory จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">หน่วยความจำไม่พร้อมใช้งานในขณะนี้</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Elf Jetpack จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Elf Jetpack ไม่สามารถเล่นได้ในขณะนี้</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Snowglobe จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">ตอนนี้ Snowglobe ยังไม่มีให้เล่น</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Rocket Sleigh จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">ตอนนี้ Rocket Sleigh ยังไม่มีให้เล่น</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Dasher Dancer จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">ตอนนี้ Dasher Dancer ยังไม่มีให้เล่น</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowball game จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">ตอนนี้ Snowball ยังไม่มีให้เล่น</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowdown จะเปิดให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowdown ยังไม่เปิดให้เล่นในขณะนี้</string>
+  <string name="video" translation_description="Description of a button that plays a video.">วิดีโอ</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">วิดีโอจะปลดล็อกในวันที่ %1$d ธันวาคม</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">ตอนนี้วิดีโอยังไม่สามารถดูได้</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">ลงชื่อเข้าใช้เพื่อดูลีดเดอร์บอร์ดและรางวัลพิเศษ</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">ดูลีดเดอร์บอร์ด</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">เล่น</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">ดู</string>
+</resources>

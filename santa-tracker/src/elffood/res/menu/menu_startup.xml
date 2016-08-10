@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/media_route_menu_item"
+        android:title="@string/ccl_media_route_menu_title"
+        app:showAsAction="always"
+        app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"/>
+
+    <item
+            android:id="@+id/menu_app_invite"
+            android:title="@string/menu_share"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/open_help"
+            android:title="@string/menu_help"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/legal"
+            android:title="@string/legal_notice"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/github_santa"
+            android:title="@string/open_source_repo_santa"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/github_pienoon"
+            android:title="@string/open_source_repo_pie_noon"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/sign_out"
+            android:title="@string/sign_out"
+            app:showAsAction="never"
+            android:visible="false" />
+
+    <!-- TODO temp menu items for testing notifications -->
+    <item
+            android:id="@+id/notification_nearby"
+            android:title="Notification Nearby"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/notification_takeoff"
+            android:title="Notification Takeoff"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/notification_location"
+            android:title="Notification Location"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/launch_mode"
+            android:title="Launch Mode"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/countdown_mode"
+            android:title="Countdown Mode"
+            app:showAsAction="never"/>
+</menu>

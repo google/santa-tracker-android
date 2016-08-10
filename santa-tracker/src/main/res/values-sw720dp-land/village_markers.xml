@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- sw720dp-land -->
+    <dimen name="markerPaddingSides">48dp</dimen>
+    <dimen name="markerPaddingBottom">60dp</dimen>
+    <dimen name="markerHeight">300dp</dimen>
+</resources>

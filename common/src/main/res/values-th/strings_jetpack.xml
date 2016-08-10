@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="why_sign_in" translation_description="Encouragement text shown beside Sign In button.">ลงชื่อเข้าใช้เพื่อปลดล็อกรางวัลพิเศษและโพสต์คะแนนของคุณ</string>
+  <string name="play_again" translation_description="Button text for playing the game again">เล่นอีกครั้ง</string>
+  <string name="score" translation_description="Player's total score after playing the game">คะแนน</string>
+</resources>

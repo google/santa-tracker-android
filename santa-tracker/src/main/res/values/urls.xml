@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="legal_privacy">
+        <item>@string/legal_notice_text</item>
+        <item>@string/privacy_policy</item>
+        <item>@string/terms_of_service</item>
+        <item>@string/seismic</item>
+        <item>@string/open_source_licenses</item>
+    </array>
+
+    <string name="url_help" translatable="false">http://support.google.com/santatracker</string>
+    <string name="url_legal" translatable="false">http://m.google.com/legalnotices</string>
+    <string name="url_privacy" translatable="false">http://www.google.com/policies/privacy</string>
+    <string name="url_tos" translatable="false">http://www.google.com/intl/en/policies/terms/</string>
+    <string name="url_seismic" translatable="false">http://apache.org/licenses/LICENSE-2.0</string>
+    <string name="url_github_santa" translatable="false">https://github.com/google/santa-tracker-android</string>
+    <string name="url_github_pienoon" translatable="false">https://github.com/google/pienoon</string>
+</resources>

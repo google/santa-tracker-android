@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Invitați-vă prietenii să-l urmărească pe Moș Crăciun cu Google</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Încercați Pe urmele lui Moș Crăciun și urmăriți-l pe Moș Crăciun cum călătorește în întreaga lume!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Am obținut un scor de %1$d jucând %2$s cu elfii, în Pe urmele lui Moș Crăciun de la Google. Mă puteți întrece?</string>
+</resources>

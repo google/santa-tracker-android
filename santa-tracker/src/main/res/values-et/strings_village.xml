@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Jõuluvana saate jälgida 24. detsembril.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Gumball on saadaval alates 1. detsembrist.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Nätsupall pole praegu saadaval.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Memory on saadaval alates 1. detsembrist.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Mälu pole praegu saadaval.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Elf Jetpack on saadaval alates 1. detsembrist.</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Haldja rakettranits pole praegu saadaval.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Snowglobe on saadaval alates 1. detsembrist.</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowglobe pole praegu saadaval.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Rocket Sleigh on saadaval alates 1. detsembrist.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Rocket Sleigh pole praegu saadaval.</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Dasher Dancer on saadaval alates 1. detsembrist.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Dasher Dancer pole praegu saadaval.</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowball\'i mäng on saadaval alates 1. detsembrist.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowball\'i mäng pole praegu saadaval.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowdown on saadaval alates 1. detsembrist.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowdown ei ole praegu kättesaadav.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">Video</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">Video avatakse %1$d. detsembril.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">Video pole praegu saadaval.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">Logige sisse, et vaadata edetabelit ja saavutusi</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">Kuva edetabel</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">Mängige</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">Esita</string>
+</resources>

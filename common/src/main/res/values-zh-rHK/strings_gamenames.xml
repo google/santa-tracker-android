@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="gumball" translation_description="Name of Gumball game">Gumball</string>
+  <string name="memory" translation_description="Name of Memory game">Memory</string>
+  <string name="elf_jetpack" translation_description="Name of Elf Jetpack game">小精靈飛行背包</string>
+  <string name="snowglobe" translation_description="Name of snow globe game">雪景球</string>
+  <string name="rocket" translation_description="Name of Elf Rocket game">火箭雪橇</string>
+  <string name="dancer" translation_description="Name of Dancer game.">猛衝‧跳舞</string>
+  <string name="snowball" translation_description="Name of snowball game.">雪球遊戲</string>
+  <string name="snowdown" translation_description="Name of Snowdown game (snowdown is a play on words based on Showdown, with snow)">Snowdown</string>
+</resources>

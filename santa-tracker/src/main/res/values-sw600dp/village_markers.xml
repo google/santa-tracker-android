@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- sw600dp -->
+    <dimen name="markerPaddingSides">30dp</dimen>
+    <dimen name="markerPaddingBottom">85dp</dimen>
+    <dimen name="markerHeight">500dp</dimen>
+</resources>

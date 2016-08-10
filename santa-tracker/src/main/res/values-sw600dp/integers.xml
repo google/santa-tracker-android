@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="village_columns">1</integer>
+
+    <dimen name="statusFragmentWidth">375dp</dimen>
+    <dimen name="statusFragmentMarginBottom">26dp</dimen>
+    <dimen name="infoWindowMaxWidth">450dp</dimen>
+    <dimen name="santacamButtonHeight">25dp</dimen>
+
+</resources>

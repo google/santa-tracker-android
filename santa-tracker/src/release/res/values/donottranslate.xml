@@ -1,0 +1,6 @@
+<resources>
+    <string name="no_next_destination">-</string>
+    <string name="colon">":"</string>
+    <string name="countdown_initial">00</string>
+</resources>
+

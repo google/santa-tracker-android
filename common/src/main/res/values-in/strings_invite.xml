@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Undang teman Anda untuk melacak Sinterklas dengan Google</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Coba Pelacak Sinterklas dan tonton Sinterklas terbang ke seluruh dunia!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Saya memperoleh skor %1$d saat bermain game %2$s dengan para kurcaci di Google Pelacak Sinterklas. Anda bisa mengalahkannya?</string>
+</resources>

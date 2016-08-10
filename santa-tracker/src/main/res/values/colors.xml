@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="translucentLightBackground">#ddf3f3f3</color>
+    <color name="disabledMarker">#ff9c9c9c</color>
+    <color name="SantaBlue">#2196F3</color>
+    <color name="SantaBlueGreen">#009688</color>
+    <color name="SantaBlueDark">#283593</color>
+    <color name="SantaGreen">#4CAF50</color>
+    <color name="SantaGreenDark">#139538</color>
+    <color name="SantaOrange">#FF5722</color>
+    <color name="SantaOrangeDark">#D84315</color>
+    <color name="SantaPink">#cb78ad</color>
+    <color name="SantaPurple">#9C27B0</color>
+    <color name="SantaPurpleDark">#7c1873</color> <!-- Purple 800 -->
+    <color name="SantaRed">#fffb0007</color>
+    <color name="SantaRedDark">#ffba0004</color>
+    <color name="SantaYellow">#FDD835</color>
+    <color name="SantaYellowDark">#FFAB00</color>
+    <color name="SantaWhite">#FFFFFF</color>
+    <color name="SantaGreenLight">#9affb4</color>
+
+    <color name="ice">#81E3F7</color>
+    <color name="MediumBlue">#5DAED8</color>
+
+    <color name="villageToolbarLight">#64DDF6</color>
+    <color name="villageToolbarDark">#08397E</color>
+
+    <color name="trackerActionBarBg">#DDE23B3B</color>
+    <color name="popupMessage">#df6a95d6</color>
+    <color name="sky">#93c8e1</color>
+    <color name="yellow">#EEFF41</color>
+
+    <color name="brandSantaTracker">#E23B3B</color>
+    <color name="brandSantaTrackerDark">#CA222B</color>
+    <color name="brandSantaTrackerBlue">#6E97AE</color>
+
+    <color name="trackerPrimary">#16cc82</color>
+    <color name="trackerPrimaryHighlight">#1DC07D</color>
+    <color name="trackerPrimaryDark">#109f65</color>
+    <color name="trackerAccent">#87d745</color>
+
+    <color name="overlayDestinationCardFilter">#b2138e61</color>
+    <color name="destinationButtonNormal">#89000000</color>
+    <color name="destinationButtonHighlight">#89999999</color>
+    <color name="SantaTranslucentGreen">#eb24da76</color>
+</resources>

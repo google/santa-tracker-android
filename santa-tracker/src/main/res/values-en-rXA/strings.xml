@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">[F&#xF6;&#x13C;&#x13C;&#xF6;&#x175; &#x160;&#xE5;&#xF1;&#x163;&#xE5; one two]</string>
+  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">[&#x160;&#xE5;&#xF1;&#x163;&#xE5; &#x163;&#xE5;&#x137;&#xE9;&#x161; &#xF6;&#x192;&#x192; &#xEE;&#xF1; one two three four]</string>
+  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">[&#x160;&#xE5;&#xF1;&#x163;&#xE5; &#xEE;&#x161; &#x431;&#xFB;&#x161;&#xFD; &#xFE;&#x155;&#xE9;&#xFE;&#xE5;&#x155;&#xEE;&#xF1;&#x11D; &#x192;&#xF6;&#x155; &#xF1;&#xE9;x&#x163; &#xFD;&#xE9;&#xE5;&#x155;. one two three four five six seven eight]</string>
+  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">[V&#xEE;&#xE9;&#x175; 2014 &#x161;&#x163;&#xF6;&#xFE;&#x161; one two]</string>
+  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">[&#x162;&#x155;&#xFD;&#xEE;&#xF1;&#x11D; &#x163;&#xF6; &#x155;&#xE9;&#xE5;&#xE7;&#x125; &#x160;&#xE5;&#xF1;&#x163;&#xE5; one two three four five]</string>
+  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">[&#x160;&#x163;&#xEE;&#x13C;&#x13C; &#x163;&#x155;&#xFD;&#xEE;&#xF1;&#x11D; &#x163;&#xF6; &#x155;&#xE9;&#xE5;&#xE7;&#x125; &#x160;&#xE5;&#xF1;&#x163;&#xE5; one two three four five six]</string>
+  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">[&#xD0;&#xE5;&#xFD;&#x161; one]</string>
+  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">[&#x124;&#x155;&#x161; one]</string>
+  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">[M&#xEE;&#xF1; one]</string>
+  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">[&#x160;&#xE9;&#xE7; one]</string>
+  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">[&#x160;&#x125;&#xE5;&#x155;&#xE9; one]</string>
+  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">[&#x160;&#x125;&#xE5;&#x155;&#xE9; &#x175;&#xEE;&#x163;&#x125; &#x192;&#x155;&#xEE;&#xE9;&#xF1;&#xF0;&#x161; one two three]</string>
+  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">[&#x13B;&#xE9;&#x11D;&#xE5;&#x13C; &amp; &#xFE;&#x155;&#xEE;v&#xE5;&#xE7;&#xFD; one two]</string>
+  <string name="legal_notice_text" translation_description="Link for legal notices">[&#x13B;&#xE9;&#x11D;&#xE5;&#x13C; &#xF1;&#xF6;&#x163;&#xEE;&#xE7;&#xE9; one two]</string>
+  <string name="privacy_policy" translation_description="Link for privacy policy">[&#xDE;&#x155;&#xEE;v&#xE5;&#xE7;&#xFD; &#xFE;&#xF6;&#x13C;&#xEE;&#xE7;&#xFD; one two]</string>
+  <string name="terms_of_service" translation_description="Link for terms of services">[&#x162;&#xE9;&#x155;m&#x161; &#xF6;&#x192; &#x161;&#xE9;&#x155;v&#xEE;&#xE7;&#xE9; one two]</string>
+  <string name="open_source_licenses" translation_description="Licenses for open source components">[&#xD6;&#xFE;&#xE9;&#xF1; &#x161;&#xF6;&#xFB;&#x155;&#xE7;&#xE9; &#x13C;&#xEE;&#xE7;&#xE9;&#xF1;&#x161;&#xE9;&#x161; one two three]</string>
+  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">[&#x160;&#xE5;&#xF1;&#x163;&#xE5; &#xF6;&#xF1; &#x11C;&#xEE;&#x163;&#x124;&#xFB;&#x431; one two]</string>
+  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">[&#xDE;&#xEE;&#xE9; &#xD1;&#xF6;&#xF6;&#xF1; &#xF6;&#xF1; &#x11C;&#xEE;&#x163;&#x124;&#xFB;&#x431; one two three four]</string>
+  <string name="scene_not_available" translation_description="Not available yet">[&#xD1;&#xF6;&#x163; &#xE5;v&#xE5;&#xEE;&#x13C;&#xE5;&#x431;&#x13C;&#xE9; &#xFD;&#xE9;&#x163; one two three]</string>
+  <string name="sign_out">[&#x160;&#xEE;&#x11D;&#xF1; &#xD6;&#xFB;&#x163; one]</string>
+  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">[&#xDB;&#xF1;&#x163;&#xEE;&#x13C; &#x162;&#xE5;&#x137;&#xE9;&#xF6;&#x192;&#x192; one two]</string>
+</resources>

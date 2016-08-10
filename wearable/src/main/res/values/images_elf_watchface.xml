@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="elfBackgroundIds">
+        <item>@drawable/elf_background_day</item>
+        <item>@drawable/elf_low_bit_background</item>
+        <item>@drawable/elf_low_bit_background</item>
+        <item>@drawable/elf_low_bit_background</item>
+        <item>@drawable/elf_background_morning</item>
+        <item>@drawable/elf_background_evening</item>
+        <item>@drawable/elf_background_night</item>
+    </array>
+    <array name="elfFigureIds">
+        <item>@drawable/elf_figure</item>
+        <item>@drawable/elf_ambient_figure</item>
+        <item>@drawable/elf_low_bit_figure</item>
+        <item>@drawable/elf_burn_protection_figure</item>
+    </array>
+    <array name="elfFaceIds">
+        <item>@drawable/elf_face</item>
+        <item>@drawable/elf_ambient_face</item>
+        <item>@drawable/elf_low_bit_face</item>
+        <item>@drawable/elf_burn_protection_face</item>
+    </array>
+    <array name="elfHourHandIds">
+        <item>@drawable/elf_hour_hand</item>
+        <item>@drawable/elf_hour_hand_ambient</item>
+        <item>@drawable/elf_low_bit_hour_hand</item>
+        <item>@drawable/elf_burn_protection_hour_hand</item>
+    </array>
+    <array name="elfMinuteHandIds">
+        <item>@drawable/elf_minute_hand</item>
+        <item>@drawable/elf_ambient_minute_hand</item>
+        <item>@drawable/elf_low_bit_minute_hand</item>
+        <item>@drawable/elf_burn_protection_minute_hand</item>
+    </array>
+
+</resources>

@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_yellow"
+    tools:context="com.google.android.apps.santatracker.dasherdancer.DasherDancerActivity" >
+
+    <com.google.android.apps.santatracker.dasherdancer.NoSwipeViewPager
+	    android:id="@+id/character_pager"
+   		android:layout_width="match_parent"
+   		android:layout_height="match_parent" />
+    
+		<ImageButton
+	    android:id="@+id/nav_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="20dp"
+	    android:background="@null"
+	    android:src="@drawable/btn_x_out_pressable"
+	    android:scaleType="center"
+	    android:adjustViewBounds="true"
+	    android:onClick="onNavClick" />
+		
+		<ImageButton
+	    android:id="@+id/change_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="20dp"
+	    android:background="@null"
+	    android:src="@drawable/btn_select_character_pressable"
+	    android:scaleType="center"
+	    android:adjustViewBounds="true"
+	    android:onClick="onChangeClick" />
+
+		<ImageButton
+	    android:id="@+id/left_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentBottom="true"
+        android:padding="20dp"
+	    android:background="@drawable/dasher_ripple_small"
+	    android:src="@drawable/icn_arrow_left"
+	    android:scaleType="center"
+	    android:adjustViewBounds="true"
+	    android:onClick="onLeftClick"
+        android:visibility="gone"/>
+		
+		<ImageButton
+	    android:id="@+id/right_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentBottom="true"
+        android:padding="20dp"
+	    android:background="@drawable/dasher_ripple_small"
+	    android:src="@drawable/icn_arrow_right"
+	    android:scaleType="center"
+	    android:adjustViewBounds="true"
+	    android:onClick="onRightClick" />
+
+        <ImageView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_mint_loading_spinner"/>
+		
+</RelativeLayout>

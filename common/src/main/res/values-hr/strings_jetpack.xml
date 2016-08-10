@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="why_sign_in" translation_description="Encouragement text shown beside Sign In button.">Prijavite se da biste otključali uspjehe i objavili rezultat!</string>
+  <string name="play_again" translation_description="Button text for playing the game again">Igraj ponovo</string>
+  <string name="score" translation_description="Player's total score after playing the game">Rezultat</string>
+</resources>

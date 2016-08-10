@@ -1,0 +1,71 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinator"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.google.android.apps.santatracker.map.SantaMapActivity">
+
+    <fragment
+        android:id="@+id/fragment_map"
+        class="com.google.android.apps.santatracker.map.SantaMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/card_stream_hidden_peek_height"/>
+
+    <!--  Touch interceptor that records activity during 'map mode' -->
+    <FrameLayout
+        android:id="@+id/main_touchinterceptor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/card_stream_hidden_peek_height"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <!-- Card stream (including dashboard) -->
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/toolbar_elevation"
+        android:clickable="true"
+        app:behavior_hiddenPeekHeight="@dimen/card_stream_hidden_peek_height"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="@dimen/card_stream_height"
+        app:layout_behavior="com.google.android.apps.santatracker.map.BottomSheetBehavior"
+        tools:ignore="UnusedAttribute">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/stream"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"/>
+
+        <ImageButton
+            android:id="@+id/top"
+            style="@style/TopButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_upward_white_36dp"
+            android:contentDescription="@string/return_to_map"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <com.google.android.apps.santatracker.map.SantaCamButton
+        android:id="@+id/santacam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/touch_for_santa_cam"
+        android:src="@drawable/santacam"
+        android:visibility="gone"
+        app:layout_anchor="@id/bottom_sheet"
+        app:layout_anchorGravity="top|end"
+        tools:visibility="visible"/>
+
+</android.support.design.widget.CoordinatorLayout>

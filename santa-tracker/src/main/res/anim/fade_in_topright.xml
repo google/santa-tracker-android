@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fade in to center while scaling down - scaling and alpha effect. -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:fillAfter="true"
+     android:fillBefore="true"
+     android:fillEnabled="true">
+
+    <translate android:duration="@android:integer/config_mediumAnimTime"
+               android:fromXDelta="25%"
+               android:fromYDelta="-100%"
+               android:toXDelta="0%"
+               android:toYDelta="0%"/>
+
+
+    <alpha
+            android:duration="@android:integer/config_mediumAnimTime"
+            android:fromAlpha="0.0"
+            android:toAlpha="1.0"/>
+
+</set>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Следвайте Дядо Коледа на 24 декември.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Gumball ще е налице на 1 декември.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Понастоящем „Gumball“ не е налице.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Memory ще е налице на 1 декември.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Понастоящем „Memory“ не е налице.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Elf Jetpack ще е налице на 1 декември.</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Понастоящем „Реактивно джудже“ не е налице.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Snowglobe ще е налице на 1 декември.</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Понастоящем Snowglobe не е налице.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Rocket Sleigh ще е налице на 1 декември.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Понастоящем Rocket Sleigh не е налице</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Dasher Dancer ще е налице на 1 декември.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Понастоящем Dasher Dancer не е налице</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Играта „Snowball“ ще е налице на 1 декември.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Понастоящем играта „Snowball“ не е налице.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowdown ще е налице на 1 декември.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Понастоящем Snowdown не е налице.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">Видеоклип</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">Видеоклипът ще бъде отключен на %1$d декември.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">Понастоящем видеоклипът не е налице.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">Влезте в профила си, за да разгледате класациите и постиженията</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">Преглед на класацията</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">Игра</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">Гледане</string>
+</resources>

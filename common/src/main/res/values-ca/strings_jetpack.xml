@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="why_sign_in" translation_description="Encouragement text shown beside Sign In button.">Inicieu la sessió per desbloquejar assoliments i publicar la vostra puntuació</string>
+  <string name="play_again" translation_description="Button text for playing the game again">Torna a jugar</string>
+  <string name="score" translation_description="Player's total score after playing the game">Puntuació</string>
+</resources>

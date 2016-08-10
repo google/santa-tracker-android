@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="village_columns">2</integer>
+    <integer name="scrollPercentagePerSecond">10</integer>
+    <integer name="monorailPercentagePerSecond">25</integer>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Sigue a Papá Noel el 24 de diciembre.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Gumball estará disponible el 1 de diciembre.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Gumball no está disponible en este momento.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Memory estará disponible el 1 de diciembre.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Memory no está disponible en este momento.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Elf Jetpack estará disponible el 1 de diciembre.</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Elf Jetpack no está disponible en este momento.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Snowglobe estará disponible el 1 de diciembre.</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowglobe no está disponible en estos momentos.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Rocket Sleigh estará disponible el 1 de diciembre.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Rocket Sleigh no está disponible en estos momentos.</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Dasher Dancer estará disponible el 1 de diciembre.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Dasher Dancer no está disponible en estos momentos.</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowball game estará disponible el 1 de diciembre.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowball game no está disponible en estos momentos.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowdown estará disponible el 1 de diciembre.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowdown no está disponible en estos momentos.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">Vídeo</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">Vídeo se desbloqueará el %1$d de diciembre.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">Vídeo no está disponible en estos momentos.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">Inicia sesión para ver los marcadores y los logros</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">Ver marcadores</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">Reproducir</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">Ver</string>
+</resources>

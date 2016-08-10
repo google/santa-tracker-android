@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="why_sign_in" translation_description="Encouragement text shown beside Sign In button.">Đăng nhập để gặt hái thành tích và đăng điểm của bạn!</string>
+  <string name="play_again" translation_description="Button text for playing the game again">Chơi lại</string>
+  <string name="score" translation_description="Player's total score after playing the game">Điểm</string>
+</resources>

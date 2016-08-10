@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gbg_color_score_summary_background">#B2E3F9</color>
+    <color name="mmg_color_bg">#885931</color>
+    <color name="red_dark">#ffcc0000</color>
+    <color name="transparent_overlay">#CCB2E3F9</color>
+    <color name="green_transparent_overlay">#CC0A712E</color>
+
+</resources>

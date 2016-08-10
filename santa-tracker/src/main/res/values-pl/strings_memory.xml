@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="mmg_score" translation_description="Header for score">WYNIK</string>
+  <string name="mmg_level" translation_description="Header for level">POZIOM</string>
+  <string name="mmg_summary_playagain" translation_description="Button text for playing again">ZAGRAJ PONOWNIE</string>
+  <string name="mmg_btn_pause" translation_description="Button hint for pausing the game">Wstrzymaj gr&#x119;</string>
+  <string name="mmg_btn_resume" translation_description="Button hint for resuming the game">Wzn&#xF3;w gr&#x119;</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">Estem creant la decoraci&#xF3;.</string>
+  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">Fes una foto</string>
+  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">Torna-ho a provar</string>
+  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">Surt</string>
+  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">Compartir la bola de neu de vidre mitjan&#xE7;ant...</string>
+  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">Estem creant la imatge.</string>
+</resources>

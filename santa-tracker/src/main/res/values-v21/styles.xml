@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CardBorderlessButton.Base" parent="android:style/Widget.Material.Button.Borderless"></style>
+
+    <style name="RedButton" parent="android:Widget.Material.Button.Borderless.Colored">
+        <item name="android:colorButtonNormal">@color/SantaRed</item>
+        <item name="android:colorControlHighlight">@color/SantaWhite</item>
+        <item name="android:textColor">@color/SantaWhite</item>
+    </style>
+
+</resources>

@@ -1,0 +1,17 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion rootProject.ext.tools
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+    }
+}
+
+dependencies {
+    compile project(':common')
+    compile rootProject.ext.supportV4
+    compile rootProject.ext.seismic
+}

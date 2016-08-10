@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+ext.densityList = ['mdpi', 'hdpi', 'xhdpi', 'xxhdpi', 'xxxhdpi']
+
+android {
+    compileSdkVersion 23
+    // Need tools version 23, only major versions are available on build server
+    buildToolsVersion rootProject.ext.tools
+
+    defaultConfig {
+        applicationId "com.google.android.apps.santatracker"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 3000100 // We have XX.YY.ZZZ digits available
+        versionName "3.0.10"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+            // Enabling multidex support.
+            multiDexEnabled true
+        }
+
+        release {
+            minifyEnabled true
+            proguardFile 'proguard.txt'
+        }
+    }
+
+    splits {
+        density {
+            // TODO: re-enable when we can figure out how to include <=dpi, not just =dpi
+            // as this is preventing games from auto-downsampling bitmaps to prevent OOMs
+            enable false
+            reset()
+            include(*densityList)
+            compatibleScreens 'small', 'normal', 'large', 'xlarge'
+        }
+    }
+}
+// Apply signing configurations, keys and other non-version-controlled things
+if (file('../internal/santa-tracker.gradle').exists()) {
+    apply from: '../internal/santa-tracker.gradle'
+}
+
+// Generate unique versionCodes for each APK variant
+// XXYYYYYYY - XX is density, YYYYYYY is the "natural" version code
+// Any new variations get added to the front
+import com.android.build.OutputFile;
+android.applicationVariants.all { variant ->
+    variant.outputs.each { output ->
+        def densityFilter = output.getFilter(OutputFile.DENSITY)
+        int densityVersionCode = (densityList.indexOf(densityFilter) + 1) * 10000000
+        output.versionCodeOverride = variant.mergedFlavor.versionCode + densityVersionCode
+    }
+}
+
+// Support library aar dependencies are loaded from the SDK
+dependencies {
+    compile project(':village')
+    compile project(':common')
+    compile project(':CCL')
+    compile project(':third_party:ShowcaseView')
+    compile project(':dasherdancer')
+    compile project(':rocketsleigh')
+    compile project(':snowdown')
+    wearApp project(':wearable')
+    
+    compile files('../third_party/jbox2d/jbox2d-library-2.2.1.1.jar')
+    compile files('../third_party/youtube/YouTubeAndroidPlayerApi.jar')
+
+    compile rootProject.ext.supportV4
+    compile rootProject.ext.design
+    compile rootProject.ext.appCompat
+    compile rootProject.ext.design
+    compile rootProject.ext.mediaRouter
+    compile rootProject.ext.cardView
+    compile rootProject.ext.recyclerView
+    compile rootProject.ext.leanback
+    compile rootProject.ext.multidex
+
+    compile rootProject.ext.glide
+    compile rootProject.ext.androidMapsUtils
+
+    compile rootProject.ext.playServicesAppindexing
+    compile rootProject.ext.playServicesBase
+    compile rootProject.ext.playServicesBasement
+    compile rootProject.ext.playServicesCast
+    compile rootProject.ext.playServicesGames
+    compile rootProject.ext.playServicesMaps
+    compile rootProject.ext.playServicesWearable
+
+    compile rootProject.ext.firebaseCore
+    compile rootProject.ext.firebaseAnalytics
+    compile rootProject.ext.firebaseConfig
+}
+
+apply plugin: 'com.google.gms.google-services'

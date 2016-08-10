@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.android.apps.santatracker.rocketsleigh" >
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:largeHeap="true">
+
+        <activity
+            android:name="com.google.android.apps.santatracker.rocketsleigh.RocketSleighActivity"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="layoutDirection|orientation|uiMode|screenLayout|screenSize"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://google.com/santatracker/android/rocketsleigh" -->
+                <data android:scheme="http"
+                    android:host="google.com"
+                    android:pathPrefix="/santatracker/android/rocketsleigh" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.apps.santatracker.rocketsleigh.EndGameActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+    </application>
+</manifest>

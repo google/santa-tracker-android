@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.santatracker.launch.SquareFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/square_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    style="@style/LauncherCard">
+
+    <ImageView
+        android:id="@+id/card_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/android_game_cards_track_santa" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/card_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/SantaWhite"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:textAllCaps="true"
+        tools:text="Track Santa"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/card_disabled"
+        android:background="@color/SantaTranslucentGreen"
+        android:paddingBottom="20dp"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/locked"
+            android:contentDescription="@null"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/card_verb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="@dimen/card_padding_big_verb_text"
+        android:gravity="center"
+        android:rotation="-10"
+        tools:text="Play"
+        style="@style/BigVerbText"/>
+
+</com.google.android.apps.santatracker.launch.SquareFrameLayout>

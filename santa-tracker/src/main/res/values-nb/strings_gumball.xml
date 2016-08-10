@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="gbg_btn_pause" translation_description="Button hint for pausing the game">Sett spillet p&#xE5; pause</string>
+  <string name="gbg_btn_resume" translation_description="Button hint for resuming the game">Gjenoppta spillet</string>
+</resources>

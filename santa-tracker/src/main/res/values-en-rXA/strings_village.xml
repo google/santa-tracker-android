@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">[Föļļöŵ Šåñţå öñ Ðéçémбéŕ 24ţĥ. one two three four five six seven]</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Ĝûmбåļļ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Ĝûmбåļļ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven]</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Mémöŕý ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Mémöŕý îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven]</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Éļƒ Ĵéţþåçķ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Éļƒ Ĵéţþåçķ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">[Šñöŵĝļöбé ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Šñöŵĝļöбé îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">[Ŕöçķéţ Šļéîĝĥ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Ŕöçķéţ Šļéîĝĥ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">[Ðåšĥéŕ Ðåñçéŕ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Ðåšĥéŕ Ðåñçéŕ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Šñöŵбåļļ ĝåmé ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Šñöŵбåļļ ĝåmé îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Šñöŵðöŵñ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Šñöŵðöŵñ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven]</string>
+  <string name="video" translation_description="Description of a button that plays a video.">[Vîðéö one]</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">[Vîðéö ŵîļļ бé ûñļöçķéð öñ Ðéçémбéŕ ᐅ%1$dᐊ. one two three four five six seven eight]</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">[Vîðéö îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven]</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">[Šîĝñ-îñ ţö vîéŵ ļéåðéŕбöåŕðš åñð åçĥîévéméñţš one two three four five six seven eight nine]</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">[Vîéŵ ļéåðéŕбöåŕð one two]</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">[Þļåý one]</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">[Ŵåţçĥ one]</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background_photo"
+    android:contentDescription="@string/photo"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/photo_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_media_height"
+        android:contentDescription="@string/photo"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:contentDescription="@null"
+        android:src="@drawable/avatar_photo" />
+
+</FrameLayout>

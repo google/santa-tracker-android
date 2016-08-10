@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string translatable="false" name="analytics_screen_dasher">Dasher Dancer</string>
+    <string translatable="false" name="analytics_category_character">Dasher Dancer Characters</string>
+    <string translatable="false" name="analytics_action_character_change">Changed</string>
+    <string translatable="false" name="analytics_category_interaction">Dasher Dancer Interaction</string>
+    <string translatable="false" name="analytics_action_shake">Shake</string>
+    <string translatable="false" name="analytics_action_swipe_left">Swipe Left</string>
+    <string translatable="false" name="analytics_action_swipe_right">Swipe Right</string>
+    <string translatable="false" name="analytics_action_swipe_up">Swipe Up</string>
+    <string translatable="false" name="analytics_action_swipe_down">Swipe Down</string>
+    <string translatable="false" name="analytics_action_pinch_in">Pinch In</string>
+    <string translatable="false" name="analytics_action_pinch_out">Pinch Out</string>
+    <string translatable="false" name="analytics_action_tap">Tap</string>
+    <string translatable="false" name="analytics_screen_dasher_charselect">Dasher Dancer Character Select</string>
+</resources>

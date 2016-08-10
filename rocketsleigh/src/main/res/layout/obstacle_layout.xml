@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+    <ImageView
+            android:id="@+id/back_view"
+            android:layerType="hardware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/top_view"
+            android:scaleType="fitXY"
+            tools:src="@drawable/img_birch_bare"
+            />
+
+    <ImageView
+            android:id="@+id/top_view"
+            android:layerType="hardware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            tools:src="@drawable/img_birch_4_top"/>
+
+    <ImageView
+            android:id="@+id/bottom_view"
+            android:layerType="hardware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            tools:src="@drawable/img_birch_4_bottom"
+            />
+</RelativeLayout>

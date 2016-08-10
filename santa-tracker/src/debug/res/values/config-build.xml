@@ -1,0 +1,12 @@
+<resources>
+    <string name="config_api_client" translatable="false">android_dogfood</string>
+
+    <!-- Google Maps API Developer Key -->
+    <string name="config_maps_api_key" translatable="false">AIzaSyDLSm2Xe8nnq_b5d6fXwCgo-dwrl4w5CzY</string>
+
+    <!-- API URL -->
+    <string name="api_url" translatable="false">http://next-santa-api.appspot.com/info?client=%1$s\u0026rand=%2$f\u0026routeOffset=%3$d\u0026streamOffset=%4$d\u0026tz=%5$d\u0026language=%6$s\u0026fingerprint=%7$s</string>
+
+    <!-- Cast App Id. Project "Santa Tracker Dev" owned by castdevrel@gmail.com. -->
+    <string name="cast_app_id" translatable="false">FA3B9AAD</string>
+</resources>

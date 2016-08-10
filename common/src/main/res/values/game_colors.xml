@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sign_in_bar">#99ffffff</color>
+    <color name="sign_in_text_color">#ff25af31</color>
+    <color name="stats_bg_color">#FF17B223</color>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Nooi jou vriende om Kersvader met Google te volg</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Probeer Santa Tracker en kyk hoe Kersvader om die wêreld vlieg!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Ek het %1$d aangeteken deur die %2$s-speletjie met die elwe in Santa Tracker te speel. Kan jy dit klop?</string>
+</resources>

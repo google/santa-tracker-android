@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Sekite Kalėdų Senelį gruodžio 24 d.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">„Gumball“ bus pasiekiamas gruodžio 1 d.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">„Gumball“ šiuo metu nepasiekiamas.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">„Memory“ bus pasiekiamas gruodžio 1 d.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">„Memory“ šiuo metu nepasiekiamas.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">„Elf Jetpack“ bus pasiekiamas gruodžio 1 d.</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">„Elf Jetpack“ šiuo metu nepasiekiamas.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">„Snowglobe“ bus pasiekiamas gruodžio 1 d.</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">„Snowglobe“ šiuo metu nepasiekiamas.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">„Rocket Sleigh“ bus pasiekiamas gruodžio 1 d.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">„Rocket Sleigh“ šiuo metu nepasiekiamas.</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">„Dasher Dancer“ bus pasiekiamas gruodžio 1 d.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">„Dasher Dancer“ šiuo metu nepasiekiamas.</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Žaidimas „Snowball“ bus pasiekiamas gruodžio 1 d.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Žaidimas „Snowball“ šiuo metu nepasiekiamas.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">„Snowdown“ pradės veikti gruodžio 1 d.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Šiuo metu „Snowdown“ neveikia.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">Vaizdo įrašas</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">Vaizdo įrašas bus atrakintas gruodžio %1$d d.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">Vaizdo įrašas šiuo metu nepasiekiamas.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">Prisijunkite, jei norite pamatyti pirmaujančiųjų sąrašus ir laimėjimus</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">Peržiūrėti pirmaujančiųjų sąrašus</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">Leisti</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">Žiūrėti</string>
+</resources>

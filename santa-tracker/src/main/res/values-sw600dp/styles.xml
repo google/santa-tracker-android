@@ -1,0 +1,7 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="CountdownStatus" parent="@style/TextAppearance.Large">
+        <item name="android:textColor">#FF555555</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

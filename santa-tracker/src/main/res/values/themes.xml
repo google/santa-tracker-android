@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="SantaTheme" parent="@style/Theme.AppCompat">
+        <item name="android:textAppearanceSmall">@style/TextAppearance.Small</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/brandSantaTracker</item>
+        <item name="colorPrimaryDark">@color/brandSantaTrackerBlue</item>
+    </style>
+
+
+    <style name="SantaThemeMap" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/trackerPrimary</item>
+        <item name="colorPrimaryDark">@color/trackerPrimaryDark</item>
+        <item name="colorAccent">@color/trackerAccent</item>
+        <item name="colorControlActivated">@android:color/black</item>
+    </style>
+
+</resources>

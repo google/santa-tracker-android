@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Invita i tuoi amici a seguire Babbo Natale con Google</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Prova l\'app Segui Babbo Natale e guardalo mentre vola intorno al mondo.</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Ho totalizzato %1$d punti a %2$s con i folletti di Segui Babbo Natale di Google. Puoi fare di meglio?</string>
+</resources>

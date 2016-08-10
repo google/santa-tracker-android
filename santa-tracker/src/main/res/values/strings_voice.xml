@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="voice_command_unhandled" translatable="false" translation_description="Supported in English currently, no need to translate">
+        Sorry, I didn\'t understand the voice command
+    </string>
+    <!-- What can be searched for in Santa Tracker using Google Now SEARCH_ACTION. -->
+    <!-- Only use lowercase here -->
+    <string-array name="voice_command_search_for" translatable="false">
+        <item>santa</item>
+        <item>gifts</item>
+        <item>gift</item>
+        <item>reindeer</item>
+    </string-array>
+</resources>

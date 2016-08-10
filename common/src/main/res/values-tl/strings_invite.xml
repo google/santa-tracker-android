@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Imbitahan ang iyong mga kaibigan na subaybayan si Santa sa Google</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Subukan ang Santa Tracker at panoorin ang paglipad ni Santa sa buong mundo!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Nakapuntos ako ng %1$d sa paglalaro ng %2$s game na may elves sa Santa Tracker ng Google, kaya mo bang talunin iyon?</string>
+</resources>

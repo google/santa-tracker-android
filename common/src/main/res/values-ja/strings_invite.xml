@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Google の「サンタを追いかけよう」に友だちを招待</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">「サンタを追いかけよう」で世界中を飛び回るサンタさんを見よう！</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Google の「サンタを追いかけよう」で、妖精たちと %2$s ゲームをして %1$d 点達成！あなたもチャレンジしませんか？</string>
+</resources>

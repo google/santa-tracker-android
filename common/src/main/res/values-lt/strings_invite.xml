@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Pakvieskite draugus stebėti Kalėdų Senelį „Google“</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Išbandykite „Santa Tracker“ ir pamatysite, kaip Kalėdų Senelis skrenda per pasaulį!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Žaisdamas (-a) %2$s su elfais programoje „Google“ Kalėdų Senelio kelionė pelniau %1$d. Galite geriau?</string>
+</resources>

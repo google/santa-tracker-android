@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Segueix el Pare Noel</string>
+  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">El Pare Noel surt d\'aqu&#xED; a</string>
+  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">El Pare Noel est&#xE0; enfeinat amb els preparatius de l\'any vinent.</string>
+  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Mostra les parades de 2014</string>
+  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Estem provant de contactar amb el Pare Noel.</string>
+  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Encara estem provant de contactar amb el Pare Noel.</string>
+  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">dies</string>
+  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">h</string>
+  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">min</string>
+  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">s</string>
+  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Comparteix</string>
+  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Comparteix amb els amics</string>
+  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Informaci&#xF3; legal i pol&#xED;tica de privadesa</string>
+  <string name="legal_notice_text" translation_description="Link for legal notices">Av&#xED;s legal</string>
+  <string name="privacy_policy" translation_description="Link for privacy policy">Pol&#xED;tica de privadesa</string>
+  <string name="terms_of_service" translation_description="Link for terms of services">Condicions del servei</string>
+  <string name="open_source_licenses" translation_description="Licenses for open source components">Llic&#xE8;ncies de programari lliure</string>
+  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">El Pare Noel a GitHub</string>
+  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon a GitHub</string>
+  <string name="scene_not_available" translation_description="Not available yet">Encara no est&#xE0; disponible.</string>
+  <string name="sign_out">Tanca la sessi&#xF3;</string>
+  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Fins a l\'inici del viatge</string>
+</resources>

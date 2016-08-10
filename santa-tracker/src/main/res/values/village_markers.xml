@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default -->
+    <dimen name="markerPaddingSides">20dp</dimen>
+    <dimen name="markerPaddingBottom">0dp</dimen>
+    <dimen name="markerPaddingTop">0dp</dimen>
+    <dimen name="markerHeight">320dp</dimen>
+</resources>

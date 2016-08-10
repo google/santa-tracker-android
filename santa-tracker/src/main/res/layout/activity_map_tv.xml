@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="horizontal"
+    tools:context=".map.TvSantaMapActivity">
+
+    <fragment
+        android:id="@+id/fragment_map"
+        class="com.google.android.apps.santatracker.map.SantaMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!-- Card stream (including dashboard) -->
+
+    <android.support.v17.leanback.widget.VerticalGridView
+        android:id="@+id/stream"
+        style="?attr/itemsVerticalGridStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clipToPadding="false"
+        app:columnWidth="@dimen/card_width"
+        app:verticalMargin="@dimen/tv_separator_height"/>
+
+</FrameLayout>

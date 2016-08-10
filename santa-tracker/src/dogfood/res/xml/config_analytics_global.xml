@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?><!-- Global Google Analytics tracking configuration, applied to all trackers. -->
+<resources>
+    <string name="ga_logLevel">verbose</string>
+    <bool name="ga_dryRun">false</bool>
+    <!--<int name="ga_dispatchPeriod">30</int>-->
+</resources>

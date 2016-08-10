@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- land -->
+    <dimen name="markerPaddingSides">15dp</dimen>
+    <dimen name="markerHeight">114dp</dimen>
+</resources>

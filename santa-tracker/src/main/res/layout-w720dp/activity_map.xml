@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="horizontal"
+    tools:context="com.google.android.apps.santatracker.map.SantaMapActivity">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/fragment_map"
+            class="com.google.android.apps.santatracker.map.SantaMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--  Touch interceptor that records activity during 'map mode' -->
+        <FrameLayout
+            android:id="@+id/main_touchinterceptor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+        <com.google.android.apps.santatracker.map.SantaCamButton
+            android:id="@+id/santacam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/touch_for_santa_cam"
+            android:src="@drawable/santacam"
+            android:visibility="gone"
+            app:elevation="@dimen/fab_elevation"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+    <!-- Card stream (including dashboard) -->
+    <FrameLayout
+        android:layout_width="@dimen/card_width"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        android:elevation="@dimen/toolbar_elevation"
+        tools:ignore="UnusedAttribute">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/stream"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false" />
+
+        <ImageButton
+                android:id="@+id/top"
+                style="@style/TopButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_upward_white_36dp"
+                android:contentDescription="@string/return_to_map"
+                android:visibility="invisible" />
+
+    </FrameLayout>
+
+</LinearLayout>

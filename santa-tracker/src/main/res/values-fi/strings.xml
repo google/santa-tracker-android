@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Seuraa joulupukkia</string>
+  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Aikaa joulupukin l&#xE4;ht&#xF6;&#xF6;n:</string>
+  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Joulupukki valmistautuu jo ensi vuoteen.</string>
+  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">N&#xE4;yt&#xE4; vuoden 2014 pys&#xE4;hdyspaikat</string>
+  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Yrit&#xE4;mme tavoittaa Joulupukkia</string>
+  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Yrit&#xE4;mme yh&#xE4; tavoittaa Joulupukkia</string>
+  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">pv</string>
+  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">t</string>
+  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">min</string>
+  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">sek</string>
+  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Jaa</string>
+  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Jaa yst&#xE4;vien kanssa</string>
+  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Juridiset tiedot ja tietosuoja</string>
+  <string name="legal_notice_text" translation_description="Link for legal notices">Oikeudellinen ilmoitus</string>
+  <string name="privacy_policy" translation_description="Link for privacy policy">Tietosuojak&#xE4;yt&#xE4;nt&#xF6;</string>
+  <string name="terms_of_service" translation_description="Link for terms of services">K&#xE4;ytt&#xF6;ehdot</string>
+  <string name="open_source_licenses" translation_description="Licenses for open source components">Avoimen l&#xE4;hdekoodin k&#xE4;ytt&#xF6;luvat</string>
+  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Santa GitHubissa</string>
+  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon GitHubissa</string>
+  <string name="scene_not_available" translation_description="Not available yet">Ei viel&#xE4; saatavana</string>
+  <string name="sign_out">Kirjaudu ulos</string>
+  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Aikaa l&#xE4;ht&#xF6;&#xF6;n</string>
+</resources>

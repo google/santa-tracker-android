@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Запропонуйте друзям стежити за мандрівкою Діда Мороза в Google</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Завантажте додаток Де Дід Мороз і стежте за пересуванням Діда Мороза по світу!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">У грі \"%2$s\" у Google Де Дід Мороз у мене вже стільки очок: %1$d. Наберете більше?</string>
+</resources>
