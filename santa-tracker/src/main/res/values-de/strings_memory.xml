@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="mmg_score" translation_description="Header for score">PUNKTE</string>
+  <string name="mmg_level" translation_description="Header for level">LEVEL</string>
+  <string name="mmg_summary_playagain" translation_description="Button text for playing again">NEUES SPIEL</string>
+  <string name="mmg_btn_pause" translation_description="Button hint for pausing the game">Spiel pausieren</string>
+  <string name="mmg_btn_resume" translation_description="Button hint for resuming the game">Spiel fortsetzen</string>
+</resources>

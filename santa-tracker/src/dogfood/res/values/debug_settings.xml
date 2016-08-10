@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="debug_logs_enabled">false</bool>
+    <bool name="prompt_for_sdcard_perms">false</bool>
+</resources>
+

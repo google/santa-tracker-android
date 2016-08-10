@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Google Analytics tracking configuration applied only to the tracker -->
+<resources>
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">false</bool>
+
+    <!-- Log uncaught exceptions -->
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+    <!--  The following value should be replaced with correct property id. -->
+    <string name="ga_trackingId">UA-37048309-4</string>
+</resources>

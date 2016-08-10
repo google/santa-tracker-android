@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Small" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">#AAFFFFFF</item>
+    </style>
+
+    <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">#FFFFFF</item>
+
+    </style>
+
+    <style name="TextAppearance.Large" parent="@android:style/TextAppearance.Large">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="DashboardViewSwitcher">
+        <item name="android:inAnimation">@anim/fade_in_dash</item>
+        <item name="android:outAnimation">@anim/fade_out_dash</item>
+    </style>
+
+    <style name="DashboardViewSwitcher.Location">
+        <item name="android:inAnimation">@anim/slide_in_bottom</item>
+        <item name="android:outAnimation">@anim/slide_out_top</item>
+    </style>
+
+</resources>

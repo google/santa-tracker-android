@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string translatable="false" name="typeface_robotocondensed_light">RobotoCondensed-Light.ttf</string>
+    <string name="watch_face_elf">Elf</string>
+    <string name="watch_face_santa">Santa</string>
+</resources>

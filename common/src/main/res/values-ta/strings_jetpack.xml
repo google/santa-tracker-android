@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="why_sign_in" translation_description="Encouragement text shown beside Sign In button.">சாதனைகளை எட்டவும் உங்கள் ஸ்கோரை வெளியிடவும், உள்நுழையவும்!</string>
+  <string name="play_again" translation_description="Button text for playing the game again">மீண்டும் விளையாடு</string>
+  <string name="score" translation_description="Player's total score after playing the game">ஸ்கோர்</string>
+</resources>

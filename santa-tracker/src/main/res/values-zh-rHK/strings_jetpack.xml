@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="jetpack_level" translation_description="The game level (stage) to be shown to the user: Level 1, Level 2, etc...">第 %d 關</string>
+</resources>

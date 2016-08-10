@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="analytics_event_category_village" translatable="false">Village</string>
+    <string name="analytics_event_village_click" translatable="false">Click</string>
+    <string name="analytics_event_village_unlock_easteregg" translatable="false">EasterEgg Unlocked</string>
+
+    <string name="analytics_event_village_moon" translatable="false">Moon</string>
+    <string name="analytics_event_village_sun" translatable="false">Sun</string>
+    <string name="analytics_event_village_ufo" translatable="false">UFO</string>
+    <string name="analytics_event_village_plane" translatable="false">Plane</string>
+</resources>

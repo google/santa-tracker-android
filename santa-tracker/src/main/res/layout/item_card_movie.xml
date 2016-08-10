@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background_movie"
+    android:contentDescription="@string/watch_movie"
+    android:focusable="true">
+
+    <com.google.android.youtube.player.YouTubeThumbnailView
+        android:id="@+id/movie_play"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_media_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/watch_movie"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/destination_movie_play"
+        style="@style/MovieCardButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|start"
+        android:text="@string/watch_movie"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:contentDescription="@null"
+        android:src="@drawable/avatar_video" />
+
+</FrameLayout>

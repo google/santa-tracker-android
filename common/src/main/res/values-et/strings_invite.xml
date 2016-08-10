@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Kutsuge sõbrad Google\'iga jõuluvana jälgima</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Proovige rakendust Santa Tracker ja vaadake, kuidas jõuluvana ümber maailma lendab!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Sain Google\'i jõuluvana jälgimise rakenduses päkapikkudega mängu %2$s mängides %1$d punkti. Arvad, et oled osavam?</string>
+</resources>

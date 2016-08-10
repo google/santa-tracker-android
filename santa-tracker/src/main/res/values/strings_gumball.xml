@@ -1,0 +1,5 @@
+<resources>
+    <string name="gbg_btn_pause" translation_description="Button hint for pausing the game">Pause game</string>
+    <string name="gbg_btn_resume" translation_description="Button hint for resuming the game">Resume game</string>
+
+</resources>

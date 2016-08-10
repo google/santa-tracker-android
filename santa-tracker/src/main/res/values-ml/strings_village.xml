@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">ഡിസംബർ 24-ന് സാന്തയെ പിന്തുടരുക.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">ഗംബോൾ ഡിസംബർ 1-ന് ലഭ്യമാകും.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">ഗംബോൾ നിലവിൽ ലഭ്യമല്ല.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">മെമ്മറി ഡിസംബർ 1-ന് ലഭ്യമാകും.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">മെമ്മറി നിലവിൽ ലഭ്യമല്ല.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">കുട്ടിച്ചാത്തൻ ജെറ്റ്‌പായ്ക്ക് ഡിസംബർ 1-ന് ലഭ്യമാകും</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">എൽഫ് ജെറ്റ്‌പാക്ക് നിലവിൽ ലഭ്യമല്ല.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">സ്നോഗ്ലോബ് ഡിസംബർ 1-ന് ലഭ്യമാകും</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">സ്നോഗ്ലോബ് നിലവിൽ ലഭ്യമല്ല.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">റോക്കറ്റ് ഹിമവണ്ടി ഡിസംബർ 1-ന് ലഭ്യമാകും.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">റോക്കറ്റ് ഹിമവണ്ടി നിലവിൽ ലഭ്യമല്ല.</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">ഡാഷർ ഡാൻസർ ഡിസംബർ 1-ന് ലഭ്യമാകും.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">ഡാഷർ ഡാൻസർ നിലവിൽ ലഭ്യമല്ല.</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">സ്നോബോൾ ഗെയിം ഡിസംബർ 1-ന് ലഭ്യമാകും.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">സ്നോബോൾ ഗെയിം നിലവിൽ ലഭ്യമല്ല.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">സ്നോഡൗൺ ഡിസംബർ 1-ന് ലഭ്യമാകും.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">സ്നോഡൗൺ നിലവിൽ ലഭ്യമല്ല.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">വീഡിയോ</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">വീഡിയോ ഡിസംബർ %1$d-ന് അൺലോക്കുചെയ്യും.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">വീഡിയോ നിലവിൽ ലഭ്യമല്ല.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">ലീഡർബോർഡുകളും നേട്ടങ്ങളും കാണാൻ സൈൻ-ഇൻ ചെയ്യുക</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">ലീഡർബോർഡ് കാണുക</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">പ്ലേ ചെയ്യുക</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">കാണുക</string>
+</resources>

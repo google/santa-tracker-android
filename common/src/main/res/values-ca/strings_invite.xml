@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Convideu els vostres amics a seguir el Pare Noel amb Google</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Prova l\'aplicació Segueix el Pare Noel i mira com el Pare Noel vola per tot el món.</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">He aconseguit %1$d punts jugant amb els elfs al joc %2$s a Segueix el Pare Noel de Google. Aviam si em guanyes!</string>
+</resources>

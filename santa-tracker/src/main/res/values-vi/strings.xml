@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Theo d&#xF5;i &#xF4;ng gi&#xE0; Noel</string>
+  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">&#xD4;ng gi&#xE0; Noel s&#x1EBD; c&#x1EA5;t c&#xE1;nh l&#xFA;c</string>
+  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">&#xD4;ng gi&#xE0; Noel &#x111;ang b&#x1EAD;n r&#x1ED9;n chu&#x1EA9;n b&#x1ECB; cho n&#x103;m ti&#x1EBF;p theo.</string>
+  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Xem c&#xE1;c &#x111;i&#x1EC3;m d&#x1EEB;ng ch&#xE2;n c&#x1EE7;a n&#x103;m 2014</string>
+  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">C&#x1ED1; g&#x1EAF;ng ti&#x1EBF;p c&#x1EAD;n &#xF4;ng gi&#xE0; Noel</string>
+  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">V&#x1EAB;n &#x111;ang c&#x1ED1; g&#x1EAF;ng ti&#x1EBF;p c&#x1EAD;n &#xF4;ng gi&#xE0; Noel</string>
+  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">Ng&#xE0;y</string>
+  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">Gi&#x1EDD;</string>
+  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">Ph&#xFA;t</string>
+  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">Gi&#xE2;y</string>
+  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Chia s&#x1EBB;</string>
+  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Chia s&#x1EBB; v&#x1EDB;i b&#x1EA1;n b&#xE8;</string>
+  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Ph&#xE1;p l&#xFD; &amp; b&#x1EA3;o m&#x1EAD;t</string>
+  <string name="legal_notice_text" translation_description="Link for legal notices">Th&#xF4;ng b&#xE1;o ph&#xE1;p l&#xFD;</string>
+  <string name="privacy_policy" translation_description="Link for privacy policy">Chi&#x301;nh sa&#x301;ch ba&#x309;o m&#x1EAD;t</string>
+  <string name="terms_of_service" translation_description="Link for terms of services">&#x110;i&#xEA;&#x300;u khoa&#x309;n di&#x323;ch vu&#x323;</string>
+  <string name="open_source_licenses" translation_description="Licenses for open source components">Gi&#x1EA5;y ph&#xE9;p m&#xE3; ngu&#x1ED3;n m&#x1EDF;</string>
+  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Santa tr&#xEA;n GitHub</string>
+  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon tr&#xEA;n GitHub</string>
+  <string name="scene_not_available" translation_description="Not available yet">V&#x1EAB;n ch&#x1B0;a kh&#x1EA3; d&#x1EE5;ng</string>
+  <string name="sign_out">&#x110;&#x103;ng xu&#x1EA5;t</string>
+  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Cho &#x111;&#x1EBF;n khi kh&#x1EDF;i h&#xE0;nh</string>
+</resources>

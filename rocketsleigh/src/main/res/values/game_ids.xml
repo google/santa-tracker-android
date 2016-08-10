@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="achievement_hidden_presents" translatable="false">CgkIioKF2qwCEAIQFw</string>
+    <string name="achievement_rocket_junior_score_10000" translatable="false">CgkIioKF2qwCEAIQGA</string>
+    <string name="achievement_rocket_intermediate_score_30000" translatable="false">CgkIioKF2qwCEAIQGQ</string>
+    <string name="achievement_rocket_pro_score_50000" translatable="false">CgkIioKF2qwCEAIQGg</string>
+    <string name="achievement_safe_tapper" translatable="false">CgkIioKF2qwCEAIQFQ</string>
+    <string name="achievement_untouchable" translatable="false">CgkIioKF2qwCEAIQFg</string>
+    <string name="leaderboard_rocket" translatable="false">CgkIioKF2qwCEAIQHw</string>
+</resources>

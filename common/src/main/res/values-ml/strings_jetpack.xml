@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="why_sign_in" translation_description="Encouragement text shown beside Sign In button.">നേട്ടങ്ങൾ അൺലോക്കുചെയ്യാനും നിങ്ങളുടെ സ്കോർ പോസ്റ്റ് ചെയ്യാനും സൈൻ ഇൻ ചെയ്യുക!</string>
+  <string name="play_again" translation_description="Button text for playing the game again">വീണ്ടും കളിക്കുക</string>
+  <string name="score" translation_description="Player's total score after playing the game">സ്‌കോർ</string>
+</resources>

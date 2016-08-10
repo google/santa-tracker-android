@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="santacamDashboardPadding">16dp</dimen>
+    <dimen name="santacamDashboardExtraAvatar">24dp</dimen>
+    <dimen name="santacamFactoidExtraAvatar">55dp</dimen>
+    <dimen name="santacamFactoidTextMargin">8dp</dimen>
+
+    <dimen name="card_text_spacing">8dp</dimen>
+    <dimen name="card_width">320dp</dimen>
+    <dimen name="card_media_height">202.5dp</dimen>
+    <dimen name="card_stream_height">128dp</dimen>
+    <dimen name="card_stream_hidden_peek_height">72dp</dimen>
+
+    <color name="card_background_destination">@color/SantaGreenDark</color>
+    <color name="card_background_photo">@color/SantaBlueDark</color>
+    <color name="card_background_movie">@color/SantaOrange</color>
+    <color name="card_background_update">@color/SantaRed</color>
+    <color name="santacamDashboardText">@color/SantaGreenLight</color>
+
+</resources>

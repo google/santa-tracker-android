@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<GoogleNowActions xmlns="https://developers.google.com/now/actions/1.0"
+                  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="https://developers.google.com/now/actions/1.0
+https://developers.google.com/now/actions/1.0/example.xsd">
+    <PackageName>com.google.android.apps.santatracker</PackageName>
+    <VersionCode>1</VersionCode>
+    <AppName>Santa Tracker</AppName>
+    <Action>
+        <VerbClass>ShowAction</VerbClass>
+        <Intent>com.google.android.apps.santatracker.SHOW_SANTA</Intent>
+        <Example>show $SantaSynonym:santa</Example>
+        <DiscoverabilityExample>show santa on Google Santa Tracker</DiscoverabilityExample>
+    </Action>
+    <DeveloperProvidedType>
+        <Name>$SantaSynonym</Name>
+        <Value>Santa</Value>
+        <Value>Santa Claus</Value>
+        <Value>Saint Nicholas</Value>
+        <Value>Father Christmas</Value>
+        <Value>Kris Kringle</Value>
+    </DeveloperProvidedType>
+    <Action>
+        <VerbClass>ActivateAction</VerbClass>
+        <Intent>com.google.android.apps.santatracker.PLAY_GAME</Intent>
+        <Example>play $SantaGame:game game</Example>
+        <Example>play $SantaGame:game</Example>
+        <DiscoverabilityExample>play Elf Jetpack game on Google Santa Tracker</DiscoverabilityExample>
+    </Action>
+    <DeveloperProvidedType>
+        <Name>$SantaGame</Name>
+        <Value>Elf Jetpack</Value>
+        <Value>Memory</Value>
+        <Value>Gumball</Value>
+        <Value>Rocket Sleigh</Value>
+        <Value>Dasher Dancer</Value>
+    </DeveloperProvidedType>
+    <Action>
+        <VerbClass>ActivateAction</VerbClass>
+        <Intent>com.google.android.apps.santatracker.PLAY_RANDOM_GAME</Intent>
+        <Example>play game</Example>
+        <Example>play a game</Example>
+        <Example>play games</Example>
+        <DiscoverabilityExample>play game on Google Santa Tracker</DiscoverabilityExample>
+    </Action>
+</GoogleNowActions>

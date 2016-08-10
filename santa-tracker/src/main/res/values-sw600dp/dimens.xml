@@ -1,0 +1,27 @@
+<resources>
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+    <dimen name="detail_backdrop_height">600dp</dimen>
+
+    <dimen name="mm_card_width">132dp</dimen>
+    <dimen name="mm_card_height">190dp</dimen>
+    <dimen name="mm_inner_item_padding">35dp</dimen>
+    <dimen name="mm_door_item_padding">28dp</dimen>
+    <dimen name="mm_door_item_padding_bottom">28dp</dimen>
+    <dimen name="mm_door_item_padding_top">32dp</dimen>
+    <dimen name="score_summary_width">300dp</dimen>
+    <dimen name="score_summary_height">300dp</dimen>
+    <dimen name="play_again_text_size">24sp</dimen>
+    <dimen name="play_again_button_height">32dp</dimen>
+    <dimen name="play_again_margin">6dp</dimen>
+    <dimen name="match_score_layout_width">300dp</dimen>
+    <dimen name="match_score_layout_height">48dp</dimen>
+
+    <!-- (action bar height - logo height) / 2 = (64dp - 32dp) / 2 -->
+    <dimen name="logo_vertical_margin">16dp</dimen>
+
+    <dimen name="countdownWidth">400dp</dimen>
+
+</resources>

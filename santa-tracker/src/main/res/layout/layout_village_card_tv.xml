@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/tv_marker_width"
+    android:layout_height="@dimen/tv_marker_width">
+
+    <ImageView
+        android:id="@+id/card_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        tools:src="@drawable/android_game_cards_track_santa" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/card_name_text"
+        style="@style/TvCardTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        app:textAllCaps="true"
+        tools:text="Track Santa"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/card_disabled"
+        android:background="@color/SantaTranslucentGreen"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="@dimen/tv_marker_lock_width"
+            android:layout_height="@dimen/tv_marker_lock_width"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="@dimen/tv_marker_lock_margin_bottom"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/locked"
+            android:contentDescription="@null"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/card_verb"
+        style="@style/TvBigVerbText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:text="Play"/>
+
+</FrameLayout>

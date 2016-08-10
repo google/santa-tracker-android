@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion rootProject.ext.tools
+
+    defaultConfig {
+        applicationId "com.google.android.apps.santatracker"
+        minSdkVersion 20
+        targetSdkVersion 23
+        versionCode 33
+        versionName "2.1.3"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
+
+        dogfood {
+            minifyEnabled true
+            proguardFile 'proguard-wear.txt'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-wear.txt'
+        }
+    }
+
+}
+// Apply signing configurations, keys and other non-version-controlled things
+if (file('../internal/wearable.gradle').exists()) {
+    apply from: '../internal/wearable.gradle'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile rootProject.ext.appCompat
+    compile rootProject.ext.supportV4
+    compile rootProject.ext.supportWearable
+    compile rootProject.ext.playServicesBasement
+    compile rootProject.ext.playServicesBase
+    compile rootProject.ext.playServicesWearable
+    compile project(':common')
+    compile project(':village')
+}

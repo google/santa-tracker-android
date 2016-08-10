@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="config_api_client" translatable="false">android</string>
+
+    <!-- Google Maps API Developer Key -->
+    <string name="config_maps_api_key" translatable="false">AIzaSyA7YM8IMPQF33aZi83Li63AR5uWj1a7IjE</string>
+
+    <string name="api_url" translatable="false">http://santa-api.appspot.com/info?client=%1$s\u0026rand=%2$f\u0026routeOffset=%3$d\u0026streamOffset=%4$d\u0026tz=%5$d\u0026language=%6$s\u0026fingerprint=%7$s</string>
+
+    <!-- Cast App Id. Project "Santa Tracker Production" owned by castdevrel@gmail.com. -->
+    <string name="cast_app_id" translatable="false">76D471B7</string>
+</resources>

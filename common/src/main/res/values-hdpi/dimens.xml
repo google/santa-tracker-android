@@ -1,0 +1,7 @@
+<resources>
+
+    <dimen name="play_again_score_text_size">8dp</dimen>
+    <dimen name="gplus_layout_height">45dp</dimen>
+    <dimen name="gplus_sign_in_text_size">16dp</dimen>
+
+</resources>

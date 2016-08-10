@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="mmg_score" translation_description="Header for score">PONTUA&#xC7;&#xC3;O</string>
+  <string name="mmg_level" translation_description="Header for level">N&#xCD;VEL</string>
+  <string name="mmg_summary_playagain" translation_description="Button text for playing again">JOGAR NOVAMENTE</string>
+  <string name="mmg_btn_pause" translation_description="Button hint for pausing the game">Pausar jogo</string>
+  <string name="mmg_btn_resume" translation_description="Button hint for resuming the game">Retomar jogo</string>
+</resources>

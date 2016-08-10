@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Suivez le père Noël le 24 décembre.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Gumball sera offert à compter du 1er décembre.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Le jeu Gumball n\'est pas disponible pour le moment.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Memory sera offert à compter du 1er décembre.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Le jeu Memory n\'est pas disponible pour le moment.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Elf Jetpack sera offert à compter du 1er décembre.</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Le jeu Elf Jetpack n\'est pas disponible pour le moment.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Snowglobe sera offert à compter du 1er décembre.</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowglobe n\'est pas disponible actuellement.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Rocket Sleigh sera offert à compter du 1er décembre.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Rocket Sleigh n\'est pas disponible actuellement.</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Dasher Dancer sera offert à compter du 1er décembre.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Dasher Dancer n\'est pas disponible actuellement.</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Le jeu Snowball sera offert à compter du 1er décembre.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Le jeu Snowball n\'est pas disponible actuellement.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowdown sera offert à compter du 1er décembre.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowdown n\'est actuellement pas disponible.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">Vidéo</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">La vidéo sera déverrouillée à compter du %1$d décembre.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">La vidéo n\'est pas disponible actuellement.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">Connectez-vous, pour afficher le classement des meneurs et les exploits</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">Afficher le classement des meneurs</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">Lire</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">Visionner</string>
+</resources>

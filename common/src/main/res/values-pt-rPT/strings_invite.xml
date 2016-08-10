@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Convidar os seus amigos para seguirem o Pai Natal com o Google</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Experimenta o Localizador do Pai Natal e vê-o voar por todo o mundo!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Consegui uma classificação de %1$d no jogo %2$s com elfos no Localizador do Pai Natal da Google. Consegues melhor?</string>
+</resources>

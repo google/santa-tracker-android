@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">在 12 月 24 日當天追蹤聖誕老人。</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">「口香糖球」將於 12 月 1 日推出。</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Gumball 遊戲暫不開放。</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">「記憶時光」將於 12 月 1 日推出。</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Memory 遊戲暫不開放</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">「精靈噴射背包」將於 12 月 1 日推出。</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Elf Jetpack 暫不開放。</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">「雪花玻璃球」將於 12 月 1 日推出。</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">目前無法玩「雪花玻璃球」。</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">「火箭雪橇」將於 12 月 1 日推出。</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">目前無法玩「火箭雪橇」。</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">「馴鹿快跑」將於 12 月 1 日推出。</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">目前無法玩「馴鹿快跑」。</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">「雪花玻璃球」遊戲將於 12 月 1 日推出。</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">目前無法玩「雪花玻璃球」遊戲。</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">雪球爭霸戰將於 12 月 1 日推出。</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">雪球爭霸戰目前暫停服務。</string>
+  <string name="video" translation_description="Description of a button that plays a video.">影片</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">影片將於 12 月 %1$d開放觀賞。</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">目前無法觀看影片。</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">登入查看排行榜和光榮紀錄</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">查看排行榜</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">玩遊戲</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">觀看</string>
+</resources>

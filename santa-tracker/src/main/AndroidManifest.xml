@@ -1,0 +1,259 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.google.android.apps.santatracker"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions required by the wearable app -->
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Map View 2 START -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <!-- External storage for caching. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true"/>
+    <!-- Map View 2 END -->
+
+    <uses-feature
+            android:name="android.hardware.screen.landscape"
+            android:required="false"/>
+
+    <!-- For Supporting TV START -->
+    <uses-feature android:name="android.software.leanback"
+        android:required="false" />
+
+    <uses-feature android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <!-- To support TV (portrait is not supported)as Dasher Dancer is a portrait activity" -->
+    <uses-feature android:name="android.hardware.screen.portrait"
+        android:required="false"/>
+
+    <!-- To force usage of leanback support library-->
+    <uses-sdk tools:overrideLibrary="android.support.v17.leanback"/>
+    <!-- For Supporting TV END -->
+
+    <application
+            android:allowBackup="false"
+            android:icon="@drawable/ic_launcher_santa"
+            android:label="@string/app_name_santa"
+            android:name=".SantaApplication"
+            tools:replace="android:allowBackup, icon, label"
+            android:banner="@drawable/santatracker_logo_banner"
+            android:largeHeap="true"
+            android:theme="@style/SantaTheme">
+
+        <!-- Google Maps API Key -->
+        <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="@string/config_maps_api_key"/>
+
+        <!-- Google Play Games metadata tags -->
+        <meta-data
+                android:name="com.google.android.gms.games.APP_ID"
+                android:value="@string/app_id"/>
+        <meta-data
+                android:name="com.google.android.gms.appstate.APP_ID"
+                android:value="@string/app_id"/>
+
+        <!-- Play Services Version -->
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version"/>
+
+        <!-- Google Analytics global configuration -->
+        <meta-data
+                android:name="com.google.android.gms.analytics.globalConfigResource"
+                android:resource="@xml/config_analytics_global" />
+
+        <!-- Google Now Actions grammar -->
+        <meta-data android:name="GoogleNowActions"
+                   android:resource="@xml/google_now_actions"/>
+
+        <activity
+                android:name=".launch.StartupActivity"
+                android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.SHOW_SANTA" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.PLAY_GAME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.PLAY_RANDOM_GAME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <!-- Handle URL form Google Now card -->
+            <intent-filter android:label="@string/app_name_santa">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http(s)://www.google.com/santatracker/now" -->
+                <data android:scheme="http"
+                      android:host="www.google.com"
+                      android:path="/santatracker/now" />
+                <data android:scheme="https"
+                      android:host="www.google.com"
+                      android:path="/santatracker/now" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".launch.TvStartupActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Leanback">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".map.SantaMapActivity"
+                android:label="@string/app_name_santa"
+                android:exported="false"
+                android:theme="@style/SantaThemeMap">
+        </activity>
+
+        <activity
+            android:name=".map.TvSantaMapActivity"
+            android:label="@string/app_name_santa"
+            android:exported="false"
+            android:theme="@style/Theme.Leanback">
+        </activity>
+
+        <service
+                android:name=".service.SantaService"
+                android:exported="false"/>
+
+        <service
+                android:name=".util.ScheduleNotificationService"
+                android:exported="false"/>
+
+        <service
+            android:name=".daydream.CountdownDreamService"
+            android:exported="true"
+            android:label="@string/app_name_santa"
+            android:permission="android.permission.BIND_DREAM_SERVICE">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.service.dreams.DreamService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".NotificationBroadcastReceiver"/>
+
+        <!-- Jetpack game -->
+        <activity
+                android:name=".games.jetpack.JetpackActivity"
+                android:label="@string/app_name_santa"
+                android:screenOrientation="sensorLandscape"
+                >
+                <intent-filter android:label="@string/app_name_santa">
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <!-- Accepts URIs that begin with "http://google.com/santatracker/android/jetpack" -->
+                    <data android:scheme="http"
+                          android:host="google.com"
+                          android:pathPrefix="/santatracker/android/jetpack" />
+                </intent-filter>
+        </activity>
+        <!-- Gumball game -->
+        <activity
+                android:name=".games.GumballActivity"
+                android:label="@string/app_name_santa"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:screenOrientation="sensorLandscape">
+                <intent-filter android:label="@string/app_name_santa">
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <!-- Accepts URIs that begin with "http://google.com/santatracker/android/gumball" -->
+                    <data android:scheme="http"
+                          android:host="google.com"
+                          android:pathPrefix="/santatracker/android/gumball" />
+                </intent-filter>
+        </activity>
+        <!-- Memory game -->
+        <activity
+                android:name=".games.MemoryActivity"
+                android:label="@string/app_name_santa"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:screenOrientation="sensorLandscape">
+                <intent-filter android:label="@string/app_name_santa">
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <!-- Accepts URIs that begin with "http://google.com/santatracker/android/memory" -->
+                    <data android:scheme="http"
+                          android:host="google.com"
+                          android:pathPrefix="/santatracker/android/memory" />
+                </intent-filter>
+         </activity>
+
+
+        <!-- Used for Google Play Store Campaign Measurement -->
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Listener for wearable communication -->
+        <service android:name=".PhoneNotificationService" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.DISMISS" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.SEND" />
+            </intent-filter>
+        </service>
+
+        <!-- Cast -->
+        <service
+            android:name=".cast.DataCastNotificationService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.cast.action.stop" />
+                <action android:name="com.google.android.apps.santatracker.cast.action.notificationvisibility" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".cast.DataCastIntentReceiver" >
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.cast.action.stop" />
+            </intent-filter>
+        </receiver>
+
+        <!-- wifi reconnection -->
+        <service android:name="com.google.android.libraries.cast.companionlibrary.cast.reconnection.ReconnectionService" />
+
+    </application>
+
+</manifest>

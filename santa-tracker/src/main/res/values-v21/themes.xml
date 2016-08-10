@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SantaTheme" parent="@style/Theme.AppCompat">
+        <item name="android:textAppearanceSmall">@style/TextAppearance.Small</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/brandSantaTracker</item>
+        <item name="colorPrimaryDark">@color/brandSantaTrackerBlue</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

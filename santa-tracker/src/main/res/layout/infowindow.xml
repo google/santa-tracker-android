@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/map_infowindow_popup">
+
+    <!-- Layout needs to be wrapped in a FrameLayout to be rendered as an InfoWindow (library limitation) -->
+
+    <TextView
+            android:id="@+id/info_title"
+            style="@style/infowindow_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"/>
+
+</FrameLayout>

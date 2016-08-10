@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">&#x15A;led&#x17A; tras&#x119; &#x15A;w. Miko&#x142;aja</string>
+  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">&#x15A;wi&#x119;ty Miko&#x142;aj wyrusza za</string>
+  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">&#x15A;wi&#x119;ty Miko&#x142;aj jest zaj&#x119;ty przygotowaniami na przysz&#x142;y rok.</string>
+  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Zobacz postoje w 2014 r.</string>
+  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Pr&#xF3;buj&#x119; nawi&#x105;za&#x107; kontakt ze &#x15A;wi&#x119;tym Miko&#x142;ajem</string>
+  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Nadal pr&#xF3;buj&#x119; nawi&#x105;za&#x107; kontakt ze &#x15A;wi&#x119;tym Miko&#x142;ajem</string>
+  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">dni</string>
+  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">godz.</string>
+  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">min</string>
+  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">sek.</string>
+  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Udost&#x119;pnij</string>
+  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Udost&#x119;pnij znajomym</string>
+  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Warunki i prywatno&#x15B;&#x107;</string>
+  <string name="legal_notice_text" translation_description="Link for legal notices">Informacje prawne</string>
+  <string name="privacy_policy" translation_description="Link for privacy policy">Polityka prywatno&#x15B;ci</string>
+  <string name="terms_of_service" translation_description="Link for terms of services">Warunki korzystania z us&#x142;ugi</string>
+  <string name="open_source_licenses" translation_description="Licenses for open source components">Licencje open source</string>
+  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Miko&#x142;aj na GitHubie</string>
+  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon na&#xA0;GitHubie</string>
+  <string name="scene_not_available" translation_description="Not available yet">Jeszcze niedost&#x119;pne</string>
+  <string name="sign_out">Wyloguj si&#x119;</string>
+  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">do startu</string>
+</resources>

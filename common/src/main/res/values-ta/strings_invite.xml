@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Google உடன் சேர்ந்து சான்டாவைக் கண்காணிக்க நண்பர்களை அழைக்கவும்</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">சான்டா ட்ராக்கரைப் பயன்படுத்தி, சான்டாவின் பயண வழிகளைப் பார்க்கவும்!</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Google இன் சான்டா டிராக்கரில் குட்டித் தேவதைகளுடன் %2$s கேமில் %1$d ஸ்கோர் செய்துள்ளேன்! இதை முறியடிக்க முடியுமா?</string>
+</resources>

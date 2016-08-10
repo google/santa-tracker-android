@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- take-off and final arrival in s -->
+    <integer name="santa_takeoff" translatable="false">1450951200</integer>
+    <integer name="santa_arrival" translatable="false">1451041200</integer>
+
+    <!-- Backoff parameters for API access -->
+    <!-- Initital backoff time: 30s -->
+    <integer name="backoff_initital" translatable="false">30000</integer>
+    <!-- Maximum backoff time: 5m-->
+    <integer name="backoff_max" translatable="false">300000</integer>
+    <!-- Backoff factor for each retry in percent: 150% -->
+    <integer name="backoff_factor" translatable="false">150</integer>
+
+    <!-- Game unlock times in s -->
+    <integer name="unlock_gumball" translatable="false">0</integer>
+    <integer name="unlock_memory" translatable="false">0</integer>
+    <integer name="unlock_jetpack" translatable="false">0</integer>
+    <!-- Note that these markers do not have "locked" artwork, create them if you change this. -->
+    <integer name="unlock_rocket" translatable="false">0</integer>
+    <integer name="unlock_dancer" translatable="false">0</integer>
+    <integer name="unlock_snowdown" translatable="false">0</integer>
+
+    <!-- StreetView Intent URI with parameters: pano id, heading -->
+    <string name="streetview_uri" translatable="false">google.streetview:panoid=%s&amp;cbp=0,%f</string>
+
+    <!-- Video unlock times -->
+    <integer name="unlock_video1" translatable="false">0</integer>
+    <!-- Dec 15, 2014 -->
+    <integer name="unlock_video15" translatable="false">1418601600</integer>
+    <!-- Dec 23, 2014 -->
+    <integer name="unlock_video23" translatable="false">1419292800</integer>
+    <!-- App Indexing -->
+    <!-- Deep link intent filter entries in AndroidManifest.xml must match this prefix -->
+    <string name="santa_tracker_deep_link_prefix" translatable="false">http/google.com/santatracker/android</string>
+    <!-- deep link component names -->
+    <string name="gumball_game_id" translatable="false">gumball</string>
+    <string name="jetpack_game_id" translatable="false">jetpack</string>
+    <string name="memory_game_id" translatable="false">memory</string>
+
+    <!-- Cast -->
+    <string name="cast_namespace" translatable="false">urn:x-cast:com.google.android.apps.santatracker</string>
+</resources>

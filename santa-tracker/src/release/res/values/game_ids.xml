@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_id" translatable="false">80719462666</string>
+    <string name="leaderboard_gumball" translatable="false">CgkIioKF2qwCEAIQEw</string>
+    <string name="leaderboard_memory" translatable="false">CgkIioKF2qwCEAIQFA</string>
+</resources>

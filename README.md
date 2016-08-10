@@ -6,18 +6,29 @@ Google Santa Tracker for Android
 [Google Santa Tracker app for Android][play-store] is an educational and entertaining tradition that brings joy to millions of children (and children at heart) across the world over the December holiday period. The app is a companion to the [Google Santa Tracker][santa-web] website ([repository here](https://github.com/google/santa-tracker-web)), showcasing unique platform capabilities like Android Wear watchfaces, device notifications and more.
 ![Analytics](https://ga-beacon.appspot.com/UA-12846745-20/santa-tracker-android/readme?pixel)
 
-![Village Screenshot](res/village.png)
+![Village Screenshot](res/village.png) ![Snowdown Screenshot](res/snowdown.png)
 
 ## Features
 
-* A beautiful parallax-scrolling village
-* 3 exciting games
-* 2 Android Wear watchfaces
-* Hidden Easter Eggs!
+* A beautiful materially designed village
+* 6 exciting games
+* 2 interactive Android Wear watchfaces (with sound!)
+* Videos, animations and more.
 
 ## Building the app
 
-It's simple. Plug your phone in (or fire up an emulator) and run:
+First up, Santa Tracker is powered by [Firebase][firebase], so you'll need to enable it
+on your Google account over at the [Firebase console][fire-console]. Once you're in the
+console, follow these steps:
+
+ * Create a new project
+ * Add Firebase to your Android app
+  * Package name: `com.google.android.apps.santatracker.debug`
+  * Debug signing certificate can be blank, or follow the instructions in the
+    tooltip to find yours.
+ * Save the google-services.json file to the santa-tracker/ directory
+
+Now you should be able to plug your phone in (or fire up an emulator) and run:
 
     ./gradlew installDebug
 
@@ -46,3 +57,5 @@ licensed under the Apache 2 license. See the LICENSE file for details.
 
 [play-store]: https://play.google.com/store/apps/details?id=com.google.android.apps.santatracker
 [santa-web]: http://g.co/santatracker
+[firebase]: https://firebase.google.com/
+[fire-console]: https://firebase.google.com/console/

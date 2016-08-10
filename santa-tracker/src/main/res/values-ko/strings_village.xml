@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">12월 24일에 산타를 추적해 보세요.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">풍선껌 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">현재 풍선껌 게임을 할 수 없습니다.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">기억력 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">현재 기억력 게임을 할 수 없습니다.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">제트 추진 엘프 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">현재 제트 추진 엘프 게임을 할 수 없습니다.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">스노우글로브 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">현재 스노우글로브 게임을 할 수 없습니다.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">로켓 썰매 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">현재 로켓 썰매 게임을 할 수 없습니다.</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">대셔 댄서 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">현재 대셔 댄서 게임을 할 수 없습니다.</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">눈싸움 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">현재 눈싸움 게임을 할 수 없습니다.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">최후의 눈싸움 결전 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">현재 최후의 눈싸움 결전 게임을 할 수 없습니다.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">동영상</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">동영상 잠금은 12월 %1$d일에 해제됩니다.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">현재 동영상을 시청할 수 없습니다.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">로그인하여 리더보드 및 업적 보기</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">리더보드 보기</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">게임하기</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">보기</string>
+</resources>

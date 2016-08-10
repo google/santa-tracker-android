@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:contentDescription="@null"
+        android:src="@drawable/avatar_natgeo" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/santacamDashboardPadding"
+        android:paddingLeft="@dimen/santacamDashboardPadding"
+        android:paddingRight="@dimen/santacamDashboardPadding"
+        android:paddingTop="@dimen/santacamDashboardPadding">
+
+        <TextView
+            android:id="@+id/factoid_label"
+            style="@style/DashboardLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/santacamFactoidExtraAvatar"
+            android:text="@string/did_you_know"
+            android:textColor="@color/SantaGreenLight"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/factoid_attribution"
+            style="@style/DashboardLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/santacamFactoidTextMargin"
+            android:layout_marginRight="@dimen/santacamFactoidExtraAvatar"
+            android:layout_marginTop="@dimen/santacamFactoidTextMargin"
+            android:text="@string/did_you_know_attribution"
+            android:textColor="#89FFFFFF"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/factoid_text"
+            style="@style/DashboardTextMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Teotihuacán was the great center of an early civilization on the continent of North America. The city was 30 miles Northeast of current day Mexico City!" />
+
+    </LinearLayout>
+
+</FrameLayout>

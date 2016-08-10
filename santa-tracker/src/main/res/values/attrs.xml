@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MarkerView">
+        <attr name="markerColor" format="color"/>
+        <attr name="badge" format="integer"/>
+        <attr name="lockedBadge" format="integer"/>
+        <attr name="badgePaddingLeft" format="float"/>
+        <attr name="badgePaddingTop" format="float"/>
+        <attr name="badgePaddingRight" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="BottomSheetBehavior_Params">
+        <!-- The height of the bottom sheet when it is collapsed. -->
+        <attr name="behavior_peekHeight" format="dimension"/>
+        <attr name="behavior_hideable" format="boolean"/>
+        <attr name="behavior_hiddenPeekHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

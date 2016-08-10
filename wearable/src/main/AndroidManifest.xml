@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.android.apps.santatracker" >
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <!-- Required to act as a custom watch face. -->
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light" >
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+        <service android:name=".WearNotificationService" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.DISMISS" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.SEND" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".VillageNotificationActivity"
+            android:exported="true"
+            android:allowEmbedded="true"
+            android:taskAffinity="" >
+
+        </activity>
+
+        <service
+            android:name=".SantaWatchFaceService"
+            android:label="@string/watch_face_santa"
+            android:allowEmbedded="true"
+            android:taskAffinity=""
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/watch_face" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview"
+                android:resource="@drawable/preview" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview_circular"
+                android:resource="@drawable/preview_circular" />
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE"/>
+            </intent-filter>
+        </service>
+
+        <service
+                android:name=".ElfWatchFaceService"
+                android:label="@string/watch_face_elf"
+                android:allowEmbedded="true"
+                android:taskAffinity=""
+                android:permission="android.permission.BIND_WALLPAPER" >
+            <meta-data
+                    android:name="android.service.wallpaper"
+                    android:resource="@xml/watch_face" />
+            <meta-data
+                    android:name="com.google.android.wearable.watchface.preview"
+                    android:resource="@drawable/elf_preview" />
+            <meta-data
+                    android:name="com.google.android.wearable.watchface.preview_circular"
+                    android:resource="@drawable/elf_preview_circular" />
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

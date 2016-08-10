@@ -1,0 +1,23 @@
+{"candycanes": [
+{ "type":10 , "xPos":1.5, "yPos":2.6 }, 
+{ "type":16 , "xPos":0.73, "yPos":3.33 }, 
+{ "type":18 , "xPos":4.262, "yPos":2.6 },
+
+{ "type":27 , "xPos":5.9, "yPos":3.2 },
+
+{ "type":10 , "xPos":3.315, "yPos":1.7 }, 
+{ "type":19 , "xPos":3.063, "yPos":1.7 }, 
+{ "type":15 , "xPos":6.079, "yPos":1.7 },
+
+{ "type":10 , "xPos":1.3, "yPos":0.5 }, 
+{ "type":14 , "xPos":0.535, "yPos":0.5 }, 
+{ "type":18 , "xPos":4.06, "yPos":0.5 },
+
+{ "type":10 , "xPos":5.715, "yPos":0.1 }, 
+{ "type":19 , "xPos":5.46, "yPos":0.1 }, 
+{ "type":17 , "xPos":8.480, "yPos":.829 }
+],
+"gumballs": [
+{ "xPos":2.0, "yPos":5.5 }
+]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="mmg_score" translation_description="Header for score">&#xC810;&#xC218;</string>
+  <string name="mmg_level" translation_description="Header for level">&#xB808;&#xBCA8;</string>
+  <string name="mmg_summary_playagain" translation_description="Button text for playing again">&#xB2E4;&#xC2DC; &#xD558;&#xAE30;</string>
+  <string name="mmg_btn_pause" translation_description="Button hint for pausing the game">&#xAC8C;&#xC784; &#xC77C;&#xC2DC;&#xC911;&#xC9C0;</string>
+  <string name="mmg_btn_resume" translation_description="Button hint for resuming the game">&#xAC8C;&#xC784; &#xACC4;&#xC18D;&#xD558;&#xAE30;</string>
+</resources>

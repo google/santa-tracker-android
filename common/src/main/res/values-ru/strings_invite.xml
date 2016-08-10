@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Пригласите друзей скачать приложение</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Скачай приложение \"Радар Санта-Клауса\" и следи за путешествиями Санты.</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Мой результат в игре %2$s – %1$d очков! Сможешь набрать больше?</string>
+</resources>

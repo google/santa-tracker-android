@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".launch.TvStartupActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/villageBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/village_bg_countdown"
+        android:contentDescription="@null"/>
+
+    <com.google.android.apps.santatracker.village.VillageView
+        android:id="@+id/villageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_counter_margin_top"
+        android:layout_gravity="center_horizontal|top">
+
+        <ImageView
+            android:id="@+id/google_logo_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/google_logo" />
+
+        <ImageView
+            android:id="@+id/st_logo_main"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/google_logo_main"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/santatracker_logo_startup" />
+
+        <Button
+            android:id="@+id/launch_button"
+            android:theme="@style/RedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/st_logo_main"
+            android:layout_centerHorizontal="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:nextFocusDown="@id/markers"
+            android:textStyle="bold"
+            android:padding="@dimen/button_side_padding"
+            android:text="@string/track_santa"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/countdown_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/launch_button"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <FrameLayout
+                android:id="@+id/countdown_numbers_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp">
+
+                <include layout="@layout/layout_countdown_2015" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/countdown_numbers_container"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/until_takeoff"
+                android:text="@string/until_takeoff"
+                android:textColor="@color/SantaWhite"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:textAllCaps="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.apps.santatracker.village.SnowFlakeView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/snowFlakeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top" />
+
+    <android.support.v17.leanback.widget.VerticalGridView
+        style="?attr/rowsVerticalGridStyle"
+        android:id="@+id/markers"
+        android:nextFocusUp ="@id/launch_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"/>
+
+    <View
+        android:id="@+id/content_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/SantaRedDark"
+        android:visibility="invisible"/>
+
+</FrameLayout>

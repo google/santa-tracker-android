@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Theo dõi ông già Noel vào ngày 24 tháng 12.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Gumball sẽ có vào ngày 1 tháng 12.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Gumball hiện không khả dụng.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Memory sẽ có vào ngày 1 tháng 12.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Bộ nhớ hiện không khả dụng.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Elf Jetpack sẽ có vào ngày 1 tháng 12.</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Elf Jetpack hiện không khả dụng.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Snowglobe sẽ có vào ngày 1 tháng 12.</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowglobe hiện không có.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Rocket Sleigh sẽ có vào ngày 1 tháng 12.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Rocket Sleigh hiện không có.</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Dasher Dancer sẽ có vào ngày 1 tháng 12.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Dasher Dancer hiện không có.</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Trò chơi Snowball sẽ có vào ngày 1 tháng 12.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Trò chơi Snowball hiện không có.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowdown sẽ có vào ngày 1 tháng 12.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowdown hiện chưa khả dụng.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">Video</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">Video sẽ được mở khóa vào ngày %1$d tháng 12.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">Video hiện không có.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">Đăng nhập để xem bảng xếp hạng và thành tích</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">Xem bảng xếp hạng</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">Chơi</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">Xem</string>
+</resources>

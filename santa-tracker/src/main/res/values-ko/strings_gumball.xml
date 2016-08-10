@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="gbg_btn_pause" translation_description="Button hint for pausing the game">&#xAC8C;&#xC784; &#xC77C;&#xC2DC;&#xC911;&#xC9C0;</string>
+  <string name="gbg_btn_resume" translation_description="Button hint for resuming the game">&#xAC8C;&#xC784; &#xACC4;&#xC18D;&#xD558;&#xAE30;</string>
+</resources>

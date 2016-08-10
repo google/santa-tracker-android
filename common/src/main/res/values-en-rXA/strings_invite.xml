@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">[Îñvîţé ýöûŕ ƒŕîéñðš ţö ţŕåçķ Šåñţå ŵîţĥ Ĝööĝļé one two three four five six seven eight nine ten]</string>
+  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">[Ţŕý Šåñţå Ţŕåçķéŕ åñð ŵåţçĥ Šåñţå ƒļý åŕöûñð ţĥé ŵöŕļð¡ one two three four five six seven eight nine ten eleven]</string>
+  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">[Î šçöŕéð ᐅ%1$dᐊ þļåýîñĝ ţĥé ᐅ%2$sᐊ ĝåmé ŵîţĥ ţĥé éļvéš îñ Ĝööĝļé\'š Šåñţå Ţŕåçķéŕ, çåñ ýöû бéåţ ţĥåţ¿ one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen]</string>
+</resources>

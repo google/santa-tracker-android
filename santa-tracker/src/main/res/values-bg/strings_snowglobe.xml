@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">&#x423;&#x43A;&#x440;&#x430;&#x448;&#x435;&#x43D;&#x438;&#x435;&#x442;&#x43E; &#x432;&#x438; &#x441;&#x435; &#x441;&#x44A;&#x437;&#x434;&#x430;&#x432;&#x430;!</string>
+  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">&#x41F;&#x440;&#x430;&#x432;&#x435;&#x43D;&#x435; &#x43D;&#x430; &#x441;&#x43D;&#x438;&#x43C;&#x43A;&#x430;</string>
+  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">&#x41D;&#x43E;&#x432; &#x43E;&#x43F;&#x438;&#x442;</string>
+  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">&#x418;&#x437;&#x445;&#x43E;&#x434;</string>
+  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">&#x421;&#x43F;&#x43E;&#x434;&#x435;&#x43B;&#x44F;&#x43D;&#x435; &#x43D;&#x430; &#x441;&#x43D;&#x435;&#x436;&#x43D;&#x43E;&#x442;&#x43E; &#x432;&#x438; &#x43A;&#x44A;&#x43B;&#x431;&#x43E; &#x441; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x442;&#x430; &#x43D;&#x430;...</string>
+  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">&#x418;&#x437;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435;&#x442;&#x43E; &#x432;&#x438; &#x441;&#x435; &#x441;&#x44A;&#x437;&#x434;&#x430;&#x432;&#x430;!</string>
+</resources>

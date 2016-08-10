@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name_santa" translatable="false">Santa Tracker Debug</string>
+    <string name="no_next_destination" translatable="false">-</string>
+    <string name="colon" translatable="false">":"</string>
+    <string name="countdown_initial" translatable="false">00</string>
+</resources>
+

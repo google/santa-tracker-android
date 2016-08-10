@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- LAND -->
+
+    <integer name="castcontroller_numcols">4</integer>
+
+</resources>

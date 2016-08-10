@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Village dimensions -->
+    <dimen name="detail_backdrop_height">300dp</dimen>
+    <dimen name="ornament_margin_top">20dp</dimen>
+    <dimen name="counter_margin_top">40dp</dimen>
+
+    <!-- For supporting TV -->
+
+    <!-- margins with Overscan padding -->
+    <dimen name="tv_counter_margin_top">47dp</dimen>
+
+    <!-- Markers dimensions -->
+    <dimen name="tv_marker_height">160dp</dimen>
+    <dimen name="tv_marker_width">160dp</dimen>
+    <dimen name="tv_marker_height_and_shadow">200dp</dimen>
+    <dimen name="tv_markers_margin_bottom">27dp</dimen>
+    <dimen name="tv_marker_lock_width">48dp</dimen>
+    <dimen name="tv_marker_lock_margin_bottom">10dp</dimen>
+
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="why_sign_in" translation_description="Encouragement text shown beside Sign In button.">Logg på for å låse opp prestasjoner og legge ut poengsummen din.</string>
+  <string name="play_again" translation_description="Button text for playing the game again">Spill igjen</string>
+  <string name="score" translation_description="Player's total score after playing the game">Poeng</string>
+</resources>

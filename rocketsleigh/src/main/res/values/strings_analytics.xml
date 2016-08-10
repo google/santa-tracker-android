@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="analytics_screen_rocket" translatable="false">Rocket Sleigh</string>
+    <string name="analytics_screen_rocket_endgame" translatable="false">Rocket Sleigh End Game</string>
+    <string name="analytics_action_rocket_level" translatable="false">Level Cleared</string>
+    <string name="analytics_action_rocket_final_score" translatable="false">Final Score</string>
+    <string name="analytics_action_rocket_hit" translatable="false">Collision</string>
+</resources>

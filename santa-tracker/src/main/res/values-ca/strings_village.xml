@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Segueix el Pare Noel el 24 de desembre.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Gumball estarà disponible a partir de l\'1 de desembre.</string>
+  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">En aquest moment Gumball no està disponible.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Memory estarà disponible a partir de l\'1 de desembre.</string>
+  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">En aquest moment Memory no està disponible.</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">Elf Jetpack estarà disponible a partir de l\'1 de desembre.</string>
+  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">En aquest moment Elf Jetpack no està disponible.</string>
+  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Snowglobe estarà disponible a partir de l\'1 de desembre.</string>
+  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowglobe no està disponible en aquest moment.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Rocket Sleigh estarà disponible a partir de l\'1 de desembre.</string>
+  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Rocket Sleigh no està disponible en aquest moment.</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Dasher Dancer estarà disponible a partir de l\'1 de desembre.</string>
+  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Dasher Dancer no està disponible en aquest moment.</string>
+  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">El joc Snowball estarà disponible a partir de l\'1 de desembre.</string>
+  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">El joc Snowball no està disponible en aquest moment.</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">Snowdown estarà disponible a partir de l\'1 de desembre.</string>
+  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">Snowdown no està disponible actualment.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">Vídeo</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">El vídeo es desbloquejarà el dia %1$d de desembre.</string>
+  <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">El vídeo no està disponible en aquest moment.</string>
+  <string name="sign_in" translation_description="Asks users to sign in with Google account for leaderboards and achievements">Inicieu la sessió per veure els taulers de classificació i els assoliments</string>
+  <string name="show_leaderboard" translation_description="Show leaderboards on touch">Mostra el tauler de classificació</string>
+  <string name="play" translation_description="Label indicating an action that can be taken. Will be used to label game content that can be played.">Jugar</string>
+  <string name="watch" translation_description="Label indicating an action that can be taken. Will be used to label video content that can be watched.">Mirar</string>
+</resources>

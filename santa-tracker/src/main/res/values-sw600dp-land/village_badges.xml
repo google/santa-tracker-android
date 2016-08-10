@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="markerBadgeDefaultPadding">42dp</dimen>
+
+    <dimen name="markerDancerPaddingSides">31dp</dimen>
+    <dimen name="markerDancerPaddingTop">6dp</dimen>
+
+    <dimen name="markerMemoryPaddingSides">42dp</dimen>
+    <dimen name="markerMemoryPaddingTop">21dp</dimen>
+
+    <dimen name="markerJetpackPaddingSides">42dp</dimen>
+    <dimen name="markerJetpackPaddingTop">21dp</dimen>
+
+    <dimen name="markerVideoPaddingLeft">63dp</dimen>
+    <dimen name="markerVideoPaddingRight">21dp</dimen>
+
+    <dimen name="markerGumballPadding">31dp</dimen>
+</resources>

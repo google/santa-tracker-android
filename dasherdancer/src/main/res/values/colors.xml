@@ -1,0 +1,10 @@
+<resources>
+    <color name="bg_yellow">#FFF9CE1D</color>
+    <color name="bg_blue">#FF4FC3F7</color>
+    <color name="bg_purple">#FFBA68C8</color>
+    <color name="bg_green">#FF7CB342</color>
+    <color name="bg_orange">#FFF5871F</color>
+    <color name="bg_red">#FFB43A2D</color>
+    <color name="bg_brown">#FFD0A260</color>
+    <color name="bg_pink">#FFeb3f79</color>
+</resources>

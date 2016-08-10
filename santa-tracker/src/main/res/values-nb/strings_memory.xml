@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<resources>
+  <string name="mmg_score" translation_description="Header for score">POENG</string>
+  <string name="mmg_level" translation_description="Header for level">NIV&#xC5;</string>
+  <string name="mmg_summary_playagain" translation_description="Button text for playing again">SPILL P&#xC5; NYTT</string>
+  <string name="mmg_btn_pause" translation_description="Button hint for pausing the game">Sett spillet p&#xE5; pause</string>
+  <string name="mmg_btn_resume" translation_description="Button hint for resuming the game">Gjenoppta spillet</string>
+</resources>

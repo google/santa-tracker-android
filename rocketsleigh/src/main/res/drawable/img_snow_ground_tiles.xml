@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/img_snow_ground_a_tile"
+    android:tileMode="mirror"
+    android:dither="true" />
