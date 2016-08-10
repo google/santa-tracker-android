@@ -34,8 +34,9 @@ Now you should be able to plug your phone in (or fire up an emulator) and run:
 
 Alternatively, import the source code into Android Studio (File, Import Project).
 
-Note: You'll need Android SDK version 23 and build tools 23.0.1 to compile the project. If
-you're unsure about this, use Android Studio and tick the appropriate boxes in the SDK Manager.
+Note: You'll need Android SDK version 23, build tools 23.0.1, and the Android Support Library to
+compile the project. If you're unsure about this, use Android Studio and tick the appropriate boxes
+in the SDK Manager.
 
 ## License
 All image and audio files (including *.png, *.jpg, *.svg, *.mp3, *.wav 
