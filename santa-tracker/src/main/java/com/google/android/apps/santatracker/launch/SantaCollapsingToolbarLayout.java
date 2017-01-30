@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+import com.google.android.apps.santatracker.village.SnowFlakeView;
+
 public class SantaCollapsingToolbarLayout extends CollapsingToolbarLayout {
 
     private static final String TAG = "SantaCollapsing";
@@ -35,6 +37,7 @@ public class SantaCollapsingToolbarLayout extends CollapsingToolbarLayout {
 
     private View mToolbarContentView;
     private View mOverlayView;
+    private SnowFlakeView mSnowFlakeView;
 
     private ObjectAnimator mToolbarAnimator;
     private ObjectAnimator mOverlayAnimator;
@@ -63,9 +66,11 @@ public class SantaCollapsingToolbarLayout extends CollapsingToolbarLayout {
         if (shown) {
             Log.d(TAG, "setScrimShown:showing");
             animateToolbar(TRANSPARENT, OPAQUE);
+            mSnowFlakeView.setVisibility(View.GONE);
         } else {
             Log.d(TAG, "setScrimShown:hiding");
             animateToolbar(OPAQUE, TRANSPARENT);
+            mSnowFlakeView.setVisibility(View.VISIBLE);
         }
 
         mScrimShown = shown;
@@ -108,5 +113,9 @@ public class SantaCollapsingToolbarLayout extends CollapsingToolbarLayout {
 
     public void setOverlayColor(int colorResource) {
         mOverlayView.setBackgroundResource(colorResource);
+    }
+
+    public void setSnowFlakeView(SnowFlakeView snowFlakeView) {
+        mSnowFlakeView = snowFlakeView;
     }
 }

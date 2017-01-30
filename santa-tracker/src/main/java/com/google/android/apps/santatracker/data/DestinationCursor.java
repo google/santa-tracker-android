@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,15 +21,12 @@ import android.database.Cursor;
 /**
  * Encapsulates a cursor of Destinations.
  *
- * @author jfschmakeit
  */
 public class DestinationCursor extends CursorHelper<Destination> implements SantaDestinationContract {
 
     public DestinationCursor(Cursor cursor) {
-       super(cursor);
+        super(cursor);
     }
-
-
 
     /**
      * Returns the {@link Destination} object of the position of the current
@@ -63,6 +60,7 @@ public class DestinationCursor extends CursorHelper<Destination> implements Sant
      * of the current position
      */
     public boolean isVisiting(long time) {
+        //noinspection SimplifiableIfStatement
         if (mCursor.isAfterLast()) {
             return false; // already finished
         }

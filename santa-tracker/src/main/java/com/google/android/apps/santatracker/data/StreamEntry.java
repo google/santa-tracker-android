@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,5 +24,5 @@ public class StreamEntry {
     public String image = null;
     public String video = null;
     public String caption = null;
-    public boolean isNotification = false;
+    boolean isNotification = false;
 }

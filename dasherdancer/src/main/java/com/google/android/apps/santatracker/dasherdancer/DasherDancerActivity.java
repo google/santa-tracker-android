@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,19 +24,24 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.DrawableRes;
+import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.Log;
 import android.util.LruCache;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
@@ -61,6 +66,8 @@ public class DasherDancerActivity extends FragmentActivity implements
         OnGestureListener, OnScaleGestureListener, Handler.Callback, Listener, SensorEventListener,
         AnimatorListener, OnPageChangeListener, SignInListener {
 
+    private static final String TAG = "DasherDancer";
+
     /**
      * Extra key used to pass back the character id that should be selected, set by the CharacterActivity.
      */
@@ -71,6 +78,9 @@ public class DasherDancerActivity extends FragmentActivity implements
     public static final int CHARACTER_ID_ELF = 1;
     public static final int CHARACTER_ID_REINDEER = 2;
     public static final int CHARACTER_ID_SNOWMAN = 3;
+
+    /** Number of times to try downsampling before giving up **/
+    public static final int MAX_DOWNSAMPLING_ATTEMPTS = 3;
 
     /**
      * Request code for calling CharacterActivity for result.
@@ -95,12 +105,12 @@ public class DasherDancerActivity extends FragmentActivity implements
             {-1,-1,-1,-1,-1,-1,-1,-1,-1} //snowman
     };
 
-    private LruCache<Integer, Bitmap> mMemoryCache;
+    private LruCache<Integer, Drawable> mMemoryCache;
     private NoSwipeViewPager mPager;
     private Handler mHandler;
     private ShakeDetector mDetector;
     private LoadBitmapsTask mLoadBitmapsTask;
-    private LoadAllBitmapsTask mLoadAllBitmapsTask;
+    private LoadCharacterResourcesTask mLoadCharacterTask;
     private ObjectAnimator mAnimator;
     private boolean mPlayingRest = false;
     private boolean mAnimCanceled = false;
@@ -113,6 +123,10 @@ public class DasherDancerActivity extends FragmentActivity implements
     private ObjectAnimator mProgressAnimator;
     private ActivityManager mActivityManager;
     private FirebaseAnalytics mMeasurement;
+
+    // Bitmap downsampling options
+    private BitmapFactory.Options mOptions;
+    private int mDownSamplingAttempts;
 
     private PlayGamesFragment mGamesFragment;
 
@@ -133,14 +147,29 @@ public class DasherDancerActivity extends FragmentActivity implements
 
         mActivityManager = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
 
-        mMemoryCache = new LruCache<Integer, Bitmap>(240) {
-            protected void entryRemoved(boolean evicted, Integer key, Bitmap oldValue, Bitmap newValue) {
+        mMemoryCache = new LruCache<Integer, Drawable>(240) {
+            protected void entryRemoved(boolean evicted, Integer key, Drawable oldValue, Drawable newValue) {
                 if ((oldValue != null) && (oldValue != newValue)) {
-                    oldValue.recycle();
-                    oldValue = null;
+                    if (oldValue instanceof InsetDrawableCompat){
+                        Drawable drawable = ((InsetDrawableCompat) oldValue).getDrawable();
+                        if (drawable instanceof BitmapDrawable){
+                            ((BitmapDrawable) drawable).getBitmap().recycle();
+                        }
+                    }
                 }
             }
         };
+
+        // Initialize default Bitmap options
+        mOptions = new BitmapFactory.Options();
+        mOptions.inPreferredConfig = Bitmap.Config.RGB_565;
+        mOptions.inSampleSize = getResources().getInteger(R.integer.res);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            if (mActivityManager.isLowRamDevice()) {
+                Log.w(TAG, "isLowRamDevice: downsampling default bitmap options");
+                mOptions.inSampleSize *= 2;
+            }
+        }
 
         CharacterAdapter adapter = new CharacterAdapter(sCharacters);
         mPager = (NoSwipeViewPager) findViewById(R.id.character_pager);
@@ -153,38 +182,6 @@ public class DasherDancerActivity extends FragmentActivity implements
         mDetector = new ShakeDetector(this);
 
         mSoundPool = new SoundPool(4, AudioManager.STREAM_MUSIC, 0);
-        mSoundIds[0][Character.ANIM_PINCH_IN] = mSoundPool.load(this, R.raw.santa_pinchin, 1);
-        mSoundIds[0][Character.ANIM_PINCH_OUT] = mSoundPool.load(this, R.raw.santa_pinchout, 1);
-        mSoundIds[0][Character.ANIM_SHAKE] = mSoundPool.load(this, R.raw.santa_shake, 1);
-        mSoundIds[0][Character.ANIM_SWIPE_UP] = mSoundPool.load(this, R.raw.santa_swipeup, 1);
-        mSoundIds[0][Character.ANIM_SWIPE_LEFT] = mSoundPool.load(this, R.raw.santa_swipeleft, 1);
-        mSoundIds[0][Character.ANIM_SWIPE_RIGHT] = mSoundPool.load(this, R.raw.santa_swiperight, 1);
-        mSoundIds[0][Character.ANIM_SWIPE_DOWN] = mSoundPool.load(this, R.raw.santa_swipedown, 1);
-        mSoundIds[0][Character.ANIM_TAP] = mSoundPool.load(this, R.raw.santa_tap, 1);
-        mSoundIds[1][Character.ANIM_PINCH_IN] = mSoundPool.load(this, R.raw.elf_pinchin_ball, 1);
-        mSoundIds[1][Character.ANIM_PINCH_OUT] = mSoundPool.load(this, R.raw.elf_pinchout, 1);
-        mSoundIds[1][Character.ANIM_SHAKE] = mSoundPool.load(this, R.raw.elf_shake2, 1);
-        mSoundIds[1][Character.ANIM_SWIPE_DOWN] = mSoundPool.load(this, R.raw.elf_swipedown2, 1);
-        mSoundIds[1][Character.ANIM_SWIPE_UP] = mSoundPool.load(this, R.raw.elf_swipeup2, 1);
-        mSoundIds[1][Character.ANIM_SWIPE_LEFT] = mSoundPool.load(this, R.raw.elf_swipeleft, 1);
-        mSoundIds[1][Character.ANIM_SWIPE_RIGHT] = mSoundPool.load(this, R.raw.elf_swiperight, 1);
-        mSoundIds[1][Character.ANIM_TAP] = mSoundPool.load(this, R.raw.elf_tap3, 1);
-        mSoundIds[2][Character.ANIM_PINCH_IN] = mSoundPool.load(this, R.raw.reindeer_pinchin, 1);
-        mSoundIds[2][Character.ANIM_PINCH_OUT] = mSoundPool.load(this, R.raw.reindeer_pinchout, 1);
-        mSoundIds[2][Character.ANIM_SHAKE] = mSoundPool.load(this, R.raw.reindeer_shake, 1);
-        mSoundIds[2][Character.ANIM_SWIPE_UP] = mSoundPool.load(this, R.raw.reindeer_swipeup, 1);
-        mSoundIds[2][Character.ANIM_SWIPE_DOWN] = mSoundPool.load(this, R.raw.reindeer_swipedown, 1);
-        mSoundIds[2][Character.ANIM_SWIPE_LEFT] = mSoundPool.load(this, R.raw.reindeer_swipeleft, 1);
-        mSoundIds[2][Character.ANIM_SWIPE_RIGHT] = mSoundPool.load(this, R.raw.reindeer_swiperight, 1);
-        mSoundIds[2][Character.ANIM_TAP] = mSoundPool.load(this, R.raw.reindeer_tap2, 1);
-        mSoundIds[3][Character.ANIM_PINCH_IN] = mSoundPool.load(this, R.raw.snowman_pinchin, 1);
-        mSoundIds[3][Character.ANIM_PINCH_OUT] = mSoundPool.load(this, R.raw.snowman_pinchout, 1);
-        mSoundIds[3][Character.ANIM_SHAKE] = mSoundPool.load(this, R.raw.snowman_shake, 1);
-        mSoundIds[3][Character.ANIM_SWIPE_UP] = mSoundPool.load(this, R.raw.snowman_swipeup, 1);
-        mSoundIds[3][Character.ANIM_SWIPE_DOWN] = mSoundPool.load(this, R.raw.snowman_swipedown, 1);
-        mSoundIds[3][Character.ANIM_SWIPE_LEFT] = mSoundPool.load(this, R.raw.snowman_swipeleft, 1);
-        mSoundIds[3][Character.ANIM_SWIPE_RIGHT] = mSoundPool.load(this, R.raw.snowman_swiperight, 1);
-        mSoundIds[3][Character.ANIM_TAP] = mSoundPool.load(this, R.raw.snowman_tap, 1);
 
         mAchievements = new HashSet[4];
         mAchievements[0] = new HashSet<Integer>();
@@ -227,11 +224,12 @@ public class DasherDancerActivity extends FragmentActivity implements
             }, 300);
         }
         else {
-            if(mLoadAllBitmapsTask != null) {
-                mLoadAllBitmapsTask.cancel(true);
+            if(mLoadCharacterTask != null) {
+                mLoadCharacterTask.cancel(true);
             }
-            mLoadAllBitmapsTask = new LoadAllBitmapsTask();
-            mLoadAllBitmapsTask.execute(sCharacters[mPager.getCurrentItem()]);
+
+            mLoadCharacterTask = new LoadCharacterResourcesTask(mPager.getCurrentItem());
+            mLoadCharacterTask.execute();
         }
     }
 
@@ -276,8 +274,8 @@ public class DasherDancerActivity extends FragmentActivity implements
         if(mLoadBitmapsTask != null) {
             mLoadBitmapsTask.cancel(true);
         }
-        if(mLoadAllBitmapsTask != null) {
-            mLoadAllBitmapsTask.cancel(true);
+        if(mLoadCharacterTask != null) {
+            mLoadCharacterTask.cancel(true);
         }
         if(mAnimator != null) {
             mAnimator.cancel();
@@ -521,8 +519,28 @@ public class DasherDancerActivity extends FragmentActivity implements
             mLoadBitmapsTask.cancel(true);
             mAnimator.cancel();
         }
-        LoadBitmapsTask task = new LoadBitmapsTask(animationTime, frameIndices, frameResourceIds);
-        task.execute();
+
+        mLoadBitmapsTask = new LoadBitmapsTask(animationTime, frameIndices, frameResourceIds);
+        mLoadBitmapsTask.execute();
+    }
+
+    /**
+     * Load and cache all sounds for a given character.
+     * @param characterIndex index of the character in the array, like {@link #CHARACTER_ID_SANTA}.
+     */
+    private void loadSoundsForCharacter(int characterIndex) {
+        for (int animationId : Character.ALL_ANIMS) {
+            // No need to load sounds twice
+            if (mSoundIds[characterIndex][animationId] != -1) {
+                continue;
+            }
+
+            int soundResource = sCharacters[characterIndex].getSoundResource(animationId);
+            if (soundResource != -1) {
+                mSoundIds[characterIndex][animationId] =
+                        mSoundPool.load(this, soundResource, 1);
+            }
+        }
     }
 
     @Override
@@ -535,101 +553,92 @@ public class DasherDancerActivity extends FragmentActivity implements
 
     }
 
-    private class LoadAllBitmapsTask extends AsyncTask<Character, Void, Void> {
+    @Nullable
+    private Drawable tryLoadBitmap(@DrawableRes int resourceId) throws BitmapLoadException {
+        try {
+            Bitmap bmp = BitmapFactory.decodeResource(getResources(), resourceId, mOptions);
+            BitmapDrawable bitmapDrawable = new BitmapDrawable(getResources(), bmp);
+            Point p = ResourceOffsets.getOffsets(resourceId);
+            int x = Math.round(p.x / (float)mOptions.inSampleSize);
+            int y = Math.round(p.y / (float)mOptions.inSampleSize);
+            int w = Math.round(ResourceOffsets.ORIG_SIZE.x / (float)mOptions.inSampleSize);
+            int h = Math.round(ResourceOffsets.ORIG_SIZE.y / (float)mOptions.inSampleSize);
+            InsetDrawableCompat insetDrawable = new InsetDrawableCompat(bitmapDrawable,
+                    x,
+                    y,
+                    w - bmp.getWidth() - x,
+                    h - bmp.getHeight() - y
+            );
+            return insetDrawable;
 
-        final BitmapFactory.Options mOptions = new BitmapFactory.Options();
+        } catch (OutOfMemoryError oom) {
+            Log.w(TAG, "Out of memory error, inSampleSize=" + mOptions.inSampleSize);
+            if (mDownSamplingAttempts < MAX_DOWNSAMPLING_ATTEMPTS) {
+                mOptions.inSampleSize *= 2;
+                mDownSamplingAttempts++;
+            }
+        }
+
+        throw new BitmapLoadException("Failed to load resource ID: " + resourceId);
+    }
+
+    /**
+     * Load all of the resources for a given Character, then begin playing the "IDLE" animation.
+     * for that character.
+     */
+    private class LoadCharacterResourcesTask extends RetryableAsyncTask<Void, Void, Void> {
+
+        private Character mCharacter;
+        private int mCharacterIndex;
+
+        LoadCharacterResourcesTask(int characterIndex) {
+            mCharacter = sCharacters[characterIndex];
+            mCharacterIndex = characterIndex;
+        }
 
         @Override
-        protected Void doInBackground(Character... params) {
+        protected Void doInBackground(Void... params) {
             mCanTouch = false;
             //See if we can free up any memory before we allocate some ourselves.
             //Request garbage collection.
             System.gc();
-            Character c = params[0];
 
-            mOptions.inPreferredConfig = Bitmap.Config.RGB_565;
-            mOptions.inSampleSize = getResources().getInteger(R.integer.res);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                if (mActivityManager.isLowRamDevice()) {
-                    mOptions.inSampleSize *= 2;
-                }
-            }
+            // Load all sounds for this character
+            loadSoundsForCharacter(mCharacterIndex);
 
-                for (int resourceId : c.getFrames(Character.ANIM_IDLE)) {
-                    if(isCancelled()) {
+            // Load all animations types for this character
+            for (int animation : Character.ALL_ANIMS) {
+                for (int resourceId : mCharacter.getFrames(animation)) {
+                    if (isCancelled()) {
                         break;
                     }
-                    loadBitmapHelper(resourceId);
-                }
-                for (int resourceId : c.getFrames(Character.ANIM_TAP)) {
-                    if(isCancelled()) {
-                        break;
-                    }
-                    loadBitmapHelper(resourceId);
-                }
-                for (int resourceId : c.getFrames(Character.ANIM_SHAKE)) {
-                    if(isCancelled()) {
-                        break;
-                    }
-                    loadBitmapHelper(resourceId);
-                }
-                for (int resourceId : c.getFrames(Character.ANIM_SWIPE_UP)) {
-                    if(isCancelled()) {
-                        break;
-                    }
-                    loadBitmapHelper(resourceId);
-                }
-                for (int resourceId : c.getFrames(Character.ANIM_SWIPE_DOWN)) {
-                    if(isCancelled()) {
-                        break;
-                    }
-                    loadBitmapHelper(resourceId);
-                }
-                for (int resourceId : c.getFrames(Character.ANIM_SWIPE_LEFT)) {
-                    if(isCancelled()) {
-                        break;
-                    }
-                    loadBitmapHelper(resourceId);
-                }
-                for (int resourceId : c.getFrames(Character.ANIM_SWIPE_RIGHT)) {
-                    if(isCancelled()) {
-                        break;
-                    }
-                    loadBitmapHelper(resourceId);
-                }
-                for (int resourceId : c.getFrames(Character.ANIM_PINCH_IN)) {
-                    if(isCancelled()) {
-                        break;
-                    }
-                    loadBitmapHelper(resourceId);
-                }
-                for (int resourceId : c.getFrames(Character.ANIM_PINCH_OUT)) {
-                    if(isCancelled()) {
-                        break;
-                    }
-                    loadBitmapHelper(resourceId);
-                }
 
-            return null;
-        }
+                    if (mMemoryCache.get(resourceId) == null) {
+                        try {
+                            Drawable bitmap = tryLoadBitmap(resourceId);
+                            mMemoryCache.put(resourceId, bitmap);
+                        } catch (BitmapLoadException e) {
+                            Log.e(TAG, "LoadCharacterResourcesTask: failed", e);
 
-        private void loadBitmapHelper(int resourceId) {
-            if(mMemoryCache.get(resourceId) == null) {
-                mMemoryCache.put(resourceId, BitmapFactory.decodeResource(
-                        DasherDancerActivity.this.getResources(),
-                        resourceId,
-                        mOptions));
-                if (isCancelled()) {
-                    // Remove the BMP we just added
-                    // The check and remove should be atomic so we synchronize
-                    // (There could be an evict going on so make sure it's still there...
-                    synchronized(mMemoryCache) {
-                        if (mMemoryCache.get(resourceId) != null) {
-                            mMemoryCache.remove(resourceId);
+                            // Retry the task
+                            return retrySelf(params);
+                        }
+
+                        if (isCancelled()) {
+                            // Remove the BMP we just added
+                            // The check and remove should be atomic so we synchronize
+                            // (There could be an evict going on so make sure it's still there...
+                            synchronized(mMemoryCache) {
+                                if (mMemoryCache.get(resourceId) != null) {
+                                    mMemoryCache.remove(resourceId);
+                                }
+                            }
                         }
                     }
                 }
             }
+
+            return null;
         }
 
         @Override
@@ -640,59 +649,79 @@ public class DasherDancerActivity extends FragmentActivity implements
 
             findViewById(R.id.progress).setVisibility(View.GONE);
 
-            Bitmap[] frames = new Bitmap[sCharacters[mPager.getCurrentItem()].getFrames(Character.ANIM_IDLE).length];
+            Character currentCharacter = sCharacters[mPager.getCurrentItem()];
+            Drawable[] frames = new Drawable[currentCharacter.getFrames(Character.ANIM_IDLE).length];
             for(int i=0; i<frames.length; i++) {
-                frames[i] = mMemoryCache.get(sCharacters[mPager.getCurrentItem()].getFrames(Character.ANIM_IDLE)[i]);
+                frames[i] = mMemoryCache.get(currentCharacter.getFrames(Character.ANIM_IDLE)[i]);
             }
 
-            FrameAnimationView character = (FrameAnimationView) mPager.findViewWithTag(mPager.getCurrentItem());
-            character.setFrames(frames, sCharacters[mPager.getCurrentItem()].getFrameIndices(Character.ANIM_IDLE));
+            FrameAnimationView characterView =
+                    (FrameAnimationView) mPager.findViewWithTag(mPager.getCurrentItem());
+            characterView.setFrames(frames, currentCharacter.getFrameIndices(Character.ANIM_IDLE));
 
             mPlayingRest = true;
-            mAnimator = ObjectAnimator.ofInt(character, "frameIndex", 0,
-                    sCharacters[mPager.getCurrentItem()].getFrameIndices(Character.ANIM_IDLE).length-1);
-            mAnimator.setDuration(sCharacters[mPager.getCurrentItem()].getDuration(Character.ANIM_IDLE));
+            mAnimator = ObjectAnimator.ofInt(characterView, "frameIndex", 0,
+                    currentCharacter.getFrameIndices(Character.ANIM_IDLE).length-1);
+            mAnimator.setDuration(currentCharacter.getDuration(Character.ANIM_IDLE));
             mAnimator.addListener(DasherDancerActivity.this);
+
             mAnimator.start();
             mInitialized = true;
             mCanTouch = true;
+        }
+
+        @Override
+        public boolean shouldRetry() {
+            return mDownSamplingAttempts < MAX_DOWNSAMPLING_ATTEMPTS;
+        }
+
+        @Override
+        public void onPrepareForRetry() {
+            // Clear all frames for this character
+            for (int animation : Character.ALL_ANIMS) {
+                for (int resourceId : mCharacter.getFrames(animation)) {
+                    mMemoryCache.remove(resourceId);
+                }
+            }
+
+            // Try to retry
+            System.gc();
         }
     }
 
     /**
      * AsyncTask that loads bitmaps for animation and starts the animation upon completion.
      */
-    private class LoadBitmapsTask extends AsyncTask<Void, Void, Bitmap[]> {
+    private class LoadBitmapsTask extends RetryableAsyncTask<Void, Void, Drawable[]> {
 
         private int[] mFrames;
         private int[] mFrameIndices;
         private long mDuration;
 
         public LoadBitmapsTask(long duration, int[] frameIndices, int[] frames) {
-            mFrameIndices = frameIndices;
             mDuration = duration;
+            mFrameIndices = frameIndices;
             mFrames = frames;
         }
 
         @Override
-        protected Bitmap[] doInBackground(Void... params) {
-            Bitmap[] bitmaps = new Bitmap[mFrames.length];
-            final BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inPreferredConfig = Bitmap.Config.RGB_565;
-            options.inSampleSize = getResources().getInteger(R.integer.res);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                if (mActivityManager.isLowRamDevice()) {
-                    options.inSampleSize *= 2;
-                }
-            }
+        protected Drawable[] doInBackground(Void... params) {
+            Drawable[] bitmaps = new Drawable[mFrames.length];
 
-            for(int i=0; i<mFrames.length && !isCancelled(); i++) {
+            for(int i = 0; i < mFrames.length; i++) {
+                if (isCancelled()) {
+                    break;
+                }
+
                 int id = mFrames[i];
                 if(mMemoryCache.get(id) == null) {
-                    bitmaps[i] = BitmapFactory.decodeResource(
-                            DasherDancerActivity.this.getResources(),
-                            id,
-                            options);
+                    try {
+                        bitmaps[i] = tryLoadBitmap(id);
+                    } catch (BitmapLoadException e) {
+                        Log.e(TAG, "LoadBitmapsTask: failed", e);
+                        return retrySelf(params);
+                    }
+
                     mMemoryCache.put(id, bitmaps[i]);
                     if (isCancelled()) {
                         synchronized (mMemoryCache) {
@@ -710,10 +739,11 @@ public class DasherDancerActivity extends FragmentActivity implements
         }
 
         @Override
-        public void onPostExecute(Bitmap[] result) {
+        public void onPostExecute(Drawable[] result) {
             if(result == null || isCancelled()) {
                 return;
             }
+
             FrameAnimationView character = (FrameAnimationView) mPager.findViewWithTag(mPager.getCurrentItem());
             character.setFrames(result, mFrameIndices);
             if(mAnimator != null) {
@@ -729,6 +759,21 @@ public class DasherDancerActivity extends FragmentActivity implements
             }
         }
 
+        @Override
+        public boolean shouldRetry() {
+            return (mDownSamplingAttempts < MAX_DOWNSAMPLING_ATTEMPTS);
+        }
+
+        @Override
+        public void onPrepareForRetry() {
+            // Remove all frames this task should load
+            for (int id : mFrames) {
+                mMemoryCache.remove(id);
+            }
+
+            // See if we can now GC
+            System.gc();
+        }
     }
 
     @Override
@@ -828,8 +873,8 @@ public class DasherDancerActivity extends FragmentActivity implements
         if(mLoadBitmapsTask != null) {
             mLoadBitmapsTask.cancel(true);
         }
-        if(mLoadAllBitmapsTask != null) {
-            mLoadAllBitmapsTask.cancel(true);
+        if(mLoadCharacterTask != null) {
+            mLoadCharacterTask.cancel(true);
         }
         if(mAnimator != null) {
             mAnimator.cancel();
@@ -863,11 +908,12 @@ public class DasherDancerActivity extends FragmentActivity implements
                 mMemoryCache.evictAll();
                 //Request garbage collection.
                 System.gc();
-                if (mLoadAllBitmapsTask != null) {
-                    mLoadAllBitmapsTask.cancel(true);
+                if (mLoadCharacterTask != null) {
+                    mLoadCharacterTask.cancel(true);
                 }
-                mLoadAllBitmapsTask = new LoadAllBitmapsTask();
-                mLoadAllBitmapsTask.execute(sCharacters[position]);
+
+                mLoadCharacterTask = new LoadCharacterResourcesTask(position);
+                mLoadCharacterTask.execute();
             }
         }, 100);
     }
@@ -900,5 +946,16 @@ public class DasherDancerActivity extends FragmentActivity implements
                 }
             }
         }
+    }
+
+    /**
+     * Convenience class for exception when loading Bitmaps.
+     */
+    private static class BitmapLoadException extends Exception {
+
+        public BitmapLoadException(String msg) {
+            super(msg);
+        }
+
     }
 }

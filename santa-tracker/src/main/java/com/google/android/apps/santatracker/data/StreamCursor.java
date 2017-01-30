@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,15 +25,6 @@ public class StreamCursor extends CursorHelper<StreamEntry> implements SantaStre
 
     public StreamCursor(Cursor cursor) {
         super(cursor);
-    }
-
-    /**
-     * Returns true if the Checks whether the departure time of the current
-     * position is in the past.
-     */
-    public boolean isInPast(long time) {
-        return time > mCursor.getLong(mCursor
-                .getColumnIndex(COLUMN_NAME_TIMESTAMP));
     }
 
     /**

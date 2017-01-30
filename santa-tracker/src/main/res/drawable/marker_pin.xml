@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<vector android:height="37dp" android:viewportHeight="98.9"
+    android:viewportWidth="69.800835" android:width="26dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#faca43" android:pathData="M50.2,0C44,0 38.5,2.8 34.9,7.3 31.3,2.8 25.8,0 19.7,0 8.8,0 -0,8.8 -0,19.7c0,4.8 1.8,9.4 4.9,13l14.7,18.5 14.7,-18.4 0.1,-0.1c0.2,-0.2 0.3,-0.4 0.5,-0.6 0.2,0.2 0.3,0.4 0.5,0.6l14.7,18.5 14.7,-18.4 0.1,-0.1c3.2,-3.6 4.9,-8.2 4.9,-13C69.9,8.8 61,0 50.2,0zM27.6,27 L26,28.9 26,29 19.7,37 11.8,27.1 11.6,26.9c-1.8,-2 -2.8,-4.6 -2.8,-7.2 0,-6 4.9,-10.8 10.8,-10.8 6,0 10.8,4.9 10.8,10.8 0.1,2.7 -0.9,5.3 -2.8,7.3zM42.2,26.9 L40.6,28.7 40.7,28.9 34.3,36.9 26.4,27 26.2,26.8c-1.8,-2 -2.8,-4.6 -2.8,-7.2 0,-6 4.9,-10.8 10.8,-10.8 5.9,0 10.8,4.8 10.8,10.8 0,2.7 -1,5.3 -2.8,7.3z"/>
+    <path android:fillColor="#da4437" android:pathData="M65.8,50.3C65.8,33.6 52.2,20 35.4,20 18.7,20 5.1,33.6 5.1,50.3c0,7.8 2.9,14.8 7.7,20.2l22.6,28.4 22.3,-28 0,0c5,-5.4 8.1,-12.6 8.1,-20.6z"/>
+    <path android:fillColor="#faca43" android:pathData="m28.8,20.7v69.9l6.6,8.3 6.6,-8.3L42,20.7C39.9,20.2 37.7,20 35.4,20 33.2,20 31,20.3 28.8,20.7z"/>
+    <path android:fillColor="#ffffff" android:pathData="m45.9,50.3c0,5.8 -4.7,10.5 -10.5,10.5 -5.8,0 -10.5,-4.7 -10.5,-10.5 0,-5.8 4.7,-10.5 10.5,-10.5 5.8,0 10.5,4.7 10.5,10.5z"/>
+</vector>

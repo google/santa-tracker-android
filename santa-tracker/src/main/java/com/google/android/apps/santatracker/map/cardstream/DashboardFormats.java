@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@ import com.google.android.apps.santatracker.data.SantaPreferences;
 
 import java.text.NumberFormat;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 public class DashboardFormats {
 
@@ -51,7 +52,7 @@ public class DashboardFormats {
      * @param timestamp The unix time.
      * @return A formatted string.
      */
-    public static String formatTime(Context context, long timestamp) {
+    static String formatTime(Context context, long timestamp) {
         if (sCalendar == null) {
             sCalendar = (GregorianCalendar) GregorianCalendar.getInstance();
         }
@@ -59,22 +60,22 @@ public class DashboardFormats {
             sOffset = new SantaPreferences(context).getOffset();
         }
         sCalendar.setTimeInMillis(timestamp - sOffset);
-        return String.format(TIME_FORMAT, sCalendar.get(GregorianCalendar.HOUR),
+        return String.format(Locale.US, TIME_FORMAT, sCalendar.get(GregorianCalendar.HOUR),
                 sCalendar.get(GregorianCalendar.MINUTE));
     }
 
     /**
-     * @param time    The time in milliseconds
-     * @return
+     * @param time The time in milliseconds
+     * @return A string representation of the countdown time.
      */
     public static String formatCountdown(long time) {
         final int iHours = (int) Math.floor(time / (60 * 60 * 1000) % 24);
         final int iMinutes = (int) Math.floor(time / (60 * 1000) % 60);
         final int iSeconds = (int) Math.floor(time / (1000) % 60);
         if (iHours > 0) {
-            return String.format(COUNTDOWN_HMS, iHours, iMinutes, iSeconds);
+            return String.format(Locale.US, COUNTDOWN_HMS, iHours, iMinutes, iSeconds);
         } else {
-            return String.format(COUNTDOWN_MS, iMinutes, iSeconds);
+            return String.format(Locale.US, COUNTDOWN_MS, iMinutes, iSeconds);
         }
     }
 

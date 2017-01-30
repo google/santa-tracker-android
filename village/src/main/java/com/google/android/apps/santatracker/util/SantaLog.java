@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,22 +16,43 @@
 
 package com.google.android.apps.santatracker.util;
 
-import org.json.JSONException;
-
 import android.util.Log;
+
+import com.google.android.apps.santatracker.common.BuildConfig;
+
+import org.json.JSONException;
 
 public abstract class SantaLog {
 
-    private static final boolean LOG_ENABLED = false;
+    private static final boolean LOG_ENABLED = BuildConfig.DEBUG;
 
     public static void v(String tag, String msg) {
         if (LOG_ENABLED) {
             Log.v(tag, msg);
         }
     }
+
+    public static void w(String tag, String msg) {
+        if (LOG_ENABLED) {
+            Log.w(tag, msg);
+        }
+    }
+
+    public static void w(String tag, String msg, Exception e) {
+        if (LOG_ENABLED) {
+            Log.w(tag, msg, e);
+        }
+    }
+
     public static void e(String tag, String msg) {
         if (LOG_ENABLED) {
             Log.e(tag, msg);
+        }
+    }
+
+    public static void e(String tag, String msg, Exception e) {
+        if (LOG_ENABLED) {
+            Log.e(tag, msg, e);
         }
     }
 

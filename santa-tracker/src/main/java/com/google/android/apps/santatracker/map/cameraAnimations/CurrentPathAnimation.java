@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,36 +16,34 @@
 
 package com.google.android.apps.santatracker.map.cameraAnimations;
 
+import android.os.Handler;
+
+import com.google.android.apps.santatracker.data.SantaPreferences;
+import com.google.android.apps.santatracker.map.SantaMarker;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.CancelableCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.android.apps.santatracker.data.SantaPreferences;
-import com.google.android.apps.santatracker.map.SantaMarker;
-
-import android.os.Handler;
 
 /**
  * Camera animation that shows the path from Santa's current position to the
  * destination. The camera is animated independently of calls to
- * {@link #onSantaMoving(LatLng)} until the {@link #MAX_ZOOM} level is reached.
+ * {@link MoveAroundSanta#onSantaMoving(LatLng)} until the {@link #MAX_ZOOM} level is reached.
  *
- * @author jfschmakeit
  */
-public class CurrentPathAnimation extends SantaCamAnimation {
+class CurrentPathAnimation extends SantaCamAnimation {
 
     private static final int ANIMATION_DURATION = 2000;
     private static final int PADDING = 50; // TODO: move to constructor
 
-    public static final float MAX_ZOOM = 10f;
+    private static final float MAX_ZOOM = 10f;
 
     private CameraUpdate mCameraUpdate;
 
-    public CurrentPathAnimation(Handler handler, GoogleMap mMap,
-            SantaMarker mSanta) {
-        super(handler, mMap, mSanta);
+    CurrentPathAnimation(Handler handler, GoogleMap map, SantaMarker santa) {
+        super(handler, map, santa);
     }
 
     public void start() {
@@ -57,7 +55,7 @@ public class CurrentPathAnimation extends SantaCamAnimation {
     }
 
     // animate to a new bounds with santa and his destination
-    Runnable mThreadAnimate = new Runnable() {
+    private Runnable mThreadAnimate = new Runnable() {
 
         public void run() {
             if (mCameraUpdate != null && mMap != null) {
@@ -74,8 +72,8 @@ public class CurrentPathAnimation extends SantaCamAnimation {
         final LatLng santaDestination = (mSanta != null) ? mSanta.getDestination() : null;
 
         // Only construct a camera update if both positions are valid
-        if(futurePosition == null || santaDestination == null){
-            return ;
+        if (futurePosition == null || santaDestination == null) {
+            return;
         }
 
         mCameraUpdate = CameraUpdateFactory.newLatLngBounds(
@@ -89,8 +87,8 @@ public class CurrentPathAnimation extends SantaCamAnimation {
      * Animate at current zoom level to center on the position.
      */
     private void animateFollowSanta(LatLng futurePosition) {
-        if(futurePosition == null){
-            return ;
+        if (futurePosition == null) {
+            return;
         }
 
         mCameraUpdate = CameraUpdateFactory.newLatLng(futurePosition);
@@ -98,7 +96,7 @@ public class CurrentPathAnimation extends SantaCamAnimation {
 
     }
 
-    CancelableCallback mCancelCallback = new GoogleMap.CancelableCallback() {
+    private CancelableCallback mCancelCallback = new GoogleMap.CancelableCallback() {
 
         public void onFinish() {
 

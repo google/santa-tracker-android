@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
   <string name="santaDashboard" translation_description="A grouping of Santa's status on a dashboard">聖誕老人資訊主頁</string>
   <string name="current_location" translation_description="Where is Santa now. Label in all capital letters.">目前地點</string>
@@ -23,29 +39,29 @@
   <string name="distance_km_away" translation_description="Distance between Santa and the user current location. Kilometer in short. The first argument is a number. The second may be a number in miles depending on locale.">%1$,d 公里%2$s外</string>
   <string name="distance_optional_miles" translation_description="Distance converted as miles. May not be shown in some locales.">\u0020(%,d 哩)</string>
   <string name="distance_mi_away" translation_description="Distance between Santa and the user current location. Mile in short.">%1$,d 英里外</string>
-  <string name="did_you_know" translation_description="Heading for trivia facts.">您知不知道</string>
+  <string name="did_you_know" translation_description="Heading for trivia facts.">您知道嗎？</string>
   <string name="watch_movie" translation_description="Title for videos">觀看影片</string>
   <string name="santa_update" translation_description="Heading for Status messages from Santa">聖誕老人最新消息</string>
-  <string name="elapsed_time" translation_description="Heading for elapsed time">已使用時間</string>
+  <string name="elapsed_time" translation_description="Heading for elapsed time">已經過時間</string>
   <string name="wikipedia" translation_description="Label for button to show a wikipedia page.">維基百科</string>
-  <string name="arrival" translation_description="Label for the time Santa arriving at a city">抵達</string>
+  <string name="arrival" translation_description="Label for the time Santa arriving at a city">抵達時間</string>
   <string name="weather" translation_description="Label for the weather (temperature) of a city">天氣</string>
   <string name="weather_format" translation_description="Temperature expression, like 23 C / 73 F">%1$s°C / %2$s°F</string>
   <string name="did_you_know_attribution" translation_description="Attribution of 'Did you know' facts to the 'National Geographic Bee'">由「國家地理小蜜蜂」提供的世界事實</string>
   <string name="photo" translation_description="Label for button to show a photo of a place.">相片</string>
   <string name="photos" translation_description="Label for button to show photos (plural) of a place.">相片</string>
-  <string name="street_view" translation_description="Label for button to show Street View">街景檢視</string>
+  <string name="street_view" translation_description="Label for button to show Street View">街景</string>
   <string name="back_to_santa_cam" translation_description="Label for button to go back to the Santa cam mode.">返回聖誕老人相機</string>
-  <string name="update_from_santa" translation_description="Content description for icon that indicates that the information is an update from Santa about his locations and such">聖誕老人的近況</string>
+  <string name="update_from_santa" translation_description="Content description for icon that indicates that the information is an update from Santa about his locations and such">聖誕老人的最新消息</string>
   <string name="trivia_from_santa" translation_description="Content description for icon that indicates that the information is a trivia.">聖誕老人的小故事</string>
   <string name="photo_from_santa" translation_description="Content description for icon that indicates that the information is about a photo">聖誕老人的相片</string>
   <string name="video_from_santa" translation_description="Content description for icon that indicates that the information is about a video">聖誕老人的影片</string>
   <string name="show_history" translation_description="Label for button to show card history.">顯示記錄</string>
-  <string name="see_best_moments" translation_description="Label for card to show history.">查看聖誕老人旅程的所有美好回憶</string>
+  <string name="see_best_moments" translation_description="Label for card to show history.">回顧聖誕老人旅程的所有美好回憶</string>
   <string name="return_to_map" translation_description="Label for button to go back to tracker from full screen streetview/video/photo">返回地圖</string>
   <string name="santa_is_now_arriving_in_x" translation_description="Label for the next place Santa is visiting">聖誕老人正在前往%s</string>
   <string name="santa_has_handed_out_x_presents" translation_description="Label for the number of presents Santa has delivered so far">聖誕老人已送出 %s 份禮物</string>
-  <string name="new_update_from_santa" translation_description="Label for icon that indicates an update from Santa">聖誕老人的最新近況</string>
+  <string name="new_update_from_santa" translation_description="Label for icon that indicates an update from Santa">聖誕老人的最新消息</string>
   <string name="new_trivia_from_santa" translation_description="Label for icon that indicates a trivia from Santa">聖誕老人的最新小故事</string>
   <string name="new_video_from_santa" translation_description="Label for icon that indicates a video from Santa">聖誕老人的最新影片</string>
   <string name="new_photo_from_santa" translation_description="Label for icon that indicates a photo from Santa">聖誕老人的最新相片</string>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +31,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,6 +80,8 @@ public class MemoryMatchFragment extends Fragment
             R.drawable.mmg_card_cloak_blue_dark, R.drawable.mmg_card_cloak_blue_light,
             R.drawable.mmg_card_cloak_orange, R.drawable.mmg_card_cloak_purple,
             R.drawable.mmg_card_cloak_red, R.drawable.mmg_card_cloak_orange};
+
+    private static final int DOOR_CLOSE_DELAY_MILLIS = 1500;
 
     /**
      * Current game level.
@@ -187,6 +190,11 @@ public class MemoryMatchFragment extends Fragment
     private int mSoundGameOver = -1;
     private MediaPlayer mBackgroundMusic;
     private SoundPool mSoundPool;
+    private Handler mDoorCloseHandler;
+    private Runnable mDoorCloseRunnable;
+    private boolean mDoorCloseTimerTicking = false;
+    private long mDoorCloseTimerStart = 0;
+    private long mDoorCloseTimeRemaining = DOOR_CLOSE_DELAY_MILLIS;
 
     private TextView mTimerTextView;
     private View mViewPlayAgainBackground;
@@ -211,6 +219,19 @@ public class MemoryMatchFragment extends Fragment
      * Handler that dismisses the game instructions when the game is started for the first time.
      */
     private Handler mDelayHandler = new Handler();
+
+    /**
+     * Handler and Runnable to fix the occasional "nothing is clickable" bug, The timeout
+     * is set as slightly longer than our max animation duration.
+     */
+    private static final long ANIMATION_TIMEOUT = 1005;
+    private Handler mClickabilityHandler = new Handler();
+    private Runnable mMakeClickableRunnable = new Runnable() {
+        @Override
+        public void run() {
+            isClickable = true;
+        }
+    };
 
     /**
      * Preferences that store whether the game instructions have been viewed.
@@ -253,6 +274,17 @@ public class MemoryMatchFragment extends Fragment
         mSoundMatchRight = mSoundPool.load(getActivity(), R.raw.mmg_right, 1);
         mSoundGameOver = mSoundPool.load(getActivity(), R.raw.gameover, 1);
         mSoundBeep = mSoundPool.load(getActivity(), R.raw.mmg_open_door_2, 1);
+
+        mDoorCloseHandler = new Handler();
+        mDoorCloseRunnable = new Runnable() {
+            @Override
+            public void run() {
+                hideBothPreviousCards();
+                mDoorCloseTimerTicking = false;
+                mDoorCloseTimerStart = 0;
+                mDoorCloseTimeRemaining = DOOR_CLOSE_DELAY_MILLIS;
+            }
+        };
 
         // Set up all animations.
         loadAnimations();
@@ -322,8 +354,6 @@ public class MemoryMatchFragment extends Fragment
         mViewCard[10] = rootView.findViewById(R.id.card_position_11);
         mViewCard[11] = rootView.findViewById(R.id.card_position_12);
 
-
-
         // Display the instructions if they haven't been seen by the player yet.
         mPreferences = getActivity()
                 .getSharedPreferences(MatchingGameConstants.PREFERENCES_FILENAME,
@@ -332,9 +362,11 @@ public class MemoryMatchFragment extends Fragment
             // Instructions haven't been viewed yet. Construct an AnimationDrawable with instructions.
             mInstructionDrawable = new AnimationDrawable();
             mInstructionDrawable
-                    .addFrame(getResources().getDrawable(R.drawable.instructions_touch_1), 300);
+                    .addFrame(VectorDrawableCompat.create(getResources(),
+                            R.drawable.instructions_touch_1, null), 300);
             mInstructionDrawable
-                    .addFrame(getResources().getDrawable(R.drawable.instructions_touch_2), 300);
+                    .addFrame(VectorDrawableCompat.create(getResources(),
+                            R.drawable.instructions_touch_2, null), 300);
             mInstructionDrawable.setOneShot(false);
             mViewInstructions = (ImageView) rootView.findViewById(R.id.instructions);
             if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
@@ -633,7 +665,7 @@ public class MemoryMatchFragment extends Fragment
             // Pause button.
             pauseGame();
         } else if (view.equals(mButtonPlay) || view.equals(mButtonBigPlay)) {
-            // Play button, resume the game.
+            // Play button, unmute the game.
             resumeGame();
         } else if (view.equals(mButtonCancelBar) || view.equals(mButtonMenu)) {
             // Exit the game.
@@ -661,6 +693,21 @@ public class MemoryMatchFragment extends Fragment
     }
 
     /**
+     * Hides the cards of the previous turn.
+     * Should be called when the previous turn was an incorrect match.
+     */
+    private void hideBothPreviousCards() {
+        if (mVisibleCard1 != null && mVisibleCard2 != null) {
+            hideCard(mVisibleCard1);
+            hideCard(mVisibleCard2);
+            mVisibleCard2.setOnClickListener(this);
+            mVisibleCard1.setOnClickListener(this);
+            mVisibleCard1 = null;
+            mVisibleCard2 = null;
+        }
+    }
+
+    /**
      * Handles onClick events for views that represent cards.
      * Unveils the card and checks for a match if another card has already been unveiled.
      */
@@ -668,12 +715,10 @@ public class MemoryMatchFragment extends Fragment
         MemoryCard card1 = (MemoryCard) view.getTag();
         if (mVisibleCard1 != null && mVisibleCard2 != null) {
             // Two cards are already unveiled, hide them both
-            hideCard(mVisibleCard1);
-            hideCard(mVisibleCard2);
-            mVisibleCard2.setOnClickListener(this);
-            mVisibleCard1.setOnClickListener(this);
+            // This is also triggered by a timer but this occurs if the user
+            // plays the next turn before the timer is up.
+            hideBothPreviousCards();
             mVisibleCard1 = view;
-            mVisibleCard2 = null;
             mVisibleCard1.setOnClickListener(null);
             showCard(mVisibleCard1);
         } else if (mVisibleCard1 != null && mVisibleCard2 == null) {
@@ -729,6 +774,11 @@ public class MemoryMatchFragment extends Fragment
                 mAnimationCardCover.setAnimationListener(null);
                 mVisibleCard1.findViewById(R.id.card_cover).startAnimation(mAnimationCardCover);
                 mVisibleCard2.findViewById(R.id.card_cover).startAnimation(mAnimationCardCover);
+
+                // 1.5 seconds after this turn was deemed incorrect, hide both cards.
+                mDoorCloseHandler.postDelayed(mDoorCloseRunnable, DOOR_CLOSE_DELAY_MILLIS);
+                mDoorCloseTimerStart = System.currentTimeMillis();
+                mDoorCloseTimerTicking = true;
             }
         } else {
             // This is the first card that has been unveiled.
@@ -736,6 +786,14 @@ public class MemoryMatchFragment extends Fragment
             mVisibleCard1.setOnClickListener(null);
             showCard(mVisibleCard1);
         }
+    }
+
+    @Override
+    public void onStop() {
+        if(mDoorCloseHandler != null && mDoorCloseRunnable != null) {
+            mDoorCloseHandler.removeCallbacks(mDoorCloseRunnable);
+        }
+        super.onStop();
     }
 
     /**
@@ -767,6 +825,13 @@ public class MemoryMatchFragment extends Fragment
         mButtonPause.setVisibility(View.VISIBLE);
         mButtonPlay.setVisibility(View.GONE);
         mCountDownTimer = new GameCountdown(mTimeLeftInMillis, mCountDownInterval);
+
+        // If the user had gotten the previous turn incorrect and the CloseDoor timer was
+        // ticking before the mute, continue the timer.
+        if(mDoorCloseHandler != null && mDoorCloseRunnable != null && mDoorCloseTimerTicking) {
+            mDoorCloseHandler.postDelayed(mDoorCloseRunnable, mDoorCloseTimeRemaining);
+            mDoorCloseTimerStart = System.currentTimeMillis();
+        }
         mCountDownTimer.start();
         mViewPauseOverlay.setVisibility(View.GONE);
         mButtonCancelBar.setVisibility(View.GONE);
@@ -868,6 +933,7 @@ public class MemoryMatchFragment extends Fragment
     public void onAnimationEnd(Animation animation) {
         // The game is clickable again now that the animation has ended
         isClickable = true;
+        mClickabilityHandler.removeCallbacksAndMessages(null);
 
         if (animation == mAnimationScaleLevelDown) {
             // After the scale level down animation, fade out the end level circle
@@ -931,6 +997,9 @@ public class MemoryMatchFragment extends Fragment
                 }
             }, 800);
         }
+
+        // Set a clickability timeout
+        mClickabilityHandler.postDelayed(mMakeClickableRunnable, ANIMATION_TIMEOUT);
     }
 
 
@@ -956,7 +1025,8 @@ public class MemoryMatchFragment extends Fragment
             if (mButtonPause.getVisibility() != View.GONE) {// check if already handled
                 pauseGame();
             } else {
-                resumeGame();
+                // Exit the game.
+                exit();
             }
         }
     }
@@ -966,6 +1036,14 @@ public class MemoryMatchFragment extends Fragment
         mButtonPlay.setVisibility(View.VISIBLE);
         if (mCountDownTimer != null) {
             mCountDownTimer.cancel();
+        }
+
+        // If the user got the previous turn incorrect and the CloseDoor timer is ticking,
+        // stop the CloseDoor timer but remember how much time is left on it.
+        if (mDoorCloseHandler != null && mDoorCloseRunnable != null && mDoorCloseTimerTicking) {
+            mDoorCloseHandler.removeCallbacks(mDoorCloseRunnable);
+            mDoorCloseTimeRemaining =
+                    DOOR_CLOSE_DELAY_MILLIS - (System.currentTimeMillis() - mDoorCloseTimerStart);
         }
         mViewPauseOverlay.setVisibility(View.VISIBLE);
         mButtonCancelBar.setVisibility(View.VISIBLE);

@@ -13,12 +13,12 @@ apply plugin: 'com.android.library'
  */
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.tools
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 23
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
     }
@@ -33,10 +33,13 @@ android {
 dependencies {
     compile fileTree(dir: 'src/main/jniLibs', include: ['*.jar'])
 
+    compile project(':common')
+
     // Used in Java code
     compile rootProject.ext.supportV4
     compile rootProject.ext.playServicesBasement
     compile rootProject.ext.playServicesAnalytics
+    compile rootProject.ext.firebaseAnalytics
 
     // Used in native code
     compile rootProject.ext.playServicesNearby

@@ -1,25 +1,48 @@
-<?xml version="1.0"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Urm&#x103;re&#x219;te-l pe Mo&#x219; Cr&#x103;ciun</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Mo&#x219; Cr&#x103;ciun porne&#x219;te &#xEE;n</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Mo&#x219; Cr&#x103;ciun se preg&#x103;te&#x219;te pentru anul viitor.</string>
+  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Urmărește-l pe Moș Crăciun</string>
+  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Urmărește-l\npe Moș Crăciun</string>
+  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Moș Crăciun pornește în</string>
+  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Moș Crăciun se pregătește pentru anul viitor.</string>
   <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Vezi opririle din anul 2014</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Se &#xEE;ncearc&#x103; contactarea lui Mo&#x219; Cr&#x103;ciun</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">&#xCE;nc&#x103; se &#xEE;ncearc&#x103; contactarea lui Mo&#x219; Cr&#x103;ciun</string>
+  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Se încearcă contactarea lui Moș Crăciun</string>
+  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Încă se încearcă contactarea lui Moș Crăciun</string>
   <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">zile</string>
   <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">ore</string>
   <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">min.</string>
   <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">sec.</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Arat&#x103;</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Da&#x21B;i mai departe prietenilor</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Termeni juridici &#x219;i confiden&#x21B;ialitate</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Men&#x21B;iune juridic&#x103;</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Politica de confiden&#x21B;ialitate</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Termeni &#x219;i condi&#x21B;ii</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Licen&#x21B;e open source</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Mo&#x219; Cr&#x103;ciun pe GitHub</string>
+  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Arată</string>
+  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Trimite prietenilor</string>
+  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Butonul de proiecție</string>
+  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Termeni juridici și confidențialitate</string>
+  <string name="legal_notice_text" translation_description="Link for legal notices">Mențiune juridică</string>
+  <string name="privacy_policy" translation_description="Link for privacy policy">Politica de confidențialitate</string>
+  <string name="terms_of_service" translation_description="Link for terms of services">Termeni și condiții</string>
+  <string name="open_source_licenses" translation_description="Licenses for open source components">Licențe open source</string>
+  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Licențe open source pentru servicii Google Play</string>
+  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Moș Crăciun pe GitHub</string>
   <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon pe GitHub</string>
-  <string name="scene_not_available" translation_description="Not available yet">Nu este disponibil&#x103; momentan</string>
-  <string name="sign_out">Deconecteaz&#x103;-te</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">P&#xE2;n&#x103; la plecare</string>
+  <string name="scene_not_available" translation_description="Not available yet">Nu este disponibilă momentan</string>
+  <string name="sign_out">Deconectează-te</string>
+  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Până la plecare</string>
+  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d din %2$d</string>
+  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">Puncte: %1$d</string>
+  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Unde este?</string>
+  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Fotografie de: %1$s</string>
+  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Urmărește-l pe Moș Crăciun pe marele ecran!\nAtinge acest buton pentru a vedea călătoria Moșului la televizor, folosind Chromecast.</string>
 </resources>

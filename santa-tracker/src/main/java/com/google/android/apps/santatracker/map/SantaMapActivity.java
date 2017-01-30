@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import android.support.design.widget.CoordinatorLayout;
+import android.support.annotation.StringRes;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.app.ActionBar;
@@ -40,6 +40,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -53,8 +54,9 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.apps.santatracker.R;
-import com.google.android.apps.santatracker.SantaApplication;
-import com.google.android.apps.santatracker.cast.NotificationDataCastManager;
+import com.google.android.apps.santatracker.cast.CastUtil;
+import com.google.android.apps.santatracker.cast.LoggingCastSessionListener;
+import com.google.android.apps.santatracker.cast.LoggingCastStateListener;
 import com.google.android.apps.santatracker.data.AllDestinationCursorLoader;
 import com.google.android.apps.santatracker.data.Destination;
 import com.google.android.apps.santatracker.data.DestinationCursor;
@@ -74,7 +76,12 @@ import com.google.android.apps.santatracker.util.AccessibilityUtil;
 import com.google.android.apps.santatracker.util.AnalyticsManager;
 import com.google.android.apps.santatracker.util.Intents;
 import com.google.android.apps.santatracker.util.MeasurementManager;
+import com.google.android.apps.santatracker.util.PlayServicesUtil;
 import com.google.android.apps.santatracker.util.SantaLog;
+import com.google.android.gms.cast.framework.CastButtonFactory;
+import com.google.android.gms.cast.framework.CastState;
+import com.google.android.gms.cast.framework.IntroductoryOverlay;
+import com.google.android.gms.cast.framework.SessionManagerListener;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.lang.ref.WeakReference;
@@ -91,7 +98,7 @@ public class SantaMapActivity extends AppCompatActivity implements
             NEXT_LOCATION;
 
     // countdown update frequency (in ms)
-    private static final int DESTINATION_COUNTDOWN_UPDATEINTERVAL = 1000;
+    private static final int DESTINATION_COUNTDOWN_UPDATE_INTERVAL = 1000;
     // countdown is shown every 10 seconds
     private static final int DESTINATION_COUNTDOWN_DISPLAY_INTERVAL = 1000 * 10;
 
@@ -168,12 +175,17 @@ public class SantaMapActivity extends AppCompatActivity implements
     private SantaCamButton mSantaCamButton;
     private BottomSheetBehavior mBottomSheetBehavior;
 
-    private NotificationDataCastManager mCastManager;
-
     private FirebaseAnalytics mMeasurement;
     private LinearLayoutManager mLayoutManager;
 
     private ImageButton mButtonTop;
+
+    // Cast
+    private boolean mHaveGooglePlayServices;
+    private MenuItem mMediaRouteMenuItem;
+    private SessionManagerListener mCastListener;
+    private OverlayCastStateListener mCastStateListener;
+    private boolean mCastOverlayShown = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -185,7 +197,7 @@ public class SantaMapActivity extends AppCompatActivity implements
 
         // [ANALYTICS SCREEN]: Tracker
         AnalyticsManager.sendScreenView(R.string.analytics_screen_tracker);
-
+        
         // Needs to be called before setting the content view
         supportRequestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
 
@@ -195,6 +207,15 @@ public class SantaMapActivity extends AppCompatActivity implements
         resetScreenTimer();
 
         mAccessibilityManager = (AccessibilityManager) getSystemService(ACCESSIBILITY_SERVICE);
+
+        // Check for play services
+        mHaveGooglePlayServices = PlayServicesUtil.hasPlayServices(this);
+
+        // Cast
+        mCastListener = new LoggingCastSessionListener(this,
+                R.string.analytics_cast_session_launch);
+        mCastStateListener = new OverlayCastStateListener(this,
+                R.string.analytics_cast_statechange_map);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -242,10 +263,6 @@ public class SantaMapActivity extends AppCompatActivity implements
         mAdapter.setHasStableIds(true);
         mRecyclerView.setAdapter(mAdapter);
 
-        if(NotificationDataCastManager.checkGooglePlayServices(this)){
-            mCastManager = SantaApplication.getCastManager(this);
-        }
-
         // Santacam button
         mSantaCamButton = (SantaCamButton) findViewById(R.id.santacam);
         mSantaCamButton.setOnClickListener(mOnClickListener);
@@ -255,12 +272,20 @@ public class SantaMapActivity extends AppCompatActivity implements
 
         View bottomSheet = findViewById(R.id.bottom_sheet);
         if (bottomSheet != null) {
-            mBottomSheetBehavior = (BottomSheetBehavior) ((CoordinatorLayout.LayoutParams)
-                    bottomSheet.getLayoutParams()).getBehavior();
+            mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
             mBottomSheetBehavior.setBottomSheetListener(mBottomSheetListener);
         }
 
         findViewById(R.id.main_touchinterceptor).setOnTouchListener(mInterceptorListener);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mAdapter != null) {
+            mAdapter.release();
+            mAdapter = null;
+        }
+        super.onDestroy();
     }
 
     private void initialiseOnChristmas() {
@@ -291,18 +316,11 @@ public class SantaMapActivity extends AppCompatActivity implements
 
         resetScreenTimer();
 
-        if (mCastManager == null && NotificationDataCastManager.checkGooglePlayServices(this)){
-            mCastManager = SantaApplication.getCastManager(this);
-        }
-
-        if (mCastManager != null){
-            mCastManager.incrementUiCounter();
-        }
-
         if (mBottomSheetBehavior != null) {
             adjustMapPaddings(mBottomSheetBehavior.getState());
         }
 
+        registerCastListeners();
     }
 
     @Override
@@ -331,12 +349,11 @@ public class SantaMapActivity extends AppCompatActivity implements
 
         cancelScreenTimer();
 
+        CastUtil.removeCastListener(this, mCastListener);
+        CastUtil.removeCastStateListener(this, mCastStateListener);
+
         // stop santa cam
         onSantacamStateChange(false);
-
-        if(mCastManager != null){
-            mCastManager.decrementUiCounter();
-        }
 
         // Reset state
         mHasDataLoaded = false;
@@ -348,7 +365,7 @@ public class SantaMapActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onUserInteraction(){
+    public void onUserInteraction() {
         resetScreenTimer();
     }
 
@@ -383,13 +400,29 @@ public class SantaMapActivity extends AppCompatActivity implements
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_map, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        boolean castDisabled = getCastDisabled();
 
         // Add cast button
-        if (mCastManager != null) {
-            mCastManager.addMediaRouterButton(menu, R.id.media_route_menu_item);
+        if (!castDisabled && mMediaRouteMenuItem == null) {
+            mMediaRouteMenuItem = CastButtonFactory.setUpMediaRouteButton(
+                    getApplicationContext(), menu, R.id.media_route_menu_item);
         }
 
-        return super.onCreateOptionsMenu(menu);
+        // Toggle cast visibility
+        if (mMediaRouteMenuItem != null) {
+            mMediaRouteMenuItem.setVisible(!castDisabled);
+
+            // Display the cast overlay if the item exists.
+            // The overlay is only shown if the item is visible.
+            showCastOverlay();
+        }
+
+        return super.onPrepareOptionsMenu(menu);
     }
 
     private LoaderManager.LoaderCallbacks<Cursor> mLoaderCallbacks
@@ -645,7 +678,7 @@ public class SantaMapActivity extends AppCompatActivity implements
             mTimer.cancel();
         }
         mTimer = new CountDownTimer(nextDestination.arrival - SantaPreferences.getCurrentTime(),
-                DESTINATION_COUNTDOWN_UPDATEINTERVAL) {
+                DESTINATION_COUNTDOWN_UPDATE_INTERVAL) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -746,7 +779,7 @@ public class SantaMapActivity extends AppCompatActivity implements
         // Count down until departure
         mTimer = new CountDownTimer(destination.departure
                 - SantaPreferences.getCurrentTime(),
-                DESTINATION_COUNTDOWN_UPDATEINTERVAL) {
+                DESTINATION_COUNTDOWN_UPDATE_INTERVAL) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -875,9 +908,11 @@ public class SantaMapActivity extends AppCompatActivity implements
         // (Otherwise the visibility is set when it is initialised.)
         if (mSantaCamButton != null && !isFinishing()) {
             if (santacamEnabled) {
-                mSantaCamButton.hide();
+                mSantaCamButton.setVisibility(View.INVISIBLE);
+                Log.d(TAG, "hide");
             } else {
                 mSantaCamButton.show();
+                Log.d(TAG, "show");
             }
         }
 
@@ -905,11 +940,6 @@ public class SantaMapActivity extends AppCompatActivity implements
     @Override
     public void mapClickAction() {
         // Nothing to do
-    }
-
-    @Override
-    public Destination getDestination(int id) {
-        return null;
     }
 
     public void notifyCamInteraction() {
@@ -957,7 +987,7 @@ public class SantaMapActivity extends AppCompatActivity implements
 
         private final WeakReference<SantaMapActivity> mActivityRef;
 
-        public IncomingHandler(SantaMapActivity activity) {
+        IncomingHandler(SantaMapActivity activity) {
             mActivityRef = new WeakReference<>(activity);
         }
 
@@ -1058,7 +1088,7 @@ public class SantaMapActivity extends AppCompatActivity implements
                         break;
                     case SantaServiceMessages.MSG_UPDATED_CASTDISABLED:
                         activity.mFlagDisableCast = (msg.arg1 == SantaServiceMessages.DISABLED);
-                        activity.onCastFlagUpdate();
+                        activity.setCastDisabled(activity.mFlagDisableCast);
                         break;
                     case SantaServiceMessages.MSG_ERROR_NODATA:
                         //for no data: wait to run out of locations, proceed with normal error handling
@@ -1128,9 +1158,73 @@ public class SantaMapActivity extends AppCompatActivity implements
         }
     }
 
-    private void onCastFlagUpdate() {
-        SantaApplication.toogleCast(this, mFlagDisableCast);
+    private void registerCastListeners() {
+        CastUtil.registerCastListener(this, mCastListener);
+        CastUtil.registerCastStateListener(this, mCastStateListener);
     }
+
+    private boolean getCastDisabled() {
+        // Cast should be disabled if we don't have the proper version of Google Play Services
+        // (to avoid a crash) or if we choose to disable it from the server.
+        return (!mHaveGooglePlayServices || mFlagDisableCast);
+    }
+
+    private void setCastDisabled(boolean disableCast) {
+        if (!mHaveGooglePlayServices) {
+            return;
+        }
+
+        if (disableCast) {
+            // If cast was previously enabled and we are disabling it, try to stop casting
+            CastUtil.stopCasting(this);
+        } else {
+            // If cast was disabled and is becoming enabled, register listeners
+            registerCastListeners();
+        }
+
+        // Update state
+        mFlagDisableCast = disableCast;
+
+        // Update menu
+        supportInvalidateOptionsMenu();
+    }
+
+    private void showCastOverlay() {
+        // Only show the cast overlay if the the cast menu item is visible.
+        if (!mCastOverlayShown && mMediaRouteMenuItem != null && mMediaRouteMenuItem.isVisible()) {
+            new Handler().post(new Runnable() {
+                @Override
+                public void run() {
+                    Log.d(TAG, "Displaying introductory overlay.");
+
+                    IntroductoryOverlay overlay =
+                            new IntroductoryOverlay.Builder(SantaMapActivity.this,
+                                    mMediaRouteMenuItem)
+                                    .setTitleText(R.string.cast_overlay_text)
+                                    .setSingleTime()
+                                    .setOnOverlayDismissedListener(
+                                            mCastOverlayDismissedListener)
+                                    .build();
+                    overlay.show();
+                    mCastOverlayShown = true;
+                }
+            });
+        }
+    }
+
+    /**
+     * Logs an event when the Cast IntroductoryOverlay is dismissed.
+     */
+    IntroductoryOverlay.OnOverlayDismissedListener mCastOverlayDismissedListener
+            = new IntroductoryOverlay.OnOverlayDismissedListener() {
+        @Override
+        public void onOverlayDismissed() {
+            // App Measurement
+            MeasurementManager.recordCustomEvent(mMeasurement,
+                    getString(R.string.analytics_event_category_cast),
+                    getString(R.string.analytics_cast_overlayshown));
+        }
+    };
 
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
@@ -1258,5 +1352,24 @@ public class SantaMapActivity extends AppCompatActivity implements
             mShowTopButton = showButton;
         }
     };
+
+
+    class OverlayCastStateListener extends LoggingCastStateListener {
+
+
+        public OverlayCastStateListener(Context context, @StringRes int category) {
+            super(context, category);
+        }
+
+        @Override
+        public void onCastStateChanged(int newState) {
+            super.onCastStateChanged(newState);
+
+            if (newState != CastState.NO_DEVICES_AVAILABLE) {
+                showCastOverlay();
+            }
+
+        }
+    }
 
 }

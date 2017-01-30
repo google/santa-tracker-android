@@ -1,18 +1,20 @@
 apply plugin: 'com.android.application'
 
 ext.densityList = ['mdpi', 'hdpi', 'xhdpi', 'xxhdpi', 'xxxhdpi']
+ext.abiList = ['armeabi', 'armeabi-v7a', 'x86']
 
 android {
-    compileSdkVersion 23
-    // Need tools version 23, only major versions are available on build server
+    compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.tools
 
     defaultConfig {
         applicationId "com.google.android.apps.santatracker"
-        minSdkVersion 15
-        targetSdkVersion 23
-        versionCode 3000100 // We have XX.YY.ZZZ digits available
-        versionName "3.0.10"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 40120000
+        versionName "4.0.12"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
 
     buildTypes {
@@ -25,11 +27,41 @@ android {
 
         release {
             minifyEnabled true
-            proguardFile 'proguard.txt'
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.txt'
+        }
+    }
+
+    productFlavors {
+        production {
+        }
+        development {
+        }
+    }
+
+    variantFilter { variant ->
+        // 'development' flavor is only available for debug build
+        if (!variant.buildType.name.equals('debug') &&
+                variant.getFlavors().get(0).name.equals("development")) {
+            variant.setIgnore(true)
         }
     }
 
     splits {
+        abi {
+            enable true
+
+            // Include the three architectures that we support for snowdown
+            reset()
+            include(*abiList)
+
+            // Only enable universal build when building dogfood or release
+            def taskList = gradle.startParameter.taskNames.join(",")
+            def isDogfood = taskList.contains("assembleDogfood")
+            def isRelease = taskList.contains("assembleRelease")
+            universalApk (isDogfood || isRelease)
+        }
+
         density {
             // TODO: re-enable when we can figure out how to include <=dpi, not just =dpi
             // as this is preventing games from auto-downsampling bitmaps to prevent OOMs
@@ -45,15 +77,21 @@ if (file('../internal/santa-tracker.gradle').exists()) {
     apply from: '../internal/santa-tracker.gradle'
 }
 
-// Generate unique versionCodes for each APK variant
-// XXYYYYYYY - XX is density, YYYYYYY is the "natural" version code
+// Generate unique versionCodes for each APK variant: ZXYYSSSSS
+//   Z is the Major version number
+//   X is the Minor version number
+//   YY is the Path version number
+//   SSSS is information about the split (default to 0000)
 // Any new variations get added to the front
 import com.android.build.OutputFile;
 android.applicationVariants.all { variant ->
     variant.outputs.each { output ->
-        def densityFilter = output.getFilter(OutputFile.DENSITY)
-        int densityVersionCode = (densityList.indexOf(densityFilter) + 1) * 10000000
-        output.versionCodeOverride = variant.mergedFlavor.versionCode + densityVersionCode
+        // Shift abi over by 8 digits
+        def abiFilter = output.getFilter(OutputFile.ABI)
+        int abiVersionCode = (abiList.indexOf(abiFilter) + 1)
+
+        // Merge all version codes
+        output.versionCodeOverride = variant.mergedFlavor.versionCode + abiVersionCode
     }
 }
 
@@ -61,11 +99,11 @@ android.applicationVariants.all { variant ->
 dependencies {
     compile project(':village')
     compile project(':common')
-    compile project(':CCL')
-    compile project(':third_party:ShowcaseView')
     compile project(':dasherdancer')
     compile project(':rocketsleigh')
     compile project(':snowdown')
+    compile project(':doodles')
+    compile project(':presentquest')
     wearApp project(':wearable')
     
     compile files('../third_party/jbox2d/jbox2d-library-2.2.1.1.jar')
@@ -87,7 +125,7 @@ dependencies {
     compile rootProject.ext.playServicesAppindexing
     compile rootProject.ext.playServicesBase
     compile rootProject.ext.playServicesBasement
-    compile rootProject.ext.playServicesCast
+    compile rootProject.ext.playServicesCastFramework
     compile rootProject.ext.playServicesGames
     compile rootProject.ext.playServicesMaps
     compile rootProject.ext.playServicesWearable
@@ -95,6 +133,22 @@ dependencies {
     compile rootProject.ext.firebaseCore
     compile rootProject.ext.firebaseAnalytics
     compile rootProject.ext.firebaseConfig
+    compile rootProject.ext.firebaseCrash
+    compile rootProject.ext.firebaseStorage
+
+    developmentCompile rootProject.ext.leakCanary
+    productionCompile rootProject.ext.leakCanaryNoOp
+
+    androidTestCompile rootProject.ext.espressoCore, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+
+    androidTestCompile rootProject.ext.espressoContrib, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
 }
 
 apply plugin: 'com.google.gms.google-services'

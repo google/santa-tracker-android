@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,13 @@
 
 package com.google.android.apps.santatracker.map.cardstream;
 
-import com.google.android.apps.santatracker.R;
-
 import android.graphics.Typeface;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
+
+import com.google.android.apps.santatracker.R;
 
 public class DashboardViewHolder extends CardViewHolder {
 
@@ -30,7 +30,7 @@ public class DashboardViewHolder extends CardViewHolder {
     public TextSwitcher location, presents, countdown;
     public ViewGroup presentsContainer, countdownContainer;
 
-    public DashboardViewHolder(View itemView) {
+    DashboardViewHolder(View itemView) {
         super(itemView);
         locationLabel = (TextView) itemView.findViewById(R.id.dash_location_label);
         location = (TextSwitcher) itemView.findViewById(R.id.dash_location);

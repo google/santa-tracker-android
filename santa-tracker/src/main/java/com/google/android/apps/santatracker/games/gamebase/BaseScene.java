@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,6 @@ import android.content.Context;
 import android.content.res.Configuration;
 
 import com.google.android.apps.santatracker.R;
-import com.google.android.apps.santatracker.util.ImmersiveModeHelper;
 import com.google.android.apps.santatracker.games.gumball.Utils;
 import com.google.android.apps.santatracker.games.simpleengine.Renderer;
 import com.google.android.apps.santatracker.games.simpleengine.Scene;
@@ -34,10 +33,11 @@ import com.google.android.apps.santatracker.games.simpleengine.game.World;
 import com.google.android.apps.santatracker.games.simpleengine.ui.Button;
 import com.google.android.apps.santatracker.games.simpleengine.ui.SimpleUI;
 import com.google.android.apps.santatracker.games.simpleengine.ui.Widget;
+import com.google.android.apps.santatracker.util.ImmersiveModeHelper;
 
 import java.util.Random;
 
-public abstract class BaseScene extends Scene implements Widget.WidgetTriggerListener {
+public abstract class BaseScene extends Scene implements Widget.WidgetTriggerListener, GameEndedListener {
 
     // digit object factory (to display score, etc)
     protected DigitObjectFactory mDigitFactory;
@@ -50,12 +50,17 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
     // score bar object
     protected GameObject mScoreBarObj;
 
+    // score bar label object
+    protected GameObject mScoreBarLabelObj;
+
     // score digit objects
     protected GameObject[] mScoreDigitObj = new GameObject[GameConfig.ScoreDisplay.DIGIT_COUNT];
 
     // timer digit objects
-    protected GameObject mClockIconObj = null;
     protected GameObject[] mTimeDigitObj = new GameObject[GameConfig.TimeDisplay.DIGIT_COUNT];
+
+    // countdown objects
+    public GameObject mCountdownDigitObj;
 
     // player's current score
     protected int mScore = 0;
@@ -65,22 +70,33 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
     // game ended?
     protected boolean mGameEnded = false;
 
+    protected boolean mIsInGameEndingTransition = false;
+
     // our UI (buttons, etc)
     protected SimpleUI mUI = null;
 
     // widget trigger messages
-    private static final int MSG_REPLAY = 1001;
+    private static final int MSG_RETURN_WITH_VALUE = 1001;
     private static final int MSG_SIGN_IN = 1002;
     private static final int MSG_PAUSE = 1003;
     private static final int MSG_RESUME = 1004;
     private static final int MSG_QUIT = 1005;
     private static final int MSG_SHARE = 1006;
+    private static final int MSG_REPLAY = 1007;
+    private static final int MSG_MUTE = 1008;
+    private static final int MSG_UNMUTE = 1009;
+    private static final int MSG_START = 1010;
+    protected static final int MSG_GO_TO_END_GAME = 1011;
 
     // sfx IDs
     protected int mGameOverSfx;
 
     // paused?
     protected boolean mPaused = false;
+
+    // in start countdown?
+    protected boolean mInStartCountdown = false;
+    protected float mStartCountdownTimeRemaining;
 
     // back key pressed?
     private boolean mBackKeyPending = false;
@@ -93,8 +109,11 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
     // isRunning on Tv?
     boolean mIsTv;
 
-    // pause and resume buttons
-    Button mPauseButton, mResumeButton;
+    // pause button
+    Button mPauseButton;
+
+    // speaker on and mute buttons
+    Button mSpeakerOnButton, mSpeakerMuteButton;
 
     // pause curtain, that is, the full screen object we display as a translucent
     // screen over the whole display when the game is paused
@@ -102,9 +121,11 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
 
     // the big play button
     Button mBigPlayButton = null;
+    Button mBigStartGameButton = null;
 
     // quit button
     Button mQuitButton = null;
+    GameObject mQuitBarLabel = null;
 
     // game objects that compose the Sign In ui
     GameObject mSignInBarObj = null;
@@ -135,14 +156,13 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
         mRenderer = SceneManager.getInstance().getRenderer();
         mWorld = new World(mRenderer);
         mDigitFactory = new DigitObjectFactory(mRenderer, mWorld);
-        mDigitFactory.requestTextures(GameConfig.ScoreDisplay.DIGIT_SIZE);
+        mDigitFactory.requestWhiteTextures(GameConfig.ScoreDisplay.DIGIT_SIZE);
         mObjectFactory = new GameObjectFactory(mRenderer, mWorld);
         mObjectFactory.requestTextures();
 
         mUI = new SimpleUI(mRenderer);
 
         if (isTv()) {
-            mClockIconObj = mObjectFactory.makeTvClockIcon();
             mDigitFactory.makeDigitObjects(GameConfig.ScoreDisplay.DIGIT_COUNT, GameConfig.TYPE_DECOR,
                     mRenderer.getRelativePos(GameConfig.ScoreDisplay.POS_X_REL,
                             GameConfig.ScoreDisplay.POS_X_DELTA),
@@ -165,8 +185,8 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
             mPauseCurtain = mObjectFactory.makePauseCurtain();
             mPauseCurtain.hide();
         } else {
-            mClockIconObj = mObjectFactory.makeClockIcon();
             mScoreBarObj = mObjectFactory.makeScoreBar();
+            mScoreBarLabelObj = mObjectFactory.makeScoreBarLabel();
             mDigitFactory.makeDigitObjects(GameConfig.ScoreDisplay.DIGIT_COUNT, GameConfig.TYPE_DECOR,
                     mRenderer.getRelativePos(GameConfig.ScoreDisplay.POS_X_REL,
                             GameConfig.ScoreDisplay.POS_X_DELTA),
@@ -174,7 +194,8 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
                             GameConfig.ScoreDisplay.POS_Y_DELTA),
                     GameConfig.ScoreDisplay.DIGIT_SIZE,
                     GameConfig.ScoreDisplay.DIGIT_SPACING, mScoreDigitObj);
-
+            hideObjects(mScoreDigitObj);
+            bringObjectsToFront(getScoreDigitVisibleObj());
             float x = GameConfig.TimeDisplay.POS_X_DELTA + GameConfig.TimeDisplay.ICON_SIZE;
             mDigitFactory.makeDigitObjects(GameConfig.TimeDisplay.DIGIT_COUNT, GameConfig.TYPE_DECOR,
                     mRenderer.getRelativePos(GameConfig.TimeDisplay.POS_X_REL, x),
@@ -182,30 +203,44 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
                             GameConfig.TimeDisplay.POS_Y_DELTA),
                     GameConfig.TimeDisplay.DIGIT_SIZE,
                     GameConfig.TimeDisplay.DIGIT_SPACING, mTimeDigitObj);
-
+            mCountdownDigitObj = mDigitFactory.makeDigitObject(
+                    GameConfig.TYPE_DECOR, 0.0f, 0.0f, GameConfig.Countdown.DIGIT_SIZE);
+            mCountdownDigitObj.hide();
             mQuitButton = mObjectFactory.makeQuitButton(this, MSG_QUIT);
+            mQuitBarLabel = mObjectFactory.makeQuitBarLabel();
             mQuitButton.hide();
+            mQuitBarLabel.hide();
             mUI.add(mQuitButton);
 
             mPauseButton = mObjectFactory.makePauseButton(this, MSG_PAUSE);
-            mResumeButton = mObjectFactory.makeResumeButton(this, MSG_RESUME);
-            mResumeButton.hide();
             mUI.add(mPauseButton);
-            mUI.add(mResumeButton);
 
+            mSpeakerMuteButton = mObjectFactory.makeSpeakerMuteButton(this, MSG_UNMUTE);
+            mSpeakerOnButton = mObjectFactory.makeSpeakerOnButton(this, MSG_MUTE);
+            mUI.add(mSpeakerMuteButton);
+            mUI.add(mSpeakerOnButton);
             mPauseCurtain = mObjectFactory.makePauseCurtain();
             mPauseCurtain.hide();
 
             mBigPlayButton = mObjectFactory.makeBigPlayButton(this, MSG_RESUME);
             mBigPlayButton.hide();
             mUI.add(mBigPlayButton);
+            mBigStartGameButton = mObjectFactory.makeBigPlayButton(this, MSG_START);
+            mBigStartGameButton.hide();
+            mUI.add(mBigStartGameButton);
         }
 
         SoundManager soundManager = SceneManager.getInstance().getSoundManager();
-        soundManager.requestBackgroundMusic(getBgmAssetFile());
-        mGameOverSfx = soundManager.requestSfx(R.raw.jetpack_gameover);
-
-        mRenderer.setClearColor(0xffffffff);
+        SceneManager.getInstance().loadMute();
+        if(soundManager != null) {
+            soundManager.requestBackgroundMusic(getBgmAssetFile());
+            mGameOverSfx = soundManager.requestSfx(R.raw.jetpack_gameover);
+            if(soundManager.getMute()) {
+                muteSpeaker();
+            } else {
+                unmuteSpeaker();
+            }
+        }
     }
 
     @Override
@@ -227,7 +262,7 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
         }
 
         if (mConfirmKeyPending) {
-            // TODO(chansuk): move a focus based on KeyEvent
+            // TODO: move a focus based on KeyEvent
             processCenterKey();
         }
 
@@ -282,13 +317,17 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
             mDisplayedScore.update(deltaT);
         }
         mDigitFactory.setDigits((int) Math.round(mDisplayedScore.getValue()), mScoreDigitObj);
-        bringObjectsToFront(mScoreDigitObj);
+        bringObjectsToFront(getScoreDigitVisibleObj());
+    }
 
-        if (!isTv()) {
-            mScoreBarObj.bringToFront();
-            mPauseButton.bringToFront();
-            mResumeButton.bringToFront();
+    protected GameObject[] getScoreDigitVisibleObj() {
+        int numDigits = Math.max(String.valueOf((int)mDisplayedScore.getValue()+1).length(),
+                GameConfig.ScoreBar.MIN_DIGITS_VISIBLE);
+        GameObject[] mScoreDigitVisibleObj = new GameObject[numDigits];
+        for(int i = mScoreDigitObj.length - numDigits; i < mScoreDigitObj.length; i++) {
+            mScoreDigitVisibleObj[i - (mScoreDigitObj.length - numDigits)] = mScoreDigitObj[i];
         }
+        return mScoreDigitVisibleObj;
     }
 
     protected void endGame() {
@@ -302,38 +341,28 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
         float y = mRenderer.getRelativePos(GameConfig.Podium.ScoreDisplay.Y_REL,
                 GameConfig.Podium.ScoreDisplay.Y_DELTA);
         displaceObjectsTo(mScoreDigitObj, x, y);
-        bringObjectsToFront(mScoreDigitObj);
+        bringObjectsToFront(getScoreDigitVisibleObj());
 
         // hide time counter
-        mClockIconObj.hide();
         hideObjects(mTimeDigitObj);
 
         // make the "your score is" label
         mObjectFactory.makeScoreLabel();
 
         // create the end of game UI and add the "play again" button to it
-        mUI.add(mObjectFactory.makePlayAgainButton(this, MSG_REPLAY));
+        mUI.add(mObjectFactory.makeReturnToMapButton(this, MSG_RETURN_WITH_VALUE));
 
         if (isTv()) {
-            //TODO(chansuk): tv specific ui layout
+            //TODO: tv specific ui layout
 
         } else {
             // hide the score bar
             mScoreBarObj.hide();
-
-            mResumeButton.hide();
+            mScoreBarLabelObj.hide();
             mPauseButton.hide();
-
-            Button quitButton = mObjectFactory.makePodiumQuitButton(this, MSG_QUIT);
-            mUI.add(quitButton);
-            quitButton.bringToFront();
-            quitButton.show();
-
-            // TODO(samstern): real message
-            Button shareButton = mObjectFactory.makePodiumShareButton(this, MSG_SHARE);
-            mUI.add(shareButton);
-            shareButton.bringToFront();
-            shareButton.show();
+            mSpeakerMuteButton.hide();
+            mSpeakerOnButton.hide();
+            // TODO: real message
 
             // create the sign in bar and sign in button
             if (!mSignedIn) {
@@ -366,6 +395,7 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
     protected void bringObjectsToFront(GameObject[] objs) {
         int i;
         for (i = 0; i < objs.length; i++) {
+            objs[i].show();
             objs[i].bringToFront();
         }
     }
@@ -382,7 +412,6 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
         seconds = seconds < 0 ? 0 : seconds > 99 ? 99 : seconds;
         mDigitFactory.setDigits(seconds, mTimeDigitObj);
         bringObjectsToFront(mTimeDigitObj);
-        mClockIconObj.bringToFront();
     }
 
     @Override
@@ -406,10 +435,46 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
         }
     }
 
+    protected void startGameScreen() {
+        mPaused = true;
+        SceneManager.getInstance().getSoundManager().stopSound();
+        if (isTv()) {
+            mPauseCurtain.show();
+            mPauseCurtain.bringToFront();
+
+            mBigPlayButton.show();
+            mBigPlayButton.bringToFront();
+        } else {
+            mPauseButton.hide();
+
+            mPauseCurtain.show();
+            mPauseCurtain.bringToFront();
+
+            mQuitButton.hide();
+            mQuitBarLabel.hide();
+            mSpeakerOnButton.bringToFront();
+            mSpeakerMuteButton.bringToFront();
+            mSpeakerMuteButton.setEnabled(true);
+            mSpeakerOnButton.setEnabled(true);
+            mBigStartGameButton.show();
+            mBigStartGameButton.bringToFront();
+        }
+
+        if (Utils.hasKitKat() && SceneManager.getInstance().getActivity() != null) {
+            SceneManager.getInstance().getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    ImmersiveModeHelper.setImmersiveStickyWithActionBar(
+                            SceneManager.getInstance().getActivity().getWindow());
+                }
+            });
+        }
+    }
+
     protected void pauseGame() {
-        if (!mPaused) {
+        if (!mPaused && !mGameEnded) {
             mPaused = true;
-            SceneManager.getInstance().getSoundManager().enableBgm(false);
+            SceneManager.getInstance().getSoundManager().stopSound();
 
             if (isTv()) {
                 mPauseCurtain.show();
@@ -419,7 +484,7 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
                 mBigPlayButton.bringToFront();
             } else {
                 mPauseButton.hide();
-                mResumeButton.show();
+
                 mPauseCurtain.show();
                 mPauseCurtain.bringToFront();
 
@@ -427,19 +492,54 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
                 mBigPlayButton.bringToFront();
 
                 mQuitButton.show();
+                mQuitBarLabel.show();
                 mQuitButton.bringToFront();
+                mQuitBarLabel.bringToFront();
+
+                mSpeakerMuteButton.setEnabled(false);
+                mSpeakerOnButton.setEnabled(false);
             }
 
             if (Utils.hasKitKat() && SceneManager.getInstance().getActivity() != null) {
                 SceneManager.getInstance().getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        ImmersiveModeHelper.setImmersiveStickyWithActionBar(
-                                SceneManager.getInstance().getActivity().getWindow());
+                        Activity activity = SceneManager.getInstance().getActivity();
+                        if (activity != null) {
+                            ImmersiveModeHelper.setImmersiveStickyWithActionBar(
+                                    activity.getWindow());
+                        }
                     }
                 });
             }
         }
+    }
+
+    protected void muteSpeaker() {
+        if(!mGameEnded) {
+            SceneManager.getInstance().getSoundManager().mute();
+            mSpeakerOnButton.hide();
+            mSpeakerMuteButton.show();
+            mSpeakerMuteButton.bringToFront();
+        }
+    }
+
+    protected void unmuteSpeaker() {
+        if(!mGameEnded) {
+            SceneManager.getInstance().getSoundManager().unmute();
+            mSpeakerMuteButton.hide();
+            mSpeakerOnButton.show();
+            mSpeakerOnButton.bringToFront();
+        }
+    }
+
+    protected void startCountdown() {
+        mInStartCountdown = true;
+        mStartCountdownTimeRemaining = GameConfig.Countdown.TIME;
+        mBigStartGameButton.hide();
+        mDigitFactory.setDigit(mCountdownDigitObj, GameConfig.Countdown.TIME);
+        mCountdownDigitObj.show();
+        mCountdownDigitObj.bringToFront();
     }
 
     protected void unpauseGame() {
@@ -448,16 +548,19 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
         }
         mPaused = false;
         SceneManager.getInstance().getSoundManager().enableBgm(true);
-
+        SceneManager.getInstance().getSoundManager().resumeSound();
         if (isTv()) {
             mPauseCurtain.hide();
             mBigPlayButton.hide();
         } else {
-            mResumeButton.hide();
             mPauseButton.show();
             mPauseCurtain.hide();
             mQuitButton.hide();
+            mQuitBarLabel.hide();
             mBigPlayButton.hide();
+            mCountdownDigitObj.hide();
+            mSpeakerMuteButton.setEnabled(true);
+            mSpeakerOnButton.setEnabled(true);
         }
 
         if (Utils.hasKitKat() && SceneManager.getInstance().getActivity() != null) {
@@ -488,6 +591,9 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
         SceneActivity act;
 
         switch (message) {
+            case MSG_RETURN_WITH_VALUE:
+                returnWithScore();
+                break;
             case MSG_REPLAY:
                 SceneManager.getInstance().requestNewScene(makeNewScene());
                 break;
@@ -510,6 +616,18 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
             case MSG_SHARE:
                 share();
                 break;
+            case MSG_MUTE:
+                muteSpeaker();
+                break;
+            case MSG_UNMUTE:
+                unmuteSpeaker();
+                break;
+            case MSG_START:
+                startCountdown();
+                break;
+            case MSG_GO_TO_END_GAME:
+                goToEndGameWithDelay(GameConfig.EndGame.DELAY);
+                break;
         }
     }
 
@@ -518,6 +636,39 @@ public abstract class BaseScene extends Scene implements Widget.WidgetTriggerLis
         if (act != null && act instanceof SceneActivity) {
             ((SceneActivity) act).postQuitGame();
         }
+    }
+
+    private void returnWithScore() {
+        Activity act = SceneManager.getInstance().getActivity();
+        if (act != null && act instanceof SceneActivity) {
+            ((SceneActivity) act).postReturnWithScore(mScore);
+        }
+    }
+
+    protected void goToEndGameWithDelay(int delay) {
+        Activity act = SceneManager.getInstance().getActivity();
+        ((SceneActivity)act).setGameEndedListener(this);
+        if (act != null && act instanceof SceneActivity) {
+            ((SceneActivity) act).postDelayedGoToEndGame(delay);
+        }
+    }
+
+    protected void goToEndGame() {
+        Activity act = SceneManager.getInstance().getActivity();
+        if (act != null && act instanceof SceneActivity) {
+            ((SceneActivity)act).setGameEndedListener(this);
+            ((SceneActivity) act).postGoToEndGame();
+        }
+    }
+
+    @Override
+    public void onGameEnded() {
+        mGameEnded = true;
+    }
+
+    @Override
+    public int getScore() {
+        return mScore;
     }
 
     private void share() {

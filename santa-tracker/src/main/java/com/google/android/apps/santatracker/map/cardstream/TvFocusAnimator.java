@@ -24,16 +24,16 @@ import android.view.animation.Interpolator;
 /**
  * Animators for highlighting behavior when an item gains focus.
  */
-public class TvFocusAnimator {
+class TvFocusAnimator {
 
     private static final int DURATION_MS = 150;
 
-    public void onItemFocused(View view, boolean hasFocus) {
+    private void onItemFocused(View view, boolean hasFocus) {
         view.setSelected(hasFocus);
         getOrCreateAnimator(view).animateFocus(hasFocus, false);
     }
 
-    public void onInitializeView(View view) {
+    void onInitializeView(View view) {
         getOrCreateAnimator(view).animateFocus(false, true);
     }
 
@@ -42,17 +42,17 @@ public class TvFocusAnimator {
         if (animator == null) {
             final float scale = view.getResources().getFraction(
                     R.fraction.lb_focus_zoom_factor_xsmall, 1, 1);
-            animator = new FocusAnimator(view, scale,DURATION_MS);
+            animator = new FocusAnimator(view, scale, DURATION_MS);
             view.setTag(R.id.lb_focus_animator, animator);
         }
         return animator;
     }
 
-    public static final class FocusChangeListener implements View.OnFocusChangeListener {
+    static final class FocusChangeListener implements View.OnFocusChangeListener {
 
         final private TvFocusAnimator mAnimator;
 
-        public FocusChangeListener(TvFocusAnimator animator) {
+        FocusChangeListener(TvFocusAnimator animator) {
             mAnimator = animator;
         }
 
@@ -63,7 +63,7 @@ public class TvFocusAnimator {
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-    static class FocusAnimator implements TimeAnimator.TimeListener {
+    private static class FocusAnimator implements TimeAnimator.TimeListener {
         private final View mView;
         private final int mDuration;
         private final float mScaleDiff;

@@ -20,7 +20,6 @@ import android.content.Context;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
 import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
 
@@ -30,38 +29,27 @@ import android.support.v4.content.Loader;
  * standard way for querying cursors, building on {@link AsyncTaskLoader} to
  * perform the cursor query on a background thread so that it does not block the
  * application's UI.
- *
+ * <p>
  * The abstract method {@link #getCursor()} needs to be overridden to return the
  * desired {@link Cursor}.
- *
  * <p>
- * A CursorLoader must be built with the full information for the query to
- * perform, either through the
- * {@link #CursorLoader(Context, Uri, String[], String, String[], String)} or
- * creating an empty instance with {@link #CursorLoader(Context)} and filling in
- * the desired paramters with {@link #setUri(Uri)},
- * {@link #setSelection(String)}, {@link #setSelectionArgs(String[])},
- * {@link #setSortOrder(String)}, and {@link #setProjection(String[])}.
- *
- * <p>
- * Note: This implementation is copied from the ASOP
+ * Note: This implementation is copied from the AOSP
  * {@link android.content.CursorLoader} class and modified to directly interact
  * with the {@link SQLiteDatabase} held by {@link DestinationDbHelper}. See
  * hackbod's statement at:
  * https://groups.google.com/d/msg/android-developers/J-Uql3Mn73Y/3haYPQ-pR7sJ
  */
-public abstract class SqliteCursorLoader extends AsyncTaskLoader<Cursor> {
+abstract class SqliteCursorLoader extends AsyncTaskLoader<Cursor> {
 
-    final ForceLoadContentObserver mObserver;
+    private final ForceLoadContentObserver mObserver;
 
-    Cursor mCursor;
+    private Cursor mCursor;
 
     /**
      * Returns the Cursor that is to be loaded.
      */
     public abstract Cursor getCursor();
 
-    /* Runs on a worker thread */
     @Override
     public Cursor loadInBackground() {
         // TODO: check if call to new DestinationDBHelper is appropriate here or
@@ -80,8 +68,8 @@ public abstract class SqliteCursorLoader extends AsyncTaskLoader<Cursor> {
      * Registers an observer to get notifications from the content provider when
      * the cursor needs to be refreshed.
      */
-    void registerContentObserver(Cursor cursor, ContentObserver observer) {
-        cursor.registerContentObserver(mObserver);
+    private void registerContentObserver(Cursor cursor, ContentObserver observer) {
+        cursor.registerContentObserver(observer);
     }
 
     /* Runs on the UI thread */
@@ -106,12 +94,7 @@ public abstract class SqliteCursorLoader extends AsyncTaskLoader<Cursor> {
         }
     }
 
-    /**
-     * Creates an empty unspecified CursorLoader. You must follow this with
-     * calls to {@link #setUri(Uri)}, {@link #setSelection(String)}, etc to
-     * specify the query to perform.
-     */
-    public SqliteCursorLoader(Context context) {
+    SqliteCursorLoader(Context context) {
         super(context);
         mObserver = new ForceLoadContentObserver();
     }
@@ -121,7 +104,7 @@ public abstract class SqliteCursorLoader extends AsyncTaskLoader<Cursor> {
      * ready the callbacks will be called on the UI thread. If a previous load
      * has been completed and is still valid the result may be passed to the
      * callbacks immediately.
-     *
+     * <p>
      * Must be called from the UI thread
      */
     @Override
@@ -162,18 +145,5 @@ public abstract class SqliteCursorLoader extends AsyncTaskLoader<Cursor> {
         }
         mCursor = null;
     }
-        /*
-	 * @Override public void dump(String prefix, FileDescriptor fd, PrintWriter
-	 * writer, String[] args) { super.dump(prefix, fd, writer, args);
-	 * writer.print(prefix); writer.print("mUri="); writer.println(mUri);
-	 * writer.print(prefix); writer.print("mProjection=");
-	 * writer.println(Arrays.toString(mProjection)); writer.print(prefix);
-	 * writer.print("mSelection="); writer.println(mSelection);
-	 * writer.print(prefix); writer.print("mSelectionArgs=");
-	 * writer.println(Arrays.toString(mSelectionArgs)); writer.print(prefix);
-	 * writer.print("mSortOrder="); writer.println(mSortOrder);
-	 * writer.print(prefix); writer.print("mCursor="); writer.println(mCursor);
-	 * //invisible field: writer.print(prefix);
-	 * writer.print("mContentChanged="); writer.println(mContentChanged); }
-	 */
+
 }

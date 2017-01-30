@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,16 +16,6 @@
 
 package com.google.android.apps.santatracker.games.gumball;
 
-import com.google.android.apps.santatracker.R;
-
-import org.jbox2d.collision.shapes.CircleShape;
-import org.jbox2d.collision.shapes.EdgeShape;
-import org.jbox2d.collision.shapes.Shape;
-import org.jbox2d.common.Vec2;
-import org.jbox2d.dynamics.Body;
-import org.jbox2d.dynamics.BodyType;
-import org.jbox2d.dynamics.Fixture;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -36,6 +26,16 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.google.android.apps.santatracker.R;
+
+import org.jbox2d.collision.shapes.CircleShape;
+import org.jbox2d.collision.shapes.EdgeShape;
+import org.jbox2d.collision.shapes.Shape;
+import org.jbox2d.common.Vec2;
+import org.jbox2d.dynamics.Body;
+import org.jbox2d.dynamics.BodyType;
+import org.jbox2d.dynamics.Fixture;
 
 import java.util.Random;
 
@@ -174,117 +174,119 @@ public class TiltGameView extends View {
     private void loadBitmaps() {
         // set the bitmaps
         Resources res = getResources();
-        int[] gumballBlue = {R.drawable.gbg_gumball_blue_1920, R.drawable.gbg_gumball_blue_1280,
+        int[] gumballBlue = {R.drawable.gbg_gumball_blue_1920,
                 R.drawable.gbg_gumball_blue_800, R.drawable.gbg_gumball_blue_480};
-        int[] gumballRed = {R.drawable.gbg_gumball_red_1920, R.drawable.gbg_gumball_red_1280,
+        int[] gumballRed = {R.drawable.gbg_gumball_red_1920,
                 R.drawable.gbg_gumball_red_800, R.drawable.gbg_gumball_red_480};
         int[] gumballYellow = {R.drawable.gbg_gumball_yellow_1920,
-                R.drawable.gbg_gumball_yellow_1280, R.drawable.gbg_gumball_yellow_800,
+                R.drawable.gbg_gumball_yellow_800,
                 R.drawable.gbg_gumball_yellow_480};
         int[] gumballGreen = {R.drawable.gbg_gumball_green_1920,
-                R.drawable.gbg_gumball_green_1280, R.drawable.gbg_gumball_green_800,
+                R.drawable.gbg_gumball_green_800,
                 R.drawable.gbg_gumball_green_480};
         int[] gumballOrange = {R.drawable.gbg_gumball_orange_1920,
-                R.drawable.gbg_gumball_orange_1280, R.drawable.gbg_gumball_orange_800,
+                R.drawable.gbg_gumball_orange_800,
                 R.drawable.gbg_gumball_orange_480};
         int[] gumballPurple = {R.drawable.gbg_gumball_purple_1920,
-                R.drawable.gbg_gumball_purple_1280, R.drawable.gbg_gumball_purple_800,
+                R.drawable.gbg_gumball_purple_800,
                 R.drawable.gbg_gumball_purple_480};
         int[] caneMain = {R.drawable.gbg_candycane_main_1920,
-                R.drawable.gbg_candycane_main_1280, R.drawable.gbg_candycane_main_800,
+                R.drawable.gbg_candycane_main_800,
                 R.drawable.gbg_candycane_main_480};
         int[] caneMainReverse = {R.drawable.gbg_candycane_main_reverse_1920,
-                R.drawable.gbg_candycane_main_reverse_1280,
+
                 R.drawable.gbg_candycane_main_reverse_800,
                 R.drawable.gbg_candycane_main_reverse_480};
         int[] caneHook = {R.drawable.gbg_candycane_hook_1920,
-                R.drawable.gbg_candycane_hook_1280, R.drawable.gbg_candycane_hook_800,
+                R.drawable.gbg_candycane_hook_800,
                 R.drawable.gbg_candycane_hook_480};
         int[] caneHookReverse = {R.drawable.gbg_candycane_hook_reverse_1920,
-                R.drawable.gbg_candycane_hook_reverse_1280,
                 R.drawable.gbg_candycane_hook_reverse_800,
                 R.drawable.gbg_candycane_hook_reverse_480};
-        int[] caneEnd = {R.drawable.gbg_candycane_end_1920, R.drawable.gbg_candycane_end_1280,
+        int[] caneEnd = {R.drawable.gbg_candycane_end_1920,
                 R.drawable.gbg_candycane_end_800, R.drawable.gbg_candycane_end_480};
         int[] caneEndReverse = {R.drawable.gbg_candycane_end_reverse_1920,
-                R.drawable.gbg_candycane_end_reverse_1280,
                 R.drawable.gbg_candycane_end_reverse_800,
                 R.drawable.gbg_candycane_end_reverse_480};
-        int[] pipes = {R.drawable.gbg_gumball_funnel_1920, R.drawable.gbg_gumball_funnel_1280,
+        int[] pipes = {R.drawable.gbg_gumball_funnel_1920,
                 R.drawable.gbg_gumball_funnel_800, R.drawable.gbg_gumball_funnel_480};
-        int[] caneMainAngleNine = {R.drawable.gbg_candycane_main_angle_nine,
-                R.drawable.gbg_candycane_main_angle_nine,
-                R.drawable.gbg_candycane_main_angle_nine,
-                R.drawable.gbg_candycane_main_angle_nine};
-        int[] caneMainAngleSix = {R.drawable.gbg_candycane_small_angle_six,
-                R.drawable.gbg_candycane_small_angle_six,
-                R.drawable.gbg_candycane_small_angle_six,
-                R.drawable.gbg_candycane_small_angle_six};
-        int[] caneMainAngleTwelve = {R.drawable.gbg_candycane_small_angle_twelve,
-                R.drawable.gbg_candycane_small_angle_twelve,
-                R.drawable.gbg_candycane_small_angle_twelve,
-                R.drawable.gbg_candycane_small_angle_twelve};
-        int[] caneMainTinyReverseAngleSix = {R.drawable.gbg_candycane_tiny_reverse_angle_six,
-                R.drawable.gbg_candycane_tiny_reverse_angle_six,
-                R.drawable.gbg_candycane_tiny_reverse_angle_six,
-                R.drawable.gbg_candycane_tiny_reverse_angle_six};
-        int[] caneMainLargeAngleSix = {R.drawable.gbg_candycane_large_angle_six,
-                R.drawable.gbg_candycane_large_angle_six,
-                R.drawable.gbg_candycane_large_angle_six,
-                R.drawable.gbg_candycane_large_angle_six};
-        int[] caneMainMedAngleSix = {R.drawable.gbg_candycane_med_angle_six,
-                R.drawable.gbg_candycane_med_angle_six, R.drawable.gbg_candycane_med_angle_six,
-                R.drawable.gbg_candycane_med_angle_six};
-        int[] sizes = {1920, 1280, 800, 480};
+        int[] caneMainAngleNine = {R.drawable.gbg_candycane_main_angle_nine_1920,
+                R.drawable.gbg_candycane_main_angle_nine_960,
+                R.drawable.gbg_candycane_main_angle_nine_480};
+        int[] caneMainAngleSix = {R.drawable.gbg_candycane_small_angle_six_1920,
+                R.drawable.gbg_candycane_small_angle_six_960,
+                R.drawable.gbg_candycane_small_angle_six_480};
+        int[] caneMainAngleTwelve = {R.drawable.gbg_candycane_small_angle_twelve_1920,
+                R.drawable.gbg_candycane_small_angle_twelve_960,
+                R.drawable.gbg_candycane_small_angle_twelve_480};
+        int[] caneMainTinyReverseAngleSix = {R.drawable.gbg_candycane_tiny_reverse_angle_six_1920,
+                R.drawable.gbg_candycane_tiny_reverse_angle_six_960,
+                R.drawable.gbg_candycane_tiny_reverse_angle_six_480};
+        int[] caneMainLargeAngleSix = {R.drawable.gbg_candycane_large_angle_six_1920,
+                R.drawable.gbg_candycane_large_angle_six_960,
+                R.drawable.gbg_candycane_large_angle_six_480};
+        int[] caneMainMedAngleSix = {R.drawable.gbg_candycane_med_angle_six_1920,
+                R.drawable.gbg_candycane_med_angle_six_960,
+                R.drawable.gbg_candycane_med_angle_six_480};
+        int[] sizes = {1920, 960, 480};
 
         final int viewWidth = getWidth();
-        final int size = sizes[0];
+        int size = 0;
+        for (int i = 1; i <= sizes.length; i++){
+            if (viewWidth <= sizes[i-1]){
+                size = i-1;
+            } else {
+                break;
+            }
+        }
+        
 
-        mGumballBlue = resizeImage(res, gumballBlue[0], size, viewWidth, -360f, true, 1);
-        mGumballRed = resizeImage(res, gumballRed[0], size, viewWidth, -360f, true, 1);
-        mGumballYellow = resizeImage(res, gumballYellow[0], size, viewWidth, -360f, true, 1);
-        mGumballGreen = resizeImage(res, gumballGreen[0], size, viewWidth, -360f, true, 1);
-        mGumballOrange = resizeImage(res, gumballOrange[0], size, viewWidth, -360f, true, 1);
-        mGumballPurple = resizeImage(res, gumballPurple[0], size, viewWidth, -360f, true, 1);
 
-        mCaneMainLong = resizeImage(res, caneMain[0], size, viewWidth, 180f, false, 1);
-        mCaneMainLongReverse = resizeImage(res, caneMainReverse[0], size, viewWidth, 180f, false,
+        mGumballBlue = resizeImage(res, gumballBlue, sizes, size,  viewWidth, -360f, true, 1);
+        mGumballRed = resizeImage(res, gumballRed, sizes, size,  viewWidth, -360f, true, 1);
+        mGumballYellow = resizeImage(res, gumballYellow, sizes, size,  viewWidth, -360f, true, 1);
+        mGumballGreen = resizeImage(res, gumballGreen, sizes, size,  viewWidth, -360f, true, 1);
+        mGumballOrange = resizeImage(res, gumballOrange, sizes, size,  viewWidth, -360f, true, 1);
+        mGumballPurple = resizeImage(res, gumballPurple, sizes, size,  viewWidth, -360f, true, 1);
+
+        mCaneMainLong = resizeImage(res, caneMain, sizes, size,  viewWidth, 180f, false, 1);
+        mCaneMainLongReverse = resizeImage(res, caneMainReverse, sizes, size,  viewWidth, 180f, false,
                 1);
-        mCaneMainMed = resizeImage(res, caneMain[0], size, viewWidth, 180f, false, .75f);
-        mCaneMainMedReverse = resizeImage(res, caneMainReverse[0], size, viewWidth, 180f, false,
+        mCaneMainMed = resizeImage(res, caneMain, sizes, size,  viewWidth, 180f, false, .75f);
+        mCaneMainMedReverse = resizeImage(res, caneMainReverse, sizes, size,  viewWidth, 180f, false,
                 .75f);
 
-        mCaneMainSmall = resizeImage(res, caneMain[0], size, viewWidth, 180f, false, .50f);
-        mCaneMainSmallReverse = resizeImage(res, caneMainReverse[0], size, viewWidth, 180f,
+        mCaneMainSmall = resizeImage(res, caneMain, sizes, size,  viewWidth, 180f, false, .50f);
+        mCaneMainSmallReverse = resizeImage(res, caneMainReverse, sizes, size,  viewWidth, 180f,
                 false, .50f);
-        mCaneMainTiny = resizeImage(res, caneMain[0], size, viewWidth, 180f, false, .25f);
-        mCaneMainTinyReverse = resizeImage(res, caneMainReverse[0], size, viewWidth, 180f, false,
+        mCaneMainTiny = resizeImage(res, caneMain, sizes, size,  viewWidth, 180f, false, .25f);
+        mCaneMainTinyReverse = resizeImage(res, caneMainReverse, sizes, size,  viewWidth, 180f, false,
                 .25f);
 
-        mCaneMainSmallAngleNine = resizeImage(res, caneMainAngleNine[0], size, viewWidth, 180f,
+        mCaneMainSmallAngleNine = resizeImage(res, caneMainAngleNine, sizes, size,  viewWidth, 180f,
                 true, 1f);
-        mCaneMainSmallAngleSix = resizeImage(res, caneMainAngleSix[0], size, viewWidth, 180f,
+        mCaneMainSmallAngleSix = resizeImage(res, caneMainAngleSix, sizes, size,  viewWidth, 180f,
                 true, 1f);
-        mCaneMainSmallAngleTwelve = resizeImage(res, caneMainAngleTwelve[0], size, viewWidth,
+        mCaneMainSmallAngleTwelve = resizeImage(res, caneMainAngleTwelve, sizes, size,  viewWidth,
                 180f, true, 1f);
-        mCaneMainReverseTinyAngleTwelve = resizeImage(res, caneMainTinyReverseAngleSix[0],
-                size, viewWidth, 180f, true, 1f);
-        mCaneMainLargeAngleSix = resizeImage(res, caneMainLargeAngleSix[0], size, viewWidth,
+        mCaneMainReverseTinyAngleTwelve = resizeImage(res, caneMainTinyReverseAngleSix,
+                sizes, size,  viewWidth, 180f, true, 1f);
+        mCaneMainLargeAngleSix = resizeImage(res, caneMainLargeAngleSix, sizes, size,  viewWidth,
                 180f, true, 1f);
-        mCaneMainMedAngleSix = resizeImage(res, caneMainMedAngleSix[0], size, viewWidth, 180f,
+        mCaneMainMedAngleSix = resizeImage(res, caneMainMedAngleSix, sizes, size,  viewWidth, 180f,
                 true, 1f);
 
-        mCaneHook = resizeImage(res, caneHook[0], size, viewWidth, 180f, false, 1);
-        mCaneHookFlip = resizeImage(res, caneHook[0], size, viewWidth, 180f, true, 1);
-        mCaneHookReverse = resizeImage(res, caneHookReverse[0], size, viewWidth, 180f, false, 1);
-        mCaneHookReverseFlip = resizeImage(res, caneHookReverse[0], size, viewWidth, 180f, true,
+        mCaneHook = resizeImage(res, caneHook, sizes, size,  viewWidth, 180f, false, 1);
+        mCaneHookFlip = resizeImage(res, caneHook, sizes, size,  viewWidth, 180f, true, 1);
+        mCaneHookReverse = resizeImage(res, caneHookReverse, sizes, size,  viewWidth, 180f, false, 1);
+        mCaneHookReverseFlip = resizeImage(res, caneHookReverse, sizes, size,  viewWidth, 180f, true,
                 1);
-        mCaneEnd = resizeImage(res, caneEnd[0], size, viewWidth, 180f, false, 1);
-        mCaneEndFlip = resizeImage(res, caneEnd[0], size, viewWidth, 180f, true, 1);
-        mCaneEndReverse = resizeImage(res, caneEndReverse[0], size, viewWidth, 180f, false, 1);
-        mCaneEndReverseFlip = resizeImage(res, caneEndReverse[0], size, viewWidth, 180f, true,
+        mCaneEnd = resizeImage(res, caneEnd, sizes, size,  viewWidth, 180f, false, 1);
+        mCaneEndFlip = resizeImage(res, caneEnd, sizes, size,  viewWidth, 180f, true, 1);
+        mCaneEndReverse = resizeImage(res, caneEndReverse, sizes, size,  viewWidth, 180f, false, 1);
+        mCaneEndReverseFlip = resizeImage(res, caneEndReverse, sizes, size,  viewWidth, 180f, true,
                 1);
-        mPipeSides = resizeImage(res, pipes[0], size, viewWidth, 180f, true, 1);
+        mPipeSides = resizeImage(res, pipes, sizes, size,  viewWidth, 180f, true, 1);
 
     }
 
@@ -307,6 +309,11 @@ public class TiltGameView extends View {
         canvas.scale(1.0f, -1.0f);
         float scale = getWidth() / 10.0f;
         mPaint.setAntiAlias(true);
+
+        if (isInEditMode()) {
+            return;
+        }
+
         // Iterate through all of the bodies in the game world and draw the corresponding bitmaps
         Body body = mWorld.getWorld().getBodyList();
         while (body != null) {
@@ -436,11 +443,11 @@ public class TiltGameView extends View {
     /**
      * Gets the correct bitmap based on screen size and rotates and flips the image.
      */
-    private static Bitmap resizeImage(Resources res, int resourceId, int size, int viewWidth,
+    private static Bitmap resizeImage(Resources res, int[] resourceId, int[] sizes, int size, int viewWidth,
             float rotationDegrees, boolean isFlipped, float caneScale) {
 
         Matrix matrix = new Matrix();
-        Bitmap bmp = BitmapFactory.decodeResource(res, resourceId);
+        Bitmap bmp = BitmapFactory.decodeResource(res, resourceId[size]);
 
         if (rotationDegrees != 361f) {
             matrix.setRotate(rotationDegrees, bmp.getWidth() / 2, bmp.getHeight() / 2);
@@ -448,7 +455,7 @@ public class TiltGameView extends View {
         if (isFlipped) {
             matrix.preScale(-1, 1);
         }
-        float scale = ((float) viewWidth) / size;
+        float scale = ((float) viewWidth) / sizes[size];
         matrix.postScale(scale, scale);
 
         bmp = Bitmap

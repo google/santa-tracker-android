@@ -1,20 +1,23 @@
-// Copyright 2014 Google Inc. All rights reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+/*
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
-// Helper class that allows us to rename our app.
-// Can't just modify SDLActivity, since the native code depends on that package.
-
+/**
+ * Helper class that allows us to rename our app.
+ * Can't just modify SDLActivity, since the native code depends on that package.
+ */
 package com.google.fpl.pie_noon;
 
 import android.app.Activity;
@@ -28,7 +31,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Point;
@@ -37,34 +39,30 @@ import android.hardware.SensorManager;
 import android.net.Uri;
 import android.nfc.NdefMessage;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
-import android.text.util.Linkify;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.InputDevice;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ScrollView;
-import android.widget.TextView;
+
+import com.google.android.apps.santatracker.util.MeasurementManager;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.vrtoolkit.cardboard.CardboardDeviceParams;
 import com.google.vrtoolkit.cardboard.CardboardView;
 import com.google.vrtoolkit.cardboard.Eye;
 import com.google.vrtoolkit.cardboard.HeadTransform;
-import com.google.vrtoolkit.cardboard.PhoneParams;
-import com.google.vrtoolkit.cardboard.proto.Phone;
 import com.google.vrtoolkit.cardboard.ScreenParams;
+import com.google.vrtoolkit.cardboard.proto.Phone;
 import com.google.vrtoolkit.cardboard.sensors.MagnetSensor;
 import com.google.vrtoolkit.cardboard.sensors.NfcSensor;
+
 import org.libsdl.app.SDLActivity;
 
 public class FPLActivity extends SDLActivity implements
@@ -86,10 +84,17 @@ public class FPLActivity extends SDLActivity implements
   private Eye leftEyeNoDistortion;
   private Eye rightEyeNoDistortion;
 
+  // Analytics
+  private FirebaseAnalytics mAnalyics;
+
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     tracker = GoogleAnalytics.getInstance(this).newTracker(PROPERTY_ID);
+
+    // [ANALYTICS]
+    mAnalyics = FirebaseAnalytics.getInstance(this);
+    MeasurementManager.recordScreenView(mAnalyics, getString(R.string.analytics_screen_snowdown));
 
     try {
       SensorManager sensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);

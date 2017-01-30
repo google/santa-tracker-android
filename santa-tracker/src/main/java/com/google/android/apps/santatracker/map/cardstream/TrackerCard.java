@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,19 +21,19 @@ import com.google.android.gms.maps.model.LatLng;
 
 public abstract class TrackerCard {
 
-    public static final int TYPE_DASHBOARD = 1;
-    public static final int TYPE_FACTOID = 2; // Did you know...
-    public static final int TYPE_DESTINATION = 3;
-    public static final int TYPE_PHOTO = 4;
-    public static final int TYPE_MOVIE = 5;
-    public static final int TYPE_STATUS = 6;
+    static final int TYPE_DASHBOARD = 1;
+    static final int TYPE_FACTOID = 2; // Did you know...
+    static final int TYPE_DESTINATION = 3;
+    static final int TYPE_PHOTO = 4;
+    static final int TYPE_MOVIE = 5;
+    static final int TYPE_STATUS = 6;
 
     private static long sMaxId;
 
     public final long id;
     public final long timestamp;
 
-    public TrackerCard(long timestamp) {
+    private TrackerCard(long timestamp) {
         this.id = ++sMaxId;
         this.timestamp = timestamp;
     }
@@ -53,7 +53,7 @@ public abstract class TrackerCard {
 
         private static Dashboard sInstance = new Dashboard(Long.MAX_VALUE);
 
-        public String nextDestination;
+        String nextDestination;
 
         /**
          * This card has a timestamp of {@link Long#MAX_VALUE}, which makes sure that the dashboard
@@ -74,9 +74,9 @@ public abstract class TrackerCard {
     }
 
     public static class FactoidCard extends TrackerCard {
-        public String factoid;
+        String factoid;
 
-        public FactoidCard(long timestamp, String didYouKnow) {
+        FactoidCard(long timestamp, String didYouKnow) {
             super(timestamp);
             this.factoid = didYouKnow;
         }
@@ -87,23 +87,23 @@ public abstract class TrackerCard {
         }
     }
 
-    public static class DestinationCard extends TrackerCard {
+    static class DestinationCard extends TrackerCard {
 
-        public final boolean fromUser;
+        final boolean fromUser;
         public final String city;
-        public final String region;
+        final String region;
         public final String url;
-        public final Destination.StreetView streetView;
-        public final String attributionHtml;
-        public final boolean hasWeather;
-        public final double tempC;
-        public final double tempF;
+        final Destination.StreetView streetView;
+        final String attributionHtml;
+        final boolean hasWeather;
+        final double tempC;
+        final double tempF;
         public LatLng position;
 
-        public DestinationCard(long timestamp, LatLng position, boolean fromUser, String city, String region,
-                               String url, String attributionHtml,
-                               Destination.StreetView streetview, boolean hasWeather,
-                               double tempC, double tempF) {
+        DestinationCard(long timestamp, LatLng position, boolean fromUser, String city,
+                        String region, String url, String attributionHtml,
+                        Destination.StreetView streetView, boolean hasWeather,
+                        double tempC, double tempF) {
             super(timestamp);
             this.fromUser = fromUser;
             this.city = city;
@@ -111,7 +111,7 @@ public abstract class TrackerCard {
             this.url = url;
             this.attributionHtml = attributionHtml;
             this.position = position;
-            this.streetView = streetview;
+            this.streetView = streetView;
             this.hasWeather = hasWeather;
             this.tempC = tempC;
             this.tempF = tempF;
@@ -125,10 +125,10 @@ public abstract class TrackerCard {
 
     public static class PhotoCard extends TrackerCard {
 
-        public String imageUrl;
+        String imageUrl;
         public String caption;
 
-        public PhotoCard(long timestamp, String image, String caption) {
+        PhotoCard(long timestamp, String image, String caption) {
             super(timestamp);
             this.imageUrl = image;
             this.caption = caption;
@@ -142,9 +142,9 @@ public abstract class TrackerCard {
 
     public static class MovieCard extends TrackerCard {
 
-        public String youtubeId;
+        String youtubeId;
 
-        public MovieCard(long timestamp, String video) {
+        MovieCard(long timestamp, String video) {
             super(timestamp);
             this.youtubeId = video;
         }
@@ -159,7 +159,7 @@ public abstract class TrackerCard {
 
         public String status;
 
-        public StatusCard(long timestamp, String santaStatus) {
+        StatusCard(long timestamp, String santaStatus) {
             super(timestamp);
             this.status = santaStatus;
         }

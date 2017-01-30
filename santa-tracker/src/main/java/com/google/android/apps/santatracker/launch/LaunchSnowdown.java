@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.google.android.apps.santatracker.R;
+import com.google.android.apps.santatracker.games.SplashActivity;
 import com.google.fpl.pie_noon.FPLActivity;
 import com.google.fpl.pie_noon.FPLTvActivity;
 
@@ -50,11 +51,15 @@ public class LaunchSnowdown extends AbstractLaunch {
         switch (mState) {
             case STATE_READY:
             case STATE_FINISHED:
-                mContext.launchActivityDelayed(
-                        new Intent(mContext.getActivityContext(), mLaunchActivityClass), v);
+                Intent intent = SplashActivity.getIntent(mContext.getActivityContext(),
+                        R.drawable.android_game_cards_snowdown,
+                        R.string.snowdown,
+                        true /* landscape */,
+                        mLaunchActivityClass);
+                mContext.launchActivity(intent);
                 break;
             case STATE_DISABLED:
-                notify(mContext.getApplicationContext(), R.string.snowdown_disabled);
+                notify(mContext.getApplicationContext(), getDisabledString(R.string.snowdown));
                 break;
             case STATE_LOCKED:
             default:
@@ -71,7 +76,7 @@ public class LaunchSnowdown extends AbstractLaunch {
                 notify(mContext.getApplicationContext(), R.string.snowdown);
                 break;
             case STATE_DISABLED:
-                notify(mContext.getApplicationContext(), R.string.snowdown_disabled);
+                notify(mContext.getApplicationContext(), getDisabledString(R.string.snowdown));
                 break;
             case STATE_LOCKED:
             default:

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,8 @@
 
 package com.google.android.apps.santatracker.invites;
 
+import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -44,7 +46,7 @@ public class AppInvitesFragment extends Fragment implements
     private static final int AUTOMANAGE_ID = 107;
     private static final int RC_INVITE = 9007;
 
-    private static final Uri BASE_URI = Uri.parse("http://google.com/santatracker/android/");
+    public static final Uri BASE_URI = Uri.parse("https://google.com/santatracker/android/");
 
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAnalytics mMeasurement;
@@ -127,7 +129,7 @@ public class AppInvitesFragment extends Fragment implements
         MeasurementManager.recordInvitationSent(mMeasurement, "generic", uri.toString());
     }
 
-    private void sendInvite(String message, Uri uri) {
+    public void sendInvite(String message, Uri uri) {
         // If the message is too long, just cut it short and add ellipses. This is something that
         // only occurs in some translations and we do not have a better mitigation method.  The
         // alternative is an ugly IllegalArgumentException from the builder.
@@ -147,8 +149,11 @@ public class AppInvitesFragment extends Fragment implements
         startActivityForResult(inviteIntent, RC_INVITE);
     }
 
-    public void getInvite(final GetInvitationCallback callback, boolean launchDeepLink) {
-        AppInvite.AppInviteApi.getInvitation(mGoogleApiClient, getActivity(), launchDeepLink)
+    public void getInvite(final GetInvitationCallback callback, final boolean launchDeepLink) {
+        // Using "null, false" as arguments here to avoid a known memory leak issue in
+        // AppInvites. Should be fixed in Google Play services v10.4.0.
+        final Activity activity = getActivity();
+        AppInvite.AppInviteApi.getInvitation(mGoogleApiClient, null, false)
                 .setResultCallback(new ResultCallback<AppInviteInvitationResult>() {
                     @Override
                     public void onResult(AppInviteInvitationResult appInviteInvitationResult) {
@@ -163,6 +168,16 @@ public class AppInvitesFragment extends Fragment implements
 
                             // Record invitation receipt event.
                             MeasurementManager.recordInvitationReceived(mMeasurement, deepLink);
+
+                            // Launch the deep link (see above note on why we don't do this
+                            // automatically)
+                            if (launchDeepLink) {
+                                try {
+                                    activity.startActivity(intent);
+                                } catch (ActivityNotFoundException e) {
+                                    Log.w(TAG, "No handler for deep link", e);
+                                }
+                            }
                         }
 
                     }

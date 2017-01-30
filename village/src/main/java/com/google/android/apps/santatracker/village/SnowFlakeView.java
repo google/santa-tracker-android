@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,13 @@ package com.google.android.apps.santatracker.village;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.support.annotation.VisibleForTesting;
 import android.util.AttributeSet;
 import android.view.View;
 
 public class SnowFlakeView extends View {
 
+    private boolean mAnimationDisabled = false;
     private SnowFlake[] mSnowFlakes;
 
     public SnowFlakeView(Context context) {
@@ -64,11 +66,19 @@ public class SnowFlakeView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        if (mAnimationDisabled) {
+            return;
+        }
 
         for (SnowFlake flake : mSnowFlakes) {
             flake.onDraw(canvas, getHeight(), getWidth());
         }
 
         invalidate();
+    }
+
+    @VisibleForTesting
+    public void disableAnimation() {
+        mAnimationDisabled = true;
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@ package com.google.android.apps.santatracker.village;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.support.annotation.VisibleForTesting;
 import android.support.v4.view.GestureDetectorCompat;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
@@ -36,6 +37,7 @@ public class VillageView extends View {
         void setPlaneEnabled(boolean planeEnabled);
     }
 
+    private boolean mAnimationDisabled = false;
     private VillageInterface mVillage;
     private GestureDetectorCompat mDetector;
 
@@ -62,6 +64,10 @@ public class VillageView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        if (mAnimationDisabled) {
+            return;
+        }
+
         if (mVillage != null) {
             mVillage.onDraw(canvas, getHeight(), getWidth());
         }
@@ -87,5 +93,10 @@ public class VillageView extends View {
         }
 
         return super.onTouchEvent(event);
+    }
+
+    @VisibleForTesting
+    public void disableAnimation() {
+        mAnimationDisabled = true;
     }
 }

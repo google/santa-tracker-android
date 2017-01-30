@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,11 +22,11 @@ import android.widget.ImageView;
 
 import com.google.android.apps.santatracker.R;
 
-public class PhotoViewHolder extends CardViewHolder {
+class PhotoViewHolder extends CardViewHolder {
 
-    public ImageView image;
+    ImageView image;
 
-    public PhotoViewHolder(View itemView) {
+    PhotoViewHolder(View itemView) {
         super(itemView);
         image = (ImageView) itemView.findViewById(R.id.photo_image);
     }

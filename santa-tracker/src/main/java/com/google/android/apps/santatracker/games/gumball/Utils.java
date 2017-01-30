@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,9 +26,6 @@ import com.google.android.apps.santatracker.R;
 import com.google.android.apps.santatracker.games.common.PlayGamesActivity;
 
 
-/**
- * @author kchapman
- */
 public class Utils {
 
     private static final String TAG = "SantaTracker";

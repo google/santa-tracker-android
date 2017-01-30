@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,8 @@
 
 package com.google.android.apps.santatracker.dasherdancer;
 
+import android.support.annotation.RawRes;
+
 /**
  * Interface for characters.  To create a character, implement this interface.  The animationKey passed 
  * to this interface's methods is called with one of the ANIM_* static values defined in this interface. 
@@ -24,21 +26,30 @@ package com.google.android.apps.santatracker.dasherdancer;
  */
 public interface Character {
 
-	public static int ANIM_IDLE = 0;
-	public static int ANIM_TAP = 1;
-	public static int ANIM_SHAKE = 2;
-	public static int ANIM_SWIPE_DOWN = 3;
-	public static int ANIM_SWIPE_UP = 4;
-	public static int ANIM_SWIPE_LEFT = 5;
-	public static int ANIM_SWIPE_RIGHT = 6;
-	public static int ANIM_PINCH_IN = 7;
-	public static int ANIM_PINCH_OUT = 8;
+	int ANIM_IDLE = 0;
+	int ANIM_TAP = 1;
+	int ANIM_SHAKE = 2;
+	int ANIM_SWIPE_DOWN = 3;
+	int ANIM_SWIPE_UP = 4;
+	int ANIM_SWIPE_LEFT = 5;
+	int ANIM_SWIPE_RIGHT = 6;
+	int ANIM_PINCH_IN = 7;
+	int ANIM_PINCH_OUT = 8;
+
+	int[] ALL_ANIMS = new int[]{
+			ANIM_IDLE, ANIM_TAP, ANIM_SHAKE,
+			ANIM_SWIPE_DOWN, ANIM_SWIPE_UP, ANIM_SWIPE_LEFT, ANIM_SWIPE_RIGHT,
+			ANIM_PINCH_IN, ANIM_PINCH_OUT
+	};
 
 	long getDuration(int animationKey);
 	
 	int[] getFrameIndices(int animationKey);
 	
 	int[] getFrames(int animationKey);
+
+	@RawRes
+	int getSoundResource(int animationid);
 
         // The initial release used getClass().getSimpleName(), which was ProGuarded out.
         // These strings are the pro-guarded names from the released version. In future releases

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -213,7 +213,31 @@ public class Snowman implements Character {
 		return sFrames[animationKey];
 	}
 
-    @Override
+	@Override
+	public int getSoundResource(int animationid) {
+		switch (animationid) {
+			case Character.ANIM_PINCH_IN:
+				return R.raw.snowman_pinchin;
+			case Character.ANIM_PINCH_OUT:
+				return R.raw.snowman_pinchout;
+			case Character.ANIM_SHAKE:
+				return R.raw.snowman_shake;
+			case Character.ANIM_SWIPE_UP:
+				return R.raw.snowman_swipeup;
+			case Character.ANIM_SWIPE_DOWN:
+				return R.raw.snowman_swipedown;
+			case Character.ANIM_SWIPE_LEFT:
+				return R.raw.snowman_swipeleft;
+			case Character.ANIM_SWIPE_RIGHT:
+				return R.raw.snowman_swiperight;
+			case Character.ANIM_TAP:
+				return R.raw.snowman_tap;
+		}
+
+		return -1;
+	}
+
+	@Override
     public String getCharacterName() {
         return "t";
     }

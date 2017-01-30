@@ -1,25 +1,48 @@
-<?xml version="1.0"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">&#xC0B0;&#xD0C0; &#xCD94;&#xC801;&#xD558;&#xAE30;</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">&#xC0B0;&#xD0C0; &#xCD9C;&#xBC1C;&#xAE4C;&#xC9C0; &#xB0A8;&#xC740; &#xC2DC;&#xAC04;</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">&#xC0B0;&#xD0C0;&#xAC00; &#xBD84;&#xC8FC;&#xD558;&#xAC8C; &#xB0B4;&#xB144;&#xC744; &#xC704;&#xD574; &#xC900;&#xBE44;&#xD558;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">2014&#xB144;&#xC5D0; &#xBC29;&#xBB38;&#xD55C; &#xC704;&#xCE58; &#xBCF4;&#xAE30;</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">&#xC0B0;&#xD0C0;&#xC640; &#xC5F0;&#xACB0; &#xC2DC;&#xB3C4; &#xC911;</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">&#xC0B0;&#xD0C0;&#xC640; &#xACC4;&#xC18D; &#xC5F0;&#xACB0; &#xC2DC;&#xB3C4; &#xC911;</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">&#xC77C;</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">&#xC2DC;&#xAC04;</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">&#xBD84;</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">&#xCD08;</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">&#xACF5;&#xC720;</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">&#xCE5C;&#xAD6C;&#xC640; &#xACF5;&#xC720;</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">&#xBC95;&#xC801; &#xACE0;&#xC9C0; &#xBC0F; &#xAC1C;&#xC778;&#xC815;&#xBCF4; &#xBCF4;&#xD638;</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">&#xBC95;&#xC801; &#xACE0;&#xC9C0;</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xCDE8;&#xAE09;&#xBC29;&#xCE68;</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">&#xC11C;&#xBE44;&#xC2A4; &#xC57D;&#xAD00;</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">&#xC624;&#xD508;&#xC18C;&#xC2A4; &#xB77C;&#xC774;&#xC120;&#xC2A4;</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">GitHub&#xC758; &#xC0B0;&#xD0C0; &#xC571;</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">GitHub&#xC758; &#xD30C;&#xC774; &#xB358;&#xC9C0;&#xAE30; &#xAC8C;&#xC784;</string>
-  <string name="scene_not_available" translation_description="Not available yet">&#xC544;&#xC9C1; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC74C;</string>
-  <string name="sign_out">&#xB85C;&#xADF8;&#xC544;&#xC6C3;</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">&#xCD9C;&#xBC1C;&#xAE4C;&#xC9C0; &#xB0A8;&#xC740; &#xC2DC;&#xAC04;</string>
+  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">산타 추적</string>
+  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">산타\n추적</string>
+  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">산타 출발까지 남은 시간</string>
+  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">산타가 분주하게 내년을 위해 준비하고 있습니다.</string>
+  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">2014년에 방문한 위치 보기</string>
+  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">산타와 연결 시도 중</string>
+  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">산타와 계속 연결 시도 중</string>
+  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">일</string>
+  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">시간</string>
+  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">분</string>
+  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">초</string>
+  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">공유</string>
+  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">친구와 공유</string>
+  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">전송 버튼</string>
+  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">법적 고지 및 개인정보 보호</string>
+  <string name="legal_notice_text" translation_description="Link for legal notices">법적 고지</string>
+  <string name="privacy_policy" translation_description="Link for privacy policy">개인정보처리방침</string>
+  <string name="terms_of_service" translation_description="Link for terms of services">서비스 약관</string>
+  <string name="open_source_licenses" translation_description="Licenses for open source components">오픈소스 라이선스</string>
+  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Google Play 서비스의 오픈소스 라이선스</string>
+  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">GitHub의 산타 앱</string>
+  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">GitHub의 파이 던지기 게임</string>
+  <string name="scene_not_available" translation_description="Not available yet">아직 사용할 수 없음</string>
+  <string name="sign_out">로그아웃</string>
+  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">출발까지 남은 시간</string>
+  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%2$d회 중 %1$d회</string>
+  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d점</string>
+  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">여기가 어디인가요?</string>
+  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">사진: %1$s</string>
+  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">대형 화면에서 산타를 추적해 보세요.\n이 버튼을 탭하여 Chromecast를 통해 TV에서 산타의 여정을 확인할 수 있습니다.</string>
 </resources>

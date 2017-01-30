@@ -49,9 +49,8 @@ public class PhoneNotificationService extends WearableListenerService
         implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
         ResultCallback<DataApi.DeleteDataItemsResult> {
 
-    private final String TAG = "PhoneNotificationService";
+    private final String TAG = "PhoneNotification";
     private GoogleApiClient mGoogleApiClient;
-    private String action;
     private Intent mIntent;
 
     @Override

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -223,6 +223,30 @@ public class Reindeer implements Character {
     @Override
     public int[] getFrames(int animationKey) {
         return sFrames[animationKey];
+    }
+
+    @Override
+    public int getSoundResource(int animationid) {
+        switch (animationid) {
+            case Character.ANIM_PINCH_IN:
+                return R.raw.reindeer_pinchin;
+            case Character.ANIM_PINCH_OUT:
+                return R.raw.reindeer_pinchout;
+            case Character.ANIM_SHAKE:
+                return R.raw.reindeer_shake;
+            case Character.ANIM_SWIPE_UP:
+                return R.raw.reindeer_swipeup;
+            case Character.ANIM_SWIPE_DOWN:
+                return R.raw.reindeer_swipedown;
+            case Character.ANIM_SWIPE_LEFT:
+                return R.raw.reindeer_swipeleft;
+            case Character.ANIM_SWIPE_RIGHT:
+                return R.raw.reindeer_swiperight;
+            case Character.ANIM_TAP:
+                return R.raw.reindeer_tap2;
+        }
+
+        return -1;
     }
 
     @Override

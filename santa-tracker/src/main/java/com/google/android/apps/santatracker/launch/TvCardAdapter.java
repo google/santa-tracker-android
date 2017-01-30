@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,13 +29,12 @@ public class TvCardAdapter extends ArrayObjectAdapter implements LauncherDataCha
 
     public static final int SANTA = 0;
     public static final int VIDEO01 = 1;
-    public static final int JETPACK = 2;
-    public static final int VIDEO15 = 3;
-    public static final int ROCKET = 4;
-    public static final int SNOWDOWN = 5;
-    public static final int VIDEO23 = 6;
+    public static final int VIDEO15 = 2;
+    public static final int ROCKET = 3;
+    public static final int SNOWDOWN = 4;
+    public static final int VIDEO23 = 5;
 
-    public static final int NUM_PINS = 7;
+    public static final int NUM_PINS = 6;
 
     private AbstractLaunch[] mAllLaunchers = new AbstractLaunch[NUM_PINS];
     private AbstractLaunch[] mLaunchers;
@@ -46,7 +45,6 @@ public class TvCardAdapter extends ArrayObjectAdapter implements LauncherDataCha
         mAllLaunchers[SANTA] = new LaunchSanta(santaContext, this);
         mAllLaunchers[VIDEO01] = new LaunchVideo(santaContext, this,
                 R.drawable.android_game_cards_santas_back, 1);
-        mAllLaunchers[JETPACK] = new LaunchJetpack(santaContext, this);
         mAllLaunchers[VIDEO15] = new LaunchVideo(santaContext, this,
                 R.drawable.android_game_cards_office_prank, 1);
         mAllLaunchers[ROCKET] = new LaunchRocket(santaContext, this);

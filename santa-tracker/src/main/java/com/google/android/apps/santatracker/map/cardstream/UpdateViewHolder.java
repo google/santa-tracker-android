@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,11 +22,11 @@ import android.widget.TextView;
 
 import com.google.android.apps.santatracker.R;
 
-public class UpdateViewHolder extends CardViewHolder {
+class UpdateViewHolder extends CardViewHolder {
 
-    public TextView content;
+    TextView content;
 
-    public UpdateViewHolder(View itemView) {
+    UpdateViewHolder(View itemView) {
         super(itemView);
         content = (TextView) itemView.findViewById(R.id.update_text);
     }

@@ -62,6 +62,15 @@
 #-keep class android.support.v7.** { *; }
 #-keep interface android.support.v7.** { *; }
 
+# Keep ActionProviders for Cast
+# See menu_startup.xml
+-keep class android.support.v4.view.ActionProvider
+-keepnames class android.support.v4.view.ActionProvider
+-keepclassmembers class android.support.v4.view.ActionProvider
+-keep class android.support.v7.app.MediaRouteActionProvider
+-keepnames class android.support.v7.app.MediaRouteActionProvider
+-keepclassmembers class android.support.v7.app.MediaRouteActionProvider
+
 # Allow obfuscation of android.support.v7.internal.view.menu.**
 # to avoid problem on Samsung 4.2.2 devices with appcompat v21
 # see https://code.google.com/p/android/issues/detail?id=78377
@@ -105,4 +114,9 @@
 -keepclassmembers class org.libsdl.app.SDLActivity {
     public static <methods>;
 }
+
+# Guava ProGuard (Sugar ORM depends on Guava)
+-dontwarn javax.annotation.**
+-dontwarn javax.inject.**
+-dontwarn sun.misc.Unsafe
 

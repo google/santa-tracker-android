@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -263,7 +263,31 @@ public class Santa implements Character {
 		return sFrames[animationKey];
 	}
 
-    @Override
+	@Override
+	public int getSoundResource(int animationid) {
+		switch (animationid) {
+			case Character.ANIM_PINCH_IN:
+				return R.raw.santa_pinchin;
+			case Character.ANIM_PINCH_OUT:
+				return R.raw.santa_pinchout;
+			case Character.ANIM_SHAKE:
+				return R.raw.santa_shake;
+			case Character.ANIM_SWIPE_UP:
+				return R.raw.santa_swipeup;
+			case Character.ANIM_SWIPE_LEFT:
+				return R.raw.santa_swipeleft;
+			case Character.ANIM_SWIPE_RIGHT:
+				return R.raw.santa_swiperight;
+			case Character.ANIM_SWIPE_DOWN:
+				return R.raw.santa_swipedown;
+			case Character.ANIM_TAP:
+				return R.raw.santa_tap;
+		}
+
+		return -1;
+	}
+
+	@Override
     public String getCharacterName() {
         return "s";
     }

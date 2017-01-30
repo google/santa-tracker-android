@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -218,7 +218,31 @@ public class Elf implements Character {
 		return sFrames[animationKey];
 	}
 
-    @Override
+	@Override
+	public int getSoundResource(int animationid) {
+		switch (animationid) {
+			case Character.ANIM_PINCH_IN:
+				return R.raw.elf_pinchin_ball;
+			case Character.ANIM_PINCH_OUT:
+				return R.raw.elf_pinchout;
+			case Character.ANIM_SHAKE:
+				return R.raw.elf_shake2;
+			case Character.ANIM_SWIPE_DOWN:
+				return R.raw.elf_swipedown2;
+			case Character.ANIM_SWIPE_UP:
+				return R.raw.elf_swipeup2;
+			case Character.ANIM_SWIPE_LEFT:
+				return R.raw.elf_swipeleft;
+			case Character.ANIM_SWIPE_RIGHT:
+				return R.raw.elf_swiperight;
+			case Character.ANIM_TAP:
+				return R.raw.elf_tap3;
+		}
+
+		return -1;
+	}
+
+	@Override
     public String getCharacterName() {
         return "h";
     }

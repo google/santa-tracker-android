@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,17 +16,24 @@
 
 package com.google.android.apps.santatracker.games.gamebase;
 
+import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.View;
+import android.os.Handler;
 import com.google.android.apps.santatracker.R;
+import com.google.android.apps.santatracker.games.EndOfGameView;
 import com.google.android.apps.santatracker.games.common.PlayGamesActivity;
 import com.google.android.apps.santatracker.games.simpleengine.Scene;
 import com.google.android.apps.santatracker.games.simpleengine.SceneManager;
 import com.google.android.apps.santatracker.invites.AppInvitesFragment;
 
+import static com.google.android.apps.santatracker.games.jetpack.JetpackActivity.JETPACK_SCORE;
+
 public abstract class SceneActivity extends PlayGamesActivity {
 
     private AppInvitesFragment mInvitesFragment;
+    private boolean mIsEnding = false;
+    private GameEndedListener mGameEndedListener;
 
     protected abstract Scene getGameScene();
 
@@ -63,6 +70,10 @@ public abstract class SceneActivity extends PlayGamesActivity {
     public void onResume() {
         super.onResume();
         SceneManager.getInstance().onResume(this);
+        if(SceneManager.getInstance().getCurrentScene() != null &&
+                SceneManager.getInstance().getCurrentScene().isGameEnded()) {
+            postGoToEndGame();
+        }
     }
 
     @Override
@@ -87,6 +98,12 @@ public abstract class SceneActivity extends PlayGamesActivity {
         }
     }
 
+    @Override
+    protected void launchStartupActivity() {
+        SceneManager.getInstance().saveMute();
+        finish();
+    }
+
     public void postQuitGame() {
         runOnUiThread(new Runnable() {
             @Override
@@ -94,6 +111,75 @@ public abstract class SceneActivity extends PlayGamesActivity {
                 launchStartupActivity();
             }
         });
+    }
+
+    public void postReturnWithScore(final int score) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                returnWithScore(score);
+            }
+        });
+    }
+
+
+    public void returnWithScore(int score) {
+        Intent intent = this.getIntent();
+        intent.putExtra(JETPACK_SCORE, score);
+        this.setResult(RESULT_OK, intent);
+        finish();
+    }
+
+    public void setGameEndedListener(GameEndedListener gameEndedListener) {
+        mGameEndedListener = gameEndedListener;
+    }
+
+    public void postDelayedGoToEndGame(final int delay) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(mGameEndedListener != null) {
+                            int score = mGameEndedListener.getScore();
+                            mGameEndedListener.onGameEnded();
+                            goToEndGame(score);
+                        }
+                    }
+                }, delay);
+            }
+        });
+    }
+
+    public void postGoToEndGame() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if(mGameEndedListener != null) {
+                    int score = mGameEndedListener.getScore();
+                    mGameEndedListener.onGameEnded();
+                    goToEndGame(score);
+                }
+            }
+        });
+    }
+
+    private void goToEndGame(final int score) {
+        // Prevent multiple calls
+        if (mIsEnding) {
+            return;
+        }
+        mIsEnding = true;
+        // Show the end-game view
+        EndOfGameView gameView = (EndOfGameView) findViewById(R.id.view_end_game);
+        gameView.initialize(score, null /* no replay */, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                returnWithScore(score);
+            }
+        });
+        gameView.setVisibility(View.VISIBLE);
     }
 
     public void share() {

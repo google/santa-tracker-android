@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 package com.google.android.apps.santatracker.games.jetpack;
 
+import android.app.Activity;
 import android.view.KeyEvent;
 
 import com.google.android.apps.santatracker.R;
@@ -31,13 +32,18 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public final class JetpackScene extends BaseScene {
+    private static final String TAG = "JetpackScene";
 
     // GameObject types:
     static final int TYPE_PLAYER = 0;
-    static final int TYPE_ITEM = 1;
+    static final int TYPE_GOOD_ITEM = 1;
+    static final int TYPE_BAD_ITEM = 2;
 
     // player
     GameObject mPlayerObj;
+
+    // background
+    GameObject mBackground;
 
     // our object factory
     JetpackObjectFactory mFactory;
@@ -45,11 +51,17 @@ public final class JetpackScene extends BaseScene {
     // current difficulty level
     int mLevel = 1;
 
+    // player is currently injured
+    boolean mPlayerHit = false;
+
+    // time remaining of player's injury
+    float mPlayerHitTime = JetpackConfig.Time.HIT_TIME;
+
     // total items collected
     int mItemsCollected = 0;
 
     // item fall speed multipler (increases with level)
-    float mFallMult = 1.0f;
+    float mFallMult = 3.0f;
 
     // score multipler (increases with level)
     float mScoreMult = 1.0f;
@@ -62,7 +74,7 @@ public final class JetpackScene extends BaseScene {
 
     float mPlayerTargetX = 0.0f;
     float mPlayerTargetY = 0.0f;
-
+    
     // working array
     ArrayList<GameObject> mTmpList = new ArrayList<GameObject>();
 
@@ -76,7 +88,7 @@ public final class JetpackScene extends BaseScene {
     float mTimeRemaining = JetpackConfig.Time.INITIAL;
 
     // sfx IDs
-    int[] mItemSfx = null;
+    int[] mItemSfxSuccess = null;
 
     // current combo
     private class Combo {
@@ -132,17 +144,25 @@ public final class JetpackScene extends BaseScene {
         super.onInstall();
         mFactory = new JetpackObjectFactory(mRenderer, mWorld);
         mFactory.requestTextures();
+        mBackground = mFactory.makeBackground();
+        mBackground.sendToBack();
+        // Make the game shorter when debugging
+        Activity activity = SceneManager.getInstance().getActivity();
+        if (activity != null && activity.getPackageName().contains("debug")) {
+            mTimeRemaining = 10.0f;
+        }
 
         mPlayerObj = mFactory.makePlayer();
-
+        mPlayerTargetX = 0.0f;
+        mPlayerTargetY = mRenderer.getBottom() + JetpackConfig.Player.VERT_MOVEMENT_MARGIN;
         SoundManager soundManager = SceneManager.getInstance().getSoundManager();
-        mItemSfx = new int[3];
-        mItemSfx[0] = soundManager.requestSfx(R.raw.jetpack_score1);
-        mItemSfx[1] = soundManager.requestSfx(R.raw.jetpack_score2);
-        mItemSfx[2] = soundManager.requestSfx(R.raw.jetpack_score3);
-
+        mItemSfxSuccess = new int[3];
+        mItemSfxSuccess[0] = soundManager.requestSfx(R.raw.jetpack_score1);
+        mItemSfxSuccess[1] = soundManager.requestSfx(R.raw.jetpack_score2);
+        mItemSfxSuccess[2] = soundManager.requestSfx(R.raw.jetpack_score3);
+        SceneManager.getInstance().getVibrator();
         // start paused
-        pauseGame();
+        startGameScreen();
     }
 
     @Override
@@ -153,61 +173,84 @@ public final class JetpackScene extends BaseScene {
     @Override
     public void doStandbyFrame(float deltaT) {
         super.doStandbyFrame(deltaT);
-        mRenderer.setClearColor(JetpackConfig.SKY_COLOR);
+    }
+
+    @Override
+    public boolean isGameEnded() {
+        return mGameEnded;
     }
 
     @Override
     public void doFrame(float deltaT) {
-        if (mPaused) {
-            deltaT = 0;
-        }
+        if(!mPaused) {
+            if (!mGameEnded) {
+                mPlayTime += deltaT;
+                updatePlayer(deltaT);
+                if (!mPlayerHit) {
+                    detectCollectedItems();
+                }
+                updatePlayerHit(deltaT);
+                updateTimeRemaining(deltaT);
+                updateCombo(deltaT);
+                checkLevelUp();
+                mAchPendingSeconds += deltaT;
+            }
+            updateClouds();
+            updateCandy(deltaT);
+            killMissedPresents();
 
-        if (!mGameEnded) {
-            mPlayTime += deltaT;
+            mIncAchCountdown -= deltaT;
+            sendIncrementalAchievements(false);
+
+            if (!mIsInGameEndingTransition && (mSpawnCountdown -= deltaT) < 0.0f) {
+                mSpawnCountdown = JetpackConfig.Items.SPAWN_INTERVAL;
+                mFactory.makeRandomItem(mFallMult, SceneManager.getInstance()
+                        .getLargePresentMode(), mDisplayedScore.getValue());
+            }
+            super.doFrame(deltaT);
+        }
+        if(mInStartCountdown) {
             updatePlayer(deltaT);
-            detectCollectedPresents();
-            updateTimeRemaining(deltaT);
-            updateCombo(deltaT);
-            checkLevelUp();
-            mAchPendingSeconds += deltaT;
+            float newCount = mStartCountdownTimeRemaining - (deltaT);
+            if(newCount <= 0) {
+                mInStartCountdown = false;
+                unpauseGame();
+            } else if((int) newCount < (int) mStartCountdownTimeRemaining) {
+                mDigitFactory.setDigit(mCountdownDigitObj, Math.min((int) newCount + 1, 3));
+                mCountdownDigitObj.bringToFront();
+            }
+            mStartCountdownTimeRemaining = newCount;
         }
-
-        updateClouds();
-        updateCandy(deltaT);
-        killMissedPresents();
-
-        mIncAchCountdown -= deltaT;
-        sendIncrementalAchievements(false);
-
-        if (!mGameEnded && (mSpawnCountdown -= deltaT) < 0.0f) {
-            mSpawnCountdown = JetpackConfig.Items.SPAWN_INTERVAL;
-            mFactory.makeRandomItem(mFallMult);
+        if(mGameEnded) {
+            goToEndGame();
         }
-
-        mRenderer.setClearColor(JetpackConfig.SKY_COLOR);
-        super.doFrame(deltaT);
     }
 
     protected void endGame() {
-        super.endGame();
-
-        // hide the player
-        mPlayerObj.hide();
-
-        // delete all remaining items
-        killAllPresents();
+        mIsInGameEndingTransition = true;
 
         // force send all incremental achievements
         sendIncrementalAchievements(true);
 
         // submit our score
         submitScore(JetpackConfig.LEADERBOARD, mScore);
+
+        // Start end game activity
+        onWidgetTriggered(MSG_GO_TO_END_GAME);
     }
 
     private void updateTimeRemaining(float deltaT) {
         mTimeRemaining -= deltaT;
-        if (mTimeRemaining < 0.0f) {
+        if (mTimeRemaining < 0.0f && !mIsInGameEndingTransition) {
             endGame();
+        }
+    }
+
+    private void updatePlayerHit(float deltaT) {
+        mPlayerHitTime -= deltaT;
+        if(mPlayerHitTime < 0.0f && mPlayerHit) {
+            mFactory.recoverPlayerHit(mPlayerObj);
+            mPlayerHit = false;
         }
     }
 
@@ -256,13 +299,18 @@ public final class JetpackScene extends BaseScene {
     }
 
     private boolean isCandy(GameObject o) {
-        return o.type == TYPE_ITEM &&
+        return o.type == TYPE_GOOD_ITEM &&
                 o.ivar[JetpackConfig.Items.IVAR_TYPE] == JetpackObjectFactory.ITEM_CANDY;
     }
 
     private boolean isPresent(GameObject o) {
-        return o.type == TYPE_ITEM &&
+        return o.type == TYPE_GOOD_ITEM &&
                 o.ivar[JetpackConfig.Items.IVAR_TYPE] == JetpackObjectFactory.ITEM_PRESENT;
+    }
+
+    private boolean isCoal(GameObject o) {
+        return o.type == TYPE_BAD_ITEM &&
+                o.ivar[JetpackConfig.Items.IVAR_TYPE] == JetpackObjectFactory.ITEM_COAL;
     }
 
     private void updateCandy(float deltaT) {
@@ -286,17 +334,17 @@ public final class JetpackScene extends BaseScene {
         int i;
         for (i = 0; i < mWorld.gameObjects.size(); i++) {
             GameObject o = mWorld.gameObjects.get(i);
-            if (o.type == TYPE_ITEM && o.y < JetpackConfig.Items.DELETE_Y) {
+            if ((o.type == TYPE_GOOD_ITEM || o.type == TYPE_BAD_ITEM) && o.y < JetpackConfig.Items.DELETE_Y) {
                 o.dead = true;
             }
         }
     }
 
-    private void killAllPresents() {
+    private void killAllItems() {
         int i;
         for (i = 0; i < mWorld.gameObjects.size(); i++) {
             GameObject o = mWorld.gameObjects.get(i);
-            if (o.type == TYPE_ITEM) {
+            if (o.type == TYPE_GOOD_ITEM || o.type == TYPE_BAD_ITEM) {
                 o.dead = true;
             }
         }
@@ -320,50 +368,41 @@ public final class JetpackScene extends BaseScene {
     }
 
     private void pickUpItem(GameObject item) {
-        int baseValue = item.ivar[JetpackConfig.Items.IVAR_BASE_VALUE];
-        int value = roundScore((int) (baseValue * mScoreMult));
-
+        int value = item.ivar[JetpackConfig.Items.IVAR_BASE_VALUE];
         if (isCandy(item)) {
             mAchPendingCandy++;
+            mObjectFactory.makeScorePopup(item.x, item.y, value, mDigitFactory);
+            SceneManager.getInstance().getSoundManager().playSfx(
+                    mItemSfxSuccess[mRandom.nextInt(mItemSfxSuccess.length)]);
         } else if (isPresent(item)) {
             mAchPendingPresents++;
+            mObjectFactory.makeScorePopup(item.x, item.y, value, mDigitFactory);
+            SceneManager.getInstance().getSoundManager().playSfx(
+                    mItemSfxSuccess[mRandom.nextInt(mItemSfxSuccess.length)]);
+        } else if (isCoal(item)) {
+            mFactory.makePlayerHit(mPlayerObj);
+            mPlayerHit = true;
+            mPlayerHitTime = JetpackConfig.Time.HIT_TIME;
+            mObjectFactory.makeScorePopup(item.x, item.y, value, mDigitFactory);
+            SceneManager.getInstance().getSoundManager().playSfx(
+                    mItemSfxSuccess[mRandom.nextInt(mItemSfxSuccess.length)]);
+            SceneManager.getInstance().getVibrator().vibrate(JetpackConfig.Time.VIBRATE_SMALL);
         }
-
-        mObjectFactory.makeScorePopup(item.x, item.y, value, mDigitFactory);
-        float thisX = item.x;
-        float thisY = item.y;
         item.dead = true;
         mItemsCollected++;
 
-        float timeRecovery = JetpackConfig.Time.RECOVERED_BY_ITEM -
-                mLevel * JetpackConfig.Time.RECOVERED_DECREASE_PER_LEVEL;
-        if (timeRecovery < JetpackConfig.Time.RECOVERED_MIN) {
-            timeRecovery = JetpackConfig.Time.RECOVERED_MIN;
-        }
-
-        // rewards: score and time
         addScore(value);
-        addTime(timeRecovery);
 
         // play sfx
-        SceneManager.getInstance().getSoundManager().playSfx(
-                mItemSfx[mRandom.nextInt(mItemSfx.length)]);
 
-        // increment combo
-        mCombo.centroidX = (mCombo.centroidX * mCombo.items + thisX) / (mCombo.items + 1);
-        mCombo.centroidY = (mCombo.centroidY * mCombo.items + thisY) / (mCombo.items + 1);
-        mCombo.items++;
-        mCombo.countdown = JetpackConfig.Items.COMBO_INTERVAL;
-        mCombo.points += value;
-        mCombo.timeRecovery += timeRecovery;
     }
 
-    private void detectCollectedPresents() {
+    private void detectCollectedItems() {
         mWorld.detectCollisions(mPlayerObj, mTmpList, true);
         int i;
         for (i = 0; i < mTmpList.size(); i++) {
             GameObject o = mTmpList.get(i);
-            if (o.type == TYPE_ITEM) {
+            if (o.type == TYPE_GOOD_ITEM || o.type == TYPE_BAD_ITEM) {
                 pickUpItem(o);
             }
         }
@@ -411,15 +450,6 @@ public final class JetpackScene extends BaseScene {
         // if no finger owns the steering of the elf, adopt this one.
         if (mActivePointerId < 0) {
             mActivePointerId = pointerId;
-        }
-
-        // if this finger is the owner of the steering, steer!
-        if (mActivePointerId == pointerId) {
-            mPlayerTargetX += deltaX * JetpackConfig.Input.TOUCH_SENSIVITY;
-            mPlayerTargetY += deltaY * JetpackConfig.Input.TOUCH_SENSIVITY;
-
-            // don't let the player wander off screen
-            limitPlayerMovement();
         }
     }
 
@@ -496,6 +526,13 @@ public final class JetpackScene extends BaseScene {
                 break;
         }
 
+        // don't let the player wander off screen
+        limitPlayerMovement();
+    }
+
+    @Override
+    public void onSensorChanged(float x, float y, int accuracy) {
+        mPlayerTargetX += JetpackConfig.Input.Sensor.transformX(x);
         // don't let the player wander off screen
         limitPlayerMovement();
     }

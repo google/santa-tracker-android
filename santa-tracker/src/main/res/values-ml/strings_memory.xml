@@ -1,8 +1,23 @@
-<?xml version="1.0"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
-  <string name="mmg_score" translation_description="Header for score">&#xD38;&#xD4D;&#x200C;&#xD15;&#xD4B;&#xD7C;</string>
-  <string name="mmg_level" translation_description="Header for level">&#xD32;&#xD46;&#xD35;&#xD7D;</string>
-  <string name="mmg_summary_playagain" translation_description="Button text for playing again">&#xD35;&#xD40;&#xD23;&#xD4D;&#xD1F;&#xD41;&#xD02; &#xD15;&#xD33;&#xD3F;&#xD15;&#xD4D;&#xD15;&#xD41;&#xD15;</string>
-  <string name="mmg_btn_pause" translation_description="Button hint for pausing the game">&#xD17;&#xD46;&#xD2F;&#xD3F;&#xD02; &#xD24;&#xD7D;&#xD15;&#xD4D;&#xD15;&#xD3E;&#xD32;&#xD02; &#xD28;&#xD3F;&#xD7C;&#xD24;&#xD4D;&#xD24;&#xD41;&#xD15;</string>
-  <string name="mmg_btn_resume" translation_description="Button hint for resuming the game">&#xD17;&#xD46;&#xD2F;&#xD3F;&#xD02; &#xD2A;&#xD41;&#xD28;&#xD30;&#xD3E;&#xD30;&#xD02;&#xD2D;&#xD3F;&#xD15;&#xD4D;&#xD15;&#xD41;&#xD15;</string>
+  <string name="mmg_score" translation_description="Header for score">സ്‌കോർ</string>
+  <string name="mmg_level" translation_description="Header for level">ലെവൽ</string>
+  <string name="mmg_summary_playagain" translation_description="Button text for playing again">വീണ്ടും കളിക്കുക</string>
+  <string name="mmg_btn_pause" translation_description="Button hint for pausing the game">ഗെയിം തൽക്കാലം നിർത്തുക</string>
+  <string name="mmg_btn_resume" translation_description="Button hint for resuming the game">ഗെയിം പുനരാരംഭിക്കുക</string>
 </resources>

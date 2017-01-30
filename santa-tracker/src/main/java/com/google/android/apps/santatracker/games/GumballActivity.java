@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,8 +43,9 @@ public class GumballActivity extends PlayGamesActivity {
         super.onCreate(savedInstanceState);
 
         mGumballFragment = TiltGameFragment.newInstance();
-        this.getSupportFragmentManager().beginTransaction()
-                .replace(R.id.mainFragmentContainer, mGumballFragment).commit();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.mainFragmentContainer, mGumballFragment)
+                .commit();
 
         // App Measurement
         mMeasurement = FirebaseAnalytics.getInstance(this);

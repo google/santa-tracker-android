@@ -1,32 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright 2016 Google Inc. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="box2d" translatable="false">JBox2D license</string>
-    <string name="seismic" translatable="false">Seismic license</string>
     <string name="no_next_destination">-</string>
     <string name="colon">":"</string>
     <string name="countdown_initial">00</string>
-
-    <string name="jbox2d_license" translatable="false">
-Copyright (c) 2013, Daniel Murphy\n
-All rights reserved.\n
-\n
-Redistribution and use in source and binary forms, with or without modification,\n
-are permitted provided that the following conditions are met:\n
-	* Redistributions of source code must retain the above copyright notice,\n
-	  this list of conditions and the following disclaimer.\n
-	* Redistributions in binary form must reproduce the above copyright notice,\n
-	  this list of conditions and the following disclaimer in the documentation\n
-	  and/or other materials provided with the distribution.\n
-\n
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND\n
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.\n
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,\n
-INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT\n
-NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\n
-PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,\n
-WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\n
-POSSIBILITY OF SUCH DAMAGE.\n
-</string>
 </resources>
-

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -194,4 +194,12 @@ public final class GameObject {
             mWorld.getRenderer().bringToFront(mSprites.get(i));
         }
     }
+
+    public void sendToBack() {
+        int i;
+        for (i = 0; i < mSprites.size(); i++) {
+            mWorld.getRenderer().sendToBack(mSprites.get(i));
+        }
+    }
+
 }

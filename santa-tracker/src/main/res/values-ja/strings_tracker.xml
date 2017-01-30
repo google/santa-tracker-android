@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
   <string name="santaDashboard" translation_description="A grouping of Santa's status on a dashboard">サンタさんは今...</string>
   <string name="current_location" translation_description="Where is Santa now. Label in all capital letters.">今いる場所</string>
@@ -28,7 +44,7 @@
   <string name="santa_update" translation_description="Heading for Status messages from Santa">サンタさんの最新情報</string>
   <string name="elapsed_time" translation_description="Heading for elapsed time">経過時間</string>
   <string name="wikipedia" translation_description="Label for button to show a wikipedia page.">ウィキペディア</string>
-  <string name="arrival" translation_description="Label for the time Santa arriving at a city">到着時刻</string>
+  <string name="arrival" translation_description="Label for the time Santa arriving at a city">サンタさんの到着時刻</string>
   <string name="weather" translation_description="Label for the weather (temperature) of a city">天気情報</string>
   <string name="weather_format" translation_description="Temperature expression, like 23 C / 73 F">%1$s °C / %2$s °F</string>
   <string name="did_you_know_attribution" translation_description="Attribution of 'Did you know' facts to the 'National Geographic Bee'">National Geographic Beeが明かす世界の真実</string>

@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
   <string name="santaDashboard" translation_description="A grouping of Santa's status on a dashboard">Joulupukin hallintapaneeli</string>
   <string name="current_location" translation_description="Where is Santa now. Label in all capital letters.">NYKYINEN SIJAINTI</string>
@@ -13,7 +29,7 @@
   <string name="arrived_at" translation_description="Which destination did Santa arrive at. Label in all capital letters.">SAAPUI KOHTEESEEN</string>
   <string name="in_transit" translation_description="Santa is traveling to the next stop.">Matkalla</string>
   <string name="touch_for_santa_cam" translation_description="A button that enables Santa Cam - an automated stylised camera that tracks Santa">Takaisin joulupukkikameraan</string>
-  <string name="lost_contact_with_santa" translation_description="Having trouble communicating with Santa (networking issue)">Yhteys Joulupukkiin menetettiin</string>
+  <string name="lost_contact_with_santa" translation_description="Having trouble communicating with Santa (networking issue)">Yhteys joulupukkiin menetettiin</string>
   <string name="notification_nearby" translation_description="Santa is close to your location">Joulupukki on lähellä!</string>
   <string name="notification_takeoff" translation_description="Santa's journey has begun, he is now delivering presents">Joulupukki on lähtenyt matkaan!</string>
   <string name="notification_unlock_video" translation_description="A new video has been unlocked in the app leading up to Chrstimas">Uusi video on saatavana!</string>
@@ -36,17 +52,17 @@
   <string name="photos" translation_description="Label for button to show photos (plural) of a place.">Valokuvat</string>
   <string name="street_view" translation_description="Label for button to show Street View">KATUNÄKYMÄ</string>
   <string name="back_to_santa_cam" translation_description="Label for button to go back to the Santa cam mode.">TAKAISIN JOULUPUKIN KAMERAAN</string>
-  <string name="update_from_santa" translation_description="Content description for icon that indicates that the information is an update from Santa about his locations and such">Päivitys Joulupukilta</string>
+  <string name="update_from_santa" translation_description="Content description for icon that indicates that the information is an update from Santa about his locations and such">Päivitys joulupukilta</string>
   <string name="trivia_from_santa" translation_description="Content description for icon that indicates that the information is a trivia.">Joulupukin tiedonjyviä</string>
-  <string name="photo_from_santa" translation_description="Content description for icon that indicates that the information is about a photo">Valokuva Joulupukilta</string>
-  <string name="video_from_santa" translation_description="Content description for icon that indicates that the information is about a video">Video Joulupukilta</string>
+  <string name="photo_from_santa" translation_description="Content description for icon that indicates that the information is about a photo">Valokuva joulupukilta</string>
+  <string name="video_from_santa" translation_description="Content description for icon that indicates that the information is about a video">Video joulupukilta</string>
   <string name="show_history" translation_description="Label for button to show card history.">Näytä historia</string>
-  <string name="see_best_moments" translation_description="Label for card to show history.">Katso parhaat hetket Joulupukin matkalta</string>
+  <string name="see_best_moments" translation_description="Label for card to show history.">Katso parhaat hetket joulupukin matkalta</string>
   <string name="return_to_map" translation_description="Label for button to go back to tracker from full screen streetview/video/photo">Takaisin karttaan</string>
   <string name="santa_is_now_arriving_in_x" translation_description="Label for the next place Santa is visiting">Joulupukin seuraava sijainti on %s</string>
   <string name="santa_has_handed_out_x_presents" translation_description="Label for the number of presents Santa has delivered so far">Joulupukki on jakanut %s lahjaa</string>
-  <string name="new_update_from_santa" translation_description="Label for icon that indicates an update from Santa">Uusi päivitys Joulupukilta</string>
-  <string name="new_trivia_from_santa" translation_description="Label for icon that indicates a trivia from Santa">Uusi tiedonjyvä Joulupukilta</string>
-  <string name="new_video_from_santa" translation_description="Label for icon that indicates a video from Santa">Uusi video Joulupukilta</string>
-  <string name="new_photo_from_santa" translation_description="Label for icon that indicates a photo from Santa">Uusi valokuva Joulupukilta</string>
+  <string name="new_update_from_santa" translation_description="Label for icon that indicates an update from Santa">Uusi päivitys joulupukilta</string>
+  <string name="new_trivia_from_santa" translation_description="Label for icon that indicates a trivia from Santa">Uusi tiedonjyvä joulupukilta</string>
+  <string name="new_video_from_santa" translation_description="Label for icon that indicates a video from Santa">Uusi video joulupukilta</string>
+  <string name="new_photo_from_santa" translation_description="Label for icon that indicates a photo from Santa">Uusi valokuva joulupukilta</string>
 </resources>

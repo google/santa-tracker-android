@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,7 +68,9 @@ public class LaunchVideo extends AbstractLaunch {
                 Intent intent = Intents.getYoutubeIntent(mContext.getApplicationContext(), mVideoId);
                 mContext.launchActivityDelayed(intent, v);
 
-                // App Measurement
+                // [ANALYTICS]
+                MeasurementManager.recordScreenView(mMeasurement,
+                        "video_" + mVideoId);
                 MeasurementManager.recordCustomEvent(mMeasurement,
                         mContext.getResources().getString(R.string.analytics_event_category_launch),
                         mContext.getResources().getString(R.string.analytics_tracker_action_video),
@@ -107,15 +109,15 @@ public class LaunchVideo extends AbstractLaunch {
             // video explicitly disabled
             mVideoId = null;
             setState(STATE_HIDDEN);
+        } else if (SantaPreferences.getCurrentTime() < unlockTime) {
+            // video not-yet unlocked
+            mVideoId = null;
+            setState(STATE_LOCKED);
         } else if (videoId != null && !videoId.isEmpty() && !videoId.equals("null")) {
             // JSONObject.getString will coerce a null value into "null"
             // valid-looking video ID - unlock regardless of time
             mVideoId = videoId;
             setState(STATE_READY);
-        } else if (SantaPreferences.getCurrentTime() < unlockTime) {
-            // video not-yet unlocked
-            mVideoId = null;
-            setState(STATE_LOCKED);
         } else {
             // video ID null or not present and video should be unlocked
             mVideoId = null;

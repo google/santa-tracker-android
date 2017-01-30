@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -61,7 +61,6 @@ import com.google.android.apps.santatracker.AudioPlayer;
 import com.google.android.apps.santatracker.BuildConfig;
 import com.google.android.apps.santatracker.R;
 import com.google.android.apps.santatracker.data.SantaPreferences;
-import com.google.android.apps.santatracker.invites.AppInvitesFragment;
 import com.google.android.apps.santatracker.service.SantaService;
 import com.google.android.apps.santatracker.service.SantaServiceMessages;
 import com.google.android.apps.santatracker.util.AccessibilityUtil;
@@ -71,7 +70,7 @@ import com.google.android.apps.santatracker.util.SantaLog;
 import com.google.android.apps.santatracker.village.Village;
 import com.google.android.apps.santatracker.village.VillageView;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.lang.ref.WeakReference;
@@ -87,7 +86,6 @@ public class TvStartupActivity extends FragmentActivity implements
     protected static final String TAG = "SantaStart";
     private static final String VILLAGE_TAG = "VillageFragment";
 
-    private AppInvitesFragment mInvitesFragment;
     private AudioPlayer mAudioPlayer;
 
     private boolean mResumed = false;
@@ -182,13 +180,10 @@ public class TvStartupActivity extends FragmentActivity implements
         mLaunchButton = findViewById(R.id.launch_button);
         mLaunchButton.setOnClickListener(this);
 
-        mMarkers = (VerticalGridView) findViewById(R.id.markers);
+        mMarkers = (VerticalGridView) findViewById(R.id.santa_markers);
         initialiseViews();
 
         mHaveGooglePlayServices = checkGooglePlayServicesAvailable();
-
-        // App invites
-        mInvitesFragment = AppInvitesFragment.getInstance(this);
 
         // Initialize measurement
         mMeasurement = FirebaseAnalytics.getInstance(this);
@@ -356,14 +351,6 @@ public class TvStartupActivity extends FragmentActivity implements
         super.onStart();
         registerWithService();
 
-        // Check for App Invites
-        mInvitesFragment.getInvite(new AppInvitesFragment.GetInvitationCallback() {
-            @Override
-            public void onInvitation(String invitationId, String deepLink) {
-                Log.d(TAG, "onInvitation: " + deepLink);
-            }
-        }, true);
-
         initialiseViews();
         resetLauncherStates();
     }
@@ -407,7 +394,7 @@ public class TvStartupActivity extends FragmentActivity implements
         // System.currentTimeMillis() as it *will* ignore TIME_OFFSET.
         final long time = SantaPreferences.getCurrentTime();
 
-        AbstractLaunch launchSanta = mCardAdapter.getLauncher(CardAdapter.SANTA);
+        AbstractLaunch launchSanta = mCardAdapter.getLauncher(TvCardAdapter.SANTA);
 
         if (time < OFFLINE_SANTA_DEPARTURE) {
             // Santa hasn't departed yet, show countdown
@@ -441,7 +428,7 @@ public class TvStartupActivity extends FragmentActivity implements
 
         long time = SantaPreferences.getCurrentTime();
 
-        AbstractLaunch launchSanta = mCardAdapter.getLauncher(CardAdapter.SANTA);
+        AbstractLaunch launchSanta = mCardAdapter.getLauncher(TvCardAdapter.SANTA);
         // Is Santa finished?
         if (time > mFirstDeparture && time < OFFLINE_SANTA_FINALARRIVAL) {
             // Santa should be travelling, enable map and hide countdown
@@ -498,9 +485,6 @@ public class TvStartupActivity extends FragmentActivity implements
      * Village Markers
      */
     private void updateNavigation() {
-        // Games
-        mCardAdapter.getLauncher(TvCardAdapter.JETPACK)
-                .setState(getGamePinState(mFlagDisableJetpack, UNLOCK_JETPACK));
         mCardAdapter.getLauncher(TvCardAdapter.ROCKET).setState(
                 getGamePinState(mFlagDisableRocket, UNLOCK_ROCKET));
         mCardAdapter.getLauncher(TvCardAdapter.SNOWDOWN).setState(
@@ -593,25 +577,26 @@ public class TvStartupActivity extends FragmentActivity implements
      * Check that Google Play services APK is installed and up to date.
      */
     private boolean checkGooglePlayServicesAvailable() {
-        final int connectionStatusCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
-        if (GooglePlayServicesUtil.isUserRecoverableError(connectionStatusCode)) {
-            showGooglePlayServicesAvailabilityErrorDialog(connectionStatusCode);
+        if (getPackageName().contains("debug")) {
+            return true;
+        }
+
+        GoogleApiAvailability availability = GoogleApiAvailability.getInstance();
+        final int connectionStatusCode = availability.isGooglePlayServicesAvailable(this);
+        if (availability.isUserResolvableError(connectionStatusCode)) {
+            Dialog dialog = availability.getErrorDialog(this, connectionStatusCode, 123);
+            dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    finish();
+                }
+            });
+            dialog.show();
+
             return false;
         }
+
         return (connectionStatusCode == ConnectionResult.SUCCESS);
-    }
-
-    private void showGooglePlayServicesAvailabilityErrorDialog(final int connectionStatusCode) {
-
-        Dialog dialog = GooglePlayServicesUtil.getErrorDialog(connectionStatusCode, this, 0);
-        dialog.show();
-        dialog.setOnDismissListener(new Dialog.OnDismissListener() {
-
-            public void onDismiss(DialogInterface dialog) {
-                finish();
-            }
-        });
-
     }
 
     @Override
@@ -659,7 +644,7 @@ public class TvStartupActivity extends FragmentActivity implements
 
     /** Attempt to launch the tracker, if available. */
     public void launchTracker() {
-        AbstractLaunch launch = mCardAdapter.getLauncher(CardAdapter.SANTA);
+        AbstractLaunch launch = mCardAdapter.getLauncher(TvCardAdapter.SANTA);
         if (launch instanceof LaunchSanta) {
             LaunchSanta tracker = (LaunchSanta) launch;
 

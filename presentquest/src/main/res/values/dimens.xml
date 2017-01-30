@@ -1,0 +1,52 @@
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Workshop list -->
+    <dimen name="workshop_map_height">150dp</dimen>
+    <dimen name="workshop_map_margin">16dp</dimen>
+    <dimen name="workshop_edit_size">64dp</dimen>
+    <dimen name="workshop_lock_size">60dp</dimen>
+
+    <!-- Avatar -->
+    <dimen name="size_avatar_image">60dp</dimen>
+    <dimen name="left_margin_avatar_image">32dp</dimen>
+    <dimen name="blue_bar_height">48dp</dimen>
+    <dimen name="blue_bar_left_padding">90dp</dimen>
+
+    <!-- Onboarding -->
+    <dimen name="viewpager_margin_bottom">30dp</dimen>
+    <dimen name="onboarding_image_margin">50dp</dimen>
+    <dimen name="onboarding_btn_padding">16dp</dimen>
+    <dimen name="onboarding_btn_margin">20dp</dimen>
+    <dimen name="onboarding_btn_width">150dp</dimen>
+    <dimen name="onboarding_text_margin">32dp</dimen>
+    <dimen name="onboarding_text_size">20sp</dimen>
+
+    <!-- Snackbar -->
+    <dimen name="snackbar_text_size">16sp</dimen>
+    <dimen name="snackbar_text_margin">72dp</dimen>
+    <dimen name="snackbar_text_padding">10dp</dimen>
+    <dimen name="snackbar_button_padding">16dp</dimen>
+
+    <!-- Very high so they go over everything, onboarding should be highest -->
+    <dimen name="snackbar_elevation">90dp</dimen>
+    <dimen name="onboarding_elevation">100dp</dimen>
+</resources>

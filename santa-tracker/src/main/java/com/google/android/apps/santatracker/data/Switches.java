@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,15 +20,10 @@ package com.google.android.apps.santatracker.data;
  * Kill-switches and remotely updatable configuration data.
  */
 public class Switches {
-    // Kill-switches
+    // Kill switches
     public boolean disableCastButton;
     public boolean disableDestinationPhoto;
-    public boolean disableGumballGame;
-    public boolean disableJetpackGame;
-    public boolean disableMemoryGame;
-    public boolean disableRocketGame;
-    public boolean disableDancerGame;
-    public boolean disableSnowdownGame;
+    public GameDisabledState gameState = new GameDisabledState();
 
     // Video data
     public String video1;

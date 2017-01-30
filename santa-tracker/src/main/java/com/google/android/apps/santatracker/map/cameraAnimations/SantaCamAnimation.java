@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,43 +16,40 @@
 
 package com.google.android.apps.santatracker.map.cameraAnimations;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.apps.santatracker.map.SantaMarker;
-
 import android.os.Handler;
+
+import com.google.android.apps.santatracker.map.SantaMarker;
+import com.google.android.gms.maps.GoogleMap;
 
 /**
  * An animation executed during Santa Cam mode.
  *
- * @author jfschmakeit
  */
-public abstract class SantaCamAnimation {
+abstract class SantaCamAnimation {
 
-    //private static final String TAG = "SantaCamAnimation";
-    protected GoogleMap mMap;
-    protected SantaMarker mSanta;
+    GoogleMap mMap;
+    SantaMarker mSanta;
+    boolean mIsCancelled;
+
     private Handler mHandler;
-    protected boolean mIsCancelled;
 
-    public SantaCamAnimation(Handler mHandler, GoogleMap mMap,
-            SantaMarker mSanta) {
-        super();
-        this.mMap = mMap;
-        this.mSanta = mSanta;
-        this.mHandler = mHandler;
-        this.mIsCancelled = false;
+    SantaCamAnimation(Handler handler, GoogleMap map, SantaMarker santa) {
+        mMap = map;
+        mSanta = santa;
+        mHandler = handler;
+        mIsCancelled = false;
     }
 
     public void reset() {
-        this.mIsCancelled = false;
+        mIsCancelled = false;
     }
 
     public void cancel() {
         // stop execution
-        this.mIsCancelled = true;
+        mIsCancelled = true;
     }
 
-    protected void executeRunnable(Runnable r) {
+    void executeRunnable(Runnable r) {
         if (!mIsCancelled) {
             mHandler.post(r);
         }

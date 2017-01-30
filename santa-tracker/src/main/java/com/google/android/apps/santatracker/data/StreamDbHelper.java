@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ public class StreamDbHelper extends SQLiteOpenHelper implements
         SantaStreamContract {
 
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "SantaStream.db";
+    private static final String DATABASE_NAME = "SantaStream.db";
 
     private static StreamDbHelper mInstance = null;
 
@@ -106,7 +106,7 @@ public class StreamDbHelper extends SQLiteOpenHelper implements
      * Return a cursor for all cards. Parameter defines if only wear cards or only non-wear cards
      * are returned.
      */
-    public Cursor getAllCursor(boolean notificationOnly) {
+    Cursor getAllCursor(boolean notificationOnly) {
         SQLiteDatabase db = getReadableDatabase();
         return db.rawQuery(
                 "SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_NAME_ISNOTIFICATION + " = "
@@ -127,21 +127,6 @@ public class StreamDbHelper extends SQLiteOpenHelper implements
     }
 
     /**
-     * Returns the card with the given timestamp.
-     */
-    public StreamEntry getTimestamp(long timestamp) {
-        SQLiteDatabase db = getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE "
-                + COLUMN_NAME_TIMESTAMP + " = " + timestamp, null);
-        c.moveToFirst();
-        StreamEntry streamEntry = getCursorEntry(c);
-        c.close();
-
-        return streamEntry;
-    }
-
-
-    /**
      * Returns the card with the given _id.
      */
     public StreamEntry get(int id) {
@@ -158,7 +143,7 @@ public class StreamDbHelper extends SQLiteOpenHelper implements
     /**
      * Helper method that converts the cursor to a card object.
      */
-    public static StreamEntry getCursorEntry(Cursor mCursor) {
+    static StreamEntry getCursorEntry(Cursor mCursor) {
 
         StreamEntry c = new StreamEntry();
         c.timestamp = mCursor.getLong(mCursor

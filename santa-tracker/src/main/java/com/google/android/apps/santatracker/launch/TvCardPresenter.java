@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 
 package com.google.android.apps.santatracker.launch;
 
-import android.graphics.Typeface;
 import android.support.v17.leanback.widget.Presenter;
 import android.support.v17.leanback.widget.RowPresenter;
 import android.view.LayoutInflater;
@@ -27,6 +26,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.apps.santatracker.R;
+import com.google.android.apps.santatracker.util.FontHelper;
 
 public class TvCardPresenter extends Presenter {
 
@@ -47,7 +47,7 @@ public class TvCardPresenter extends Presenter {
             lockedView = itemView.findViewById(R.id.card_disabled);
         }
 
-        public void setLauncher(AbstractLaunch launcher, Typeface tf) {
+        public void setLauncher(AbstractLaunch launcher) {
             this.launcher = launcher;
 
             // Loading all of these beautiful images at full res is laggy without using
@@ -61,7 +61,8 @@ public class TvCardPresenter extends Presenter {
 
             nameView.setText(launcher.getContentDescription());
             verbView.setText(launcher.getVerb());
-            verbView.setTypeface(tf, Typeface.ITALIC);
+            FontHelper.makeLobster(verbView);
+
             view.setContentDescription(launcher.getContentDescription());
 
             if (launcher.getState() == AbstractLaunch.STATE_DISABLED
@@ -78,12 +79,8 @@ public class TvCardPresenter extends Presenter {
         }
     }
 
-    private final Typeface mFont;
 
-    public TvCardPresenter(SantaContext context) {
-        mFont = Typeface.createFromAsset(context.getActivityContext().getAssets(),
-                "Lobster-Regular.otf");
-    }
+    public TvCardPresenter(SantaContext context) {}
 
     @Override
     public Presenter.ViewHolder onCreateViewHolder(ViewGroup parent) {
@@ -102,7 +99,7 @@ public class TvCardPresenter extends Presenter {
 
         final AbstractLaunch launch = (AbstractLaunch) item;
         final TvLaunchViewHolder holder = (TvLaunchViewHolder) viewHolder;
-        holder.setLauncher(launch, mFont);
+        holder.setLauncher(launch);
         holder.launcher.applyState();
 
         if (holder.launcher.getState() == AbstractLaunch.STATE_DISABLED) {

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <color name="colorPrimary">#00C3EA</color>
+    <color name="colorPrimaryDark">#0098B7</color>
+    <color name="colorAccent">#fffb0007</color>
+
+    <color name="textWhite">#FFFFFF</color>
+
+    <color name="bg_blue">#00C3EA</color>
+    <color name="bg_blue_divider">#66007e97</color>
+
+    <color name="bg_black_translucent">#64000000</color>
+
+    <!-- Text -->
+    <color name="text_faded">#84E2F4</color>
+
+    <!-- Map Horizons -->
+    <color name="action_horizon_stroke">#643e3e3e</color>
+    <color name="action_horizon_fill">#64969696</color>
+
+    <!-- FABs -->
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_red_500">#F44336</color>
+</resources>

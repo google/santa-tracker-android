@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,22 @@ package com.google.android.apps.santatracker.games.simpleengine;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.PointF;
+import android.hardware.SensorEvent;
+import android.os.Vibrator;
 import android.util.SparseArray;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
+import android.view.Surface;
+
+import com.google.android.apps.santatracker.games.jetpack.JetpackConfig;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 public class SceneManager {
-
+    private static final String TAG = "SceneManager";
     private static SceneManager instance = new SceneManager();
     private Renderer mRenderer = new Renderer();
     private SoundManager mSoundManager = null;
@@ -35,6 +41,7 @@ public class SceneManager {
     private Scene mNewScene = null;
     private long mLastFrameTime = -1;
     private boolean mHasGL = false;
+    private Vibrator mVibrator;
     private Context mAppContext = null;
 
     // reference to Activity, if it's in the resumed state -- otherwise null
@@ -46,11 +53,20 @@ public class SceneManager {
     private ArrayList<OurMotionEvent> mMotionEventQueue = new ArrayList<OurMotionEvent>(32);
     private ArrayList<OurMotionEvent> mMotionEventRecycle = new ArrayList<OurMotionEvent>(32);
 
+    private ArrayList<OurSensorEvent> mSensorEventQueue = new ArrayList<>(32);
+    private ArrayList<OurSensorEvent> mSensorEventRecycle = new ArrayList<>(32);
+
+    private ArrayList<OurMotionEvent> mTmpMotionEvent = new ArrayList<OurMotionEvent>(32);
+    private ArrayList<OurSensorEvent> mTmpSensorEvent = new ArrayList<>(32);
     // this flag is raised by the UI thread when it adds something to mMotionEventQueue
     // and lowered by the game thread when it processes the motion event queue. This flag
     // should only be modified when mMotionEventQueue is locked; it can be read without
     // locking.
     private volatile boolean mCheckMotionEvents = false;
+
+    private boolean mLargePresentMode = false;
+
+    private volatile boolean mCheckSensorEvents = false;
 
     // last x, y of pointer, keyed by pointer ID
     private SparseArray<PointF> mLastTouchCoords = new SparseArray<PointF>();
@@ -98,7 +114,7 @@ public class SceneManager {
     public void onPause() {
         mActivityResumed = false;
         if (mSoundManager != null) {
-            mSoundManager.pause();
+            mSoundManager.stopSound();
         }
         mActivity.clear();
     }
@@ -107,7 +123,35 @@ public class SceneManager {
         mActivityResumed = true;
         mActivity = new WeakReference<Activity>(activity);
         if (mSoundManager != null && mActivityHasFocus) {
-            mSoundManager.resume();
+            mSoundManager.resumeSound();
+        }
+    }
+
+    public void setLargePresentMode(boolean largePresentMode) {
+        mLargePresentMode = largePresentMode;
+    }
+
+    public boolean getLargePresentMode() {
+        return mLargePresentMode;
+    }
+
+    public void loadMute() {
+        if(getSoundManager() != null && getActivity() != null) {
+            SharedPreferences sharedPreferences = getActivity().getSharedPreferences(
+                    JetpackConfig.Keys.JETPACK_PREFERENCES, Activity.MODE_PRIVATE);
+            mSoundManager.setMute(sharedPreferences.getBoolean(
+                            JetpackConfig.Keys.JETPACK_MUTE_KEY, false));
+        }
+    }
+
+    public void saveMute() {
+        if(mSoundManager != null) {
+            SharedPreferences sharedPreferences = getActivity().getSharedPreferences(
+                    JetpackConfig.Keys.JETPACK_PREFERENCES, Activity.MODE_PRIVATE);
+            sharedPreferences.edit().putBoolean(
+                    JetpackConfig.Keys.JETPACK_MUTE_KEY,
+                    mSoundManager.getMute())
+                    .apply();
         }
     }
 
@@ -118,10 +162,17 @@ public class SceneManager {
     public void onFocusChanged(boolean focus) {
         mActivityHasFocus = focus;
         if (!focus) {
-            mSoundManager.pause();
+            mSoundManager.stopSound();
         } else if (mActivityResumed && mSoundManager != null) {
-            mSoundManager.resume();
+            mSoundManager.resumeSound();
         }
+    }
+
+    public Vibrator getVibrator() {
+        if(mVibrator == null) {
+            mVibrator = ((Vibrator)mAppContext.getSystemService(Context.VIBRATOR_SERVICE));
+        }
+        return mVibrator;
     }
 
     public boolean shouldBePlaying() {
@@ -158,6 +209,9 @@ public class SceneManager {
         if (mCheckMotionEvents) {
             processMotionEvents();
         }
+        if (mCheckSensorEvents) {
+            processSensorEvents();
+        }
     }
 
     public void enableDebugLog(boolean enable) {
@@ -184,6 +238,21 @@ public class SceneManager {
             processKeyEvent(keyCode, event);
             return true;
         }
+    }
+
+    public void onSensorChanged(SensorEvent event) {
+        float x=0, y=0;
+        int rotation = Surface.ROTATION_90;
+        if (getActivity() != null) {
+            // Store the current screen rotation (used to offset the readings of the sensor).
+            rotation = getActivity().getWindowManager().getDefaultDisplay().getRotation();
+        }
+
+        // Handle screen rotations by interpreting the sensor readings here
+        // Game is locked in 90 degree rotation so that config is assumed.
+        x = event.values[1];
+        y = -event.values[0];
+        queueSensorEvent(x, y, event.accuracy);
     }
 
     public boolean onTouchEvent(MotionEvent event) {
@@ -289,6 +358,17 @@ public class SceneManager {
         mCheckMotionEvents = true;
     }
 
+    private void queueSensorEvent(float x, float y, int accuracy) {
+        OurSensorEvent e = mSensorEventRecycle.size() > 0 ?
+                mSensorEventRecycle.remove(mSensorEventRecycle.size() - 1) :
+                new OurSensorEvent();
+        e.x = x;
+        e.y = y;
+        e.accuracy = accuracy;
+        mSensorEventQueue.add(e);
+        mCheckSensorEvents = true;
+    }
+
     public Renderer getRenderer() {
         return mRenderer;
     }
@@ -297,7 +377,41 @@ public class SceneManager {
         return mSoundManager;
     }
 
-    ArrayList<OurMotionEvent> mTmpMotionEvent = new ArrayList<OurMotionEvent>(32);
+    private void processSensorEvents() {
+        int i;
+        synchronized(mSensorEventQueue) {
+            for (i = 0; i < mSensorEventQueue.size(); i++) {
+                OurSensorEvent e = mSensorEventQueue.get(i);
+                if(e != null) {
+                    mTmpSensorEvent.add(mSensorEventQueue.get(i));
+                }
+            }
+            mSensorEventQueue.clear();
+            mCheckSensorEvents = false;
+        }
+        // process the sensor events
+        for (i = 0; i < mTmpSensorEvent.size(); i++) {
+            processSensorEvent(mTmpSensorEvent.get(i));
+        }
+
+        // recycle the objects
+        synchronized (mSensorEventQueue) {
+            for (i = 0; i < mTmpMotionEvent.size(); i++) {
+                mSensorEventRecycle.add(mTmpSensorEvent.get(i));
+            }
+            mTmpSensorEvent.clear();
+        }
+    }
+
+    private void processSensorEvent(OurSensorEvent e) {
+        if (mCurScene == null) {
+            return;
+        }
+        if(e != null) {
+            mCurScene.onSensorChanged(e.x, e.y, e.accuracy);
+        }
+    }
+
 
     private void processMotionEvents() {
         int i;
@@ -372,5 +486,11 @@ public class SceneManager {
         int pointerId;
         float screenX, screenY;
         float deltaX, deltaY;
+    }
+
+    private class OurSensorEvent {
+        float x;
+        float y;
+        int accuracy;
     }
 }

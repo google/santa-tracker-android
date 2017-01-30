@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,10 +21,17 @@ import com.google.android.apps.santatracker.games.gamebase.GameConfig;
 
 public class JetpackConfig {
 
+    // game constants
+    public static class Keys {
+        public static final String JETPACK_PREFERENCES = "JETPACK_PREFERENCES";
+        public static final String JETPACK_MUTE_KEY = "JETPACK_MUTE_KEY";
+    }
+
     // player settings
     public static class Player {
 
         public static final float WIDTH = 0.15f;
+        public static final float INJURED_WIDTH = 0.26f;
         public static final float COLLIDER_WIDTH = 0.15f;
         public static final float COLLIDER_HEIGHT = 0.20f;
         public static final float MAX_SPEED = 20.0f;
@@ -32,7 +39,7 @@ public class JetpackConfig {
         // how large is the "no fly zone" near the edges of the screen, where
         // the player can't go
         public static final float HORIZ_MOVEMENT_MARGIN = COLLIDER_WIDTH / 2;
-        public static final float VERT_MOVEMENT_MARGIN = COLLIDER_HEIGHT / 2 + 0.05f;
+        public static final float VERT_MOVEMENT_MARGIN = COLLIDER_HEIGHT / 2 + 0.08f;
 
         public static class SpriteAngle {
 
@@ -56,8 +63,28 @@ public class JetpackConfig {
     // input settings
     public static class Input {
 
+        public static final float SENSOR_SENSITIVITY = 0.002f;
         public static final float TOUCH_SENSIVITY = 1.2f;
         public static final float KEY_SENSIVITY = 0.15f;
+        public static final float X_ZERO_BUFFER_ZONE = 0.1f;
+        public static class Sensor {
+            public static float transformX(float x) {
+                x = Math.max(Math.min(6, x), -6);
+                if(Math.abs(x) < X_ZERO_BUFFER_ZONE) {
+                    x = 0;
+                } else if(x > 0) {
+                    x -= X_ZERO_BUFFER_ZONE;
+                } else if(x < 0) {
+                    x += X_ZERO_BUFFER_ZONE;
+                }
+                return x * JetpackConfig.Input.SENSOR_SENSITIVITY;
+            }
+
+            public static float transformY(float y) {
+                y = Math.max(Math.min(1.5f, y), -10.5f) + 4.5f ;
+                return y * JetpackConfig.Input.SENSOR_SENSITIVITY;
+            }
+        }
     }
 
     // item settings
@@ -76,15 +103,15 @@ public class JetpackConfig {
         public static final float SMALL_COLLIDER_HEIGHT = SMALL_COLLIDER_WIDTH * 2;
 
         // item spawn settings
-        public static final float SPAWN_INTERVAL = 1.2f;
+        public static final float SPAWN_INTERVAL = 0.4f;
         public static final float SPAWN_Y = 0.8f;
-        public static final float FALL_SPEED_MIN = 0.1f;
-        public static final float FALL_SPEED_MAX = 0.5f;
-        public static final float FALL_SPEED_LEVEL_MULT = 1.2f;
+        public static final float FALL_SPEED_MIN = 0.2f;
+        public static final float FALL_SPEED_MAX = 0.35f;
+        public static final float FALL_SPEED_LEVEL_MULT = 1.05f;
         public static final float DELETE_Y = -0.8f;
 
         // what's the initial value for the small items?
-        public static final int BASE_VALUE = 50;
+        public static final int BASE_VALUE = 1;
 
         // index of the "base value" variable of an item
         public static final int IVAR_BASE_VALUE = 0;
@@ -134,6 +161,15 @@ public class JetpackConfig {
 
         // the minimum # of seconds recovered by catching a present
         public static final float RECOVERED_MIN = 1.0f;
+
+        // the # of seconds that hitting coal reduces the time by
+        public static final float COAL_TIME_PENALTY = 5.0f;
+
+        // the # of seconds that a player looks injured after getting hit by a bad item
+        public static final float HIT_TIME = 0.5f;
+
+        // the # of millis that device vibrates - SMALL
+        public static final long VIBRATE_SMALL = 40;
     }
 
     public static class Progression {

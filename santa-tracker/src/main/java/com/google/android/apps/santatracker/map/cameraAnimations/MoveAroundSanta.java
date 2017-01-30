@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,23 +16,22 @@
 
 package com.google.android.apps.santatracker.map.cameraAnimations;
 
+import android.os.Handler;
+
+import com.google.android.apps.santatracker.data.SantaPreferences;
+import com.google.android.apps.santatracker.map.SantaMarker;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.CancelableCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.apps.santatracker.data.SantaPreferences;
-import com.google.android.apps.santatracker.map.SantaMarker;
-
-import android.os.Handler;
 
 /**
  * Camera animation that centers on Santa, then follows his position.
  *
- * @author jfschmakeit
  */
-public class MoveAroundSanta extends SantaCamAnimation {
+class MoveAroundSanta extends SantaCamAnimation {
 
     private static final int ANIMATION_DURATION = 10000;
     private static final int ANIMATION_CATCHUP_DURATION = 5000;
@@ -64,23 +63,23 @@ public class MoveAroundSanta extends SantaCamAnimation {
     private CameraUpdate mMoveCameraUpdate;
     private int mAnimationDuration = ANIMATION_DURATION;
 
-    public MoveAroundSanta(Handler handler, GoogleMap mMap, SantaMarker mSanta) {
-        super(handler, mMap, mSanta);
+    MoveAroundSanta(Handler handler, GoogleMap map, SantaMarker santa) {
+        super(handler, map, santa);
 
         reset();
     }
 
+    @Override
     public void reset() {
         super.reset();
         mState = 0;
-        mIsCancelled = false;
     }
 
     private long mAnimationStart;
     private float mAnimationBearingChange;
     private float mInitialBearing;
 
-    public void onSantaMoving(LatLng position) {
+    void onSantaMoving(LatLng position) {
         // only execute animation if not cancelled
         // (required so that scroll won't be animated)
         if (!mIsCancelled) {
@@ -125,10 +124,6 @@ public class MoveAroundSanta extends SantaCamAnimation {
                         / (float) ANIMATION_DURATION, 1f);
 
         float b = mInitialBearing + (mAnimationBearingChange * p);
-        // Log.d(TAG, "progress=" + p +
-        // ", endB="+(mInitialBearing+mAnimationBearingChange)+", initialBearing:"
-        // + mInitialBearing + ", AnimbearingChange:"
-        // + mAnimationBearingChange);
         if (b < 0f) {
             b += 360f;
         }
@@ -172,9 +167,10 @@ public class MoveAroundSanta extends SantaCamAnimation {
         executeRunnable(mThreadMove);
 
     }
+
     private boolean skipScroll = false;
 
-    Runnable mThreadMove = new Runnable() {
+    private Runnable mThreadMove = new Runnable() {
 
         public void run() {
             if (mMap != null && mMoveCameraUpdate != null && !mIsCancelled && !skipScroll) {
@@ -222,16 +218,16 @@ public class MoveAroundSanta extends SantaCamAnimation {
 
     }
 
-    public void triggerPaddingAnimation(){
+    void triggerPaddingAnimation() {
         // Cancel the scroll animation
-        if(ORDER[mState] == STATE_SCROLL){
+        if (ORDER[mState] == STATE_SCROLL) {
             nextState();
             skipScroll = true;
         }
 
     }
 
-    Runnable mThreadAnimate = new Runnable() {
+    private Runnable mThreadAnimate = new Runnable() {
 
         public void run() {
             if (mAnimateCameraUpdate != null) {
@@ -243,7 +239,7 @@ public class MoveAroundSanta extends SantaCamAnimation {
         }
     };
 
-    CancelableCallback mCancelListener = new GoogleMap.CancelableCallback() {
+    private CancelableCallback mCancelListener = new GoogleMap.CancelableCallback() {
 
         public void onFinish() {
             nextState();

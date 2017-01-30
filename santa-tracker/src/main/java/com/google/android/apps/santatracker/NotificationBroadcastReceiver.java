@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,77 +16,31 @@
 
 package com.google.android.apps.santatracker;
 
-import com.google.android.apps.santatracker.common.NotificationConstants;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
+import com.google.android.apps.santatracker.common.NotificationConstants;
+
 public class NotificationBroadcastReceiver extends BroadcastReceiver {
 
-    private static final String TAG = "NotificationBroadcastReceiver";
+    /**
+     * Enable notifications when Santa has taken off
+     */
+    public static final boolean TAKEOFF_NOTIFICATIONS_ENABLED = true;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         int type = intent.getIntExtra(NotificationConstants.KEY_NOTIFICATION_TYPE, -1);
 
         switch (type) {
-            case NotificationConstants.NOTIFICATION_NEARBY:
-                SantaNotificationBuilder.CreateSantaNotification(context,
-                        R.string.notification_nearby);
-                //requestWearNotification(context, R.string.notification_nearby);
-                break;
             case NotificationConstants.NOTIFICATION_TAKEOFF:
-                SantaNotificationBuilder
-                        .CreateSantaNotification(context, R.string.notification_takeoff);
-                //requestWearNotification(context, R.string.notification_takeoff);
-                break;
-            case NotificationConstants.NOTIFICATION_LOCATION:
-                String fact = intent.getStringExtra(NotificationConstants.KEY_LOCATION_FACT);
-                String location = intent.getStringExtra(NotificationConstants.KEY_LOCATION);
-                String photoUrl = intent.getStringExtra(NotificationConstants.KEY_LOCATION_PHOTO);
-                String mapUrl = intent.getStringExtra(NotificationConstants.KEY_LOCATION_MAP);
-                SantaNotificationBuilder
-                        .CreateTriviaNotification(context, location, photoUrl, mapUrl, fact);
-                break;
-            case NotificationConstants.NOTIFICATION_FACT:
-                processFactNotification(context, intent);
+                if (TAKEOFF_NOTIFICATIONS_ENABLED) {
+                    SantaNotificationBuilder
+                            .createSantaNotification(context, R.string.notification_takeoff);
+                }
                 break;
         }
-    }
-
-    private void processFactNotification(Context context, Intent intent) {
-        final long finalArrival = intent.getLongExtra(NotificationConstants.KEY_FINAL_ARRIVAL, 0);
-        final long timestamp = intent.getLongExtra(NotificationConstants.KEY_TIMESTAMP, 0);
-
-        // Sanity check to make sure Santa is still travelling
-        if (timestamp > finalArrival) {
-            return;
-        }
-
-        final String didyouknow = intent.getStringExtra(NotificationConstants.KEY_FACT);
-        final String imageUrl = intent.getStringExtra(NotificationConstants.KEY_IMAGEURL);
-        final String status = intent.getStringExtra(NotificationConstants.KEY_STATUS);
-
-        String title;
-        String text;
-        if (didyouknow != null) {
-            title = context.getString(R.string.did_you_know);
-            text = didyouknow;
-        } else {
-            title = context.getString(R.string.update_from_santa);
-            text = status;
-        }
-        // Schedule the next notification
-        SantaNotificationBuilder.CreateInfoNotification(context, title, text, imageUrl);
-    }
-
-    private void requestWearNotification(Context context, int content) {
-        Intent wearIntent = new Intent(context, PhoneNotificationService.class);
-        wearIntent.setAction(NotificationConstants.ACTION_SEND);
-        wearIntent.putExtra(NotificationConstants.KEY_CONTENT,
-                context.getResources().getString(content));
-        context.startService(wearIntent);
     }
 
 }
