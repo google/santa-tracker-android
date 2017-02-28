@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,7 @@
 
 package com.google.android.apps.santatracker.launch;
 
-import android.graphics.Typeface;
-import android.os.Build;
+import android.support.annotation.ColorRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,50 +26,34 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.apps.santatracker.R;
+import com.google.android.apps.santatracker.util.FontHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>
+public abstract class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>
         implements LauncherDataChangedCallback {
 
-    public static final int SANTA = 0;
-    public static final int VIDEO01 = 1;
-    public static final int GUMBALL = 2;
-    public static final int MEMORY = 3;
-    public static final int JETPACK = 4;
-    public static final int VIDEO15 = 5;
-    public static final int ROCKET = 6;
-    public static final int DANCER = 7;
-    public static final int SNOWDOWN = 8;
-    public static final int VIDEO23 = 9;
-    public static final int NUM_PINS = 10;
+    private static final int[] LOCKED_COLORS = new int[]{
+            R.color.SantaTranslucentPurple,
+            R.color.SantaTranslucentBlue,
+            R.color.SantaTranslucentYellow,
+            R.color.SantaTranslucentGreen,
+            R.color.SantaTranslucentRed,
+    };
 
-    private final Typeface mFont;
+    protected SantaContext mContext;
+    protected AbstractLaunch[] mAllLaunchers;
+    protected AbstractLaunch[] mLaunchers;
 
-    private AbstractLaunch[] mAllLaunchers = new AbstractLaunch[NUM_PINS];
-    private AbstractLaunch[] mLaunchers = new AbstractLaunch[NUM_PINS];
-
-    public CardAdapter(SantaContext santaContext) {
-        mAllLaunchers[SANTA] = new LaunchSanta(santaContext, this);
-        mAllLaunchers[VIDEO01] = new LaunchVideo(santaContext, this,
-                R.drawable.android_game_cards_santas_back, 1);
-        mAllLaunchers[GUMBALL] = new LaunchGumball(santaContext, this);
-        mAllLaunchers[MEMORY] = new LaunchMemory(santaContext, this);
-        mAllLaunchers[JETPACK] = new LaunchJetpack(santaContext, this);
-        mAllLaunchers[VIDEO15] = new LaunchVideo(santaContext, this,
-                R.drawable.android_game_cards_office_prank, 1);
-        mAllLaunchers[ROCKET] = new LaunchRocket(santaContext, this);
-        mAllLaunchers[DANCER] = new LaunchDancer(santaContext, this);
-        mAllLaunchers[SNOWDOWN] = new LaunchSnowdown(santaContext, this);
-        mAllLaunchers[VIDEO23] = new LaunchVideo(santaContext, this,
-                R.drawable.android_game_cards_elf_car, 23);
-
+    public CardAdapter(SantaContext santaContext, AbstractLaunch[] launchers) {
+        mContext = santaContext;
+        mAllLaunchers = launchers;
+        initializeLaunchers(santaContext);
         updateMarkerVisibility();
-
-        mFont = Typeface.createFromAsset(santaContext.getActivityContext().getAssets(),
-                "Lobster-Regular.otf");
     }
+
+    public abstract void initializeLaunchers(SantaContext santaContext);
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -81,7 +64,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.setLauncher(mLaunchers[position], mFont);
+        holder.setLauncher(mLaunchers[position]);
+
+        holder.lockedView.setBackgroundResource(getLockedViewResource(position));
         holder.launcher.setLockedView(holder.lockedView);
         holder.launcher.applyState();
     }
@@ -95,6 +80,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>
     public void refreshData() {
         updateMarkerVisibility();
         notifyDataSetChanged();
+    }
+
+    @ColorRes
+    public int getLockedViewResource(int position) {
+        return LOCKED_COLORS[position % LOCKED_COLORS.length];
     }
 
     public void updateMarkerVisibility() {
@@ -132,7 +122,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>
             lockedView = itemView.findViewById(R.id.card_disabled);
         }
 
-        public void setLauncher(AbstractLaunch launcher, Typeface tf) {
+        public void setLauncher(AbstractLaunch launcher) {
             this.launcher = launcher;
 
             // Loading all of these beautiful images at full res is laggy without using
@@ -141,16 +131,13 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>
             Glide.with(itemView.getContext())
                     .fromResource()
                     .centerCrop()
+                    .placeholder(R.color.disabledMarker)
                     .load(launcher.getCardResource())
                     .into(backgroundImageView);
 
             nameView.setText(launcher.getContentDescription());
             verbView.setText(launcher.getVerb());
-            if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-                verbView.setTypeface(tf);
-            } else {
-                verbView.setTypeface(tf, Typeface.ITALIC);
-            }
+            FontHelper.makeLobster(verbView);
             itemView.setContentDescription(launcher.getContentDescription());
 
             launcher.attachToView(this.itemView);

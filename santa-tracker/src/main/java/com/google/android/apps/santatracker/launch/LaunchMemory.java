@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ import android.view.View;
 
 import com.google.android.apps.santatracker.R;
 import com.google.android.apps.santatracker.games.MemoryActivity;
+import com.google.android.apps.santatracker.games.SplashActivity;
 
 /**
  * Launch the Memory Match game.
@@ -40,11 +41,15 @@ public class LaunchMemory extends AbstractLaunch {
         switch (mState) {
             case STATE_READY:
             case STATE_FINISHED:
-                mContext.launchActivityDelayed(
-                        new Intent(mContext.getActivityContext(), MemoryActivity.class), v);
+                Intent intent = SplashActivity.getIntent(mContext.getActivityContext(),
+                        R.drawable.android_game_cards_memory_match,
+                        R.string.memory,
+                        true /* isLandscape */,
+                        MemoryActivity.class);
+                mContext.launchActivity(intent);
                 break;
             case STATE_DISABLED:
-                notify(mContext.getApplicationContext(), R.string.memory_disabled);
+                notify(mContext.getApplicationContext(), getDisabledString(R.string.memory));
                 break;
             case STATE_LOCKED:
             default:
@@ -61,7 +66,7 @@ public class LaunchMemory extends AbstractLaunch {
                 notify(mContext.getApplicationContext(), R.string.memory);
                 break;
             case STATE_DISABLED:
-                notify(mContext.getApplicationContext(), R.string.memory_disabled);
+                notify(mContext.getApplicationContext(), getDisabledString(R.string.memory));
                 break;
             case STATE_LOCKED:
             default:

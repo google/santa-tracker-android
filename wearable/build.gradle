@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.tools
 
     defaultConfig {
         applicationId "com.google.android.apps.santatracker"
         minSdkVersion 20
-        targetSdkVersion 23
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 33
         versionName "2.1.3"
     }

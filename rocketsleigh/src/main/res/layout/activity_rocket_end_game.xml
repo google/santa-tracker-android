@@ -1,0 +1,177 @@
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EndGameActivity">
+    <ImageView
+        android:id="@+id/bg_finalscore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_finalscore" />
+    <ImageView
+        android:id="@+id/bg_img_finalscore_snowground_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/img_finalscore_snowground_blue" />
+    <View
+        android:layout_width="340dp"
+        android:layout_height="280dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="#914295" />
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/gplus_layout_height"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" >
+        <TextView
+            android:id="@+id/play_again"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:padding="8dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/final_green_button"
+            android:drawableLeft="@drawable/icn_play_again"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:text="@string/play_again"
+            android:onClick="onPlayAgain" />
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/play_again"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            android:textSize="16sp" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="138dp"
+            android:layout_height="1dp"
+            android:layout_above="@id/score_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/white" />
+        <TextView
+            android:id="@+id/score_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/divider"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="3dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:text="@string/score" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/score_label"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_finalscore_elf" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/img_finalscore_snowground_white" />
+    <RelativeLayout
+            android:id="@+id/play_again_gplus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gplus_layout_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/sign_in_bar"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+        <RelativeLayout
+                android:id="@+id/gplus_signin_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp" >
+
+            <ImageView
+                    android:id="@+id/gplus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/why_sign_in"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/signin_button"
+                    android:onClick="onSignIn"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/gplus_button"
+                    android:layout_alignRight="@+id/gplus_button"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/gplus_sign_in_text_margin_left"
+                    android:text="@string/common_signin_button_text"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/gplus_sign_in_text_size" />
+        </RelativeLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/gplus_signin_layout"
+                android:text="@string/why_sign_in"
+                android:textColor="@color/sign_in_text_color"
+                android:textSize="@dimen/play_again_score_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/games_cancelbar"
+        android:onClick="onExit"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/games_share"
+        android:clickable="true" />
+
+    <View
+        android:id="@+id/popup_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="50dp" />
+</RelativeLayout>

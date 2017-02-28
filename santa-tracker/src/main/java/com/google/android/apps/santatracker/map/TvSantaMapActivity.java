@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,6 +33,7 @@ import android.support.v17.leanback.widget.VerticalGridView;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.accessibility.AccessibilityManager;
@@ -71,10 +72,10 @@ import java.lang.ref.WeakReference;
 public class TvSantaMapActivity extends FragmentActivity implements
         SantaMapFragment.SantaMapInterface {
 
-    private static String NO_NEXT_DESTINATION;
+    private static String ARRIVING_IN, DEPARTING_IN, NO_NEXT_DESTINATION;
 
     // countdown update frequency (in ms)
-    private static final int DESTINATION_COUNTDOWN_UPDATEINTERVAL = 1000;
+    private static final int DESTINATION_COUNTDOWN_UPDATE_INTERVAL = 1000;
 
     // Percentage of presents to hand out when travelling between destinations
     // (the rest is handed out when the destination is reached)
@@ -99,7 +100,7 @@ public class TvSantaMapActivity extends FragmentActivity implements
     private boolean mIgnoreNextUpdate = false;
 
     // Resource Strings
-    private static String LOST_CONTACT_STRING;
+    private static String LOST_CONTACT_STRING, CURRENT_LOCATION, NEXT_LOCATION;
 
     private static String ANNOUNCE_TRAVEL_TO;
     private static String ANNOUNCE_ARRIVED_AT;
@@ -152,7 +153,11 @@ public class TvSantaMapActivity extends FragmentActivity implements
 
         LOST_CONTACT_STRING = resources.getString(R.string.lost_contact_with_santa);
         ANNOUNCE_ARRIVED_AT = resources.getString(R.string.santa_is_now_arriving_in_x);
+        ARRIVING_IN = resources.getString(R.string.arriving_in);
+        DEPARTING_IN = resources.getString(R.string.departing_in);
         NO_NEXT_DESTINATION = resources.getString(R.string.no_next_destination);
+        CURRENT_LOCATION = resources.getString(R.string.current_location);
+        NEXT_LOCATION = resources.getString(R.string.next_destination);
 
         // Concatenate String for 'travel to' announcement
         StringBuilder sb = new StringBuilder();
@@ -172,8 +177,9 @@ public class TvSantaMapActivity extends FragmentActivity implements
         final int heightPadding
                 = getResources().getDimensionPixelOffset(R.dimen.overscan_padding_height);
         final int cardPadding = getResources().getDimensionPixelOffset(R.dimen.card_width);
-        mMapFragment.setCamPadding(widthPadding, heightPadding,
-                widthPadding + cardPadding, heightPadding);
+        // Right side padding is twice as much to put padding on both sides of card.
+        final int rightPadding = 2 * widthPadding + cardPadding;
+        mMapFragment.setCamPadding(widthPadding, heightPadding, rightPadding, heightPadding);
 
         mVerticalGridView = (VerticalGridView) findViewById(R.id.stream);
         mVerticalGridView.setWindowAlignment(VerticalGridView.WINDOW_ALIGN_NO_EDGE);
@@ -452,6 +458,7 @@ public class TvSantaMapActivity extends FragmentActivity implements
         final String nextString = DashboardFormats.formatDestination(nextDestination);
         setNextLocation(nextString);
         setNextDestination(nextDestination);
+        setCurrentLocation(null);
 
         // get the previous position
         Destination previous = mDestinations.getPrevious();
@@ -487,7 +494,7 @@ public class TvSantaMapActivity extends FragmentActivity implements
         }
 
         mTimer = new CountDownTimer(nextDestination.arrival - SantaPreferences.getCurrentTime(),
-                DESTINATION_COUNTDOWN_UPDATEINTERVAL) {
+                DESTINATION_COUNTDOWN_UPDATE_INTERVAL) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -509,6 +516,20 @@ public class TvSantaMapActivity extends FragmentActivity implements
         return (DashboardViewHolder) mVerticalGridView.findViewHolderForItemId(mAdapter.getDashboardId());
     }
 
+    private void setCurrentLocation(String location) {
+        final DashboardViewHolder holder = getDashboardViewHolder();
+        if (holder == null) {
+            return;
+        }
+        if (TextUtils.isEmpty(location)) {
+            holder.countdownLabel.setText(ARRIVING_IN);
+        } else {
+            holder.countdownLabel.setText(DEPARTING_IN);
+            holder.locationLabel.setText(CURRENT_LOCATION);
+            holder.location.setText(location);
+        }
+    }
+
     private void setNextLocation(final String s) {
         final String nextLocation = s == null ? NO_NEXT_DESTINATION : s;
         mAdapter.setNextLocation(nextLocation);
@@ -519,6 +540,7 @@ public class TvSantaMapActivity extends FragmentActivity implements
         holder.location.post(new Runnable() {
             @Override
             public void run() {
+                holder.locationLabel.setText(NEXT_LOCATION);
                 holder.location.setText(nextLocation);
             }
         });
@@ -569,8 +591,8 @@ public class TvSantaMapActivity extends FragmentActivity implements
         mPresents.init(presentsStart, destination.presentsDelivered,
                 destination.arrival, destination.departure);
 
-        // update fragments with destinations, only update next destination if there is one
-        setNextLocation(DashboardFormats.formatDestination(nextDestination));
+        final String destinationString = DashboardFormats.formatDestination(destination);
+        setCurrentLocation(destinationString);
 
         mMapFragment.setSantaVisiting(destination, playSound);
 
@@ -587,7 +609,7 @@ public class TvSantaMapActivity extends FragmentActivity implements
         // Count down until departure
         mTimer = new CountDownTimer(destination.departure
                 - SantaPreferences.getCurrentTime(),
-                DESTINATION_COUNTDOWN_UPDATEINTERVAL) {
+                DESTINATION_COUNTDOWN_UPDATE_INTERVAL) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -687,11 +709,6 @@ public class TvSantaMapActivity extends FragmentActivity implements
     @Override
     public void mapClickAction() {
         // Nothing to do
-    }
-
-    @Override
-    public Destination getDestination(int id) {
-        return null;
     }
 
     @Override

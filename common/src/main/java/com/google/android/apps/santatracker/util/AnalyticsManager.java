@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Google Inc. All rights reserved.
+ * Copyright 2016 Google Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -139,7 +139,8 @@ public class AnalyticsManager {
     }
 
     public static synchronized void initializeAnalyticsTracker(Context context) {
-        sAppContext = context;
+        // To avoid Activity life cycle related memory leaks, assigning the application context
+        sAppContext = context.getApplicationContext();
         if (mTracker == null) {
             GoogleAnalytics analytics = GoogleAnalytics.getInstance(context);
             mTracker = analytics.newTracker(R.xml.config_analytics_tracker);

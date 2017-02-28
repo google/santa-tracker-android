@@ -1,6 +1,0 @@
-Url: https://github.com/amlcurran/ShowcaseView
-License: Apache 2
-License File: README
-
-Only local changes are applying this PR over the source to fix a
-known issue causing crashes when user rotates device on first load.

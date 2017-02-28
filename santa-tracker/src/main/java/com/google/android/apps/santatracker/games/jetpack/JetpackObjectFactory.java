@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@ import com.google.android.apps.santatracker.games.simpleengine.Renderer;
 import com.google.android.apps.santatracker.games.simpleengine.game.GameObject;
 import com.google.android.apps.santatracker.games.simpleengine.game.World;
 
+import java.util.GregorianCalendar;
 import java.util.Random;
 
 public class JetpackObjectFactory {
@@ -33,16 +34,19 @@ public class JetpackObjectFactory {
     // item subtypes
     public static final int ITEM_PRESENT = 0;
     public static final int ITEM_CANDY = 1;
-    public static final int ITEM_SMALL = 2;
+    public static final int ITEM_COAL = 2;
 
     // Textures
     int mTexPlayer;
     int[] mTexItemCandy;
-    int[] mTexItemSmall;
+    int[] mTexItemCoal;
     int[] mTexItemPresent;
     int mTexCloud;
     int[] mComboTex;
     int mTexFire;
+    int mTexPlayerHitOverlay;
+    int mTexPlayerHit;
+    int mTexBackground;
 
     JetpackObjectFactory(Renderer r, World w) {
         mRenderer = r;
@@ -51,7 +55,8 @@ public class JetpackObjectFactory {
 
     GameObject makePlayer() {
         GameObject p = mWorld
-                .newGameObjectWithImage(JetpackScene.TYPE_PLAYER, 0.0f, 0.0f, mTexPlayer,
+                .newGameObjectWithImage(JetpackScene.TYPE_PLAYER, 0.0f, mRenderer.getBottom() +
+                        JetpackConfig.Player.VERT_MOVEMENT_MARGIN, mTexPlayer,
                         JetpackConfig.Player.WIDTH, Float.NaN);
         p.setBoxCollider(JetpackConfig.Player.COLLIDER_WIDTH,
                 JetpackConfig.Player.COLLIDER_HEIGHT);
@@ -64,53 +69,138 @@ public class JetpackObjectFactory {
         return p;
     }
 
-    GameObject makeRandomItem(float fallSpeedMultiplier) {
+    void makePlayerHit(GameObject p) {
+        p.deleteSprites();
+
+        Renderer.Sprite playerHitSprite = p.getSprite(p.addSprite());
+        playerHitSprite.texIndex = mTexPlayerHit;
+        playerHitSprite.width = JetpackConfig.Player.INJURED_WIDTH;
+        playerHitSprite.height = Float.NaN;
+        playerHitSprite.tintFactor = 0.0f;
+
+        Renderer.Sprite fireSprite = p.getSprite(p.addSprite());
+        fireSprite.texIndex = mTexFire;
+        fireSprite.width = JetpackConfig.Player.Fire.WIDTH;
+        fireSprite.height = Float.NaN;
+        fireSprite.tintFactor = 0.0f;
+    }
+
+    void recoverPlayerHit(GameObject p) {
+        p.deleteSprites();
+
+        Renderer.Sprite playerSprite = p.getSprite(p.addSprite());
+        playerSprite.texIndex = mTexPlayer;
+        playerSprite.width = JetpackConfig.Player.WIDTH;
+        playerSprite.height = Float.NaN;
+        playerSprite.tintFactor = 0.0f;
+
+        Renderer.Sprite fireSprite = p.getSprite(p.addSprite());
+        fireSprite.texIndex = mTexFire;
+        fireSprite.width = JetpackConfig.Player.Fire.WIDTH;
+        fireSprite.height = Float.NaN;
+        fireSprite.tintFactor = 0.0f;
+    }
+
+    public int getItemTypeGivenProbs(float coal, float candy, float presents) {
+        float randFloat = mRandom.nextFloat();
+        if(randFloat < coal) {
+            return ITEM_COAL;
+        } else if(randFloat < coal + candy) {
+            return ITEM_CANDY;
+        } else {
+            return ITEM_PRESENT;
+        }
+    }
+
+    public int getItemType(boolean bigPresentMode, float currentScore) {
+        if (bigPresentMode) {
+            if (currentScore < 10) {
+                return getItemTypeGivenProbs(0, 0, 1.00f);
+            } else if (currentScore < 20) {
+                return getItemTypeGivenProbs(.1f, .4f, .5f);
+            } else if (currentScore < 30) {
+                return getItemTypeGivenProbs(.15f, .45f, .40f);
+            } else if (currentScore < 40) {
+                return getItemTypeGivenProbs(.2f, .45f, .35f);
+            } else if (currentScore < 50) {
+                return getItemTypeGivenProbs(.25f, .45f, .3f);
+            } else {
+                return getItemTypeGivenProbs(.3f, .4f, .30f);
+            }
+        } else {
+            if (currentScore < 10) {
+                return getItemTypeGivenProbs(0, 0.25f, 0.75f);
+            } else if (currentScore < 20) {
+                return getItemTypeGivenProbs(.1f, .55f, .35f);
+            } else if (currentScore < 30) {
+                return getItemTypeGivenProbs(.15f, .60f, .25f);
+            } else if (currentScore < 40) {
+                return getItemTypeGivenProbs(.2f, .60f, .20f);
+            } else if (currentScore < 50) {
+                return getItemTypeGivenProbs(.25f, .55f, .2f);
+            } else {
+                return getItemTypeGivenProbs(.3f, .50f, .2f);
+            }
+        }
+    }
+
+    public GameObject makeBackground() {
+        return mWorld.newGameObjectWithImage(GameConfig.TYPE_DECOR, 0.0f, 0.0f, mTexBackground,
+                mRenderer.getWidth() + 0.02f, mRenderer.getHeight() + 0.02f);
+    }
+
+    GameObject makeRandomItem(float fallSpeedMultiplier, boolean bigPresentMode, float currentScore) {
         float minX = mRenderer.getLeft() + 2 * JetpackConfig.Items.PRESENT_WIDTH;
         float maxX = mRenderer.getRight() - 2 * JetpackConfig.Items.PRESENT_WIDTH;
         float x = minX + mRandom.nextFloat() * (maxX - minX);
-
-        // 0 is candy, 1 is small item, 2 is present
-        int itemType = mRandom.nextInt(3);
+        // 0 is candy, 1 is coal, 2 is present
+        int itemType = getItemType(bigPresentMode, currentScore);
         int itemSubtype = mRandom.nextInt(4); // one of the 4 subtypes
 
         int tex;
         float width;
         float colliderWidth, colliderHeight;
-        boolean isLarge = false;
-
+        GameObject p = null;
         switch (itemType) {
             case ITEM_CANDY:
                 tex = mTexItemCandy[itemSubtype];
                 width = JetpackConfig.Items.CANDY_WIDTH;
                 colliderWidth = JetpackConfig.Items.CANDY_COLLIDER_WIDTH;
                 colliderHeight = JetpackConfig.Items.CANDY_COLLIDER_HEIGHT;
+                p =  mWorld.
+                        newGameObjectWithImage(JetpackScene.TYPE_GOOD_ITEM, x,
+                                JetpackConfig.Items.SPAWN_Y, tex, width, Float.NaN);
+                p.ivar[JetpackConfig.Items.IVAR_BASE_VALUE] = JetpackConfig.Items.BASE_VALUE;
                 break;
-            case ITEM_SMALL:
-                tex = mTexItemSmall[itemSubtype];
+            case ITEM_COAL:
+                tex = mTexItemCoal[0];
                 width = JetpackConfig.Items.SMALL_WIDTH;
                 colliderWidth = JetpackConfig.Items.SMALL_COLLIDER_WIDTH;
                 colliderHeight = JetpackConfig.Items.SMALL_COLLIDER_HEIGHT;
+                p =  mWorld.
+                        newGameObjectWithImage(JetpackScene.TYPE_BAD_ITEM, x,
+                                JetpackConfig.Items.SPAWN_Y, tex, width, Float.NaN);
+                p.ivar[JetpackConfig.Items.IVAR_BASE_VALUE] = -JetpackConfig.Items.BASE_VALUE;
                 break;
+            case ITEM_PRESENT:
             default:
                 tex = mTexItemPresent[itemSubtype];
                 width = JetpackConfig.Items.PRESENT_WIDTH;
                 colliderWidth = JetpackConfig.Items.PRESENT_COLLIDER_WIDTH;
                 colliderHeight = JetpackConfig.Items.PRESENT_COLLIDER_HEIGHT;
-                isLarge = true;
+                p = mWorld.
+                        newGameObjectWithImage(JetpackScene.TYPE_GOOD_ITEM, x,
+                            JetpackConfig.Items.SPAWN_Y, tex, width, Float.NaN);
+                p.ivar[JetpackConfig.Items.IVAR_BASE_VALUE] = JetpackConfig.Items.BASE_VALUE * 2;
                 break;
         }
-
-        GameObject p = mWorld
-                .newGameObjectWithImage(JetpackScene.TYPE_ITEM, x, JetpackConfig.Items.SPAWN_Y,
-                        tex, width, Float.NaN);
 
         p.velY = -(JetpackConfig.Items.FALL_SPEED_MIN + mRandom.nextFloat() *
                 (JetpackConfig.Items.FALL_SPEED_MAX - JetpackConfig.Items.FALL_SPEED_MIN));
         p.velY *= fallSpeedMultiplier;
         p.setBoxCollider(colliderWidth, colliderHeight);
-        p.ivar[JetpackConfig.Items.IVAR_BASE_VALUE] = isLarge ? JetpackConfig.Items.BASE_VALUE * 2 :
-                JetpackConfig.Items.BASE_VALUE;
         p.ivar[JetpackConfig.Items.IVAR_TYPE] = itemType;
+        p.bringToFront();
         return p;
     }
 
@@ -149,16 +239,21 @@ public class JetpackObjectFactory {
             mTexItemPresent[i++] = mRenderer.requestImageTex(resId, "present", Renderer.DIM_WIDTH,
                     JetpackConfig.Items.PRESENT_WIDTH);
         }
-        mTexItemSmall = new int[4];
+
         i = 0;
-        for (int resId : new int[]{R.drawable.jetpack_small1, R.drawable.jetpack_small2,
-                R.drawable.jetpack_small3, R.drawable.jetpack_small4}) {
-            mTexItemSmall[i++] = mRenderer.requestImageTex(resId, "small", Renderer.DIM_WIDTH,
+        int[] coalDrawables = new int[]{ R.drawable.jetpack_coal };
+        mTexItemCoal = new int[coalDrawables.length];
+
+        for (int resId : coalDrawables) {
+            mTexItemCoal[i++] = mRenderer.requestImageTex(resId, "small", Renderer.DIM_WIDTH,
                     JetpackConfig.Items.SMALL_WIDTH);
         }
 
         mTexCloud = mRenderer.requestImageTex(R.drawable.jetpack_cloud, "jetpack_cloud",
                 Renderer.DIM_WIDTH, JetpackConfig.Clouds.WIDTH);
+
+        mTexBackground = mRenderer.requestImageTex(getBackgroundFromCurrentTime(),
+                "jetpack_background", Renderer.DIM_WIDTH, mRenderer.getWidth());
 
         mComboTex = new int[3];
         mComboTex[0] = mRenderer.requestImageTex(R.drawable.jetpack_combo_2x, "jetpack_combo_2x",
@@ -169,5 +264,19 @@ public class JetpackObjectFactory {
                 Renderer.DIM_WIDTH, JetpackConfig.ComboPopup.SIZE);
         mTexFire = mRenderer.requestImageTex(R.drawable.jetpack_fire, "jetpack_fire",
                 Renderer.DIM_WIDTH, JetpackConfig.Player.Fire.WIDTH);
+        mTexPlayerHit = mRenderer.requestImageTex(R.drawable.jetpack_player_hit,
+                "jetpack_player_hit", Renderer.DIM_WIDTH, JetpackConfig.Player.WIDTH);
+        mTexPlayerHitOverlay = mRenderer.requestImageTex(R.drawable.jetpack_player_hit_overlay,
+                "jetpack_player_hit_overlay", Renderer.DIM_WIDTH, JetpackConfig.Player.WIDTH);
+    }
+
+    public int getBackgroundFromCurrentTime() {
+        GregorianCalendar calendar = new GregorianCalendar();
+        int hour = calendar.get(GregorianCalendar.HOUR_OF_DAY);
+        if(hour < 21 && hour > 5) {
+            return R.drawable.jetpack_background_day;
+        } else {
+            return R.drawable.jetpack_background_evening;
+        }
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.google.android.apps.santatracker.data.DestinationDbHelper;
+import com.google.android.apps.santatracker.data.GameDisabledState;
 import com.google.android.apps.santatracker.data.SantaPreferences;
 import com.google.android.apps.santatracker.data.StreamDbHelper;
 import com.google.android.apps.santatracker.data.Switches;
@@ -33,6 +34,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /**
  * Abstracts access to the Santa API.
@@ -60,6 +62,13 @@ public abstract class APIProcessor {
     protected final static String FIELD_DISABLE_ROCKETGAME = "DisableRocketGame";
     protected final static String FIELD_DISABLE_DANCERGAME = "DisableDancerGame";
     protected final static String FIELD_DISABLE_SNOWDOWNGAME = "DisableSnowdownGame";
+    protected final static String FIELD_DISABLE_SWIMMINGGAME = "DisableSwimmingGame";
+    protected final static String FIELD_DISABLE_BMXGAME = "DisableBmxGame";
+    protected final static String FIELD_DISABLE_RUNNINGGAME = "DisableRunningGame";
+    protected final static String FIELD_DISABLE_TENNISGAME = "DisableTennisGame";
+    protected final static String FIELD_DISABLE_WATERPOLOGAME = "DisableWaterpoloGame";
+    protected final static String FIELD_DISABLE_CITY_QUIZ = "DisableCityQuiz";
+    protected final static String FIELD_DISABLE_PRESENTQUEST = "DisablePresentQuest";
     protected final static String FIELD_VIDEO_1 = "Video1";
     protected final static String FIELD_VIDEO_15 = "Video15";
     protected final static String FIELD_VIDEO_23 = "Video23";
@@ -155,19 +164,6 @@ public abstract class APIProcessor {
         long offsetPref = mPreferences.getOffset();
         String fingerprintPref = mPreferences.getFingerprint();
         boolean switchOffPref = mPreferences.getSwitchOff();
-        // client specific
-        String video1Pref = mPreferences.getVideos()[0];
-        String video15Pref = mPreferences.getVideos()[1];
-        String video23Pref = mPreferences.getVideos()[2];
-        boolean disableCastPref = mPreferences.getCastDisabled();
-        boolean disablePhotoPref = mPreferences.getDestinationPhotoDisabled();
-
-        boolean disableGumballPref = mPreferences.getGumballDisabled();
-        boolean disableJetpackPref = mPreferences.getJetpackDisabled();
-        boolean disableMemoryPref = mPreferences.getMemoryDisabled();
-        boolean disableRocketPref = mPreferences.getRocketDisabled();
-        boolean disableDancerPref = mPreferences.getDancerDisabled();
-        boolean disableSnowdownPref = mPreferences.getSnowdownDisabled();
 
         // load data as JSON
         JSONObject json = loadApi(url);
@@ -272,43 +268,8 @@ public abstract class APIProcessor {
 
             }
 
-            // clientSpecific
-            Switches s = getSwitches();
-
-            if (disableCastPref != s.disableCastButton) {
-                // set cast preference
-                mPreferences.setCastDisabled(s.disableCastButton);
-                mCallback.onNewCastState(s.disableCastButton);
-            }
-
-            if (disablePhotoPref != s.disableDestinationPhoto) {
-                // set destination photo preference
-                mPreferences.setDestinationPhotoDisabled(s.disableDestinationPhoto);
-                mCallback.onNewDestinationPhotoState(s.disableDestinationPhoto);
-            }
-
-            // Games
-            if ((s.disableGumballGame != disableGumballPref)
-                    || (s.disableJetpackGame != disableJetpackPref)
-                    || (s.disableMemoryGame != disableMemoryPref)
-                    || (s.disableRocketGame != disableRocketPref)
-                    || (s.disableDancerGame != disableDancerPref)
-                    || (s.disableSnowdownGame != disableSnowdownPref)) {
-                // set game preferences
-                mPreferences.setGamesDisabled(s.disableGumballGame, s.disableJetpackGame,
-                        s.disableMemoryGame, s.disableRocketGame, s.disableDancerGame,
-                        s.disableSnowdownGame);
-                mCallback.onNewGameState(s.disableGumballGame, s.disableJetpackGame,
-                        s.disableMemoryGame, s.disableRocketGame, s.disableDancerGame,
-                        s.disableSnowdownGame);
-            }
-
-            if ((s.video1 != null && s.video15 != null && s.video23 != null)
-                    && ((!s.video1.equals(video1Pref)) || (!s.video15.equals(video15Pref))
-                    || (!s.video23.equals(video23Pref)))) {
-                mPreferences.setVideos(s.video1, s.video15, s.video23);
-                mCallback.onNewVideos(s.video1, s.video15, s.video23);
-            }
+            // Check Switches for Changes
+            checkSwitchesDiff(getSwitches());
 
             if (!fingerprint.equals(fingerprintPref)) {
                 // new data has been processed and locations have been stored
@@ -322,6 +283,41 @@ public abstract class APIProcessor {
             return ERROR_CODE;
         }
 
+    }
+
+    /**
+     * Compare Switches to SharedPreferences and notify clients of any changes.
+     */
+    protected void checkSwitchesDiff(Switches s) {
+        if (mPreferences.getCastDisabled() != s.disableCastButton) {
+            // set cast preference
+            mPreferences.setCastDisabled(s.disableCastButton);
+            mCallback.onNewCastState(s.disableCastButton);
+        }
+
+        if (mPreferences.getDestinationPhotoDisabled() != s.disableDestinationPhoto) {
+            // set destination photo preference
+            mPreferences.setDestinationPhotoDisabled(s.disableDestinationPhoto);
+            mCallback.onNewDestinationPhotoState(s.disableDestinationPhoto);
+        }
+
+        // Games
+        if (!mPreferences.gameDisabledStateConsistent(s.gameState)) {
+            // Overwrite game disabled state from Switches
+            mPreferences.setGamesDisabled(s.gameState);
+
+            // Notify of new game state
+            mCallback.onNewGameState(s.gameState);
+        }
+
+        // Videos
+        boolean videosConsistent = Arrays.equals(
+                new String[]{s.video1, s.video15, s.video23},
+                mPreferences.getVideos());
+        if (!videosConsistent) {
+            mPreferences.setVideos(s.video1, s.video15, s.video23);
+            mCallback.onNewVideos(s.video1, s.video15, s.video23);
+        }
     }
 
     private int processRoute(JSONArray json) {
@@ -520,9 +516,7 @@ public abstract class APIProcessor {
 
         void onNewCastState(boolean disableCast);
 
-        void onNewGameState(boolean disableGumball, boolean disableJetpack,
-                boolean disableMemory, boolean disableRocket,
-                boolean disableDancer, boolean disableSnowdown);
+        void onNewGameState(GameDisabledState state);
 
         void onNewVideos(String video1, String video15, String video23);
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_drop_present"
+        android:title="Drop present" />
+
+    <item
+        android:id="@+id/item_delete_present"
+        android:title="Delete present" />
+
+    <item
+        android:id="@+id/item_play_jetpack"
+        android:title="Play jetpack" />
+
+    <item
+        android:id="@+id/item_play_present_toss"
+        android:title="Play present toss" />
+
+    <item
+        android:id="@+id/item_collect_20"
+        android:title="Collect 20" />
+
+    <item
+        android:id="@+id/item_return"
+        android:title="Return All" />
+
+    <item
+        android:id="@+id/item_downlevel"
+        android:title="Downlevel" />
+
+    <item
+        android:id="@+id/reset_prefs"
+        android:title="Reset" />
+</menu>

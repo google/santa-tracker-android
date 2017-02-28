@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,16 +20,15 @@ import android.graphics.Typeface;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.apps.santatracker.R;
 import com.google.android.youtube.player.YouTubeThumbnailView;
 
-import com.google.android.apps.santatracker.R;
+class MovieViewHolder extends CardViewHolder {
 
-public class MovieViewHolder extends CardViewHolder {
+    YouTubeThumbnailView thumbnail;
+    Button play;
 
-    public YouTubeThumbnailView thumbnail;
-    public Button play;
-
-    public MovieViewHolder(View itemView) {
+    MovieViewHolder(View itemView) {
         super(itemView);
         thumbnail = (YouTubeThumbnailView) itemView.findViewById(R.id.movie_play);
         play = (Button) itemView.findViewById(R.id.destination_movie_play);

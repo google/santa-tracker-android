@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +25,8 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.google.android.apps.santatracker.R;
+
 /**
  * View that displays the level at 60% of the available height of the canvas.
  */
@@ -40,8 +42,9 @@ public class LevelTextView extends View {
      */
     public LevelTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mRobotoTypeface = Typeface.createFromAsset(getContext().getAssets(),
-                "RobotoCondensed-Regular.ttf");
+
+        mRobotoTypeface = Typeface.createFromAsset(context.getAssets(),
+                context.getString(R.string.typeface_roboto_black));
     }
 
     @Override

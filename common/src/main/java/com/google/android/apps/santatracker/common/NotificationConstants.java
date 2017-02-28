@@ -29,9 +29,6 @@ public final class NotificationConstants {
     public static final int NOTIFICATION_ID = 9876435;
 
     public static final int NOTIFICATION_TAKEOFF = 1;
-    public static final int NOTIFICATION_NEARBY = 2; //Ex: "Santa is 3 hours away from you."
-    public static final int NOTIFICATION_LOCATION = 3; //Ex: "Santa is currently over Australia!"
-    public static final int NOTIFICATION_FACT = 4; // Santa status update or factoid
 
     public static final String TAKEOFF_PATH = "/takeoff";
     public static final String KEY_NOTIFICATION_ID = "notification-id";

@@ -1,9 +1,24 @@
-<?xml version="1.0"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
-  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">&#xD06C;&#xB9AC;&#xC2A4;&#xB9C8;&#xC2A4; &#xC7A5;&#xC2DD;&#xC744; &#xAFB8;&#xBBF8;&#xB294; &#xC911;&#xC785;&#xB2C8;&#xB2E4;.</string>
-  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">&#xC0AC;&#xC9C4; &#xCC0D;&#xAE30;</string>
-  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">&#xB2E4;&#xC2DC; &#xC2DC;&#xB3C4;</string>
-  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">&#xC885;&#xB8CC;</string>
-  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">&#xB0B4; &#xC2A4;&#xB178;&#xC6B0;&#xAE00;&#xB85C;&#xBE0C; &#xACF5;&#xC720;&#xD558;&#xAE30;...</string>
-  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">&#xB098;&#xB9CC;&#xC758; &#xC2A4;&#xB178;&#xC6B0;&#xAE00;&#xB85C;&#xBE0C; &#xC774;&#xBBF8;&#xC9C0; &#xB9CC;&#xB4E4;&#xAE30;</string>
+  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">크리스마스 장식을 꾸미는 중입니다.</string>
+  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">사진 찍기</string>
+  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">다시 시도</string>
+  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">종료</string>
+  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">내 스노우글로브 공유하기...</string>
+  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">나만의 스노우글로브 이미지 만들기</string>
 </resources>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,19 +16,18 @@
 
 package com.google.android.apps.santatracker.data;
 
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.apps.santatracker.service.APIProcessor;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.text.TextUtils;
+
+import com.google.android.apps.santatracker.service.APIProcessor;
+import com.google.android.gms.maps.model.LatLng;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -36,7 +35,7 @@ public class DestinationDbHelper extends SQLiteOpenHelper implements
         SantaDestinationContract {
 
     public static final int DATABASE_VERSION = 5;
-    public static final String DATABASE_NAME = "SantaTracker.db";
+    private static final String DATABASE_NAME = "SantaTracker.db";
 
     private static DestinationDbHelper sInstance = null;
 
@@ -92,10 +91,10 @@ public class DestinationDbHelper extends SQLiteOpenHelper implements
      * Expects a writeable {@link SQLiteDatabase} - used for batch commits.
      */
     public void insertDestination(SQLiteDatabase db, String id,
-            long arrivalTime, long departureTime, String city, String region,
-            String country, double locationLat, double locationLng,
-            long presentsDelivered, long presentsAtDestination, long timezone, long altitude,
-            String photos, String weather, String streetView, String gmmStreetView) {
+                                  long arrivalTime, long departureTime, String city, String region,
+                                  String country, double locationLat, double locationLng,
+                                  long presentsDelivered, long presentsAtDestination, long timezone, long altitude,
+                                  String photos, String weather, String streetView, String gmmStreetView) {
 
         ContentValues cv = new ContentValues();
 
@@ -127,21 +126,10 @@ public class DestinationDbHelper extends SQLiteOpenHelper implements
         db.insertOrThrow(TABLE_NAME, null, cv);
     }
 
-    public Cursor getAllDestinationCursor() {
+    Cursor getAllDestinationCursor() {
         SQLiteDatabase db = getReadableDatabase();
         return db.rawQuery("SELECT * FROM " + TABLE_NAME + " ORDER BY "
                 + COLUMN_NAME_ARRIVAL, null);
-    }
-
-    /**
-     * Returns a cursor for all destinations following (and including) the given
-     * timestamp.
-     */
-    public Cursor getFollowingDestinations(long time) {
-        SQLiteDatabase db = getReadableDatabase();
-        return db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE "
-                + COLUMN_NAME_DEPARTURE + " >= " + Long.toString(time)
-                + " ORDER BY " + COLUMN_NAME_ARRIVAL, null);
     }
 
     public long getFirstDeparture() {
@@ -193,20 +181,6 @@ public class DestinationDbHelper extends SQLiteOpenHelper implements
     }
 
     /**
-     * Returns the destination with the given identifier.
-     */
-    public Destination getDestination(String identifier) {
-        SQLiteDatabase db = getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE "
-                + COLUMN_NAME_IDENTIFIER + " = " + identifier, null);
-        c.moveToFirst();
-        Destination d = getCursorDestination(c);
-        c.close();
-
-        return d;
-    }
-
-    /**
      * Returns the destination with the given _id.
      */
     public Destination getDestination(int id) {
@@ -223,7 +197,7 @@ public class DestinationDbHelper extends SQLiteOpenHelper implements
     /**
      * Helper method that converts the cursor to a destination object.
      */
-    public static Destination getCursorDestination(Cursor mCursor) {
+    static Destination getCursorDestination(Cursor mCursor) {
 
         Destination d = new Destination();
 
@@ -267,18 +241,18 @@ public class DestinationDbHelper extends SQLiteOpenHelper implements
                 .getString(mCursor.getColumnIndex(SantaDestinationContract.COLUMN_NAME_PHOTOS));
         d.weatherString = mCursor
                 .getString(mCursor.getColumnIndex(SantaDestinationContract.COLUMN_NAME_WEATHER));
-        d.streetviewString = mCursor
+        d.streetViewString = mCursor
                 .getString(mCursor.getColumnIndex(SantaDestinationContract.COLUMN_NAME_STREETVIEW));
 
-        d.gmmStreetviewString = mCursor
+        d.gmmStreetViewString = mCursor
                 .getString(
                         mCursor.getColumnIndex(SantaDestinationContract.COLUMN_NAME_GMMSTREETVIEW));
 
         // Process the panoramio string if possible
         d.photos = processPhoto(d.photoString);
         d.weather = processWeather(d.weatherString);
-        d.streetView = processStreetView(d.streetviewString);
-        d.gmmStreetview = processStreetView(d.gmmStreetviewString);
+        d.streetView = processStreetView(d.streetViewString);
+        d.gmmStreetView = processStreetView(d.gmmStreetViewString);
 
         return d;
     }
@@ -289,15 +263,15 @@ public class DestinationDbHelper extends SQLiteOpenHelper implements
             return null;
         }
 
-        ArrayList<Destination.Photo> list = new ArrayList<Destination.Photo>(5);
+        ArrayList<Destination.Photo> list = new ArrayList<>(5);
 
         try {
             JSONArray array = new JSONArray(s);
             for (int i = 0; i < array.length(); i++) {
                 JSONObject json = array.getJSONObject(i);
-                Destination.Photo photo= new Destination.Photo();
+                Destination.Photo photo = new Destination.Photo();
                 photo.url = json.getString(APIProcessor.FIELD_PHOTO_URL);
-                photo.attributionHTML= json.getString(APIProcessor.FIELD_PHOTO_ATTRIBUTIONHTML);
+                photo.attributionHTML = json.getString(APIProcessor.FIELD_PHOTO_ATTRIBUTIONHTML);
 
                 list.add(photo);
             }
@@ -320,12 +294,11 @@ public class DestinationDbHelper extends SQLiteOpenHelper implements
             streetView.id = json.getString(APIProcessor.FIELD_STREETVIEW_ID);
             streetView.heading = json.getDouble(APIProcessor.FIELD_STREETVIEW_HEADING);
 
-            if(json.has(APIProcessor.FIELD_STREETVIEW_LATITUDE)  &&
+            if (json.has(APIProcessor.FIELD_STREETVIEW_LATITUDE) &&
                     json.has(APIProcessor.FIELD_STREETVIEW_LONGITUDE)) {
-                double lat =json.getDouble(APIProcessor.FIELD_STREETVIEW_LATITUDE);
+                double lat = json.getDouble(APIProcessor.FIELD_STREETVIEW_LATITUDE);
                 double lng = json.getDouble(APIProcessor.FIELD_STREETVIEW_LONGITUDE);
-                LatLng location = new LatLng(lat, lng);
-                streetView.position = location;
+                streetView.position = new LatLng(lat, lng);
             }
             return streetView;
         } catch (JSONException e) {

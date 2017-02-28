@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,12 +16,6 @@
 
 package com.google.android.apps.santatracker;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.google.android.apps.santatracker.common.NotificationConstants;
-import com.google.android.apps.santatracker.launch.StartupActivity;
-import com.google.android.apps.santatracker.util.ScheduleNotificationService;
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -35,12 +29,19 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.app.TaskStackBuilder;
+import android.support.v4.content.res.ResourcesCompat;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.google.android.apps.santatracker.common.NotificationConstants;
+import com.google.android.apps.santatracker.launch.StartupActivity;
 
 public class SantaNotificationBuilder {
 
     // private static final String TAG = "SantaNotificationBuilder";
 
-    private static Notification GetNotification(Context c, int headline) {
+    private static Notification getNotification(Context c, int headline) {
         Resources r = c.getResources();
         Bitmap largeIcon = BitmapFactory.decodeResource(r,
                 R.drawable.santa_notification_background);
@@ -50,7 +51,8 @@ public class SantaNotificationBuilder {
                         .setBackground(largeIcon);
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(c)
                 .setSmallIcon(R.drawable.notification_small)
-                .setColor(c.getResources().getColor(R.color.brandSantaTracker))
+                .setColor(ResourcesCompat.getColor(c.getResources(),
+                        R.color.brandSantaTracker, c.getTheme()))
                 .setAutoCancel(true)
                 .setContentTitle(r.getString(headline))
                 .setContentText(r.getString(R.string.track_santa))
@@ -69,80 +71,36 @@ public class SantaNotificationBuilder {
         return mBuilder.build();
     }
 
-    public static void CreateSantaNotification(Context c, int content) {
-        Notification n = GetNotification(c, content);
+    public static void createSantaNotification(Context c, int content) {
+        Notification n = getNotification(c, content);
 
         //Post the notification.
         NotificationManagerCompat.from(c)
                 .notify(NotificationConstants.NOTIFICATION_ID, n);
     }
 
-    public static void CreateTriviaNotification(Context c, String wheresSanta, String photoUrl,
-            String mapUrl, String fact) {
-
-        Resources r = c.getResources();
-        Bitmap largeIcon = BitmapFactory.decodeResource(r,
-                R.drawable.ic_launcher_santa);
-
-        //TODO download bitmaps
-        Bitmap photo = BitmapFactory.decodeResource(c.getResources(), R.drawable.location_photo);
-        Bitmap map = BitmapFactory.decodeResource(c.getResources(), R.drawable.staticmap);
-
-        // Make second page of notification (map with fact)
-        NotificationCompat.Builder page = new NotificationCompat.Builder(c)
-                .setSmallIcon(R.drawable.notification_small)
-                .setContentText(fact)
-                .extend(new NotificationCompat.WearableExtender().setBackground(map));
-
-        // Make main notification
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(c)
-                .setSmallIcon(R.drawable.notification_small)
-                .setLargeIcon(largeIcon)
-                .setAutoCancel(true)
-                .setContentTitle(wheresSanta)
-                .extend(new NotificationCompat.WearableExtender()
-                        .setBackground(photo)
-                        .addPage(page.build()));
-
-        Intent i = new Intent(c, StartupActivity.class);
-
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(c);
-        stackBuilder.addParentStack(StartupActivity.class);
-        stackBuilder.addNextIntent(i);
-        PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0,
-                PendingIntent.FLAG_UPDATE_CURRENT);
-        mBuilder.setContentIntent(resultPendingIntent);
-
-        Notification n = mBuilder.build();
-
-        NotificationManager mNotificationManager = (NotificationManager) c
-                .getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(NotificationConstants.NOTIFICATION_ID, n);
-    }
-
-    public static void CreateInfoNotification(final Context c, final String title,
-            final String text,
-            final String photoUrl) {
+    public static void createInfoNotification(final Context c, final String title,
+            final String text, final String photoUrl) {
 
         if (photoUrl != null) {
             Glide.with(c).load(photoUrl).asBitmap().into(new SimpleTarget<Bitmap>() {
                 @Override
                 public void onResourceReady(Bitmap resource,
                                             GlideAnimation<? super Bitmap> glideAnimation) {
-                    CreateInfoNotificationWithBitmap(c, title, text, resource);
+                    createInfoNotificationWithBitmap(c, title, text, resource);
                 }
 
                 @Override
                 public void onLoadFailed(Exception e, Drawable errorDrawable) {
-                    CreateInfoNotificationWithBitmap(c, title, text, null);
+                    createInfoNotificationWithBitmap(c, title, text, null);
                 }
             });
         } else {
-            CreateInfoNotificationWithBitmap(c, title, text, null);
+            createInfoNotificationWithBitmap(c, title, text, null);
         }
     }
 
-    private static void CreateInfoNotificationWithBitmap(Context c, String title, String text,
+    private static void createInfoNotificationWithBitmap(Context c, String title, String text,
             Bitmap photo) {
 
         Resources r = c.getResources();
@@ -162,9 +120,11 @@ public class SantaNotificationBuilder {
         }
 
         // Make main notification
+
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(c)
                 .setSmallIcon(R.drawable.notification_small)
-                .setColor(c.getResources().getColor(R.color.brandSantaTrackerDark))
+                .setColor(ResourcesCompat.getColor(c.getResources(),
+                        R.color.brandSantaTrackerDark, c.getTheme()))
                 .setLargeIcon(largeIcon)
                 .setAutoCancel(true)
                 .setContentTitle(title)
@@ -194,7 +154,7 @@ public class SantaNotificationBuilder {
     /**
      * Dismiss all notifications.
      */
-    public static void DismissNotifications(Context c) {
+    public static void dismissNotifications(Context c) {
         NotificationManager mNotificationManager = (NotificationManager) c
                 .getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.cancelAll();
@@ -207,12 +167,7 @@ public class SantaNotificationBuilder {
 
     }
 
-    public static void ScheduleNotificationNotification(Context c){
-        Intent i = new Intent(c, ScheduleNotificationService.class);
-        c.startService(i);
-    }
-
-    public static void ScheduleSantaNotification(Context c, long timestamp, int notificationType) {
+    public static void scheduleSantaNotification(Context c, long timestamp, int notificationType) {
 
         // Only schedule a notification if the time is in the future
         if(timestamp < System.currentTimeMillis()){

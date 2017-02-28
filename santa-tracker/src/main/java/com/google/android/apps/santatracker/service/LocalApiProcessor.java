@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,6 +57,8 @@ public class LocalApiProcessor extends APIProcessor {
             StreamDbHelper streamDBHelper, APICallback mCallback) {
         super(mPreferences, mDBHelper, streamDBHelper, mCallback);
         mFile = new File(Environment.getExternalStorageDirectory(), FILENAME);
+
+        Log.d(TAG, "Reading from file: " + mFile.getAbsolutePath());
     }
 
     @Override
@@ -103,12 +105,18 @@ public class LocalApiProcessor extends APIProcessor {
 
             config.disableCastButton = mClientConfig.getBoolean(FIELD_DISABLE_CASTBUTTON);
             config.disableDestinationPhoto = mClientConfig.getBoolean(FIELD_DISABLE_PHOTO);
-            config.disableGumballGame = mClientConfig.getBoolean(FIELD_DISABLE_GUMBALLGAME);
-            config.disableJetpackGame = mClientConfig.getBoolean(FIELD_DISABLE_JETPACKGAME);
-            config.disableMemoryGame = mClientConfig.getBoolean(FIELD_DISABLE_MEMORYGAME);
-            config.disableRocketGame = mClientConfig.getBoolean(FIELD_DISABLE_ROCKETGAME);
-            config.disableDancerGame = mClientConfig.getBoolean(FIELD_DISABLE_DANCERGAME);
-            config.disableSnowdownGame = mClientConfig.getBoolean(FIELD_DISABLE_SNOWDOWNGAME);
+
+            config.gameState.disableGumballGame = mClientConfig.getBoolean(FIELD_DISABLE_GUMBALLGAME);
+            config.gameState.disableJetpackGame = mClientConfig.getBoolean(FIELD_DISABLE_JETPACKGAME);
+            config.gameState.disableMemoryGame = mClientConfig.getBoolean(FIELD_DISABLE_MEMORYGAME);
+            config.gameState.disableRocketGame = mClientConfig.getBoolean(FIELD_DISABLE_ROCKETGAME);
+            config.gameState.disableDancerGame = mClientConfig.getBoolean(FIELD_DISABLE_DANCERGAME);
+            config.gameState.disableSnowdownGame = mClientConfig.getBoolean(FIELD_DISABLE_SNOWDOWNGAME);
+            config.gameState.disableSwimmingGame = mClientConfig.getBoolean(FIELD_DISABLE_SWIMMINGGAME);
+            config.gameState.disableBmxGame = mClientConfig.getBoolean(FIELD_DISABLE_BMXGAME);
+            config.gameState.disableRunningGame = mClientConfig.getBoolean(FIELD_DISABLE_RUNNINGGAME);
+            config.gameState.disableTennisGame = mClientConfig.getBoolean(FIELD_DISABLE_TENNISGAME);
+            config.gameState.disableWaterpoloGame = mClientConfig.getBoolean(FIELD_DISABLE_WATERPOLOGAME);
 
             config.video1 = mClientConfig.getString(FIELD_VIDEO_1);
             config.video15 = mClientConfig.getString(FIELD_VIDEO_15);

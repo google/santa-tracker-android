@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import android.app.UiModeManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Toast;
 
@@ -127,8 +128,7 @@ public abstract class AbstractLaunch implements View.OnClickListener,
      * Display a {@link android.widget.Toast} with a given string resource message.
      */
     protected void notify(Context context, int stringId) {
-        Toast.makeText(context, context.getResources().getText(stringId), Toast.LENGTH_SHORT)
-                .show();
+        notify(context, context.getResources().getText(stringId).toString());
     }
 
     /**
@@ -138,9 +138,14 @@ public abstract class AbstractLaunch implements View.OnClickListener,
      * @see android.content.res.Resources#getString(int, Object...)
      */
     protected void notify(Context context, int stringId, Object... args) {
-        Toast.makeText(context, context.getResources().getString(stringId, args),
-                Toast.LENGTH_SHORT)
-                .show();
+        notify(context, context.getResources().getString(stringId, args));
+    }
+
+    /**
+     * Display a {@link android.widget.Toast} with a given string.
+     */
+    protected void notify(Context context, String string) {
+        Toast.makeText(context, string, Toast.LENGTH_SHORT).show();
     }
 
     /** Retrieves the current marker state. */
@@ -211,4 +216,11 @@ public abstract class AbstractLaunch implements View.OnClickListener,
         return manager.getCurrentModeType() == Configuration.UI_MODE_TYPE_TELEVISION;
     }
 
+    /**
+     * Get a string message explaining that the game is unavailable.
+     */
+    protected String getDisabledString(@StringRes int gameNameId) {
+        String gameName = mContext.getResources().getString(gameNameId);
+        return mContext.getResources().getString(R.string.generic_game_disabled, gameName);
+    }
 }

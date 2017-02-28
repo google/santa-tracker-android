@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,8 @@ public class SoundManager implements MediaPlayer.OnPreparedListener,
     AssetFileDescriptor mBgmFileDescriptor = null;
     boolean mBgmLoading = false;
     Context mAppContext;
-    boolean mPaused = false;
+    boolean mMuted = false;
+    boolean mStoppedSound = false;
     boolean mWantBgm = true;
 
     SoundPool mSoundPool = null;
@@ -73,7 +74,9 @@ public class SoundManager implements MediaPlayer.OnPreparedListener,
     }
 
     public void playSfx(int soundId) {
-        mSoundPool.play(soundId, DEFAULT_VOLUME, DEFAULT_VOLUME, DEFAULT_PRIORITY, 0, 1.0f);
+        if(!mMuted && !mStoppedSound) {
+            mSoundPool.play(soundId, DEFAULT_VOLUME, DEFAULT_VOLUME, DEFAULT_PRIORITY, 0, 1.0f);
+        }
     }
 
     @Override
@@ -98,7 +101,7 @@ public class SoundManager implements MediaPlayer.OnPreparedListener,
     }
 
     private void updateBgm() {
-        boolean shouldPlay = !mPaused && mWantBgm;
+        boolean shouldPlay = !mMuted && mWantBgm && !mStoppedSound;
         if (mBgmMediaPlayer != null) {
             if (shouldPlay && !mBgmMediaPlayer.isPlaying()) {
                 mBgmMediaPlayer.start();
@@ -108,13 +111,32 @@ public class SoundManager implements MediaPlayer.OnPreparedListener,
         }
     }
 
-    public void pause() {
-        mPaused = true;
+    public void mute() {
+        mMuted = true;
         updateBgm();
     }
 
-    public void resume() {
-        mPaused = false;
+    public void unmute() {
+        mMuted = false;
+        updateBgm();
+    }
+
+    public boolean getMute() {
+        return mMuted;
+    }
+
+    public void setMute(boolean mute) {
+        mMuted = mute;
+        updateBgm();
+    }
+
+    public void stopSound() {
+        mStoppedSound = true;
+        updateBgm();
+    }
+
+    public void resumeSound() {
+        mStoppedSound = false;
         updateBgm();
     }
 

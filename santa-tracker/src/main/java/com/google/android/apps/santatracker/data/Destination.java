@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.android.gms.maps.model.LatLng;
 /**
  * A destination that is on Santa's path.
  *
- * @author jfschmakeit
  */
 public class Destination {
 
@@ -33,7 +32,7 @@ public class Destination {
 
     public String city;
     public String region;
-    public String country;
+    String country;
 
     public long arrival;
     public long departure;
@@ -44,18 +43,18 @@ public class Destination {
     public long presentsDeliveredAtDestination;
 
     // Details
-    public long timezone;
-    public long altitude;
-    public String photoString;
-    public String weatherString;
-    public String streetviewString;
-    public String gmmStreetviewString;
+    long timezone;
+    long altitude;
+    String photoString;
+    String weatherString;
+    String streetViewString;
+    String gmmStreetViewString;
 
     // Parsed data
     public Weather weather = null;
     public Photo[] photos = null;
     public StreetView streetView = null;
-    public StreetView gmmStreetview = null;
+    StreetView gmmStreetView = null;
 
     /**
      * Returns the concatenated name of this destination. City is required,
@@ -96,7 +95,7 @@ public class Destination {
 
     public static class Photo {
         public String url = null;
-        public String attributionHTML= null;
+        public String attributionHTML = null;
     }
 
     public static class StreetView {

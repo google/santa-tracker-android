@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,9 +26,9 @@ import com.google.android.apps.santatracker.R;
 
 abstract class CardViewHolder extends RecyclerView.ViewHolder {
 
-    public View card;
+    View card;
 
-    public CardViewHolder(View itemView) {
+    CardViewHolder(View itemView) {
         super(itemView);
         card = itemView.findViewById(R.id.card);
     }

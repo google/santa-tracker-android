@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,11 +16,11 @@
 
 package com.google.android.apps.santatracker.map.cameraAnimations;
 
+import android.os.Handler;
+
+import com.google.android.apps.santatracker.map.SantaMarker;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.apps.santatracker.map.SantaMarker;
-
-import android.os.Handler;
 
 public class SantaCamAnimator {
 
@@ -42,18 +42,18 @@ public class SantaCamAnimator {
 
     private boolean mPaused = false;
 
-    public SantaCamAnimator(GoogleMap mMap, SantaMarker mSantaMarker) {
+    public SantaCamAnimator(GoogleMap map, SantaMarker santaMarker) {
         super();
-        this.mHandler = new Handler();
+        mHandler = new Handler();
 
         // setup animations
-        mPathAnimation = new CurrentPathAnimation(mHandler, mMap, mSantaMarker);
+        mPathAnimation = new CurrentPathAnimation(mHandler, map, santaMarker);
 
-        mTravellingAnimation = new MoveAroundSanta(mHandler, mMap, mSantaMarker);
+        mTravellingAnimation = new MoveAroundSanta(mHandler, map, santaMarker);
 
     }
 
-    public void triggerPaddingAnimation(){
+    public void triggerPaddingAnimation() {
         mTravellingAnimation.triggerPaddingAnimation();
     }
 
@@ -72,8 +72,7 @@ public class SantaCamAnimator {
 
             } else if (remainingTime >= ARRIVING_TRIGGER
                     && elapsedTime >= DEPARTING_TIME) {
-                // between departing and arriving times, animate travelling
-                // animation
+                // between departing and arriving times, animate travelling animation
                 mTravellingAnimation.onSantaMoving(position);
 
             }

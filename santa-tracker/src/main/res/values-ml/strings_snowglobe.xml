@@ -1,9 +1,24 @@
-<?xml version="1.0"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
-  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">&#xD28;&#xD3F;&#xD19;&#xD4D;&#xD19;&#xD33;&#xD41;&#xD1F;&#xD46; &#xD06;&#xD2D;&#xD30;&#xD23;&#xD02; &#xD28;&#xD3F;&#xD7C;&#xD2E;&#xD4D;&#xD2E;&#xD3F;&#xD15;&#xD4D;&#xD15;&#xD41;&#xD28;&#xD4D;&#xD28;&#xD41;!</string>
-  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">&#xD1A;&#xD3F;&#xD24;&#xD4D;&#xD30;&#xD02; &#xD0E;&#xD1F;&#xD41;&#xD15;&#xD4D;&#xD15;&#xD41;&#xD15;</string>
-  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">&#xD35;&#xD40;&#xD23;&#xD4D;&#xD1F;&#xD41;&#xD02; &#xD36;&#xD4D;&#xD30;&#xD2E;&#xD3F;&#xD15;&#xD4D;&#xD15;&#xD41;&#xD15;</string>
-  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">&#xD2A;&#xD41;&#xD31;&#xD24;&#xD4D;&#xD24;&#xD41;&#xD15;&#xD1F;&#xD15;&#xD4D;&#xD15;&#xD41;&#xD15;</string>
-  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">&#xD07;&#xD24;&#xD41;&#xD2A;&#xD2F;&#xD4B;&#xD17;&#xD3F;&#xD1A;&#xD4D;&#xD1A;&#xD4D; &#xD28;&#xD3F;&#xD19;&#xD4D;&#xD19;&#xD33;&#xD41;&#xD1F;&#xD46; &#xD38;&#xD4D;&#xD28;&#xD4B;&#xD2C;&#xD4B;&#xD7E; &#xD2A;&#xD19;&#xD4D;&#xD15;&#xD3F;&#xD1F;&#xD41;&#xD15;...</string>
-  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">&#xD28;&#xD3F;&#xD19;&#xD4D;&#xD19;&#xD33;&#xD41;&#xD1F;&#xD46; &#xD1A;&#xD3F;&#xD24;&#xD4D;&#xD30;&#xD02; &#xD38;&#xD43;&#xD37;&#xD4D;&#xD1F;&#xD3F;&#xD15;&#xD4D;&#xD15;&#xD41;&#xD28;&#xD4D;&#xD28;&#xD41;!</string>
+  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">നിങ്ങളുടെ ആഭരണം നിർമ്മിക്കുന്നു!</string>
+  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">ചിത്രം എടുക്കുക</string>
+  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">വീണ്ടും ശ്രമിക്കുക</string>
+  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">പുറത്തുകടക്കുക</string>
+  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">ഇതുപയോഗിച്ച് നിങ്ങളുടെ സ്നോബോൾ പങ്കിടുക...</string>
+  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">നിങ്ങളുടെ ചിത്രം സൃഷ്ടിക്കുന്നു!</string>
 </resources>

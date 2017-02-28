@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +16,15 @@
 
 package com.google.android.apps.santatracker.map.cardstream;
 
+import android.content.Context;
 import android.graphics.PorterDuff;
+import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.os.Build;
+import android.os.LocaleList;
+import android.support.v4.content.res.ResourcesCompat;
 import android.text.method.LinkMovementMethod;
+import android.text.method.TransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,39 +32,82 @@ import android.widget.TextView;
 
 import com.google.android.apps.santatracker.R;
 
-public class DestinationViewHolder extends CardViewHolder {
+import java.util.Locale;
 
-    public TextView region;
-    public TextView city;
-    public TextView copyright;
-    public TextView arrival;
-    public TextView arrivalLabel;
-    public TextView weather;
-    public TextView weatherLabel;
-    public ImageView image;
-    public Button streetView;
+class DestinationViewHolder extends CardViewHolder {
 
-    public DestinationViewHolder(View itemView) {
+    private static AllCaps sAllCaps;
+    private static LinkMovementMethod sLinkMovementMethod;
+
+    TextView region;
+    TextView city;
+    TextView copyright;
+    TextView arrival;
+    TextView weather;
+    TextView weatherLabel;
+    ImageView image;
+    Button streetView;
+
+    DestinationViewHolder(View itemView) {
         super(itemView);
         region = (TextView) itemView.findViewById(R.id.destination_region);
         city = (TextView) itemView.findViewById(R.id.destination_city);
         copyright = (TextView) itemView.findViewById(R.id.destination_copyright);
         arrival = (TextView) itemView.findViewById(R.id.destination_arrival);
-        arrivalLabel = (TextView) itemView.findViewById(R.id.destination_arrival_label);
         weather = (TextView) itemView.findViewById(R.id.destination_weather);
         weatherLabel = (TextView) itemView.findViewById(R.id.destination_weather_label);
         image = (ImageView) itemView.findViewById(R.id.destination_image);
         streetView = (Button) itemView.findViewById(R.id.destination_street_view);
 
-        image.setColorFilter(itemView.getResources().getColor(R.color.overlayDestinationCardFilter),
+        image.setColorFilter(ResourcesCompat.getColor(itemView.getResources(),
+                R.color.overlayDestinationCardFilter, itemView.getContext().getTheme()),
                 PorterDuff.Mode.MULTIPLY);
 
-        copyright.setMovementMethod(new LinkMovementMethod());
+        ensureMethods(itemView.getContext());
+        region.setTransformationMethod(sAllCaps);
+        copyright.setMovementMethod(sLinkMovementMethod);
+    }
+
+    private void ensureMethods(Context context) {
+        if (sAllCaps == null) {
+            sAllCaps = new AllCaps(context);
+        }
+        if (sLinkMovementMethod == null) {
+            sLinkMovementMethod = new LinkMovementMethod();
+        }
     }
 
     @Override
     public void setTypefaces(Typeface label, Typeface body) {
         setTypeface(new TextView[]{copyright, arrival, weather}, body);
+        setTypeface(new TextView[]{city}, label);
+    }
+
+    private static class AllCaps implements TransformationMethod {
+
+        private final Locale mLocale;
+
+        public AllCaps(Context context) {
+            if (Build.VERSION.SDK_INT >= 24) {
+                LocaleList locales = context.getResources().getConfiguration().getLocales();
+                mLocale = locales.get(0);
+            } else {
+                //noinspection deprecation
+                mLocale = context.getResources().getConfiguration().locale;
+            }
+        }
+
+        @Override
+        public CharSequence getTransformation(CharSequence source, View view) {
+            return source != null ? source.toString().toUpperCase(mLocale) : null;
+        }
+
+        @Override
+        public void onFocusChanged(View view, CharSequence sourceText, boolean focused,
+                int direction, Rect previouslyFocusedRect) {
+            // Do nothing
+        }
+
     }
 
 }

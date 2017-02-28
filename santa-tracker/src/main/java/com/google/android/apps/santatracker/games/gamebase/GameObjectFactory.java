@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
  */
 
 package com.google.android.apps.santatracker.games.gamebase;
+
 
 import com.google.android.apps.santatracker.R;
 import com.google.android.apps.santatracker.games.simpleengine.Renderer;
@@ -42,14 +43,16 @@ public class GameObjectFactory {
     int mSignInHighlightTex;
     int mSignInTextTex;
     int mScoreBarTex;
+    int mScoreBarLabelTex;
     int mPauseIconTex;
     int mPauseIconPressedTex;
-    int mResumeIconTex;
-    int mResumeIconPressedTex;
+    int mSpeakerMuteIconTex;
+    int mSpeakerOnIconTex;
     int mBigPlayButtonNormalTex;
     int mBigPlayButtonHighlightTex;
     int mQuitBarTex;
     int mQuitBarPressedTex;
+    int mQuitBarLabelTex;
     int mInviteBarTex;
     int mInviteBarPressedTex;
 
@@ -61,7 +64,20 @@ public class GameObjectFactory {
     GameObject[] mTmpDigits = new GameObject[5];
 
     public void makeScorePopup(float x, float y, int score, DigitObjectFactory df) {
-        int digits = (score >= 10000) ? 5 : (score >= 1000) ? 4 : (score >= 100) ? 3 : 2;
+        int digits;
+        if(score >= 0) {
+            digits = (score >= 10000) ? 5
+                    : (score >= 1000) ? 4
+                    : (score >= 100) ? 3
+                    : (score >= 10) ? 2
+                    : 1;
+        } else  {
+            digits = (score <= -10000) ? 6
+                    : (score <= -1000) ? 5
+                    : (score <= -100) ? 4
+                    : (score <= -10) ? 3
+                    : 2;
+        }
 
         Arrays.fill(mTmpDigits, null);
         df.makeDigitObjects(digits, GameConfig.TYPE_DECOR, x, y,
@@ -83,7 +99,7 @@ public class GameObjectFactory {
         mTexPodium = mRenderer.requestImageTex(R.drawable.jetpack_podium, "jetpack_podium",
                 Renderer.DIM_WIDTH, GameConfig.Podium.WIDTH);
 
-        mPlayAgainTex = mRenderer.requestTextTex(R.string.play_again, "play_again",
+        mPlayAgainTex = mRenderer.requestTextTex(R.string.return_to_map, "return_to_map",
                 GameConfig.Podium.ReplayButton.FONT_SIZE);
         mScoreLabelTex = mRenderer.requestTextTex(R.string.score, "score",
                 GameConfig.Podium.ScoreLabel.FONT_SIZE);
@@ -99,27 +115,31 @@ public class GameObjectFactory {
         mSignInTextTex = mRenderer.requestTextTex(R.string.why_sign_in,
                 "jetpack_why_sign_in", GameConfig.SignInText.FONT_SIZE,
                 GameConfig.SignInText.ANCHOR, GameConfig.SignInText.COLOR);
-        mScoreBarTex = mRenderer.requestImageTex(R.drawable.games_scorebar, "games_scorebar",
+        mScoreBarTex = mRenderer.requestImageTex(R.drawable.icon_ribbon_upsidedown_short, "games_scorebar",
                 Renderer.DIM_WIDTH, GameConfig.ScoreBar.WIDTH);
-        mResumeIconTex = mRenderer.requestImageTex(R.drawable.games_play, "games_play",
+        mScoreBarLabelTex = mRenderer.requestTextTex(R.string.score, "score_bar_label",
+                GameConfig.ScoreBar.ScoreBarLabel.FONT_SIZE);
+        mPauseIconTex = mRenderer.requestImageTex(R.drawable.common_btn_pause, "games_pause",
                 Renderer.DIM_WIDTH, GameConfig.ScoreBar.PauseButton.SPRITE_WIDTH);
-        mResumeIconPressedTex = mRenderer.requestImageTex(R.drawable.games_play_pressed,
-                "games_play_pressed", Renderer.DIM_WIDTH, GameConfig.ScoreBar.PauseButton.SPRITE_WIDTH);
-        mPauseIconTex = mRenderer.requestImageTex(R.drawable.games_pause, "games_pause",
-                Renderer.DIM_WIDTH, GameConfig.ScoreBar.PauseButton.SPRITE_WIDTH);
-        mPauseIconPressedTex = mRenderer.requestImageTex(R.drawable.games_pause_pressed,
+        mPauseIconPressedTex = mRenderer.requestImageTex(R.drawable.common_btn_pause,
                 "games_pause_pressed", Renderer.DIM_WIDTH, GameConfig.ScoreBar.PauseButton.SPRITE_WIDTH);
-        mBigPlayButtonNormalTex = mRenderer.requestImageTex(R.drawable.games_bigplay,
-                "games_bigplay", Renderer.DIM_WIDTH,
+        mSpeakerMuteIconTex = mRenderer.requestImageTex(R.drawable.common_btn_speaker_off,
+                "speaker_mute", Renderer.DIM_WIDTH, GameConfig.Speaker.SPRITE_WIDTH);
+        mSpeakerOnIconTex = mRenderer.requestImageTex(R.drawable.common_btn_speaker_on,
+                "speaker_on", Renderer.DIM_WIDTH, GameConfig.Speaker.SPRITE_WIDTH);
+        mBigPlayButtonNormalTex = mRenderer.requestImageTex(R.drawable.btn_play_yellow,
+                "btn_play_yellow", Renderer.DIM_WIDTH,
                 GameConfig.PauseScreen.BigPlayButton.SPRITE_WIDTH);
-        mBigPlayButtonHighlightTex = mRenderer.requestImageTex(R.drawable.games_bigplay_pressed,
-                "games_bigplay_pressed", Renderer.DIM_WIDTH,
+        mBigPlayButtonHighlightTex = mRenderer.requestImageTex(R.drawable.btn_play_yellow,
+                "btn_play_pressed", Renderer.DIM_WIDTH,
                 GameConfig.PauseScreen.BigPlayButton.SPRITE_WIDTH);
-        mQuitBarTex = mRenderer.requestImageTex(R.drawable.games_cancelbar,
-                "games_cancelbar", Renderer.DIM_WIDTH,
+        mQuitBarTex = mRenderer.requestImageTex(R.drawable.purple_rectangle_button,
+                "quit_button", Renderer.DIM_WIDTH,
                 GameConfig.PauseScreen.QuitBar.SPRITE_WIDTH);
-        mQuitBarPressedTex = mRenderer.requestImageTex(R.drawable.games_cancelbar_pressed,
-                "games_cancelbar_pressed", Renderer.DIM_WIDTH,
+        mQuitBarLabelTex = mRenderer.requestTextTex(R.string.quit_bar_label, "quit_bar_label",
+                GameConfig.PauseScreen.QuitBar.QuitBarLabel.FONT_SIZE);
+        mQuitBarPressedTex = mRenderer.requestImageTex(R.drawable.purple_rectangle_button,
+                "quit_button_pressed", Renderer.DIM_WIDTH,
                 GameConfig.PauseScreen.QuitBar.SPRITE_WIDTH);
         mInviteBarTex = mRenderer.requestImageTex(R.drawable.games_share,
                 "games_share", Renderer.DIM_WIDTH,
@@ -161,28 +181,43 @@ public class GameObjectFactory {
                 GameConfig.ScoreBar.WIDTH, Float.NaN);
     }
 
+    public GameObject makeScoreBarLabel() {
+        float x = mRenderer.getRelativePos(GameConfig.ScoreBar.ScoreBarLabel.X_REL, GameConfig.ScoreBar.ScoreBarLabel.X_DELTA);
+        float y = mRenderer.getRelativePos(GameConfig.ScoreBar.ScoreBarLabel.Y_REL, GameConfig.ScoreBar.ScoreBarLabel.Y_DELTA);
+        return mWorld.newGameObjectWithImage(GameConfig.TYPE_DECOR, x, y, mScoreBarLabelTex,
+                GameConfig.ScoreBar.ScoreBarLabel.WIDTH, Float.NaN);
+    }
+
+    public GameObject makeQuitBarLabel() {
+        float x = mRenderer.getRelativePos(GameConfig.PauseScreen.QuitBar.QuitBarLabel.X_REL, GameConfig.PauseScreen.QuitBar.QuitBarLabel.X_DELTA);
+        float y = mRenderer.getRelativePos(GameConfig.PauseScreen.QuitBar.QuitBarLabel.Y_REL, GameConfig.PauseScreen.QuitBar.QuitBarLabel.Y_DELTA);
+        return mWorld.newGameObjectWithImage(GameConfig.TYPE_DECOR, x, y, mQuitBarLabelTex,
+                GameConfig.PauseScreen.QuitBar.QuitBarLabel.WIDTH, Float.NaN);
+    }
+
     public GameObject makeScoreLabel() {
         // create the "score" static label
         float x = mRenderer.getRelativePos(GameConfig.Podium.ScoreLabel.X_REL,
                 GameConfig.Podium.ScoreLabel.X_DELTA);
         float y = mRenderer.getRelativePos(GameConfig.Podium.ScoreLabel.Y_REL,
                 GameConfig.Podium.ScoreLabel.Y_DELTA);
-        return mWorld.newGameObjectWithImage(GameConfig.TYPE_DECOR, x, y, mScoreLabelTex,
+        GameObject obj = mWorld.newGameObjectWithImage(GameConfig.TYPE_DECOR, x, y, mScoreLabelTex,
                 Float.NaN, Float.NaN);
+        return obj;
     }
 
-    public Button makePlayAgainButton(Widget.WidgetTriggerListener listener, int message) {
+    public Button makeReturnToMapButton(Widget.WidgetTriggerListener listener, int message) {
         float x = mRenderer.getRelativePos(GameConfig.Podium.ReplayButton.X_REL,
                 GameConfig.Podium.ReplayButton.X_DELTA);
         float y = mRenderer.getRelativePos(GameConfig.Podium.ReplayButton.Y_REL,
                 GameConfig.Podium.ReplayButton.Y_DELTA);
-        Button replayButton = new Button(mRenderer, x, y, GameConfig.Podium.ReplayButton.WIDTH,
+        Button returnToMapButton = new Button(mRenderer, x, y, GameConfig.Podium.ReplayButton.WIDTH,
                 GameConfig.Podium.ReplayButton.HEIGHT);
-        replayButton.addFlatBackground(GameConfig.Podium.ReplayButton.NORMAL_COLOR,
+        returnToMapButton.addFlatBackground(GameConfig.Podium.ReplayButton.NORMAL_COLOR,
                 GameConfig.Podium.ReplayButton.HIGHLIGHT_COLOR);
-        replayButton.addTex(mPlayAgainTex);
-        replayButton.setClickListener(listener, message);
-        return replayButton;
+        returnToMapButton.addTex(mPlayAgainTex);
+        returnToMapButton.setClickListener(listener, message);
+        return returnToMapButton;
     }
 
     public GameObject makeSignInBar() {
@@ -219,30 +254,44 @@ public class GameObjectFactory {
         return signInButton;
     }
 
-    private Button makePauseOrResumeButton(boolean isPause, Widget.WidgetTriggerListener listener,
-            int message) {
+    private Button makeSpeakerOnOrMuteButton(boolean isMute, Widget.WidgetTriggerListener listener,
+                                            int message) {
+        float x = mRenderer.getRelativePos(GameConfig.Speaker.X_REL,
+                GameConfig.Speaker.X_DELTA);
+        float y = mRenderer.getRelativePos(GameConfig.Speaker.Y_REL,
+                GameConfig.Speaker.Y_DELTA);
+        Button button = new Button(mRenderer, x, y, GameConfig.Speaker.WIDTH,
+                GameConfig.Speaker.HEIGHT);
+        button.addNormalTex(isMute ? mSpeakerMuteIconTex : mSpeakerOnIconTex, 0.0f, 0.0f,
+                GameConfig.Speaker.SPRITE_WIDTH,
+                GameConfig.Speaker.SPRITE_HEIGHT);
+        button.setClickListener(listener, message);
+        return button;
+    }
+
+    public Button makePauseButton(Widget.WidgetTriggerListener listener, int message) {
         float x = mRenderer.getRelativePos(GameConfig.ScoreBar.PauseButton.X_REL,
                 GameConfig.ScoreBar.PauseButton.X_DELTA);
         float y = mRenderer.getRelativePos(GameConfig.ScoreBar.PauseButton.Y_REL,
                 GameConfig.ScoreBar.PauseButton.Y_DELTA);
         Button button = new Button(mRenderer, x, y, GameConfig.ScoreBar.PauseButton.WIDTH,
                 GameConfig.ScoreBar.PauseButton.HEIGHT);
-        button.addNormalTex(isPause ? mPauseIconTex : mResumeIconTex, 0.0f, 0.0f,
+        button.addNormalTex(mPauseIconTex, 0.0f, 0.0f,
                 GameConfig.ScoreBar.PauseButton.SPRITE_WIDTH,
                 GameConfig.ScoreBar.PauseButton.SPRITE_HEIGHT);
-        button.addHighlightTex(isPause ? mPauseIconPressedTex : mResumeIconPressedTex, 0.0f, 0.0f,
+        button.addHighlightTex(mPauseIconPressedTex, 0.0f, 0.0f,
                 GameConfig.ScoreBar.PauseButton.SPRITE_WIDTH,
                 GameConfig.ScoreBar.PauseButton.SPRITE_HEIGHT);
         button.setClickListener(listener, message);
         return button;
     }
 
-    public Button makePauseButton(Widget.WidgetTriggerListener listener, int message) {
-        return makePauseOrResumeButton(true, listener, message);
+    public Button makeSpeakerOnButton(Widget.WidgetTriggerListener listener, int message) {
+        return makeSpeakerOnOrMuteButton(false, listener, message);
     }
 
-    public Button makeResumeButton(Widget.WidgetTriggerListener listener, int message) {
-        return makePauseOrResumeButton(false, listener, message);
+    public Button makeSpeakerMuteButton(Widget.WidgetTriggerListener listener, int message) {
+        return makeSpeakerOnOrMuteButton(true, listener, message);
     }
 
     public GameObject makePauseCurtain() {
@@ -280,38 +329,6 @@ public class GameObjectFactory {
         button.addNormalTex(mQuitBarTex, 0.0f, 0.0f,
                 GameConfig.PauseScreen.QuitBar.SPRITE_WIDTH, Float.NaN);
         button.addHighlightTex(mQuitBarPressedTex, 0.0f, 0.0f,
-                GameConfig.PauseScreen.QuitBar.SPRITE_WIDTH, Float.NaN);
-        button.setClickListener(listener, message);
-        return button;
-    }
-
-    // As above, but anchored at the top of screen (hence -y)
-    public Button makePodiumQuitButton(Widget.WidgetTriggerListener listener, int message) {
-        float x = mRenderer.getRelativePos(GameConfig.PauseScreen.QuitBar.X_REL,
-                GameConfig.PauseScreen.QuitBar.X_DELTA);
-        float y = mRenderer.getRelativePos(GameConfig.PauseScreen.QuitBar.Y_REL,
-                GameConfig.PauseScreen.QuitBar.Y_DELTA);
-        Button button = new Button(mRenderer, x, -y, GameConfig.PauseScreen.QuitBar.WIDTH,
-                GameConfig.PauseScreen.QuitBar.HEIGHT);
-        button.addNormalTex(mQuitBarTex, 0.0f, 0.0f,
-                GameConfig.PauseScreen.QuitBar.SPRITE_WIDTH, Float.NaN);
-        button.addHighlightTex(mQuitBarPressedTex, 0.0f, 0.0f,
-                GameConfig.PauseScreen.QuitBar.SPRITE_WIDTH, Float.NaN);
-        button.setClickListener(listener, message);
-        return button;
-    }
-
-    // As above, but anchored at the top of screen (hence -y)
-    public Button makePodiumShareButton(Widget.WidgetTriggerListener listener, int message) {
-        float x = mRenderer.getRelativePos(GameConfig.PauseScreen.QuitBar.X_REL,
-                GameConfig.PauseScreen.QuitBar.X_DELTA);
-        float y = mRenderer.getRelativePos(GameConfig.PauseScreen.QuitBar.Y_REL,
-                GameConfig.PauseScreen.QuitBar.Y_DELTA);
-        Button button = new Button(mRenderer, -x, -y, GameConfig.PauseScreen.QuitBar.WIDTH,
-                GameConfig.PauseScreen.QuitBar.HEIGHT);
-        button.addNormalTex(mInviteBarTex, 0.0f, 0.0f,
-                GameConfig.PauseScreen.QuitBar.SPRITE_WIDTH, Float.NaN);
-        button.addHighlightTex(mInviteBarPressedTex, 0.0f, 0.0f,
                 GameConfig.PauseScreen.QuitBar.SPRITE_WIDTH, Float.NaN);
         button.setClickListener(listener, message);
         return button;

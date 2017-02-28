@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,11 +19,14 @@ package com.google.android.apps.santatracker.service;
 import android.os.Bundle;
 import android.os.Message;
 
+import com.google.android.apps.santatracker.data.GameDisabledState;
+
 public abstract class SantaServiceMessages {
 
     // IPC Messenger communication messages
     public static final int MSG_SERVICE_REGISTER_CLIENT = 1001;
     public static final int MSG_SERVICE_UNREGISTER_CLIENT = 1002;
+    public static final int MSG_SERVICE_FORCE_SYNC = 1003;
 
     public static final int MSG_SERVICE_STATE_BEGIN = 9;
     public static final int MSG_SERVICE_STATUS = 10;
@@ -51,6 +54,13 @@ public abstract class SantaServiceMessages {
     public static final int MSG_FLAG_GAME_ROCKET = 8;
     public static final int MSG_FLAG_GAME_DANCER = 16;
     public static final int MSG_FLAG_GAME_SNOWDOWN = 32;
+    public static final int MSG_FLAG_GAME_SWIMMING = 64;
+    public static final int MSG_FLAG_GAME_BMX = 128;
+    public static final int MSG_FLAG_GAME_RUNNING = 256;
+    public static final int MSG_FLAG_GAME_TENNIS = 512;
+    public static final int MSG_FLAG_GAME_WATERPOLO = 1024;
+    public static final int MSG_FLAG_GAME_CITY_QUIZ = 2048;
+    public static final int MSG_FLAG_GAME_PRESENTQUEST = 4096;
 
     // Service status state
     public static final int STATUS_IDLE = 1;
@@ -116,16 +126,25 @@ public abstract class SantaServiceMessages {
                 getDisabledStatus(isDisabled), 0);
     }
 
-    public static Message getGamesMessage(boolean disableGumball, boolean disableJetpack,
-                                          boolean disableMemory, boolean disableRocket,
-                                          boolean disableDancer, boolean disableSnowdown) {
+    public static Message getGamesMessage(GameDisabledState state) {
         int status = 0;
-        status += disableGumball ? MSG_FLAG_GAME_GUMBALL : 0;
-        status += disableJetpack ? MSG_FLAG_GAME_JETPACK : 0;
-        status += disableMemory ? MSG_FLAG_GAME_MEMORY : 0;
-        status += disableRocket ? MSG_FLAG_GAME_ROCKET : 0;
-        status += disableDancer ? MSG_FLAG_GAME_DANCER : 0;
-        status += disableSnowdown ? MSG_FLAG_GAME_SNOWDOWN : 0;
+        status += state.disableGumballGame ? MSG_FLAG_GAME_GUMBALL : 0;
+        status += state.disableJetpackGame ? MSG_FLAG_GAME_JETPACK : 0;
+        status += state.disableMemoryGame ? MSG_FLAG_GAME_MEMORY : 0;
+        status += state.disableRocketGame ? MSG_FLAG_GAME_ROCKET : 0;
+        status += state.disableDancerGame ? MSG_FLAG_GAME_DANCER : 0;
+        status += state.disableSnowdownGame ? MSG_FLAG_GAME_SNOWDOWN : 0;
+
+        status += state.disableSwimmingGame ? MSG_FLAG_GAME_SWIMMING : 0;
+        status += state.disableBmxGame ? MSG_FLAG_GAME_BMX : 0;
+        status += state.disableRunningGame ? MSG_FLAG_GAME_RUNNING : 0;
+        status += state.disableTennisGame ? MSG_FLAG_GAME_TENNIS : 0;
+        status += state.disableWaterpoloGame ? MSG_FLAG_GAME_WATERPOLO : 0;
+
+        status += state.disableCityQuizGame ? MSG_FLAG_GAME_CITY_QUIZ : 0;
+
+        status += state.disablePresentQuest ? MSG_FLAG_GAME_PRESENTQUEST : 0;
+
         return Message.obtain(null, SantaServiceMessages.MSG_UPDATED_GAMES, status, 0);
     }
 

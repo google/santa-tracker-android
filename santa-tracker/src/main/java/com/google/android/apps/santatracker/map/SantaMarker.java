@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,26 +16,27 @@
 
 package com.google.android.apps.santatracker.map;
 
+import android.graphics.Color;
+import android.os.Handler;
+import android.os.SystemClock;
+import android.view.View;
+
 import com.google.android.apps.santatracker.R;
+import com.google.android.apps.santatracker.data.SantaPreferences;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
-import com.google.android.apps.santatracker.data.SantaPreferences;
 import com.google.maps.android.SphericalUtil;
 
-import android.graphics.Color;
-import android.os.Handler;
-import android.view.View;
-
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 /**
  * Manages the Santa Marker on a {@link SantaMapFragment}.
  *
- * @author jfschmakeit
  */
 public class SantaMarker {
 
@@ -45,13 +46,15 @@ public class SantaMarker {
      * Snippet used by all markers that make up a santa marker (including all
      * animation frame markers).
      */
-    public static final String TITLE = "santamarker";
+    static final String TITLE = "santa-marker";
+
+    private static final Object TOKEN = new Object();
 
     // The santa marker
     private Marker[] mMovementMarkers;
 
     // The map to which this marker is attached
-    private SantaMapFragment mMap;
+    private final SantaMapFragment mMap;
 
     // The movement thread
     private SantaMarkerMovementThread mMovementThread = null;
@@ -59,18 +62,9 @@ public class SantaMarker {
     // The animation thread (marker icon)
     private SantaMarkerAnimationThread mAnimationThread = null;
     private Marker[] mAnimationMarkers;
-    private int[] mAnimationIcons = new int[]{
-            R.drawable.marker_santa_presents1,
-            R.drawable.marker_santa_presents2,
-            R.drawable.marker_santa_presents3,
-            R.drawable.marker_santa_presents4,
-            R.drawable.marker_santa_presents5,
-            R.drawable.marker_santa_presents6,
-            R.drawable.marker_santa_presents7,
-            R.drawable.marker_santa_presents8};
 
     // line colour
-    private static final int mLineColour = Color.parseColor("#AAd63931");
+    private static final int mLineColour = Color.parseColor("#AA109f65");
 
     // Santa's path
     private Polyline mPath = null;
@@ -105,8 +99,7 @@ public class SantaMarker {
 
     private PresentMarker[] mPresentMarkers;
 
-    private Handler mUIHandler;
-    // State of Santa Marke - visiting or travelling
+    // State of Santa Marker - visiting or travelling
     private boolean mVisiting = false;
 
     // Flag to indicate whether draw presents or not.
@@ -115,31 +108,40 @@ public class SantaMarker {
     /**
      * Santa's position.
      */
-    private LatLng mPosition = new LatLng(0,0);
+    private LatLng mPosition = new LatLng(0, 0);
 
-    public SantaMarker(SantaMapFragment map) {
+    SantaMarker(SantaMapFragment map) {
         super();
-        this.mMap = map;
+        mMap = map;
 
         LatLng tempLocation = new LatLng(0, 0);
 
         // setup array of Santa animation markers and make them invisible
-        mAnimationMarkers = new Marker[mAnimationIcons.length];
-        for (int i = 0; i < mAnimationIcons.length; i++) {
-            Marker m = addSantaMarker(mAnimationIcons[i], 0.5f, 1f,
+        final int[] animationIcons = new int[]{
+                R.drawable.marker_santa_presents1,
+                R.drawable.marker_santa_presents2,
+                R.drawable.marker_santa_presents3,
+                R.drawable.marker_santa_presents4,
+                R.drawable.marker_santa_presents5,
+                R.drawable.marker_santa_presents6,
+                R.drawable.marker_santa_presents7,
+                R.drawable.marker_santa_presents8};
+        mAnimationMarkers = new Marker[animationIcons.length];
+        for (int i = 0; i < animationIcons.length; i++) {
+            Marker m = addSantaMarker(animationIcons[i], 0.5f, 1f,
                     tempLocation);
             m.setVisible(false);
             mAnimationMarkers[i] = m;
         }
 
-        mUIHandler = new Handler();
-
         // Present marker
         View v = map.getView();
-        mPresentMarkers = new PresentMarker[PRESENTS.length];
-        for (int i = 0; i < mPresentMarkers.length; i++) {
-            mPresentMarkers[i] = new PresentMarker(map.getMap(), this,
-                    new Handler(), PRESENTS[i], v.getWidth(), v.getHeight());
+        if (v != null) {
+            mPresentMarkers = new PresentMarker[PRESENTS.length];
+            for (int i = 0; i < mPresentMarkers.length; i++) {
+                mPresentMarkers[i] = new PresentMarker(map.getMap(), this,
+                        new Handler(), PRESENTS[i], v.getWidth(), v.getHeight());
+            }
         }
 
         // Movement markers
@@ -167,22 +169,18 @@ public class SantaMarker {
      * Adds a new marker at the given position. u, describes the anchor
      * position.
      */
-    private Marker addSantaMarker(int iconDrawable, float u, float v,
-            LatLng position) {
-        Marker m = this.mMap.addMarker(new MarkerOptions().position(position)
-                .anchor(u, v)
-                                /* anchor in center */
+    private Marker addSantaMarker(int iconDrawable, float u, float v, LatLng position) {
+        return mMap.addMarker(new MarkerOptions().position(position)
+                .anchor(u, v) // anchor in center
                 .title(TITLE)
                 .icon(BitmapDescriptorFactory.fromResource(iconDrawable)));
-
-        return m;
     }
 
     /**
      * Sets the camera orientation and update the marker if moving.
      */
     public void setCameraOrientation(float bearing) {
-        this.mCameraOrientation = (bearing + 360.0f) % 360.0f;
+        mCameraOrientation = (bearing + 360.0f) % 360.0f;
 
         if (mMovementThread != null && mMovementThread.isMoving()) {
             setMovingIcon();
@@ -243,15 +241,14 @@ public class SantaMarker {
         // stopAnimations();
         removePath();
 
-        this.mAnimationThread = new SantaMarkerAnimationThread(
-                mAnimationMarkers, mUIHandler);
+        mAnimationThread = new SantaMarkerAnimationThread(this, mAnimationMarkers);
 
-        this.mAnimationThread.startAnimation(pos);
+        mAnimationThread.startAnimation(pos);
 
         hideMovingMarker();
 
         // reset heading
-        this.mHeading = -1;
+        mHeading = -1;
 
     }
 
@@ -269,21 +266,11 @@ public class SantaMarker {
     /**
      * Saves a location as Santa's current location. This makes it available to other classes in
      * {@link #getPosition()}.
-     * @param position
+     *
+     * @param position The location to be saved.
      */
     private synchronized void setCachedPosition(LatLng position) {
         mPosition = position;
-    }
-
-    /**
-     * Returns the origin position if the marker is moving, null otherwise.
-     */
-    public LatLng getOrigin() {
-        if (mMovementThread != null) {
-            return mMovementThread.getOrigin();
-        } else {
-            return null;
-        }
     }
 
     /**
@@ -300,15 +287,15 @@ public class SantaMarker {
     /**
      * Animate this marker to the given position for the timestamps.
      */
-    public void animateTo(LatLng originLocation, LatLng destinationLocation,
-            long departure, long arrival) {
+    void animateTo(LatLng originLocation, LatLng destinationLocation,
+                   long departure, long arrival) {
 
         mVisiting = false;
 
         setMovingIcon();
         // create new animation runnable and post to handler
-        mMovementThread = new SantaMarkerMovementThread(departure, arrival,
-                destinationLocation, originLocation, mUIHandler, true);
+        mMovementThread = new SantaMarkerMovementThread(this, departure, arrival,
+                destinationLocation, originLocation, true);
         mMovementThread.startAnimation();
 
         if (mAnimationThread != null && mAnimationThread.isAlive()) {
@@ -321,9 +308,9 @@ public class SantaMarker {
      * Remove the path.
      */
     private void removePath() {
-        if (this.mPath != null) {
-            this.mPath.remove();
-            this.mPath = null;
+        if (mPath != null) {
+            mPath.remove();
+            mPath = null;
         }
     }
 
@@ -331,7 +318,7 @@ public class SantaMarker {
      * Stops all marker animations. Should be called by attached Activity in
      * lifecycle methods.
      */
-    public void stopAnimations() {
+    void stopAnimations() {
         if (mMovementThread != null) {
             mMovementThread.stopAnimation();
         }
@@ -354,11 +341,11 @@ public class SantaMarker {
         }
     }
 
-    public void pausePresentsDrawing() {
+    void pausePresentsDrawing() {
         mPresentsDrawingPaused = true;
     }
 
-    public void resumePresentsDrawing() {
+    void resumePresentsDrawing() {
         mPresentsDrawingPaused = false;
     }
 
@@ -366,34 +353,37 @@ public class SantaMarker {
      * Thread that toggles visibility of the markers, making one marker at a
      * time visible.
      *
-     * @author jfschmakeit
      */
-    public class SantaMarkerAnimationThread extends Thread {
+    private static class SantaMarkerAnimationThread extends Thread {
 
         /*
          * The refresh rate is identical to the marker movement thread to
          * animate the presents
          */
-        public static final int REFRESH_RATE = SantaMarkerMovementThread.REFRESH_RATE;
-        public static final int ANIMATION_DELAY = 6; // should be equivalent to
-        // a postdelay of 150ms
+        static final int REFRESH_RATE = SantaMarkerMovementThread.REFRESH_RATE;
+        static final int ANIMATION_DELAY = 6; // should be equivalent to a post delay of 150ms
         private Marker[] mToggleMarkers;
-        private Handler mHandler;
         private int mCurrent = 0;
         private int mFrame = 0;
         private boolean mStopThread = false;
         private SwapMarkersRunnable mSwapRunnable;
         private final LatLng TEMP_POSITION = new LatLng(0f, 0f);
+        private final WeakReference<SantaMarker> mSantaMarkerRef;
 
-        public SantaMarkerAnimationThread(Marker[] mMarkers, Handler mHandler) {
+        SantaMarkerAnimationThread(SantaMarker santaMarker, Marker[] markers) {
             super();
-            this.mToggleMarkers = mMarkers;
-            this.mHandler = mHandler;
-            this.mSwapRunnable = new SwapMarkersRunnable();
+            mToggleMarkers = markers;
+            mSwapRunnable = new SwapMarkersRunnable();
+            mSantaMarkerRef = new WeakReference<>(santaMarker);
         }
 
         public void run() {
             while (!this.mStopThread) {
+                SantaMarker marker = mSantaMarkerRef.get();
+                if (marker == null) {
+                    mStopThread = true;
+                    break;
+                }
                 if (mFrame == 0) {
 
                     final int currentMarker = mCurrent;
@@ -402,11 +392,15 @@ public class SantaMarker {
 
                     mSwapRunnable.currentMarker = currentMarker;
                     mSwapRunnable.nextMarker = nextMarker;
-                    mHandler.post(mSwapRunnable);
+                    View view = marker.mMap.getView();
+                    if (view != null) {
+                        view.getHandler().postAtTime(mSwapRunnable, TOKEN,
+                                SystemClock.uptimeMillis());
+                    }
                 }
                 mFrame = (mFrame + 1) % ANIMATION_DELAY;
 
-                for (PresentMarker m : mPresentMarkers) {
+                for (PresentMarker m : marker.mPresentMarkers) {
                     m.draw();
                 }
 
@@ -422,7 +416,7 @@ public class SantaMarker {
         /**
          * Hide and move markers, need to restart thread to make visible again.
          */
-        public void hideAll() {
+        void hideAll() {
             for (Marker m : mToggleMarkers) {
                 m.setVisible(false);
                 m.setPosition(TEMP_POSITION);
@@ -437,43 +431,58 @@ public class SantaMarker {
          * Start this thread. All animated markers (and the normal santa marker)
          * are hidden.
          */
-        public void startAnimation(LatLng position) {
-            this.mStopThread = false;
+        void startAnimation(LatLng position) {
+            mStopThread = false;
             hideAll();
 
-            setCachedPosition(position);
+            SantaMarker marker = mSantaMarkerRef.get();
+            if (marker == null) {
+                return;
+            }
+            marker.setCachedPosition(position);
 
-            for (PresentMarker m : mPresentMarkers) {
+            for (PresentMarker m : marker.mPresentMarkers) {
                 m.reset();
             }
 
-            moveAnimationMarkers(position);
+            marker.moveAnimationMarkers(position);
 
-            this.start();
+            start();
         }
 
         /**
          * Stop this thread. All animated markers are hidden and the original
          * santa marker is made visible.
          */
-        public void stopAnimation() {
+        void stopAnimation() {
             // stop execution by removing all callbacks
-            this.mStopThread = true;
-            mHandler.removeCallbacksAndMessages(null);
+            mStopThread = true;
+            SantaMarker marker = mSantaMarkerRef.get();
+            if (marker != null) {
+                View view = marker.mMap.getView();
+                if (view != null) {
+                    view.getHandler().removeCallbacksAndMessages(TOKEN);
+                }
+            }
             hideAll();
         }
 
         class SwapMarkersRunnable implements Runnable {
 
-            public int currentMarker, nextMarker;
+            int currentMarker, nextMarker;
 
             public void run() {
-                if (mMap != null && mMap.getMap() != null) {
+                SantaMarker marker = mSantaMarkerRef.get();
+                if (marker == null) {
+                    return;
+                }
+                SantaMapFragment map = marker.mMap;
+                if (map != null && map.getMap() != null) {
                     mToggleMarkers[currentMarker].setVisible(false);
                     mToggleMarkers[nextMarker].setVisible(true);
 
-                    float zoom = mMap.getMap().getCameraPosition().zoom;
-                    PresentMarker.setViewParameters(zoom, mMap.isInSantaCam());
+                    float zoom = map.getMap().getCameraPosition().zoom;
+                    PresentMarker.setViewParameters(zoom, map.isInSantaCam());
                 }
             }
         }
@@ -484,90 +493,112 @@ public class SantaMarker {
      * Animation Thread for a Santa Marker. Animates the marker between two
      * locations.
      *
-     * @author jfschmakeit
      */
-    public class SantaMarkerMovementThread extends Thread {
+    private static class SantaMarkerMovementThread extends Thread {
 
         /**
          * Refresh rate of this thread (it is called again every X ms.)
          */
-        public static final int REFRESH_RATE = 17;
+        static final int REFRESH_RATE = 17;
 
         private boolean mStopThread = false;
-        private long start, arrival;
-        private double duration;
-        private LatLng destinationLocation, startLocation;
-        private Handler handler;
+        private long mStart, mArrival;
+        private double mDuration;
+        private LatLng mDestinationLocation, mStartLocation;
         private boolean mIsAnimated = false;
-        private ArrayList<LatLng> pathPoints;
+        private ArrayList<LatLng> mPathPoints;
+        private final WeakReference<SantaMarker> mSantaMarkerRef;
 
         // Threads
         private MovementRunnable mMovementRunnable;
 
-        public SantaMarkerMovementThread(long departureTime, long arrivalTime,
-                LatLng destinationLocation, LatLng startLocation,
-                Handler handler, boolean drawPath) {
-            this.start = departureTime;
-            this.arrival = arrivalTime;
-            this.destinationLocation = destinationLocation;
-            this.startLocation = startLocation;
-            this.handler = handler;
-            this.duration = arrivalTime - departureTime;
+        SantaMarkerMovementThread(SantaMarker marker, long departureTime, long arrivalTime,
+                                  LatLng destinationLocation, LatLng startLocation,
+                                  boolean drawPath) {
+            mStart = departureTime;
+            mArrival = arrivalTime;
+            mDestinationLocation = destinationLocation;
+            mStartLocation = startLocation;
+            mDuration = arrivalTime - departureTime;
+            mSantaMarkerRef = new WeakReference<>(marker);
 
-            removePath();
+            marker.removePath();
             if (drawPath) {
                 // set up path
                 PolylineOptions line = new PolylineOptions().add(startLocation)
                         .add(startLocation).color(mLineColour);
-                mPath = mMap.getMap().addPolyline(line);
-                mPath.setGeodesic(true);
-                pathPoints = new ArrayList<LatLng>(2);
-                pathPoints.add(startLocation); // origin
-                pathPoints.add(startLocation); // destination - updated in loop
+                marker.mPath = marker.mMap.getMap().addPolyline(line);
+                marker.mPath.setGeodesic(true);
+                mPathPoints = new ArrayList<>(2);
+                mPathPoints.add(startLocation); // origin
+                mPathPoints.add(startLocation); // destination - updated in loop
             } else {
-                mPath = null; // already removed
+                marker.mPath = null; // already removed
             }
 
             mMovementRunnable = new MovementRunnable();
 
         }
 
-        public void stopAnimation() {
+        private void stopAnimation() {
             this.mStopThread = true;
-            handler.removeCallbacksAndMessages(null);
+            SantaMarker marker = mSantaMarkerRef.get();
+            if (marker != null) {
+                View view = marker.mMap.getView();
+                if (view != null) {
+                    view.getHandler().removeCallbacksAndMessages(TOKEN);
+                }
+            }
         }
 
-        public void startAnimation() {
+        void startAnimation() {
             this.mStopThread = false;
             start();
         }
 
         private Runnable mSetIconRunnable = new Runnable() {
             public void run() {
-                setMovingIcon();
+                SantaMarker marker = mSantaMarkerRef.get();
+                if (marker != null) {
+                    marker.setMovingIcon();
+                }
             }
         };
         private Runnable mReachedDestinationRunnable = new Runnable() {
 
             public void run() {
-                removePath();
+                SantaMarker marker = mSantaMarkerRef.get();
+                if (marker == null) {
+                    return;
+                }
+                marker.removePath();
                 // notify callback
-                mMap.onSantaReachedDestination(destinationLocation);
+                marker.mMap.onSantaReachedDestination(mDestinationLocation);
             }
         };
 
         public void run() {
             while (!mStopThread) {
+                SantaMarker marker = mSantaMarkerRef.get();
+                if (marker == null) {
+                    mStopThread = true;
+                    break;
+                }
                 // need to initialise, marker not set as animated yet
+                final View view = marker.mMap.getView();
                 if (!mIsAnimated) {
 
                     mIsAnimated = true;
 
                     // calculate heading and update icon
-                    mHeading = SphericalUtil.computeHeading(startLocation, destinationLocation);
-                    mHeading = (mHeading + 360f) % 360f;
+                    marker.mHeading = SphericalUtil.computeHeading(mStartLocation,
+                            mDestinationLocation);
+                    marker.mHeading = (marker.mHeading + 360f) % 360f;
 
-                    handler.post(mSetIconRunnable);
+                    if (view != null) {
+                        view.getHandler().postAtTime(mSetIconRunnable, TOKEN,
+                                SystemClock.uptimeMillis());
+                    }
                     // Log.d(TAG, "Starting animation thread: from: "
                     // + startLocation + " --to: " + destinationLocation
                     // + ", start=" + start + ", dep=" + arrival
@@ -586,10 +617,13 @@ public class SantaMarker {
 
                     mMovementRunnable.position = calculatePositionProgress(t);
                     // move marker and update path
-                    handler.post(mMovementRunnable);
+                    if (view != null) {
+                        view.getHandler().postAtTime(mMovementRunnable, TOKEN,
+                                SystemClock.uptimeMillis());
+                    }
 
-                    if (!mPresentsDrawingPaused) {
-                        for (PresentMarker p : mPresentMarkers) {
+                    if (!marker.mPresentsDrawingPaused) {
+                        for (PresentMarker p : marker.mPresentMarkers) {
                             p.draw();
                         }
                     }
@@ -603,9 +637,12 @@ public class SantaMarker {
                     // reached final destination,stop moving
                     mIsAnimated = false;
                     mStopThread = true;
-                    setCachedPosition(destinationLocation);
+                    marker.setCachedPosition(mDestinationLocation);
 
-                    handler.post(mReachedDestinationRunnable);
+                    if (view != null) {
+                        view.getHandler().postAtTime(mReachedDestinationRunnable, TOKEN,
+                                SystemClock.uptimeMillis());
+                    }
 
                 }
 
@@ -614,10 +651,10 @@ public class SantaMarker {
 
         /**
          * Calculate the position for the given future timestamp. If the
-         * destination is reached before this timestmap, its destination is
+         * destination is reached before this timestamp, its destination is
          * returned.
          */
-        public LatLng calculatePosition(long timestamp) {
+        LatLng calculatePosition(long timestamp) {
             double progress = calculateProgress(timestamp);
             return calculatePositionProgress(progress);
         }
@@ -626,7 +663,7 @@ public class SantaMarker {
          * Calculates the progress through the animation for the given timestamp
          */
         private double calculateProgress(long currentTimestamp) {
-            return (currentTimestamp - start) / duration; // linear progress
+            return (currentTimestamp - mStart) / mDuration; // linear progress
         }
 
         /**
@@ -635,15 +672,11 @@ public class SantaMarker {
          */
         private LatLng calculatePositionProgress(double progress) {
 
-            return SphericalUtil.interpolate(startLocation, destinationLocation, progress);
+            return SphericalUtil.interpolate(mStartLocation, mDestinationLocation, progress);
         }
 
         private LatLng getDestination() {
-            return destinationLocation;
-        }
-
-        private LatLng getOrigin() {
-            return startLocation;
+            return mDestinationLocation;
         }
 
         private boolean isMoving() {
@@ -652,25 +685,28 @@ public class SantaMarker {
 
         class MovementRunnable implements Runnable {
 
-            public LatLng position;
+            LatLng position;
 
             public void run() {
-                setMovingPosition(position);
+                SantaMarker marker = mSantaMarkerRef.get();
+                if (marker == null) {
+                    return;
+                }
+                marker.setMovingPosition(position);
 
                 // update path if it is enabled
-                if (mPath != null) {
-                    pathPoints.set(1, position);
-                    mPath.setPoints(pathPoints);
+                if (marker.mPath != null) {
+                    mPathPoints.set(1, position);
+                    marker.mPath.setPoints(mPathPoints);
                 }
 
-                if (mMap.getMap() != null) {
-                    float zoom = mMap.getMap().getCameraPosition().zoom;
-                    PresentMarker.setViewParameters(zoom, mMap.isInSantaCam());
+                if (marker.mMap.getMap() != null) {
+                    float zoom = marker.mMap.getMap().getCameraPosition().zoom;
+                    PresentMarker.setViewParameters(zoom, marker.mMap.isInSantaCam());
                 }
 
                 long time = SantaPreferences.getCurrentTime();
-                mMap.onSantaIsMovingProgress(position, arrival - time, time
-                        - start);
+                marker.mMap.onSantaIsMovingProgress(position, mArrival - time, time - mStart);
 
             }
         }
@@ -679,14 +715,11 @@ public class SantaMarker {
     /**
      * Interface for callbacks from a {@link SantaMarker}.
      *
-     * @author jfschmakeit
      */
-    public interface SantaMarkerInterface {
+    interface SantaMarkerInterface {
 
-        public void onSantaReachedDestination(LatLng location);
+        void onSantaReachedDestination(LatLng location);
 
-        public void onSantaIsMovingProgress(LatLng position,
-                long remainingTime, long elapsedTime);
     }
 
 }

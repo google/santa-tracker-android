@@ -1,9 +1,24 @@
-<?xml version="1.0"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
-  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">&#x72EC;&#x81EA;&#x306E;&#x30AA;&#x30FC;&#x30CA;&#x30E1;&#x30F3;&#x30C8;&#x3092;&#x4F5C;&#x6210;&#x4E2D;</string>
-  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">&#x5199;&#x771F;&#x3092;&#x64AE;&#x308B;</string>
-  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">&#x518D;&#x8A66;&#x884C;</string>
-  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">&#x7D42;&#x4E86;</string>
-  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">&#x3042;&#x306A;&#x305F;&#x306E;&#x30B9;&#x30CE;&#x30FC;&#x30B0;&#x30ED;&#x30FC;&#x30D6;&#x3092;&#x5171;&#x6709;...</string>
-  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">&#x72EC;&#x81EA;&#x306E;&#x753B;&#x50CF;&#x3092;&#x4F5C;&#x6210;&#x4E2D;</string>
+  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">独自のオーナメントを作成中</string>
+  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">写真を撮る</string>
+  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">再試行</string>
+  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">終了</string>
+  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">あなたのスノーグローブを共有...</string>
+  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">独自の画像を作成中</string>
 </resources>

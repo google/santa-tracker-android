@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,8 +21,10 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -68,8 +70,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
      * descending order.
      */
     private final ArrayList<TrackerCard> mCards = new ArrayList<>();
-    private final ThumbnailListener mThumbnailListener;
-    private final Map<YouTubeThumbnailView, YouTubeThumbnailLoader> mThumbnailViewToLoader =
+    private ThumbnailListener mThumbnailListener;
+    private Map<YouTubeThumbnailView, YouTubeThumbnailLoader> mThumbnailViewToLoader =
             new HashMap<>();
 
     private static final String TAG = "CardAdaptor";
@@ -83,7 +85,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
                        DestinationCardKeyListener destCardListener, boolean isTv) {
         mContext = context;
         mTypefaceLabel = Typeface.createFromAsset(context.getAssets(),
-                context.getResources().getString(R.string.typeface_robotocondensed_regular));
+                context.getResources().getString(R.string.typeface_roboto_black));
         mTypefaceBody = Typeface.createFromAsset(context.getAssets(),
                 context.getResources().getString(R.string.typeface_roboto_light));
         mListener = listener;
@@ -169,7 +171,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
             mFocusHighlight.onInitializeView(holder.itemView);
 
             if (holder.itemView.getBackground() == null) {
-                holder.itemView.setBackground(res.getDrawable(R.drawable.tv_tracker_card_selector));
+                holder.itemView.setBackground(ResourcesCompat.getDrawable(res,
+                        R.drawable.tv_tracker_card_selector,
+                        holder.itemView.getContext().getTheme()));
             }
         }
     }
@@ -194,7 +198,14 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
                 // Image
                 Glide.with(context).load(destination.url).into(h.image);
                 // Attribution
-                h.copyright.setText(Html.fromHtml(destination.attributionHtml));
+                Spanned attribution;
+                if (Build.VERSION.SDK_INT >= 24) {
+                    attribution = Html.fromHtml(destination.attributionHtml, 0);
+                } else {
+                    //noinspection deprecation
+                    attribution = Html.fromHtml(destination.attributionHtml);
+                }
+                h.copyright.setText(attribution);
             }
             h.arrival.setText(DashboardFormats.formatTime(context, destination.timestamp));
             if (destination.hasWeather) {
@@ -239,6 +250,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
             PhotoViewHolder h = (PhotoViewHolder) holder;
             Glide.with(h.image.getContext()).load(photo.imageUrl).into(h.image);
         } else if (card instanceof TrackerCard.MovieCard) {
+            if (mThumbnailViewToLoader == null || mThumbnailListener == null) {
+                return;
+            }
             TrackerCard.MovieCard movie = (TrackerCard.MovieCard) card;
             MovieViewHolder h = (MovieViewHolder) holder;
             h.thumbnail.setTag(movie.youtubeId);
@@ -267,7 +281,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
 
     @Override
     public void onDetachedFromRecyclerView(RecyclerView recyclerView) {
-        releaseLoaders();
+        release();
         super.onDetachedFromRecyclerView(recyclerView);
     }
 
@@ -417,7 +431,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
     public interface DestinationCardKeyListener {
 
         void onJumpToDestination(LatLng destination);
+
         void onFinish();
+
         boolean onMoveBy(KeyEvent event);
     }
 
@@ -485,12 +501,17 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
         }
     };
 
-
-    public void releaseLoaders() {
-        for (YouTubeThumbnailLoader loader : mThumbnailViewToLoader.values()) {
-            loader.release();
+    public void release() {
+        if (mThumbnailViewToLoader != null) {
+            for (YouTubeThumbnailLoader loader : mThumbnailViewToLoader.values()) {
+                if (loader != null) {
+                    loader.release();
+                }
+            }
+            mThumbnailViewToLoader.clear();
+            mThumbnailViewToLoader = null;
         }
-        mThumbnailViewToLoader.clear();
+        mThumbnailListener = null;
     }
 
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,21 +16,27 @@
 
 package com.google.android.apps.santatracker.map;
 
+import android.graphics.Point;
+import android.os.Handler;
+
+import com.google.android.apps.santatracker.data.SantaPreferences;
+import com.google.android.apps.santatracker.util.SantaLog;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.Projection;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.apps.santatracker.data.SantaPreferences;
-import com.google.android.apps.santatracker.util.SantaLog;
 
-import android.graphics.Point;
-import android.os.Handler;
+class PresentMarker {
 
-public class PresentMarker {
+    private static final int ANIMATION_FRAMES_FADEOUT = 4; // per marker
+    private static final int ANIMATION_FRAMES_MOVING_MAX = 275;
+    private static final int ANIMATION_FRAMES_MOVING_MIN = 175;
+    private static final int ANIMATION_FRAMES_WAIT = 500;
+    private static final double MAXIMUM_ZOOM_LEVEL = 8.7f;
 
-    public static final String MARKER_TITLE = "PresentMarker";
+    static final String MARKER_TITLE = "PresentMarker";
 
     private Marker[] mAnimationMarkers;
     private Marker mMovementMarker;
@@ -42,13 +48,7 @@ public class PresentMarker {
     private LatLng mDestination = null;
     private int mFrame = 0;
     private double mDirectionLat, mDirectionLng;
-    public static final int ANIMATION_FRAMES_FADEOUT = 4; // per marker
-    public static final int ANIMATION_FRAMES_MOVING_MAX = 275;
-    public static final int ANIMATION_FRAMES_MOVING_MIN = 175;
-    public static final int ANIMATION_FRAMES_WAIT = 500;
     private int mTotalAnimationLength;
-    //private static final String TAG = "PresentMarker";
-    private static final double MAXIMUM_ZOOM_LEVEL = 8.7f;
 
     private LatLng mLocation;
     private int mAnimationDuration;
@@ -59,8 +59,8 @@ public class PresentMarker {
 
     private static boolean VALID_CAMERA;
 
-    public PresentMarker(GoogleMap map, SantaMarker santa, Handler handler,
-            int[] animIcons, int screenWidth, int screenHeight) {
+    PresentMarker(GoogleMap map, SantaMarker santa, Handler handler,
+                  int[] animIcons, int screenWidth, int screenHeight) {
         this.mMap = map;
         this.mSantaMarker = santa;
         this.mHandler = handler;
@@ -90,18 +90,18 @@ public class PresentMarker {
         reset();
     }
 
-    public void setProjection(Projection p, LatLng santaPosition) {
+    private void setProjection(Projection p, LatLng santaPosition) {
         this.mProjection = p;
         this.mSantaPosition = santaPosition;
         this.mWaitingForProjection = false;
     }
 
-    public static void setViewParameters(double zoom, boolean inSantaCam) {
+    static void setViewParameters(double zoom, boolean inSantaCam) {
         VALID_CAMERA = zoom > MAXIMUM_ZOOM_LEVEL || inSantaCam;
 
     }
 
-    public void draw() {
+    void draw() {
 
         // 5 States: waiting for valid camera for new present location, waiting
         // for start,
@@ -144,7 +144,7 @@ public class PresentMarker {
             // "New present Marker position: "+mLocation+" movement: "+mDirectionLat+", "+mDirectionLng);
             mProjection = null;
 
-        } else if (mFrame < mAnimationDuration && mDestination != null) {
+        } else if (mFrame < mAnimationDuration) {
             // Moving animation
 
             mLocation = new LatLng(mLocation.latitude + mDirectionLat,

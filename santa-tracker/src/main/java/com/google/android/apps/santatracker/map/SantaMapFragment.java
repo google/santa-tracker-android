@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,23 +18,23 @@ package com.google.android.apps.santatracker.map;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
+import android.support.annotation.DrawableRes;
+import android.support.graphics.drawable.VectorDrawableCompat;
 
-import com.google.android.apps.santatracker.AudioPlayer;
 import com.google.android.apps.santatracker.R;
 import com.google.android.apps.santatracker.data.Destination;
 import com.google.android.apps.santatracker.data.DestinationDbHelper;
 import com.google.android.apps.santatracker.data.SantaPreferences;
-import com.google.android.apps.santatracker.map.DestinationInfoWindowAdapter.DestinationInfoWindowInterface;
 import com.google.android.apps.santatracker.map.SantaMarker.SantaMarkerInterface;
 import com.google.android.apps.santatracker.map.cameraAnimations.AtLocation;
 import com.google.android.apps.santatracker.map.cameraAnimations.SantaCamAnimator;
 import com.google.android.apps.santatracker.util.AnalyticsManager;
 import com.google.android.apps.santatracker.util.MeasurementManager;
-import com.google.android.apps.santatracker.util.SantaLog;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.CancelableCallback;
@@ -50,6 +50,7 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -58,10 +59,8 @@ import com.google.firebase.analytics.FirebaseAnalytics;
  * A specialised {@link MapFragment} that displays Santa's destinations and
  * holds a {@link SantaMarker}. The attaching activity MUST implement {@link SantaMapInterface}.
  *
- * @author jfschmakeit
  */
-public class SantaMapFragment extends SupportMapFragment implements
-        DestinationInfoWindowInterface, SantaMarkerInterface {
+public class SantaMapFragment extends SupportMapFragment implements SantaMarkerInterface {
 
     // The map
     private GoogleMap mMap = null;
@@ -70,12 +69,9 @@ public class SantaMapFragment extends SupportMapFragment implements
     private SantaMapInterface mCallback;
 
     // visited location
-    private BitmapDescriptor MARKERICON_VISITED;
-    private BitmapDescriptor MARKERICON_ACTIVE;
+    private BitmapDescriptor mMarkerIconVisited;
 
-    private static final String TAG = "SantaMap";
-
-    // Identify different types of markers for infowindow
+    // Identify different types of markers for info window
     public static final String MARKER_PAST = "MARKER_PAST";
     public static final String MARKER_NEXT = "MARKER_NEXT";
     public static final String MARKER_ACTIVE = "MARKER_ACTIVE";
@@ -97,20 +93,20 @@ public class SantaMapFragment extends SupportMapFragment implements
     private SantaMarker mSantaMarker = null;
 
     // duration of camera animation to santa when SC is enabled
-    public static final int SANTACAM_MOVETOSANTA_DURATION = 2000;
+    public static final int SANTACAM_MOVE_TO_SANTA_DURATION = 2000;
 
     // duration of camera animation to user destination
-    public static final int SANTACAM_MOVETOSDEST_DURATION = 2000;
+    public static final int SANTACAM_MOVE_TO_DEST_DURATION = 2000;
 
-    // zoom level of MOVETODEST destination animation
-    public static final float SANTACAM_MOVETOSDEST_ZOOM = 12.f;
+    // zoom level of MOVE TO DEST destination animation
+    public static final float SANTACAM_MOVE_TO_DEST_ZOOM = 12.f;
 
 
     // is SantaCam enabled?
     private boolean mSantaCam = false;
 
     // Manages audio playback
-    private AudioPlayer mAudioPlayer;
+    private TrackerSoundPlayer mTrackerSoundPlayer;
 
     private SantaCamAnimator mSantaCamAnimator;
 
@@ -149,21 +145,21 @@ public class SantaMapFragment extends SupportMapFragment implements
     }
 
     public void resumeAudio() {
-        mAudioPlayer.resumeAll();
-        mAudioPlayer.unMuteAll();
+        mTrackerSoundPlayer.resume();
+        mTrackerSoundPlayer.unmute();
     }
 
     public void pauseAudio() {
-        mAudioPlayer.pauseAll();
-        mAudioPlayer.muteAll();
+        mTrackerSoundPlayer.pause();
+        mTrackerSoundPlayer.mute();
     }
 
     public void stopAudio() {
-        mAudioPlayer.stopAll();
+        mTrackerSoundPlayer.release();
     }
 
     /**
-     * Add the sanata marker to the map
+     * Add the santa marker to the map.
      */
     private void addSanta() {
         // create Santa marker
@@ -173,11 +169,11 @@ public class SantaMapFragment extends SupportMapFragment implements
     /**
      * Animate the santa marker to destination to arrive at its arrival time.
      */
-    public void setSantaTravelling(
-            Destination origin, Destination destination, boolean moveCameraToSanta) {
+    public void setSantaTravelling(Destination origin,
+        Destination destination, boolean moveCameraToSanta) {
 
-        mAudioPlayer.playTrack(R.raw.ho_ho_ho, false);
-        mAudioPlayer.playTrack(R.raw.sleighbells, true);
+        mTrackerSoundPlayer.sayHoHoHo();
+        mTrackerSoundPlayer.startSleighBells();
 
         // display next destination marker
         mNextMarker.setSnippet(Integer.toString(destination.id));
@@ -200,9 +196,9 @@ public class SantaMapFragment extends SupportMapFragment implements
         mSantaMarker.setVisiting(destination.position);
 
         // stop bells and play 'hohoho'
-        mAudioPlayer.stop(R.raw.sleighbells);
+        mTrackerSoundPlayer.stopSleighBells();
         if (playSound) {
-            mAudioPlayer.playTrack(R.raw.ho_ho_ho, false);
+            mTrackerSoundPlayer.sayHoHoHo();
         }
 
         // hide the next marker from this position, move it off-screen to
@@ -210,10 +206,9 @@ public class SantaMapFragment extends SupportMapFragment implements
         mNextMarker.setVisible(false);
         mNextMarker.setPosition(BOGUS_LOCATION);
 
-        // if the infowindow for this position is open, dismiss it
+        // if the info window for this position is open, dismiss it
         if (mActiveMarker != null && mActiveMarker.isVisible()
-                && mActiveMarker.getSnippet().equals(
-                Integer.toString(destination.id))) {
+                && mActiveMarker.getSnippet().equals(Integer.toString(destination.id))) {
             hideInfoWindow();
         }
 
@@ -228,14 +223,14 @@ public class SantaMapFragment extends SupportMapFragment implements
         disableSantaCam();
 
         if (mSantaMarker != null) {
-            // present drawing will be resumsed when SantaCam is enabled again.
+            // present drawing will be resumed when SantaCam is enabled again.
             mSantaMarker.pausePresentsDrawing();
         }
 
         if (mMap != null) {
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position,
-                            SANTACAM_MOVETOSDEST_ZOOM),
-                    SANTACAM_MOVETOSDEST_DURATION, null);
+                    SANTACAM_MOVE_TO_DEST_ZOOM),
+                    SANTACAM_MOVE_TO_DEST_DURATION, null);
         }
     }
 
@@ -251,11 +246,8 @@ public class SantaMapFragment extends SupportMapFragment implements
         mSantaCam = true;
         mCallback.onSantacamStateChange(true);
 
-        // hide current infowindow
+        // hide current info window
         hideInfoWindow();
-
-        // Toast.makeText(this.getActivity(), "SantaCam Enabled",
-        // Toast.LENGTH_SHORT).show();
 
         mSantaCamAnimator.reset();
 
@@ -264,9 +256,16 @@ public class SantaMapFragment extends SupportMapFragment implements
             // camera animation
             if (!mSantaMarker.isVisiting()) {
                 mSantaCamAnimator.pause();
-                mMap.animateCamera(CameraUpdateFactory.newLatLng(mSantaMarker.getFuturePosition(
-                                SantaPreferences.getCurrentTime() + SANTACAM_MOVETOSANTA_DURATION)),
-                        SANTACAM_MOVETOSANTA_DURATION, mMovingCatchupCallback);
+                LatLng futurePosition = mSantaMarker.getFuturePosition(
+                        SantaPreferences.getCurrentTime() + SANTACAM_MOVE_TO_SANTA_DURATION);
+                if (futurePosition != null &&
+                        !(futurePosition.latitude == 0 && futurePosition.longitude == 0)) {
+                    mMap.animateCamera(CameraUpdateFactory.newLatLng(futurePosition),
+                            SANTACAM_MOVE_TO_SANTA_DURATION, mMovingCatchupCallback);
+                } else {
+                    mSantaCamAnimator.resume();
+                    mSantaMarker.resumePresentsDrawing();
+                }
             } else {
                 // Santa is at a location
                 onSantaReachedDestination(mSantaMarker.getPosition());
@@ -355,7 +354,7 @@ public class SantaMapFragment extends SupportMapFragment implements
     /**
      * Marker click listener. Handles clicks on markers. When a destination
      * marker is clicked, the active marker is set to this position and the
-     * corresponding infowindow is displayed. If santa cam is enabled, it is
+     * corresponding info window is displayed. If santa cam is enabled, it is
      * disabled.
      */
     private OnMarkerClickListener mMarkerClickListener = new OnMarkerClickListener() {
@@ -369,7 +368,7 @@ public class SantaMapFragment extends SupportMapFragment implements
             // Santa Marker
             else if (marker.getTitle().equals(SantaMarker.TITLE)) {
 
-                mAudioPlayer.playTrack(R.raw.ho_ho_ho, false);
+                mTrackerSoundPlayer.sayHoHoHo();
 
                 hideInfoWindow();
 
@@ -384,7 +383,7 @@ public class SantaMapFragment extends SupportMapFragment implements
 
                 // spin camera around if santa is not moving in SC
                 // or at any other time if not in SC
-                if ((mSantaCam && mSantaMarker.isVisiting()) || !mSantaCam) {
+                if (!mSantaCam || mSantaMarker.isVisiting()) {
                     // spin camera around to opposite side
                     CameraPosition oldCamera = mMap.getCameraPosition();
                     float bearing = oldCamera.bearing;
@@ -397,7 +396,7 @@ public class SantaMapFragment extends SupportMapFragment implements
                             .bearing(bearing).build();
                     mMap.animateCamera(
                             CameraUpdateFactory.newCameraPosition(camera),
-                            SANTACAM_MOVETOSANTA_DURATION,
+                            SANTACAM_MOVE_TO_SANTA_DURATION,
                             new CancelableCallback() {
 
                                 public void onFinish() {
@@ -412,7 +411,7 @@ public class SantaMapFragment extends SupportMapFragment implements
                                             .bearing(bearing).build();
                                     mMap.animateCamera(CameraUpdateFactory
                                                     .newCameraPosition(camera),
-                                            SANTACAM_MOVETOSANTA_DURATION, null);
+                                            SANTACAM_MOVE_TO_SANTA_DURATION, null);
                                 }
 
                                 public void onCancel() {
@@ -447,49 +446,6 @@ public class SantaMapFragment extends SupportMapFragment implements
 
     };
 
-
-    /**
-     * Converts from degrees to radians.
-     *
-     * @return Result in radians.
-     */
-    private static double sphericalDdegreesToRadians(double deg) {
-        return deg * (Math.PI / 180);
-    }
-
-    /**
-     * Converts from radians to degrees.
-     *
-     * @param rad Input in radians.
-     * @return Result in degrees.
-     */
-    private static double sphericalRadiansToDegrees(double rad) {
-        return rad / (Math.PI / 180);
-    }
-
-    /**
-     * Wraps the given value into the inclusive-exclusive interval between min
-     * and max.
-     *
-     * @param {number} value The value to wrap.
-     * @param {number} min The minimum.
-     * @param {number} max The maximum.
-     * @return {number} The result.
-     */
-    private static double sphericalWrap(double value, double min, double max) {
-        return sphericalMod(value - min, max - min) + min;
-    }
-
-    /**
-     * Returns the non-negative remainder of x / m.
-     *
-     * @param x The operand.
-     * @param m The modulus.
-     */
-    private static double sphericalMod(double x, double m) {
-        return ((x % m) + m) % m;
-    }
-
     /**
      * Activity is attaching to this fragment, ensure it is implementing
      * {@link SantaMapInterface}.
@@ -498,7 +454,7 @@ public class SantaMapFragment extends SupportMapFragment implements
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
-        mAudioPlayer = new AudioPlayer(activity.getApplicationContext());
+        mTrackerSoundPlayer = new TrackerSoundPlayer(activity);
 
         // ensure that attaching activity implements the required interface
         try {
@@ -515,7 +471,7 @@ public class SantaMapFragment extends SupportMapFragment implements
     public void onDetach() {
         super.onDetach();
         mCallback = null;
-        mAudioPlayer.stopAll();
+        mTrackerSoundPlayer.release();
     }
 
     @Override
@@ -545,37 +501,39 @@ public class SantaMapFragment extends SupportMapFragment implements
      * the map has been initialised.
      */
     private void setupMap(GoogleMap map) {
-        SantaLog.d(TAG, "Setup map.");
         mMap = map;
 
-        mInfoWindowAdapter = new DestinationInfoWindowAdapter(
-                getLayoutInflater(null), this, getActivity()
-                .getApplicationContext());
+        mInfoWindowAdapter = new DestinationInfoWindowAdapter(getLayoutInflater(null),
+                getActivity().getApplicationContext());
 
         // clear map in case it was restored
         mMap.clear();
+
+        // Set map theme
+        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(getActivity(),
+                R.raw.map_style));
 
         // setup map UI - disable zoom controls
         UiSettings ui = this.mMap.getUiSettings();
         ui.setZoomControlsEnabled(false);
         ui.setCompassEnabled(false);
 
-        this.mMap.setInfoWindowAdapter(mInfoWindowAdapter);
-        this.mMap.setOnInfoWindowClickListener(mInfoWindowClickListener);
-        this.mMap.setOnMapClickListener(mMapClickListener);
-        this.mMap.setOnCameraChangeListener(mCameraChangeListener);
-        this.mMap.setOnMarkerClickListener(mMarkerClickListener);
+        mMap.setInfoWindowAdapter(mInfoWindowAdapter);
+        mMap.setOnInfoWindowClickListener(mInfoWindowClickListener);
+        mMap.setOnMapClickListener(mMapClickListener);
+        mMap.setOnCameraChangeListener(mCameraChangeListener);
+        mMap.setOnMarkerClickListener(mMarkerClickListener);
 
         // setup marker icons
-        MARKERICON_VISITED = BitmapDescriptorFactory
-                .fromResource(R.drawable.marker_pin);
-        MARKERICON_ACTIVE = BitmapDescriptorFactory
-                .fromResource(R.drawable.marker_pin_blue);
+        mMarkerIconVisited = createMarker(R.drawable.marker_pin);
 
         // add active marker
         mActiveMarker = mMap.addMarker(new MarkerOptions()
-                .position(BOGUS_LOCATION).icon(MARKERICON_ACTIVE)
-                .title(MARKER_ACTIVE).visible(false).snippet("0")
+                .position(BOGUS_LOCATION)
+                .icon(createMarker(R.drawable.marker_pin_active))
+                .title(MARKER_ACTIVE)
+                .visible(false)
+                .snippet("0")
                 .anchor(0.5f, 1f));
         mActiveMarker.setVisible(false); // required, visible in MarkerOptions
         // does not work
@@ -583,15 +541,32 @@ public class SantaMapFragment extends SupportMapFragment implements
         // add next marker
         mNextMarker = mMap.addMarker(new MarkerOptions()
                 .position(BOGUS_LOCATION)
-                .icon(BitmapDescriptorFactory
-                        .fromResource(R.drawable.marker_pin_light))
-                .visible(false).snippet("0").title(MARKER_NEXT)
+                .icon(createMarker(R.drawable.marker_pin))
+                .alpha(0.6f)
+                .visible(false)
+                .snippet("0")
+                .title(MARKER_NEXT)
                 .anchor(0.5f, 1f));
         mNextMarker.setVisible(false);
 
         addSanta();
 
         mSantaCamAnimator = new SantaCamAnimator(mMap, mSantaMarker);
+    }
+
+    private BitmapDescriptor createMarker(@DrawableRes int id) {
+        final VectorDrawableCompat drawable =
+                VectorDrawableCompat.create(getResources(), id, getActivity().getTheme());
+        if (drawable == null) {
+            return null;
+        }
+        final int width = drawable.getIntrinsicWidth();
+        final int height = drawable.getIntrinsicHeight();
+        drawable.setBounds(0, 0, width, height);
+        final Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        final Canvas canvas = new Canvas(bitmap);
+        drawable.draw(canvas);
+        return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
 
     public boolean isInitialised() {
@@ -606,19 +581,13 @@ public class SantaMapFragment extends SupportMapFragment implements
      * Add a marker for a previous location.
      */
     public void addLocation(Destination destination) {
-        // Log.d(TAG, "Adding destination: "+destination
-        // +", map = "+mMap+", init?"+isInitialised());
         mMap.addMarker(new MarkerOptions().position(destination.position)
-                .icon(MARKERICON_VISITED).anchor(0.5f, 1f).title(MARKER_PAST)
+                .icon(mMarkerIconVisited).anchor(0.5f, 1f).title(MARKER_PAST)
                 .snippet(Integer.toString(destination.id)));
     }
 
-    public LatLng getSantaPosition() {
-        return mSantaMarker.getPosition();
-    }
-
     /**
-     * If the active marker is set, hide its infowindow and restore the original
+     * If the active marker is set, hide its info window and restore the original
      * marker.
      */
     private void restoreClickedMarker() {
@@ -640,15 +609,6 @@ public class SantaMapFragment extends SupportMapFragment implements
             restoreClickedMarker();
             mCallback.onClearDestination();
         }
-    }
-
-
-    /**
-     * Callback that retrieves a {@link Destination} object for the given
-     * identifier.
-     */
-    public Destination getDestinationInfo(int id) {
-        return mCallback.getDestination(id);
     }
 
     /**
@@ -698,7 +658,6 @@ public class SantaMapFragment extends SupportMapFragment implements
 
             mCallback.onShowDestination(destination);
         }
-
     }
 
     /**
@@ -720,13 +679,13 @@ public class SantaMapFragment extends SupportMapFragment implements
     }
 
     /**
-     * Info Window Click listener. When an infowindow is clicked, the displayed
-     * infowindow is dismissed.
+     * Info Window Click listener. When an info window is clicked, the displayed
+     * info window is dismissed.
      */
     private OnInfoWindowClickListener mInfoWindowClickListener = new OnInfoWindowClickListener() {
 
         public void onInfoWindowClick(Marker arg0) {
-            // dismiss the infowindow and restore original marker
+            // dismiss the info window and restore original marker
             hideInfoWindow();
         }
     };
@@ -784,7 +743,7 @@ public class SantaMapFragment extends SupportMapFragment implements
                 mMap.animateCamera(AtLocation
                                 .GetCameraUpdate(mSantaMarker.getPosition(),
                                         mMap.getCameraPosition().bearing),
-                        SANTACAM_MOVETOSANTA_DURATION, mReachedAnimationCallback);
+                        SANTACAM_MOVE_TO_SANTA_DURATION, mReachedAnimationCallback);
             }
         }
     };
@@ -796,16 +755,11 @@ public class SantaMapFragment extends SupportMapFragment implements
         @Override
         public void run() {
             if (mMap != null && mSantaMarker != null && mSantaMarker.getDestination() != null) {
-                mMap.animateCamera(CameraUpdateFactory.newLatLng(mSantaMarker.getPosition())
-                        , SANTACAM_MOVETOSANTA_DURATION, null);
+                mMap.animateCamera(CameraUpdateFactory.newLatLng(mSantaMarker.getPosition()),
+                        SANTACAM_MOVE_TO_SANTA_DURATION, null);
             }
         }
     };
-
-    public void moveMapBy(float x, float y) {
-        Log.d(TAG, "move camera by:" + x + ", " + y);
-        mMap.animateCamera(CameraUpdateFactory.scrollBy(x, y));
-    }
 
     /**
      * AsyncTask that queries the database for a destination.
@@ -828,7 +782,6 @@ public class SantaMapFragment extends SupportMapFragment implements
     /**
      * Interface for callbacks from this Fragment.
      *
-     * @author jfschmakeit
      */
     public interface SantaMapInterface {
 
@@ -838,11 +791,6 @@ public class SantaMapFragment extends SupportMapFragment implements
         void onMapInitialised();
 
         void mapClickAction();
-
-        /**
-         * Returns the destination with the given id
-         */
-        Destination getDestination(int id);
 
         /**
          * Called when the santacam is enabled or disabled.

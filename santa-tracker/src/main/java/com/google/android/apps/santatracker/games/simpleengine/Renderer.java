@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@ import android.graphics.RectF;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 import android.opengl.Matrix;
+
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -128,11 +129,6 @@ public final class Renderer {
 
     // color used to clear the screen
     private static final int DEFAULT_CLEAR_COLOR = 0xffff0000;
-    int mClearColor = DEFAULT_CLEAR_COLOR;
-
-    public void setClearColor(int color) {
-        mClearColor = color;
-    }
 
     Renderer() {
     }
@@ -322,6 +318,7 @@ public final class Renderer {
         GLES20.glGenTextures(1, texH, 0);
         TexInfo ti = mTexInfo.get(texIndex);
         bitmapToGLTexture(texH[0], bmp);
+
         ti.glTex = texH[0];
         ti.width = bmp.getWidth();
         ti.height = bmp.getHeight();
@@ -374,70 +371,72 @@ public final class Renderer {
     private float[] mTmpColor = new float[4];
 
     public void doFrame() {
-        parseColor(mClearColor, mTmpColor);
-        GLES20.glClearColor(mTmpColor[0], mTmpColor[1], mTmpColor[2], mTmpColor[3]);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
         if (mBitmapTextureMaker != null || mTextTextureMaker != null) {
             // we are still loading textures, so don't render any sprites yet
             return;
         }
-
         int i, size = mSprites.size();
         for (i = 0; i < size; i++) {
             Sprite s = mSprites.get(i);
-            if (!s.enabled) {
-                continue;
-            }
-
-            float tintFactor = s.tintFactor;
-            TexInfo ti = null;
-            if (s.texIndex >= 0 && s.texIndex < mTexInfo.size()) {
-                ti = mTexInfo.get(s.texIndex);
-                pushTex(ti.glTex);
-            } else {
-                pushTex(0);
-                tintFactor = 1.0f;
-            }
-            parseColor(s.color, mTmpColor);
-            pushColor(mTmpColor[0], mTmpColor[1], mTmpColor[2], mTmpColor[3], tintFactor);
-
-            float width = s.width, height = s.height, x = s.x, y = s.y;
-
-            if (ti != null && ti.type == TexInfo.TYPE_IMAGE) {
-                width = s.width;
-                height = s.height;
-                if (Float.isNaN(width) && ti != null) {
-                    // auto calculate width based on texture aspect ratio
-                    width = s.width = s.height * ti.aspect;
-                }
-                if (Float.isNaN(height) && ti != null) {
-                    // auto calculate height based on texture aspect ratio
-                    height = s.height = s.width / ti.aspect;
-                }
-            } else if (ti != null && ti.type == TexInfo.TYPE_TEXT) {
-                // text images don't respect width/height -- they render at whatever
-                // size they were created, in order to respect the originally requested font size
-                width = pixelsToLogical(ti.width);
-                height = pixelsToLogical(ti.height);
-
-                // adjust x,y according to text anchor parameter
-                int horizAnchor = ti.textAnchor & TEXT_ANCHOR_HORIZ_MASK;
-                int vertAnchor = ti.textAnchor & TEXT_ANCHOR_VERT_MASK;
-                if (horizAnchor == TEXT_ANCHOR_LEFT) {
-                    x += width * 0.5f;
-                } else if (horizAnchor == TEXT_ANCHOR_RIGHT) {
-                    x -= width * 0.5f;
-                }
-                if (vertAnchor == TEXT_ANCHOR_TOP) {
-                    y += height * 0.5f;
-                } else if (vertAnchor == TEXT_ANCHOR_BOTTOM) {
-                    y -= height * 0.5f;
-                }
-            }
-
-            drawQuad(x, y, width, height, s.rotation);
+            drawSprite(s);
         }
+    }
+
+    private boolean drawSprite(Sprite s) {
+        if (!s.enabled) {
+            return false;
+        }
+
+        float tintFactor = s.tintFactor;
+        TexInfo ti = null;
+        if (s.texIndex >= 0 && s.texIndex < mTexInfo.size()) {
+            ti = mTexInfo.get(s.texIndex);
+            pushTex(ti.glTex);
+
+        } else {
+            pushTex(0);
+            tintFactor = 1.0f;
+        }
+        parseColor(s.color, mTmpColor);
+        pushColor(mTmpColor[0], mTmpColor[1], mTmpColor[2], mTmpColor[3], tintFactor);
+
+        float width = s.width, height = s.height, x = s.x, y = s.y;
+
+        if (ti != null && ti.type == TexInfo.TYPE_IMAGE) {
+            width = s.width;
+            height = s.height;
+            if (Float.isNaN(width) && ti != null) {
+                // auto calculate width based on texture aspect ratio
+                width = s.width = s.height * ti.aspect;
+            }
+            if (Float.isNaN(height) && ti != null) {
+                // auto calculate height based on texture aspect ratio
+                height = s.height = s.width / ti.aspect;
+            }
+        } else if (ti != null && ti.type == TexInfo.TYPE_TEXT) {
+            // text images don't respect width/height -- they render at whatever
+            // size they were created, in order to respect the originally requested font size
+            width = pixelsToLogical(ti.width);
+            height = pixelsToLogical(ti.height);
+
+            // adjust x,y according to text anchor parameter
+            int horizAnchor = ti.textAnchor & TEXT_ANCHOR_HORIZ_MASK;
+            int vertAnchor = ti.textAnchor & TEXT_ANCHOR_VERT_MASK;
+            if (horizAnchor == TEXT_ANCHOR_LEFT) {
+                x += width * 0.5f;
+            } else if (horizAnchor == TEXT_ANCHOR_RIGHT) {
+                x -= width * 0.5f;
+            }
+            if (vertAnchor == TEXT_ANCHOR_TOP) {
+                y += height * 0.5f;
+            } else if (vertAnchor == TEXT_ANCHOR_BOTTOM) {
+                y -= height * 0.5f;
+            }
+        }
+        drawQuad(x, y, width, height, s.rotation);
+        return true;
     }
 
     private float pixelsToLogical(int pixels) {
@@ -516,7 +515,6 @@ public final class Renderer {
     }
 
     public void reset() {
-        mClearColor = DEFAULT_CLEAR_COLOR;
         deleteTextures();
         deleteSprites();
     }
@@ -624,6 +622,14 @@ public final class Renderer {
         if (idx >= 0 && idx < mSprites.size()) {
             mSprites.remove(idx);
             mSprites.add(sp);
+        }
+    }
+
+    public void sendToBack(Sprite sp) {
+        int idx = mSprites.indexOf(sp);
+        if (idx > 0 && idx < mSprites.size()) {
+            mSprites.remove(idx);
+            mSprites.add(0, sp);
         }
     }
 }

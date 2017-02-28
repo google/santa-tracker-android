@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,11 +24,11 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 /**
  * Automatically re-enable SantaCam after a timeout has expired.
  */
-public class SantaCamTimeout {
+class SantaCamTimeout {
 
     private SantaMapFragment mMap;
 
-    // timestamp at which SC is to be reenabled without user interaction
+    // timestamp at which SC is to be enabled without user interaction
     private long mCamReEnableTime;
     private int mCamTimeout = -1;
 
@@ -40,7 +40,7 @@ public class SantaCamTimeout {
 
     private SantaCamButton mSantaCamButton;
 
-    public SantaCamTimeout(SantaMapFragment map, SantaCamButton santaCamButton) {
+    SantaCamTimeout(SantaMapFragment map, SantaCamButton santaCamButton) {
         mMap = map;
         mSantaCamButton = santaCamButton;
     }
@@ -79,8 +79,6 @@ public class SantaCamTimeout {
 
     public void reset() {
         mCamReEnableTime = System.currentTimeMillis() + SANTACAM_AUTO_ENABLE_TIMEOUT;
-        // Log.d(TAG, "Cam interaction - timeout set to :" + mCamReEnableTime
-        // + ", current time: " + System.currentTimeMillis());
         mCamTimeout = -1;
     }
 

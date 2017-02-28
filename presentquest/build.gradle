@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.tools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        vectorDrawables.useSupportLibrary = true
+    }
+}
+
+dependencies {
+    compile project(':common')
+
+    compile rootProject.ext.appCompat
+    compile rootProject.ext.design
+    compile rootProject.ext.constraintLayout
+
+    compile rootProject.ext.playServicesMaps
+    compile rootProject.ext.playServicesLocation
+    compile rootProject.ext.playServicesPlaces
+
+    compile rootProject.ext.firebaseConfig
+
+    compile rootProject.ext.sugarOrm
+
+    compile rootProject.ext.easypermissions
+}

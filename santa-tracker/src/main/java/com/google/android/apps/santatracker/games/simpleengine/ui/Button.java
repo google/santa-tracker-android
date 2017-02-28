@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,7 @@ public class Button extends Widget {
 
     private boolean mVisible = true;
     private boolean mArmed = false;
+    private boolean mEnabled = true;
     private Renderer mRenderer;
     private float mX, mY, mWidth, mHeight;
 
@@ -187,32 +188,42 @@ public class Button extends Widget {
 
     @Override
     public void onPointerDown(int pointerId, float x, float y) {
-        super.onPointerDown(pointerId, x, y);
-        if (isInButton(x, y)) {
-            mArmed = true;
-            updateSprites();
+        if(mEnabled) {
+            super.onPointerDown(pointerId, x, y);
+            if (isInButton(x, y)) {
+                mArmed = true;
+                updateSprites();
+            }
         }
     }
 
     @Override
     public void onPointerMove(int pointerId, float x, float y, float deltaX, float deltaY) {
-        super.onPointerMove(pointerId, x, y, deltaX, deltaY);
-        if (!isInButton(x, y)) {
-            mArmed = false;
-            updateSprites();
+        if(mEnabled) {
+            super.onPointerMove(pointerId, x, y, deltaX, deltaY);
+            if (!isInButton(x, y)) {
+                mArmed = false;
+                updateSprites();
+            }
         }
     }
 
     @Override
     public void onPointerUp(int pointerId, float x, float y) {
-        super.onPointerUp(pointerId, x, y);
-        if (mArmed && isInButton(x, y)) {
-            mArmed = false;
-            updateSprites();
-            if (mListener != null) {
-                mListener.onWidgetTriggered(mTriggerMessage);
+        if(mEnabled) {
+            super.onPointerUp(pointerId, x, y);
+            if (mArmed && isInButton(x, y)) {
+                mArmed = false;
+                updateSprites();
+                if (mListener != null) {
+                    mListener.onWidgetTriggered(mTriggerMessage);
+                }
             }
         }
+    }
+
+    public void setEnabled(boolean enabled) {
+        mEnabled = enabled;
     }
 
     @Override

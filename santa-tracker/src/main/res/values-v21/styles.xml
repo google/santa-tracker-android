@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
 
     <style name="CardBorderlessButton.Base" parent="android:style/Widget.Material.Button.Borderless"></style>
 
     <style name="RedButton" parent="android:Widget.Material.Button.Borderless.Colored">
-        <item name="android:colorButtonNormal">@color/SantaRed</item>
+        <item name="android:colorButtonNormal">@color/SantaRedSoft</item>
         <item name="android:colorControlHighlight">@color/SantaWhite</item>
         <item name="android:textColor">@color/SantaWhite</item>
+    </style>
+
+    <style name="CityQuizProgressBar" parent="Base.Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/SantaWhite</item>
     </style>
 
 </resources>

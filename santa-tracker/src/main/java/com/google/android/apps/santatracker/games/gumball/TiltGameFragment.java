@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 package com.google.android.apps.santatracker.games.gumball;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
@@ -32,6 +31,7 @@ import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Surface;
@@ -49,12 +49,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.apps.santatracker.R;
-import com.google.android.apps.santatracker.util.ImmersiveModeHelper;
 import com.google.android.apps.santatracker.games.common.PlayGamesActivity;
 import com.google.android.apps.santatracker.games.matching.CircleView;
 import com.google.android.apps.santatracker.games.matching.LevelTextView;
 import com.google.android.apps.santatracker.games.matching.MatchingGameConstants;
 import com.google.android.apps.santatracker.invites.AppInvitesFragment;
+import com.google.android.apps.santatracker.util.ImmersiveModeHelper;
 
 import org.jbox2d.callbacks.ContactImpulse;
 import org.jbox2d.callbacks.ContactListener;
@@ -78,8 +78,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * Gumball game fragment.
  */
-public class TiltGameFragment extends Fragment
-        implements SensorEventListener, ContactListener, AnimationListener, OnClickListener {
+public class TiltGameFragment extends Fragment implements
+        SensorEventListener, ContactListener, AnimationListener,
+        OnClickListener {
 
     /**
      * Bounce rate of objects in the physics world.
@@ -482,12 +483,13 @@ public class TiltGameFragment extends Fragment
 
 
         // Display the instructions if they haven't been seen before
-        mSharedPreferences = getActivity().getSharedPreferences(MatchingGameConstants.PREFERENCES_FILENAME, Context.MODE_PRIVATE);
+        mSharedPreferences = getActivity().getSharedPreferences(MatchingGameConstants.PREFERENCES_FILENAME, getActivity().MODE_PRIVATE);
         if (!mSharedPreferences.getBoolean(MatchingGameConstants.GUMBALL_INSTRUCTIONS_VIEWED, false)) {
             mDrawableTransition = new AnimationDrawable();
-            mDrawableTransition.addFrame(getResources().getDrawable(R.drawable.instructions_shake_1), 300);
-            mDrawableTransition.addFrame(getResources().getDrawable(R.drawable.instructions_shake_2), 300);
-            mDrawableTransition.addFrame(getResources().getDrawable(R.drawable.instructions_shake_3), 300);
+
+            mDrawableTransition.addFrame(VectorDrawableCompat.create(getResources(), R.drawable.instructions_shake_1, null), 300);
+            mDrawableTransition.addFrame(VectorDrawableCompat.create(getResources(), R.drawable.instructions_shake_2, null), 300);
+            mDrawableTransition.addFrame(VectorDrawableCompat.create(getResources(), R.drawable.instructions_shake_3, null), 300);
             mDrawableTransition.setOneShot(false);
             mViewInstructions = (ImageView) mRootView.findViewById(R.id.instructions);
 
@@ -505,7 +507,7 @@ public class TiltGameFragment extends Fragment
             // Hide the instructions after 2 seconds
             mViewInstructions.postDelayed(new HideInstructionsRunnable(), 2200);
         }
-
+        
         return mRootView;
     }
 
@@ -674,11 +676,7 @@ public class TiltGameFragment extends Fragment
             mPreviousSensorY = y;
         }
         // restrict x to ~+-45 degrees
-        if (x > 1.7) {
-            x = 2;
-        } else if (x < -1.7) {
-            x = -2;
-        }
+        x *= 0.5;
         mWorld.getWorld().setGravity(new Vec2(x, mPreviousSensorY));
     }
 
@@ -1151,7 +1149,8 @@ public class TiltGameFragment extends Fragment
             if (mViewPauseButton.getVisibility() != View.GONE) {// check if already handled
                 pauseGame();
             } else {
-                unPauseGame();
+                // Exit and return to previous Activity.
+                returnToBackClass();
             }
         }
     }

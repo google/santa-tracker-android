@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
   <string name="santaDashboard" translation_description="A grouping of Santa's status on a dashboard">Julemandens instrumentbræt</string>
   <string name="current_location" translation_description="Where is Santa now. Label in all capital letters.">NUVÆRENDE PLACERING</string>
-  <string name="presents_delivered" translation_description="How many presents has Santa delivered. Label in all capital letters.">ANTAL LEVEREDE GAVER</string>
+  <string name="presents_delivered" translation_description="How many presents has Santa delivered. Label in all capital letters.">LEVEREDE GAVER</string>
   <string name="santa_status" translation_description="What's Santa saying. Label in all capital letters.">JULEMANDENS STATUS</string>
   <string name="arriving_in" translation_description="How much longer until Santa arrives at the next stop.Label in all capital letters.">ANKOMMER OM</string>
   <string name="departing_in" translation_description="How much longer until Santa departs current location. Label in all capital letters.">REJSER OM</string>

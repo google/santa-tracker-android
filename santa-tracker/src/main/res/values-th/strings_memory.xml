@@ -1,8 +1,23 @@
-<?xml version="1.0"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
-  <string name="mmg_score" translation_description="Header for score">&#xE04;&#xE30;&#xE41;&#xE19;&#xE19;</string>
-  <string name="mmg_level" translation_description="Header for level">&#xE23;&#xE30;&#xE14;&#xE31;&#xE1A;</string>
-  <string name="mmg_summary_playagain" translation_description="Button text for playing again">&#xE40;&#xE25;&#xE48;&#xE19;&#xE2D;&#xE35;&#xE01;&#xE04;&#xE23;&#xE31;&#xE49;&#xE07;</string>
-  <string name="mmg_btn_pause" translation_description="Button hint for pausing the game">&#xE2B;&#xE22;&#xE38;&#xE14;&#xE40;&#xE01;&#xE21;&#xE0A;&#xE31;&#xE48;&#xE27;&#xE04;&#xE23;&#xE32;&#xE27;</string>
-  <string name="mmg_btn_resume" translation_description="Button hint for resuming the game">&#xE01;&#xE25;&#xE31;&#xE1A;&#xE21;&#xE32;&#xE40;&#xE25;&#xE48;&#xE19;&#xE40;&#xE01;&#xE21;&#xE15;&#xE48;&#xE2D;</string>
+  <string name="mmg_score" translation_description="Header for score">คะแนน</string>
+  <string name="mmg_level" translation_description="Header for level">ระดับ</string>
+  <string name="mmg_summary_playagain" translation_description="Button text for playing again">เล่นอีกครั้ง</string>
+  <string name="mmg_btn_pause" translation_description="Button hint for pausing the game">หยุดเกมชั่วคราว</string>
+  <string name="mmg_btn_resume" translation_description="Button hint for resuming the game">กลับมาเล่นเกมต่อ</string>
 </resources>

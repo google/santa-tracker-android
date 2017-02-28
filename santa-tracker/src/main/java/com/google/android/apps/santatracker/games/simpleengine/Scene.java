@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,5 +46,12 @@ public class Scene {
     }
 
     public void onKeyUp(int keyCode) {
+    }
+
+    public void onSensorChanged(float x, float y, int accuracy) {
+    }
+
+    public boolean isGameEnded() {
+        return false;
     }
 }

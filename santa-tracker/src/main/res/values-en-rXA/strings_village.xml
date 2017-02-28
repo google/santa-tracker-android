@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <resources>
   <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">[Föļļöŵ Šåñţå öñ Ðéçémбéŕ 24ţĥ. one two three four five six seven]</string>
-  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Ĝûmбåļļ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
-  <string name="gumball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Ĝûmбåļļ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven]</string>
-  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Mémöŕý ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
-  <string name="memory_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Mémöŕý îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven]</string>
-  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Éļƒ Ĵéţþåçķ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
-  <string name="elf_jetpack_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Éļƒ Ĵéţþåçķ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
-  <string name="snowglobe_locked" translation_description="Tooltip. Game is unavailable until a certain date.">[Šñöŵĝļöбé ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
-  <string name="snowglobe_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Šñöŵĝļöбé îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
-  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">[Ŕöçķéţ Šļéîĝĥ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
-  <string name="rocket_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Ŕöçķéţ Šļéîĝĥ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
-  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">[Ðåšĥéŕ Ðåñçéŕ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
-  <string name="dancer_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Ðåšĥéŕ Ðåñçéŕ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
-  <string name="snowball_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Šñöŵбåļļ ĝåmé ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
-  <string name="snowball_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Šñöŵбåļļ ĝåmé îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven eight]</string>
-  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date">[Šñöŵðöŵñ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
-  <string name="snowdown_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason">[Šñöŵðöŵñ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven]</string>
+  <string name="present_quest_locked" translation_description="Tooltip. Game is unavailable until a certain date. PresentQuest is a game where player walks around the real world looking for presents.">[Þŕéšéñţ Qûéšţ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date. Gumball is a game where player has to tilt phone to drop gumballs on a target.">[Ĝûmбåļļ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date. Memory is a game where player has to complete a memory matching task.">[Mémöŕý ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
+  <string name="elf_jetpack_locked" translation_description="Tooltip. Game is unavailable until a certain date. Elf Jetpack is a game where player is an elf flying with a jetpack.">[Éļƒ Ĵéţþåçķ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date. Rocket sleigh is a game where player is an elf riding a rocket-powered sleigh.">[Ŕöçķéţ Šļéîĝĥ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date. Dasher Dancer is a game name. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">[Ðåšĥéŕ Ðåñçéŕ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
+  <string name="snowdown_locked" translation_description="Tooltip. Game is unavailable until a certain date. Snowdown is a play on words based on Showdown, with snow.">[Šñöŵðöŵñ ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine]</string>
+  <string name="city_quiz_locked" translation_description="Tooltip. Game is unavailable until a certain date. City Quiz is a game where player is shown pictures of cities and asked to select the correct location on a map.">[Çîţý Qûîž ĝåmé ŵîļļ бé åvåîļåбļé öñ Ðéçémбéŕ 1šţ. one two three four five six seven eight nine ten]</string>
+  <string name="generic_game_disabled" translation_description="Tooltip. Game is unavailable for an unknown reason. Placeholder is the game name.">[ᐅ%1$sᐊ îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven]</string>
   <string name="video" translation_description="Description of a button that plays a video.">[Vîðéö one]</string>
   <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">[Vîðéö ŵîļļ бé ûñļöçķéð öñ Ðéçémбéŕ ᐅ%1$dᐊ. one two three four five six seven eight]</string>
   <string name="video_disabled" translation_description="Tooltip. Video is unavailable for an unknown reason">[Vîðéö îš çûŕŕéñţļý ûñåvåîļåбļé. one two three four five six seven]</string>

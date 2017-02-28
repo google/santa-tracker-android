@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +31,7 @@ import android.widget.Toast;
 
 import com.google.android.apps.santatracker.R;
 import com.google.android.apps.santatracker.data.DestinationDbHelper;
+import com.google.android.apps.santatracker.data.GameDisabledState;
 import com.google.android.apps.santatracker.data.SantaPreferences;
 import com.google.android.apps.santatracker.data.StreamDbHelper;
 import com.google.android.apps.santatracker.util.SantaLog;
@@ -38,9 +39,13 @@ import com.google.android.apps.santatracker.util.SantaLog;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.TimeZone;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 
 public class SantaService extends Service implements APIProcessor.APICallback {
@@ -62,7 +67,6 @@ public class SantaService extends Service implements APIProcessor.APICallback {
 
     private SantaPreferences mPreferences;
     private DestinationDbHelper mDbHelper;
-    private StreamDbHelper mStreamDbHelper;
 
     // current state of the service
     private int mState = SantaServiceMessages.STATUS_IDLE_NODATA;
@@ -70,9 +74,12 @@ public class SantaService extends Service implements APIProcessor.APICallback {
     private ArrayList<Messenger> mClients = new ArrayList<>(2);
     private final ArrayList<Messenger> mPendingClients = new ArrayList<>(2);
 
-    private final Messenger mIncomingMessenger = new Messenger(new IncomingHandler());
+    private Messenger mIncomingMessenger;
 
     private APIProcessor mApiProcessor;
+
+    private static final ThreadPoolExecutor EXECUTOR = new ThreadPoolExecutor(2, 4, 60L,
+            TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>());
 
     private Handler mHandler = null;
     private HandlerThread mApiThread = new HandlerThread("ApiThread");
@@ -134,9 +141,9 @@ public class SantaService extends Service implements APIProcessor.APICallback {
     @Override
     public void onCreate() {
         super.onCreate();
+        mIncomingMessenger = new Messenger(new IncomingHandler(this));
         mState = SantaServiceMessages.STATUS_IDLE_NODATA;
-        mApiThread.start();
-        mHandler = new Handler(mApiThread.getLooper());
+        startHandlerThread();
 
         // initialise config values
         final Resources res = getResources();
@@ -149,7 +156,7 @@ public class SantaService extends Service implements APIProcessor.APICallback {
 
         mPreferences = new SantaPreferences(getApplicationContext());
         mDbHelper = DestinationDbHelper.getInstance(getApplicationContext());
-        mStreamDbHelper = StreamDbHelper.getInstance(getApplicationContext());
+        StreamDbHelper streamDbHelper = StreamDbHelper.getInstance(getApplicationContext());
 
         // invalidate all data if database has been upgraded (or started for the
         // first time)
@@ -157,7 +164,7 @@ public class SantaService extends Service implements APIProcessor.APICallback {
                 mPreferences.getStreamDBVersion() != StreamDbHelper.DATABASE_VERSION) {
             SantaLog.d(TAG, "Data is invalid - reinitialising.");
             mDbHelper.reinitialise();
-            mStreamDbHelper.reinitialise();
+            streamDbHelper.reinitialise();
             mPreferences.invalidateData();
             mPreferences.setDestDBVersion(DestinationDbHelper.DATABASE_VERSION);
             mPreferences.setStreamDBVersion(StreamDbHelper.DATABASE_VERSION);
@@ -182,10 +189,10 @@ public class SantaService extends Service implements APIProcessor.APICallback {
         if (API_CLIENT.equals("local")) {
             Toast.makeText(this, "Using Local API file!", Toast.LENGTH_SHORT).show();
             // For a local data file, remove all existing data first when the file is initialised
-            mApiProcessor = new LocalApiProcessor(mPreferences, mDbHelper, mStreamDbHelper, this);
+            mApiProcessor = new LocalApiProcessor(mPreferences, mDbHelper, streamDbHelper, this);
         } else {
             // Default processor that accesses the remote api via HTTPS.
-            mApiProcessor = new RemoteApiProcessor(mPreferences, mDbHelper, mStreamDbHelper, this);
+            mApiProcessor = new RemoteApiProcessor(mPreferences, mDbHelper, streamDbHelper, this);
         }
 
         // Check state of data - is it up to date?
@@ -195,6 +202,12 @@ public class SantaService extends Service implements APIProcessor.APICallback {
             mState = SantaServiceMessages.STATUS_IDLE_NODATA;
         }
 
+    }
+
+    @Override
+    public void onDestroy() {
+        mIncomingMessenger = null;
+        super.onDestroy();
     }
 
     /**
@@ -333,11 +346,8 @@ public class SantaService extends Service implements APIProcessor.APICallback {
     }
 
     @Override
-    public void onNewGameState(boolean disableGumball, boolean disableJetpack,
-                               boolean disableMemory, boolean disableRocket,
-                               boolean disableDancer, boolean disableSnowdown) {
-        sendMessage(SantaServiceMessages.getGamesMessage(disableGumball, disableJetpack,
-                disableMemory, disableRocket, disableDancer, disableSnowdown));
+    public void onNewGameState(GameDisabledState state) {
+        sendMessage(SantaServiceMessages.getGamesMessage(state));
     }
 
     @Override
@@ -375,22 +385,14 @@ public class SantaService extends Service implements APIProcessor.APICallback {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (mHandler == null || !mApiThread.isAlive()) {
-            mApiThread.start();
-            mHandler = new Handler(mApiThread.getLooper());
-        }
-
+        startHandlerThread();
         scheduleApiAccess();
         return super.onStartCommand(intent, flags, startId);
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        if (mHandler == null || !mApiThread.isAlive()) {
-            mApiThread.start();
-            mHandler = new Handler(mApiThread.getLooper());
-        }
-
+        startHandlerThread();
         scheduleApiAccess();
         return mIncomingMessenger.getBinder();
 
@@ -406,6 +408,25 @@ public class SantaService extends Service implements APIProcessor.APICallback {
             }
         }
         return super.onUnbind(intent);
+    }
+
+    private void startHandlerThread() {
+        if (mHandler == null || !mApiThread.isAlive()) {
+            SantaLog.d(TAG, "startHandlerThread");
+            mApiThread.start();
+            mHandler = new Handler(mApiThread.getLooper());
+        }
+    }
+
+    private void startUpdateConfig() {
+        // Using a ThreadPoolExecutor here because I could not figure out how to get the
+        // Handler to execute this runnable.  Calling mHandler.post(...) never called run().
+        EXECUTOR.execute(new Runnable() {
+            @Override
+            public void run() {
+                accessInfoAPI();
+            }
+        });
     }
 
     private Message getTimeUpdateMessage() {
@@ -428,10 +449,7 @@ public class SantaService extends Service implements APIProcessor.APICallback {
                     SantaServiceMessages.getSwitchOffMessage(mPreferences.getSwitchOff()),
                     getTimeUpdateMessage(),
                     SantaServiceMessages.getCastDisabledMessage(mPreferences.getCastDisabled()),
-                    SantaServiceMessages.getGamesMessage(mPreferences.getGumballDisabled(),
-                            mPreferences.getJetpackDisabled(), mPreferences.getMemoryDisabled(),
-                            mPreferences.getRocketDisabled(), mPreferences.getDancerDisabled(),
-                            mPreferences.getSnowdownDisabled()),
+                    SantaServiceMessages.getGamesMessage(new GameDisabledState(mPreferences)),
                     SantaServiceMessages
                             .getDestinationPhotoMessage(mPreferences.getDestinationPhotoDisabled()),
                     SantaServiceMessages.getStateMessage(mState),
@@ -458,43 +476,57 @@ public class SantaService extends Service implements APIProcessor.APICallback {
     /**
      * Handler for communication from a client to this Service. Registers and unregisters clients.
      */
-    class IncomingHandler extends Handler {
+    static class IncomingHandler extends Handler {
+
+        private final WeakReference<SantaService> mServiceRef;
+
+        IncomingHandler(SantaService service) {
+            mServiceRef = new WeakReference<>(service);
+        }
 
         @Override
         public void handleMessage(Message msg) {
+            SantaService service = mServiceRef.get();
+            if (service == null) {
+                return;
+            }
             switch (msg.what) {
                 case SantaServiceMessages.MSG_SERVICE_REGISTER_CLIENT:
                     Messenger m = msg.replyTo;
-                    mPendingClients.add(m);
+                    service.mPendingClients.add(m);
 
-                    if (mState != SantaServiceMessages.STATUS_PROCESSING) {
+                    if (service.mState != SantaServiceMessages.STATUS_PROCESSING) {
                         // send data if the background process is not currently running
-                        synchronized (mPendingClients) {
-                            sendPendingState();
+                        synchronized (service.mPendingClients) {
+                            service.sendPendingState();
                         }
-                        scheduleApiAccess();
+                        service.scheduleApiAccess();
                     } else {
                         // Other state, notify client right away
                         try {
-                            m.send(SantaServiceMessages.getStateMessage(mState));
+                            m.send(SantaServiceMessages.getStateMessage(service.mState));
                         } catch (RemoteException e) {
                             // Could not contact client, remove from pending list
-                            mPendingClients.remove(m);
+                            service.mPendingClients.remove(m);
                         }
                     }
                     break;
                 case SantaServiceMessages.MSG_SERVICE_UNREGISTER_CLIENT:
                     // Attempt to remove client from active list, alternatively from pending list
-                    if (!mClients.remove(msg.replyTo)) {
-                        mPendingClients.remove(msg.replyTo);
+                    if (!service.mClients.remove(msg.replyTo)) {
+                        service.mPendingClients.remove(msg.replyTo);
                     }
+                    break;
+                case SantaServiceMessages.MSG_SERVICE_FORCE_SYNC:
+                    // Attempt to sync right now (for debugging purposes)
+                    Toast.makeText(service, "Starting sync.", Toast.LENGTH_SHORT).show();
+                    service.startUpdateConfig();
                     break;
                 default:
                     super.handleMessage(msg);
                     break;
             }
         }
-
 
     }
 

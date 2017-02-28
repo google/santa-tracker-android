@@ -13,7 +13,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:2.2.2'
         classpath 'com.google.gms:google-services:3.0.0'
     }
 }
@@ -27,8 +27,12 @@ subprojects {
 }
 
 ext {
-    tools = '23.0.1'
-    support = '23.4.0'
+    minSdkVersion = 15
+    compileSdkVersion = 24
+    targetSdkVersion = 24
+
+    tools = '24.0.0'
+    support = '24.2.0'
     supportV4 = "com.android.support:support-v4:$support"
     supportAnnotations = "com.android.support:support-annotations:$support"
     appCompat = "com.android.support:appcompat-v7:$support"
@@ -41,26 +45,41 @@ ext {
     leanback = "com.android.support:leanback-v17:$support"
     multidex = 'com.android.support:multidex:1.0.0'
 
-    play = '9.2.1'
+    constraintLayout = 'com.android.support.constraint:constraint-layout:1.0.0-beta2'
+
+    play = '9.8.0'
 
     playServicesAnalytics = "com.google.android.gms:play-services-analytics:$play"
     playServicesAppindexing = "com.google.android.gms:play-services-appindexing:$play"
     playServicesBase = "com.google.android.gms:play-services-base:$play"
     playServicesBasement = "com.google.android.gms:play-services-basement:$play"
-    playServicesCast = "com.google.android.gms:play-services-cast:$play"
+    playServicesCastFramework = "com.google.android.gms:play-services-cast-framework:$play"
     playServicesGames = "com.google.android.gms:play-services-games:$play"
     playServicesMaps = "com.google.android.gms:play-services-maps:$play"
     playServicesNearby = "com.google.android.gms:play-services-nearby:$play"
-    playServicesPlus = "com.google.android.gms:play-services-plus:$play"
     playServicesWearable = "com.google.android.gms:play-services-wearable:$play"
+    playServicesPlaces = "com.google.android.gms:play-services-places:$play"
+    playServicesLocation = "com.google.android.gms:play-services-location:$play"
 
     firebaseCore = "com.google.firebase:firebase-core:$play"
     firebaseAnalytics = "com.google.firebase:firebase-analytics:$play"
     firebaseAppinvite = "com.google.firebase:firebase-invites:$play"
     firebaseConfig = "com.google.firebase:firebase-config:$play"
+    firebaseCrash = "com.google.firebase:firebase-crash:$play"
+    firebaseStorage = "com.google.firebase:firebase-storage:$play"
 
     androidMapsUtils = 'com.google.maps.android:android-maps-utils:0.4'
 
-    seismic = "com.squareup:seismic:1.0.2"
-    glide = "com.github.bumptech.glide:glide:3.6.1"
+    leakCanary = 'com.squareup.leakcanary:leakcanary-android:1.5'
+    leakCanaryNoOp = 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
+    espressoCore = 'com.android.support.test.espresso:espresso-core:2.2.2'
+    espressoContrib = 'com.android.support.test.espresso:espresso-contrib:2.2.2'
+
+    seismic = 'com.squareup:seismic:1.0.2'
+    glide = 'com.github.bumptech.glide:glide:3.6.1'
+    
+    sugarOrm = 'com.github.satyan:sugar:1.4'
+
+    easypermissions = 'pub.devrel:easypermissions:0.2.1'
 }

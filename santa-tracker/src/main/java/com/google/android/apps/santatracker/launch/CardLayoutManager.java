@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Google Inc. All Rights Reserved.
+ * Copyright (C) 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ public class CardLayoutManager extends GridLayoutManager {
         float multiplier = 1.0f;
         float base = (float) super.scrollVerticallyBy(delta, recycler, state);
 
-        // TODO(samstern): slow down at card borders
+        // TODO: slow down at card borders
         return ((int) (multiplier * base));
     }
 }
