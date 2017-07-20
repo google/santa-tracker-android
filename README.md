@@ -15,6 +15,10 @@ Google Santa Tracker for Android
 * Interactive Android Wear watchfaces (with sound!)
 * Videos, animations and more.
 
+## In the 2017 version, new features include:
+
+* Corrected all problems
+
 ## Building the app
 
 First up, Santa Tracker is powered by [Firebase][firebase], so you'll need to enable it
