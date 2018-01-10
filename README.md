@@ -30,7 +30,7 @@ console, follow these steps:
 
 Now you should be able to plug your phone in (or fire up an emulator) and run:
 
-    ./gradlew santa-tracker:installDebug
+    ./gradlew santa-tracker:installDevelopmentDebug
 
 Alternatively, import the source code into Android Studio (File, Import Project).
 
