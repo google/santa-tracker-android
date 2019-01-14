@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,7 +16,7 @@
   -->
 
 <resources>
-  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Google വഴി സാന്തയെ ട്രാക്കുചെയ്യുന്നതിന് സുഹൃത്തുക്കളെ ക്ഷണിക്കുക</string>
-  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">സാന്ത ട്രാക്കർ പരീക്ഷിച്ചുകൊണ്ട് ലോകമെമ്പാടുമുള്ള സാന്തയുടെ സഞ്ചാരം കാണുക!</string>
-  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Google-ന്റെ സാന്ത ട്രാക്കറിൽ കുട്ടിച്ചാത്തന്മാരോടൊപ്പം %2$s ഗെയിം കളിച്ച് ഞാൻ %1$d സ്കോർ ചെയ്തു, നിങ്ങൾക്കത് മറികടക്കാനാകുമോ?</string>
+  <string name="invite_title">Google വഴി സാന്തയെ ട്രാക്കുചെയ്യുന്നതിന് സുഹൃത്തുക്കളെ ക്ഷണിക്കുക</string>
+  <string name="invite_message_generic">സാന്ത ട്രാക്കർ പരീക്ഷിച്ചുകൊണ്ട് ലോകമെമ്പാടുമുള്ള സാന്തയുടെ സഞ്ചാരം കാണുക!</string>
+  <string name="invite_message_game_fmt">Google-ന്റെ സാന്ത ട്രാക്കറിൽ കുട്ടിച്ചാത്തന്മാരോടൊപ്പം %2$s ഗെയിം കളിച്ച് ഞാൻ %1$d സ്കോർ ചെയ്തു, നിങ്ങൾക്കത് മറികടക്കാനാകുമോ?</string>
 </resources>

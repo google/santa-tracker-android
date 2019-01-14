@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,9 +16,8 @@
   -->
 
 <resources>
-  <string name="why_sign_in" translation_description="Encouragement text shown beside Sign In button.">നേട്ടങ്ങൾ അൺലോക്കുചെയ്യാനും നിങ്ങളുടെ സ്കോർ പോസ്റ്റ് ചെയ്യാനും സൈൻ ഇൻ ചെയ്യുക!</string>
-  <string name="play_again" translation_description="Button text for playing the game again">വീണ്ടും കളിക്കുക</string>
-  <string name="return_to_map" translation_description="Button text for returning to map in Present Go">മാപ്പിലേക്ക് മടങ്ങുക</string>
-  <string name="score" translation_description="Player's total score after playing the game">സ്‌കോർ</string>
-  <string name="quit_bar_label" translation_description="Button text for quitting the game">മാപ്പിലേക്ക് മടങ്ങുക</string>
+  <string name="why_sign_in">നേട്ടങ്ങൾ അൺലോക്കുചെയ്യാനും നിങ്ങളുടെ സ്കോർ പോസ്റ്റ് ചെയ്യാനും സൈൻ ഇൻ ചെയ്യുക!</string>
+  <string name="play_again">വീണ്ടും കളിക്കുക</string>
+  <string name="return_to_map">മാപ്പിലേക്ക് മടങ്ങുക</string>
+  <string name="score">സ്‌കോർ</string>
 </resources>

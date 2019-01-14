@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/city_quiz_splash_screen_background"
+    tools:context="com.google.android.apps.santatracker.games.SplashActivity" >
+
+    <ImageView
+        android:id="@+id/ornament"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ornament" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexbox_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:flexDirection="column"
+        app:justifyContent="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_extra_large"
+            android:layout_marginEnd="@dimen/spacing_extra_large">
+
+            <ImageView
+                android:id="@+id/splash_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toTopOf="@+id/progressbar"
+                app:layout_constraintDimensionRatio="126:112"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/web_progress_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:indeterminate="true"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/splash_image" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.apps.santatracker.common.TitleTextView
+            android:id="@+id/splash_title"
+            style="@style/BigVerbText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            tools:text="Gumball" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+</FrameLayout>

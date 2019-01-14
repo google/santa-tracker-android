@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">கம் பால்</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">மெமரி</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">எல்ஃப் ஜெட்பேக்</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">ராக்கெட் ஸ்லெய்</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">டேஷர் டான்சர்</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">ஸ்னோடவுன்</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">சிட்டி வினாடி வினா</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">பிரசென்ட் குவெஸ்ட்</string>
+  <string name="gumball">கம் பால்</string>
+  <string name="memory">மெமரி</string>
+  <string name="elf_jetpack">எல்ஃப் ஜெட்பேக்</string>
+  <string name="rocket">ராக்கெட் ஸ்லெய்</string>
+  <string name="dancer">டேஷர் டான்சர்</string>
+  <string name="cityquiz">சிட்டி வினாடி வினா</string>
+  <string name="present_quest">பிரசென்ட் குவெஸ்ட்</string>
+  <string name="santa_snap">சான்டா ஸ்னாப்</string>
+  <string name="present_throw">பிரசென்ட் டாஸ்</string>
+  <string name="jetpack">எல்ஃப் ஜெட்பேக்</string>
+  <string name="web_airport">வட துருவ விமான நிலையம்</string>
+  <string name="web_boatload">கிஃப்ட் ஸ்லிங்ஷாட்</string>
+  <string name="web_clausdraws">கிளாஸ் ஓவியம்</string>
+  <string name="web_codeboogie">கோடு பூகி</string>
+  <string name="web_codelab">கோடு லேப்</string>
+  <string name="web_gumball">கம்பால் டில்ட்</string>
+  <string name="web_jamband">எல்ஃப் ஜாம்பேண்ட்</string>
+  <string name="web_penguindash">பென்குயின் டேஷ்</string>
+  <string name="web_presentbounce">பிரசென்ட் பவுன்ஸ்</string>
+  <string name="web_presentdrop">பிரசென்ட் டிராப்</string>
+  <string name="web_racer">ருடால்ஃப் ரேஸர்</string>
+  <string name="web_runner">கலைமான் ஓட்டம்</string>
+  <string name="web_santasearch">சான்டா தேடல்</string>
+  <string name="web_santaselfie">சான்டா செல்ஃபி</string>
+  <string name="web_seasonofgiving">கொடையளிக்கும் காலம்</string>
+  <string name="web_elfski">எல்ஃப் பனிச்சறுக்கு</string>
+  <string name="web_snowball">ஸ்னோபால் ஸ்டோர்ம்</string>
+  <string name="web_snowflake">ஸ்னோஃப்ளேக்கைக் கோடிங் செய்யுங்கள்</string>
+  <string name="web_speedsketch">ஸ்பீடு ஸ்கெட்ச்</string>
+  <string name="web_wrapbattle">ராப் பாட்டில்</string>
+  <string name="web_elfmaker">எல்ஃப் மேக்கர்</string>
+  <string name="video_santa_is_back">மீண்டும் வேலை</string>
+  <string name="video_office_prank">அலுவலகக் குறும்பு</string>
+  <string name="video_carpool">கார்பூல்</string>
 </resources>

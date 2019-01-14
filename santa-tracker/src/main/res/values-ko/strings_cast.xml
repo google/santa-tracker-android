@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">%s에서 전송</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">전송할 기기…</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">터치하여 산타 추적기를 TV로 전송</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">전송 기기와의 연결이 일시적으로 끊어졌습니다.</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">전송 기기와의 연결이 복구되었습니다.</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">전송 게임 컨트롤러</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">게임패드에서 터치패드로 모드 전환</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">오른쪽</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">위쪽</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">아래쪽</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">입력</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">왼쪽</string>
+  <string name="media_route_casting_on">%s에서 전송</string>
+  <string name="media_route_menu_title">전송할 기기…</string>
+  <string name="touch_to_cast">터치하여 산타 추적기를 TV로 전송</string>
+  <string name="connection_temp_lost">전송 기기와의 연결이 일시적으로 끊어졌습니다.</string>
+  <string name="connection_recovered">전송 기기와의 연결이 복구되었습니다.</string>
+  <string name="cast_game_controller">전송 게임 컨트롤러</string>
+  <string name="content_desc_mode_switch">게임패드에서 터치패드로 모드 전환</string>
+  <string name="content_desc_right_button">오른쪽</string>
+  <string name="content_desc_up_button">위쪽</string>
+  <string name="content_desc_down_button">아래쪽</string>
+  <string name="content_desc_enter_button">입력</string>
+  <string name="content_desc_left_button">왼쪽</string>
 </resources>

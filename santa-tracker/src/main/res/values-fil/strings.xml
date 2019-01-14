@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Subaybayan si Santa</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Subaybayan si Santa</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Aalis si Santa sa loob ng</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Abala si Santa sa paghahanda para sa susunod na taon.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Tingnan ang mga naging paghinto noong 2014</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Sinusubukang makaugnayan si Santa</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Sinusubukan pa ring makaugnayan si Santa</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">Mga Araw</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">Oras</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">Min</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">Seg</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">bahagi</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Ibahagi sa mga kaibigan</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Button na I-cast</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Legal at privacy</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Legal na notification</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Patakaran sa privacy</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Mga tuntunin ng serbisyo</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Mga linsensya ng open source</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Mga lisensyang open source para sa mga serbisyo ng Google Play</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Santa sa GitHub</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon sa GitHub</string>
-  <string name="scene_not_available" translation_description="Not available yet">Hindi pa available</string>
+  <string name="track_santa">Subaybayan si Santa</string>
+  <string name="track_santa_two_lines">Subaybayan si Santa</string>
+  <string name="santa_takes_off_in">Aalis si Santa sa loob ng</string>
+  <string name="santa_is_busy_preparing_for_next_year">Abala si Santa sa paghahanda para sa susunod na taon.</string>
+  <string name="view_old_stops">Tingnan ang mga naging paghinto noong 2014</string>
+  <string name="contacting_santa">Sinusubukang makaugnayan si Santa</string>
+  <string name="still_trying_to_reach_santa">Sinusubukan pa ring makaugnayan si Santa</string>
+  <string name="days">Mga Araw</string>
+  <string name="hrs">Oras</string>
+  <string name="min">Min</string>
+  <string name="sec">Seg</string>
+  <string name="menu_share">bahagi</string>
+  <string name="menu_share_friends">Ibahagi sa mga kaibigan</string>
+  <string name="legal_notice">Legal at privacy</string>
+  <string name="legal_notice_text">Legal na notification</string>
+  <string name="privacy_policy">Patakaran sa privacy</string>
+  <string name="terms_of_service">Mga tuntunin ng serbisyo</string>
+  <string name="open_source_licenses">Mga linsensya ng open source</string>
+  <string name="open_source_repo_santa">Santa sa GitHub</string>
+  <string name="scene_not_available">Hindi pa available</string>
   <string name="sign_out">Mag-sign Out</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Hanggang sa Paglipad</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d sa %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d puntos</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Saan ito?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Litratong kuha ni: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Sundan si Santa sa malaking screen!\nI-tap ang button na ito upang matingnan ang paglalakbay ni Santa sa iyong TV gamit ang Chromecast.</string>
+  <string name="until_takeoff">Hanggang sa Paglipad</string>
+  <string name="web_scene_error">Paumanhin, hindi ma-load ang eksena.</string>
+  <string name="check_back_daily">Tingnang muli araw-araw para sa mga bagong laro!</string>
+  <string name="new_games">Mga Bagong Laro</string>
+  <string name="new_card">Bago</string>
+  <string name="tracker_opens_date">Magbubukas sa %1$s</string>
+  <string name="time">ORAS</string>
+  <string name="download_dialog_title">I-download ang %1$s</string>
+  <string name="download_dialog_message">Kailangan naming i-download ang laro mula sa Play Store bago ka makakapaglaro. Kasalukuyang nakakonekta ang device na ito sa isang metered network na maaaring maningil sa iyo para sa anumang nailipat na data.\n\nNais mo bang magpatuloy?</string>
+  <string name="elf_maker_write_success">Nai-save ang larawan sa iyong mga litrato</string>
+  <string name="elf_maker_write_fail">Nagka-error habang sine-save ang larawan sa mga litrato sa device</string>
 </resources>

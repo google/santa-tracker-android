@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,32 +14,32 @@
   ~ limitations under the License.
   -->
 
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:background="@drawable/bg_mountains" >
+    android:background="@color/villageBackGround"
+    android:fitsSystemWindows="true">
 
     <!-- Hero Layout -->
-    <android.support.design.widget.AppBarLayout
-            android:id="@+id/appbar"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/detail_backdrop_height"
-            android:theme="@style/SantaTheme"
-            android:fitsSystemWindows="true"
-            android:elevation="@dimen/section_elevation">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_backdrop_height"
+        android:elevation="@dimen/section_elevation"
+        android:fitsSystemWindows="true"
+        android:theme="@style/SantaTheme">
 
         <com.google.android.apps.santatracker.launch.SantaCollapsingToolbarLayout
-                android:id="@+id/collapsing_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
-                android:elevation="@dimen/section_elevation"
-                app:contentScrim="@null"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@null"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@null">
 
             <FrameLayout
                 android:id="@+id/villageBackgroundLayout"
@@ -51,66 +50,64 @@
 
                 <ImageView
                     android:id="@+id/villageBackground"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/village_bg_countdown"
-                    android:contentDescription="@null"/>
+                    tools:src="@drawable/village_bg_countdown" />
 
                 <ImageView
-                        android:id="@+id/countdown_ornament"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ornament"
-                        android:layout_marginTop="@dimen/ornament_margin_top"
-                        android:scaleType="centerInside"
-                        android:contentDescription="@null"/>
+                    android:id="@+id/countdown_ornament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ornament" />
 
-                <com.google.android.apps.santatracker.village.VillageView
+                <com.google.android.apps.santatracker.customviews.VillageView
                     android:id="@+id/villageView"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
                 <!-- Santa Claus -->
                 <FrameLayout
                     android:id="@+id/santa_waving"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:layout_marginBottom="@dimen/santaMarginBottom"
-                    android:layout_marginRight="@dimen/santaMarginRight"
+                    android:layout_gravity="bottom|end"
                     android:layout_marginEnd="@dimen/santaMarginRight"
-                    android:layout_gravity="bottom|end">
+                    android:layout_marginBottom="@dimen/santaMarginBottom"
+                    android:clickable="true">
 
                     <ImageView
                         android:id="@+id/santa_arm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/santa_arm"
                         android:layout_gravity="bottom|end"
-                        android:layout_marginRight="@dimen/arm_margin_right"
                         android:layout_marginEnd="@dimen/arm_margin_right"
                         android:layout_marginBottom="@dimen/arm_margin_bottom"
                         android:scaleX="@dimen/santa_scale"
-                        android:scaleY="@dimen/santa_scale"/>
+                        android:scaleY="@dimen/santa_scale"
+                        android:src="@drawable/santa_arm" />
 
                     <ImageView
                         android:id="@+id/santa_body"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/santa_body"
-                        android:layout_marginBottom="@dimen/body_margin_bottom"
                         android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="@dimen/body_margin_bottom"
                         android:scaleX="@dimen/santa_scale"
-                        android:scaleY="@dimen/santa_scale" />
+                        android:scaleY="@dimen/santa_scale"
+                        android:src="@drawable/santa_body" />
 
                 </FrameLayout>
 
                 <RelativeLayout
+                    android:id="@+id/logo_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/counter_margin_top"
                     android:layout_gravity="center_horizontal|top"
+                    android:layout_marginTop="@dimen/counter_margin_top"
                     android:clickable="false">
 
                     <ImageView
@@ -131,122 +128,99 @@
 
                     <Button
                         android:id="@+id/launch_button"
-                        android:theme="@style/RedButton"
+                        style="@style/RedButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/st_logo_main"
                         android:layout_centerHorizontal="true"
-                        android:textStyle="bold"
-                        android:padding="@dimen/button_side_padding"
                         android:text="@string/track_santa"
                         android:visibility="visible"
-                        tools:visibility="gone" />
+                        tools:visibility="visible" />
 
-                    <RelativeLayout android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/st_logo_main"
-                                    android:id="@+id/countdown_container"
-                                    android:visibility="gone"
-                                    tools:visibility="visible">
+                    <LinearLayout
+                        android:id="@+id/countdown_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/st_logo_main"
+                        android:orientation="vertical"
+                        android:paddingTop="5dp"
+                        android:visibility="gone"
+                        tools:visibility="visible">
 
-                        <FrameLayout
-                            android:id="@+id/countdown_numbers_container"
+                        <include layout="@layout/include_layout_countdown" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp">
-
-                            <include layout="@layout/layout_countdown_2015" />
-
-                        </FrameLayout>
-
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/countdown_numbers_container"
-                            android:layout_centerHorizontal="true"
                             android:contentDescription="@string/until_takeoff"
+                            android:shadowColor="@color/SantaBlueDark"
+                            android:shadowDy="1"
+                            android:shadowRadius="0.4"
                             android:text="@string/until_takeoff"
                             android:textColor="@color/SantaWhite"
-                            android:textStyle="bold"
                             android:textSize="20sp"
-                            app:textAllCaps="true"/>
+                            android:textStyle="bold"
+                            app:textAllCaps="true" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
                 </RelativeLayout>
 
                 <TextView
-                        android:id="@+id/statusText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:background="@color/translucentLightBackground"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="@string/contacting_santa"
-                        android:contentDescription="@string/contacting_santa"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/SantaBlueDark"
-                        android:visibility="gone" />
-
-                <View
-                    android:id="@+id/view_color_overlay"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/villageToolbarLight"
-                    android:alpha="0"
-                    tools:visibility="gone"/>
-
-                <com.google.android.apps.santatracker.village.SnowFlakeView
-                    android:id="@+id/snowFlakeView"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                    android:id="@+id/statusText"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="bottom|start"
-                    android:layout_marginBottom="16dp">
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="@color/translucentLightBackground"
+                    android:contentDescription="@string/contacting_santa"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/contacting_santa"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/SantaBlueDark"
+                    android:visibility="gone" />
 
-                    <android.support.design.widget.FloatingActionButton
-                        android:id="@+id/fab_leaderboard"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        app:backgroundTint="#A363B6"
-                        android:src="@drawable/games_fab_leaderboards"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        tools:visibility="visible"/>
+                <com.google.android.apps.santatracker.customviews.SnowFlakeView
+                    android:id="@+id/snowFlakeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
-                    <android.support.design.widget.FloatingActionButton
-                        android:id="@+id/fab_achievement"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        app:backgroundTint="#FFD600"
-                        android:src="@drawable/games_fab_achievements"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        tools:visibility="visible"/>
-                </LinearLayout>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_leaderboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/games_fab_leaderboards"
+                    android:visibility="gone"
+                    app:backgroundTint="#A363B6"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_achievement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="76dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/games_fab_achievements"
+                    android:visibility="gone"
+                    app:backgroundTint="#FFD600"
+                    tools:visibility="visible" />
 
             </FrameLayout>
 
-            <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:alpha="1.0"
-                    app:layout_collapseMode="pin"
-                    android:theme="@style/SantaTheme"
-                    app:popupTheme="@style/SantaTheme"
-                    app:statusBarScrim="@color/villageToolbarLight">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:alpha="1.0"
+                android:background="@android:color/transparent"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_collapseMode="pin">
 
                 <FrameLayout
                     android:id="@+id/toolbar_content"
@@ -258,69 +232,24 @@
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name_santa"
                         android:padding="5dp"
                         android:scaleType="centerInside"
                         android:src="@drawable/santatracker_logo_startup" />
 
                 </FrameLayout>
 
-            </android.support.v7.widget.Toolbar>
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.apps.santatracker.launch.SantaCollapsingToolbarLayout>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Tabs and RecyclerViews -->
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/card_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:elevation="@dimen/section_elevation"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <LinearLayout
-            android:id="@+id/category_picker_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/SantaSkyBlue"
-            android:weightSum="3">
-            <FrameLayout
-                android:id="@+id/santa_button"
-                style="@style/CategoryButton">
-                <ImageView
-                    android:id="@+id/santa_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/filter_compass">
-                </ImageView>
-            </FrameLayout>
-            <FrameLayout
-                android:id="@+id/games_button"
-                style="@style/CategoryButton">
-                <ImageView
-                    android:id="@+id/arcade_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/filter_games"
-                    tools:src="@drawable/filter_games_inactive"/>
-            </FrameLayout>
-            <FrameLayout
-                android:id="@+id/movies_button"
-                style="@style/CategoryButton">
-                <ImageView
-                    android:id="@+id/theatre_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/filter_videos"
-                    tools:src="@drawable/filter_videos_inactive"/>
-            </FrameLayout>
-        </LinearLayout>
-        <android.support.v4.view.ViewPager
-                android:id="@+id/cards_view_pager"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent" />
-    </LinearLayout>
-</android.support.design.widget.CoordinatorLayout>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">Spremljajte Božička 24. decembra.</string>
+  <string name="present_quest_locked">Iskanje daril bo na voljo 1. decembra.</string>
+  <string name="santa_snap_locked">Božičkovi sebki bodo kmalu na voljo.</string>
+  <string name="gumball_locked">Igra Gumball bo na voljo 1. decembra.</string>
+  <string name="memory_locked">Igra Memory bo na voljo 1. decembra.</string>
+  <string name="rocket_locked">Igra Rocket Sleigh bo na voljo 1. decembra.</string>
+  <string name="dancer_locked">Igra Dasher Dancer bo na voljo 1. decembra.</string>
+  <string name="city_quiz_locked">Ugibanje mest bo na voljo 1. decembra.</string>
+  <string name="generic_game_disabled">%1$s trenutno ni na voljo.</string>
+  <string name="generic_game_locked">%1$s še ni na voljo. Preverite znova pozneje.</string>
+  <string name="video">Videoposnetek</string>
+  <string name="video_locked">Videoposnetek bo odklenjen %1$d. decembra.</string>
+  <string name="video_disabled">Videoposnetek trenutno ni na voljo.</string>
+  <string name="play">Igranje</string>
+  <string name="watch">Ogled</string>
+</resources>

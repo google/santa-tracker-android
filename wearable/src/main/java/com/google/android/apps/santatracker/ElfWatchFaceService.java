@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright 2019. Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -23,37 +23,61 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.wearable.watchface.CanvasWatchFaceService;
 import android.support.wearable.watchface.WatchFaceService;
 import android.support.wearable.watchface.WatchFaceStyle;
-import android.text.format.Time;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.SurfaceHolder;
-
+import java.lang.ref.WeakReference;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 /**
  * The base class for all Santa Tracker watch faces, which are analog watch faces with a static
  * background, one or more animated background layers, a central figure, a face which is always in
- * the foreground, and two rotating arms.
- * In ambient mode, the image is shown in greyscale. On devices with low-bit ambient mode, the
- * image
- * is drawn without anti-aliasing in ambient mode.
+ * the foreground, and two rotating arms. In ambient mode, the image is shown in greyscale. On
+ * devices with low-bit ambient mode, the image is drawn without anti-aliasing in ambient mode.
  */
-public class  ElfWatchFaceService extends CanvasWatchFaceService {
+public class ElfWatchFaceService extends AbstractBaseWatchFaceService {
 
     private static final String TAG = "ElfWatchFaceService";
+    static final int MSG_UPDATE_TIME = 0;
+
+    // Declared a static class and keep a weak reference to avoid memory leak
+    private static class TimeUpdateHandler extends Handler {
+
+        private final WeakReference<CanvasWatchFaceService.Engine> mWatchFaceEngine;
+
+        TimeUpdateHandler(CanvasWatchFaceService.Engine watchFaceEngine) {
+            mWatchFaceEngine = new WeakReference<>(watchFaceEngine);
+        }
+
+        @Override
+        public void handleMessage(Message message) {
+            switch (message.what) {
+                case MSG_UPDATE_TIME:
+                    if (Log.isLoggable(TAG, Log.VERBOSE)) {
+                        Log.v(TAG, "updating time");
+                    }
+                    CanvasWatchFaceService.Engine watchFaceService = mWatchFaceEngine.get();
+                    if (null != watchFaceService) {
+                        watchFaceService.invalidate();
+                    }
+                    break;
+            }
+        }
+    }
 
     /**
      * Update rate in milliseconds for interactive mode. We update once a second to advance the
@@ -67,9 +91,7 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
         return new Engine();
     }
 
-    private class Engine extends CanvasWatchFaceService.Engine {
-
-        static final int MSG_UPDATE_TIME = 0;
+    protected class Engine extends AbstractBaseWatchFaceService.Engine {
 
         private final Resources mResources = getResources();
         private Paint mFilterPaint;
@@ -77,7 +99,7 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
         private Paint mAmbientPeekCardBorderPaint;
         private boolean mAmbient;
         private boolean mMute;
-        private Time mTime;
+        private Calendar mCalendar;
         private boolean mRegisteredTimeZoneReceiver = false;
 
         /**
@@ -87,7 +109,7 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
         boolean mLowBitAmbient;
 
         /**
-         * Whether the display is OLED and subject to pixel burn-in.  When true, we display only
+         * Whether the display is OLED and subject to pixel burn-in. When true, we display only
          * outlines and a 95%+ black screen.
          */
         private boolean mBurnInProtection;
@@ -111,10 +133,10 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
 
         private final Rect mCardBounds = new Rect();
 
-        private final static int HOUR_MORNING = 6;
-        private final static int HOUR_DAY = 10;
-        private final static int HOUR_EVENING = 17;
-        private final static int HOUR_NIGHT = 20;
+        private static final int HOUR_MORNING = 6;
+        private static final int HOUR_DAY = 10;
+        private static final int HOUR_EVENING = 17;
+        private static final int HOUR_NIGHT = 20;
 
         // Variables for onDraw
         private int mWidth = -1;
@@ -135,34 +157,17 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
         private long mUfoFlightStart = -1;
         private float mUfoHeight;
 
-        final BroadcastReceiver mTimeZoneReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                mTime.clear(intent.getStringExtra("time-zone"));
-                mTime.setToNow();
-            }
-        };
+        private final BroadcastReceiver mTimeZoneReceiver =
+                new BroadcastReceiver() {
+                    @Override
+                    public void onReceive(Context context, Intent intent) {
+                        mCalendar.setTimeZone(TimeZone.getDefault());
+                        invalidate();
+                    }
+                };
 
         /** Handler to update the time once a second in interactive mode. */
-        final Handler mUpdateTimeHandler = new Handler() {
-            @Override
-            public void handleMessage(Message message) {
-                switch (message.what) {
-                    case MSG_UPDATE_TIME:
-                        if (Log.isLoggable(TAG, Log.VERBOSE)) {
-                            Log.v(TAG, "updating time");
-                        }
-                        invalidate();
-                        if (isVisible() && !mAmbient) {
-                            long timeMs = System.currentTimeMillis();
-                            long delayMs = INTERACTIVE_UPDATE_RATE_MS
-                                    - (timeMs % INTERACTIVE_UPDATE_RATE_MS);
-                            mUpdateTimeHandler.sendEmptyMessageDelayed(MSG_UPDATE_TIME, delayMs);
-                        }
-                        break;
-                }
-            }
-        };
+        final TimeUpdateHandler mUpdateTimeHandler = new TimeUpdateHandler(this);
 
         @Override
         public void onCreate(SurfaceHolder holder) {
@@ -171,12 +176,15 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
             }
             super.onCreate(holder);
 
-            setWatchFaceStyle(new WatchFaceStyle.Builder(ElfWatchFaceService.this)
-                    .setCardPeekMode(WatchFaceStyle.PEEK_MODE_SHORT)
-                    .setBackgroundVisibility(WatchFaceStyle.BACKGROUND_VISIBILITY_INTERRUPTIVE)
-                    .setShowSystemUiTime(false)
-                    .setAcceptsTapEvents(true)
-                    .build());
+            // noinspection deprecation Wear 1.0 compatibility
+            setWatchFaceStyle(
+                    new WatchFaceStyle.Builder(ElfWatchFaceService.this)
+                            .setCardPeekMode(WatchFaceStyle.PEEK_MODE_SHORT)
+                            .setBackgroundVisibility(
+                                    WatchFaceStyle.BACKGROUND_VISIBILITY_INTERRUPTIVE)
+                            .setShowSystemUiTime(false)
+                            .setAcceptsTapEvents(true)
+                            .build());
 
             init();
         }
@@ -188,18 +196,19 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
             }
             super.onTapCommand(tapType, x, y, eventTime);
 
-            if (!mAmbient && tapType == TAP_TYPE_TAP
+            if (!mAmbient
+                    && tapType == TAP_TYPE_TAP
                     && System.currentTimeMillis() >= mUfoFlightStart + UFO_DURATION_MS) {
                 mUfoFlightStart = System.currentTimeMillis();
-                mUfoHeight = (float) (Math.random() * (UFO_OFFSET_MAX_Y - UFO_OFFSET_MIN_Y)
-                                                        + UFO_OFFSET_MIN_Y);
+                mUfoHeight =
+                        (float)
+                                (Math.random() * (UFO_OFFSET_MAX_Y - UFO_OFFSET_MIN_Y)
+                                        + UFO_OFFSET_MIN_Y);
                 invalidate();
             }
         }
 
-        /**
-         * Setting up settings variables (paint, settings, etc) and pre-load images
-         */
+        /** Setting up settings variables (paint, settings, etc) and pre-load images */
         private void init() {
 
             // Pre-loading bitmaps
@@ -221,14 +230,17 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
             mAmbientPeekCardBorderPaint.setStrokeWidth(BORDER_WIDTH_PX);
 
             // Load UFO and pre-scale
-            Bitmap fullSizeUfo = ((BitmapDrawable) mResources.getDrawable(R.drawable.ufo)).getBitmap();
-            mUfoBitmap = Bitmap.createScaledBitmap(fullSizeUfo,
-                                                   fullSizeUfo.getWidth() / UFO_DISTANCE,
-                                                   fullSizeUfo.getHeight() / UFO_DISTANCE,
-                                                   true);
+            Bitmap fullSizeUfo = BitmapFactory.decodeResource(getResources(), R.drawable.ufo);
+
+            mUfoBitmap =
+                    Bitmap.createScaledBitmap(
+                            fullSizeUfo,
+                            fullSizeUfo.getWidth() / UFO_DISTANCE,
+                            fullSizeUfo.getHeight() / UFO_DISTANCE,
+                            true);
 
             // Initialising time
-            mTime = new Time();
+            mCalendar = GregorianCalendar.getInstance();
         }
 
         @Override
@@ -242,15 +254,14 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
          * version will be pluck out at runtime.
          *
          * @param arrayId Key to the type of bitmap that we are initialising. The full list can be
-         *                found in res/values/images_santa_watchface.xml
+         *     found in res/values/images_santa_watchface.xml
          * @return Array of three bitmaps for interactive, ambient and low bit modes
          */
         private Bitmap[] loadBitmaps(int arrayId) {
             int[] bitmapIds = getIntArray(arrayId);
             Bitmap[] bitmaps = new Bitmap[bitmapIds.length];
             for (int i = 0; i < bitmapIds.length; i++) {
-                Drawable backgroundDrawable = mResources.getDrawable(bitmapIds[i]);
-                bitmaps[i] = ((BitmapDrawable) backgroundDrawable).getBitmap();
+                bitmaps[i] = BitmapFactory.decodeResource(mResources, bitmapIds[i]);
             }
             return bitmaps;
         }
@@ -259,8 +270,7 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
          * At runtime, this is used to load the appropriate bitmap depending on display mode
          * dynamically.
          *
-         * @param bitmaps A bitmap array containing all bitmaps appropriate to all the display
-         *                modes
+         * @param bitmaps A bitmap array containing all bitmaps appropriate to all the display modes
          * @return Bitmap determined to be appropriate for the display mode
          */
         private Bitmap getBitmap(Bitmap[] bitmaps) {
@@ -283,19 +293,19 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
          * At runtime, this is used to load the appropriate background bitmap depending on display
          * mode and time of day.
          *
-         * @param bitmaps A bitmap array containing all bitmaps appropriate to all the display
-         *                modes
+         * @param bitmaps A bitmap array containing all bitmaps appropriate to all the display modes
          * @return Bitmap determined to be appropriate for the display mode
          */
         private Bitmap getBackgroundBitmap(Bitmap[] bitmaps) {
             if (!mAmbient) {
-                if (mTime.hour >= HOUR_NIGHT || mTime.hour < HOUR_MORNING) {
+                int hour = mCalendar.get(Calendar.HOUR_OF_DAY);
+                if (hour >= HOUR_NIGHT || hour < HOUR_MORNING) {
                     return bitmaps[6];
-                } else if (mTime.hour >= HOUR_EVENING) {
+                } else if (hour >= HOUR_EVENING) {
                     return bitmaps[5];
-                } else if (mTime.hour >= HOUR_DAY) {
+                } else if (hour >= HOUR_DAY) {
                     return bitmaps[0];
-                } else if (mTime.hour >= HOUR_MORNING) {
+                } else if (hour >= HOUR_MORNING) {
                     return bitmaps[4];
                 } else {
                     return bitmaps[0];
@@ -318,8 +328,13 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
             mLowBitAmbient = properties.getBoolean(PROPERTY_LOW_BIT_AMBIENT, false);
             mBurnInProtection = properties.getBoolean(PROPERTY_BURN_IN_PROTECTION, false);
             if (Log.isLoggable(TAG, Log.DEBUG)) {
-                Log.d(TAG, "onPropertiesChanged: low-bit ambient = " + mLowBitAmbient + ", " +
-                        "burn-in protection = " + mBurnInProtection);
+                Log.d(
+                        TAG,
+                        "onPropertiesChanged: low-bit ambient = "
+                                + mLowBitAmbient
+                                + ", "
+                                + "burn-in protection = "
+                                + mBurnInProtection);
             }
         }
 
@@ -330,15 +345,12 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
         @Override
         public void onTimeTick() {
             super.onTimeTick();
-            if (Log.isLoggable(TAG, Log.DEBUG)) {
-                Log.e(TAG, "onTimeTick: ambient = " + mAmbient);
-            }
             invalidate();
         }
 
         @Override
         public void onAmbientModeChanged(boolean inAmbientMode) {
-            Log.e(TAG, "onAmbientModeChanged, " + (inAmbientMode ? "ambient" : "ACTIVE"));
+            Log.v(TAG, "onAmbientModeChanged, " + (inAmbientMode ? "ambient" : "ACTIVE"));
             super.onAmbientModeChanged(inAmbientMode);
             if (mAmbient != inAmbientMode) {
                 mAmbient = inAmbientMode;
@@ -360,34 +372,38 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
 
         @Override
         public void onDraw(Canvas canvas, Rect rect) {
-            mTime.setToNow();
 
-            //Draw background.
+            long frameStartTimeMs = System.currentTimeMillis();
+
+            mCalendar.setTimeInMillis(frameStartTimeMs);
+
+            // Draw background.
             canvas.drawRect(0, 0, mWidth, mHeight, mAmbientBackgroundPaint);
             canvas.drawBitmap(getBackgroundBitmap(mBackgroundBitmap), 0, 0, mFilterPaint);
 
-            //Draw UFO.
-            boolean redraw = false;
+            boolean redrawUFO = false;
+
+            // Draw UFO.
             if (!mAmbient && System.currentTimeMillis() <= mUfoFlightStart + UFO_DURATION_MS) {
-                redraw = true;
-                float distancePercent = (System.currentTimeMillis() - mUfoFlightStart)
-                        / (float) UFO_DURATION_MS;
-                long width = mWidth + mUfoBitmap.getWidth();
+                redrawUFO = true;
+                float distancePercent =
+                        (System.currentTimeMillis() - mUfoFlightStart) / (float) UFO_DURATION_MS;
+                long width = mWidth;
                 float x = distancePercent * width - mUfoBitmap.getWidth();
                 float y = mUfoHeight * mHeight;
                 canvas.drawBitmap(mUfoBitmap, x, y, null);
             }
 
-            mMinutes = mTime.minute;
+            mMinutes = mCalendar.get(Calendar.MINUTE);
             mMinDeg = mMinutes * 6;
-            mHrDeg = ((mTime.hour + (mMinutes / 60f)) * 30);
+            mHrDeg = ((mCalendar.get(Calendar.HOUR_OF_DAY) + (mMinutes / 60f)) * 30);
 
             mFigure = getBitmap(mFigureBitmap);
 
-            //Draw figure.
-            canvas.drawBitmap(mFigure,
-                    mCenterX - mFigure.getWidth() / 2 +
-                            mScaledXAdditionalOffset,
+            // Draw figure.
+            canvas.drawBitmap(
+                    mFigure,
+                    mCenterX - mFigure.getWidth() / 2 + mScaledXAdditionalOffset,
                     mCenterY - mFigure.getHeight() / 2 + mScaledYOffset,
                     mFilterPaint);
 
@@ -398,16 +414,23 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
 
             canvas.save();
 
+            drawComplications(canvas, mCalendar.getTimeInMillis());
+
             // Draw the minute hand
             canvas.rotate(mMinDeg, mCenterX, mCenterY);
             mMinHand = getBitmap(mMinuteHandBitmap);
-            canvas.drawBitmap(mMinHand, mCenterX - mMinHand.getWidth() / 2f,
-                    mCenterY - mMinHand.getHeight(), mFilterPaint);
+            canvas.drawBitmap(
+                    mMinHand,
+                    mCenterX - mMinHand.getWidth() / 2f,
+                    mCenterY - mMinHand.getHeight(),
+                    mFilterPaint);
 
             // Draw the hour hand
             canvas.rotate(360 - mMinDeg + mHrDeg, mCenterX, mCenterY);
             mHrHand = getBitmap(mHourHandBitmap);
-            canvas.drawBitmap(mHrHand, mCenterX - mHrHand.getWidth() / 2f,
+            canvas.drawBitmap(
+                    mHrHand,
+                    mCenterX - mHrHand.getWidth() / 2f,
                     mCenterY - mHrHand.getHeight(),
                     mFilterPaint);
 
@@ -415,13 +438,31 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
 
             // Draw face.  (We do this last so it's not obscured by the arms.)
             mFace = getBitmap(mFaceBitmap);
-            canvas.drawBitmap(mFace,
+            canvas.drawBitmap(
+                    mFace,
                     mCenterX - mFace.getWidth() / 2 + mScaledXOffset,
                     mCenterY - mFigure.getHeight() / 2 + mScaledYOffset,
                     mFilterPaint);
 
-            if (redraw) {
+            if (redrawUFO) {
                 invalidate();
+            } else if (!mAmbient) {
+                long delayMs = System.currentTimeMillis() - frameStartTimeMs;
+                if (delayMs > INTERACTIVE_UPDATE_RATE_MS) {
+                    // This scenario occurs when drawing all of the components takes longer than an
+                    // actual frame. It may be helpful to log how many times this happens, so you
+                    // can fix it when it occurs.
+                    // In general, you don't want to redraw immediately, but on the next
+                    // appropriate frame (else block below).
+                    delayMs = 0;
+                } else {
+                    // Sets the delay as close as possible to the intended frame rate.
+                    // Note that the recommended interactive update rate is 1 frame per second.
+                    // However, if you want to include the sweeping hand gesture, set the
+                    // interactive update rate up to 30 frames per second.
+                    delayMs = INTERACTIVE_UPDATE_RATE_MS - delayMs;
+                }
+                mUpdateTimeHandler.sendEmptyMessageDelayed(MSG_UPDATE_TIME, delayMs);
             }
         }
 
@@ -454,7 +495,7 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
          * Scale bitmap array in place.
          *
          * @param bitmaps Bitmaps to be scaled
-         * @param scale   Scale factor. 1.0 represents the original size.
+         * @param scale Scale factor. 1.0 represents the original size.
          */
         private void scaleBitmaps(Bitmap[] bitmaps, float scale) {
             for (int i = 0; i < bitmaps.length; i++) {
@@ -466,16 +507,14 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
          * Scale individual bitmap inputs by creating a new bitmap according to the scale
          *
          * @param bitmap Original bitmap
-         * @param scale  Scale factor. 1.0 represents the original size.
+         * @param scale Scale factor. 1.0 represents the original size.
          * @return Scaled bitmap
          */
         private Bitmap scaleBitmap(Bitmap bitmap, float scale) {
             int width = (int) ((float) bitmap.getWidth() * scale);
             int height = (int) ((float) bitmap.getHeight() * scale);
-            if (bitmap.getWidth() != width
-                    || bitmap.getHeight() != height) {
-                return Bitmap.createScaledBitmap(bitmap,
-                        width, height, true /* filter */);
+            if (bitmap.getWidth() != width || bitmap.getHeight() != height) {
+                return Bitmap.createScaledBitmap(bitmap, width, height, true /* filter */);
             } else {
                 return bitmap;
             }
@@ -495,6 +534,7 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
                 array.getValue(i, value);
                 rc[i] = value.resourceId;
             }
+            array.recycle();
             return rc;
         }
 
@@ -506,9 +546,7 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
                 registerReceiver();
 
                 // Update time zone in case it changed while we weren't visible.
-                mTime.clear(TimeZone.getDefault().getID());
-                mTime.setToNow();
-
+                mCalendar.setTimeZone(TimeZone.getDefault());
                 mUpdateTimeHandler.sendEmptyMessage(MSG_UPDATE_TIME);
             } else {
                 mUpdateTimeHandler.removeMessages(MSG_UPDATE_TIME);
@@ -533,6 +571,7 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
             ElfWatchFaceService.this.unregisterReceiver(mTimeZoneReceiver);
         }
 
+        @SuppressWarnings("deprecation") // Wear 1.0 compatibility
         @Override
         public void onPeekCardPositionUpdate(Rect bounds) {
             if (Log.isLoggable(TAG, Log.DEBUG)) {
@@ -544,6 +583,10 @@ public class  ElfWatchFaceService extends CanvasWatchFaceService {
                 invalidate();
             }
         }
+    }
 
+    @Override
+    protected Class<?> getWatchFaceService() {
+        return ElfWatchFaceService.class;
     }
 }

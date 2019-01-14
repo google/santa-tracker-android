@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,69 +16,69 @@
   -->
 
 <resources>
-  <string name="msg_city_count" translation_description="Label for number of cities guessed in game.">THÀNH PHỐ</string>
-  <string name="provideniya_russia_city" translation_description="Name of city in Russia">Provideniya, Nga</string>
-  <string name="wellington_new_zealand_city" translation_description="Name of city in New Zealand">Wellington, New Zealand</string>
-  <string name="invercargill_new_zealand_city" translation_description="Name of city in New Zealand">Invercargill, New Zealand</string>
-  <string name="honiara_solomon_islands_city" translation_description="Name of city in Solomon Islands">Honiara, Quần đảo Solomon</string>
-  <string name="magadan_russia_city" translation_description="Name of city in Russia">Magadan, Nga</string>
-  <string name="andersen_afb_guam_city" translation_description="Name of an air force base (AFB) in Guam">Andersen AFB, Guam</string>
-  <string name="atlantic_city_usa_city" translation_description="Name of city in USA">Thành phố Atlantic, Hoa Kỳ</string>
-  <string name="yosemite_national_park_usa_city" translation_description="Name of city in USA">Công viên quốc gia Yosemite, Hoa Kỳ</string>
-  <string name="kyoto_japan_city" translation_description="Name of city in Japan">Kyoto, Nhật Bản</string>
-  <string name="machu_picchu_peru_city" translation_description="Name of city in Peru">Machu Picchu, Peru</string>
-  <string name="florence_italy_city" translation_description="Name of city in Italy">Florence, Ý</string>
-  <string name="reykjavik_iceland_city" translation_description="Name of city in Iceland">Reykjavik, Iceland</string>
-  <string name="hanover_germany_city" translation_description="Name of city in Germany">Hanover, Đức</string>
-  <string name="hamburg_germany_city" translation_description="Name of city in Germany">Hamburg, Đức</string>
-  <string name="mountain_view_usa_city" translation_description="Name of city in USA">Mountain View, Hoa Kỳ</string>
-  <string name="banff_canada_city" translation_description="Name of city in Canada">Banff, Canada</string>
-  <string name="warsaw_poland_city" translation_description="Name of city in Poland">Warsaw, Ba Lan</string>
-  <string name="stockholm_sweden_city" translation_description="Name of city in Sweden">Stockholm, Thụy Điển</string>
-  <string name="budapest_hungary_city" translation_description="Name of city in Hungary">Budapest, Hungary</string>
-  <string name="paris_france_city" translation_description="Name of city in France">Paris, Pháp</string>
-  <string name="london_uk_city" translation_description="Name of city in UK">Luân Đôn, Vương Quốc Anh</string>
-  <string name="moscow_russia_city" translation_description="Name of city in Russia">Moscow, Nga</string>
-  <string name="dubai_uae_city" translation_description="Name of city in UAE">Dubai, Các tiểu vương quốc Ả Rập thống nhất</string>
-  <string name="versailles_france_city" translation_description="Name of city in France">Versailles, Pháp</string>
-  <string name="new_york_city_usa_city" translation_description="Name of city in USA">Thành phố New York, Hoa Kỳ</string>
-  <string name="san_francisco_usa_city" translation_description="Name of city in USA">San Francisco, Hoa Kỳ</string>
-  <string name="madrid_spain_city" translation_description="Name of city in Spain">Madrid, Tây Ban Nha</string>
-  <string name="barcelona_spain_city" translation_description="Name of city in Spain">Barcelona, Tây Ban Nha</string>
-  <string name="mumbai_india_city" translation_description="Name of city in India">Mumbai, Ấn Độ</string>
-  <string name="shanghai_china_city" translation_description="Name of city in China">Thượng Hải, Trung Quốc</string>
-  <string name="ediburgh_scotland_city" translation_description="Name of city in Scotland">Edinburgh, Scotland</string>
-  <string name="port_douglas_australia_city" translation_description="Name of city in Australia">Port Douglas, Úc</string>
-  <string name="istanbul_turkey_city" translation_description="Name of city in Turkey">Istanbul, Thổ Nhĩ Kỳ</string>
-  <string name="denaru_island_fiji_city" translation_description="Name of city in Fiji">Đảo Denarau, Fiji</string>
-  <string name="mexico_city_mexico_city" translation_description="Name of city in Mexico">Thành phố Mexico, Mexico</string>
-  <string name="rio_de_janiero_brazil_city" translation_description="Name of city in Brazil">Rio de Janeiro, Brazil</string>
-  <string name="grand_canyon_national_park_za_usa_city" translation_description="Name of city in USA">Công viên quốc gia Grand Canyon, AZ, Hoa Kỳ</string>
-  <string name="grand_tetons_national_park_wy_usa_city" translation_description="Name of city in USA">Công viên quốc gia Grand Tetons, WY, Hoa Kỳ</string>
-  <string name="canyonlands_national_park_ut_usa_city" translation_description="Name of city in USA">Công viên quốc gia Canyonlands, UT, Hoa Kỳ</string>
-  <string name="nashville_tn_usa_city" translation_description="Name of city in USA">Nashville, Tennessee, Hoa Kỳ</string>
-  <string name="new_orleans_la_usa_city" translation_description="Name of city in USA">New Orleans, LA, Hoa Kỳ</string>
-  <string name="rome_italy_city" translation_description="Name of city in Italy">Rome, Ý</string>
-  <string name="berlin_germany_city" translation_description="Name of city in Germany">Berlin, Đức</string>
-  <string name="washington_dc_usa_city" translation_description="Name of city in ">Washington, DC, Hoa Kỳ</string>
-  <string name="dublin_ireland_city" translation_description="Name of city in USA">Dublin, Ireland</string>
-  <string name="zurich_switzerland_city" translation_description="Name of city in Switzerland">Zurich, Thụy Sĩ</string>
-  <string name="tokyo_japan_city" translation_description="Name of city in Japan">Tokyo, Nhật Bản</string>
-  <string name="atlanta_ga_usa_city" translation_description="Name of city in USA">Atlanta, GA, Hoa Kỳ</string>
-  <string name="chicago_il_usa_city" translation_description="Name of city in USA">Chicago, IL, Hoa Kỳ</string>
-  <string name="port_of_spain_trinidad_and_tobago_city" translation_description="Name of city in Trinidad and Tobago">Thủ đô Port Of Spain, Trinidad và Tobago</string>
-  <string name="kingston_jamaica_city" translation_description="Name of city in Jamaica">Kingston, Jamaica</string>
-  <string name="panama_city_panama_city" translation_description="Name of city in Panama">Thành phố Panama, Panama</string>
-  <string name="miami_florida_usa_city" translation_description="Name of city in USA">Miami Florida, Hoa Kỳ</string>
-  <string name="buenos_aires_argentina_city" translation_description="Name of city in Argentina">Buenos Aires, Argentina</string>
-  <string name="sao_paulo_brazil_city" translation_description="Name of city in Brazil">Sao Paulo, Brazil</string>
-  <string name="bogota_columbia_city" translation_description="Name of city in Columbia">Bogota, Columbia</string>
-  <string name="santiago_chile_city" translation_description="Name of city in Chile">Santiago, Chi Lê</string>
-  <string name="quito_ecuador_city" translation_description="Name of city in Ecuador">Quito, Ecuador</string>
-  <string name="guatemala_city_guatemala_city" translation_description="Name of city in Guatemala">Thành phố Guatemala, Guatemala</string>
-  <string name="la_paz_bolivia_city" translation_description="Name of city in Bolivia">La Paz, Bolivia</string>
-  <string name="lagos_nigeria_city" translation_description="Name of city in Nigeria">Lagos, Nigeria</string>
-  <string name="cairo_egypt_city" translation_description="Name of city in Egypt">Cairo, Ai Cập</string>
-  <string name="new_delhi_india_city" translation_description="Name of city in India">New Delhi, Ấn Độ</string>
-  <string name="cape_town_south_africa_city" translation_description="Name of city in South Africa">Cape Town, Nam Phi</string>
+  <string name="msg_city_count">THÀNH PHỐ</string>
+  <string name="provideniya_russia_city">Provideniya, Nga</string>
+  <string name="wellington_new_zealand_city">Wellington, New Zealand</string>
+  <string name="invercargill_new_zealand_city">Invercargill, New Zealand</string>
+  <string name="honiara_solomon_islands_city">Honiara, Quần đảo Solomon</string>
+  <string name="magadan_russia_city">Magadan, Nga</string>
+  <string name="andersen_afb_guam_city">Andersen AFB, Guam</string>
+  <string name="atlantic_city_usa_city">Thành phố Atlantic, Hoa Kỳ</string>
+  <string name="yosemite_national_park_usa_city">Công viên quốc gia Yosemite, Hoa Kỳ</string>
+  <string name="kyoto_japan_city">Kyoto, Nhật Bản</string>
+  <string name="machu_picchu_peru_city">Machu Picchu, Peru</string>
+  <string name="florence_italy_city">Florence, Ý</string>
+  <string name="reykjavik_iceland_city">Reykjavik, Iceland</string>
+  <string name="hanover_germany_city">Hanover, Đức</string>
+  <string name="hamburg_germany_city">Hamburg, Đức</string>
+  <string name="mountain_view_usa_city">Mountain View, Hoa Kỳ</string>
+  <string name="banff_canada_city">Banff, Canada</string>
+  <string name="warsaw_poland_city">Warsaw, Ba Lan</string>
+  <string name="stockholm_sweden_city">Stockholm, Thụy Điển</string>
+  <string name="budapest_hungary_city">Budapest, Hungary</string>
+  <string name="paris_france_city">Paris, Pháp</string>
+  <string name="london_uk_city">Luân Đôn, Vương Quốc Anh</string>
+  <string name="moscow_russia_city">Moscow, Nga</string>
+  <string name="dubai_uae_city">Dubai, Các tiểu vương quốc Ả Rập thống nhất</string>
+  <string name="versailles_france_city">Versailles, Pháp</string>
+  <string name="new_york_city_usa_city">Thành phố New York, Hoa Kỳ</string>
+  <string name="san_francisco_usa_city">San Francisco, Hoa Kỳ</string>
+  <string name="madrid_spain_city">Madrid, Tây Ban Nha</string>
+  <string name="barcelona_spain_city">Barcelona, Tây Ban Nha</string>
+  <string name="mumbai_india_city">Mumbai, Ấn Độ</string>
+  <string name="shanghai_china_city">Thượng Hải, Trung Quốc</string>
+  <string name="ediburgh_scotland_city">Edinburgh, Scotland</string>
+  <string name="port_douglas_australia_city">Port Douglas, Úc</string>
+  <string name="istanbul_turkey_city">Istanbul, Thổ Nhĩ Kỳ</string>
+  <string name="denaru_island_fiji_city">Đảo Denarau, Fiji</string>
+  <string name="mexico_city_mexico_city">Thành phố Mexico, Mexico</string>
+  <string name="rio_de_janiero_brazil_city">Rio de Janeiro, Brazil</string>
+  <string name="grand_canyon_national_park_za_usa_city">Công viên quốc gia Grand Canyon, AZ, Hoa Kỳ</string>
+  <string name="grand_tetons_national_park_wy_usa_city">Công viên quốc gia Grand Tetons, WY, Hoa Kỳ</string>
+  <string name="canyonlands_national_park_ut_usa_city">Công viên quốc gia Canyonlands, UT, Hoa Kỳ</string>
+  <string name="nashville_tn_usa_city">Nashville, Tennessee, Hoa Kỳ</string>
+  <string name="new_orleans_la_usa_city">New Orleans, LA, Hoa Kỳ</string>
+  <string name="rome_italy_city">Rome, Ý</string>
+  <string name="berlin_germany_city">Berlin, Đức</string>
+  <string name="washington_dc_usa_city">Washington, DC, Hoa Kỳ</string>
+  <string name="dublin_ireland_city">Dublin, Ireland</string>
+  <string name="zurich_switzerland_city">Zurich, Thụy Sĩ</string>
+  <string name="tokyo_japan_city">Tokyo, Nhật Bản</string>
+  <string name="atlanta_ga_usa_city">Atlanta, GA, Hoa Kỳ</string>
+  <string name="chicago_il_usa_city">Chicago, IL, Hoa Kỳ</string>
+  <string name="port_of_spain_trinidad_and_tobago_city">Thủ đô Port Of Spain, Trinidad và Tobago</string>
+  <string name="kingston_jamaica_city">Kingston, Jamaica</string>
+  <string name="panama_city_panama_city">Thành phố Panama, Panama</string>
+  <string name="miami_florida_usa_city">Miami Florida, Hoa Kỳ</string>
+  <string name="buenos_aires_argentina_city">Buenos Aires, Argentina</string>
+  <string name="sao_paulo_brazil_city">Sao Paulo, Brazil</string>
+  <string name="bogota_columbia_city">Bogota, Columbia</string>
+  <string name="santiago_chile_city">Santiago, Chi Lê</string>
+  <string name="quito_ecuador_city">Quito, Ecuador</string>
+  <string name="guatemala_city_guatemala_city">Thành phố Guatemala, Guatemala</string>
+  <string name="la_paz_bolivia_city">La Paz, Bolivia</string>
+  <string name="lagos_nigeria_city">Lagos, Nigeria</string>
+  <string name="cairo_egypt_city">Cairo, Ai Cập</string>
+  <string name="new_delhi_india_city">New Delhi, Ấn Độ</string>
+  <string name="cape_town_south_africa_city">Cape Town, Nam Phi</string>
 </resources>

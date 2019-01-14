@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">在 %s 上投放</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">投放…</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">輕觸「聖誕老人追蹤器」以投放至電視</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">暫時錯失了投放裝置的連線</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">投放裝置的連線已復原</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">投放遊戲控制器</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">從 dpad 切換為 trackpad 模式</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">右</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">上</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">下</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">Enter</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">左</string>
+  <string name="media_route_casting_on">在 %s 上投放</string>
+  <string name="media_route_menu_title">投放…</string>
+  <string name="touch_to_cast">輕觸「聖誕老人追蹤器」以投放至電視</string>
+  <string name="connection_temp_lost">暫時錯失了投放裝置的連線</string>
+  <string name="connection_recovered">投放裝置的連線已復原</string>
+  <string name="cast_game_controller">投放遊戲控制器</string>
+  <string name="content_desc_mode_switch">從 dpad 切換為 trackpad 模式</string>
+  <string name="content_desc_right_button">右</string>
+  <string name="content_desc_up_button">上</string>
+  <string name="content_desc_down_button">下</string>
+  <string name="content_desc_enter_button">Enter</string>
+  <string name="content_desc_left_button">左</string>
 </resources>

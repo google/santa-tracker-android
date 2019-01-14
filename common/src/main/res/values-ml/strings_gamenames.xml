@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">ഗംബോൾ</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">മെമ്മറി</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">എൽഫ് ജെറ്റ്‌പാക്ക്</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">റോക്കറ്റ് ഹിമവണ്ടി</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">ഡാഷർ ഡാൻസർ</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">സ്നോഡൗൺ</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">സിറ്റി ക്വിസ്</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">പ്രസന്റ് ക്വസ്റ്റ്</string>
+  <string name="gumball">ഗംബോൾ</string>
+  <string name="memory">മെമ്മറി</string>
+  <string name="elf_jetpack">എൽഫ് ജെറ്റ്‌പാക്ക്</string>
+  <string name="rocket">റോക്കറ്റ് ഹിമവണ്ടി</string>
+  <string name="dancer">ഡാഷർ ഡാൻസർ</string>
+  <string name="cityquiz">സിറ്റി ക്വിസ്</string>
+  <string name="present_quest">പ്രസന്റ് ക്വസ്റ്റ്</string>
+  <string name="santa_snap">സാന്താ സ്‌നാപ്പ്</string>
+  <string name="present_throw">പ്രസന്റ് ടോസ് ഗെയിം</string>
+  <string name="jetpack">ജെറ്റ്‌പായ്ക്ക് ധരിച്ച കുട്ടിച്ചാത്തൻ</string>
+  <string name="web_airport">ഉത്തരധ്രുവ എയർപോർട്ട്</string>
+  <string name="web_boatload">ഗിഫ്‌റ്റ് സ്ലിംഗ്‌ഷോട്ട്</string>
+  <string name="web_clausdraws">ക്ലോസ് ഡ്രോസ്</string>
+  <string name="web_codeboogie">കോഡ് ബൂഗി</string>
+  <string name="web_codelab">കോഡ് ലാബ്</string>
+  <string name="web_gumball">ഗംബോൾ ടിൽറ്റ്</string>
+  <string name="web_jamband">എൽഫ് ജാംബാൻഡ്</string>
+  <string name="web_penguindash">പെൻഗ്വിൻ ഡാഷ്</string>
+  <string name="web_presentbounce">നിലവിലെ ബൗൺസ്</string>
+  <string name="web_presentdrop">നിലവിലെ ഡ്രോപ്പ്</string>
+  <string name="web_racer">റുഡോൾഫ് റേസർ</string>
+  <string name="web_runner">റെയിൻഡിയർ റണ്ണർ</string>
+  <string name="web_santasearch">സാന്തയെ തിരയൽ</string>
+  <string name="web_santaselfie">സാന്തയുടെ സെൽഫി</string>
+  <string name="web_seasonofgiving">ദാനധർമ്മങ്ങളുടെ കാലം</string>
+  <string name="web_elfski">എൽഫ് സ്‌കീ</string>
+  <string name="web_snowball">സ്‌നോബോൾ സ്‌റ്റോം</string>
+  <string name="web_snowflake">കോഡ് എ സ്നോഫ്ലെയ്ക്ക്</string>
+  <string name="web_speedsketch">സ്‌പീഡ് സ്‌കെച്ച്</string>
+  <string name="web_wrapbattle">റാപ് ബാറ്റിൽ</string>
+  <string name="web_elfmaker">കുട്ടിച്ചാത്തൻ സ്രഷ്ടാവ്‌</string>
+  <string name="video_santa_is_back">ജോലിയിലേക്ക് മടങ്ങുകയാണ്</string>
+  <string name="video_office_prank">ഓഫീസ് പ്രാങ്ക്</string>
+  <string name="video_carpool">കാർപൂൾ</string>
 </resources>

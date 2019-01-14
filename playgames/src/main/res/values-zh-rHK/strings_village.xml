@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">在 12 月 24 日追蹤聖誕老人。</string>
+  <string name="present_quest_locked">「禮物尋寶」遊戲將於 12 月 1 日推出。</string>
+  <string name="santa_snap_locked">「聖誕老人快拍」即將推出</string>
+  <string name="gumball_locked">Gumball 即將在 12 月 1 日推出。</string>
+  <string name="memory_locked">Memory 即將在 12 月 1 日推出。</string>
+  <string name="rocket_locked">「火箭雪橇」即將在 12 月 1 日推出。</string>
+  <string name="dancer_locked">「猛衝‧跳舞」即將在 12 月 1 日推出。</string>
+  <string name="city_quiz_locked">「城市問答」遊戲將於 12 月 1 日推出。</string>
+  <string name="generic_game_disabled">目前無法玩「%1$s」。</string>
+  <string name="generic_game_locked">%1$s尚未推出，請稍後再回來查看！</string>
+  <string name="video">影片</string>
+  <string name="video_locked">影片將於 12 月解鎖%1$d。</string>
+  <string name="video_disabled">影片目前無法提供。</string>
+  <string name="play">玩遊戲</string>
+  <string name="watch">觀看</string>
+</resources>

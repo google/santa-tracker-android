@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/square_frame"
+    android:background="@color/villageNewGamesBackGround"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_large" >
+
+    <FrameLayout
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/villageBackGround"
+        app:layout_constraintTop_toTopOf="parent "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/toys_full"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@null"
+        android:src="@drawable/illo_new_game_full"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/text_new_games"
+        style="@style/BigVerbText.Rotated"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/card_padding_big_verb_text"
+        android:paddingStart="@dimen/card_padding_big_verb_text"
+        android:paddingEnd="@dimen/card_padding_big_verb_text"
+        android:text="@string/new_games"
+        app:layout_constraintTop_toBottomOf="@id/toys_full"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="New games" />
+
+    <TextView
+        android:id="@+id/text_check_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/check_back_daily"
+        android:textColor="@color/SantaWhite"
+        android:textSize="20sp"
+        android:layout_marginBottom="@dimen/spacing_extra_large"
+        app:layout_constraintTop_toBottomOf="@id/text_new_games"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Check back daily for new games!" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/santaDashboard"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/dashboard_presents_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <TextView
+                android:id="@+id/dashboard_presents_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:text="@string/presents_delivered"
+                android:textAppearance="@style/TextAppearance.Tracker.Card.Label"/>
+
+            <TextView
+                android:id="@+id/dashboard_presents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:textAppearance="@style/TextAppearance.Tracker.Card.Featured"
+                tools:text="122,332,342"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dashboard_countdown_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <TextView
+                android:id="@+id/dashboard_countdown_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:textAppearance="@style/TextAppearance.Tracker.Card.Label"
+                tools:text="@string/arriving_in"/>
+
+            <TextView
+                android:id="@+id/dashboard_countdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:textAppearance="@style/TextAppearance.Tracker.Card.Featured"
+                tools:text="12:34"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/trackerPrimaryDark"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_large">
+
+        <TextView
+            android:id="@+id/dashboard_location_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:textAppearance="@style/TextAppearance.Tracker.Card.Label"
+            tools:text="@string/next_destination"/>
+
+        <TextView
+            android:id="@+id/dashboard_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:measureAllChildren="false"
+            android:textAppearance="@style/TextAppearance.Tracker.Card.Featured"
+            tools:text="Osaka, Japan"/>
+
+    </LinearLayout>
+
+</LinearLayout>

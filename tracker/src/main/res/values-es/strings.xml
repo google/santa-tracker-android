@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Panel de Papá Noel</string>
+  <string name="current_location">UBICACIÓN ACTUAL</string>
+  <string name="presents_delivered">REGALOS ENTREGADOS</string>
+  <string name="santa_status">ESTADO DE PAPÁ NOEL</string>
+  <string name="arriving_in">LLEGARÁ EN</string>
+  <string name="departing_in">SALDRÁ EN</string>
+  <string name="localtime">LLEGÓ A</string>
+  <string name="population">POBLACIÓN</string>
+  <string name="next_destination">SIGUIENTE DESTINO</string>
+  <string name="arriving_at">LLEGARÁ A</string>
+  <string name="arrived_at">LLEGÓ A</string>
+  <string name="in_transit">En tránsito</string>
+  <string name="follow_santa">Sigue a Papá Noel</string>
+  <string name="lost_contact_with_santa">Se ha perdido el contacto con Papá Noel</string>
+  <string name="notification_nearby">¡Papá Noel está cerca!</string>
+  <string name="notification_takeoff">¡Papá Noel ha despegado!</string>
+  <string name="notification_unlock_video">Hay un nuevo vídeo disponible.</string>
+  <string name="notification_unlock_game">Hay un nuevo juego disponible.</string>
+  <string name="santa_arrives_in_your_area_in">PAPÁ NOEL LLEGARÁ A TU ZONA EN</string>
+  <string name="santa_is_approximately">PAPÁ NOEL ESTÁ APROXIMADAMENTE A</string>
+  <string name="distance_km_away">%1$,d km%2$s de distancia</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d millas de distancia</string>
+  <string name="did_you_know">¿SABÍAS QUE...</string>
+  <string name="watch_movie">VER PELÍCULA</string>
+  <string name="santa_update">Notificación de Papá Noel</string>
+  <string name="elapsed_time">TIEMPO TRANSCURRIDO</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">LLEGADA</string>
+  <string name="weather">TIEMPO</string>
+  <string name="weather_format">%1$s °C/%2$s °F</string>
+  <string name="did_you_know_attribution">Datos mundiales proporcionados por National Geographic Bee</string>
+  <string name="photo">Foto</string>
+  <string name="photos">Fotos</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">VOLVER A LA CÁMARA DE PAPÁ NOEL</string>
+  <string name="update_from_santa">Noticia de Papá Noel</string>
+  <string name="trivia_from_santa">Peguntas y respuestas de Papá Noel</string>
+  <string name="photo_from_santa">Foto de Papá Noel</string>
+  <string name="video_from_santa">Vídeo de Papá Noel</string>
+  <string name="show_history">Mostrar historial</string>
+  <string name="see_best_moments">Ver todos los mejores momentos del viaje de Papá Noel</string>
+  <string name="return_to_map">Volver al mapa</string>
+  <string name="santa_is_now_arriving_in_x">Papá Noel ya está llegando a %s.</string>
+  <string name="santa_has_handed_out_x_presents">Papá Noel ha entregado %s regalos.</string>
+  <string name="new_update_from_santa">Nueva noticia de Papá Noel</string>
+  <string name="new_trivia_from_santa">Nuevas preguntas y respuestas de Papá Noel</string>
+  <string name="new_video_from_santa">Nuevo vídeo de Papá Noel</string>
+  <string name="new_photo_from_santa">Nueva foto de Papá Noel</string>
+  <string name="cast_overlay_text">Sigue a Papá Noel a lo grande.\nToca este botón para ver el viaje de Papá Noel en tu televisor con Chromecast.</string>
+  <string name="menu_media_router_title">Botón para enviar</string>
+</resources>

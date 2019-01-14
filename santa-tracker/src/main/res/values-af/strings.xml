@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Volg Kersvader se spoor</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Volg\nKersvader se spoor</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Kersvader vertrek oor</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Kersvader maak nou vir volgende jaar gereed.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Bekyk 2014 se stilhouplekke</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Probeer Kersvader tans bereik</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Probeer steeds om Kersvader te bereik</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">Dae</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">Uur</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">Min.</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">Sek.</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Deel</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Deel met vriende</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Uitsaaiknoppie</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Wetlik en privaatheid</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Regskennisgewing</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Privaatheidsbeleid</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Diensbepalings</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Oopbronlisensies</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Oopbronlisensies vir Google Play-dienste</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Santa op GitHub</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon op GitHub</string>
-  <string name="scene_not_available" translation_description="Not available yet">Nog nie beskikbaar nie</string>
+  <string name="track_santa">Volg Kersvader se spoor</string>
+  <string name="track_santa_two_lines">Volg\nKersvader se spoor</string>
+  <string name="santa_takes_off_in">Kersvader vertrek oor</string>
+  <string name="santa_is_busy_preparing_for_next_year">Kersvader maak nou vir volgende jaar gereed.</string>
+  <string name="view_old_stops">Bekyk 2014 se stilhouplekke</string>
+  <string name="contacting_santa">Probeer Kersvader tans bereik</string>
+  <string name="still_trying_to_reach_santa">Probeer steeds om Kersvader te bereik</string>
+  <string name="days">Dae</string>
+  <string name="hrs">Uur</string>
+  <string name="min">Min.</string>
+  <string name="sec">Sek.</string>
+  <string name="menu_share">Deel</string>
+  <string name="menu_share_friends">Deel met vriende</string>
+  <string name="legal_notice">Wetlik en privaatheid</string>
+  <string name="legal_notice_text">Regskennisgewing</string>
+  <string name="privacy_policy">Privaatheidsbeleid</string>
+  <string name="terms_of_service">Diensbepalings</string>
+  <string name="open_source_licenses">Oopbronlisensies</string>
+  <string name="open_source_repo_santa">Santa op GitHub</string>
+  <string name="scene_not_available">Nog nie beskikbaar nie</string>
   <string name="sign_out">Meld af</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Tot vertrek</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d van %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d punte</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Waar is dit?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Foto deur: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Volg Kersvader op die groot skerm!\nTik hierdie knoppie om Kersvader se reistog met Chromecast op jou TV te sien.</string>
+  <string name="until_takeoff">Tot vertrek</string>
+  <string name="web_scene_error">Jammer, kon nie die toneel laai nie.</string>
+  <string name="check_back_daily">Kom kyk daagliks vir nuwe speletjies!</string>
+  <string name="new_games">Nuwe speletjies</string>
+  <string name="new_card">Nuut</string>
+  <string name="tracker_opens_date">Maak %1$s oop</string>
+  <string name="time">TYD</string>
+  <string name="download_dialog_title">Laai %1$s af</string>
+  <string name="download_dialog_message">Ons moet die speletjie by die Play Winkel aflaai voordat jy kan speel. Dié toestel is tans aan \'n beperkte netwerk verbind wat \'n koste teen jou rekening kan hef vir enige data wat gebruik word.\n\nWil jy voortgaan?</string>
+  <string name="elf_maker_write_success">Prent is na jou foto\'s gestoor</string>
+  <string name="elf_maker_write_fail">Ons kon nie die prent na die toestelfoto\'s stoor nie</string>
 </resources>

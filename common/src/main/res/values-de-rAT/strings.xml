@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">Zurück zur Karte</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">Zurück zum Dorf</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">Diese Version von \"Auf den Spuren des Weihnachtsmanns\" ist abgelaufen. Du kannst sie im Play Store aktualisieren.</string>
+  <string name="back_to_map">Zurück zur Karte</string>
+  <string name="back_to_village">Zurück zum Dorf</string>
+  <string name="go_to_play_store">Diese Version von \"Auf den Spuren des Weihnachtsmanns\" ist abgelaufen. Du kannst sie im Play Store aktualisieren.</string>
+  <string name="game_over">Game Over</string>
+  <string name="loading_screen">Ladebildschirm</string>
+  <string name="menu_resume">Fortsetzen</string>
+  <string name="menu_replay">Wiederholen</string>
+  <string name="menu_home">Weiter</string>
+  <string name="menu_share">Teilen</string>
+  <string name="error_fetch_module">Beim Download von %1$s ist ein Fehler aufgetreten. Funktioniert deine Netzwerkverbindung?</string>
 </resources>

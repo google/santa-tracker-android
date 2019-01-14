@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">サンタさんは今...</string>
+  <string name="current_location">今いる場所</string>
+  <string name="presents_delivered">配ったプレゼントの数</string>
+  <string name="santa_status">サンタさんの今の様子</string>
+  <string name="arriving_in">到着まであと...</string>
+  <string name="departing_in">出発まであと...</string>
+  <string name="localtime">到着した場所</string>
+  <string name="population">人口</string>
+  <string name="next_destination">次に行く場所</string>
+  <string name="arriving_at">到着する場所</string>
+  <string name="arrived_at">到着した場所</string>
+  <string name="in_transit">移動中</string>
+  <string name="follow_santa">サンタを追いかける</string>
+  <string name="lost_contact_with_santa">サンタさんを見失いました</string>
+  <string name="notification_nearby">サンタさんが今近くにいます！</string>
+  <string name="notification_takeoff">サンタさんはもう出発しました！</string>
+  <string name="notification_unlock_video">新しい動画をご覧いただけます。</string>
+  <string name="notification_unlock_game">新しいゲームをご利用いただけます。</string>
+  <string name="santa_arrives_in_your_area_in">サンタさんがあなたの街にやってくるまであと</string>
+  <string name="santa_is_approximately">あなたの街まであと</string>
+  <string name="distance_km_away">ここから%1$,dkm%2$s地点</string>
+  <string name="distance_optional_miles">\u0020（%,dマイル）</string>
+  <string name="distance_mi_away">ここから%1$,dマイル地点</string>
+  <string name="did_you_know">トリビア</string>
+  <string name="watch_movie">動画を見る</string>
+  <string name="santa_update">サンタさんの最新情報</string>
+  <string name="elapsed_time">経過時間</string>
+  <string name="wikipedia">ウィキペディア</string>
+  <string name="arrival">到着時刻</string>
+  <string name="weather">天気情報</string>
+  <string name="weather_format">%1$s °C / %2$s °F</string>
+  <string name="did_you_know_attribution">National Geographic Beeが明かす世界の真実</string>
+  <string name="photo">写真</string>
+  <string name="photos">写真</string>
+  <string name="street_view">ストリートビュー</string>
+  <string name="back_to_santa_cam">サンタさんを映す</string>
+  <string name="update_from_santa">サンタさんの情報</string>
+  <string name="trivia_from_santa">サンタさんからのトリビア</string>
+  <string name="photo_from_santa">サンタさんからの写真</string>
+  <string name="video_from_santa">サンタさんからの動画</string>
+  <string name="show_history">サンタさんの旅を振り返る</string>
+  <string name="see_best_moments">サンタさんの旅のベストショットを見る</string>
+  <string name="return_to_map">地図に戻る</string>
+  <string name="santa_is_now_arriving_in_x">サンタさんの次の訪問先: %s</string>
+  <string name="santa_has_handed_out_x_presents">サンタさんが配り終えたプレゼントの数: %s</string>
+  <string name="new_update_from_santa">サンタさんの新着情報</string>
+  <string name="new_trivia_from_santa">サンタさんからの新着トリビア</string>
+  <string name="new_video_from_santa">サンタさんからの新着動画</string>
+  <string name="new_photo_from_santa">サンタさんからの新着写真</string>
+  <string name="cast_overlay_text">大画面でサンタさんを追いかけよう！\nこのボタンをタップすると、Chromecast を使ってテレビでサンタさんの旅を追跡できます。</string>
+  <string name="menu_media_router_title">キャストボタン</string>
+</resources>

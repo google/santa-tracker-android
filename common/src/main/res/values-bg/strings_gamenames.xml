@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Гъмбол</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Мемори</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Реактивно джудже</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Rocket Sleigh</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Dasher Dancer</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Snowdown</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">Географска викторина</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">Търсене на подаръци</string>
+  <string name="gumball">Гъмбол</string>
+  <string name="memory">Мемори</string>
+  <string name="elf_jetpack">Реактивно джудже</string>
+  <string name="rocket">Rocket Sleigh</string>
+  <string name="dancer">Dasher Dancer</string>
+  <string name="cityquiz">Географска викторина</string>
+  <string name="present_quest">Търсене на подаръци</string>
+  <string name="santa_snap">Коледни селфита</string>
+  <string name="present_throw">Хвърляне на подаръци</string>
+  <string name="jetpack">Реактивно джудже</string>
+  <string name="web_airport">Летище на Северния полюс</string>
+  <string name="web_boatload">Стреляне с подаръци</string>
+  <string name="web_clausdraws">Рисунки с коледно настроение</string>
+  <string name="web_codeboogie">Танц за кодиране</string>
+  <string name="web_codelab">Лаборатория за кодиране</string>
+  <string name="web_gumball">Балансиране на топчета от дъвка</string>
+  <string name="web_jamband">Джуджешка музика</string>
+  <string name="web_penguindash">Бързият пингвин</string>
+  <string name="web_presentbounce">Подскачащи подаръци</string>
+  <string name="web_presentdrop">Пускане на подаръци</string>
+  <string name="web_racer">Надпревара с Рудолф</string>
+  <string name="web_runner">Препускане с елен</string>
+  <string name="web_santasearch">Търсене на Дядо Коледа</string>
+  <string name="web_santaselfie">Селфи на Дядо Коледа</string>
+  <string name="web_seasonofgiving">Сезонът на щедростта</string>
+  <string name="web_elfski">Джуджета на ски</string>
+  <string name="web_snowball">Бой със снежни топки</string>
+  <string name="web_snowflake">Кодиране на снежинка</string>
+  <string name="web_speedsketch">Рисуване върху заскрежено стъкло</string>
+  <string name="web_wrapbattle">Опаковане на подаръци</string>
+  <string name="web_elfmaker">Създаване на джудже</string>
+  <string name="video_santa_is_back">Отново на работа</string>
+  <string name="video_office_prank">Офис шега</string>
+  <string name="video_carpool">Споделено пътуване</string>
 </resources>

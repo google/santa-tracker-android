@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">Wróć do mapy</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">Wróć do wioski</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">Ta wersja Trasy Świętego Mikołaja jest nieaktualna. Odwiedź Sklep Google Play, aby pobrać najnowszą wersję.</string>
+  <string name="back_to_map">Wróć do mapy</string>
+  <string name="back_to_village">Wróć do wioski</string>
+  <string name="go_to_play_store">Ta wersja Trasy Świętego Mikołaja jest nieaktualna. Odwiedź Sklep Google Play, aby pobrać najnowszą wersję.</string>
+  <string name="game_over">Koniec gry</string>
+  <string name="loading_screen">Wczytuję ekran</string>
+  <string name="menu_resume">Wznów</string>
+  <string name="menu_replay">Zagraj jeszcze raz</string>
+  <string name="menu_home">Ekran główny</string>
+  <string name="menu_share">Udostępnij</string>
+  <string name="error_fetch_module">Podczas pobierania gry %1$s wystąpił błąd. Czy masz połączenie z siecią?</string>
 </resources>

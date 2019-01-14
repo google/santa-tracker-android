@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Dasbor Sinterklas</string>
+  <string name="current_location">LOKASI SAAT INI</string>
+  <string name="presents_delivered">HADIAH TERKIRIM</string>
+  <string name="santa_status">STATUS SINTERKLAS</string>
+  <string name="arriving_in">AKAN TIBA DALAM</string>
+  <string name="departing_in">AKAN BERANGKAT DALAM</string>
+  <string name="localtime">TELAH TIBA DI</string>
+  <string name="population">POPULASI</string>
+  <string name="next_destination">TUJUAN BERIKUTNYA</string>
+  <string name="arriving_at">AKAN TIBA DI</string>
+  <string name="arrived_at">TELAH TIBA DI</string>
+  <string name="in_transit">Dalam transit</string>
+  <string name="follow_santa">Ikuti Sinterklas</string>
+  <string name="lost_contact_with_santa">Kehilangan kontak dengan Sinterklas</string>
+  <string name="notification_nearby">Sinterklas ada di dekat sini!</string>
+  <string name="notification_takeoff">Sinterklas telah berangkat!</string>
+  <string name="notification_unlock_video">Ada video baru!</string>
+  <string name="notification_unlock_game">Ada game baru!</string>
+  <string name="santa_arrives_in_your_area_in">SINTERKLAS AKAN TIBA DI WILAYAH ANDA DALAM</string>
+  <string name="santa_is_approximately">SINTERKLAS BERADA SEKITAR</string>
+  <string name="distance_km_away">%1$,d km%2$s jauhnya</string>
+  <string name="distance_optional_miles">\u0020(%,d mil)</string>
+  <string name="distance_mi_away">%1$,d mil</string>
+  <string name="did_you_know">TAHUKAH ANDA</string>
+  <string name="watch_movie">TONTON FILM</string>
+  <string name="santa_update">PEMBARUAN SINTERKLAS</string>
+  <string name="elapsed_time">WAKTU BERLALU</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">KEDATANGAN</string>
+  <string name="weather">CUACA</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">Fakta dunia disediakan oleh National Geographic Bee</string>
+  <string name="photo">Foto</string>
+  <string name="photos">Foto</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">BALIK KE KAMERA SINTERKLAS</string>
+  <string name="update_from_santa">Pembaruan dari Sinterklas</string>
+  <string name="trivia_from_santa">Trivia dari Sinterklas</string>
+  <string name="photo_from_santa">Foto dari Sinterklas</string>
+  <string name="video_from_santa">Video dari Sinterklas</string>
+  <string name="show_history">Tampilkan histori</string>
+  <string name="see_best_moments">Lihat semua momen terbaik dari perjalanan Sinterklas</string>
+  <string name="return_to_map">Balik ke peta</string>
+  <string name="santa_is_now_arriving_in_x">Sinterklas kini tiba di %s</string>
+  <string name="santa_has_handed_out_x_presents">Sinterklas telah membagikan %s hadiah</string>
+  <string name="new_update_from_santa">Pembaruan baru dari Sinterklas</string>
+  <string name="new_trivia_from_santa">Trivia baru dari Sinterklas</string>
+  <string name="new_video_from_santa">Video baru dari Sinterklas</string>
+  <string name="new_photo_from_santa">Foto baru dari Sinterklas</string>
+  <string name="cast_overlay_text">Ikuti Sinterklas di layar besar!\nTap tombol ini untuk melihat perjalanan Sinterklas di TV menggunakan Chromecast.</string>
+  <string name="menu_media_router_title">Tombol Cast</string>
+</resources>

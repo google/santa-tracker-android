@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="analytics_screen_village" translatable="false">Village</string>
+    <string name="analytics_screen_gumball" translatable="false">Gumball</string>
+    <string name="analytics_screen_memory" translatable="false">Memory</string>
+    <string name="analytics_screen_jetpack" translatable="false">Jetpack</string>
+    <string name="analytics_screen_tracker" translatable="false">Tracker</string>
+    <string name="analytics_screen_castcontroller" translatable="false">CastController</string>
+    <string name="analytics_screen_city_quiz" translatable="false">CityQuiz</string>
+    <string name="analytics_screen_webscene" translatable="false">WebScene: %1$s</string>
+
+    <string name="analytics_event_category_launch" translatable="false">Launch</string>
+    <string name="analytics_launch_action_notification" translatable="false">Notification</string>
+    <string name="analytics_launch_action_village" translatable="false">Launch Button</string>
+    <string name="analytics_launch_action_voice" translatable="false">Voice</string>
+    <string name="analytics_launch_voice_unhandled" translatable="false">Unhandled</string>
+
+    <string name="analytics_event_category_cast" translatable="false">Cast</string>
+    <string name="analytics_cast_session_launch" translatable="false">ConnectionLaunchActivity</string>
+    <string name="analytics_cast_session_map" translatable="false">ConnectionMapActivity</string>
+    <string name="analytics_cast_connected" translatable="false">Connected</string>
+    <string name="analytics_cast_disconnected" translatable="false">Disconnected</string>
+    <string name="analytics_cast_statechange_launch" translatable="false">StateChangeLaunchActivity</string>
+    <string name="analytics_cast_statechange_map" translatable="false">StateChangeMapActivity</string>
+    <string name="analytics_cast_overlayshown" translatable="false">overlayshown</string>
+
+    <string name="analytics_cast_action_opencontroller" translatable="false">OpenController</string>
+    <string name="analytics_cast_controller_actionbar" translatable="false">ActionBar</string>
+    <string name="analytics_cast_controller_mediadialog" translatable="false">MediaRouter</string>
+
+    <string name="analytics_cast_action_switchcontroller" translatable="false">SwitchController</string>
+    <string name="analytics_cast_controlswitch_touch" translatable="false">Touch</string>
+    <string name="analytics_cast_controlswitch_dpad" translatable="false">Dpad</string>
+
+    <string name="analytics_event_category_tracker" translatable="false">Tracker</string>
+    <string name="analytics_tracker_action_cam" translatable="false">SantaCamEnabled</string>
+    <string name="analytics_tracker_cam_actionbar" translatable="false">ActionBar</string>
+    <string name="analytics_tracker_cam_fab" translatable="false">FAB</string>
+    <string name="analytics_tracker_cam_timeout" translatable="false">Timeout</string>
+
+    <string name="analytics_tracker_action_location" translatable="false">LocationSelected</string>
+    <string name="analytics_tracker_action_streetview" translatable="false">OpenStreetView</string>
+    <string name="analytics_tracker_action_video" translatable="false">OpenVideo</string>
+    <string name="analytics_tracker_action_clicksanta" translatable="false">ClickSanta</string>
+
+    <string name="analytics_tracker_action_error" translatable="false">Error</string>
+    <string name="analytics_tracker_action_finished" translatable="false">Finished</string>
+    <string name="analytics_tracker_error_timeupdate" translatable="false">TimeUpdate</string>
+    <string name="analytics_tracker_error_nodata" translatable="false">NoData</string>
+    <string name="analytics_tracker_error_switchoff" translatable="false">SwitchOff</string>
+
+    <string name="analytics_tracker_action_card" translatable="false">Card</string>
+    <string name="analytics_tracker_card_expanded" translatable="false">Expanded</string>
+    <string name="analytics_tracker_card_closed" translatable="false">Closed</string>
+
+    <string name="analytics_event_startgame" translatable="false">StartGame</string>
+    <string name="analytics_event_category_village" translatable="false">Village</string>
+    <string name="analytics_event_village_click" translatable="false">Click</string>
+    <string name="analytics_event_village_unlock_easteregg" translatable="false">EasterEgg Unlocked</string>
+
+    <string name="analytics_event_village_moon" translatable="false">Moon</string>
+    <string name="analytics_event_village_sun" translatable="false">Sun</string>
+    <string name="analytics_event_village_ufo" translatable="false">UFO</string>
+    <string name="analytics_event_village_plane" translatable="false">Plane</string>
+
+    <string name="analytics_event_category_webscene" translatable="false">WebScene</string>
+    <string name="analytics_event_webscene_error" translatable="false">Error</string>
+    <string name="analytics_event_webscene_onaction" translatable="false">WebAction</string>
+</resources>

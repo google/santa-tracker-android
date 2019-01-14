@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Reprodukcija</string>
-  <string name="level" translation_description="Label shown under the user's current level">RAZINA</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Radionice</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Otključavanje na razini %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Djed Božićnjak bacio je dar!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Dar je predaleko!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Radionica je predaleko!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Najprije sakupi nekoliko darova!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Vaša je vreća puna!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Radionica je premještena</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Premještanje je otkazano</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Danas ste već premjestili tu radionicu; pokušajte ponovo sutra</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Kreni ovamo!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">Lov na darove treba pristup tvojoj lokaciji da bi ti pomogao u traženju Djedovih darova.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Potrebno je dopuštenje</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">Lov na darove neće raditi bez pristupa tvojoj lokaciji. Omogući dopuštenja za lokaciju u postavkama.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Nedostaju potrebna dopuštenja.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Prethodno</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Darovi padaju\niz Djedovih saonica!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Dođi do oznaka darova na karti\nu stvarnom svijetu i sakupi ih.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Kad napuniš torbu,\nisprazni je u radionici</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Započnimo!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">U blizini se nalazi dar!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Vaša je torba gotovo puna!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Ispraznite torbu u radionici.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Otključali ste novu radionicu!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Klikni dar da ga pokupiš.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Klikni na radionicu da istovariš darove.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">od 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">NAPUNJENO</string>
+  <string name="play">Reprodukcija</string>
+  <string name="level">RAZINA</string>
+  <string name="workshops">Radionice</string>
+  <string name="unlock_at_level">Otključavanje na razini %1$d</string>
+  <string name="present_dropped">Djed Božićnjak bacio je dar!</string>
+  <string name="present_too_far">Dar je predaleko!</string>
+  <string name="workshop_too_far">Radionica je predaleko!</string>
+  <string name="no_presents_collected">Najprije sakupi nekoliko darova!</string>
+  <string name="bag_is_full">Vaša je vreća puna!</string>
+  <string name="workshop_moved">Radionica je premještena</string>
+  <string name="move_canceled">Premještanje je otkazano</string>
+  <string name="workshop_move_too_soon">Danas ste već premjestili tu radionicu; pokušajte ponovo sutra</string>
+  <string name="go_here">Kreni ovamo!</string>
+  <string name="perm_location_rationale">Lov na darove treba pristup tvojoj lokaciji da bi ti pomogao u traženju Djedovih darova.</string>
+  <string name="perm_required">Potrebno je dopuštenje</string>
+  <string name="perm_go_to_settings">Lov na darove neće raditi bez pristupa tvojoj lokaciji. Omogući dopuštenja za lokaciju u postavkama.</string>
+  <string name="required_permissions_missing">Nedostaju potrebna dopuštenja.</string>
+  <string name="next">Prethodno</string>
+  <string name="onboarding_msg_1">Darovi padaju\niz Djedovih saonica!</string>
+  <string name="onboarding_msg_2">Dođi do oznaka darova na karti\nu stvarnom svijetu i sakupi ih.</string>
+  <string name="onboarding_msg_3">Kad napuniš torbu,\nisprazni je u radionici</string>
+  <string name="onboarding_msg_4">Započnimo!</string>
+  <string name="msg_present_nearby">U blizini se nalazi dar!</string>
+  <string name="msg_bag_almost_full">Vaša je torba gotovo puna!</string>
+  <string name="msg_unload_bag">Ispraznite torbu u radionici.</string>
+  <string name="msg_unlocked_workshop">Otključali ste novu radionicu!</string>
+  <string name="msg_click_present">Klikni dar da ga pokupiš.</string>
+  <string name="msg_click_workshop">Klikni na radionicu da istovariš darove.</string>
+  <string name="level_denominator">od 12</string>
+  <string name="full">NAPUNJENO</string>
+  <string name="distraction_warning">Budite svjesni okoline tijekom igre.</string>
 </resources>

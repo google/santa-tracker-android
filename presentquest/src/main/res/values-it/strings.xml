@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Gioca</string>
-  <string name="level" translation_description="Label shown under the user's current level">LIVELLO</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Laboratorio</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Si sblocca al livello %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Babbo Natale ha lasciato un regalo!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Il regalo è troppo lontano!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Il laboratorio è troppo lontano!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Raccogli prima qualche regalo!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">La tua borsa è piena!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Il laboratorio è stato spostato</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Spostamento annullato</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Hai già spostato questo laboratorio oggi, riprova domani</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Vai qui!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">\"Caccia ai regali\" richiede l\'accesso alla tua posizione per aiutarti a trovare i regali di Babbo Natale.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Autorizzazione richiesta</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">\"Caccia ai regali\" non funziona se non consenti l\'accesso alla tua posizione. Attiva le autorizzazioni relative alla posizione nelle impostazioni.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Autorizzazione necessaria mancante.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Avanti</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">I regali stanno cadendo\ndalla slitta di Babbo Natale!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Raggiungi i segnaposto\ndei regali per raccoglierli.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Quando il tuo sacco è pieno,\nvai al laboratorio e svuotalo</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Iniziamo.</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">C\'è un regalo nelle vicinanze.</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Il tuo sacco è quasi pieno.</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Svuota il sacco in un laboratorio.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Hai sbloccato un nuovo laboratorio.</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Fai clic su un regalo per raccoglierlo.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Fai clic sul laboratorio per scaricare i regali.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">di 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">PIENA</string>
+  <string name="play">Gioca</string>
+  <string name="level">LIVELLO</string>
+  <string name="workshops">Laboratorio</string>
+  <string name="unlock_at_level">Si sblocca al livello %1$d</string>
+  <string name="present_dropped">Babbo Natale ha lasciato un regalo!</string>
+  <string name="present_too_far">Il regalo è troppo lontano!</string>
+  <string name="workshop_too_far">Il laboratorio è troppo lontano!</string>
+  <string name="no_presents_collected">Raccogli prima qualche regalo!</string>
+  <string name="bag_is_full">La tua borsa è piena!</string>
+  <string name="workshop_moved">Il laboratorio è stato spostato</string>
+  <string name="move_canceled">Spostamento annullato</string>
+  <string name="workshop_move_too_soon">Hai già spostato questo laboratorio oggi, riprova domani</string>
+  <string name="go_here">Vai qui!</string>
+  <string name="perm_location_rationale">\"Caccia ai regali\" richiede l\'accesso alla tua posizione per aiutarti a trovare i regali di Babbo Natale.</string>
+  <string name="perm_required">Autorizzazione richiesta</string>
+  <string name="perm_go_to_settings">\"Caccia ai regali\" non funziona se non consenti l\'accesso alla tua posizione. Attiva le autorizzazioni relative alla posizione nelle impostazioni.</string>
+  <string name="required_permissions_missing">Autorizzazione necessaria mancante.</string>
+  <string name="next">Avanti</string>
+  <string name="onboarding_msg_1">I regali stanno cadendo\ndalla slitta di Babbo Natale!</string>
+  <string name="onboarding_msg_2">Raggiungi i segnaposto\ndei regali per raccoglierli.</string>
+  <string name="onboarding_msg_3">Quando il tuo sacco è pieno,\nvai al laboratorio e svuotalo</string>
+  <string name="onboarding_msg_4">Iniziamo.</string>
+  <string name="msg_present_nearby">C\'è un regalo nelle vicinanze.</string>
+  <string name="msg_bag_almost_full">Il tuo sacco è quasi pieno.</string>
+  <string name="msg_unload_bag">Svuota il sacco in un laboratorio.</string>
+  <string name="msg_unlocked_workshop">Hai sbloccato un nuovo laboratorio.</string>
+  <string name="msg_click_present">Fai clic su un regalo per raccoglierlo.</string>
+  <string name="msg_click_workshop">Fai clic sul laboratorio per scaricare i regali.</string>
+  <string name="level_denominator">di 12</string>
+  <string name="full">PIENA</string>
+  <string name="distraction_warning">Durante il gioco, fai attenzione all\'ambiente circostante.</string>
 </resources>

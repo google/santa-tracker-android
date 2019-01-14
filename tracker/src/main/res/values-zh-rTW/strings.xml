@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">聖誕老人資訊主頁</string>
+  <string name="current_location">目前位置</string>
+  <string name="presents_delivered">送達的禮物數量</string>
+  <string name="santa_status">聖誕老人的狀態</string>
+  <string name="arriving_in">距離抵達時間還有</string>
+  <string name="departing_in">距離出發時間還有</string>
+  <string name="localtime">已抵達的目的地</string>
+  <string name="population">人口數</string>
+  <string name="next_destination">下一個目的地</string>
+  <string name="arriving_at">即將抵達的目的地</string>
+  <string name="arrived_at">已抵達的目的地</string>
+  <string name="in_transit">正在前往下一個目的地</string>
+  <string name="follow_santa">追蹤聖誕老公公</string>
+  <string name="lost_contact_with_santa">失去聖誕老人的消息</string>
+  <string name="notification_nearby">聖誕老人就在附近！</string>
+  <string name="notification_takeoff">聖誕老人出發了！</string>
+  <string name="notification_unlock_video">新影片上架！</string>
+  <string name="notification_unlock_game">新遊戲上架！</string>
+  <string name="santa_arrives_in_your_area_in">聖誕老人就快到這裡了，只要再等：</string>
+  <string name="santa_is_approximately">聖誕老人目前離這裡還有：</string>
+  <string name="distance_km_away">%1$,d 公里%2$s遠</string>
+  <string name="distance_optional_miles">\u0020(%,d 英里)</string>
+  <string name="distance_mi_away">%1$,d 英里遠</string>
+  <string name="did_you_know">您知道嗎？</string>
+  <string name="watch_movie">觀看影片</string>
+  <string name="santa_update">聖誕老人的最新狀態</string>
+  <string name="elapsed_time">經過的時間</string>
+  <string name="wikipedia">維基百科</string>
+  <string name="arrival">抵達時間</string>
+  <string name="weather">天氣</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">「國家地理小蜜蜂」提供的世界知識</string>
+  <string name="photo">相片</string>
+  <string name="photos">相片</string>
+  <string name="street_view">街景服務</string>
+  <string name="back_to_santa_cam">返回聖誕老人鏡頭</string>
+  <string name="update_from_santa">聖誕老人快報</string>
+  <string name="trivia_from_santa">聖誕老人冷知識</string>
+  <string name="photo_from_santa">聖誕老人相片</string>
+  <string name="video_from_santa">聖誕老人影片</string>
+  <string name="show_history">顯示記錄</string>
+  <string name="see_best_moments">回顧聖誕老人旅途中的美好時光</string>
+  <string name="return_to_map">返回地圖</string>
+  <string name="santa_is_now_arriving_in_x">聖誕老人即將抵達「%s」</string>
+  <string name="santa_has_handed_out_x_presents">聖誕老人已送出 %s 件禮物</string>
+  <string name="new_update_from_santa">聖誕老人最新快報</string>
+  <string name="new_trivia_from_santa">聖誕老人最新冷知識</string>
+  <string name="new_video_from_santa">聖誕老人最新影片</string>
+  <string name="new_photo_from_santa">聖誕老人最新相片</string>
+  <string name="cast_overlay_text">在大螢幕上追蹤聖誕老人的蹤跡！\n只要輕觸這個按鈕，就能透過 Chromecast 在電視上查看聖誕老人的蹤跡。</string>
+  <string name="menu_media_router_title">投放按鈕</string>
+</resources>

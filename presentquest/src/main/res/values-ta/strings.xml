@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">விளையாடுக</string>
-  <string name="level" translation_description="Label shown under the user's current level">நிலை</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">வொர்க்ஷாப்கள்</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">%1$d நிலையில் திறக்கும்</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">சான்டா பரிசு அளித்துள்ளார்!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">பரிசு வெகுதூரத்தில் உள்ளது!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">வொர்க்ஷாப் வெகுதூரத்தில் உள்ளது!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">முதலில் சில பரிசுகளைச் சேகரியுங்கள்!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">உங்கள் பை நிரம்பிவிட்டது!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">வொர்க்‌ஷாப் நகர்த்தப்பட்டது</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">நகர்த்துவது ரத்துசெய்யப்பட்டது</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">இன்று இந்த வொர்க்‌ஷாப் ஏற்கனவே நகர்த்தப்பட்டது, நாளை முயலவும்</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">இங்கு செல்க!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">சான்டா இருக்கும் இடத்தைக் கண்டுபிடிக்க உதவ, Present Quest உங்கள் இருப்பிடத்தை அணுக வேண்டும்.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">அனுமதி தேவை</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">உங்கள் இருப்பிடத்திற்கான அணுகல் இல்லாமல், Present Quest வேலை செய்யாது. அமைப்புகளில் இருப்பிட அனுமதிகளை இயக்கவும்.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">தேவைப்படும் அனுமதிகள் இல்லை.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">அடுத்து</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">சான்டாவின் பனிச் சறுக்குவண்டியிலிருந்து\nபரிசுகள் கொட்டுகின்றன!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">பரிசுகளைப் பிடிக்க, பரிசின் பின்களை நோக்கி\nநிஜமாகவே நடந்து செல்லவும்.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">உங்கள் பை நிரம்பிவிட்டால்,\nபரிசுகளை எடுத்து வைக்க வொர்க்‌ஷாப்புக்குச் செல்லவும்</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">தொடங்குங்கள்!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">பரிசு அருகில் உள்ளது!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">உங்கள் பை கிட்டத்தட்ட நிரம்பிவிட்டது!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">உங்கள் பையில் இருப்பதை வொர்க்‌ஷாப்பில் எடுத்து வைக்கவும்.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">புதிய வொர்க்‌ஷாப்பைக் கண்டுபிடித்துள்ளீர்கள்!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">பரிசைப் பெற, அதன் மீது கிளிக் செய்யவும்.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">பரிசுகளை எடுத்து வைக்க, உங்கள் வொர்க்‌ஷாப்பைக் கிளிக் செய்யவும்.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">/ 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">நிரம்பிவிட்டது</string>
+  <string name="play">விளையாடுக</string>
+  <string name="level">நிலை</string>
+  <string name="workshops">வொர்க்ஷாப்கள்</string>
+  <string name="unlock_at_level">%1$d நிலையில் திறக்கும்</string>
+  <string name="present_dropped">சான்டா பரிசு அளித்துள்ளார்!</string>
+  <string name="present_too_far">பரிசு வெகுதூரத்தில் உள்ளது!</string>
+  <string name="workshop_too_far">வொர்க்ஷாப் வெகுதூரத்தில் உள்ளது!</string>
+  <string name="no_presents_collected">முதலில் சில பரிசுகளைச் சேகரியுங்கள்!</string>
+  <string name="bag_is_full">உங்கள் பை நிரம்பிவிட்டது!</string>
+  <string name="workshop_moved">வொர்க்‌ஷாப் நகர்த்தப்பட்டது</string>
+  <string name="move_canceled">நகர்த்துவது ரத்துசெய்யப்பட்டது</string>
+  <string name="workshop_move_too_soon">இன்று இந்த வொர்க்‌ஷாப் ஏற்கனவே நகர்த்தப்பட்டது, நாளை முயலவும்</string>
+  <string name="go_here">இங்கு செல்க!</string>
+  <string name="perm_location_rationale">சான்டா இருக்கும் இடத்தைக் கண்டுபிடிக்க உதவ, Present Quest உங்கள் இருப்பிடத்தை அணுக வேண்டும்.</string>
+  <string name="perm_required">அனுமதி தேவை</string>
+  <string name="perm_go_to_settings">உங்கள் இருப்பிடத்திற்கான அணுகல் இல்லாமல், Present Quest வேலை செய்யாது. அமைப்புகளில் இருப்பிட அனுமதிகளை இயக்கவும்.</string>
+  <string name="required_permissions_missing">தேவைப்படும் அனுமதிகள் இல்லை.</string>
+  <string name="next">அடுத்து</string>
+  <string name="onboarding_msg_1">சான்டாவின் பனிச் சறுக்குவண்டியிலிருந்து\nபரிசுகள் கொட்டுகின்றன!</string>
+  <string name="onboarding_msg_2">பரிசுகளைப் பிடிக்க, பரிசின் பின்களை நோக்கி\nநிஜமாகவே நடந்து செல்லவும்.</string>
+  <string name="onboarding_msg_3">உங்கள் பை நிரம்பிவிட்டால்,\nபரிசுகளை எடுத்து வைக்க வொர்க்‌ஷாப்புக்குச் செல்லவும்</string>
+  <string name="onboarding_msg_4">தொடங்குங்கள்!</string>
+  <string name="msg_present_nearby">பரிசு அருகில் உள்ளது!</string>
+  <string name="msg_bag_almost_full">உங்கள் பை கிட்டத்தட்ட நிரம்பிவிட்டது!</string>
+  <string name="msg_unload_bag">உங்கள் பையில் இருப்பதை வொர்க்‌ஷாப்பில் எடுத்து வைக்கவும்.</string>
+  <string name="msg_unlocked_workshop">புதிய வொர்க்‌ஷாப்பைக் கண்டுபிடித்துள்ளீர்கள்!</string>
+  <string name="msg_click_present">பரிசைப் பெற, அதன் மீது கிளிக் செய்யவும்.</string>
+  <string name="msg_click_workshop">பரிசுகளை எடுத்து வைக்க, உங்கள் வொர்க்‌ஷாப்பைக் கிளிக் செய்யவும்.</string>
+  <string name="level_denominator">/ 12</string>
+  <string name="full">நிரம்பிவிட்டது</string>
+  <string name="distraction_warning">விளையாடும்போது உங்கள் சுற்றுப்புறத்தைப் பற்றி விழிப்புடன் இருக்கவும்.</string>
 </resources>

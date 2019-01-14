@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Mainkan</string>
-  <string name="level" translation_description="Label shown under the user's current level">LEVEL</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Workshop</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Buka kunci di level %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Sinterklas menjatuhkan hadiah!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Hadiah masih terlalu jauh!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Workshop terlalu jauh!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Kumpulkan beberapa hadiah terlebih dahulu!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Tas Anda sudah penuh!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Workshop dipindahkan</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Pindah dibatalkan</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Workshop ini sudah dipindahkan hari ini, coba lagi besok</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Ke sini!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">Present Quest perlu mengakses lokasimu untuk membantu kamu mencari hadiah dari Sinterklas.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Perlu Izin</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">Tanpa akses ke lokasi Cari Hadiah tidak bisa berfungsi. Aktifkan izin Lokasi di Setelan.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Izin yang diperlukan tidak ada.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Berikutnya</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Hadiah terjatuh dari\nkereta salju Santa!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Berjalanlah ke lokasi pin hadiah\ndi kehidupan nyata untuk mengambilnya.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Setelah kantung Anda penuh,\nberjalanlah ke workshop untuk membukanya</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Ayo Mulai!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">Ada hadiah di sekitar!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Kantung Anda hampir penuh!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Buka kantung Anda di workshop.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Anda membuka kunci workshop baru!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Klik hadiah untuk mengambilnya.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Klik workshop Anda untuk membuka hadiah.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">dari 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">PENUH</string>
+  <string name="play">Mainkan</string>
+  <string name="level">LEVEL</string>
+  <string name="workshops">Workshop</string>
+  <string name="unlock_at_level">Buka kunci di level %1$d</string>
+  <string name="present_dropped">Sinterklas menjatuhkan hadiah!</string>
+  <string name="present_too_far">Hadiah masih terlalu jauh!</string>
+  <string name="workshop_too_far">Workshop terlalu jauh!</string>
+  <string name="no_presents_collected">Kumpulkan beberapa hadiah terlebih dahulu!</string>
+  <string name="bag_is_full">Tas Anda sudah penuh!</string>
+  <string name="workshop_moved">Workshop dipindahkan</string>
+  <string name="move_canceled">Pindah dibatalkan</string>
+  <string name="workshop_move_too_soon">Workshop ini sudah dipindahkan hari ini, coba lagi besok</string>
+  <string name="go_here">Ke sini!</string>
+  <string name="perm_location_rationale">Present Quest perlu mengakses lokasimu untuk membantu kamu mencari hadiah dari Sinterklas.</string>
+  <string name="perm_required">Perlu Izin</string>
+  <string name="perm_go_to_settings">Tanpa akses ke lokasi Cari Hadiah tidak bisa berfungsi. Aktifkan izin Lokasi di Setelan.</string>
+  <string name="required_permissions_missing">Izin yang diperlukan tidak ada.</string>
+  <string name="next">Berikutnya</string>
+  <string name="onboarding_msg_1">Hadiah terjatuh dari\nkereta salju Santa!</string>
+  <string name="onboarding_msg_2">Berjalanlah ke lokasi pin hadiah\ndi kehidupan nyata untuk mengambilnya.</string>
+  <string name="onboarding_msg_3">Setelah kantung Anda penuh,\nberjalanlah ke workshop untuk membukanya</string>
+  <string name="onboarding_msg_4">Ayo Mulai!</string>
+  <string name="msg_present_nearby">Ada hadiah di sekitar!</string>
+  <string name="msg_bag_almost_full">Kantung Anda hampir penuh!</string>
+  <string name="msg_unload_bag">Buka kantung Anda di workshop.</string>
+  <string name="msg_unlocked_workshop">Anda membuka kunci workshop baru!</string>
+  <string name="msg_click_present">Klik hadiah untuk mengambilnya.</string>
+  <string name="msg_click_workshop">Klik workshop Anda untuk membuka hadiah.</string>
+  <string name="level_denominator">dari 12</string>
+  <string name="full">PENUH</string>
+  <string name="distraction_warning">Perhatikan situasi di sekitar Anda saat bermain.</string>
 </resources>

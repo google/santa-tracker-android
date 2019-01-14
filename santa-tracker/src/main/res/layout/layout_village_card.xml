@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,62 +13,51 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
-<com.google.android.apps.santatracker.launch.SquareFrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/square_frame"
+    android:id="@+id/card_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
-    android:orientation="vertical"
-    style="@style/LauncherCard">
-
-    <ImageView
-        android:id="@+id/card_background_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        tools:src="@drawable/android_game_cards_track_santa" />
-
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/card_name_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/SantaWhite"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:textAllCaps="true"
-        tools:text="Track Santa"/>
+    android:focusable="true">
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/card_disabled"
-        android:background="@color/SantaTranslucentGreen"
-        android:paddingBottom="20dp"
-        android:visibility="gone"
-        tools:visibility="gone">
+        android:id="@+id/square_frame"
+        style="@style/LauncherCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_name_text"
+        app:layout_constraintDimensionRatio="126:112"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="@dimen/card_lock_size"
-            android:layout_height="@dimen/card_lock_size"
-            android:layout_gravity="center_horizontal|bottom"
-            android:src="@drawable/locked"
-            android:contentDescription="@null"/>
+            android:id="@+id/card_background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            tools:src="@drawable/android_game_cards_city_quiz" />
+
+        <include layout="@layout/layout_card_locked_layer" />
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/card_verb"
+    <com.google.android.apps.santatracker.common.TitleTextView
+        android:id="@+id/card_name_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:padding="@dimen/card_padding_big_verb_text"
-        tools:text="Play"
-        style="@style/BigVerbText.Rotated"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/SantaWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/square_frame"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="City Quiz" />
 
-</com.google.android.apps.santatracker.launch.SquareFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

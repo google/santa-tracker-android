@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,15 +16,6 @@
   -->
 
 <resources>
-
-    <!-- Santa's takeoff time, as a UNIX timestamp in seconds -->
-    <!-- Dec 24th 2016, 10:00:00GMT -->
-    <integer name="santa_takeoff" translatable="false">1482573600</integer>
-
-    <!-- Santa's final arrival time, as a UNIX timestamp in seconds -->
-    <!-- Dec 25th 2016, 11:00:00GMT -->
-    <integer name="santa_arrival" translatable="false">1482663600</integer>
-
     <!-- Backoff parameters for API access -->
     <!-- Initital backoff time: 30s -->
     <integer name="backoff_initital" translatable="false">30000</integer>
@@ -33,28 +24,9 @@
     <!-- Backoff factor for each retry in percent: 150% -->
     <integer name="backoff_factor" translatable="false">150</integer>
 
-    <!-- Game unlock times in s -->
-    <integer name="unlock_gumball" translatable="false">0</integer>
-    <integer name="unlock_memory" translatable="false">0</integer>
-    <integer name="unlock_jetpack" translatable="false">0</integer>
-    <!-- Note that these markers do not have "locked" artwork, create them if you change this. -->
-    <integer name="unlock_rocket" translatable="false">0</integer>
-    <integer name="unlock_dancer" translatable="false">0</integer>
-    <integer name="unlock_snowdown" translatable="false">0</integer>
-    <integer name="unlock_city_quiz" translatable="false">0</integer>
-
     <!-- StreetView Intent URI with parameters: pano id, heading -->
     <string name="streetview_uri" translatable="false">google.streetview:panoid=%s&amp;cbp=0,%f</string>
-
-    <!-- Video unlock times -->
-    <integer name="unlock_video1" translatable="false">0</integer>
-
-    <!-- Dec 15 2016, 00:00:00 GMT -->
-    <integer name="unlock_video15" translatable="false">1481760000</integer>
-
-    <!-- Dec 23 2016 00:00:00 GMT -->
-    <integer name="unlock_video23" translatable="false">1482451200</integer>
-
+    c
     <!-- App Indexing -->
     <!-- Deep link intent filter entries in AndroidManifest.xml must match this prefix -->
     <string name="santa_tracker_deep_link_prefix" translatable="false">http/google.com/santatracker/android</string>
@@ -63,5 +35,8 @@
     <string name="jetpack_game_id" translatable="false">jetpack</string>
     <string name="memory_game_id" translatable="false">memory</string>
     <string name="city_quiz_game_id" translatable="false">cityquiz</string>
+
+    <!-- Whether to show debug menu items -->
+    <bool name="show_debug_menu_items">true</bool>
 
 </resources>

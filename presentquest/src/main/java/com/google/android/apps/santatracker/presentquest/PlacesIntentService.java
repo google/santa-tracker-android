@@ -22,17 +22,19 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.WorkerThread;
-import android.support.v4.content.LocalBroadcastManager;
-import android.text.TextUtils;
-import android.util.Log;
 
-import com.google.android.apps.santatracker.presentquest.model.Place;
-import com.google.android.apps.santatracker.presentquest.model.Present;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.WorkerThread;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import com.google.android.apps.santatracker.presentquest.repository.PQRepository;
 import com.google.android.apps.santatracker.presentquest.util.Config;
+import com.google.android.apps.santatracker.presentquest.util.Distance;
 import com.google.android.apps.santatracker.presentquest.util.PreferencesUtil;
+import com.google.android.apps.santatracker.presentquest.vo.Place;
+import com.google.android.apps.santatracker.presentquest.vo.Present;
+import com.google.android.apps.santatracker.util.SantaLog;
 import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONArray;
@@ -77,6 +79,9 @@ public class PlacesIntentService extends IntentService {
     // Firebase Config
     private Config mConfig;
 
+    // Repository
+    PQRepository repository;
+
     public PlacesIntentService() {
         super(TAG);
     }
@@ -87,7 +92,7 @@ public class PlacesIntentService extends IntentService {
     }
 
     public static void startNearbySearch(Context context, LatLng center, int radius) {
-        Log.d(TAG, "startNearbySearch: radius=" + radius);
+        SantaLog.d(TAG, "startNearbySearch: radius=" + radius);
         Intent intent = new Intent(context, PlacesIntentService.class);
         intent.setAction(ACTION_SEARCH_NEARBY);
         intent.putExtra(EXTRA_LAT_LNG, center);
@@ -97,13 +102,16 @@ public class PlacesIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+
+        // TODO inject this
+        repository = PQRepository.getInstance(this);
         if (intent != null) {
             final String action = intent.getAction();
             switch (action) {
                 case ACTION_SEARCH_NEARBY:
                     // Don't allow more than X queries at once.
                     if (mQueriesInProgress.get() >= MAX_QUERIES_IN_PROGRESS) {
-                        Log.d(TAG, "Dropping excess query");
+                        SantaLog.d(TAG, "Dropping excess query");
                         return;
                     }
 
@@ -126,7 +134,7 @@ public class PlacesIntentService extends IntentService {
                     mQueriesInProgress.decrementAndGet();
                     break;
                 default:
-                    Log.w(TAG, "Unknown action: " + action);
+                    SantaLog.w(TAG, "Unknown action: " + action);
             }
         }
     }
@@ -151,21 +159,23 @@ public class PlacesIntentService extends IntentService {
             // Set the last API request time with a +/- 30 sec jitter.
             int jitter = ((new Random()).nextInt(60) - 30) * 1000;
             mPreferences.setLastPlacesApiRequest(now + jitter);
-            Log.d(TAG, "getPlaceAndBroadcast: " + (useCache ? "cache miss" : "cache refresh elapsed"));
+            SantaLog.d(
+                    TAG,
+                    "getPlaceAndBroadcast: " + (useCache ? "cache miss" : "cache refresh elapsed"));
             place = fetchPlacesAndGetCached(center, radius);
         } else {
-            Log.d(TAG, "getPlaceAndBroadcast: cache hit");
+            SantaLog.d(TAG, "getPlaceAndBroadcast: cache hit");
         }
 
         // If the place is STILL null, just bail
         if (place == null) {
-            Log.w(TAG, "getPlaceAndBroadcast: total cache failure");
+            SantaLog.w(TAG, "getPlaceAndBroadcast: total cache failure");
             return;
         }
 
         // Log some stats about the place picked
         int distance = Distance.between(center, place.getLatLng());
-        Log.d(TAG, "getPlaceAndBroadcast: distance=" + distance + ", used=" + place.used);
+        SantaLog.d(TAG, "getPlaceAndBroadcast: distance=" + distance + ", used=" + place.used);
 
         // Create result intent and broadcast the result.
         Intent intent = new Intent();
@@ -173,16 +183,16 @@ public class PlacesIntentService extends IntentService {
         intent.putExtra(EXTRA_PLACE_RESULT, place.getLatLng());
 
         boolean received = LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
-        Log.d(TAG, "getPlaceAndBroadcast: received=" + received);
+        SantaLog.d(TAG, "getPlaceAndBroadcast: received=" + received);
         if (received) {
             // Increments usage counter.
-            place.use();
+            repository.usePlace(place);
         }
     }
 
     /**
-     * Compares cached places by their distance from the requesting center, weighing
-     * their distance by the number of times the place has been used.
+     * Compares cached places by their distance from the requesting center, weighing their distance
+     * by the number of times the place has been used.
      */
     private static class PlaceComparator implements Comparator<Place> {
 
@@ -197,8 +207,8 @@ public class PlacesIntentService extends IntentService {
         }
 
         private int weightedDistanceTo(Place place) {
-            return Distance.between(center, place.getLatLng()) +
-                    (int) (place.used * radius * usedPlaceRadiusWeight);
+            return Distance.between(center, place.getLatLng())
+                    + (int) (place.used * radius * usedPlaceRadiusWeight);
         }
 
         @Override
@@ -207,20 +217,22 @@ public class PlacesIntentService extends IntentService {
         }
     }
 
+    // TODO move to repository
     @Nullable
     private Place getCachedPlace(LatLng center, int radius) {
 
         // Build a set of present locations we can use to check that we
         // don't choose a place that already exists as a present.
         Set<LatLng> presents = new HashSet<>();
-        for (Present present : Present.listAll(Present.class)) {
+        for (Present present : repository.getAllPresents()) {
             presents.add(present.getLatLng());
         }
 
         // Sort all places by distance, and filter down to the top X in correct proximity.
         // We'll then choose one of these randomly as the result.
-        List<Place> allPlaces = Place.listAll(Place.class);
-        Collections.sort(allPlaces, new PlaceComparator(center, radius, mConfig.USED_PLACE_RADIUS_WEIGHT));
+        List<Place> allPlaces = repository.getAllPlaces();
+        Collections.sort(
+                allPlaces, new PlaceComparator(center, radius, mConfig.USED_PLACE_RADIUS_WEIGHT));
         List<Place> potentialPlaces = new ArrayList<>();
         for (Place place : allPlaces) {
             int distance = Distance.between(center, place.getLatLng());
@@ -243,8 +255,8 @@ public class PlacesIntentService extends IntentService {
     }
 
     /**
-     * Fetches places from the Places API, back-filling with random locations if too few
-     * returned, and caches them all for future use.
+     * Fetches places from the Places API, back-filling with random locations if too few returned,
+     * and caches them all for future use.
      *
      * @param center
      * @param radius
@@ -252,74 +264,18 @@ public class PlacesIntentService extends IntentService {
      */
     private Place fetchPlacesAndGetCached(LatLng center, int radius) {
         // Before we start, mark if this is the first run
-        boolean firstRun = Place.count(Place.class) == 0;
+        boolean firstRun = repository.getPlaceCount() == 0; // Place.count(Place.class)
 
         // Make places API request using double the radius, to have cached items while travelling.
         ArrayList<LatLng> places = fetchPlacesFromAPI(center, radius * 2);
-        int numFetched = places.size();
-        Log.d(TAG, "fetchPlaces: API returned " + numFetched + " place(s)");
 
-        // Build set of locations that Places API returned and are already cached, which
-        // we can check against before caching a new location from Places API.
-        Set<LatLng> cached = new HashSet<>();
-        if (numFetched > 0) {
-            String[] query = new String[numFetched];
-            String[] queryArgs = new String[numFetched * 2];
-            for (int i = 0; i < numFetched; i++) {
-                query[i] = "(lat = ? AND lng = ?)";
-                LatLng placeLatLng = places.get(i);
-                int argsIndex = i * 2;
-                queryArgs[argsIndex] = String.valueOf(placeLatLng.latitude);
-                queryArgs[argsIndex + 1] = String.valueOf(placeLatLng.longitude);
-            }
+        // TODO need to figure this one out
+        // could make the id a combination of lat long...
+        // these could each be executed in separate statements ... which would be terrible
 
-            // eg: SELECT * FROM places WHERE (lat = 1 AND lng = 2) OR (lat = 3 AND lng = 4);
-            for (Place place : Place.find(Place.class, TextUtils.join(" OR ", query), queryArgs)) {
-                cached.add(place.getLatLng());
-            }
-        }
-        Log.d(TAG, "fetchPlaces: " + cached.size() + " place(s) are already cached");
-
-        // Back-fill with random locations to ensure up to MIN_CACHED_PLACES places.
-        // We reduce radius to half for these, to decrease the likelihood of
-        // adding an inaccessible location.
-        int fill = mConfig.MIN_CACHED_PLACES - numFetched;
-        if (fill > 0) {
-            Log.d(TAG, "fetchPlaces: back-filling with " + fill + " random places");
-            for (int i = 0; i < fill; i++) {
-                LatLng randomLatLng = randomLatLng(center, radius / 2);
-                places.add(randomLatLng);
-            }
-        }
-
-        // Save results to cache.
-        Log.d(TAG, "fetchPlaces: caching " + places.size());
-        for (LatLng latLng : places) {
-            Place place = new Place(latLng);
-            // Check that the place isn't already in the cache, which is very likely since
-            // if the rate limit elapses and the user hasn't moved, duplicates will be returned.
-            if (!cached.contains(place.getLatLng())) {
-                place.save();
-            } else {
-                Log.d(TAG, "Location already cached, discarding: " + latLng);
-            }
-        }
-
-        // Cull the cache if too large.
-        int cull = Math.max((int) Place.count(Place.class) - mConfig.MAX_CACHED_PLACES, 0);
-        Log.d(TAG, "fetchPlaces: culling " + cull + " cached places");
-        if (cull > 0) {
-            String[] emptyArgs = {};
-            int i = 0;
-            // Get the list of oldest cached places we want to cull, and use its highest ID
-            // as the arg to delete.
-            // eg: SELECT FROM places ORDER BY id LIMIT 20;
-            List<Place> oldestPlaces = Place.find(Place.class, "", emptyArgs, "", "id",
-                    String.valueOf(cull));
-            Place newestOfOldest = oldestPlaces.get(oldestPlaces.size() - 1);
-            // eg: DELETE FROM places WHERE ID <= 20;
-            Place.deleteAll(Place.class, "ID <= ?", String.valueOf(newestOfOldest.getId()));
-        }
+        // TODO This should probably happen automatically, along with the places being loaded in
+        // the repository
+        repository.cachePlaces(places, mConfig, center, radius);
 
         // If it's the first run, try to return a particularly well-suited place
         if (firstRun) {
@@ -333,58 +289,73 @@ public class PlacesIntentService extends IntentService {
         return getCachedPlace(center, radius);
     }
 
-    /**
-     * Get a place from the cache that's particularly suited for the first drop.
-     */
+    // TODO move to repository
+    /** Get a place from the cache that's particularly suited for the first drop. */
     @Nullable
     private Place getCachedFirstPlace(LatLng center) {
         // Try to find one in the cache
-        List<Place> places = Place.listAll(Place.class);
+        List<Place> places = repository.getAllPlaces();
         for (Place place : places) {
             if (isValidFirstPlace(center, place.getLatLng())) {
-                Log.d(TAG, "getCachedFirstPlace: cache hit");
+                SantaLog.d(TAG, "getCachedFirstPlace: cache hit");
                 return place;
             }
         }
 
         // If that didn't work, try to randomly generate one, we will search within
         // 1.5x the radius we want so that we have a better chance of a random hit.
-        int maxSearchRadius = (int) (1.5 * mConfig.FIRST_PLACE_RADIUS_WEIGHT * mConfig.REACHABLE_RADIUS_METERS);
+        int maxSearchRadius =
+                (int) (1.5 * mConfig.FIRST_PLACE_RADIUS_WEIGHT * mConfig.REACHABLE_RADIUS_METERS);
         int maxRandomTries = 100;
         for (int i = 0; i < maxRandomTries; i++) {
-            LatLng latLng = randomLatLng(center, maxSearchRadius);
+            LatLng latLng = PQRepository.randomLatLng(center, maxSearchRadius);
             if (isValidFirstPlace(center, latLng)) {
-                Log.d(TAG, "getCachedFirstPlace: got random, attempt " + i);
-                Log.d(TAG, "getCachedFirstPlace: distance is " + Distance.between(center, latLng));
+                SantaLog.d(TAG, "getCachedFirstPlace: got random, attempt " + i);
+                SantaLog.d(
+                        TAG,
+                        "getCachedFirstPlace: distance is " + Distance.between(center, latLng));
 
                 // Save place and return
                 Place place = new Place(latLng);
-                place.save();
+                repository.savePlace(place);
 
                 return place;
             }
         }
 
         // We got really, really unlucky
-        Log.d(TAG, "getCachedFirstPlace: no hits");
+        SantaLog.d(TAG, "getCachedFirstPlace: no hits");
         return null;
     }
 
     private boolean isValidFirstPlace(LatLng center, LatLng placeLatLng) {
         int distance = Distance.between(center, placeLatLng);
         int minDistance = mConfig.REACHABLE_RADIUS_METERS;
-        int maxDistance = (int) (mConfig.REACHABLE_RADIUS_METERS * mConfig.FIRST_PLACE_RADIUS_WEIGHT);
+        int maxDistance =
+                (int) (mConfig.REACHABLE_RADIUS_METERS * mConfig.FIRST_PLACE_RADIUS_WEIGHT);
         return distance > minDistance && distance < maxDistance;
     }
 
     private ArrayList<LatLng> fetchPlacesFromAPI(LatLng center, int radius) {
         ArrayList<LatLng> places = new ArrayList<>();
-        radius = Math.min(radius, 50000);  // Max accepted radius is 50km.
+        radius = Math.min(radius, 50000); // Max accepted radius is 50km.
+        // For privacy, round latlng to 2 decimal places
+        double roundFactor = 10000;
+        double lat = Math.round(center.latitude * roundFactor) / roundFactor;
+        double lng = Math.round(center.longitude * roundFactor) / roundFactor;
 
         try {
             InputStream is = null;
-            URL url = new URL(getString(R.string.places_api_url) + "?location="
-                    + center.latitude + "," + center.longitude + "&radius=" + radius);
+            URL url =
+                    new URL(
+                            getString(R.string.places_api_url)
+                                    + "?location="
+                                    + lat
+                                    + ","
+                                    + lng
+                                    + "&radius="
+                                    + radius);
+            SantaLog.d(TAG, "fetchPlacesFromAPI for " + center + ": " + url);
 
             HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
             conn.setReadTimeout(10000);
@@ -402,7 +373,7 @@ public class PlacesIntentService extends IntentService {
             conn.connect();
             int response = conn.getResponseCode();
             if (response != 200) {
-                Log.e(TAG, "Places API HTTP error: " + response + " / " + url);
+                SantaLog.e(TAG, "Places API HTTP error: " + response + " / " + url);
             } else {
                 BufferedReader reader;
                 StringBuilder builder = new StringBuilder();
@@ -410,32 +381,22 @@ public class PlacesIntentService extends IntentService {
                 for (String line; (line = reader.readLine()) != null; ) {
                     builder.append(line);
                 }
-                JSONArray resultsJson = (new JSONObject(builder.toString())).getJSONArray("results");
+                JSONArray resultsJson =
+                        (new JSONObject(builder.toString())).getJSONArray("results");
                 for (int i = 0; i < resultsJson.length(); i++) {
-                    JSONObject latLngJson = ((JSONObject) resultsJson.get(i))
-                            .getJSONObject("geometry").getJSONObject("location");
-                    places.add(new LatLng(latLngJson.getDouble("lat"), latLngJson.getDouble("lng")));
+                    JSONObject latLngJson =
+                            ((JSONObject) resultsJson.get(i))
+                                    .getJSONObject("geometry")
+                                    .getJSONObject("location");
+                    places.add(
+                            new LatLng(latLngJson.getDouble("lat"), latLngJson.getDouble("lng")));
                 }
             }
         } catch (Exception e) {
-            Log.e(TAG, "Exception parsing places API: " + e.toString());
+            SantaLog.e(TAG, "Exception parsing places API: " + e.toString());
         }
 
         return places;
-    }
-
-    private LatLng randomLatLng(LatLng center, int radius) {
-        // Based on http://gis.stackexchange.com/questions/25877/how-to-generate-random-locations-nearby-my-location
-        Random random = new Random();
-        double radiusInDegrees = radius / 111000f;
-        double u = random.nextDouble();
-        double v = random.nextDouble();
-        double w = radiusInDegrees * Math.sqrt(u);
-        double t = 2 * Math.PI * v;
-        double x = w * Math.cos(t);
-        double y = w * Math.sin(t);
-        double new_x = x / Math.cos(center.latitude);
-        return new LatLng(y + center.latitude, new_x + center.longitude);
     }
 
     @Nullable
@@ -447,12 +408,14 @@ public class PlacesIntentService extends IntentService {
 
         try {
             // Get signatures for the package
-            Signature[] sigs = getPackageManager().getPackageInfo(getPackageName(),
-                    PackageManager.GET_SIGNATURES).signatures;
+            Signature[] sigs =
+                    getPackageManager()
+                            .getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES)
+                            .signatures;
 
             // There should only be one signature, anything else is suspicious
             if (sigs == null || sigs.length > 1 || sigs.length == 0) {
-                Log.w(TAG, "Either 0 or >1 signatures, returning null");
+                SantaLog.w(TAG, "Either 0 or >1 signatures, returning null");
                 return null;
             }
 
@@ -483,22 +446,20 @@ public class PlacesIntentService extends IntentService {
             // Convert to string, chop off trailing colon
             String signature = hexString.toString();
             if (signature.endsWith(":")) {
-                signature = signature.substring(0, signature.length() -1);
+                signature = signature.substring(0, signature.length() - 1);
             }
 
             // Set and return
             mAppSignature = signature;
             return mAppSignature;
         } catch (Exception e) {
-            Log.e(TAG, "getSignature", e);
+            SantaLog.e(TAG, "getSignature", e);
         }
 
         return null;
     }
 
-    /**
-     * BroadcastReceiver to get result of nearby search.
-     */
+    /** BroadcastReceiver to get result of nearby search. */
     public abstract static class NearbyResultReceiver extends BroadcastReceiver {
 
         @Override
@@ -509,9 +470,9 @@ public class PlacesIntentService extends IntentService {
 
         /**
          * Called when a new result is returned.
+         *
          * @param place resulting {@link LatLng}.
          */
         public abstract void onResult(LatLng place);
-
     }
 }

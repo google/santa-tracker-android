@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,8 +15,20 @@
   -->
 
 <resources>
+    <dimen name="spacing_large">16dp</dimen>
 
+    <dimen name="card_text_spacing">8dp</dimen>
+    <dimen name="card_width">320dp</dimen>
+    <dimen name="card_media_height">202.5dp</dimen>
+    <dimen name="card_stream_height">128dp</dimen>
+    <dimen name="card_stream_hidden_peek_height">72dp</dimen>
+    <dimen name="separator_height">8dp</dimen>
+
+    <dimen name="toolbar_elevation">4dp</dimen>
     <dimen name="play_again_score_text_size">12sp</dimen>
     <dimen name="gplus_layout_height">50dp</dimen>
-
+    <dimen name="santacamDashboardPadding">16dp</dimen>
+    <dimen name="santacamDashboardExtraAvatar">24dp</dimen>
+    <dimen name="santacamFactoidTextMargin">8dp</dimen>
+    <dimen name="santacamFactoidExtraAvatar">55dp</dimen>
 </resources>

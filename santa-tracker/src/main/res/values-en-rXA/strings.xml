@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">[Ţŕåçķ Šåñţå one two]</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">[Ţŕåçķ\ñŠåñţå one two]</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">[Šåñţå ţåķéš öƒƒ îñ one two three four]</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">[Šåñţå îš бûšý þŕéþåŕîñĝ ƒöŕ ñéxţ ýéåŕ. one two three four five six seven eight]</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">[Vîéŵ 2014 šţöþš one two]</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">[Ţŕýîñĝ ţö ŕéåçĥ Šåñţå one two three four five]</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">[Šţîļļ ţŕýîñĝ ţö ŕéåçĥ Šåñţå one two three four five six]</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">[Ðåýš one]</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">[Ĥŕš one]</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">[Mîñ one]</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">[Šéç one]</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">[Šĥåŕé one]</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">[Šĥåŕé ŵîţĥ ƒŕîéñðš one two three]</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">[Çåšţ бûţţöñ one two]</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">[Ļéĝåļ &amp; þŕîvåçý one two]</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">[Ļéĝåļ ñöţîçé one two]</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">[Þŕîvåçý þöļîçý one two]</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">[Ţéŕmš öƒ šéŕvîçé one two]</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">[Öþéñ šöûŕçé ļîçéñšéš one two three]</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">[Öþéñ šöûŕçé ļîçéñšéš ƒöŕ Ĝööĝļé Þļåý šéŕvîçéš one two three four five six seven eight nine]</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">[Šåñţå öñ ĜîţĤûб one two]</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">[Þîé Ñööñ öñ ĜîţĤûб one two three four]</string>
-  <string name="scene_not_available" translation_description="Not available yet">[Ñöţ åvåîļåбļé ýéţ one two three]</string>
+  <string name="track_santa">[Ţŕåçķ Šåñţå one two]</string>
+  <string name="track_santa_two_lines">[Ţŕåçķ\ñŠåñţå one two]</string>
+  <string name="santa_takes_off_in">[Šåñţå ţåķéš öƒƒ îñ one two three four]</string>
+  <string name="santa_is_busy_preparing_for_next_year">[Šåñţå îš бûšý þŕéþåŕîñĝ ƒöŕ ñéxţ ýéåŕ. one two three four five six seven eight]</string>
+  <string name="view_old_stops">[Vîéŵ 2014 šţöþš one two]</string>
+  <string name="contacting_santa">[Ţŕýîñĝ ţö ŕéåçĥ Šåñţå one two three four five]</string>
+  <string name="still_trying_to_reach_santa">[Šţîļļ ţŕýîñĝ ţö ŕéåçĥ Šåñţå one two three four five six]</string>
+  <string name="days">[Ðåýš one]</string>
+  <string name="hrs">[Ĥŕš one]</string>
+  <string name="min">[Mîñ one]</string>
+  <string name="sec">[Šéç one]</string>
+  <string name="menu_share">[Šĥåŕé one]</string>
+  <string name="menu_share_friends">[Šĥåŕé ŵîţĥ ƒŕîéñðš one two three]</string>
+  <string name="legal_notice">[Ļéĝåļ &amp; þŕîvåçý one two]</string>
+  <string name="legal_notice_text">[Ļéĝåļ ñöţîçé one two]</string>
+  <string name="privacy_policy">[Þŕîvåçý þöļîçý one two]</string>
+  <string name="terms_of_service">[Ţéŕmš öƒ šéŕvîçé one two]</string>
+  <string name="open_source_licenses">[Öþéñ šöûŕçé ļîçéñšéš one two three]</string>
+  <string name="open_source_repo_santa">[Šåñţå öñ ĜîţĤûб one two]</string>
+  <string name="scene_not_available">[Ñöţ åvåîļåбļé ýéţ one two three]</string>
   <string name="sign_out">[Šîĝñ Öûţ one]</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">[Ûñţîļ Ţåķéöƒƒ one two]</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">[ᐅ%1$dᐊ öƒ ᐅ%2$dᐊ one two three]</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">[ᐅ%1$dᐊ þöîñţš one two three]</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">[Ŵĥéŕé îš ţĥîš¿ one two]</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">[Þĥöţö бý: ᐅ%1$sᐊ one two three]</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">[Föļļöŵ Šåñţå öñ ţĥé бîĝ šçŕééñ¡\ñŢåþ ţĥîš бûţţöñ ţö vîéŵ Šåñţå\'š ĵöûŕñéý öñ ýöûŕ ŢV ŵîţĥ Çĥŕöméçåšţ. one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen]</string>
+  <string name="until_takeoff">[Ûñţîļ Ţåķéöƒƒ one two]</string>
+  <string name="web_scene_error">[Šöŕŕý, çöûļð ñöţ ļöåð ţĥé šçéñé. one two three four five six seven]</string>
+  <string name="check_back_daily">[Çĥéçķ бåçķ ðåîļý ƒöŕ ñéŵ ĝåméš¡ one two three four five six seven]</string>
+  <string name="new_games">[Ñéŵ Ĝåméš one two]</string>
+  <string name="new_card">[Ñéŵ one]</string>
+  <string name="tracker_opens_date">[Öþéñš ᐅ%1$sᐊ one two three]</string>
+  <string name="time">[ŢÎMÉ one]</string>
+  <string name="download_dialog_title">[Ðöŵñļöåð ᐅ%1$sᐊ one two three]</string>
+  <string name="download_dialog_message">[Ŵé ñééð ţö ðöŵñļöåð ţĥé ĝåmé ƒŕöm ţĥé Þļåý Šţöŕé бéƒöŕé ýöû çåñ þļåý. Ţĥîš ðévîçé îš çûŕŕéñţļý çöññéçţéð ţö å méţéŕéð ñéţŵöŕķ ŵĥîçĥ måý çĥåŕĝé ýöû ƒöŕ åñý ðåţå ţŕåñšƒéŕŕéð.\ñ\ñÐö ýöû ŵîšĥ ţö þŕöçééð¿ one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty twentyone twentytwo twentythree twentyfour twentyfive twentysix twentyseven]</string>
+  <string name="elf_maker_write_success">[Îmåĝé šåvéð ţö ýöûŕ þĥöţöš one two three four five six]</string>
+  <string name="elf_maker_write_fail">[Ŵé ĥîţ åñ éŕŕöŕ ŵĥîļé šåvîñĝ îmåĝé ţö ðévîçé þĥöţöš one two three four five six seven eight nine ten eleven]</string>
 </resources>

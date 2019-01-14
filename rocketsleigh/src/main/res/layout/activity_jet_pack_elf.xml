@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,158 +14,195 @@
   ~ limitations under the License.
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:clipChildren="false"
-	android:descendantFocusability="blocksDescendants"
-	android:background="@android:color/white" >
-	<HorizontalScrollView
-	    android:id="@+id/background_scroll"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:scrollbars="none" >
-		<LinearLayout
-		    android:id="@+id/background_layout"
-	    	android:layout_width="wrap_content"
-	    	android:layout_height="match_parent"
-	    	android:orientation="horizontal" />
-	</HorizontalScrollView>
-	<HorizontalScrollView
-	    android:id="@+id/obstacles_scroll"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:scrollbars="none" >
-	    <LinearLayout
-		    android:id="@+id/obstacles_layout"
-	    	android:layout_width="wrap_content"
-	    	android:layout_height="match_parent"
-	    	android:orientation="horizontal" />
-	</HorizontalScrollView>
-	<HorizontalScrollView
-	    android:id="@+id/foreground_scroll"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentBottom="true"
-	    android:scrollbars="none" >
-	    		<LinearLayout
-		    android:id="@+id/foreground_layout"
-	    	android:layout_width="wrap_content"
-	    	android:layout_height="match_parent"
-	    	android:orientation="horizontal" />
-	</HorizontalScrollView>
-	<LinearLayout
-	    android:id="@+id/elf_container"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:orientation="horizontal"
-	    android:clipChildren="false" >
-		<ImageView
-		    android:id="@+id/thrust_image"
-	    	android:layout_width="wrap_content"
-	    	android:layout_height="wrap_content"
-	    	android:adjustViewBounds="true"
-	    	android:src="@drawable/img_jet_burn"
-	    	android:scaleType="matrix" />
-	    <ImageView
-		    android:id="@+id/elf_image"
-	    	android:layout_width="wrap_content"
-	    	android:layout_height="wrap_content"
-	    	android:adjustViewBounds="true"
-	    	android:scaleType="matrix" />
-	</LinearLayout>
-    <ImageView
-        android:id="@+id/plus_100"
-		android:layerType="hardware"
-        android:layout_width="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clipChildren="false"
+    android:descendantFocusability="blocksDescendants">
+
+    <com.google.android.apps.santatracker.rocketsleigh.GameScrollLayout
+        android:id="@+id/background_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/background_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#6f9"
+            android:orientation="horizontal" />
+
+    </com.google.android.apps.santatracker.rocketsleigh.GameScrollLayout>
+
+    <com.google.android.apps.santatracker.rocketsleigh.GameScrollLayout
+        android:id="@+id/obstacles_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/obstacles_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+
+    </com.google.android.apps.santatracker.rocketsleigh.GameScrollLayout>
+
+    <com.google.android.apps.santatracker.rocketsleigh.GameScrollLayout
+        android:id="@+id/foreground_scroll"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:src="@drawable/plus100" />
-    <ImageView
-        android:id="@+id/plus_500"
-		android:layerType="hardware"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:src="@drawable/plus500" />
-	<View
-	    android:id="@+id/control_view"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:background="@android:color/transparent" />
+        android:layout_gravity="bottom"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/foreground_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </com.google.android.apps.santatracker.rocketsleigh.GameScrollLayout>
 
     <LinearLayout
-            android:id="@+id/score_layout"
+        android:id="@+id/elf_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/thrust_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/score_background"
-            android:orientation="horizontal">
-        <TextView
-                android:id="@+id/score_text"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_marginLeft="13dp"
-                android:layout_marginRight="13dp"
-                android:gravity="right|center_vertical"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
-        <View
-                android:id="@+id/score_text_seperator"
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"/>
+            android:layout_gravity="bottom"
+            android:adjustViewBounds="true"
+            android:scaleType="matrix"
+            tools:src="@drawable/img_jet_thrust_100" />
+
         <ImageView
-                android:id="@+id/play_pause_button"
-                android:layout_width="54dp"
-                android:layout_height="32dp"
-                android:layout_alignParentRight="true"
-                android:clickable="true"
-                android:scaleType="center"
-                android:src="@drawable/pause_button_jp" />
+            android:id="@+id/elf_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginBottom="1dp"
+            android:adjustViewBounds="true"
+            android:scaleType="matrix" />
     </LinearLayout>
-	<TextView
-	    android:id="@+id/countdown_text"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_centerInParent="true"
-	    android:background="@android:color/transparent"
-	    android:textSize="80sp" />
-	<RelativeLayout
-	    android:id="@+id/big_play_button_layout"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:background="@color/transparent_overlay"
-        android:visibility="gone" >
-	    <ImageButton
-	        android:id="@+id/big_play_button"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_centerInParent="true"
-	        android:background="@drawable/big_play_button"
-	        android:scaleType="centerInside" />
-	</RelativeLayout>
-	<ImageView
-	    android:id="@+id/exit"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentLeft="true"
-	    android:layout_alignParentBottom="true"
-	    android:layout_marginBottom="8dp"
-	    android:src="@drawable/cancelbar_pressed"
-	    android:clickable="true"
-	    android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/plus_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layerType="hardware"
+        android:src="@drawable/plus100"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/plus_500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layerType="hardware"
+        android:src="@drawable/plus500"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/control_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/score_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/score_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:gravity="end|center_vertical"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/score_text_seperator"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/play_pause_button"
+            android:layout_width="54dp"
+            android:layout_height="32dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="end"
+            android:scaleType="center"
+            android:src="@drawable/pause_button_jp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/countdown_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:textSize="80sp" />
+
+    <FrameLayout
+        android:id="@+id/big_play_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_overlay"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/big_play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/big_play_button"
+            android:scaleType="centerInside" />
+
+        <com.google.android.apps.santatracker.common.CheckableImageButton
+            android:id="@+id/mute_button"
+            style="@style/Santa.ImageButton.Mute"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="16dp" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:src="@drawable/cancelbar_pressed"
+        android:visibility="gone" />
+
     <VideoView
         android:id="@+id/intro_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true" />
+        android:layout_gravity="center" />
+
     <View
         android:id="@+id/intro_control_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</RelativeLayout>
+
+</FrameLayout>

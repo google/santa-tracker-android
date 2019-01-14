@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Speel</string>
-  <string name="level" translation_description="Label shown under the user's current level">VLAK</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Werkwinkels</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Ontsluit by vlak %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Kersvader het \'n geskenk laat val!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Geskenk is te ver weg!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Werkwinkel is te ver weg!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Versamel eers \'n paar geskenke!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Jou sak is vol!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Werkswinkel het geskuif</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Skuif is gekanselleer</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Jy het reeds hierdie werkswinkel vandag geskuif; probeer weer môre</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Gaan hierheen!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">Geskenksoektog kort toegang tot jou ligging om jou te help om Kersvader se geskenke te vind.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Toestemming word vereis</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">Geskenksoektog sal nie werk sonder toegang tot jou ligging nie. Aktiveer asseblief liggingtoestemming in instellings.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Vereiste toestemmings ontbreek.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Volgende</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Geskenke val uit\nKersvader se slee!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Stap in die werklike lewe na\ndie geskenkspelde om hulle te vang.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Sodra jou sak vol is,\nstap na \'n werkswinkel om dit af te laai</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Kom ons begin!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">Daar is \'n geskenk naby!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Jou sak is amper vol!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Laai jou geskenke by \'n werkswinkel af.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Jy het \'n nuwe werkswinkel ontsluit!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Klik op \'n geskenk om dit op te tel.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Klik op jou werkswinkel om geskenke af te laai.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">van 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">VOL</string>
+  <string name="play">Speel</string>
+  <string name="level">VLAK</string>
+  <string name="workshops">Werkwinkels</string>
+  <string name="unlock_at_level">Ontsluit by vlak %1$d</string>
+  <string name="present_dropped">Kersvader het \'n geskenk laat val!</string>
+  <string name="present_too_far">Geskenk is te ver weg!</string>
+  <string name="workshop_too_far">Werkwinkel is te ver weg!</string>
+  <string name="no_presents_collected">Versamel eers \'n paar geskenke!</string>
+  <string name="bag_is_full">Jou sak is vol!</string>
+  <string name="workshop_moved">Werkswinkel het geskuif</string>
+  <string name="move_canceled">Skuif is gekanselleer</string>
+  <string name="workshop_move_too_soon">Jy het reeds hierdie werkswinkel vandag geskuif; probeer weer môre</string>
+  <string name="go_here">Gaan hierheen!</string>
+  <string name="perm_location_rationale">Geskenksoektog kort toegang tot jou ligging om jou te help om Kersvader se geskenke te vind.</string>
+  <string name="perm_required">Toestemming word vereis</string>
+  <string name="perm_go_to_settings">Geskenksoektog sal nie werk sonder toegang tot jou ligging nie. Aktiveer asseblief liggingtoestemming in instellings.</string>
+  <string name="required_permissions_missing">Vereiste toestemmings ontbreek.</string>
+  <string name="next">Volgende</string>
+  <string name="onboarding_msg_1">Geskenke val uit\nKersvader se slee!</string>
+  <string name="onboarding_msg_2">Stap in die werklike lewe na\ndie geskenkspelde om hulle te vang.</string>
+  <string name="onboarding_msg_3">Sodra jou sak vol is,\nstap na \'n werkswinkel om dit af te laai</string>
+  <string name="onboarding_msg_4">Kom ons begin!</string>
+  <string name="msg_present_nearby">Daar is \'n geskenk naby!</string>
+  <string name="msg_bag_almost_full">Jou sak is amper vol!</string>
+  <string name="msg_unload_bag">Laai jou geskenke by \'n werkswinkel af.</string>
+  <string name="msg_unlocked_workshop">Jy het \'n nuwe werkswinkel ontsluit!</string>
+  <string name="msg_click_present">Klik op \'n geskenk om dit op te tel.</string>
+  <string name="msg_click_workshop">Klik op jou werkswinkel om geskenke af te laai.</string>
+  <string name="level_denominator">van 12</string>
+  <string name="full">VOL</string>
+  <string name="distraction_warning">Wees asseblief bewus van jou omgewing wanneer jy speel.</string>
 </resources>

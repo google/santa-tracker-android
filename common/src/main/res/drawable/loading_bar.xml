@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="32dp"
+    android:viewportWidth="360"
+    android:viewportHeight="32">
+    <clip-path android:pathData="M8,0L352,0A8,8 0,0 1,360 8L360,24A8,8 0,0 1,352 32L8,32A8,8 0,0 1,0 24L0,8A8,8 0,0 1,8 0z" />
+    <group android:name="loading_bar">
+        <!-- note: this shape draws beyond the right edge of the viewport as it will be animated leftward -->
+        <path android:pathData="M0,0 L424,0 L424,32 L0,32 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:endX="32"
+                    android:endY="32"
+                    android:startX="0"
+                    android:startY="0"
+                    android:tileMode="repeat"
+                    android:type="linear">
+                    <item
+                        android:color="#c12124"
+                        android:offset="0.0" />
+                    <item
+                        android:color="#c12124"
+                        android:offset="0.5" />
+                    <item
+                        android:color="#ffffff"
+                        android:offset="0.5" />
+                    <item
+                        android:color="#ffffff"
+                        android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+    </group>
+
+    <!-- sheen -->
+    <path
+        android:fillAlpha=".2"
+        android:fillColor="#FFF"
+        android:pathData="M8,2L352,2A6,6 0,0 1,358 8L358,8A6,6 0,0 1,352 14L8,14A6,6 0,0 1,2 8L2,8A6,6 0,0 1,8 2z" />
+</vector>

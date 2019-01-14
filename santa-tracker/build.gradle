@@ -1,6 +1,24 @@
-apply plugin: 'com.android.application'
+/*
+ * Copyright 2019. Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
-ext.densityList = ['mdpi', 'hdpi', 'xhdpi', 'xxhdpi', 'xxxhdpi']
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
 ext.abiList = ['armeabi', 'armeabi-v7a', 'x86']
 
 android {
@@ -9,146 +27,129 @@ android {
 
     defaultConfig {
         applicationId "com.google.android.apps.santatracker"
+
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 40120000
-        versionName "4.0.12"
-        vectorDrawables.useSupportLibrary = true
-        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        wearAppUnbundled true
     }
 
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
-            // Enabling multidex support.
-            multiDexEnabled true
         }
 
         release {
             minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
-    productFlavors {
-        production {
-        }
-        development {
-        }
-    }
-
-    variantFilter { variant ->
-        // 'development' flavor is only available for debug build
-        if (!variant.buildType.name.equals('debug') &&
-                variant.getFlavors().get(0).name.equals("development")) {
-            variant.setIgnore(true)
-        }
-    }
-
-    splits {
-        abi {
-            enable true
-
-            // Include the three architectures that we support for snowdown
-            reset()
-            include(*abiList)
-
-            // Only enable universal build when building dogfood or release
-            def taskList = gradle.startParameter.taskNames.join(",")
-            def isDogfood = taskList.contains("assembleDogfood")
-            def isRelease = taskList.contains("assembleRelease")
-            universalApk (isDogfood || isRelease)
-        }
-
+    bundle {
         density {
-            // TODO: re-enable when we can figure out how to include <=dpi, not just =dpi
-            // as this is preventing games from auto-downsampling bitmaps to prevent OOMs
-            enable false
-            reset()
-            include(*densityList)
-            compatibleScreens 'small', 'normal', 'large', 'xlarge'
+            enableSplit = false
         }
     }
-}
-// Apply signing configurations, keys and other non-version-controlled things
-if (file('../internal/santa-tracker.gradle').exists()) {
-    apply from: '../internal/santa-tracker.gradle'
-}
 
-// Generate unique versionCodes for each APK variant: ZXYYSSSSS
-//   Z is the Major version number
-//   X is the Minor version number
-//   YY is the Path version number
-//   SSSS is information about the split (default to 0000)
-// Any new variations get added to the front
-import com.android.build.OutputFile;
-android.applicationVariants.all { variant ->
-    variant.outputs.each { output ->
-        // Shift abi over by 8 digits
-        def abiFilter = output.getFilter(OutputFile.ABI)
-        int abiVersionCode = (abiList.indexOf(abiFilter) + 1)
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 
-        // Merge all version codes
-        output.versionCodeOverride = variant.mergedFlavor.versionCode + abiVersionCode
+    dynamicFeatures = [
+            ":cityquiz",
+            ":dasherdancer",
+            ":penguinswim",
+            ":presenttoss",
+            ":snowballrun",
+            ":gumball",
+            ":jetpack",
+            ":memory",
+            ":rocketsleigh"
+    ]
+
+    // Disable translation lint checks until we get the translation pipeline running
+    lintOptions {
+        disable 'MissingTranslation', 'ExtraTranslation'
     }
 }
 
-// Support library aar dependencies are loaded from the SDK
 dependencies {
-    compile project(':village')
-    compile project(':common')
-    compile project(':dasherdancer')
-    compile project(':rocketsleigh')
-    compile project(':snowdown')
-    compile project(':doodles')
-    compile project(':presentquest')
-    wearApp project(':wearable')
-    
-    compile files('../third_party/jbox2d/jbox2d-library-2.2.1.1.jar')
-    compile files('../third_party/youtube/YouTubeAndroidPlayerApi.jar')
+    // These are currently libraries, but could be separated out to features
+    implementation project(':tracker')
 
-    compile rootProject.ext.supportV4
-    compile rootProject.ext.design
-    compile rootProject.ext.appCompat
-    compile rootProject.ext.design
-    compile rootProject.ext.mediaRouter
-    compile rootProject.ext.cardView
-    compile rootProject.ext.recyclerView
-    compile rootProject.ext.leanback
-    compile rootProject.ext.multidex
+    api project(':common')
+    api project(':playgames')
+    api project(':doodles-lib')
 
-    compile rootProject.ext.glide
-    compile rootProject.ext.androidMapsUtils
+    api rootProject.ext.kotlinRuntime
 
-    compile rootProject.ext.playServicesAppindexing
-    compile rootProject.ext.playServicesBase
-    compile rootProject.ext.playServicesBasement
-    compile rootProject.ext.playServicesCastFramework
-    compile rootProject.ext.playServicesGames
-    compile rootProject.ext.playServicesMaps
-    compile rootProject.ext.playServicesWearable
+    api rootProject.ext.design
+    api rootProject.ext.appCompat
+    api rootProject.ext.design
+    api rootProject.ext.mediaRouter
+    api rootProject.ext.cardView
+    api rootProject.ext.recyclerView
+    api rootProject.ext.customTabs
+    api rootProject.ext.leanback
+    api rootProject.ext.coreKtx
 
-    compile rootProject.ext.firebaseCore
-    compile rootProject.ext.firebaseAnalytics
-    compile rootProject.ext.firebaseConfig
-    compile rootProject.ext.firebaseCrash
-    compile rootProject.ext.firebaseStorage
+    api rootProject.ext.glide
+    api rootProject.ext.androidMapsUtils
 
-    developmentCompile rootProject.ext.leakCanary
-    productionCompile rootProject.ext.leakCanaryNoOp
+    api rootProject.ext.archLifecycleRuntime
+    api rootProject.ext.archLifecycleExtentions
+    kapt rootProject.ext.archLifecycleCompiler
+    api rootProject.ext.archRoomRuntime
+    kapt rootProject.ext.archRoomCompiler
+    api rootProject.ext.archRoomTesting
 
-    androidTestCompile rootProject.ext.espressoCore, {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    }
+    api rootProject.ext.playServicesAnalytics
+    api rootProject.ext.playServicesBase
+    api rootProject.ext.playServicesCastFramework
+    api rootProject.ext.playServicesGames
+    api rootProject.ext.playServicesMaps
+    implementation rootProject.ext.playServicesOssLicenses
 
-    androidTestCompile rootProject.ext.espressoContrib, {
-        exclude group: 'com.android.support', module: 'support-annotations'
-        exclude group: 'com.android.support', module: 'support-v4'
-        exclude group: 'com.android.support', module: 'design'
-        exclude group: 'com.android.support', module: 'recyclerview-v7'
-    }
+    api rootProject.ext.firebaseAppindexing
+    api rootProject.ext.firebaseCore
+    api rootProject.ext.firebaseConfig
+    api rootProject.ext.firebaseCrash
+    api rootProject.ext.firebaseStorage
+    api rootProject.ext.firebaseMessaging
+    api rootProject.ext.firebaseAppinvite
+
+    api rootProject.ext.daggerCore
+    api rootProject.ext.daggerAndroid
+    api rootProject.ext.daggerAndroidSupport
+    kapt rootProject.ext.daggerAndroidProcessor
+    kapt rootProject.ext.daggerCompiler
+
+    api rootProject.ext.constraintLayout
+
+    api rootProject.ext.flexbox
+
+    implementation rootProject.ext.mergeAdapter
+
+    api rootProject.ext.seismic
+
+    api rootProject.ext.gson
+    api rootProject.ext.okhttp
+
+    api rootProject.ext.playCore
+
+    implementation rootProject.ext.leakCanaryNoOp
+    releaseImplementation rootProject.ext.leakCanaryNoOp
+
+    testImplementation rootProject.ext.junit
+    testImplementation rootProject.ext.mockitoCore
+    androidTestImplementation rootProject.ext.espressoCore
+    androidTestImplementation rootProject.ext.espressoContrib
+    androidTestImplementation rootProject.ext.testingSupportRules
 }
 
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.android.gms.oss-licenses-plugin'

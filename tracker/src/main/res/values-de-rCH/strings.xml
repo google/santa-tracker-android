@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Fahrtenbuch</string>
+  <string name="current_location">AKTUELLER STANDORT</string>
+  <string name="presents_delivered">VERTEILTE GESCHENKE</string>
+  <string name="santa_status">WEIHNACHTSMANN:</string>
+  <string name="arriving_in">ANKUNFT IN</string>
+  <string name="departing_in">ABFAHRT IN</string>
+  <string name="localtime">ANGEKOMMEN IN</string>
+  <string name="population">EINWOHNER</string>
+  <string name="next_destination">NÄCHSTES ZIEL</string>
+  <string name="arriving_at">ANKUNFT IN</string>
+  <string name="arrived_at">ANGEKOMMEN IN</string>
+  <string name="in_transit">Unterwegs</string>
+  <string name="follow_santa">Wo ist der Weihnachtsmann?</string>
+  <string name="lost_contact_with_santa">Keine Verbindung zum Weihnachtsmann</string>
+  <string name="notification_nearby">Der Weihnachtsmann ist ganz in deiner Nähe!</string>
+  <string name="notification_takeoff">Der Weihnachtsmann hat seine Reise begonnen.</string>
+  <string name="notification_unlock_video">Ein neues Video ist verfügbar.</string>
+  <string name="notification_unlock_game">Ein neues Spiel ist verfügbar.</string>
+  <string name="santa_arrives_in_your_area_in">Zeit bis zur Ankunft des Weihnachtsmanns:</string>
+  <string name="santa_is_approximately">Ungefähre Entfernung des Weihnachtsmanns:</string>
+  <string name="distance_km_away">%1$,d km%2$s</string>
+  <string name="distance_optional_miles">\u0020(%,d Meilen)</string>
+  <string name="distance_mi_away">%1$,d Meilen</string>
+  <string name="did_you_know">Schon gewusst?</string>
+  <string name="watch_movie">Film ansehen</string>
+  <string name="santa_update">NEUIGKEITEN VOM WEIHNACHTSMANN</string>
+  <string name="elapsed_time">Verstrichene Zeit</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">Ankunftszeit</string>
+  <string name="weather">Wetter</string>
+  <string name="weather_format">%1$s °C/%2$s °F</string>
+  <string name="did_you_know_attribution">Daten bereitgestellt vom National Geographic Bee</string>
+  <string name="photo">Foto</string>
+  <string name="photos">Fotos</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">Zurück zur Weihnachtsmann-Webcam</string>
+  <string name="update_from_santa">Mitteilung vom Weihnachtsmann</string>
+  <string name="trivia_from_santa">Wissenswertes vom Weihnachtsmann</string>
+  <string name="photo_from_santa">Foto vom Weihnachtsmann</string>
+  <string name="video_from_santa">Video vom Weihnachtsmann</string>
+  <string name="show_history">Verlauf anzeigen</string>
+  <string name="see_best_moments">Highlights der Reise des Weihnachtsmanns</string>
+  <string name="return_to_map">Zurück zur Karte</string>
+  <string name="santa_is_now_arriving_in_x">Zeit bis zur Ankunft des Weihnachtsmanns: %s</string>
+  <string name="santa_has_handed_out_x_presents">Der Weihnachtsmann hat bisher %s Geschenke verteilt.</string>
+  <string name="new_update_from_santa">Neue Mitteilung vom Weihnachtsmann</string>
+  <string name="new_trivia_from_santa">Neue wissenswerte Informationen vom Weihnachtsmann</string>
+  <string name="new_video_from_santa">Neues Video vom Weihnachtsmann</string>
+  <string name="new_photo_from_santa">Neues Foto vom Weihnachtsmann</string>
+  <string name="cast_overlay_text">Folge dem Weihnachtsmann auf einem grossen Bildschirm.\nTippe auf diese Schaltfläche, um dir seine Reise mit Chromecast auf deinem Fernseher anzusehen.</string>
+  <string name="menu_media_router_title">Cast-Symbol</string>
+</resources>

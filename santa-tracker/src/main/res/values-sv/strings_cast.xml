@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">Skickar på %s</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">Skicka på…</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">Tryck om du vill visa Följ jultomten på din TV</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">Anslutningen till Cast-enheten har tillfälligt brutits</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">Anslutningen till Cast-enheten har återupptagits</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">Cast-spelkontroll</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">byt läge från styrkors till styrplatta</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">höger</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">upp</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">ned</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">retur</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">vänster</string>
+  <string name="media_route_casting_on">Skickar på %s</string>
+  <string name="media_route_menu_title">Skicka på…</string>
+  <string name="touch_to_cast">Tryck om du vill visa Följ jultomten på din TV</string>
+  <string name="connection_temp_lost">Anslutningen till Cast-enheten har tillfälligt brutits</string>
+  <string name="connection_recovered">Anslutningen till Cast-enheten har återupptagits</string>
+  <string name="cast_game_controller">Cast-spelkontroll</string>
+  <string name="content_desc_mode_switch">byt läge från styrkors till styrplatta</string>
+  <string name="content_desc_right_button">höger</string>
+  <string name="content_desc_up_button">upp</string>
+  <string name="content_desc_down_button">ned</string>
+  <string name="content_desc_enter_button">retur</string>
+  <string name="content_desc_left_button">vänster</string>
 </resources>

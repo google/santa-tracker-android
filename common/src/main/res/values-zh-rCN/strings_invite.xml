@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,7 +16,7 @@
   -->
 
 <resources>
-  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">邀请好友在 Google 上追踪圣诞老人</string>
-  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">快来试玩“追踪圣诞老人”，与圣诞老人一起环游世界！</string>
-  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">我在 Google 的“追踪圣诞老人”中与小精灵们玩“%2$s”游戏时得了 %1$d 分。你敢来挑战吗？</string>
+  <string name="invite_title">邀请好友在 Google 上追踪圣诞老人</string>
+  <string name="invite_message_generic">快来试玩“追踪圣诞老人”，与圣诞老人一起环游世界！</string>
+  <string name="invite_message_game_fmt">我在 Google 的“追踪圣诞老人”中与小精灵们玩“%2$s”游戏时得了 %1$d 分。你敢来挑战吗？</string>
 </resources>

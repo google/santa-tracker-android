@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Знайти Діда Мороза</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Знайти\nДіда Мороза</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Дід Мороз вирушає через</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Дід Мороз готується до наступного року.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Переглянути зупинки Діда Мороза у 2014 році</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Намагаємося встановити зв’язок із Дідом Морозом</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Усе ще намагаємося встановити зв’язок із Дідом Морозом</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">дн.</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">год</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">хв</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">с</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Поділитися</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Поділіться з друзями</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Кнопка трансляції</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Умови та конфіденційність</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Офіційне повідомлення</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Політика конфіденційності</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Умови використання</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Ліцензії на ПЗ з відкритим кодом</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Ліцензії відкритого коду для сервісів Google Play</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Де Дід Мороз на GitHub</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon на GitHub</string>
-  <string name="scene_not_available" translation_description="Not available yet">Поки не доступно</string>
+  <string name="track_santa">Знайти Діда Мороза</string>
+  <string name="track_santa_two_lines">Знайти\nДіда Мороза</string>
+  <string name="santa_takes_off_in">Дід Мороз вирушає через</string>
+  <string name="santa_is_busy_preparing_for_next_year">Дід Мороз готується до наступного року.</string>
+  <string name="view_old_stops">Переглянути зупинки Діда Мороза у 2014 році</string>
+  <string name="contacting_santa">Намагаємося встановити зв’язок із Дідом Морозом</string>
+  <string name="still_trying_to_reach_santa">Усе ще намагаємося встановити зв’язок із Дідом Морозом</string>
+  <string name="days">дн.</string>
+  <string name="hrs">год</string>
+  <string name="min">хв</string>
+  <string name="sec">с</string>
+  <string name="menu_share">Поділитися</string>
+  <string name="menu_share_friends">Поділіться з друзями</string>
+  <string name="legal_notice">Умови та конфіденційність</string>
+  <string name="legal_notice_text">Офіційне повідомлення</string>
+  <string name="privacy_policy">Політика конфіденційності</string>
+  <string name="terms_of_service">Умови використання</string>
+  <string name="open_source_licenses">Ліцензії відкритого коду</string>
+  <string name="open_source_repo_santa">Де Дід Мороз на GitHub</string>
+  <string name="scene_not_available">Поки не доступно</string>
   <string name="sign_out">Вийти</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">До злету</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d з %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">Балів: %1$d</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Де це?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Автор фото: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Стежте за Дідом Морозом на великому екрані!\nНатисніть цю кнопку, щоб переглядати подорож Діда Мороза на телевізорі за допомогою Chromecast.</string>
+  <string name="until_takeoff">До злету</string>
+  <string name="web_scene_error">На жаль, не вдалося завантажити цю сцену.</string>
+  <string name="check_back_daily">Нові ігри з’являються щодня!</string>
+  <string name="new_games">Нові ігри</string>
+  <string name="new_card">Нове</string>
+  <string name="tracker_opens_date">Почнеться %1$s</string>
+  <string name="time">ЧАС</string>
+  <string name="download_dialog_title">Завантажити гру \"%1$s\"</string>
+  <string name="download_dialog_message">Щоб почати грати в цю гру, потрібно завантажити її з Play Маркету. Ваш пристрій підключено до тарифікованої мережі, тому за передавання даних може стягуватися плата.\n\nПродовжити?</string>
+  <string name="elf_maker_write_success">Зображення збережено у фотоальбомі</string>
+  <string name="elf_maker_write_fail">Під час зберігання зображення у фотоальбомі пристрою сталася помилка</string>
 </resources>

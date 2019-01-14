@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Pallina di gomma</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Memory</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Elf Jetpack</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Razzo di natale</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Ballo di Natale</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Palle di neve</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">Indovina la città</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">Caccia ai regali</string>
+  <string name="gumball">Palline di zucchero</string>
+  <string name="memory">Memory</string>
+  <string name="elf_jetpack">L\'elfo volante</string>
+  <string name="rocket">Razzo di natale</string>
+  <string name="dancer">Ballo di Natale</string>
+  <string name="cityquiz">Indovina la città</string>
+  <string name="present_quest">Caccia ai regali</string>
+  <string name="santa_snap">Santa Snap</string>
+  <string name="present_throw">Lancia il regalo</string>
+  <string name="jetpack">Il folletto volante</string>
+  <string name="web_airport">Aeroporto del Polo Nord</string>
+  <string name="web_boatload">Fionda dei regali</string>
+  <string name="web_clausdraws">Disegni di Babbo Natale</string>
+  <string name="web_codeboogie">La danza del codice</string>
+  <string name="web_codelab">Laboratorio del codice</string>
+  <string name="web_gumball">Palline di zucchero</string>
+  <string name="web_jamband">La band dei folletti</string>
+  <string name="web_penguindash">Lo scatto del pinguino</string>
+  <string name="web_presentbounce">Palleggia con il regalo</string>
+  <string name="web_presentdrop">Sgancia il regalo</string>
+  <string name="web_racer">La corsa di Rudolph</string>
+  <string name="web_runner">La corsa delle renne</string>
+  <string name="web_santasearch">La ricerca di Babbo Natale</string>
+  <string name="web_santaselfie">Selfie con Babbo Natale</string>
+  <string name="web_seasonofgiving">La stagione dei regali</string>
+  <string name="web_elfski">Folletti che sciano</string>
+  <string name="web_snowball">Battaglia di palle di neve</string>
+  <string name="web_snowflake">Disegna con il codice</string>
+  <string name="web_speedsketch">Indovina il disegno</string>
+  <string name="web_wrapbattle">Incarta il regalo</string>
+  <string name="web_elfmaker">Crea un folletto</string>
+  <string name="video_santa_is_back">Si torna al lavoro</string>
+  <string name="video_office_prank">Scherzo in ufficio</string>
+  <string name="video_carpool">Car sharing</string>
 </resources>

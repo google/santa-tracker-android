@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">I-play</string>
-  <string name="level" translation_description="Label shown under the user's current level">LEVEL</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Mga Workshop</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">I-unlock sa level %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Naghulog ng regalo si Santa!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Napakalayo ng regalo!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Napakalayo ng workshop!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Manguha muna ng mga regalo!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Puno na ang bag mo!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Nailipat ang workshop</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Nakansela ang paglipat</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Nailipat na ang workshop na ito ngayong araw, subukang muli bukas</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Pumunta rito!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">Kailangan ng Present Quest ang access sa iyong lokasyon upang matulungan kang mahanap ang mga regalo ni Santa.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Kinakailangan ang Pahintulot</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">Hindi gagana ang Present Quest nang walang access sa iyong lokasyon. Paki-enable ang mga pahintulot sa Lokasyon sa Mga Setting.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Wala ang mga kinakailangang pahintulot.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Susunod</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Nahuhulog ang mga regalo\nmula sa sleigh ni Santa!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Maglakad tungo sa mga pin ng regalo sa\ntotoong buhay upang masalo ang mga ito.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Kapag puno na ang iyong bag,\nmaglakad tungo sa isang workshop upang alisin ang laman</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Tara Na!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">May regalo sa malapit!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Halos puno na ang bag mo!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Alisin ang laman ng iyong bag sa isang workshop.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Nakapag-unlock ka ng bagong workshop!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Mag-click sa isang regalo upang makuha ito.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Mag-click sa iyong workshop upang mag-alis ng mga regalo.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">ng 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">BUO</string>
+  <string name="play">I-play</string>
+  <string name="level">LEVEL</string>
+  <string name="workshops">Mga Workshop</string>
+  <string name="unlock_at_level">I-unlock sa level %1$d</string>
+  <string name="present_dropped">Naghulog ng regalo si Santa!</string>
+  <string name="present_too_far">Napakalayo ng regalo!</string>
+  <string name="workshop_too_far">Napakalayo ng workshop!</string>
+  <string name="no_presents_collected">Manguha muna ng mga regalo!</string>
+  <string name="bag_is_full">Puno na ang bag mo!</string>
+  <string name="workshop_moved">Nailipat ang workshop</string>
+  <string name="move_canceled">Nakansela ang paglipat</string>
+  <string name="workshop_move_too_soon">Nailipat na ang workshop na ito ngayong araw, subukang muli bukas</string>
+  <string name="go_here">Pumunta rito!</string>
+  <string name="perm_location_rationale">Kailangan ng Present Quest ang access sa iyong lokasyon upang matulungan kang mahanap ang mga regalo ni Santa.</string>
+  <string name="perm_required">Kinakailangan ang Pahintulot</string>
+  <string name="perm_go_to_settings">Hindi gagana ang Present Quest nang walang access sa iyong lokasyon. Paki-enable ang mga pahintulot sa Lokasyon sa Mga Setting.</string>
+  <string name="required_permissions_missing">Wala ang mga kinakailangang pahintulot.</string>
+  <string name="next">Susunod</string>
+  <string name="onboarding_msg_1">Nahuhulog ang mga regalo\nmula sa sleigh ni Santa!</string>
+  <string name="onboarding_msg_2">Maglakad tungo sa mga pin ng regalo sa\ntotoong buhay upang masalo ang mga ito.</string>
+  <string name="onboarding_msg_3">Kapag puno na ang iyong bag,\nmaglakad tungo sa isang workshop upang alisin ang laman</string>
+  <string name="onboarding_msg_4">Tara Na!</string>
+  <string name="msg_present_nearby">May regalo sa malapit!</string>
+  <string name="msg_bag_almost_full">Halos puno na ang bag mo!</string>
+  <string name="msg_unload_bag">Alisin ang laman ng iyong bag sa isang workshop.</string>
+  <string name="msg_unlocked_workshop">Nakapag-unlock ka ng bagong workshop!</string>
+  <string name="msg_click_present">Mag-click sa isang regalo upang makuha ito.</string>
+  <string name="msg_click_workshop">Mag-click sa iyong workshop upang mag-alis ng mga regalo.</string>
+  <string name="level_denominator">ng 12</string>
+  <string name="full">BUO</string>
+  <string name="distraction_warning">Magkaroon ng kamalayan sa iyong paligid kapag nagpe-play.</string>
 </resources>

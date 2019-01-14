@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <color name="translucentLightBackground">#ddf3f3f3</color>
+    <color name="translucentDarkBackground">#99000000</color>
+    <color name="disabledMarker">#ff9c9c9c</color>
+    <color name="SantaBlueDark">#283593</color>
+    <!-- Purple 800 -->
+    <color name="SantaRedSoft">#ffff5255</color>
+    <color name="SantaRedDark">#ffba0004</color>
+    <color name="SantaWhite">#FFFFFF</color>
+    <color name="SantaGreenLight">#9affb4</color>
+    <color name="SantaSkyBlue">#d7fbff</color>
+
+    <color name="villageToolbarLight">#64DDF6</color>
+    <color name="villageToolbarDark">#08397E</color>
+
+    <color name="villageStatusBarLight">#51CFE4</color>
+    <color name="villageStatusBarDark">#08397E</color>
+
+    <color name="brandSantaTracker">#51cfe4</color>
+    <color name="brandSantaTrackerDark">#CA222B</color>
+    <color name="brandSantaTrackerBlue">#6E97AE</color>
+
+    <color name="SantaTranslucentPurple">#EBB06CE0</color>
+    <color name="SantaTranslucentBlue">#EB44D4D7</color>
+    <color name="SantaTranslucentYellow">#EBE9C75B</color>
+    <color name="SantaTranslucentGreen">#EB24DA76</color>
+    <color name="SantaTranslucentRed">#EBED6B61</color>
+
+    <color name="tab_blue_dark">#3DDAF2</color>
+    <color name="tab_blue_light">#A2EDF9</color>
+
+    <color name="cityQuizPrimaryGreen">#00cc81</color>
+    <color name="cityQuizPrimaryGreenDark">#64006842</color>
+    <color name="cityQuizSecondaryGreen">#45DDBD</color>
+    <color name="end_game_background_blue">#cd00c3ea</color>
+</resources>

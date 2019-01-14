@@ -1,9 +1,37 @@
-.gradle
-local.properties
-.idea
-build/
-.DS_Store
-*.iml
+# built application files
 *.apk
-*.zip
-google-services.json
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+build/
+gen/
+out/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+
+# Windows thumbnail db
+.DS_Store
+
+# Idea project fileS
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Gradle config files
+.gradle/
+
+# Sandbox stuff
+_sandbox
