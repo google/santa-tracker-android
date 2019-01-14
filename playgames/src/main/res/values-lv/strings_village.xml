@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">Sekojiet Ziemassvētku vecītim 24. decembrī!</string>
+  <string name="present_quest_locked">Dāvanu meklēšanas spēle (Present Quest) būs pieejama no 1. decembra.</string>
+  <string name="santa_snap_locked">Drīzumā būs pieejamas Ziemassvētku vecīša pašbildes.</string>
+  <string name="gumball_locked">Spēle “Gumball” būs pieejama no 1. decembra.</string>
+  <string name="memory_locked">Spēle “Memory” būs pieejama no 1. decembra.</string>
+  <string name="rocket_locked">Spēle “Rocket Sleigh” būs pieejama no 1. decembra.</string>
+  <string name="dancer_locked">Spēle “Dasher Dancer” būs pieejama no 1. decembra.</string>
+  <string name="city_quiz_locked">Pilsētu viktorīnas spēle (City Quiz) būs pieejama no 1. decembra.</string>
+  <string name="generic_game_disabled">Spēle %1$s pašlaik nav pieejama.</string>
+  <string name="generic_game_locked">Spēle %1$s vēl nav pieejama. Pārbaudiet vēlāk.</string>
+  <string name="video">Videoklips</string>
+  <string name="video_locked">Videoklips tiks iespējots %1$d. decembrī.</string>
+  <string name="video_disabled">Videoklips pašlaik nav pieejams.</string>
+  <string name="play">Atskaņot</string>
+  <string name="watch">Skatīties</string>
+</resources>

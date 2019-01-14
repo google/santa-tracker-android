@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">Emitira se na uređaju %s</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">Emitiraj na…</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">Dodirni za emitiranje Slijedi Djeda Božićnjaka na TV-u</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">Veza s uređajem za emitiranje privremeno je prekinuta</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">Veza s uređajem za emitiranje oporavljena je</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">TV igraći kontroler</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">prijeđi s usmjerivača na dodirnu plohu</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">desno</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">gore</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">dolje</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">unesi</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">lijevo</string>
+  <string name="media_route_casting_on">Emitira se na uređaju %s</string>
+  <string name="media_route_menu_title">Emitiraj na…</string>
+  <string name="touch_to_cast">Dodirni za emitiranje Slijedi Djeda Božićnjaka na TV-u</string>
+  <string name="connection_temp_lost">Veza s uređajem za emitiranje privremeno je prekinuta</string>
+  <string name="connection_recovered">Veza s uređajem za emitiranje oporavljena je</string>
+  <string name="cast_game_controller">TV igraći kontroler</string>
+  <string name="content_desc_mode_switch">prijeđi s usmjerivača na dodirnu plohu</string>
+  <string name="content_desc_right_button">desno</string>
+  <string name="content_desc_up_button">gore</string>
+  <string name="content_desc_down_button">dolje</string>
+  <string name="content_desc_enter_button">unesi</string>
+  <string name="content_desc_left_button">lijevo</string>
 </resources>

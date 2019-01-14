@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Lacak Sinterklas</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Lacak\nSinterklas</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Sinterklas berangkat dalam</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Sinterklas sedang sibuk mempersiapkan perjalanan untuk tahun depan.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Lihat perhentian Sinterklas di tahun 2014</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Mencoba menghubungi Sinterklas</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Masih mencoba menghubungi Sinterklas</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">Hari</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">Jam</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">Mnt</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">Dtk</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Bagikan</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Bagikan kepada teman</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Tombol transmisi</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Hukum &amp; privasi</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Notifikasi hukum</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Kebijakan privasi</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Persyaratan layanan</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Lisensi sumber terbuka</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Lisensi sumber terbuka untuk layanan Google Play</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Sinterklas di GitHub</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon di GitHub</string>
-  <string name="scene_not_available" translation_description="Not available yet">Belum tersedia</string>
+  <string name="track_santa">Lacak Sinterklas</string>
+  <string name="track_santa_two_lines">Lacak\nSinterklas</string>
+  <string name="santa_takes_off_in">Sinterklas berangkat dalam</string>
+  <string name="santa_is_busy_preparing_for_next_year">Sinterklas sedang sibuk mempersiapkan perjalanan untuk tahun depan.</string>
+  <string name="view_old_stops">Lihat perhentian Sinterklas di tahun 2014</string>
+  <string name="contacting_santa">Mencoba menghubungi Sinterklas</string>
+  <string name="still_trying_to_reach_santa">Masih mencoba menghubungi Sinterklas</string>
+  <string name="days">Hari</string>
+  <string name="hrs">Jam</string>
+  <string name="min">Mnt</string>
+  <string name="sec">Dtk</string>
+  <string name="menu_share">Bagikan</string>
+  <string name="menu_share_friends">Bagikan kepada teman</string>
+  <string name="legal_notice">Hukum &amp; privasi</string>
+  <string name="legal_notice_text">Notifikasi hukum</string>
+  <string name="privacy_policy">Kebijakan privasi</string>
+  <string name="terms_of_service">Persyaratan layanan</string>
+  <string name="open_source_licenses">Lisensi open source</string>
+  <string name="open_source_repo_santa">Sinterklas di GitHub</string>
+  <string name="scene_not_available">Belum tersedia</string>
   <string name="sign_out">Keluar</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Sampai Lepas Landas</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d dari %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d poin</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Di mana ini?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Foto oleh: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Ikuti Sinterklas di layar besar!\nTap tombol ini untuk melihat perjalanan Sinterklas di TV menggunakan Chromecast.</string>
+  <string name="until_takeoff">SAMPAI SANTA DATANG</string>
+  <string name="web_scene_error">Maaf, tidak dapat memuat adegan.</string>
+  <string name="check_back_daily">Cek game baru setiap hari</string>
+  <string name="new_games">Game Baru</string>
+  <string name="new_card">Baru</string>
+  <string name="tracker_opens_date">Terbuka tanggal %1$s</string>
+  <string name="time">WAKTU</string>
+  <string name="download_dialog_title">Download %1$s</string>
+  <string name="download_dialog_message">Kami harus mendownload game dari Play Store sebelum Anda dapat memainkannya. Perangkat ini saat ini terhubung ke jaringan berkuota, yang dapat mengenakan biaya untuk setiap data yang ditransfer.\n\nApakah Anda ingin melanjutkan?</string>
+  <string name="elf_maker_write_success">Gambar disimpan ke foto Anda</string>
+  <string name="elf_maker_write_fail">Terjadi error saat menyimpan gambar ke foto perangkat</string>
 </resources>

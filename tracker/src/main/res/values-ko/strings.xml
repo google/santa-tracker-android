@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">산타의 대시보드</string>
+  <string name="current_location">현재 위치</string>
+  <string name="presents_delivered">배달된 선물</string>
+  <string name="santa_status">산타 상태</string>
+  <string name="arriving_in">도착 시간</string>
+  <string name="departing_in">출발 시간</string>
+  <string name="localtime">도착지</string>
+  <string name="population">인구</string>
+  <string name="next_destination">다음 목적지</string>
+  <string name="arriving_at">도착지</string>
+  <string name="arrived_at">도착지</string>
+  <string name="in_transit">이동 중</string>
+  <string name="follow_santa">산타 추적하기</string>
+  <string name="lost_contact_with_santa">산타와의 연결 끊김</string>
+  <string name="notification_nearby">산타가 근처에 있습니다.</string>
+  <string name="notification_takeoff">산타가 출발했습니다.</string>
+  <string name="notification_unlock_video">새로운 동영상을 시청할 수 있습니다.</string>
+  <string name="notification_unlock_game">새로운 게임을 할 수 있습니다.</string>
+  <string name="santa_arrives_in_your_area_in">내 지역의 산타 도착 시간</string>
+  <string name="santa_is_approximately">산타와 약</string>
+  <string name="distance_km_away">%1$,dkm%2$s 거리</string>
+  <string name="distance_optional_miles">\u0020(%,d마일)</string>
+  <string name="distance_mi_away">%1$,d마일 거리</string>
+  <string name="did_you_know">재미있는 일반상식</string>
+  <string name="watch_movie">영화 보기</string>
+  <string name="santa_update">산타 업데이트</string>
+  <string name="elapsed_time">경과 시간</string>
+  <string name="wikipedia">위키백과</string>
+  <string name="arrival">도착</string>
+  <string name="weather">날씨</string>
+  <string name="weather_format">%1$s°C/%2$s°F</string>
+  <string name="did_you_know_attribution">National Geographic Bee에서 제공하는 전 세계 상식 정보</string>
+  <string name="photo">사진</string>
+  <string name="photos">사진</string>
+  <string name="street_view">스트리트 뷰</string>
+  <string name="back_to_santa_cam">산타 캠으로 돌아가기</string>
+  <string name="update_from_santa">산타의 소식</string>
+  <string name="trivia_from_santa">산타의 일반상식</string>
+  <string name="photo_from_santa">산타의 사진</string>
+  <string name="video_from_santa">산타의 동영상</string>
+  <string name="show_history">기록 보기</string>
+  <string name="see_best_moments">산타의 여정 중 최고의 순간 모두 보기</string>
+  <string name="return_to_map">지도로 돌아가기</string>
+  <string name="santa_is_now_arriving_in_x">현재 산타 %s 도착</string>
+  <string name="santa_has_handed_out_x_presents">산타가 전달한 선물 %s개</string>
+  <string name="new_update_from_santa">산타의 새로운 소식</string>
+  <string name="new_trivia_from_santa">산타의 새로운 일반상식</string>
+  <string name="new_video_from_santa">산타의 새로운 동영상</string>
+  <string name="new_photo_from_santa">산타의 새로운 사진</string>
+  <string name="cast_overlay_text">대형 화면에서 산타를 추적해 보세요.\n이 버튼을 탭하여 Chromecast를 통해 TV에서 산타의 여정을 확인할 수 있습니다.</string>
+  <string name="menu_media_router_title">전송 버튼</string>
+</resources>

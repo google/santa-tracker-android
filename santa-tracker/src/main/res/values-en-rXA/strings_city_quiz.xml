@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,69 +16,69 @@
   -->
 
 <resources>
-  <string name="msg_city_count" translation_description="Label for number of cities guessed in game.">[ÇÎŢÎÉŠ one]</string>
-  <string name="provideniya_russia_city" translation_description="Name of city in Russia">[Þŕövîðéñîýå, Ŕûššîå one two three]</string>
-  <string name="wellington_new_zealand_city" translation_description="Name of city in New Zealand">[Ŵéļļîñĝţöñ, Ñéŵ Žéåļåñð one two three]</string>
-  <string name="invercargill_new_zealand_city" translation_description="Name of city in New Zealand">[Îñvéŕçåŕĝîļļ, Ñéŵ Žéåļåñð one two three]</string>
-  <string name="honiara_solomon_islands_city" translation_description="Name of city in Solomon Islands">[Ĥöñîåŕå, Šöļömöñ Îšļåñðš one two three]</string>
-  <string name="magadan_russia_city" translation_description="Name of city in Russia">[Måĝåðåñ, Ŕûššîå one two]</string>
-  <string name="andersen_afb_guam_city" translation_description="Name of an air force base (AFB) in Guam">[Åñðéŕšéñ ÅFБ, Ĝûåm one two three]</string>
-  <string name="atlantic_city_usa_city" translation_description="Name of city in USA">[Åţļåñţîç Çîţý, ÛŠÅ one two three]</string>
-  <string name="yosemite_national_park_usa_city" translation_description="Name of city in USA">[Ýöšémîţé Ñåţîöñåļ Þåŕķ, ÛŠÅ one two three four five six]</string>
-  <string name="kyoto_japan_city" translation_description="Name of city in Japan">[Ķýöţö, Ĵåþåñ one two]</string>
-  <string name="machu_picchu_peru_city" translation_description="Name of city in Peru">[Måçĥû Þîççĥû, Þéŕû one two three]</string>
-  <string name="florence_italy_city" translation_description="Name of city in Italy">[Fļöŕéñçé, Îţåļý one two]</string>
-  <string name="reykjavik_iceland_city" translation_description="Name of city in Iceland">[Ŕéýķĵåvîķ, Îçéļåñð one two three]</string>
-  <string name="hanover_germany_city" translation_description="Name of city in Germany">[Ĥåñövéŕ, Ĝéŕmåñý one two]</string>
-  <string name="hamburg_germany_city" translation_description="Name of city in Germany">[Ĥåmбûŕĝ, Ĝéŕmåñý one two]</string>
-  <string name="mountain_view_usa_city" translation_description="Name of city in USA">[Möûñţåîñ Vîéŵ, ÛŠÅ one two three]</string>
-  <string name="banff_canada_city" translation_description="Name of city in Canada">[Бåñƒƒ, Çåñåðå one two]</string>
-  <string name="warsaw_poland_city" translation_description="Name of city in Poland">[Ŵåŕšåŵ, Þöļåñð one two]</string>
-  <string name="stockholm_sweden_city" translation_description="Name of city in Sweden">[Šţöçķĥöļm, Šŵéðéñ one two three]</string>
-  <string name="budapest_hungary_city" translation_description="Name of city in Hungary">[Бûðåþéšţ, Ĥûñĝåŕý one two three]</string>
-  <string name="paris_france_city" translation_description="Name of city in France">[Þåŕîš, Fŕåñçé one two]</string>
-  <string name="london_uk_city" translation_description="Name of city in UK">[Ļöñðöñ, ÛĶ one two]</string>
-  <string name="moscow_russia_city" translation_description="Name of city in Russia">[Möšçöŵ, Ŕûššîå one two]</string>
-  <string name="dubai_uae_city" translation_description="Name of city in UAE">[Ðûбåî, ÛÅÉ one two]</string>
-  <string name="versailles_france_city" translation_description="Name of city in France">[Véŕšåîļļéš, Fŕåñçé one two three]</string>
-  <string name="new_york_city_usa_city" translation_description="Name of city in USA">[Ñéŵ Ýöŕķ Çîţý, ÛŠÅ one two three four]</string>
-  <string name="san_francisco_usa_city" translation_description="Name of city in USA">[Šåñ Fŕåñçîšçö, ÛŠÅ one two three]</string>
-  <string name="madrid_spain_city" translation_description="Name of city in Spain">[Måðŕîð, Šþåîñ one two]</string>
-  <string name="barcelona_spain_city" translation_description="Name of city in Spain">[Бåŕçéļöñå, Šþåîñ one two]</string>
-  <string name="mumbai_india_city" translation_description="Name of city in India">[Mûmбåî, Îñðîå one two]</string>
-  <string name="shanghai_china_city" translation_description="Name of city in China">[Šĥåñĝĥåî, Çĥîñå one two]</string>
-  <string name="ediburgh_scotland_city" translation_description="Name of city in Scotland">[Éðîñбûŕĝĥ, Šçöţļåñð one two three]</string>
-  <string name="port_douglas_australia_city" translation_description="Name of city in Australia">[Þöŕţ Ðöûĝļåš, Åûšţŕåļîå one two three]</string>
-  <string name="istanbul_turkey_city" translation_description="Name of city in Turkey">[Îšţåñбûļ, Ţûŕķéý one two]</string>
-  <string name="denaru_island_fiji_city" translation_description="Name of city in Fiji">[Ðéñåŕåû Îšļåñð, Fîĵî one two three]</string>
-  <string name="mexico_city_mexico_city" translation_description="Name of city in Mexico">[Méxîçö Çîţý, Méxîçö one two three]</string>
-  <string name="rio_de_janiero_brazil_city" translation_description="Name of city in Brazil">[Ŕîö ðé Ĵåñéîŕö, Бŕåžîļ one two three four five]</string>
-  <string name="grand_canyon_national_park_za_usa_city" translation_description="Name of city in USA">[Ĝŕåñð Çåñýöñ Ñåţîöñåļ Þåŕķ, ÅŽ, ÛŠÅ one two three four five six seven eight]</string>
-  <string name="grand_tetons_national_park_wy_usa_city" translation_description="Name of city in USA">[Ĝŕåñð Ţéţöñš Ñåţîöñåļ Þåŕķ, ŴÝ, ÛŠÅ one two three four five six seven eight]</string>
-  <string name="canyonlands_national_park_ut_usa_city" translation_description="Name of city in USA">[Çåñýöñļåñðš Ñåţîöñåļ Þåŕķ, ÛŢ, ÛŠÅ one two three four five six seven]</string>
-  <string name="nashville_tn_usa_city" translation_description="Name of city in USA">[Ñåšĥvîļļé, ŢÑ, ÛŠÅ one two three]</string>
-  <string name="new_orleans_la_usa_city" translation_description="Name of city in USA">[Ñéŵ Öŕļéåñš, ĻÅ, ÛŠÅ one two three four five]</string>
-  <string name="rome_italy_city" translation_description="Name of city in Italy">[Ŕömé, Îţåļý one two]</string>
-  <string name="berlin_germany_city" translation_description="Name of city in Germany">[Бéŕļîñ, Ĝéŕmåñý one two]</string>
-  <string name="washington_dc_usa_city" translation_description="Name of city in ">[Ŵåšĥîñĝţöñ, ÐÇ, ÛŠÅ one two three]</string>
-  <string name="dublin_ireland_city" translation_description="Name of city in USA">[Ðûбļîñ, Îŕéļåñð one two]</string>
-  <string name="zurich_switzerland_city" translation_description="Name of city in Switzerland">[Žûŕîçĥ, Šŵîţžéŕļåñð one two three]</string>
-  <string name="tokyo_japan_city" translation_description="Name of city in Japan">[Ţöķýö, Ĵåþåñ one two]</string>
-  <string name="atlanta_ga_usa_city" translation_description="Name of city in USA">[Åţļåñţå, ĜÅ, ÛŠÅ one two]</string>
-  <string name="chicago_il_usa_city" translation_description="Name of city in USA">[Çĥîçåĝö, ÎĻ, ÛŠÅ one two]</string>
-  <string name="port_of_spain_trinidad_and_tobago_city" translation_description="Name of city in Trinidad and Tobago">[Þöŕţ Öƒ Šþåîñ, Ţŕîñîðåð åñð Ţöбåĝö one two three four five six seven]</string>
-  <string name="kingston_jamaica_city" translation_description="Name of city in Jamaica">[Ķîñĝšţöñ, Ĵåmåîçå one two three]</string>
-  <string name="panama_city_panama_city" translation_description="Name of city in Panama">[Þåñåmå Çîţý, Þåñåmå one two three]</string>
-  <string name="miami_florida_usa_city" translation_description="Name of city in USA">[Mîåmî Fļöŕîðå, ÛŠÅ one two three]</string>
-  <string name="buenos_aires_argentina_city" translation_description="Name of city in Argentina">[Бûéñöš Åîŕéš, Åŕĝéñţîñå one two three]</string>
-  <string name="sao_paulo_brazil_city" translation_description="Name of city in Brazil">[Šåö Þåûļö, Бŕåžîļ one two three]</string>
-  <string name="bogota_columbia_city" translation_description="Name of city in Columbia">[Бöĝöţå, Çöļûmбîå one two]</string>
-  <string name="santiago_chile_city" translation_description="Name of city in Chile">[Šåñţîåĝö, Çĥîļé one two]</string>
-  <string name="quito_ecuador_city" translation_description="Name of city in Ecuador">[Qûîţö, Éçûåðöŕ one two]</string>
-  <string name="guatemala_city_guatemala_city" translation_description="Name of city in Guatemala">[Ĝûåţémåļå Çîţý, Ĝûåţémåļå one two three]</string>
-  <string name="la_paz_bolivia_city" translation_description="Name of city in Bolivia">[Ļå Þåž, Бöļîvîå one two]</string>
-  <string name="lagos_nigeria_city" translation_description="Name of city in Nigeria">[Ļåĝöš, Ñîĝéŕîå one two]</string>
-  <string name="cairo_egypt_city" translation_description="Name of city in Egypt">[Çåîŕö, Éĝýþţ one two]</string>
-  <string name="new_delhi_india_city" translation_description="Name of city in India">[Ñéŵ Ðéļĥî, Îñðîå one two]</string>
-  <string name="cape_town_south_africa_city" translation_description="Name of city in South Africa">[Çåþé Ţöŵñ, Šöûţĥ Åƒŕîçå one two three four five]</string>
+  <string name="msg_city_count">[ÇÎŢÎÉŠ one]</string>
+  <string name="provideniya_russia_city">[Þŕövîðéñîýå, Ŕûššîå one two three]</string>
+  <string name="wellington_new_zealand_city">[Ŵéļļîñĝţöñ, Ñéŵ Žéåļåñð one two three]</string>
+  <string name="invercargill_new_zealand_city">[Îñvéŕçåŕĝîļļ, Ñéŵ Žéåļåñð one two three]</string>
+  <string name="honiara_solomon_islands_city">[Ĥöñîåŕå, Šöļömöñ Îšļåñðš one two three]</string>
+  <string name="magadan_russia_city">[Måĝåðåñ, Ŕûššîå one two]</string>
+  <string name="andersen_afb_guam_city">[Åñðéŕšéñ ÅFБ, Ĝûåm one two three]</string>
+  <string name="atlantic_city_usa_city">[Åţļåñţîç Çîţý, ÛŠÅ one two three]</string>
+  <string name="yosemite_national_park_usa_city">[Ýöšémîţé Ñåţîöñåļ Þåŕķ, ÛŠÅ one two three four five six]</string>
+  <string name="kyoto_japan_city">[Ķýöţö, Ĵåþåñ one two]</string>
+  <string name="machu_picchu_peru_city">[Måçĥû Þîççĥû, Þéŕû one two three]</string>
+  <string name="florence_italy_city">[Fļöŕéñçé, Îţåļý one two]</string>
+  <string name="reykjavik_iceland_city">[Ŕéýķĵåvîķ, Îçéļåñð one two three]</string>
+  <string name="hanover_germany_city">[Ĥåñövéŕ, Ĝéŕmåñý one two]</string>
+  <string name="hamburg_germany_city">[Ĥåmбûŕĝ, Ĝéŕmåñý one two]</string>
+  <string name="mountain_view_usa_city">[Möûñţåîñ Vîéŵ, ÛŠÅ one two three]</string>
+  <string name="banff_canada_city">[Бåñƒƒ, Çåñåðå one two]</string>
+  <string name="warsaw_poland_city">[Ŵåŕšåŵ, Þöļåñð one two]</string>
+  <string name="stockholm_sweden_city">[Šţöçķĥöļm, Šŵéðéñ one two three]</string>
+  <string name="budapest_hungary_city">[Бûðåþéšţ, Ĥûñĝåŕý one two three]</string>
+  <string name="paris_france_city">[Þåŕîš, Fŕåñçé one two]</string>
+  <string name="london_uk_city">[Ļöñðöñ, ÛĶ one two]</string>
+  <string name="moscow_russia_city">[Möšçöŵ, Ŕûššîå one two]</string>
+  <string name="dubai_uae_city">[Ðûбåî, ÛÅÉ one two]</string>
+  <string name="versailles_france_city">[Véŕšåîļļéš, Fŕåñçé one two three]</string>
+  <string name="new_york_city_usa_city">[Ñéŵ Ýöŕķ Çîţý, ÛŠÅ one two three four]</string>
+  <string name="san_francisco_usa_city">[Šåñ Fŕåñçîšçö, ÛŠÅ one two three]</string>
+  <string name="madrid_spain_city">[Måðŕîð, Šþåîñ one two]</string>
+  <string name="barcelona_spain_city">[Бåŕçéļöñå, Šþåîñ one two]</string>
+  <string name="mumbai_india_city">[Mûmбåî, Îñðîå one two]</string>
+  <string name="shanghai_china_city">[Šĥåñĝĥåî, Çĥîñå one two]</string>
+  <string name="ediburgh_scotland_city">[Éðîñбûŕĝĥ, Šçöţļåñð one two three]</string>
+  <string name="port_douglas_australia_city">[Þöŕţ Ðöûĝļåš, Åûšţŕåļîå one two three]</string>
+  <string name="istanbul_turkey_city">[Îšţåñбûļ, Ţûŕķéý one two]</string>
+  <string name="denaru_island_fiji_city">[Ðéñåŕåû Îšļåñð, Fîĵî one two three]</string>
+  <string name="mexico_city_mexico_city">[Méxîçö Çîţý, Méxîçö one two three]</string>
+  <string name="rio_de_janiero_brazil_city">[Ŕîö ðé Ĵåñéîŕö, Бŕåžîļ one two three four five]</string>
+  <string name="grand_canyon_national_park_za_usa_city">[Ĝŕåñð Çåñýöñ Ñåţîöñåļ Þåŕķ, ÅŽ, ÛŠÅ one two three four five six seven eight]</string>
+  <string name="grand_tetons_national_park_wy_usa_city">[Ĝŕåñð Ţéţöñš Ñåţîöñåļ Þåŕķ, ŴÝ, ÛŠÅ one two three four five six seven eight]</string>
+  <string name="canyonlands_national_park_ut_usa_city">[Çåñýöñļåñðš Ñåţîöñåļ Þåŕķ, ÛŢ, ÛŠÅ one two three four five six seven]</string>
+  <string name="nashville_tn_usa_city">[Ñåšĥvîļļé, ŢÑ, ÛŠÅ one two three]</string>
+  <string name="new_orleans_la_usa_city">[Ñéŵ Öŕļéåñš, ĻÅ, ÛŠÅ one two three four five]</string>
+  <string name="rome_italy_city">[Ŕömé, Îţåļý one two]</string>
+  <string name="berlin_germany_city">[Бéŕļîñ, Ĝéŕmåñý one two]</string>
+  <string name="washington_dc_usa_city">[Ŵåšĥîñĝţöñ, ÐÇ, ÛŠÅ one two three]</string>
+  <string name="dublin_ireland_city">[Ðûбļîñ, Îŕéļåñð one two]</string>
+  <string name="zurich_switzerland_city">[Žûŕîçĥ, Šŵîţžéŕļåñð one two three]</string>
+  <string name="tokyo_japan_city">[Ţöķýö, Ĵåþåñ one two]</string>
+  <string name="atlanta_ga_usa_city">[Åţļåñţå, ĜÅ, ÛŠÅ one two]</string>
+  <string name="chicago_il_usa_city">[Çĥîçåĝö, ÎĻ, ÛŠÅ one two]</string>
+  <string name="port_of_spain_trinidad_and_tobago_city">[Þöŕţ Öƒ Šþåîñ, Ţŕîñîðåð åñð Ţöбåĝö one two three four five six seven]</string>
+  <string name="kingston_jamaica_city">[Ķîñĝšţöñ, Ĵåmåîçå one two three]</string>
+  <string name="panama_city_panama_city">[Þåñåmå Çîţý, Þåñåmå one two three]</string>
+  <string name="miami_florida_usa_city">[Mîåmî Fļöŕîðå, ÛŠÅ one two three]</string>
+  <string name="buenos_aires_argentina_city">[Бûéñöš Åîŕéš, Åŕĝéñţîñå one two three]</string>
+  <string name="sao_paulo_brazil_city">[Šåö Þåûļö, Бŕåžîļ one two three]</string>
+  <string name="bogota_columbia_city">[Бöĝöţå, Çöļûmбîå one two]</string>
+  <string name="santiago_chile_city">[Šåñţîåĝö, Çĥîļé one two]</string>
+  <string name="quito_ecuador_city">[Qûîţö, Éçûåðöŕ one two]</string>
+  <string name="guatemala_city_guatemala_city">[Ĝûåţémåļå Çîţý, Ĝûåţémåļå one two three]</string>
+  <string name="la_paz_bolivia_city">[Ļå Þåž, Бöļîvîå one two]</string>
+  <string name="lagos_nigeria_city">[Ļåĝöš, Ñîĝéŕîå one two]</string>
+  <string name="cairo_egypt_city">[Çåîŕö, Éĝýþţ one two]</string>
+  <string name="new_delhi_india_city">[Ñéŵ Ðéļĥî, Îñðîå one two]</string>
+  <string name="cape_town_south_africa_city">[Çåþé Ţöŵñ, Šöûţĥ Åƒŕîçå one two three four five]</string>
 </resources>

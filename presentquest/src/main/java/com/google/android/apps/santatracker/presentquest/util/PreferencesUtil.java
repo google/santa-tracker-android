@@ -19,11 +19,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.google.android.apps.santatracker.presentquest.model.Messages;
+import com.google.android.apps.santatracker.presentquest.vo.Messages;
 
-/**
- * Utility to manage some small game data that is stored in Shared Prefs and not in the DB.
- */
+/** Utility to manage some small game data that is stored in Shared Prefs and not in the DB. */
 public class PreferencesUtil {
 
     private static final String KEY_HAS_ONBOARDED = "has_onboarded";
@@ -44,9 +42,7 @@ public class PreferencesUtil {
     }
 
     public void setHasOnboarded(boolean onboarded) {
-        mPrefs.edit()
-                .putBoolean(KEY_HAS_ONBOARDED, onboarded)
-                .apply();
+        mPrefs.edit().putBoolean(KEY_HAS_ONBOARDED, onboarded).apply();
     }
 
     public boolean getHasCollectedPresent() {
@@ -54,15 +50,11 @@ public class PreferencesUtil {
     }
 
     public void setHasCollectedPresent(boolean collectedPresent) {
-        mPrefs.edit()
-                .putBoolean(KEY_HAS_COLLECTED_PRESENT, collectedPresent)
-                .apply();
+        mPrefs.edit().putBoolean(KEY_HAS_COLLECTED_PRESENT, collectedPresent).apply();
     }
 
     public void setHasReturnedPresent(boolean returnedPresent) {
-        mPrefs.edit()
-                .putBoolean(KEY_HAS_RETURNED_PRESENT, returnedPresent)
-                .apply();
+        mPrefs.edit().putBoolean(KEY_HAS_RETURNED_PRESENT, returnedPresent).apply();
     }
 
     public boolean getHasReturnedPresent() {
@@ -74,15 +66,12 @@ public class PreferencesUtil {
     }
 
     public void setHasVisitedProfile(boolean visitedProfile) {
-        mPrefs.edit()
-                .putBoolean(KEY_HAS_VISITED_PROFILE, visitedProfile)
-                .apply();;
+        mPrefs.edit().putBoolean(KEY_HAS_VISITED_PROFILE, visitedProfile).apply();
+        ;
     }
 
     public void setLastPlacesApiRequest(long timestamp) {
-        mPrefs.edit()
-                .putLong(KEY_LAST_PLACES_API_REQUEST, timestamp)
-                .apply();
+        mPrefs.edit().putLong(KEY_LAST_PLACES_API_REQUEST, timestamp).apply();
     }
 
     public long getLastPlacesApiRequest() {
@@ -95,14 +84,11 @@ public class PreferencesUtil {
 
     public void incrementMessageTimesDisplayed(Messages.Message message) {
         int timesDisplayed = getMessageTimesDisplayed(message);
-        mPrefs.edit()
-                .putInt(KEY_PREFIX_MESSAGE + message.key, timesDisplayed + 1)
-                .apply();
+        mPrefs.edit().putInt(KEY_PREFIX_MESSAGE + message.key, timesDisplayed + 1).apply();
     }
 
     // DEBUG ONLY - Reset everything
     public void resetAll() {
         mPrefs.edit().clear().apply();
     }
-
 }

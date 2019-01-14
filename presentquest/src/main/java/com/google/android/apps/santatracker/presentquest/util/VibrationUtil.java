@@ -20,11 +20,10 @@ import android.os.Vibrator;
 
 public class VibrationUtil {
 
-    public static final long[] PATTERN_BAD = new long[] { 0, 50, 30, 50 };
+    public static final long[] PATTERN_BAD = new long[] {0, 50, 30, 50};
 
     public static void vibratePattern(Context context, long... pattern) {
         Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(pattern, -1);
     }
-
 }

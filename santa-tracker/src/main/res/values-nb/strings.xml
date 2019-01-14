@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Følg julenissen</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Følg\njulenissen</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Julenissen tar av om</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Julenissen er travelt opptatt med forberedelsene til neste år.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Se stoppestedene i 2014</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Forsøker å kontakte julenissen ...</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Forsøker fremdeles å kontakte julenissen ...</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">dager</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">timer</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">min.</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">sek</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Del</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Del med venner</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Cast-ikonet</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Juridisk og personvern</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Juridiske merknader</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Personvernregler</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Vilkår for bruk</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Lisenser for åpen kildekode</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Åpen kildekode-lisenser for Google Play-tjenester</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Julenissen på GitHub</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon på GitHub</string>
-  <string name="scene_not_available" translation_description="Not available yet">Ikke tilgjengelig ennå</string>
+  <string name="track_santa">Følg julenissen</string>
+  <string name="track_santa_two_lines">Følg\njulenissen</string>
+  <string name="santa_takes_off_in">Julenissen tar av om</string>
+  <string name="santa_is_busy_preparing_for_next_year">Julenissen er travelt opptatt med forberedelsene til neste år.</string>
+  <string name="view_old_stops">Se stoppestedene i 2014</string>
+  <string name="contacting_santa">Forsøker å kontakte julenissen ...</string>
+  <string name="still_trying_to_reach_santa">Forsøker fremdeles å kontakte julenissen ...</string>
+  <string name="days">dager</string>
+  <string name="hrs">timer</string>
+  <string name="min">min.</string>
+  <string name="sec">sek</string>
+  <string name="menu_share">Del</string>
+  <string name="menu_share_friends">Del med venner</string>
+  <string name="legal_notice">Juridisk og personvern</string>
+  <string name="legal_notice_text">Juridiske merknader</string>
+  <string name="privacy_policy">Personvernregler</string>
+  <string name="terms_of_service">Vilkår for bruk</string>
+  <string name="open_source_licenses">Lisenser for åpen kildekode</string>
+  <string name="open_source_repo_santa">Julenissen på GitHub</string>
+  <string name="scene_not_available">Ikke tilgjengelig ennå</string>
   <string name="sign_out">Logg av</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Igjen til avreise</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d av %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d poeng</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Hvor er dette?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Foto av: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Følg julenissen på TV-en!\nTrykk på denne knappen for bruke Chromecast til å se julenissens ferd på TV-en.</string>
+  <string name="until_takeoff">Igjen til avreise</string>
+  <string name="web_scene_error">Kunne dessverre ikke laste inn scenen.</string>
+  <string name="check_back_daily">Kom tilbake hver dag for å spille nye spill.</string>
+  <string name="new_games">Nye spill</string>
+  <string name="new_card">Nytt</string>
+  <string name="tracker_opens_date">Åpner %1$s</string>
+  <string name="time">TID</string>
+  <string name="download_dialog_title">Last ned %1$s</string>
+  <string name="download_dialog_message">Spillet må lastes ned fra Play-butikken før du kan spille det. Enheten din er koblet til et nettverk, og det kan påløpe kostnader fra dette nettverket for overføring av data.\n\nVil du fortsette?</string>
+  <string name="elf_maker_write_success">Bildet er lagret i bildene dine</string>
+  <string name="elf_maker_write_fail">Det oppsto en feil da bildet skulle lagres i bildene på enheten din</string>
 </resources>

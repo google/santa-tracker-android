@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">Jõuluvana saate jälgida 24. detsembril.</string>
+  <string name="present_quest_locked">Kingiseiklus on saadaval alates 1. detsembrist.</string>
+  <string name="santa_snap_locked">Jõuluvanatuur on peagi saadaval.</string>
+  <string name="gumball_locked">Gumball on saadaval alates 1. detsembrist.</string>
+  <string name="memory_locked">Memory on saadaval alates 1. detsembrist.</string>
+  <string name="rocket_locked">Rocket Sleigh on saadaval alates 1. detsembrist.</string>
+  <string name="dancer_locked">Dasher Dancer on saadaval alates 1. detsembrist.</string>
+  <string name="city_quiz_locked">Linnaviktoriin on saadaval alates 1. detsembrist.</string>
+  <string name="generic_game_disabled">%1$s ei ole praegu saadaval.</string>
+  <string name="generic_game_locked">%1$s ei ole veel saadaval. Proovige hiljem uuesti!</string>
+  <string name="video">Video</string>
+  <string name="video_locked">Video avatakse %1$d. detsembril.</string>
+  <string name="video_disabled">Video pole praegu saadaval.</string>
+  <string name="play">Mängige</string>
+  <string name="watch">Esita</string>
+</resources>

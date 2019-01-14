@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2016 Google Inc. All Rights Reserved.
+ * Copyright 2019. Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,20 +16,16 @@
 package com.google.android.apps.santatracker.games;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.google.android.apps.santatracker.R;
-import com.google.android.apps.santatracker.util.FontHelper;
 
-/**
- * View to display over the screen at game end.
- */
+/** View to display over the screen at game end. */
 public class EndOfGameView extends FrameLayout {
 
     public EndOfGameView(Context context, AttributeSet attrs) {
@@ -43,19 +39,30 @@ public class EndOfGameView extends FrameLayout {
         if (isInEditMode()) {
             return;
         }
-
-        // Change font on Game Over view
-        TextView gameOverTextView = (TextView) findViewById(R.id.gameOverTextView);
-        FontHelper.makeLobster(gameOverTextView);
     }
 
-    public void initialize(int score,
-                           @Nullable View.OnClickListener replayListener,
-                           @NonNull View.OnClickListener exitListener) {
+    public void initialize(
+            int score,
+            @Nullable OnClickListener replayListener,
+            @NonNull OnClickListener exitListener) {
 
         // Set score
-        TextView scoreTextView = (TextView) findViewById(R.id.scoreTextView);
-        scoreTextView.setText(getResources().getString(R.string.end_of_game_score, score));
+        TextView scoreTextView = findViewById(R.id.scoreTextView);
+        TextView scoreLabelTextView = findViewById(R.id.scoreLabel);
+
+        // Only show positive scores
+        if (score >= 0) {
+            scoreTextView.setText(
+                    getResources()
+                            .getString(
+                                    com.google.android.apps.playgames.R.string.end_of_game_score,
+                                    score));
+            scoreTextView.setVisibility(View.VISIBLE);
+            scoreLabelTextView.setVisibility(View.VISIBLE);
+        } else {
+            scoreTextView.setVisibility(View.INVISIBLE);
+            scoreLabelTextView.setVisibility(View.INVISIBLE);
+        }
 
         // Set replay listener (or hide replay button)
         if (replayListener != null) {
@@ -67,5 +74,4 @@ public class EndOfGameView extends FrameLayout {
         // Set end game listener
         findViewById(R.id.exitButton).setOnClickListener(exitListener);
     }
-
 }

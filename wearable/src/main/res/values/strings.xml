@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
-  -->
-
-<resources>
+  --><resources>
   <string name="typeface_robotocondensed_light" translatable="false">RobotoCondensed-Light.ttf</string>
   <string name="watch_face_elf">Elf</string>
   <string name="watch_face_santa">Santa</string>
+  <string name="countdown_complication_label" translation_description="Label for countdown until midnight of Christmas Eve">Countdown to Santa</string>
+  <string name="short_christmas_greeting" translation_description="Text of countdown when it is Christmas as in 'When is Christmas' - 'Today!'.">Today!</string>
+  <string name="long_christmas_greeting">Merry Christmas! 🎅</string>
+  <string name="desc_logo_for_santa_tracker" translation_description="Content description for the Santa Tracker Logo">Logo for Santa Tracker</string>
+  <string name="desc_right_complication_config" translation_description="Content description for a watchface complication area on the right side">Right Complication</string>
+  <string name="desc_lower_complication_config" translation_description="Content description for a watchface complication area at the bottom">Bottom complication</string>
+  <string name="desc_left_complication_config" translation_description="Content description for a watchface complication area on the left side">Left Complication</string>
 </resources>

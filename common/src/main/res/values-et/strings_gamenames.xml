@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Nätsupall</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Mälu</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Haldja rakettranits</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Rocket Sleigh</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Dasher Dancer</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Snowdown</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">Linnaviktoriin</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">Kingiseiklus</string>
+  <string name="gumball">Nätsupall</string>
+  <string name="memory">Mälu</string>
+  <string name="elf_jetpack">Haldja rakettranits</string>
+  <string name="rocket">Rakett-kelk</string>
+  <string name="dancer">Tantsiv põhjapõder</string>
+  <string name="cityquiz">Linnaviktoriin</string>
+  <string name="present_quest">Kingiseiklus</string>
+  <string name="santa_snap">Jõuluvanatuur</string>
+  <string name="present_throw">Kingiheide</string>
+  <string name="jetpack">Päkapiku rakettranits</string>
+  <string name="web_airport">Põhjapooluse lennujaam</string>
+  <string name="web_boatload">Kingikatapult</string>
+  <string name="web_clausdraws">Jõuluvana jutupliiats</string>
+  <string name="web_codeboogie">Tants ja trall</string>
+  <string name="web_codelab">Koodilabor</string>
+  <string name="web_gumball">Nätsukommid</string>
+  <string name="web_jamband">Päkapikubänd</string>
+  <string name="web_penguindash">Pingviinijooks</string>
+  <string name="web_presentbounce">Põrkavad kingid</string>
+  <string name="web_presentdrop">Kingitustesadu</string>
+  <string name="web_racer">Rudolfi võidusõit</string>
+  <string name="web_runner">Põhjapõdrajooks</string>
+  <string name="web_santasearch">Leia jõuluvana</string>
+  <string name="web_santaselfie">Jõuluvana selfie</string>
+  <string name="web_seasonofgiving">Pühadelahkus</string>
+  <string name="web_elfski">Päkapikuslaalom</string>
+  <string name="web_snowball">Lumesõda</string>
+  <string name="web_snowflake">Lumehelbe kodeerimine</string>
+  <string name="web_speedsketch">Arva ära</string>
+  <string name="web_wrapbattle">Kiirpakkija</string>
+  <string name="web_elfmaker">Päkapikudisainija</string>
+  <string name="video_santa_is_back">Tagasi tööle</string>
+  <string name="video_office_prank">Vingerpuss kontoris</string>
+  <string name="video_carpool">Sõidame koos</string>
 </resources>

@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,10 +15,10 @@
   -->
 
 <resources>
-  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">Tạo đồ trang trí của bạn!</string>
-  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">Chụp ảnh</string>
-  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">Thử lại</string>
-  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">Thoát</string>
-  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">Chia sẻ snowglobe của bạn bằng cách sử dụng...</string>
-  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">Tạo hình ảnh của bạn!</string>
+  <string name="snowglobe_processing_message">Tạo đồ trang trí của bạn!</string>
+  <string name="snowglobe_take_picture_button">Chụp ảnh</string>
+  <string name="snowglobe_retry_picture_button">Thử lại</string>
+  <string name="snowglobe_exit_button">Thoát</string>
+  <string name="snowglobe_share_title">Chia sẻ snowglobe của bạn bằng cách sử dụng...</string>
+  <string name="snowglobe_share_message">Tạo hình ảnh của bạn!</string>
 </resources>

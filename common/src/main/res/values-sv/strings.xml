@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">Tillbaka till kartan</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">Tillbaka till byn</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">Den här versionen av Följ jultomten är inaktuell. Besök Play Butik för att uppdatera appen till den senaste versionen.</string>
+  <string name="back_to_map">Tillbaka till kartan</string>
+  <string name="back_to_village">Tillbaka till byn</string>
+  <string name="go_to_play_store">Den här versionen av Följ jultomten är inaktuell. Besök Play Butik för att uppdatera appen till den senaste versionen.</string>
+  <string name="game_over">Spelet är slut</string>
+  <string name="loading_screen">Läser in scenen</string>
+  <string name="menu_resume">Återuppta</string>
+  <string name="menu_replay">Spela igen</string>
+  <string name="menu_home">Startsida</string>
+  <string name="menu_share">Dela</string>
+  <string name="error_fetch_module">Ett fel inträffade när %1$s laddades ned. Kontrollera nätverksanslutningen.</string>
 </resources>

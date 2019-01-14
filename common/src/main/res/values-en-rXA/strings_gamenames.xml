@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">[Ĝûmбåļļ one]</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">[Mémöŕý one]</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">[Éļƒ Ĵéţþåçķ one two]</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">[Ŕöçķéţ Šļéîĝĥ one two]</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">[Ðåšĥéŕ Ðåñçéŕ one two]</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">[Šñöŵðöŵñ one]</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">[Çîţý Qûîž one two]</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">[Þŕéšéñţ Qûéšţ one two]</string>
+  <string name="gumball">[Ĝûmбåļļ one]</string>
+  <string name="memory">[Mémöŕý one]</string>
+  <string name="elf_jetpack">[Éļƒ Ĵéţþåçķ one two]</string>
+  <string name="rocket">[Ŕöçķéţ Šļéîĝĥ one two]</string>
+  <string name="dancer">[Ðåšĥéŕ Ðåñçéŕ one two]</string>
+  <string name="cityquiz">[Çîţý Qûîž one two]</string>
+  <string name="present_quest">[Þŕéšéñţ Qûéšţ one two]</string>
+  <string name="santa_snap">[Šåñţå Šñåþ one two]</string>
+  <string name="present_throw">[Þŕéšéñţ Ţöšš one two]</string>
+  <string name="jetpack">[Éļƒ Ĵéţþåçķ one two]</string>
+  <string name="web_airport">[Ñöŕţĥ Þöļé Åîŕþöŕţ one two three]</string>
+  <string name="web_boatload">[Ĝîƒţ Šļîñĝšĥöţ one two]</string>
+  <string name="web_clausdraws">[Çļåûš Ðŕåŵš one two]</string>
+  <string name="web_codeboogie">[Çöðé Бööĝîé one two]</string>
+  <string name="web_codelab">[Çöðé Ļåб one]</string>
+  <string name="web_gumball">[Ĝûmбåļļ Ţîļţ one two]</string>
+  <string name="web_jamband">[Éļƒ Ĵåmбåñð one two]</string>
+  <string name="web_penguindash">[Þéñĝûîñ Ðåšĥ one two]</string>
+  <string name="web_presentbounce">[Þŕéšéñţ Бöûñçé one two]</string>
+  <string name="web_presentdrop">[Þŕéšéñţ Ðŕöþ one two]</string>
+  <string name="web_racer">[Ŕûðöļþĥ Ŕåçéŕ one two]</string>
+  <string name="web_runner">[Ŕéîñðééŕ Ŕûññéŕ one two]</string>
+  <string name="web_santasearch">[Šåñţå Šéåŕçĥ one two]</string>
+  <string name="web_santaselfie">[Šåñţå Šéļƒîé one two]</string>
+  <string name="web_seasonofgiving">[Šéåšöñ öƒ Ĝîvîñĝ one two]</string>
+  <string name="web_elfski">[Éļƒ Šķî one]</string>
+  <string name="web_snowball">[Šñöŵбåļļ Šţöŕm one two]</string>
+  <string name="web_snowflake">[Çöðé å Šñöŵƒļåķé one two]</string>
+  <string name="web_speedsketch">[Šþééð Šķéţçĥ one two]</string>
+  <string name="web_wrapbattle">[Ŵŕåþ Бåţţļé one two]</string>
+  <string name="web_elfmaker">[Éļƒ Måķéŕ one two]</string>
+  <string name="video_santa_is_back">[Бåçķ ţö Ŵöŕķ one two]</string>
+  <string name="video_office_prank">[Öƒƒîçé Þŕåñķ one two]</string>
+  <string name="video_carpool">[Çåŕþööļ one]</string>
 </resources>

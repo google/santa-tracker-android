@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">กลับไปยังแผนที่</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">กลับไปยังหมู่บ้าน</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">ตามติดซานต้าเวอร์ชันนี้ล้าสมัยแล้ว โปรดไปที่ Play Store เพื่ออัปเดตเป็นเวอร์ชันล่าสุด</string>
+  <string name="back_to_map">กลับไปยังแผนที่</string>
+  <string name="back_to_village">กลับไปยังหมู่บ้าน</string>
+  <string name="go_to_play_store">ตามติดซานต้าเวอร์ชันนี้ล้าสมัยแล้ว โปรดไปที่ Play Store เพื่ออัปเดตเป็นเวอร์ชันล่าสุด</string>
+  <string name="game_over">จบเกม</string>
+  <string name="loading_screen">หน้าจอโหลด</string>
+  <string name="menu_resume">เล่นต่อ</string>
+  <string name="menu_replay">เล่นอีกครั้ง</string>
+  <string name="menu_home">หน้าแรก</string>
+  <string name="menu_share">แชร์</string>
+  <string name="error_fetch_module">เกิดข้อผิดพลาดขณะดาวน์โหลด %1$s การเชื่อมต่อเครือข่ายของคุณใช้งานได้ใช่ไหม</string>
 </resources>

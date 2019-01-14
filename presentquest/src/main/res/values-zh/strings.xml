@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">开始玩</string>
-  <string name="level" translation_description="Label shown under the user's current level">关卡</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">礼物工厂</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">在第 %1$d 关解锁</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">圣诞老人扔下一件礼物！</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">您离礼物太远啦！</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">您离礼物工厂太远啦！</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">先收集一些礼物吧！</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">袋子已经塞满啦！</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">工厂搬迁完毕</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">已取消搬迁</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">这间工厂今天已搬迁，请明天再试吧</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">前往这里！</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">Present Quest 需要了解您的位置信息，才能帮您找到圣诞老人的礼物。</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">需要相应权限</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">如未取得您的位置信息，Present Quest 将无法正常使用。请在“设置”中授予使用位置信息的权限。</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">缺少必要的权限。</string>
-  <string name="next" translation_description="Button text to advance through tutorial">下一步</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">圣诞老人的雪橇上\n有礼物掉下来了！</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">请前往现实世界中\n标记了礼物的地点收集礼物。</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">当您的袋子装满礼物后，\n请前往礼物工厂卸下礼物</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">出发吧！</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">附近有礼物！</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">您的袋子几乎塞满了！</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">请前往礼物工厂，卸下礼物。</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">您解锁了一个新礼物工厂！</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">点击礼物即可将它捡起。</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">点击您的礼物工厂即可将礼物卸货。</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">（共 12 级）</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">（已装）</string>
+  <string name="play">开始玩</string>
+  <string name="level">关卡</string>
+  <string name="workshops">礼物工厂</string>
+  <string name="unlock_at_level">在第 %1$d 关解锁</string>
+  <string name="present_dropped">圣诞老人扔下一件礼物！</string>
+  <string name="present_too_far">您离礼物太远啦！</string>
+  <string name="workshop_too_far">您离礼物工厂太远啦！</string>
+  <string name="no_presents_collected">先收集一些礼物吧！</string>
+  <string name="bag_is_full">袋子已经塞满啦！</string>
+  <string name="workshop_moved">工厂搬迁完毕</string>
+  <string name="move_canceled">已取消搬迁</string>
+  <string name="workshop_move_too_soon">这间工厂今天已搬迁，请明天再试吧</string>
+  <string name="go_here">前往这里！</string>
+  <string name="perm_location_rationale">《寻找礼物》需要了解您的位置信息，才能帮您找到圣诞老人的礼物。</string>
+  <string name="perm_required">需要相应权限</string>
+  <string name="perm_go_to_settings">如未取得您的位置信息，《寻找礼物》将无法正常使用。请在“设置”中授予其使用位置信息的权限。</string>
+  <string name="required_permissions_missing">缺少必要的权限。</string>
+  <string name="next">下一步</string>
+  <string name="onboarding_msg_1">圣诞老人的雪橇上\n有礼物掉下来了！</string>
+  <string name="onboarding_msg_2">请前往现实世界中\n标记了礼物的地点收集礼物。</string>
+  <string name="onboarding_msg_3">当您的袋子装满礼物后，\n请前往礼物工厂卸下礼物</string>
+  <string name="onboarding_msg_4">出发吧！</string>
+  <string name="msg_present_nearby">附近有礼物！</string>
+  <string name="msg_bag_almost_full">您的袋子几乎塞满了！</string>
+  <string name="msg_unload_bag">请前往礼物工厂，卸下礼物。</string>
+  <string name="msg_unlocked_workshop">您解锁了一个新礼物工厂！</string>
+  <string name="msg_click_present">点击礼物即可将它捡起。</string>
+  <string name="msg_click_workshop">点击您的礼物工厂即可将礼物卸货。</string>
+  <string name="level_denominator">（共 12 级）</string>
+  <string name="full">（已装）</string>
+  <string name="distraction_warning">请在玩游戏的过程中，留意周边环境。</string>
 </resources>

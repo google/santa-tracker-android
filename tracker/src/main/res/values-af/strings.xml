@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Kersvader se kontroleskerm</string>
+  <string name="current_location">HUIDIGE LIGGING</string>
+  <string name="presents_delivered">GESKENKE AFGELEWER</string>
+  <string name="santa_status">KERSVADER SE STATUS</string>
+  <string name="arriving_in">ARRIVEER OOR</string>
+  <string name="departing_in">VERTREK OOR</string>
+  <string name="localtime">GEARRIVEER BY</string>
+  <string name="population">BEVOLKING</string>
+  <string name="next_destination">VOLGENDE BESTEMMING</string>
+  <string name="arriving_at">ARRIVEER BY</string>
+  <string name="arrived_at">GEARRIVEER BY</string>
+  <string name="in_transit">Onderweg</string>
+  <string name="follow_santa">Volg Kersvader</string>
+  <string name="lost_contact_with_santa">Het kontak met Kersvader verloor</string>
+  <string name="notification_nearby">Kersvader is naby!</string>
+  <string name="notification_takeoff">Kersvader het vertrek!</string>
+  <string name="notification_unlock_video">\'n Nuwe video is beskikbaar!</string>
+  <string name="notification_unlock_game">\'n Nuwe speletjie is beskikbaar!</string>
+  <string name="santa_arrives_in_your_area_in">KERSVADER KOM IN JOU OMGEWING AAN OOR</string>
+  <string name="santa_is_approximately">KERSVADER IS SOWAT</string>
+  <string name="distance_km_away">%1$,d km %2$s ver</string>
+  <string name="distance_optional_miles">\u0020(%,d myl)</string>
+  <string name="distance_mi_away">%1$,d myl ver</string>
+  <string name="did_you_know">HET JY GEWEET</string>
+  <string name="watch_movie">KYK \'N FLIEK</string>
+  <string name="santa_update">KERSVADER SE NUUS</string>
+  <string name="elapsed_time">TYDSVERLOOP</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">AANKOMS</string>
+  <string name="weather">WEER</string>
+  <string name="weather_format">%1$s °C / %2$s °F</string>
+  <string name="did_you_know_attribution">Wêreldfeite verskaf deur National Geographic Bee</string>
+  <string name="photo">Foto</string>
+  <string name="photos">Foto\'s</string>
+  <string name="street_view">STRAATAANSIG</string>
+  <string name="back_to_santa_cam">TERUG NA DIE KERSVADER-KAMERA</string>
+  <string name="update_from_santa">Kennisgewing van Kersvader af</string>
+  <string name="trivia_from_santa">Interessanthede van Kersvader af</string>
+  <string name="photo_from_santa">Foto van Kersvader af</string>
+  <string name="video_from_santa">Video van Kersvader af</string>
+  <string name="show_history">Wys geskiedenis</string>
+  <string name="see_best_moments">Sien al die beste oomblikke van Kersvader se reis</string>
+  <string name="return_to_map">Gaan terug na kaart</string>
+  <string name="santa_is_now_arriving_in_x">Kersvader kom tans in %s aan</string>
+  <string name="santa_has_handed_out_x_presents">Kersvader het al %s presente uitgedeel</string>
+  <string name="new_update_from_santa">Nuwe kennisgewing van Kersvader af</string>
+  <string name="new_trivia_from_santa">Nuwe interessanthede van Kersvader af</string>
+  <string name="new_video_from_santa">Nuwe video van Kersvader af</string>
+  <string name="new_photo_from_santa">Nuwe foto van Kersvader af</string>
+  <string name="cast_overlay_text">Volg Kersvader op die groot skerm!\nTik hierdie knoppie om Kersvader se reistog met Chromecast op jou TV te sien.</string>
+  <string name="menu_media_router_title">Uitsaaiknoppie</string>
+</resources>

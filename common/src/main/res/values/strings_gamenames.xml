@@ -1,27 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
-  -->
-
-<resources>
+  --><resources>
   <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Gumball</string>
   <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Memory</string>
   <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Elf Jetpack</string>
   <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Rocket Sleigh</string>
   <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Dasher Dancer</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Snowdown</string>
   <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">City Quiz</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">Present Quest</string>
+  <string name="present_quest" translation_description="Name of a game. Player walks around the real world looking for presents.">Present Quest</string>
+  <string name="santa_snap" translation_description="Name of a game. Player flies around the world collecting presents and taking selfies.">Santa Snap</string>
+  <string name="present_throw" translation_description="Name of a game. Player throws presents into a large sack by swiping on the screen.">Present Toss</string>
+  <string name="jetpack" translation_description="Title of a scene/game. Fly through the air and collect presents while avoiding obstacles.">Elf Jetpack</string>
+  <string name="web_airport" translation_description="Title of a scene/game. Elves are arriving at the 'North Pole Airport'">North Pole Airport</string>
+  <string name="web_boatload" translation_description="Title of a scene/game. Game to launch presents at targets.">Gift Slingshot</string>
+  <string name="web_clausdraws" translation_description="Title of a scene/game. A drawing game where the player can draw creatively in a Santa-themed environment. In English, this title ryhmes, and 'Claus' refers to 'Santa Claus'">Claus Draws</string>
+  <string name="web_codeboogie" translation_description="Title of a scene/game. You can teach Santa's Elves how to dance ('boogie') through code.">Code Boogie</string>
+  <string name="web_codelab" translation_description="Title of a scene/game. Instruct an elf to deliver a present through code.">Code Lab</string>
+  <string name="web_gumball" translation_description="Title of a scene/game. Drop gumballs (round lollies) through a scene, tilting to ensure they reach their destination.">Gumball Tilt</string>
+  <string name="web_jamband" translation_description="Title of a scene/game. Create your own custom band arrangement with Santa's Elves.">Elf Jamband</string>
+  <string name="web_penguindash" translation_description="Title of a scene/game. Help a penguin navigate icebergs to pick up presents.">Penguin Dash</string>
+  <string name="web_presentbounce" translation_description="Title of a scene/game. Create a 'Rube Goldberg'-style machine to bounce presents into a bag.">Present Bounce</string>
+  <string name="web_presentdrop" translation_description="Title of a scene/game. Practice dropping presents into practice chimneys.">Present Drop</string>
+  <string name="web_racer" translation_description="Title of a scene/game. Race Rudolph through the snow, collecting the most presents along the way.">Rudolph Racer</string>
+  <string name="web_runner" translation_description="Title of a scene/game. Infinite runner game where you play a generic reindeer and elf companion, collecting presents for as long as you can.">Reindeer Runner</string>
+  <string name="web_santasearch" translation_description="Title of a scene/game. A 'Where's Wally/Waldo'-style (not affiliated) experience to find Santa in tricky scenes.">Santa Search</string>
+  <string name="web_santaselfie" translation_description="Title of a scene/game. Give Santa a new hairstyle.">Santa Selfie</string>
+  <string name="web_seasonofgiving" translation_description="Title of a scene/game. Learn about different charities, and paint baubles.">Season of Giving</string>
+  <string name="web_elfski" translation_description="Title of a scene/game. Elves ski down a mountain.">Elf Ski</string>
+  <string name="web_snowball" translation_description="Title of a scene/game. Throw snowballs at fellow elves until only one remains standing up.">Snowball Storm</string>
+  <string name="web_snowflake" translation_description="Title of a scene/game. Generate a snowflake and see it on different holiday themed backgrounds.">Code a Snowflake</string>
+  <string name="web_speedsketch" translation_description="Title of a scene/game. Draw images on a frosted glass window that Santa's helper robot tries to identify.">Speed Sketch</string>
+  <string name="web_wrapbattle" translation_description="Title of a scene/game. Help an elf wrap presents by pressing the right key combinations. This is a pun in English (like 'Rap Battle'), but doesn't need to be in other languages.">Wrap Battle</string>
+  <string name="web_elfmaker" translation_description="Title of a scene/game. Create an elf by choosing body type, hair color, clothes, etc. Similar to Androidify.">Elf Maker</string>
+  <string name="video_santa_is_back" translation_description="Title of a video. Santa is back to work">Back to Work</string>
+  <string name="video_office_prank" translation_description="Title of a video. Elves's prank in their office">Office Prank</string>
+  <string name="video_carpool" translation_description="Title of a video. Everyone carpools to prepare for a party">Carpool</string>
 </resources>

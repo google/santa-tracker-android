@@ -18,7 +18,7 @@ package com.google.android.apps.santatracker.presentquest.util;
 import android.content.Context;
 
 import com.google.android.apps.santatracker.presentquest.R;
-import com.google.android.apps.santatracker.presentquest.model.Present;
+import com.google.android.apps.santatracker.presentquest.vo.Present;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.Marker;
@@ -38,17 +38,13 @@ public class MarkerCache {
 
     public MarkerOptions getElfMarker() {
         int id = R.drawable.elf_marker;
-        return new MarkerOptions()
-                .zIndex(100)
-                .icon(getDescriptorForResource(id));
+        return new MarkerOptions().zIndex(100).icon(getDescriptorForResource(id));
     }
 
     public MarkerOptions getWorkshopMarker(boolean close) {
         int id = close ? R.drawable.workshop : R.drawable.pin_workshop;
         int zindex = close ? 20 : 2;
-        return new MarkerOptions()
-                .zIndex(zindex)
-                .icon(getDescriptorForResource(id));
+        return new MarkerOptions().zIndex(zindex).icon(getDescriptorForResource(id));
     }
 
     public MarkerOptions getPresentMarker(Present present, boolean isNear) {
@@ -62,17 +58,13 @@ public class MarkerCache {
     public MarkerOptions getSmPresentMarker(boolean near) {
         int id = near ? R.drawable.presents_sm : R.drawable.pin_presents_sm;
         int zindex = near ? 30 : 3;
-        return new MarkerOptions()
-                .zIndex(zindex)
-                .icon(getDescriptorForResource(id));
+        return new MarkerOptions().zIndex(zindex).icon(getDescriptorForResource(id));
     }
 
     public MarkerOptions getLgPresentMarker(boolean near) {
         int id = near ? R.drawable.presents_lg : R.drawable.pin_presents_lg;
         int zindex = near ? 30 : 3;
-        return new MarkerOptions()
-                .zIndex(zindex)
-                .icon(getDescriptorForResource(id));
+        return new MarkerOptions().zIndex(zindex).icon(getDescriptorForResource(id));
     }
 
     private BitmapDescriptor getDescriptorForResource(int id) {
@@ -92,5 +84,4 @@ public class MarkerCache {
         marker.setZIndex(options.getZIndex());
         marker.setTitle(options.getTitle());
     }
-
 }

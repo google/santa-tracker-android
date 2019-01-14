@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Joacă</string>
-  <string name="level" translation_description="Label shown under the user's current level">NIVEL</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Ateliere</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Se deblochează la nivelul %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Moș Crăciun a lăsat un cadou!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Cadoul este prea departe!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Atelierul este prea departe!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Strânge câteva cadouri mai întâi!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Ai sacul plin!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Atelierul a fost mutat.</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Mutarea a fost anulată.</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Deja ai mutat atelierul astăzi. Încearcă din nou mâine.</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Du-te aici!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">În căutarea cadourilor necesită acces la locație pentru a te ajuta să găsești cadourile lui Moș Crăciun.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Permisiune necesară</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">În căutarea cadourilor nu va funcționa fără acces la locație. Permite accesul la locație în Setări.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Lipsește o permisiune necesară.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Înainte</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Cad cadouri\ndin sania Moșului!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Mergi la punctele cu cadouri\nîn viața reală, pentru a le strânge.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">După ce-ți umpli sacul,\nmergi la atelier pentru a-l goli</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Să începem!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">Există un cadou în apropiere!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Ai sacul aproape plin!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Golește sacul la un atelier.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Ai deblocat un atelier nou!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Dă clic pe un cadou pentru a-l lua.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Dă clic pe un atelier pentru a lăsa cadourile.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">din 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">PLIN</string>
+  <string name="play">Joacă</string>
+  <string name="level">NIVEL</string>
+  <string name="workshops">Ateliere</string>
+  <string name="unlock_at_level">Se deblochează la nivelul %1$d</string>
+  <string name="present_dropped">Moș Crăciun a lăsat un cadou!</string>
+  <string name="present_too_far">Cadoul este prea departe!</string>
+  <string name="workshop_too_far">Atelierul este prea departe!</string>
+  <string name="no_presents_collected">Strânge câteva cadouri mai întâi!</string>
+  <string name="bag_is_full">Ai sacul plin!</string>
+  <string name="workshop_moved">Atelierul a fost mutat.</string>
+  <string name="move_canceled">Mutarea a fost anulată.</string>
+  <string name="workshop_move_too_soon">Deja ai mutat atelierul astăzi. Încearcă din nou mâine.</string>
+  <string name="go_here">Du-te aici!</string>
+  <string name="perm_location_rationale">În căutarea cadourilor necesită acces la locație pentru a te ajuta să găsești cadourile lui Moș Crăciun.</string>
+  <string name="perm_required">Permisiune necesară</string>
+  <string name="perm_go_to_settings">În căutarea cadourilor nu va funcționa fără acces la locație. Permite accesul la locație în Setări.</string>
+  <string name="required_permissions_missing">Lipsește o permisiune necesară.</string>
+  <string name="next">Înainte</string>
+  <string name="onboarding_msg_1">Cad cadouri\ndin sania Moșului!</string>
+  <string name="onboarding_msg_2">Mergi la punctele cu cadouri\nîn viața reală, pentru a le strânge.</string>
+  <string name="onboarding_msg_3">După ce-ți umpli sacul,\nmergi la atelier pentru a-l goli</string>
+  <string name="onboarding_msg_4">Să începem!</string>
+  <string name="msg_present_nearby">Există un cadou în apropiere!</string>
+  <string name="msg_bag_almost_full">Ai sacul aproape plin!</string>
+  <string name="msg_unload_bag">Golește sacul la un atelier.</string>
+  <string name="msg_unlocked_workshop">Ai deblocat un atelier nou!</string>
+  <string name="msg_click_present">Dă clic pe un cadou pentru a-l lua.</string>
+  <string name="msg_click_workshop">Dă clic pe un atelier pentru a lăsa cadourile.</string>
+  <string name="level_denominator">din 12</string>
+  <string name="full">PLIN</string>
+  <string name="distraction_warning">Fii atent(ă) la ce te înconjoară atunci când te joci.</string>
 </resources>

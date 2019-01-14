@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">Torna al mapa</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">Torna a l\'aldea</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">Aquesta versió de Segueix el Pare Noel està obsoleta. Visita Play Store per actualitzar l\'aplicació a la versió més recent.</string>
+  <string name="back_to_map">Torna al mapa</string>
+  <string name="back_to_village">Torna al llogaret</string>
+  <string name="go_to_play_store">Aquesta versió de Segueix el Pare Noel està obsoleta. Ves a Play Store per actualitzar l\'aplicació a la versió més recent.</string>
+  <string name="game_over">Fi de la partida</string>
+  <string name="loading_screen">S\'està carregant la pantalla</string>
+  <string name="menu_resume">Reprèn</string>
+  <string name="menu_replay">Torna a jugar</string>
+  <string name="menu_home">Inici</string>
+  <string name="menu_share">Comparteix</string>
+  <string name="error_fetch_module">S\'ha produït un error en baixar %1$s. Comprova que la connexió a la xarxa funcioni.</string>
 </resources>

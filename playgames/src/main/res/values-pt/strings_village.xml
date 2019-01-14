@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">Siga o Papai Noel em 24 de dezembro.</string>
+  <string name="present_quest_locked">O jogo Caça ao presente estará disponível em 1º de dezembro.</string>
+  <string name="santa_snap_locked">O Selfie do Papai Noel estará disponível em breve.</string>
+  <string name="gumball_locked">O jogo Ladeira dos chicletes estará disponível em 1º de dezembro.</string>
+  <string name="memory_locked">O Jogo da memória estará disponível em 1º de dezembro.</string>
+  <string name="rocket_locked">O jogo Trenó-foguete estará disponível em 1º de dezembro.</string>
+  <string name="dancer_locked">O jogo Dança das renas estará disponível em 1º de dezembro.</string>
+  <string name="city_quiz_locked">O Jogo das cidades está disponível em 1º de dezembro.</string>
+  <string name="generic_game_disabled">O %1$s está indisponível no momento.</string>
+  <string name="generic_game_locked">%1$s ainda não está disponível. Volte mais tarde!</string>
+  <string name="video">Vídeo</string>
+  <string name="video_locked">O vídeo será desbloqueado em %1$d de dezembro.</string>
+  <string name="video_disabled">O vídeo está indisponível no momento.</string>
+  <string name="play">Jogar</string>
+  <string name="watch">Assistir</string>
+</resources>

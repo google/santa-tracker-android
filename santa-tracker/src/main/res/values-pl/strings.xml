@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Śledź trasę Mikołaja</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Śledź\ntrasę Mikołaja</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Święty Mikołaj wyrusza za</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Święty Mikołaj jest zajęty przygotowaniami na przyszły rok.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Zobacz postoje w 2014 r.</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Próbuję nawiązać kontakt ze Świętym Mikołajem</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Nadal próbuję nawiązać kontakt ze Świętym Mikołajem</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">dni</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">godz.</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">min</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">sek.</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Udostępnij</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Udostępnij znajomym</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Przycisk Cast</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Warunki i prywatność</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Informacje prawne</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Polityka prywatności</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Warunki korzystania z usługi</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Licencje open source</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Licencje open source dla usług Google Play</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Mikołaj na GitHubie</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon na GitHubie</string>
-  <string name="scene_not_available" translation_description="Not available yet">Jeszcze niedostępne</string>
+  <string name="track_santa">Śledź trasę Mikołaja</string>
+  <string name="track_santa_two_lines">Śledź\ntrasę Mikołaja</string>
+  <string name="santa_takes_off_in">Święty Mikołaj wyrusza za</string>
+  <string name="santa_is_busy_preparing_for_next_year">Święty Mikołaj jest zajęty przygotowaniami na przyszły rok.</string>
+  <string name="view_old_stops">Zobacz postoje w 2014 r.</string>
+  <string name="contacting_santa">Próbuję nawiązać kontakt ze Świętym Mikołajem</string>
+  <string name="still_trying_to_reach_santa">Nadal próbuję nawiązać kontakt ze Świętym Mikołajem</string>
+  <string name="days">dni</string>
+  <string name="hrs">godz.</string>
+  <string name="min">min</string>
+  <string name="sec">sek.</string>
+  <string name="menu_share">Udostępnij</string>
+  <string name="menu_share_friends">Udostępnij znajomym</string>
+  <string name="legal_notice">Warunki i prywatność</string>
+  <string name="legal_notice_text">Informacje prawne</string>
+  <string name="privacy_policy">Polityka prywatności</string>
+  <string name="terms_of_service">Warunki korzystania z usługi</string>
+  <string name="open_source_licenses">Licencje open source</string>
+  <string name="open_source_repo_santa">Mikołaj na GitHubie</string>
+  <string name="scene_not_available">Jeszcze niedostępne</string>
   <string name="sign_out">Wyloguj się</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">do startu</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d z %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">Punkty: %1$d</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Gdzie to jest?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Zdjęcie: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Śledź Mikołaja na dużym ekranie!\nDotknij tego przycisku, aby obserwować podróż Mikołaja na telewizorze za pomocą urządzenia Chromecast.</string>
+  <string name="until_takeoff">do startu</string>
+  <string name="web_scene_error">Nie udało się wczytać sceny.</string>
+  <string name="check_back_daily">Sprawdzaj codziennie, czy pojawiły się nowe gry.</string>
+  <string name="new_games">Nowe gry</string>
+  <string name="new_card">Nowość</string>
+  <string name="tracker_opens_date">Rusza %1$s</string>
+  <string name="time">CZAS</string>
+  <string name="download_dialog_title">Pobierz grę %1$s</string>
+  <string name="download_dialog_message">Jeśli chcesz grać w tę grę, musisz ją pobrać ze Sklepu Play. To urządzenie obecnie korzysta z sieci mierzącej użycie danych, która może naliczać opłaty za przesył danych.\n\nCzy chcesz kontynuować?</string>
+  <string name="elf_maker_write_success">Obraz został zapisany w Twoich zdjęciach</string>
+  <string name="elf_maker_write_fail">Wystąpił błąd podczas zapisywania obrazu w zdjęciach na urządzeniu</string>
 </resources>

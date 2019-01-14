@@ -1,22 +1,27 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
-  -->
-
-<resources>
-  <string name="app_name" translatable="false">Common</string>
+  --><resources>
   <string name="back_to_map" translation_description="Button text to take user back to map view.">Back to map</string>
   <string name="back_to_village" translation_description="Button text to take user back to the village.">Back to village</string>
   <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">This version of Santa Tracker is out of date. Please visit the Play Store to update to the latest version.</string>
+  <string name="game_over" translation_description="Message shown at end of game">Game Over</string>
+  <string name="loading_screen" translation_description="Content description for a single image on the loading screen above a progress indicator.">Loading screen</string>
+  <string name="menu_resume" translation_description="Text for resume game button">Resume</string>
+  <string name="menu_replay" translation_description="Text for replay game button">Replay</string>
+  <string name="menu_home" translation_description="Text for button to return to home screen">Home</string>
+  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Share</string>
+  <string name="extra_large_present_key" translatable="false">extra_large_present</string>
+  <string name="error_fetch_module" translation_description="Error message shown when an error happens when downloading a game">An error occurred while downloading %1$s. Is your network connection working?</string>
 </resources>

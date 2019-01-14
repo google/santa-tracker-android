@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -18,4 +18,11 @@
 <resources>
   <string name="watch_face_elf">Chú lùn</string>
   <string name="watch_face_santa">Ông già Noel</string>
+  <string name="countdown_complication_label">Đếm ngược đến ngày Theo chân ông già Noel</string>
+  <string name="short_christmas_greeting">Hôm nay!</string>
+  <string name="long_christmas_greeting">Chúc mừng Giáng sinh!</string>
+  <string name="desc_logo_for_santa_tracker">Biểu trưng cho Theo chân ông già Noel</string>
+  <string name="desc_right_complication_config">Tiện ích hiển thị nhiều nội dung bên phải</string>
+  <string name="desc_lower_complication_config">Tiện ích hiển thị nhiều nội dung dưới cùng</string>
+  <string name="desc_left_complication_config">Tiện ích hiển thị nhiều nội dung bên trái</string>
 </resources>

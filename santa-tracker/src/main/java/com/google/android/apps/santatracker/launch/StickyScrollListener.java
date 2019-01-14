@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2016 Google Inc. All Rights Reserved.
+ * Copyright 2019. Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,22 +16,21 @@
 
 package com.google.android.apps.santatracker.launch;
 
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.apps.santatracker.launch.adapters.CardAdapter;
+import com.google.android.flexbox.FlexboxLayoutManager;
 
 /**
- * Scroll listener that adjusts the RecyclerView after a scroll event to make sure that the
- * top list item is fully visible and not obscured.
+ * Scroll listener that adjusts the RecyclerView after a scroll event to make sure that the top list
+ * item is fully visible and not obscured.
  */
 public class StickyScrollListener extends RecyclerView.OnScrollListener {
 
-    private static final String TAG = "StickyScrollListener";
-
     /**
      * Cutoff for stickiness. If less than this fraction of the obscured view can be seen, the
-     * RecyclerView is scrolled to a more visible view. Otherwise, this view is scrolled to be
-     * fully visible.
+     * RecyclerView is scrolled to a more visible view. Otherwise, this view is scrolled to be fully
+     * visible.
      */
     private static final float VISIBILITY_CUTOFF = 0.60f;
 
@@ -40,52 +39,55 @@ public class StickyScrollListener extends RecyclerView.OnScrollListener {
 
     private int mScrollDirection = 0;
 
-    /** LinearLayoutManager controlling the RecyclerView **/
-    private LinearLayoutManager mManager;
+    /** LayoutManager controlling the RecyclerView */
+    private FlexboxLayoutManager mManager;
 
-    /** Number of columns displayed by the Manager **/
-    private int mNumColumns = 1;
+    /** Calculates number of columns displayed by the Manager */
+    private CardAdapter.ColumnCountCalculator mColumnCountCalculator;
 
-    /** Scroll state of the RecyclerView **/
+    /** Scroll state of the RecyclerView */
     private int mScrollState = RecyclerView.SCROLL_STATE_IDLE;
 
-    /** Position of the first completely visible view **/
+    /** Position of the first completely visible view */
     private int topVisiblePos;
 
-    /** Position of the view above the first completely visible view **/
+    /** Position of the view above the first completely visible view */
     private int topObscuredPos;
 
-    /** Position of the last completely visible view **/
+    /** Position of the last completely visible view */
     private int bottomVisiblePos;
 
-    /** Position of the view below the last completely visible view **/
+    /** Position of the view below the last completely visible view */
     private int bottomObscuredPos;
 
-    /** View above the first completely visible View **/
+    /** View above the first completely visible View */
     private View topObscuredView;
 
-    /** View below the last completely visible View **/
+    /** View below the last completely visible View */
     private View bottomObscuredView;
 
-    /** Percent of topObscuredView that is visible **/
+    /** Percent of topObscuredView that is visible */
     private float topObscuredPercentVisible;
 
-    /** Percent of bottomObscuredView that is visible **/
+    /** Percent of bottomObscuredView that is visible */
     private float bottomObscuredPercentVisible;
 
-    public StickyScrollListener(LinearLayoutManager manager, int numColumns) {
+    public StickyScrollListener(
+            FlexboxLayoutManager manager, CardAdapter.ColumnCountCalculator columnCountCalculator) {
         this.mManager = manager;
-        this.mNumColumns = numColumns;
+        this.mColumnCountCalculator = columnCountCalculator;
     }
 
     @Override
     public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+        // TODO: get current position to get correct position.
+        int numColumns = mColumnCountCalculator.calculateColumnCount(0);
         topVisiblePos = mManager.findFirstCompletelyVisibleItemPosition();
-        topObscuredPos = topVisiblePos - mNumColumns;
+        topObscuredPos = topVisiblePos - numColumns;
         topObscuredView = mManager.findViewByPosition(topObscuredPos);
 
         bottomVisiblePos = mManager.findLastCompletelyVisibleItemPosition();
-        bottomObscuredPos = bottomVisiblePos + mNumColumns;
+        bottomObscuredPos = bottomVisiblePos + numColumns;
         bottomObscuredView = mManager.findViewByPosition(bottomObscuredPos);
 
         if (topObscuredView != null) {
@@ -100,8 +102,10 @@ public class StickyScrollListener extends RecyclerView.OnScrollListener {
 
         if (bottomObscuredView != null) {
             // Same calculation for bottom
-            float bottomObscuredPixelsVisible = (recyclerView.getHeight() - bottomObscuredView.getY());
-            bottomObscuredPercentVisible = bottomObscuredPixelsVisible / bottomObscuredView.getHeight();
+            float bottomObscuredPixelsVisible =
+                    (recyclerView.getHeight() - bottomObscuredView.getY());
+            bottomObscuredPercentVisible =
+                    bottomObscuredPixelsVisible / bottomObscuredView.getHeight();
         } else {
             clearBottom();
         }
@@ -117,11 +121,13 @@ public class StickyScrollListener extends RecyclerView.OnScrollListener {
     @Override
     public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
         // This detects the end of a non-fling drag
-        boolean stoppedDragging = mScrollState == RecyclerView.SCROLL_STATE_DRAGGING &&
-                newState == RecyclerView.SCROLL_STATE_IDLE;
+        boolean stoppedDragging =
+                mScrollState == RecyclerView.SCROLL_STATE_DRAGGING
+                        && newState == RecyclerView.SCROLL_STATE_IDLE;
 
-        boolean stoppedFlinging = mScrollState == RecyclerView.SCROLL_STATE_SETTLING &&
-                newState == RecyclerView.SCROLL_STATE_IDLE;
+        boolean stoppedFlinging =
+                mScrollState == RecyclerView.SCROLL_STATE_SETTLING
+                        && newState == RecyclerView.SCROLL_STATE_IDLE;
 
         if (stoppedDragging || stoppedFlinging) {
             if (mScrollDirection == DOWN) {
@@ -140,7 +146,6 @@ public class StickyScrollListener extends RecyclerView.OnScrollListener {
         mScrollState = newState;
     }
 
-
     private void clearTop() {
         topObscuredView = null;
         topObscuredPos = -1;
@@ -155,4 +160,3 @@ public class StickyScrollListener extends RecyclerView.OnScrollListener {
         bottomObscuredPercentVisible = 1.0f;
     }
 }
-

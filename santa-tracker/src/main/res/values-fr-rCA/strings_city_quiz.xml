@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,69 +16,69 @@
   -->
 
 <resources>
-  <string name="msg_city_count" translation_description="Label for number of cities guessed in game.">VILLES</string>
-  <string name="provideniya_russia_city" translation_description="Name of city in Russia">Providenia, Russie</string>
-  <string name="wellington_new_zealand_city" translation_description="Name of city in New Zealand">Wellington, Nouvelle-Zélande</string>
-  <string name="invercargill_new_zealand_city" translation_description="Name of city in New Zealand">Invercargill, Nouvelle-Zélande</string>
-  <string name="honiara_solomon_islands_city" translation_description="Name of city in Solomon Islands">Honiara, Îles Salomon</string>
-  <string name="magadan_russia_city" translation_description="Name of city in Russia">Magadan, Russie</string>
-  <string name="andersen_afb_guam_city" translation_description="Name of an air force base (AFB) in Guam">Andersen Air Force Base, Guam</string>
-  <string name="atlantic_city_usa_city" translation_description="Name of city in USA">Atlantic City, États-Unis</string>
-  <string name="yosemite_national_park_usa_city" translation_description="Name of city in USA">Parc national de Yosemite, États-Unis</string>
-  <string name="kyoto_japan_city" translation_description="Name of city in Japan">Kyoto, Japon</string>
-  <string name="machu_picchu_peru_city" translation_description="Name of city in Peru">Machu Picchu, Pérou</string>
-  <string name="florence_italy_city" translation_description="Name of city in Italy">Florence, Italie</string>
-  <string name="reykjavik_iceland_city" translation_description="Name of city in Iceland">Reykjavik, Islande</string>
-  <string name="hanover_germany_city" translation_description="Name of city in Germany">Hanovre, Allemagne</string>
-  <string name="hamburg_germany_city" translation_description="Name of city in Germany">Hambourg, Allemagne</string>
-  <string name="mountain_view_usa_city" translation_description="Name of city in USA">Mountain View, États-Unis</string>
-  <string name="banff_canada_city" translation_description="Name of city in Canada">Banff, Canada</string>
-  <string name="warsaw_poland_city" translation_description="Name of city in Poland">Varsovie, Pologne</string>
-  <string name="stockholm_sweden_city" translation_description="Name of city in Sweden">Stockholm, Suède</string>
-  <string name="budapest_hungary_city" translation_description="Name of city in Hungary">Budapest, Hongrie</string>
-  <string name="paris_france_city" translation_description="Name of city in France">Paris, France</string>
-  <string name="london_uk_city" translation_description="Name of city in UK">Londres, Royaume-Uni</string>
-  <string name="moscow_russia_city" translation_description="Name of city in Russia">Moscou, Russie</string>
-  <string name="dubai_uae_city" translation_description="Name of city in UAE">Dubaï, Émirats arabes unis</string>
-  <string name="versailles_france_city" translation_description="Name of city in France">Versailles, France</string>
-  <string name="new_york_city_usa_city" translation_description="Name of city in USA">New York, États-Unis</string>
-  <string name="san_francisco_usa_city" translation_description="Name of city in USA">San Francisco, États-Unis</string>
-  <string name="madrid_spain_city" translation_description="Name of city in Spain">Madrid, Espagne</string>
-  <string name="barcelona_spain_city" translation_description="Name of city in Spain">Barcelone, Espagne</string>
-  <string name="mumbai_india_city" translation_description="Name of city in India">Mumbai, Inde</string>
-  <string name="shanghai_china_city" translation_description="Name of city in China">Shanghai, Chine</string>
-  <string name="ediburgh_scotland_city" translation_description="Name of city in Scotland">Édimbourg, Écosse</string>
-  <string name="port_douglas_australia_city" translation_description="Name of city in Australia">Port Douglas, Australie</string>
-  <string name="istanbul_turkey_city" translation_description="Name of city in Turkey">Istanbul, Turquie</string>
-  <string name="denaru_island_fiji_city" translation_description="Name of city in Fiji">Denarau Island, Fidji</string>
-  <string name="mexico_city_mexico_city" translation_description="Name of city in Mexico">Mexico, Mexique</string>
-  <string name="rio_de_janiero_brazil_city" translation_description="Name of city in Brazil">Rio de Janeiro, Brésil</string>
-  <string name="grand_canyon_national_park_za_usa_city" translation_description="Name of city in USA">Parc national du Grand Canyon, Arizona, États-Unis</string>
-  <string name="grand_tetons_national_park_wy_usa_city" translation_description="Name of city in USA">Parc national de Grand Teton, Wyoming, États-Unis</string>
-  <string name="canyonlands_national_park_ut_usa_city" translation_description="Name of city in USA">Parc national Canyonlands, Utah, États-Unis</string>
-  <string name="nashville_tn_usa_city" translation_description="Name of city in USA">Nashville, Tennessee, États-Unis</string>
-  <string name="new_orleans_la_usa_city" translation_description="Name of city in USA">La Nouvelle-Orléans, Louisiane, États-Unis</string>
-  <string name="rome_italy_city" translation_description="Name of city in Italy">Rome, Italie</string>
-  <string name="berlin_germany_city" translation_description="Name of city in Germany">Berlin, Allemagne</string>
-  <string name="washington_dc_usa_city" translation_description="Name of city in ">Washington, DC, États-Unis</string>
-  <string name="dublin_ireland_city" translation_description="Name of city in USA">Dublin, Irlande</string>
-  <string name="zurich_switzerland_city" translation_description="Name of city in Switzerland">Zurich, Suisse</string>
-  <string name="tokyo_japan_city" translation_description="Name of city in Japan">Tokyo, Japon</string>
-  <string name="atlanta_ga_usa_city" translation_description="Name of city in USA">Atlanta, Géorgie, États-Unis</string>
-  <string name="chicago_il_usa_city" translation_description="Name of city in USA">Chicago, Illinois, États-Unis</string>
-  <string name="port_of_spain_trinidad_and_tobago_city" translation_description="Name of city in Trinidad and Tobago">Port-d\'Espagne, Trinité-et-Tobago</string>
-  <string name="kingston_jamaica_city" translation_description="Name of city in Jamaica">Kingston, Jamaïque</string>
-  <string name="panama_city_panama_city" translation_description="Name of city in Panama">Panama, Panama</string>
-  <string name="miami_florida_usa_city" translation_description="Name of city in USA">Miami, Floride, États-Unis</string>
-  <string name="buenos_aires_argentina_city" translation_description="Name of city in Argentina">Buenos Aires, Argentine</string>
-  <string name="sao_paulo_brazil_city" translation_description="Name of city in Brazil">Sao Paulo, Brésil</string>
-  <string name="bogota_columbia_city" translation_description="Name of city in Columbia">Bogota, Colombie</string>
-  <string name="santiago_chile_city" translation_description="Name of city in Chile">Santiago, Chili</string>
-  <string name="quito_ecuador_city" translation_description="Name of city in Ecuador">Quito, Équateur</string>
-  <string name="guatemala_city_guatemala_city" translation_description="Name of city in Guatemala">Guatemala, Guatemala</string>
-  <string name="la_paz_bolivia_city" translation_description="Name of city in Bolivia">La Paz, Bolivie</string>
-  <string name="lagos_nigeria_city" translation_description="Name of city in Nigeria">Lagos, Nigéria</string>
-  <string name="cairo_egypt_city" translation_description="Name of city in Egypt">Le Caire, Égypte</string>
-  <string name="new_delhi_india_city" translation_description="Name of city in India">New Delhi, Inde</string>
-  <string name="cape_town_south_africa_city" translation_description="Name of city in South Africa">Le Cap, Afrique du Sud</string>
+  <string name="msg_city_count">VILLES</string>
+  <string name="provideniya_russia_city">Providenia, Russie</string>
+  <string name="wellington_new_zealand_city">Wellington, Nouvelle-Zélande</string>
+  <string name="invercargill_new_zealand_city">Invercargill, Nouvelle-Zélande</string>
+  <string name="honiara_solomon_islands_city">Honiara, Îles Salomon</string>
+  <string name="magadan_russia_city">Magadan, Russie</string>
+  <string name="andersen_afb_guam_city">Andersen Air Force Base, Guam</string>
+  <string name="atlantic_city_usa_city">Atlantic City, États-Unis</string>
+  <string name="yosemite_national_park_usa_city">Parc national de Yosemite, États-Unis</string>
+  <string name="kyoto_japan_city">Kyoto, Japon</string>
+  <string name="machu_picchu_peru_city">Machu Picchu, Pérou</string>
+  <string name="florence_italy_city">Florence, Italie</string>
+  <string name="reykjavik_iceland_city">Reykjavik, Islande</string>
+  <string name="hanover_germany_city">Hanovre, Allemagne</string>
+  <string name="hamburg_germany_city">Hambourg, Allemagne</string>
+  <string name="mountain_view_usa_city">Mountain View, États-Unis</string>
+  <string name="banff_canada_city">Banff, Canada</string>
+  <string name="warsaw_poland_city">Varsovie, Pologne</string>
+  <string name="stockholm_sweden_city">Stockholm, Suède</string>
+  <string name="budapest_hungary_city">Budapest, Hongrie</string>
+  <string name="paris_france_city">Paris, France</string>
+  <string name="london_uk_city">Londres, Royaume-Uni</string>
+  <string name="moscow_russia_city">Moscou, Russie</string>
+  <string name="dubai_uae_city">Dubaï, Émirats arabes unis</string>
+  <string name="versailles_france_city">Versailles, France</string>
+  <string name="new_york_city_usa_city">New York, États-Unis</string>
+  <string name="san_francisco_usa_city">San Francisco, États-Unis</string>
+  <string name="madrid_spain_city">Madrid, Espagne</string>
+  <string name="barcelona_spain_city">Barcelone, Espagne</string>
+  <string name="mumbai_india_city">Mumbai, Inde</string>
+  <string name="shanghai_china_city">Shanghai, Chine</string>
+  <string name="ediburgh_scotland_city">Édimbourg, Écosse</string>
+  <string name="port_douglas_australia_city">Port Douglas, Australie</string>
+  <string name="istanbul_turkey_city">Istanbul, Turquie</string>
+  <string name="denaru_island_fiji_city">Denarau Island, Fidji</string>
+  <string name="mexico_city_mexico_city">Mexico, Mexique</string>
+  <string name="rio_de_janiero_brazil_city">Rio de Janeiro, Brésil</string>
+  <string name="grand_canyon_national_park_za_usa_city">Parc national du Grand Canyon, Arizona, États-Unis</string>
+  <string name="grand_tetons_national_park_wy_usa_city">Parc national de Grand Teton, Wyoming, États-Unis</string>
+  <string name="canyonlands_national_park_ut_usa_city">Parc national Canyonlands, Utah, États-Unis</string>
+  <string name="nashville_tn_usa_city">Nashville, Tennessee, États-Unis</string>
+  <string name="new_orleans_la_usa_city">La Nouvelle-Orléans, Louisiane, États-Unis</string>
+  <string name="rome_italy_city">Rome, Italie</string>
+  <string name="berlin_germany_city">Berlin, Allemagne</string>
+  <string name="washington_dc_usa_city">Washington, DC, États-Unis</string>
+  <string name="dublin_ireland_city">Dublin, Irlande</string>
+  <string name="zurich_switzerland_city">Zurich, Suisse</string>
+  <string name="tokyo_japan_city">Tokyo, Japon</string>
+  <string name="atlanta_ga_usa_city">Atlanta, Géorgie, États-Unis</string>
+  <string name="chicago_il_usa_city">Chicago, Illinois, États-Unis</string>
+  <string name="port_of_spain_trinidad_and_tobago_city">Port-d\'Espagne, Trinité-et-Tobago</string>
+  <string name="kingston_jamaica_city">Kingston, Jamaïque</string>
+  <string name="panama_city_panama_city">Panama, Panama</string>
+  <string name="miami_florida_usa_city">Miami, Floride, États-Unis</string>
+  <string name="buenos_aires_argentina_city">Buenos Aires, Argentine</string>
+  <string name="sao_paulo_brazil_city">Sao Paulo, Brésil</string>
+  <string name="bogota_columbia_city">Bogota, Colombie</string>
+  <string name="santiago_chile_city">Santiago, Chili</string>
+  <string name="quito_ecuador_city">Quito, Équateur</string>
+  <string name="guatemala_city_guatemala_city">Guatemala, Guatemala</string>
+  <string name="la_paz_bolivia_city">La Paz, Bolivie</string>
+  <string name="lagos_nigeria_city">Lagos, Nigéria</string>
+  <string name="cairo_egypt_city">Le Caire, Égypte</string>
+  <string name="new_delhi_india_city">New Delhi, Inde</string>
+  <string name="cape_town_south_africa_city">Le Cap, Afrique du Sud</string>
 </resources>

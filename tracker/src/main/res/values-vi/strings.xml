@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Trang tổng quan của ông già Noel</string>
+  <string name="current_location">VỊ TRÍ HIỆN TẠI</string>
+  <string name="presents_delivered">SỐ LƯỢNG QUÀ ĐÃ PHÁT</string>
+  <string name="santa_status">TRẠNG THÁI CỦA ÔNG GIÀ NOEL</string>
+  <string name="arriving_in">ĐẾN SAU</string>
+  <string name="departing_in">KHỞI HÀNH SAU</string>
+  <string name="localtime">ĐÃ ĐẾN</string>
+  <string name="population">DÂN SỐ</string>
+  <string name="next_destination">ĐIỂM ĐẾN TIẾP THEO</string>
+  <string name="arriving_at">ĐANG ĐẾN</string>
+  <string name="arrived_at">ĐÃ ĐẾN</string>
+  <string name="in_transit">Đang chuyển tuyến</string>
+  <string name="follow_santa">Theo dõi ông già Noel</string>
+  <string name="lost_contact_with_santa">Mất liên lạc với ông già Noel</string>
+  <string name="notification_nearby">Ông già Noel ở gần đây!</string>
+  <string name="notification_takeoff">Ông già Noel đã cất cánh!</string>
+  <string name="notification_unlock_video">Đã có video mới!</string>
+  <string name="notification_unlock_game">Đã có trò chơi mới!</string>
+  <string name="santa_arrives_in_your_area_in">ÔNG GIÀ NOEL SẼ ĐẾN KHU VỰC CỦA BẠN TRONG</string>
+  <string name="santa_is_approximately">ÔNG GIÀ NOEL ĐANG Ở KHOẢNG</string>
+  <string name="distance_km_away">Cách đây %1$,d km%2$s</string>
+  <string name="distance_optional_miles">\u0020(%,d dặm)</string>
+  <string name="distance_mi_away">Cách đây %1$,d dặm</string>
+  <string name="did_you_know">BẠN CÓ BIẾT</string>
+  <string name="watch_movie">XEM PHIM</string>
+  <string name="santa_update">NỘI DUNG CẬP NHẬT TỪ ÔNG GIÀ NOEL</string>
+  <string name="elapsed_time">THỜI GIAN ĐÃ TRÔI QUA</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">THỜI GIAN ĐẾN</string>
+  <string name="weather">THỜI TIẾT</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">Sự kiện thế giới được National Geographic Bee cung cấp</string>
+  <string name="photo">Hình ảnh</string>
+  <string name="photos">Hình ảnh</string>
+  <string name="street_view">CHẾ ĐỘ XEM PHỐ</string>
+  <string name="back_to_santa_cam">QUAY LẠI MÀN HÌNH ÔNG GIÀ NOEL</string>
+  <string name="update_from_santa">Cập nhật từ ông già Noel</string>
+  <string name="trivia_from_santa">Chuyện phiếm từ ông già Noel</string>
+  <string name="photo_from_santa">Hình ảnh từ ông già Noel</string>
+  <string name="video_from_santa">Video từ ông già Noel</string>
+  <string name="show_history">Hiển thị lịch sử</string>
+  <string name="see_best_moments">Xem tất cả những khoảnh khắc đẹp nhất trong chuyến đi của ông già Noel</string>
+  <string name="return_to_map">Trở lại bản đồ</string>
+  <string name="santa_is_now_arriving_in_x">Ông già Noel đang đến %s</string>
+  <string name="santa_has_handed_out_x_presents">Ông già Noel đã trao %s phần quà</string>
+  <string name="new_update_from_santa">Cập nhật mới từ ông già Noel</string>
+  <string name="new_trivia_from_santa">Chuyện phiếm mới từ ông già Noel</string>
+  <string name="new_video_from_santa">Video mới từ ông già Noel</string>
+  <string name="new_photo_from_santa">Hình ảnh mới từ ông già Noel</string>
+  <string name="cast_overlay_text">Theo chân ông già Noel trên màn hình lớn!\nNhấn nút này để xem hành trình của ông già Noel trên TV bằng Chromecast.</string>
+  <string name="menu_media_router_title">Nút Truyền</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  --><resources>
+  <string name="santa_locked" translation_description="Tooltip. Santa is unavailable until a certain date">Sigue a Santa el 24 de diciembre.</string>
+  <string name="gumball_locked" translation_description="Tooltip. Game is unavailable until a certain date">Gumball estará disponible el 1.º de diciembre.</string>
+  <string name="memory_locked" translation_description="Tooltip. Game is unavailable until a certain date">Memory estará disponible el 1.º de diciembre.</string>
+  <string name="rocket_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Rocket Sleigh estará disponible el 1.º de diciembre.</string>
+  <string name="dancer_locked" translation_description="Tooltip. Game is unavailable until a certain date.">Dasher Dancer estará disponible el 1.º de diciembre.</string>
+  <string name="video" translation_description="Description of a button that plays a video.">Video</string>
+  <string name="video_locked" translation_description="Tooltip. Video is unavailable until specified date. Variable is a day in December">El video se desbloqueará el %1$d de diciembre.</string>
+</resources>

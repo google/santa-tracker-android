@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Spill</string>
-  <string name="level" translation_description="Label shown under the user's current level">NIVÅ</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Verksteder</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Låses opp på nivå %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Julenissen har mistet en gave!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Gaven er for langt unna.</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Verkstedet er for langt unna.</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Du må samle inn noen gaver først.</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Sekken din er full!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Verkstedet er flyttet</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Flyttingen ble avbrutt</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Dette verkstedet er allerede flyttet i dag – prøv igjen i morgen</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Gå hit!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">Gavejakt trenger tilgang til posisjonen din for å hjelpe deg med å finne julenissens presanger.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Tillatelse kreves</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">Gavejakt fungerer ikke uten tilgang til posisjonen din. Du kan slå på Posisjonstillatelser i Innstillinger.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Mangler obligatoriske tillatelser.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Neste</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Det faller gaver\nfra sleden til julenissen!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Gå til gavenes plassering i\nden virkelige verden for å plukke dem opp.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Når sekken din er full,\nkan du gå til et verksted for å tømme den</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Sett i gang!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">Det er en gave i nærheten!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Sekken din er nesten full!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Gå til et verksted for å tømme sekken din.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Du har fått tilgang til et nytt verksted!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Klikk på en gave for å legge den i sekken.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Klikk på verkstedet for å tømme sekken for gaver.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">av 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">FULL</string>
+  <string name="play">Spill</string>
+  <string name="level">NIVÅ</string>
+  <string name="workshops">Verksteder</string>
+  <string name="unlock_at_level">Låses opp på nivå %1$d</string>
+  <string name="present_dropped">Julenissen har mistet en gave!</string>
+  <string name="present_too_far">Gaven er for langt unna.</string>
+  <string name="workshop_too_far">Verkstedet er for langt unna.</string>
+  <string name="no_presents_collected">Du må samle inn noen gaver først.</string>
+  <string name="bag_is_full">Sekken din er full!</string>
+  <string name="workshop_moved">Verkstedet er flyttet</string>
+  <string name="move_canceled">Flyttingen ble avbrutt</string>
+  <string name="workshop_move_too_soon">Dette verkstedet er allerede flyttet i dag – prøv igjen i morgen</string>
+  <string name="go_here">Gå hit!</string>
+  <string name="perm_location_rationale">Gavejakt trenger tilgang til posisjonen din for å hjelpe deg med å finne julenissens presanger.</string>
+  <string name="perm_required">Tillatelse kreves</string>
+  <string name="perm_go_to_settings">Gavejakt fungerer ikke uten tilgang til posisjonen din. Du kan slå på Posisjonstillatelser i Innstillinger.</string>
+  <string name="required_permissions_missing">Mangler obligatoriske tillatelser.</string>
+  <string name="next">Neste</string>
+  <string name="onboarding_msg_1">Det faller gaver\nfra sleden til julenissen!</string>
+  <string name="onboarding_msg_2">Gå til gavenes plassering i\nden virkelige verden for å plukke dem opp.</string>
+  <string name="onboarding_msg_3">Når sekken din er full,\nkan du gå til et verksted for å tømme den</string>
+  <string name="onboarding_msg_4">Sett i gang!</string>
+  <string name="msg_present_nearby">Det er en gave i nærheten!</string>
+  <string name="msg_bag_almost_full">Sekken din er nesten full!</string>
+  <string name="msg_unload_bag">Gå til et verksted for å tømme sekken din.</string>
+  <string name="msg_unlocked_workshop">Du har fått tilgang til et nytt verksted!</string>
+  <string name="msg_click_present">Klikk på en gave for å legge den i sekken.</string>
+  <string name="msg_click_workshop">Klikk på verkstedet for å tømme sekken for gaver.</string>
+  <string name="level_denominator">av 12</string>
+  <string name="full">FULL</string>
+  <string name="distraction_warning">Vær oppmerksom på omgivelsene når du spiller.</string>
 </resources>

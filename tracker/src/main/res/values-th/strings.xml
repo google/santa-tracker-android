@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">แผงควบคุมของซานต้า</string>
+  <string name="current_location">ตำแหน่งปัจจุบัน</string>
+  <string name="presents_delivered">ของขวัญที่ส่งแล้ว</string>
+  <string name="santa_status">สถานะของซานต้า</string>
+  <string name="arriving_in">จะถึงภายใน</string>
+  <string name="departing_in">จะออกภายใน</string>
+  <string name="localtime">ถึงแล้วที่</string>
+  <string name="population">จำนวนประชากร</string>
+  <string name="next_destination">จุดหมายต่อไป</string>
+  <string name="arriving_at">จะมาถึงที่</string>
+  <string name="arrived_at">ถึงแล้วที่</string>
+  <string name="in_transit">กำลังเดินทาง</string>
+  <string name="follow_santa">ติดตามซานต้า</string>
+  <string name="lost_contact_with_santa">ขาดการติดต่อกับซานต้า</string>
+  <string name="notification_nearby">ซานต้าอยู่ใกล้ๆ นี่เอง</string>
+  <string name="notification_takeoff">ซานต้าได้ออกเดินทางไปแล้ว!</string>
+  <string name="notification_unlock_video">มีวิดีโอใหม่ให้ชมแล้ว</string>
+  <string name="notification_unlock_game">มีเกมใหม่ให้เล่นแล้ว</string>
+  <string name="santa_arrives_in_your_area_in">ซานต้าจะมาถึงพื้นที่ของคุณใน</string>
+  <string name="santa_is_approximately">ซานต้าอยู่ห่างออกไปประมาณ</string>
+  <string name="distance_km_away">%1$,d กม.%2$s</string>
+  <string name="distance_optional_miles">\u0020(%,d ไมล์)</string>
+  <string name="distance_mi_away">%1$,d ไมล์</string>
+  <string name="did_you_know">คุณรู้ไหม</string>
+  <string name="watch_movie">ดูวิดีโอ</string>
+  <string name="santa_update">อัปเดตจากซานต้า</string>
+  <string name="elapsed_time">เวลาที่ผ่านไป</string>
+  <string name="wikipedia">วิกิพีเดีย</string>
+  <string name="arrival">ซานต้ามาถึง</string>
+  <string name="weather">สภาพอากาศ</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">ข้อเท็จจริงเกี่ยวกับโลกจาก National Geographic Bee</string>
+  <string name="photo">รูปภาพ</string>
+  <string name="photos">รูปภาพ</string>
+  <string name="street_view">สตรีทวิว</string>
+  <string name="back_to_santa_cam">กลับไปที่กล้องซานต้า</string>
+  <string name="update_from_santa">อัปเดตจากซานต้า</string>
+  <string name="trivia_from_santa">เกร็ดข้อมูลจากซานต้า</string>
+  <string name="photo_from_santa">รูปภาพจากซานต้า</string>
+  <string name="video_from_santa">วิดีโอจากซานต้า</string>
+  <string name="show_history">แสดงประวัติ</string>
+  <string name="see_best_moments">ดูช่วงเวลาน่าประทับใจทั้งหมดในการเดินทางของซานต้า</string>
+  <string name="return_to_map">กลับไปที่แผนที่</string>
+  <string name="santa_is_now_arriving_in_x">ซานต้ากำลังจะถึง %s แล้ว</string>
+  <string name="santa_has_handed_out_x_presents">ซานต้าแจกของขวัญไปแล้ว %s ชิ้น</string>
+  <string name="new_update_from_santa">อัปเดตใหม่จากซานต้า</string>
+  <string name="new_trivia_from_santa">เกร็ดข้อมูลใหม่จากซานต้า</string>
+  <string name="new_video_from_santa">วิดีโอใหม่จากซานต้า</string>
+  <string name="new_photo_from_santa">รูปภาพใหม่จากซานต้า</string>
+  <string name="cast_overlay_text">ติดตามซานต้าบนหน้าจอขนาดใหญ่\nแตะปุ่มนี้เพื่อดูการเดินทางของซานต้าบนทีวีของคุณด้วย Chromecast</string>
+  <string name="menu_media_router_title">ปุ่มแคสต์</string>
+</resources>

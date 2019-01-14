@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,36 +24,20 @@
     <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+    <uses-permission
+        android:name="com.google.android.wearable.permission.RECEIVE_COMPLICATION_DATA" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light" >
+        android:theme="@style/WearAppBaseTheme">
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
 
-        <service
-            android:name=".WearNotificationService"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.google.android.apps.santatracker.DISMISS" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.google.android.apps.santatracker.SEND" />
-            </intent-filter>
-        </service>
-
-        <activity
-            android:name=".VillageNotificationActivity"
-            android:exported="true"
-            android:allowEmbedded="true"
-            android:taskAffinity="" >
-
-        </activity>
-
-        <service
+      <service
             android:name=".SantaWatchFaceService"
             android:label="@string/watch_face_santa"
             android:allowEmbedded="true"
@@ -69,6 +53,10 @@
             <meta-data
                 android:name="com.google.android.wearable.watchface.preview_circular"
                 android:resource="@drawable/preview_circular" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+                android:value="com.google.android.apps.santatracker.santawatchface.CONFIG_COMPLICATION"/>
+
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
                 <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE"/>
@@ -91,12 +79,64 @@
             <meta-data
                     android:name="com.google.android.wearable.watchface.preview_circular"
                     android:resource="@drawable/elf_preview_circular" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+                android:value="com.google.android.apps.santatracker.elfwatchface.CONFIG_COMPLICATION"/>
+
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
                 <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE"/>
             </intent-filter>
         </service>
 
+        <activity android:name="android.support.wearable.complications.ComplicationHelperActivity"/>
+        <activity
+            android:name=".SantaConfigurationActivity"
+            android:label="@string/watch_face_santa">
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.santawatchface.CONFIG_COMPLICATION"/>
+                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ElfConfigurationActivity"
+            android:label="@string/watch_face_elf">
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.elfwatchface.CONFIG_COMPLICATION"/>
+                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".ChristmasCountdownProviderService"
+            android:label="@string/countdown_complication_label"
+            android:icon="@drawable/ic_santaicon"
+            android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name=
+                    "android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/>
+            </intent-filter>
+            <!-- This countdown service supports two complication types, short and long text. If the
+                 watch face only support other types such as icon or image, this data provider will
+                 not show -->
+            <meta-data
+                android:name="android.support.wearable.complications.SUPPORTED_TYPES"
+                android:value="SHORT_TEXT,LONG_TEXT"/>
+            <!-- Set update period to zero, see code in ChristmasCountdownProviderService service
+                 for how to tickle the system to refresh on Christmas day and Dec 26 -->
+            <meta-data
+                android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS"
+                android:value="0"/>
+        </service>
+
+        <!-- Complications components - this will be the job scheduler for tickling the system to
+             refresh the complication -->
+        <service
+            android:name=".UpdateCountdownService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
     </application>
 
 </manifest>

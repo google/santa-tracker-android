@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">Трансляция на устройство \"%s\"</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">Транслировать контент...</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">Коснитесь этого значка, чтобы передать изображение на телевизор.</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">Соединение с устройством прервано.</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">Соединение восстановлено.</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">Игровой контроллер</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">переключиться с кнопок на сенсорную панель</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">вправо</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">вверх</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">вниз</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">ввод</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">влево</string>
+  <string name="media_route_casting_on">Трансляция на устройство \"%s\"</string>
+  <string name="media_route_menu_title">Транслировать контент...</string>
+  <string name="touch_to_cast">Коснитесь этого значка, чтобы передать изображение на телевизор.</string>
+  <string name="connection_temp_lost">Соединение с устройством прервано.</string>
+  <string name="connection_recovered">Соединение восстановлено.</string>
+  <string name="cast_game_controller">Игровой контроллер</string>
+  <string name="content_desc_mode_switch">переключиться с кнопок на сенсорную панель</string>
+  <string name="content_desc_right_button">вправо</string>
+  <string name="content_desc_up_button">вверх</string>
+  <string name="content_desc_down_button">вниз</string>
+  <string name="content_desc_enter_button">ввод</string>
+  <string name="content_desc_left_button">влево</string>
 </resources>

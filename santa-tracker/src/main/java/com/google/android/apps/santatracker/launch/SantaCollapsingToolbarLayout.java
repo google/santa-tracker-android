@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2016 Google Inc. All Rights Reserved.
+ * Copyright 2019. Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,15 +16,13 @@
 
 package com.google.android.apps.santatracker.launch;
 
-import android.animation.FloatEvaluator;
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-
-import com.google.android.apps.santatracker.village.SnowFlakeView;
+import com.google.android.apps.santatracker.customviews.SnowFlakeView;
+import com.google.android.apps.santatracker.util.SantaLog;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 public class SantaCollapsingToolbarLayout extends CollapsingToolbarLayout {
 
@@ -36,11 +34,9 @@ public class SantaCollapsingToolbarLayout extends CollapsingToolbarLayout {
     private boolean mScrimShown = false;
 
     private View mToolbarContentView;
-    private View mOverlayView;
     private SnowFlakeView mSnowFlakeView;
 
     private ObjectAnimator mToolbarAnimator;
-    private ObjectAnimator mOverlayAnimator;
 
     public SantaCollapsingToolbarLayout(Context context) {
         super(context);
@@ -64,11 +60,11 @@ public class SantaCollapsingToolbarLayout extends CollapsingToolbarLayout {
         }
 
         if (shown) {
-            Log.d(TAG, "setScrimShown:showing");
+            SantaLog.d(TAG, "setScrimShown:showing");
             animateToolbar(TRANSPARENT, OPAQUE);
             mSnowFlakeView.setVisibility(View.GONE);
         } else {
-            Log.d(TAG, "setScrimShown:hiding");
+            SantaLog.d(TAG, "setScrimShown:hiding");
             animateToolbar(OPAQUE, TRANSPARENT);
             mSnowFlakeView.setVisibility(View.VISIBLE);
         }
@@ -77,19 +73,9 @@ public class SantaCollapsingToolbarLayout extends CollapsingToolbarLayout {
     }
 
     private void animateToolbar(float fromAlpha, float toAlpha) {
-        if (mToolbarAnimator == null) {
-            mToolbarAnimator = ObjectAnimator.ofObject(mToolbarContentView, "alpha", new FloatEvaluator(),
-                    fromAlpha, toAlpha)
-                    .setDuration(600);
-        }
-
-        if (mOverlayAnimator == null) {
-            mOverlayAnimator = ObjectAnimator.ofObject(mOverlayView, "alpha", new FloatEvaluator(),
-                    fromAlpha, toAlpha)
-                    .setDuration(600);
-        }
-
-        startAnimator(mOverlayAnimator, fromAlpha, toAlpha);
+        mToolbarAnimator =
+                ObjectAnimator.ofFloat(mToolbarContentView, View.ALPHA, fromAlpha, toAlpha)
+                        .setDuration(600);
         startAnimator(mToolbarAnimator, fromAlpha, toAlpha);
     }
 
@@ -97,22 +83,12 @@ public class SantaCollapsingToolbarLayout extends CollapsingToolbarLayout {
         if (animator.isRunning()) {
             animator.cancel();
         }
-
         animator.setFloatValues(from, to);
         animator.start();
     }
 
-
     public void setToolbarContentView(View toolbarContentView) {
         mToolbarContentView = toolbarContentView;
-    }
-
-    public void setOverlayView(View overlayView) {
-        mOverlayView = overlayView;
-    }
-
-    public void setOverlayColor(int colorResource) {
-        mOverlayView.setBackgroundResource(colorResource);
     }
 
     public void setSnowFlakeView(SnowFlakeView snowFlakeView) {

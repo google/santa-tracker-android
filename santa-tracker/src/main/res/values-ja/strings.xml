@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">サンタさんを追いかける</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">サンタさんを\n追いかける</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">サンタさんの出発まであと</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">サンタさんは来年の準備に追われています。</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">2014年のサンタさんの旅を見る</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">サンタさんを探しています</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">引き続きサンタさんを探しています</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">日</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">時間</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">分</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">秒</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">共有</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">友だちと共有</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">キャストボタン</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">法的事項およびプライバシー</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">法的通知</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">プライバシーポリシー</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">利用規約</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">オープンソースライセンス</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Google Play 開発者サービス用オープンソース ライセンス</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">GitHubのサンタ</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">GitHubのPie Noon</string>
-  <string name="scene_not_available" translation_description="Not available yet">まだご利用いただけません</string>
+  <string name="track_santa">サンタさんを追いかける</string>
+  <string name="track_santa_two_lines">サンタさんを\n追いかける</string>
+  <string name="santa_takes_off_in">サンタさんの出発まであと</string>
+  <string name="santa_is_busy_preparing_for_next_year">サンタさんは来年の準備に追われています。</string>
+  <string name="view_old_stops">2014年のサンタさんの旅を見る</string>
+  <string name="contacting_santa">サンタさんを探しています</string>
+  <string name="still_trying_to_reach_santa">引き続きサンタさんを探しています</string>
+  <string name="days">日</string>
+  <string name="hrs">時間</string>
+  <string name="min">分</string>
+  <string name="sec">秒</string>
+  <string name="menu_share">共有</string>
+  <string name="menu_share_friends">友だちと共有</string>
+  <string name="legal_notice">法的事項およびプライバシー</string>
+  <string name="legal_notice_text">法的通知</string>
+  <string name="privacy_policy">プライバシーポリシー</string>
+  <string name="terms_of_service">利用規約</string>
+  <string name="open_source_licenses">オープンソースライセンス</string>
+  <string name="open_source_repo_santa">GitHubのサンタ</string>
+  <string name="scene_not_available">まだご利用いただけません</string>
   <string name="sign_out">ログアウト</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">サンタさんが出発するまで</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d / %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d ポイント</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">ここはどこでしょうか？</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">撮影: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">大画面でサンタさんを追いかけよう！\nこのボタンをタップすると、Chromecast を使ってテレビでサンタさんの旅を追跡できます。</string>
+  <string name="until_takeoff">サンタさんが出発するまで</string>
+  <string name="web_scene_error">シーンを読み込めませんでした。</string>
+  <string name="check_back_daily">新着ゲームを毎日チェックしましょう！</string>
+  <string name="new_games">新着ゲーム</string>
+  <string name="new_card">新規</string>
+  <string name="tracker_opens_date">%1$sから開始</string>
+  <string name="time">時間</string>
+  <string name="download_dialog_title">%1$s のダウンロード</string>
+  <string name="download_dialog_message">ゲームをプレイするには、先に Play ストアでゲームをダウンロードする必要があります。このデバイスは現在、従量制ネットワークに接続されているため、データの転送に料金が発生する場合があります。\n\n続行してもよろしいですか？</string>
+  <string name="elf_maker_write_success">写真に画像が保存されました</string>
+  <string name="elf_maker_write_fail">デバイスの写真に画像を保存する際にエラーが発生しました</string>
 </resources>

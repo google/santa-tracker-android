@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,7 +16,7 @@
   -->
 
 <resources>
-  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Invita a tus amigos a seguir a Santa con Google</string>
-  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Prueba la app de Sigue a Santa y acompáñalo por todo el mundo.</string>
-  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Mi puntuación es de %1$d en el juego %2$s con los duendes en Sigue a Santa de Google. ¿Puedes vencerme?</string>
+  <string name="invite_title">Invita a tus amigos a seguir a Santa con Google</string>
+  <string name="invite_message_generic">Prueba la app de Sigue a Santa y acompáñalo por todo el mundo.</string>
+  <string name="invite_message_game_fmt">Mi puntuación es de %1$d en el juego %2$s con los duendes en Sigue a Santa de Google. ¿Puedes vencerme?</string>
 </resources>

@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Jugar</string>
-  <string name="level" translation_description="Label shown under the user's current level">NIVELL</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Tallers</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Desbloqueja-ho al nivell %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Al Pare Noel li ha caigut un regal.</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">El regal és massa lluny.</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">El taller és massa lluny.</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Primer has de recollir uns quants regals.</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">La bossa és plena</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">El taller s\'ha canviat de lloc</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">S\'ha cancel·lat el canvi de lloc</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Avui ja has canviat de lloc aquest taller; torna-ho a provar demà</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Vés-hi!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">El joc Recerca de regals necessita accedir a la teva ubicació per ajudar-te a trobar els regals del Pare Noel.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Cal permís d\'accés</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">El joc Recerca de regals no funciona si no té accés a la teva ubicació. Activa els permisos d\'ubicació a Configuració.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Falten permisos necessaris.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Següent</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Estan caient regals\ndel trineu del Pare Noel!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Camina fins als marcadors de regals a\nla vida real per recollir-los.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Quan tinguis la bossa plena,\nvés a un taller per buidar-la</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Som-hi!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">Hi ha un regal a prop!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">La bossa gairebé és plena!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Buida la teva bossa en un taller.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Has desbloquejat un taller nou!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Fes clic en un regal per recollir-lo.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Fes clic al taller per buidar la bossa de regals.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">de 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">PLENA</string>
+  <string name="play">Juga</string>
+  <string name="level">NIVELL</string>
+  <string name="workshops">Tallers</string>
+  <string name="unlock_at_level">Desbloqueja al nivell %1$d</string>
+  <string name="present_dropped">Al Pare Noel li ha caigut un regal.</string>
+  <string name="present_too_far">El regal és massa lluny.</string>
+  <string name="workshop_too_far">El taller és massa lluny!</string>
+  <string name="no_presents_collected">Primer has de recollir uns quants regals.</string>
+  <string name="bag_is_full">La bossa és plena</string>
+  <string name="workshop_moved">El taller s\'ha canviat de lloc</string>
+  <string name="move_canceled">S\'ha cancel·lat el canvi de lloc</string>
+  <string name="workshop_move_too_soon">Avui ja has canviat de lloc aquest taller; torna-ho a provar demà</string>
+  <string name="go_here">Ves-hi!</string>
+  <string name="perm_location_rationale">El joc Recerca de regals necessita accedir a la teva ubicació per ajudar-te a trobar els regals del Pare Noel.</string>
+  <string name="perm_required">Cal permís d\'accés</string>
+  <string name="perm_go_to_settings">El joc Recerca de regals no funciona si no pot accedir a la teva ubicació. Activa els permisos d\'ubicació a Configuració.</string>
+  <string name="required_permissions_missing">Falten els permisos necessaris.</string>
+  <string name="next">Següent</string>
+  <string name="onboarding_msg_1">Estan caient regals\ndel trineu del Pare Noel!</string>
+  <string name="onboarding_msg_2">Camina fins als marcadors\nper recollir els regals senyalats.</string>
+  <string name="onboarding_msg_3">Quan tinguis la bossa plena,\nves a un taller per buidar-la</string>
+  <string name="onboarding_msg_4">Som-hi!</string>
+  <string name="msg_present_nearby">Hi ha un regal a prop!</string>
+  <string name="msg_bag_almost_full">La bossa gairebé és plena!</string>
+  <string name="msg_unload_bag">Buida la teva bossa en un taller.</string>
+  <string name="msg_unlocked_workshop">Has desbloquejat un taller nou!</string>
+  <string name="msg_click_present">Fes clic en un regal per recollir-lo.</string>
+  <string name="msg_click_workshop">Fes clic al taller per buidar la bossa de regals.</string>
+  <string name="level_denominator">de 12</string>
+  <string name="full">PLENA</string>
+  <string name="distraction_warning">No perdis de vista el que t\'envolta mentre hi jugues.</string>
 </resources>

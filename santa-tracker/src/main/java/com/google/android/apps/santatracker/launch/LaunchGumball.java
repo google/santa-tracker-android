@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2016 Google Inc. All Rights Reserved.
+ * Copyright 2019. Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -18,35 +18,43 @@ package com.google.android.apps.santatracker.launch;
 
 import android.content.Intent;
 import android.view.View;
-
 import com.google.android.apps.santatracker.R;
-import com.google.android.apps.santatracker.games.GumballActivity;
 import com.google.android.apps.santatracker.games.SplashActivity;
 
-/**
- * Launch the Gumball Tilt game.
- */
-public class LaunchGumball extends AbstractLaunch {
+/** Launch the Gumball Tilt game. */
+public class LaunchGumball extends AbstractFeatureModuleLaunch {
 
     public LaunchGumball(SantaContext context, LauncherDataChangedCallback adapter) {
         super(context, adapter, R.string.gumball, R.drawable.android_game_cards_gumball_tilt);
     }
 
-    static public int getId() {
+    public static int getId() {
         return R.string.gumball;
     }
 
     @Override
+    public int getFeatureModuleNameId() {
+        return R.string.feature_gumball;
+    }
+
+    @Override
     public void onClick(View v) {
-        switch (mState) {
+        switch (getState()) {
             case STATE_READY:
             case STATE_FINISHED:
-                Intent intent = SplashActivity.getIntent(mContext.getActivityContext(),
-                        R.drawable.android_game_cards_gumball_tilt,
-                        R.string.gumball,
-                        true /* landscape */,
-                        GumballActivity.class);
-                mContext.launchActivity(intent);
+                Intent intent =
+                        SplashActivity.getIntent(
+                                mContext.getActivity(),
+                                getCardDrawableRes(),
+                                R.string.gumball,
+                                getFeatureModuleNameId(),
+                                R.color.gumball_tilt_splash_screen_background,
+                                true /* landscape */,
+                                getTitle(),
+                                getImageView(),
+                                mContext.getApplicationContext().getPackageName(),
+                                "com.google.android.apps.gumball.GumballActivity");
+                mContext.launchActivity(intent, getActivityOptions());
                 break;
             case STATE_DISABLED:
                 notify(mContext.getApplicationContext(), getDisabledString(R.string.gumball));
@@ -60,7 +68,7 @@ public class LaunchGumball extends AbstractLaunch {
 
     @Override
     public boolean onLongClick(View v) {
-        switch (mState) {
+        switch (getState()) {
             case STATE_READY:
             case STATE_FINISHED:
                 notify(mContext.getApplicationContext(), R.string.gumball);
@@ -78,8 +86,7 @@ public class LaunchGumball extends AbstractLaunch {
 
     @Override
     public boolean handleVoiceAction(Intent intent) {
-        return clickIfMatchesDescription(intent, VoiceAction.ACTION_PLAY_GAME,
-                VoiceAction.ACTION_PLAY_GAME_EXTRA);
+        return clickIfMatchesDescription(
+                intent, VoiceAction.ACTION_PLAY_GAME, VoiceAction.ACTION_PLAY_GAME_EXTRA);
     }
-
 }

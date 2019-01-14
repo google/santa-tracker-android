@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,11 +16,9 @@
   -->
 
 <resources>
-
     <!-- Village dimensions -->
-    <dimen name="detail_backdrop_height">350dp</dimen>
-    <dimen name="ornament_margin_top">25dp</dimen>
-    <dimen name="counter_margin_top">50dp</dimen>
+    <dimen name="detail_backdrop_height">275dp</dimen>
+    <dimen name="counter_margin_top">12dp</dimen>
 
     <!-- Santa Dimensions -->
     <item format="float" type="dimen" name="santa_scale">1.0</item>
@@ -61,10 +59,8 @@
     <dimen name="gplus_sign_in_text_margin_left">46dp</dimen>
 
     <dimen name="section_elevation">8dp</dimen>
-    <dimen name="fab_icon_size">24dp</dimen>
     <dimen name="fab_elevation">8dp</dimen>
     <dimen name="toolbar_elevation">4dp</dimen>
-    <dimen name="separator_height">8dp</dimen>
     <dimen name="button_side_padding">20dp</dimen>
     <dimen name="fab_margin">10dp</dimen>
     <dimen name="santaMarginBottom">0dp</dimen>
@@ -81,4 +77,9 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="end_game_score_overlap">-43dp</dimen>
     <dimen name="end_game_game_over_size">48sp</dimen>
+
+    <dimen name="village_card_featured_min_width">320dp</dimen>
+    <dimen name="village_card_non_featured_min_width">180dp</dimen>
+    <dimen name="village_card_max_width">360dp</dimen>
+    <dimen name="village_tracker_card_max_width">480dp</dimen>
 </resources>

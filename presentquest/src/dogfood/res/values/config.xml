@@ -15,5 +15,5 @@
   -->
 
 <resources>
-    <string name="places_api_url" translatable="false">https://next-santa-api.appspot.com/places</string>
+    <string name="places_api_url" translatable="false">https://santa-playability-api.appspot.com/api</string>
 </resources>

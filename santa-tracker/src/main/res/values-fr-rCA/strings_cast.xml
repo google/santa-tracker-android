@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">Diffusion sur %s</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">Diffusée sur…</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">Touchez l\'icône pour diffuser le service Sur les traces du père Noël sur votre téléviseur</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">Connexion à l\'appareil Google Cast temporairement interrompue</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">Connexion à l\'appareil Google Cast rétablie</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">Commande de jeu Google Cast</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">passer du mode pavé directionnel au mode pavé tactile</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">droite</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">haut</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">bas</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">entrer</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">gauche</string>
+  <string name="media_route_casting_on">Diffusion sur %s</string>
+  <string name="media_route_menu_title">Diffusée sur…</string>
+  <string name="touch_to_cast">Touchez l\'icône pour diffuser le service Sur les traces du père Noël sur votre téléviseur</string>
+  <string name="connection_temp_lost">Connexion à l\'appareil Google Cast temporairement interrompue</string>
+  <string name="connection_recovered">Connexion à l\'appareil Google Cast rétablie</string>
+  <string name="cast_game_controller">Commande de jeu Google Cast</string>
+  <string name="content_desc_mode_switch">passer du mode pavé directionnel au mode pavé tactile</string>
+  <string name="content_desc_right_button">droite</string>
+  <string name="content_desc_up_button">haut</string>
+  <string name="content_desc_down_button">bas</string>
+  <string name="content_desc_enter_button">entrer</string>
+  <string name="content_desc_left_button">gauche</string>
 </resources>

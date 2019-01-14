@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">சான்டாவின் டாஷ்போர்டு</string>
+  <string name="current_location">தற்போதைய இருப்பிடம்</string>
+  <string name="presents_delivered">வழங்கப்பட்ட பரிசுகள்</string>
+  <string name="santa_status">சான்டா என்ன கூறுகிறார்</string>
+  <string name="arriving_in">வர ஆகும் நேரம்</string>
+  <string name="departing_in">புறப்பட ஆகும் நேரம்</string>
+  <string name="localtime">வந்து சேர்ந்த இடம்</string>
+  <string name="population">மக்கள் தொகை</string>
+  <string name="next_destination">அடுத்து செல்லுமிடம்</string>
+  <string name="arriving_at">வந்து கொண்டிருக்கும் இடம்</string>
+  <string name="arrived_at">வந்து சேர்ந்த இடம்</string>
+  <string name="in_transit">பயணிக்கிறார்</string>
+  <string name="follow_santa">சான்டாவைப் பின்தொடர்</string>
+  <string name="lost_contact_with_santa">சான்டாவைத் தொடர்பு கொள்ள முடியவில்லை</string>
+  <string name="notification_nearby">சான்டா அருகில் வந்துவிட்டார்!</string>
+  <string name="notification_takeoff">சான்டா புறப்பட்டு விட்டார்!</string>
+  <string name="notification_unlock_video">புதிய வீடியோ உள்ளது!</string>
+  <string name="notification_unlock_game">புதிய கேம் உள்ளது!</string>
+  <string name="santa_arrives_in_your_area_in">சான்டா உங்கள் பகுதியில் வர ஆகும் நேரம்:</string>
+  <string name="santa_is_approximately">உங்களுக்கும் சான்டாவுக்கும் இடையிலான தூரம் தோராயமாக</string>
+  <string name="distance_km_away">%1$,d கி.மீ.%2$s தொலைவு</string>
+  <string name="distance_optional_miles">\u0020(%,d மைல்)</string>
+  <string name="distance_mi_away">%1$,d மைல் தொலைவு</string>
+  <string name="did_you_know">உங்களுக்குத் தெரியுமா?</string>
+  <string name="watch_movie">திரைப்படத்தைக் காட்டு</string>
+  <string name="santa_update">சான்டாவின் அறிவிப்பு</string>
+  <string name="elapsed_time">எடுத்துக்கொண்ட நேரம்</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">வருகை</string>
+  <string name="weather">வானிலை</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">உலக விவரங்களை வழங்குவது National Geographic Bee</string>
+  <string name="photo">படம்</string>
+  <string name="photos">படங்கள்</string>
+  <string name="street_view">வீதிக் காட்சி</string>
+  <string name="back_to_santa_cam">சான்டாவின் கேமரா காட்சி</string>
+  <string name="update_from_santa">சான்டாவிடமிருந்து அறிவிப்பு</string>
+  <string name="trivia_from_santa">சான்டாவிடமிருந்து செய்தித் துளி</string>
+  <string name="photo_from_santa">சான்டாவிடமிருந்து படம்</string>
+  <string name="video_from_santa">சான்டாவிடமிருந்து வீடியோ</string>
+  <string name="show_history">வரலாற்றைக் காண்பி</string>
+  <string name="see_best_moments">சான்டா பயணத்தின் அனைத்து சிறந்த தருணங்களையும் பார்க்கவும்</string>
+  <string name="return_to_map">வரைபடத்திற்குச் செல்</string>
+  <string name="santa_is_now_arriving_in_x">சான்டா இப்போது %s க்கு வந்து கொண்டிருக்கிறார்</string>
+  <string name="santa_has_handed_out_x_presents">சான்டா இதுவரை வழங்கிய பரிசுகள்: %s</string>
+  <string name="new_update_from_santa">சான்டாவிடமிருந்து புதிய அறிவிப்பு</string>
+  <string name="new_trivia_from_santa">சான்டாவிடமிருந்து புதிய செய்தித் துளி</string>
+  <string name="new_video_from_santa">சான்டாவிடமிருந்து புதிய வீடியோ</string>
+  <string name="new_photo_from_santa">சான்டாவிடமிருந்து புதிய படம்</string>
+  <string name="cast_overlay_text">சான்டாவைப் பெரிய திரையில் பின்தொடருங்கள்!\nChromecast மூலம் உங்கள் டிவியில் சான்டாவின் பயணத்தைப் பார்க்க, இந்தப் பொத்தானைத் தட்டவும்.</string>
+  <string name="menu_media_router_title">அனுப்புதல் பொத்தான்</string>
+</resources>

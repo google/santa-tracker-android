@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Seuraa joulupukkia</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Seuraa joulupukkia</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Aikaa joulupukin lähtöön:</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Joulupukki valmistautuu jo ensi vuoteen.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Näytä vuoden 2014 pysähdyspaikat</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Yritämme tavoittaa joulupukkia</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Yritämme yhä tavoittaa joulupukkia</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">pv</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">t</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">min</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">sek</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Jaa</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Jaa ystävien kanssa</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Cast-painike</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Juridiset tiedot ja tietosuoja</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Oikeudellinen ilmoitus</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Tietosuojakäytäntö</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Käyttöehdot</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Avoimen lähdekoodin käyttöluvat</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Google Play ‑palveluiden avoimen lähdekoodin käyttöluvat</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Santa GitHubissa</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon GitHubissa</string>
-  <string name="scene_not_available" translation_description="Not available yet">Ei vielä saatavana</string>
+  <string name="track_santa">Seuraa joulupukkia</string>
+  <string name="track_santa_two_lines">Seuraa joulupukkia</string>
+  <string name="santa_takes_off_in">Aikaa joulupukin lähtöön:</string>
+  <string name="santa_is_busy_preparing_for_next_year">Joulupukki valmistautuu jo ensi vuoteen.</string>
+  <string name="view_old_stops">Näytä vuoden 2014 pysähdyspaikat</string>
+  <string name="contacting_santa">Yritämme tavoittaa joulupukkia</string>
+  <string name="still_trying_to_reach_santa">Yritämme yhä tavoittaa joulupukkia</string>
+  <string name="days">pv</string>
+  <string name="hrs">t</string>
+  <string name="min">min</string>
+  <string name="sec">sek</string>
+  <string name="menu_share">Jaa</string>
+  <string name="menu_share_friends">Jaa ystävien kanssa</string>
+  <string name="legal_notice">Juridiset tiedot ja tietosuoja</string>
+  <string name="legal_notice_text">Oikeudellinen ilmoitus</string>
+  <string name="privacy_policy">Tietosuojakäytäntö</string>
+  <string name="terms_of_service">Käyttöehdot</string>
+  <string name="open_source_licenses">Avoimen lähdekoodin käyttöluvat</string>
+  <string name="open_source_repo_santa">Santa GitHubissa</string>
+  <string name="scene_not_available">Ei vielä saatavana</string>
   <string name="sign_out">Kirjaudu ulos</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Aikaa lähtöön</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d/%2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d pistettä</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Missä tämä on?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Kuvaaja: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Seuraa pukin matkaa suurelta näytöltä!\nNäytä pukin matka televisiossa Chromecastin kautta napauttamalla tätä painiketta.</string>
+  <string name="until_takeoff">Aikaa lähtöön</string>
+  <string name="web_scene_error">Näkymää ei voitu ladata.</string>
+  <string name="check_back_daily">Uusia pelejä joka päivä!</string>
+  <string name="new_games">Uudet pelit</string>
+  <string name="new_card">Uusi</string>
+  <string name="tracker_opens_date">Avautuu %1$s</string>
+  <string name="time">AIKA</string>
+  <string name="download_dialog_title">Lataa %1$s</string>
+  <string name="download_dialog_message">Peli pitää ladata Play Kaupasta, ennen kuin voit pelata. Tämä laite on yhdistetty maksulliseen verkkoon, ja sinua voidaan veloittaa datasiirroista.\n\nHaluatko jatkaa?</string>
+  <string name="elf_maker_write_success">Kuva tallennettu omiin kuviisi</string>
+  <string name="elf_maker_write_fail">Virhe tallennettaessa kuvaa laitteen kuviin</string>
 </resources>

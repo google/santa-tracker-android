@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,9 +16,8 @@
   -->
 
 <resources>
-  <string name="why_sign_in" translation_description="Encouragement text shown beside Sign In button.">¡Accede para desbloquear logros y publicar tu puntuación!</string>
-  <string name="play_again" translation_description="Button text for playing the game again">Volver a jugar</string>
-  <string name="return_to_map" translation_description="Button text for returning to map in Present Go">Volver al mapa</string>
-  <string name="score" translation_description="Player's total score after playing the game">PUNTUACIÓN</string>
-  <string name="quit_bar_label" translation_description="Button text for quitting the game">Volver al mapa</string>
+  <string name="why_sign_in">¡Accede para desbloquear logros y publicar tu puntuación!</string>
+  <string name="play_again">Volver a jugar</string>
+  <string name="return_to_map">Volver al mapa</string>
+  <string name="score">PUNTUACIÓN</string>
 </resources>

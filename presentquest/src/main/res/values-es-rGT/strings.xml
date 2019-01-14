@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Jugar</string>
-  <string name="level" translation_description="Label shown under the user's current level">NIVEL</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Talleres</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Se desbloquea en el nivel %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">¡Santa dejó un regalo!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">El regalo está muy lejos.</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">El taller está muy lejos.</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Primero, recopila algunos regalos.</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">¡Tu bolsa está llena!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Se trasladó el taller</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Se canceló el traslado</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Ya trasladaste este taller hoy, vuelve a intentarlo mañana</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">¡Ven aquí!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">La Búsqueda de regalos necesita acceder a tu ubicación para ayudarte a encontrar los regalos de Santa.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Se requiere permiso</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">La Búsqueda de regalos no funciona sin acceso a tu ubicación. Habilita los permisos de ubicación en la Configuración.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Faltan permisos obligatorios.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Siguiente</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">¡Se caen los regalos\ndel trineo de Santa!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Camina hacia los marcadores de regalos\nen la vida real para atraparlos.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Cuando se llene la bolsa,\ncamina al taller para descargarla.</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Comencemos</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">¡Hay un regalo cerca!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">¡La bolsa está casi llena!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Descarga los regalos en el taller.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">¡Desbloqueaste un taller nuevo!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Haz clic en un regalo para recogerlo.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Haz clic en tu taller para descargar los regalos.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">de 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">LLENO</string>
+  <string name="play">Jugar</string>
+  <string name="level">NIVEL</string>
+  <string name="workshops">Talleres</string>
+  <string name="unlock_at_level">Se desbloquea en el nivel %1$d</string>
+  <string name="present_dropped">¡Santa dejó un regalo!</string>
+  <string name="present_too_far">El regalo está muy lejos.</string>
+  <string name="workshop_too_far">El taller está muy lejos.</string>
+  <string name="no_presents_collected">Primero, recopila algunos regalos.</string>
+  <string name="bag_is_full">¡Tu bolsa está llena!</string>
+  <string name="workshop_moved">Se trasladó el taller</string>
+  <string name="move_canceled">Se canceló el traslado</string>
+  <string name="workshop_move_too_soon">Ya trasladaste este taller hoy, vuelve a intentarlo mañana</string>
+  <string name="go_here">¡Ven aquí!</string>
+  <string name="perm_location_rationale">La Búsqueda de regalos necesita acceder a tu ubicación para ayudarte a encontrar los regalos de Santa.</string>
+  <string name="perm_required">Se requiere permiso</string>
+  <string name="perm_go_to_settings">La Búsqueda de regalos no funciona sin acceso a tu ubicación. Habilita los permisos de ubicación en la Configuración.</string>
+  <string name="required_permissions_missing">Faltan permisos obligatorios.</string>
+  <string name="next">Siguiente</string>
+  <string name="onboarding_msg_1">¡Se caen los regalos\ndel trineo de Santa!</string>
+  <string name="onboarding_msg_2">Camina hacia los marcadores de regalos\nen la vida real para atraparlos.</string>
+  <string name="onboarding_msg_3">Cuando se llene la bolsa,\ncamina al taller para descargarla.</string>
+  <string name="onboarding_msg_4">Comencemos</string>
+  <string name="msg_present_nearby">¡Hay un regalo cerca!</string>
+  <string name="msg_bag_almost_full">¡La bolsa está casi llena!</string>
+  <string name="msg_unload_bag">Descarga los regalos en el taller.</string>
+  <string name="msg_unlocked_workshop">¡Desbloqueaste un taller nuevo!</string>
+  <string name="msg_click_present">Haz clic en un regalo para recogerlo.</string>
+  <string name="msg_click_workshop">Haz clic en tu taller para descargar los regalos.</string>
+  <string name="level_denominator">de 12</string>
+  <string name="full">LLENO</string>
+  <string name="distraction_warning">Presta atención a tus alrededores cuando juegues.</string>
 </resources>

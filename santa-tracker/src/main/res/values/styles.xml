@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -95,15 +95,9 @@
     <style name="DashboardViewSwitcher.Location" />
 
     <!-- Info Window -->
-    <style name="infowindow_label" parent="@DashboardLabel" />
+    <style name="infowindow_label" parent="@style/DashboardLabel" />
 
-    <style name="infowindow_text" parent="@DashboardText" />
-
-    <style name="infowindow_heading">
-        <item name="android:textAppearance">@style/TextAppearance.Medium</item>
-        <item name="android:textColor">@color/SantaBlueDark</item>
-        <item name="android:padding">4dp</item>
-    </style>
+    <style name="infowindow_text" parent="@style/DashboardText" />
 
     <!-- ActionBar title text -->
     <style name="ActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
@@ -183,8 +177,21 @@
     </style>
 
     <style name="RedButton" parent="Widget.AppCompat.Button.Borderless.Colored">
-        <item name="colorButtonNormal">@color/SantaRedSoft</item>
         <item name="android:textColor">@color/SantaWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/track_santa_btn</item>
+        <item name="android:padding">@dimen/button_side_padding</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="RedButtonTv" parent="android:Widget.Button">
+        <item name="android:textColor">@color/SantaWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/track_santa_btn</item>
+        <item name="android:padding">@dimen/button_side_padding</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
     </style>
 
     <style name="TopButton" parent="Widget.AppCompat.Button.Borderless">
@@ -202,6 +209,7 @@
         <item name="android:shadowDy">3</item>
         <item name="android:shadowRadius">1.5</item>
         <item name="android:rotation">-5</item>
+        <item name="android:textAppearance">@style/TextAppearance.Santa.Lobster</item>
     </style>
 
     <style name="TvCardTitleText">
@@ -221,13 +229,6 @@
         <item name="android:layout_weight">1</item>
         <item name="android:background">@drawable/category_button_background</item>
         <item name="android:foreground">@drawable/category_button_ripple</item>
-    </style>
-
-    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <style name="CityQuizProgressBar" parent="Base.Widget.AppCompat.ProgressBar">

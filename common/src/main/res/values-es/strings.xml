@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">Volver al mapa</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">Volver a la aldea</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">Esta versión de Sigue a Papá Noel no es la más reciente. Ve a Play Store para actualizar la aplicación.</string>
+  <string name="back_to_map">Volver al mapa</string>
+  <string name="back_to_village">Volver a la aldea</string>
+  <string name="go_to_play_store">Esta versión de Sigue a Papá Noel no es la más reciente. Ve a Play Store para actualizar la aplicación.</string>
+  <string name="game_over">Fin de la partida</string>
+  <string name="loading_screen">Cargando pantalla</string>
+  <string name="menu_resume">Reanudar</string>
+  <string name="menu_replay">Reiniciar partida</string>
+  <string name="menu_home">Inicio</string>
+  <string name="menu_share">Compartir</string>
+  <string name="error_fetch_module">No se ha podido descargar %1$s. Comprueba que tu conexión de red funciona correctamente.</string>
 </resources>

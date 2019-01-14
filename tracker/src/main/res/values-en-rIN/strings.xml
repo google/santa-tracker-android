@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Santa\'s Dashboard</string>
+  <string name="current_location">CURRENT LOCATION</string>
+  <string name="presents_delivered">GIFTS DELIVERED</string>
+  <string name="santa_status">SANTA STATUS</string>
+  <string name="arriving_in">ARRIVING IN</string>
+  <string name="departing_in">DEPARTING IN</string>
+  <string name="localtime">ARRIVED AT</string>
+  <string name="population">POPULATION</string>
+  <string name="next_destination">NEXT DESTINATION</string>
+  <string name="arriving_at">ARRIVING AT</string>
+  <string name="arrived_at">ARRIVED AT</string>
+  <string name="in_transit">In transit</string>
+  <string name="follow_santa">Follow Santa</string>
+  <string name="lost_contact_with_santa">Lost contact with Santa</string>
+  <string name="notification_nearby">Santa is nearby!</string>
+  <string name="notification_takeoff">Santa has taken off!</string>
+  <string name="notification_unlock_video">A new video is available!</string>
+  <string name="notification_unlock_game">A new game is available!</string>
+  <string name="santa_arrives_in_your_area_in">SANTA ARRIVES IN YOUR AREA IN</string>
+  <string name="santa_is_approximately">SANTA IS APPROXIMATELY</string>
+  <string name="distance_km_away">%1$,d km%2$s away</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d mi away</string>
+  <string name="did_you_know">DID YOU KNOW</string>
+  <string name="watch_movie">WATCH MOVIE</string>
+  <string name="santa_update">SANTA UPDATE</string>
+  <string name="elapsed_time">ELAPSED TIME</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">ARRIVAL</string>
+  <string name="weather">WEATHER</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">World facts provided by National Geographic Bee</string>
+  <string name="photo">Photo</string>
+  <string name="photos">Photos</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">BACK TO SANTA CAM</string>
+  <string name="update_from_santa">Update from Santa</string>
+  <string name="trivia_from_santa">Trivia from Santa</string>
+  <string name="photo_from_santa">Photo from Santa</string>
+  <string name="video_from_santa">Video from Santa</string>
+  <string name="show_history">Show history</string>
+  <string name="see_best_moments">See all the best moments of Santa\'s trip</string>
+  <string name="return_to_map">Return to map</string>
+  <string name="santa_is_now_arriving_in_x">Santa is now arriving in %s</string>
+  <string name="santa_has_handed_out_x_presents">Santa has handed out %s presents</string>
+  <string name="new_update_from_santa">New update from Santa</string>
+  <string name="new_trivia_from_santa">New trivia from Santa</string>
+  <string name="new_video_from_santa">New video from Santa</string>
+  <string name="new_photo_from_santa">New photo from Santa</string>
+  <string name="cast_overlay_text">Follow Santa on the big screen!\nTap this button to view Santa\'s journey on your TV with Chromecast.</string>
+  <string name="menu_media_router_title">Cast button</string>
+</resources>

@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,76 +14,88 @@
   ~ limitations under the License.
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_yellow"
-    tools:context="com.google.android.apps.santatracker.dasherdancer.DasherDancerActivity" >
+    tools:context="com.google.android.apps.santatracker.dasherdancer.DasherDancerActivity">
 
     <com.google.android.apps.santatracker.dasherdancer.NoSwipeViewPager
-	    android:id="@+id/character_pager"
-   		android:layout_width="match_parent"
-   		android:layout_height="match_parent" />
-    
-		<ImageButton
-	    android:id="@+id/nav_button"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentLeft="true"
-	    android:layout_alignParentTop="true"
-	    android:layout_marginTop="20dp"
-	    android:background="@null"
-	    android:src="@drawable/btn_x_out_pressable"
-	    android:scaleType="center"
-	    android:adjustViewBounds="true"
-	    android:onClick="onNavClick" />
-		
-		<ImageButton
-	    android:id="@+id/change_button"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentRight="true"
-	    android:layout_alignParentTop="true"
-	    android:layout_marginTop="20dp"
-	    android:background="@null"
-	    android:src="@drawable/btn_select_character_pressable"
-	    android:scaleType="center"
-	    android:adjustViewBounds="true"
-	    android:onClick="onChangeClick" />
+        android:id="@+id/character_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-		<ImageButton
-	    android:id="@+id/left_button"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentLeft="true"
-	    android:layout_alignParentBottom="true"
-        android:padding="20dp"
-	    android:background="@drawable/dasher_ripple_small"
-	    android:src="@drawable/icn_arrow_left"
-	    android:scaleType="center"
-	    android:adjustViewBounds="true"
-	    android:onClick="onLeftClick"
-        android:visibility="gone"/>
-		
-		<ImageButton
-	    android:id="@+id/right_button"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentRight="true"
-	    android:layout_alignParentBottom="true"
-        android:padding="20dp"
-	    android:background="@drawable/dasher_ripple_small"
-	    android:src="@drawable/icn_arrow_right"
-	    android:scaleType="center"
-	    android:adjustViewBounds="true"
-	    android:onClick="onRightClick" />
+    <ImageButton
+        android:id="@+id/nav_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:onClick="onNavClick"
+        android:scaleType="center"
+        android:src="@drawable/btn_x_out_pressable" />
 
-        <ImageView
-            android:id="@+id/progress"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="top|right">
+
+        <ImageButton
+            android:id="@+id/change_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/img_mint_loading_spinner"/>
-		
-</RelativeLayout>
+            android:layout_gravity="right"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:onClick="onChangeClick"
+            android:scaleType="center"
+            android:src="@drawable/btn_select_character_pressable" />
+
+        <com.google.android.apps.santatracker.common.CheckableImageButton
+            android:id="@+id/mute_button"
+            style="@style/Santa.ImageButton.Mute"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:adjustViewBounds="true"
+        android:background="@drawable/dasher_ripple_small"
+        android:onClick="onLeftClick"
+        android:padding="20dp"
+        android:scaleType="center"
+        android:src="@drawable/icn_arrow_left"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:adjustViewBounds="true"
+        android:background="@drawable/dasher_ripple_small"
+        android:onClick="onRightClick"
+        android:padding="20dp"
+        android:scaleType="center"
+        android:src="@drawable/icn_arrow_right" />
+
+    <ImageView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/img_mint_loading_spinner" />
+
+</FrameLayout>

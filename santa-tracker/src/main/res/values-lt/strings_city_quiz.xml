@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,69 +16,69 @@
   -->
 
 <resources>
-  <string name="msg_city_count" translation_description="Label for number of cities guessed in game.">MIESTAI</string>
-  <string name="provideniya_russia_city" translation_description="Name of city in Russia">Providenija, Rusija</string>
-  <string name="wellington_new_zealand_city" translation_description="Name of city in New Zealand">Velingtonas, Naujoji Zelandija</string>
-  <string name="invercargill_new_zealand_city" translation_description="Name of city in New Zealand">Inverkargilis, Naujoji Zelandija</string>
-  <string name="honiara_solomon_islands_city" translation_description="Name of city in Solomon Islands">Honiara, Saliamono salos</string>
-  <string name="magadan_russia_city" translation_description="Name of city in Russia">Magadanas, Rusija</string>
-  <string name="andersen_afb_guam_city" translation_description="Name of an air force base (AFB) in Guam">Anderseno oro pajėgų bazė, Guamas</string>
-  <string name="atlantic_city_usa_city" translation_description="Name of city in USA">Atlantik Sitis, JAV</string>
-  <string name="yosemite_national_park_usa_city" translation_description="Name of city in USA">Josemičio nacionalinis parkas, JAV</string>
-  <string name="kyoto_japan_city" translation_description="Name of city in Japan">Kiotas, Japonija</string>
-  <string name="machu_picchu_peru_city" translation_description="Name of city in Peru">Maču Pikču, Peru</string>
-  <string name="florence_italy_city" translation_description="Name of city in Italy">Florencija, Italija</string>
-  <string name="reykjavik_iceland_city" translation_description="Name of city in Iceland">Reikjavikas, Islandija</string>
-  <string name="hanover_germany_city" translation_description="Name of city in Germany">Hanoveris, Vokietija</string>
-  <string name="hamburg_germany_city" translation_description="Name of city in Germany">Hamburgas, Vokietija</string>
-  <string name="mountain_view_usa_city" translation_description="Name of city in USA">Mauntin Vju, Jungtinės Valstijos</string>
-  <string name="banff_canada_city" translation_description="Name of city in Canada">Banfas, Kanada</string>
-  <string name="warsaw_poland_city" translation_description="Name of city in Poland">Varšuva, Lenkija</string>
-  <string name="stockholm_sweden_city" translation_description="Name of city in Sweden">Stokholmas, Švedija</string>
-  <string name="budapest_hungary_city" translation_description="Name of city in Hungary">Budapeštas, Vengrija</string>
-  <string name="paris_france_city" translation_description="Name of city in France">Paryžius, Prancūzija</string>
-  <string name="london_uk_city" translation_description="Name of city in UK">Londonas, JK</string>
-  <string name="moscow_russia_city" translation_description="Name of city in Russia">Maskva, Rusija</string>
-  <string name="dubai_uae_city" translation_description="Name of city in UAE">Dubajus, JAE</string>
-  <string name="versailles_france_city" translation_description="Name of city in France">Versalis, Prancūzija</string>
-  <string name="new_york_city_usa_city" translation_description="Name of city in USA">Niujorkas, JAV</string>
-  <string name="san_francisco_usa_city" translation_description="Name of city in USA">San Fransiskas, JAV</string>
-  <string name="madrid_spain_city" translation_description="Name of city in Spain">Madridas, Ispanija</string>
-  <string name="barcelona_spain_city" translation_description="Name of city in Spain">Barselona, Ispanija</string>
-  <string name="mumbai_india_city" translation_description="Name of city in India">Mumbajus, Indija</string>
-  <string name="shanghai_china_city" translation_description="Name of city in China">Šanchajus, Kinija</string>
-  <string name="ediburgh_scotland_city" translation_description="Name of city in Scotland">Edinburgas, Škotija</string>
-  <string name="port_douglas_australia_city" translation_description="Name of city in Australia">Port Daglasas, Australija</string>
-  <string name="istanbul_turkey_city" translation_description="Name of city in Turkey">Stambulas, Turkija</string>
-  <string name="denaru_island_fiji_city" translation_description="Name of city in Fiji">Denarau sala, Fidžis</string>
-  <string name="mexico_city_mexico_city" translation_description="Name of city in Mexico">Meksikas, Meksika</string>
-  <string name="rio_de_janiero_brazil_city" translation_description="Name of city in Brazil">Rio de Žaneiras, Brazilija</string>
-  <string name="grand_canyon_national_park_za_usa_city" translation_description="Name of city in USA">Didžiojo kanjono nacionalinis parkas, Arizona, JAV</string>
-  <string name="grand_tetons_national_park_wy_usa_city" translation_description="Name of city in USA">Grand Tetono nacionalinis parkas, Vajomingas, JAV</string>
-  <string name="canyonlands_national_park_ut_usa_city" translation_description="Name of city in USA">Kanjonų žemės nacionalinis parkas, Juta, JAV</string>
-  <string name="nashville_tn_usa_city" translation_description="Name of city in USA">Nešvilis, Tenesis, JAV</string>
-  <string name="new_orleans_la_usa_city" translation_description="Name of city in USA">Naujasis Orleanas, Luiziana, JAV</string>
-  <string name="rome_italy_city" translation_description="Name of city in Italy">Roma, Italija</string>
-  <string name="berlin_germany_city" translation_description="Name of city in Germany">Berlynas, Vokietija</string>
-  <string name="washington_dc_usa_city" translation_description="Name of city in ">Vašingtonas, Kolumbijos apygarda, JAV</string>
-  <string name="dublin_ireland_city" translation_description="Name of city in USA">Dublinas, Airija</string>
-  <string name="zurich_switzerland_city" translation_description="Name of city in Switzerland">Ciurichas, Šveicarija</string>
-  <string name="tokyo_japan_city" translation_description="Name of city in Japan">Tokijas, Japonija</string>
-  <string name="atlanta_ga_usa_city" translation_description="Name of city in USA">Atlanta, Džordžija, JAV</string>
-  <string name="chicago_il_usa_city" translation_description="Name of city in USA">Čikaga, Ilinojus, JAV</string>
-  <string name="port_of_spain_trinidad_and_tobago_city" translation_description="Name of city in Trinidad and Tobago">Port of Speinas, Trinidadas ir Tobagas</string>
-  <string name="kingston_jamaica_city" translation_description="Name of city in Jamaica">Kingstonas, Jamaika</string>
-  <string name="panama_city_panama_city" translation_description="Name of city in Panama">Panama, Panama</string>
-  <string name="miami_florida_usa_city" translation_description="Name of city in USA">Majamis, Florida, JAV</string>
-  <string name="buenos_aires_argentina_city" translation_description="Name of city in Argentina">Buenos Airės, Argentina</string>
-  <string name="sao_paulo_brazil_city" translation_description="Name of city in Brazil">San Paulas, Brazilija</string>
-  <string name="bogota_columbia_city" translation_description="Name of city in Columbia">Bogota, Kolumbija</string>
-  <string name="santiago_chile_city" translation_description="Name of city in Chile">Santjagas, Čilė</string>
-  <string name="quito_ecuador_city" translation_description="Name of city in Ecuador">Kitas, Ekvadoras</string>
-  <string name="guatemala_city_guatemala_city" translation_description="Name of city in Guatemala">Gvatemala, Gvatemala</string>
-  <string name="la_paz_bolivia_city" translation_description="Name of city in Bolivia">La Pasas, Bolivija</string>
-  <string name="lagos_nigeria_city" translation_description="Name of city in Nigeria">Lagosas, Nigerija</string>
-  <string name="cairo_egypt_city" translation_description="Name of city in Egypt">Kairas, Egiptas</string>
-  <string name="new_delhi_india_city" translation_description="Name of city in India">Naujasis Delis, Indija</string>
-  <string name="cape_town_south_africa_city" translation_description="Name of city in South Africa">Keiptaunas, Pietų Afrika</string>
+  <string name="msg_city_count">MIESTAI</string>
+  <string name="provideniya_russia_city">Providenija, Rusija</string>
+  <string name="wellington_new_zealand_city">Velingtonas, Naujoji Zelandija</string>
+  <string name="invercargill_new_zealand_city">Inverkargilis, Naujoji Zelandija</string>
+  <string name="honiara_solomon_islands_city">Honiara, Saliamono salos</string>
+  <string name="magadan_russia_city">Magadanas, Rusija</string>
+  <string name="andersen_afb_guam_city">Anderseno oro pajėgų bazė, Guamas</string>
+  <string name="atlantic_city_usa_city">Atlantik Sitis, JAV</string>
+  <string name="yosemite_national_park_usa_city">Josemičio nacionalinis parkas, JAV</string>
+  <string name="kyoto_japan_city">Kiotas, Japonija</string>
+  <string name="machu_picchu_peru_city">Maču Pikču, Peru</string>
+  <string name="florence_italy_city">Florencija, Italija</string>
+  <string name="reykjavik_iceland_city">Reikjavikas, Islandija</string>
+  <string name="hanover_germany_city">Hanoveris, Vokietija</string>
+  <string name="hamburg_germany_city">Hamburgas, Vokietija</string>
+  <string name="mountain_view_usa_city">Mauntin Vju, Jungtinės Valstijos</string>
+  <string name="banff_canada_city">Banfas, Kanada</string>
+  <string name="warsaw_poland_city">Varšuva, Lenkija</string>
+  <string name="stockholm_sweden_city">Stokholmas, Švedija</string>
+  <string name="budapest_hungary_city">Budapeštas, Vengrija</string>
+  <string name="paris_france_city">Paryžius, Prancūzija</string>
+  <string name="london_uk_city">Londonas, JK</string>
+  <string name="moscow_russia_city">Maskva, Rusija</string>
+  <string name="dubai_uae_city">Dubajus, JAE</string>
+  <string name="versailles_france_city">Versalis, Prancūzija</string>
+  <string name="new_york_city_usa_city">Niujorkas, JAV</string>
+  <string name="san_francisco_usa_city">San Fransiskas, JAV</string>
+  <string name="madrid_spain_city">Madridas, Ispanija</string>
+  <string name="barcelona_spain_city">Barselona, Ispanija</string>
+  <string name="mumbai_india_city">Mumbajus, Indija</string>
+  <string name="shanghai_china_city">Šanchajus, Kinija</string>
+  <string name="ediburgh_scotland_city">Edinburgas, Škotija</string>
+  <string name="port_douglas_australia_city">Port Daglasas, Australija</string>
+  <string name="istanbul_turkey_city">Stambulas, Turkija</string>
+  <string name="denaru_island_fiji_city">Denarau sala, Fidžis</string>
+  <string name="mexico_city_mexico_city">Meksikas, Meksika</string>
+  <string name="rio_de_janiero_brazil_city">Rio de Žaneiras, Brazilija</string>
+  <string name="grand_canyon_national_park_za_usa_city">Didžiojo kanjono nacionalinis parkas, Arizona, JAV</string>
+  <string name="grand_tetons_national_park_wy_usa_city">Grand Tetono nacionalinis parkas, Vajomingas, JAV</string>
+  <string name="canyonlands_national_park_ut_usa_city">Kanjonų žemės nacionalinis parkas, Juta, JAV</string>
+  <string name="nashville_tn_usa_city">Nešvilis, Tenesis, JAV</string>
+  <string name="new_orleans_la_usa_city">Naujasis Orleanas, Luiziana, JAV</string>
+  <string name="rome_italy_city">Roma, Italija</string>
+  <string name="berlin_germany_city">Berlynas, Vokietija</string>
+  <string name="washington_dc_usa_city">Vašingtonas, Kolumbijos apygarda, JAV</string>
+  <string name="dublin_ireland_city">Dublinas, Airija</string>
+  <string name="zurich_switzerland_city">Ciurichas, Šveicarija</string>
+  <string name="tokyo_japan_city">Tokijas, Japonija</string>
+  <string name="atlanta_ga_usa_city">Atlanta, Džordžija, JAV</string>
+  <string name="chicago_il_usa_city">Čikaga, Ilinojus, JAV</string>
+  <string name="port_of_spain_trinidad_and_tobago_city">Port of Speinas, Trinidadas ir Tobagas</string>
+  <string name="kingston_jamaica_city">Kingstonas, Jamaika</string>
+  <string name="panama_city_panama_city">Panama, Panama</string>
+  <string name="miami_florida_usa_city">Majamis, Florida, JAV</string>
+  <string name="buenos_aires_argentina_city">Buenos Airės, Argentina</string>
+  <string name="sao_paulo_brazil_city">San Paulas, Brazilija</string>
+  <string name="bogota_columbia_city">Bogota, Kolumbija</string>
+  <string name="santiago_chile_city">Santjagas, Čilė</string>
+  <string name="quito_ecuador_city">Kitas, Ekvadoras</string>
+  <string name="guatemala_city_guatemala_city">Gvatemala, Gvatemala</string>
+  <string name="la_paz_bolivia_city">La Pasas, Bolivija</string>
+  <string name="lagos_nigeria_city">Lagosas, Nigerija</string>
+  <string name="cairo_egypt_city">Kairas, Egiptas</string>
+  <string name="new_delhi_india_city">Naujasis Delis, Indija</string>
+  <string name="cape_town_south_africa_city">Keiptaunas, Pietų Afrika</string>
 </resources>

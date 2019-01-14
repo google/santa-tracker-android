@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Julemandens instrumentbræt</string>
+  <string name="current_location">NUVÆRENDE PLACERING</string>
+  <string name="presents_delivered">LEVEREDE GAVER</string>
+  <string name="santa_status">JULEMANDENS STATUS</string>
+  <string name="arriving_in">ANKOMMER OM</string>
+  <string name="departing_in">REJSER OM</string>
+  <string name="localtime">ANKOM KL.</string>
+  <string name="population">BEFOLKNINGSTAL</string>
+  <string name="next_destination">NÆSTE DESTINATION</string>
+  <string name="arriving_at">ANKOMMER TIL</string>
+  <string name="arrived_at">ANKOM KL.</string>
+  <string name="in_transit">På farten</string>
+  <string name="follow_santa">Følg julemanden</string>
+  <string name="lost_contact_with_santa">Du har mistet forbindelsen til julemanden</string>
+  <string name="notification_nearby">Julemanden er i nærheden.</string>
+  <string name="notification_takeoff">Julemanden er taget afsted.</string>
+  <string name="notification_unlock_video">Du har adgang til en ny video!</string>
+  <string name="notification_unlock_game">Du har adgang til et nyt spil!</string>
+  <string name="santa_arrives_in_your_area_in">JULEMANDEN ANKOMMER TIL DIT OMRÅDE OM</string>
+  <string name="santa_is_approximately">JULEMANDEN ER CIRKA</string>
+  <string name="distance_km_away">%1$,d km%2$s væk</string>
+  <string name="distance_optional_miles">\u0020(%,d mil)</string>
+  <string name="distance_mi_away">%1$,d miles væk</string>
+  <string name="did_you_know">VIDSTE DU DET?</string>
+  <string name="watch_movie">SE FILM</string>
+  <string name="santa_update">NYT FRA JULEMANDEN</string>
+  <string name="elapsed_time">FORLØBET TID</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">ANKOMST</string>
+  <string name="weather">VEJRET</string>
+  <string name="weather_format">%1$s °C/%2$s °F</string>
+  <string name="did_you_know_attribution">Fakta om verden fra National Geographic Bee</string>
+  <string name="photo">Foto</string>
+  <string name="photos">Fotos</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">TILBAGE TIL KANE-KAMERAET</string>
+  <string name="update_from_santa">Opdatering fra julemanden</string>
+  <string name="trivia_from_santa">Sjove oplysninger fra julemanden</string>
+  <string name="photo_from_santa">Foto fra julemanden</string>
+  <string name="video_from_santa">Video fra julemanden</string>
+  <string name="show_history">Vis historik</string>
+  <string name="see_best_moments">Se alle de vigtigste øjeblikke fra julemandens rejse</string>
+  <string name="return_to_map">Tilbage til kortet</string>
+  <string name="santa_is_now_arriving_in_x">Julemanden ankommer nu til %s</string>
+  <string name="santa_has_handed_out_x_presents">Julemanden har nu afleveret %s gaver</string>
+  <string name="new_update_from_santa">Ny opdatering fra julemanden</string>
+  <string name="new_trivia_from_santa">Ny sjov oplysning fra julemanden</string>
+  <string name="new_video_from_santa">Ny video fra julemanden</string>
+  <string name="new_photo_from_santa">Nyt foto fra julemanden</string>
+  <string name="cast_overlay_text">Følg julemanden på husets største skærm.\nTryk på denne knap for at se julemandens rejse på dit tv via en Chromecast.</string>
+  <string name="menu_media_router_title">Cast-knap</string>
+</resources>

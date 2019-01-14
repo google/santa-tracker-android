@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,7 +32,7 @@
         android:src="@drawable/village_bg_countdown"
         android:contentDescription="@null"/>
 
-    <com.google.android.apps.santatracker.village.VillageView
+    <com.google.android.apps.santatracker.customviews.VillageView
         android:id="@+id/villageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
@@ -60,16 +60,14 @@
 
         <Button
             android:id="@+id/launch_button"
-            android:theme="@style/RedButton"
+            style="@style/RedButtonTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/st_logo_main"
             android:layout_centerHorizontal="true"
             android:focusable="true"
             android:focusableInTouchMode="false"
-            android:nextFocusDown="@id/cards_view_pager"
-            android:textStyle="bold"
-            android:padding="@dimen/button_side_padding"
+            android:nextFocusDown="@+id/card_list"
             android:text="@string/track_santa"
             android:visibility="visible" />
 
@@ -89,11 +87,11 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp">
 
-                <include layout="@layout/layout_countdown_2015" />
+                <include layout="@layout/include_layout_countdown" />
 
             </FrameLayout>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/countdown_numbers_container"
@@ -109,19 +107,20 @@
 
     </RelativeLayout>
 
-    <com.google.android.apps.santatracker.village.SnowFlakeView
+    <com.google.android.apps.santatracker.customviews.SnowFlakeView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/snowFlakeView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top" />
 
-    <android.support.v17.leanback.widget.VerticalGridView
+    <androidx.leanback.widget.VerticalGridView
         style="?attr/rowsVerticalGridStyle"
         android:id="@+id/santa_markers"
         android:nextFocusUp ="@id/launch_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="128dp"
         android:clipToPadding="false"/>
 
     <View

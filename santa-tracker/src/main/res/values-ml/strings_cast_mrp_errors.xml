@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,8 +16,8 @@
   -->
 
 <resources>
-  <string name="error_start_session_failed" translation_description="Error message from Cast MediaRouteProvider that indicates that the provider was not able to connect to the selected Cast device. [CHAR LIMIT=NONE]">Chromecast ഉപകരണം ഉപയോഗിച്ച് ഒരു സെഷൻ ആരംഭിക്കാനാവില്ല.</string>
-  <string name="error_session_ended" translation_description="Error message from Cast MediaRouteProvider that indicates that the provider has lost its connection to the selected Cast device. [CHAR LIMIT=NONE]">Chromecast ഉപകരണവുമായുള്ള ബന്ധം നഷ്ടമായി.</string>
-  <string name="error_ramp_command_failed" translation_description="Error message from Cast MediaRouteProvider that indicates that the provider got an error when sending a media command (e.g., load media, pause, etc.) to the selected Cast device. [CHAR LIMIT=NONE]">മീഡിയ നിയന്ത്രണം പരാജയപ്പെട്ടു.</string>
-  <string name="error_no_session" translation_description="Error message  from Cast MediaRouteProvider that indicates that the user's device is not connected to a Cast device.">Chromecast ഉപകരണത്തിലേക്ക് നിലവിൽ കണക്റ്റുചെയ്തിട്ടില്ല.</string>
+  <string name="error_start_session_failed">Chromecast ഉപകരണം ഉപയോഗിച്ച് ഒരു സെഷൻ ആരംഭിക്കാനാവില്ല.</string>
+  <string name="error_session_ended">Chromecast ഉപകരണവുമായുള്ള ബന്ധം നഷ്ടമായി.</string>
+  <string name="error_ramp_command_failed">മീഡിയ നിയന്ത്രണം പരാജയപ്പെട്ടു.</string>
+  <string name="error_no_session">Chromecast ഉപകരണത്തിലേക്ക് നിലവിൽ കണക്റ്റുചെയ്തിട്ടില്ല.</string>
 </resources>

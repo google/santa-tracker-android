@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright 2019. Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -23,35 +23,36 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.wearable.watchface.CanvasWatchFaceService;
 import android.support.wearable.watchface.WatchFaceService;
 import android.support.wearable.watchface.WatchFaceStyle;
-import android.text.format.Time;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.SurfaceHolder;
-
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
-
-public class SantaWatchFaceService extends CanvasWatchFaceService {
+public class SantaWatchFaceService extends AbstractBaseWatchFaceService {
 
     private static final String TAG = "SantaWatchFaceService";
 
     @Override
     public Engine onCreateEngine() {
-
         return new Engine();
     }
 
-    private class Engine extends CanvasWatchFaceService.Engine {
+    @Override
+    protected Class<?> getWatchFaceService() {
+        return SantaWatchFaceService.class;
+    }
+
+    private class Engine extends AbstractBaseWatchFaceService.Engine {
 
         private final Resources mResources = getResources();
         private Paint mFilterPaint;
@@ -60,8 +61,8 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
         private Paint mAmbientPeekCardBorderPaint;
         private boolean mAmbient;
         private boolean mMute;
-        private Time mTime;
         private boolean mRegisteredTimeZoneReceiver = false;
+        private Calendar mCalendar;
 
         /**
          * Whether the display supports fewer bits for each color in ambient mode. When true, we
@@ -70,12 +71,10 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
         private boolean mLowBitAmbient;
 
         /**
-         * Whether the display is OLED and subject to pixel burn-in.  When true, we display only
+         * Whether the display is OLED and subject to pixel burn-in. When true, we display only
          * outlines and a 95%+ black screen.
          */
         private boolean mBurnInProtection;
-
-        private AudioPlayer mAudioPlayer;
 
         // Figure and head positioning offsets
         private static final int SANTA_FIGURE_OFFSET_X = -10;
@@ -126,13 +125,14 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
         private int mLoop;
         private float mRadius;
 
-        final BroadcastReceiver mTimeZoneReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                mTime.clear(intent.getStringExtra("time-zone"));
-                mTime.setToNow();
-            }
-        };
+        private final BroadcastReceiver mTimeZoneReceiver =
+                new BroadcastReceiver() {
+                    @Override
+                    public void onReceive(Context context, Intent intent) {
+                        mCalendar.setTimeZone(TimeZone.getDefault());
+                        invalidate();
+                    }
+                };
 
         @Override
         public void onCreate(SurfaceHolder holder) {
@@ -141,12 +141,15 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
             }
             super.onCreate(holder);
 
-            setWatchFaceStyle(new WatchFaceStyle.Builder(SantaWatchFaceService.this)
-                    .setCardPeekMode(WatchFaceStyle.PEEK_MODE_SHORT)
-                    .setBackgroundVisibility(WatchFaceStyle.BACKGROUND_VISIBILITY_INTERRUPTIVE)
-                    .setShowSystemUiTime(false)
-                    .setAcceptsTapEvents(true)
-                    .build());
+            // noinspection deprecation Added for Wear 1.0 compatibility
+            setWatchFaceStyle(
+                    new WatchFaceStyle.Builder(SantaWatchFaceService.this)
+                            .setCardPeekMode(WatchFaceStyle.PEEK_MODE_SHORT)
+                            .setBackgroundVisibility(
+                                    WatchFaceStyle.BACKGROUND_VISIBILITY_INTERRUPTIVE)
+                            .setShowSystemUiTime(false)
+                            .setAcceptsTapEvents(true)
+                            .build());
 
             init();
         }
@@ -159,8 +162,8 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
             super.onTapCommand(tapType, x, y, eventTime);
 
             if (System.currentTimeMillis() >= mHyperSpeedStartTime + HYPERSPEED_DURATION_MS
-                    && !mAmbient && tapType == TAP_TYPE_TAP) {
-                mAudioPlayer.playTrackIfNotAlreadyPlaying(R.raw.ho_ho_ho, false);
+                    && !mAmbient
+                    && tapType == TAP_TYPE_TAP) {
                 mHyperSpeedStartTime = System.currentTimeMillis();
                 for (int i = 0; i < mCloudBitmaps.length; i++) {
                     mHyperSpeedOverrun[i] = true;
@@ -168,9 +171,7 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
             }
         }
 
-        /**
-         * Setting up settings variables (paint, settings, etc) and pre-load images
-         */
+        /** Setting up settings variables (paint, settings, etc) and pre-load images */
         private void init() {
 
             // Pre-loading bitmaps
@@ -207,10 +208,7 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
             }
 
             // Initialising time
-            mTime = new Time();
-
-            // Initialising audio player
-            mAudioPlayer = new AudioPlayer(getApplicationContext());
+            mCalendar = GregorianCalendar.getInstance();
         }
 
         /**
@@ -218,15 +216,14 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
          * version will be pluck out at runtime.
          *
          * @param arrayId Key to the type of bitmap that we are initialising. The full list can be
-         *                found in res/values/images_santa_watchface.xml
+         *     found in res/values/images_santa_watchface.xml
          * @return Array of three bitmaps for interactive, ambient and low bit modes
          */
         private Bitmap[] loadBitmaps(int arrayId) {
             int[] bitmapIds = getIntArray(arrayId);
             Bitmap[] bitmaps = new Bitmap[bitmapIds.length];
             for (int i = 0; i < bitmapIds.length; i++) {
-                Drawable backgroundDrawable = mResources.getDrawable(bitmapIds[i]);
-                bitmaps[i] = ((BitmapDrawable) backgroundDrawable).getBitmap();
+                bitmaps[i] = BitmapFactory.decodeResource(mResources, bitmapIds[i]);
             }
             return bitmaps;
         }
@@ -235,8 +232,7 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
          * At runtime, this is used to load the appropriate bitmap depending on display mode
          * dynamically.
          *
-         * @param bitmaps A bitmap array containing all bitmaps appropriate to all the display
-         *                modes
+         * @param bitmaps A bitmap array containing all bitmaps appropriate to all the display modes
          * @return Bitmap determined to be appropriate for the display mode
          */
         private Bitmap getBitmap(Bitmap[] bitmaps) {
@@ -268,8 +264,13 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
             mLowBitAmbient = properties.getBoolean(PROPERTY_LOW_BIT_AMBIENT, false);
             mBurnInProtection = properties.getBoolean(PROPERTY_BURN_IN_PROTECTION, false);
             if (Log.isLoggable(TAG, Log.DEBUG)) {
-                Log.d(TAG, "onPropertiesChanged: low-bit ambient = " + mLowBitAmbient + ", " +
-                        "burn-in protection = " + mBurnInProtection);
+                Log.d(
+                        TAG,
+                        "onPropertiesChanged: low-bit ambient = "
+                                + mLowBitAmbient
+                                + ", "
+                                + "burn-in protection = "
+                                + mBurnInProtection);
             }
         }
 
@@ -295,7 +296,6 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
                 mTimeMotionStart = System.currentTimeMillis();
             } else {
                 mHyperSpeedStartTime = -1;
-                mAudioPlayer.stopAll();
             }
             if (mAmbient != inAmbientMode) {
                 mAmbient = inAmbientMode;
@@ -317,9 +317,9 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
 
         @Override
         public void onDraw(Canvas canvas, Rect rect) {
-            mTime.setToNow();
+            mCalendar.setTimeInMillis(System.currentTimeMillis());
 
-            //Draw background.
+            // Draw background.
             canvas.drawRect(0, 0, mWidth, mHeight, mAmbientBackgroundPaint);
             canvas.drawBitmap(getBitmap(mBackgroundBitmap), 0, 0, mFilterPaint);
 
@@ -330,10 +330,10 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
 
             mFigure = getBitmap(mFigureBitmap);
 
-            //Draw figure.
-            canvas.drawBitmap(mFigure,
-                    mCenterX - mFigure.getWidth() / 2 +
-                            mScaledXAdditionalOffset,
+            // Draw figure.
+            canvas.drawBitmap(
+                    mFigure,
+                    mCenterX - mFigure.getWidth() / 2 + mScaledXAdditionalOffset,
                     mCenterY - mFigure.getHeight() / 2 + mScaledYOffset,
                     mFilterPaint);
 
@@ -342,15 +342,18 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
                 canvas.drawRect(mCardBounds, mAmbientBackgroundPaint);
             }
 
-            mMinutes = mTime.minute;
+            mMinutes = mCalendar.get(Calendar.MINUTE);
             mMinDeg = mMinutes * 6;
-            mHrDeg = ((mTime.hour + (mMinutes / 60f)) * 30);
+            mHrDeg = ((mCalendar.get(Calendar.HOUR_OF_DAY) + (mMinutes / 60f)) * 30);
 
             // HYPER SPEEEEEED
             if (System.currentTimeMillis() <= mHyperSpeedStartTime + HYPERSPEED_DURATION_MS) {
                 // Spin the hour hand around for 1 rotation during the hyper speed cycle
-                long hyperDeg = (long) (((System.currentTimeMillis() - mHyperSpeedStartTime)
-                                        / (float) HYPERSPEED_DURATION_MS) * 360);
+                long hyperDeg =
+                        (long)
+                                (((System.currentTimeMillis() - mHyperSpeedStartTime)
+                                                / (float) HYPERSPEED_DURATION_MS)
+                                        * 360);
                 // Spin the minute hand around based on the defined ratio
                 mMinDeg = (mMinDeg + (hyperDeg * HYPERSPEED_HOUR_TO_MINUTE_SPEED_RATIO)) % 360;
                 mHrDeg = (mHrDeg + hyperDeg) % 360;
@@ -358,16 +361,23 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
 
             canvas.save();
 
+            drawComplications(canvas, mCalendar.getTimeInMillis());
+
             // Draw the minute hand
             canvas.rotate(mMinDeg, mCenterX, mCenterY);
             mMinHand = getBitmap(mMinuteHandBitmap);
-            canvas.drawBitmap(mMinHand, mCenterX - mMinHand.getWidth() / 2f,
-                    mCenterY - mMinHand.getHeight(), mFilterPaint);
+            canvas.drawBitmap(
+                    mMinHand,
+                    mCenterX - mMinHand.getWidth() / 2f,
+                    mCenterY - mMinHand.getHeight(),
+                    mFilterPaint);
 
             // Draw the hour hand
             canvas.rotate(360 - mMinDeg + mHrDeg, mCenterX, mCenterY);
             mHrHand = getBitmap(mHourHandBitmap);
-            canvas.drawBitmap(mHrHand, mCenterX - mHrHand.getWidth() / 2f,
+            canvas.drawBitmap(
+                    mHrHand,
+                    mCenterX - mHrHand.getWidth() / 2f,
                     mCenterY - mHrHand.getHeight(),
                     mFilterPaint);
 
@@ -375,7 +385,8 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
 
             // Draw face.  (We do this last so it's not obscured by the arms.)
             mFace = getBitmap(mFaceBitmap);
-            canvas.drawBitmap(mFace,
+            canvas.drawBitmap(
+                    mFace,
                     mCenterX - mFace.getWidth() / 2 + mScaledXOffset,
                     mCenterY - mFigure.getHeight() / 2 + mScaledYOffset,
                     mFilterPaint);
@@ -412,14 +423,12 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
             mScaledYOffset = SANTA_FIGURE_OFFSET_Y * mScale;
 
             scaleBitmaps(mCloudBitmaps, mScale);
-
-
         }
 
         /**
          * Drawing the moving cloud
          *
-         * @param canvas  Canvas to be drawn on
+         * @param canvas Canvas to be drawn on
          * @param centerX Center of the display
          * @param centerY Center of the display
          */
@@ -459,12 +468,14 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
 
                     mCloudFilterPaints[mLoop].setAlpha((int) (mRadius / centerX * 255));
 
-                    canvas.drawBitmap(mCloudBitmaps[mLoop], centerX, centerY - mRadius,
+                    canvas.drawBitmap(
+                            mCloudBitmaps[mLoop],
+                            centerX,
+                            centerY - mRadius,
                             mCloudFilterPaints[mLoop]);
 
                     canvas.restore();
                 }
-
             }
         }
 
@@ -472,7 +483,7 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
          * Scale bitmap array in place.
          *
          * @param bitmaps Bitmaps to be scaled
-         * @param scale   Scale factor. 1.0 represents the original size.
+         * @param scale Scale factor. 1.0 represents the original size.
          */
         private void scaleBitmaps(Bitmap[] bitmaps, float scale) {
             for (int i = 0; i < bitmaps.length; i++) {
@@ -484,16 +495,14 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
          * Scale individual bitmap inputs by creating a new bitmap according to the scale
          *
          * @param bitmap Original bitmap
-         * @param scale  Scale factor. 1.0 represents the original size.
+         * @param scale Scale factor. 1.0 represents the original size.
          * @return Scaled bitmap
          */
         private Bitmap scaleBitmap(Bitmap bitmap, float scale) {
             int width = (int) ((float) bitmap.getWidth() * scale);
             int height = (int) ((float) bitmap.getHeight() * scale);
-            if (bitmap.getWidth() != width
-                    || bitmap.getHeight() != height) {
-                return Bitmap.createScaledBitmap(bitmap,
-                        width, height, true /* filter */);
+            if (bitmap.getWidth() != width || bitmap.getHeight() != height) {
+                return Bitmap.createScaledBitmap(bitmap, width, height, true /* filter */);
             } else {
                 return bitmap;
             }
@@ -513,6 +522,7 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
                 array.getValue(i, value);
                 rc[i] = value.resourceId;
             }
+            array.recycle();
             return rc;
         }
 
@@ -524,9 +534,7 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
                 registerReceiver();
 
                 // Update time zone in case it changed while we weren't visible.
-                mTime.clear(TimeZone.getDefault().getID());
-                mTime.setToNow();
-
+                mCalendar.setTimeZone(TimeZone.getDefault());
                 invalidate();
             } else {
                 unregisterReceiver();
@@ -550,6 +558,7 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
             SantaWatchFaceService.this.unregisterReceiver(mTimeZoneReceiver);
         }
 
+        @SuppressWarnings("deprecation") // Added for Wear 1.0 Compatibility
         @Override
         public void onPeekCardPositionUpdate(Rect bounds) {
             if (Log.isLoggable(TAG, Log.DEBUG)) {
@@ -561,6 +570,5 @@ public class SantaWatchFaceService extends CanvasWatchFaceService {
                 invalidate();
             }
         }
-
     }
 }

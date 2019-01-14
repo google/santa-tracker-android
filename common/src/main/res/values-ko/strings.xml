@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">지도로 돌아가기</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">마을로 돌아가기</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">산타 추적기의 버전이 오래되었습니다. Play 스토어를 방문하여 최신 버전으로 업데이트하세요.</string>
+  <string name="back_to_map">지도로 돌아가기</string>
+  <string name="back_to_village">마을로 돌아가기</string>
+  <string name="go_to_play_store">산타 추적기의 버전이 오래되었습니다. Play 스토어를 방문하여 최신 버전으로 업데이트하세요.</string>
+  <string name="game_over">게임 종료</string>
+  <string name="loading_screen">화면 로드 중</string>
+  <string name="menu_resume">계속</string>
+  <string name="menu_replay">다시 시작</string>
+  <string name="menu_home">홈</string>
+  <string name="menu_share">공유</string>
+  <string name="error_fetch_module">%1$s 다운로드 중에 오류가 발생했습니다. 네트워크에 연결되어 있나요?</string>
 </resources>

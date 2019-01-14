@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">Saai uit op %s</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">Saai uit op …</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">Raak aan om Waar is Kersvader na jou TV uit te saai</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">Verbinding met die uitsaaitoestel is tydelik verbreek</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">Verbinding met die uitsaaitoestel is herstel</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">Uitsaaispeletjie se beheerder</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">wissel modus van rigtingpaneel na merkerpaneel</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">regs</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">op</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">af</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">voer in</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">links</string>
+  <string name="media_route_casting_on">Saai uit op %s</string>
+  <string name="media_route_menu_title">Saai uit op …</string>
+  <string name="touch_to_cast">Raak aan om Waar is Kersvader na jou TV uit te saai</string>
+  <string name="connection_temp_lost">Verbinding met die uitsaaitoestel is tydelik verbreek</string>
+  <string name="connection_recovered">Verbinding met die uitsaaitoestel is herstel</string>
+  <string name="cast_game_controller">Uitsaaispeletjie se beheerder</string>
+  <string name="content_desc_mode_switch">wissel modus van rigtingpaneel na merkerpaneel</string>
+  <string name="content_desc_right_button">regs</string>
+  <string name="content_desc_up_button">op</string>
+  <string name="content_desc_down_button">af</string>
+  <string name="content_desc_enter_button">voer in</string>
+  <string name="content_desc_left_button">links</string>
 </resources>

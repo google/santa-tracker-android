@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Segueix el Pare Noel</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Segueix el Pare Noel</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">El Pare Noel surt d\'aquí a</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">El Pare Noel està enfeinat amb els preparatius de l\'any vinent.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Mostra les parades de 2014</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Estem provant de contactar amb el Pare Noel.</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Encara estem provant de contactar amb el Pare Noel.</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">dies</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">h</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">min</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">s</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Comparteix</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Comparteix amb els amics</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Botó d\'emetre</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Informació legal i política de privadesa</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Avís legal</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Política de privadesa</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Condicions del servei</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Llicències de programari lliure</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Llicències de programari lliure dels Serveis de Google Play</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">El Pare Noel a GitHub</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon a GitHub</string>
-  <string name="scene_not_available" translation_description="Not available yet">Encara no està disponible.</string>
+  <string name="track_santa">Segueix el Pare Noel</string>
+  <string name="track_santa_two_lines">Segueix el Pare Noel</string>
+  <string name="santa_takes_off_in">El Pare Noel surt d\'aquí a</string>
+  <string name="santa_is_busy_preparing_for_next_year">El Pare Noel està enfeinat amb els preparatius de l\'any vinent.</string>
+  <string name="view_old_stops">Mostra les parades del 2014</string>
+  <string name="contacting_santa">Estem provant de contactar amb el Pare Noel...</string>
+  <string name="still_trying_to_reach_santa">Encara estem provant de contactar amb el Pare Noel...</string>
+  <string name="days">dies</string>
+  <string name="hrs">h</string>
+  <string name="min">min</string>
+  <string name="sec">s</string>
+  <string name="menu_share">Comparteix</string>
+  <string name="menu_share_friends">Comparteix amb els amics</string>
+  <string name="legal_notice">Informació legal i política de privadesa</string>
+  <string name="legal_notice_text">Avís legal</string>
+  <string name="privacy_policy">Política de privadesa</string>
+  <string name="terms_of_service">Condicions del servei</string>
+  <string name="open_source_licenses">Llicències de programari lliure</string>
+  <string name="open_source_repo_santa">El Pare Noel a GitHub</string>
+  <string name="scene_not_available">Encara no està disponible.</string>
   <string name="sign_out">Tanca la sessió</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Fins a l\'inici del viatge</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d de %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d punts</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">On és això?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Fotografia de: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Segueix el Pare Noel a la gran pantalla.\nToca aquest botó per veure el viatge del Pare Noel a la televisió amb Chromecast.</string>
+  <string name="until_takeoff">Fins a l\'inici del viatge</string>
+  <string name="web_scene_error">No s\'ha pogut carregar l\'escena.</string>
+  <string name="check_back_daily">Torna cada dia per descobrir jocs nous!</string>
+  <string name="new_games">Jocs nous</string>
+  <string name="new_card">Nova</string>
+  <string name="tracker_opens_date">Data d\'inici: %1$s</string>
+  <string name="time">TEMPS</string>
+  <string name="download_dialog_title">Baixa %1$s</string>
+  <string name="download_dialog_message">Has de baixar el joc de Play Store per poder-hi jugar. Actualment, aquest dispositiu està connectat a una xarxa amb límit de dades i pot ser que s\'apliquin càrrecs per qualsevol dada transferida.\n\nVols continuar?</string>
+  <string name="elf_maker_write_success">S\'ha desat la imatge a la galeria de fotos</string>
+  <string name="elf_maker_write_fail">S\'ha produït un error en desar la imatge a la galeria de fotos del dispositiu</string>
 </resources>

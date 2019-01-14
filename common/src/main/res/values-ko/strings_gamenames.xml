@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">풍선껌</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">기억력</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">제트 추진 엘프</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">로켓 썰매</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">대셔 댄서</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">최후의 눈싸움 결전</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">도시 퀴즈</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">선물 찾기</string>
+  <string name="gumball">풍선껌</string>
+  <string name="memory">기억력</string>
+  <string name="elf_jetpack">제트 추진 엘프</string>
+  <string name="rocket">로켓 썰매</string>
+  <string name="dancer">대셔 댄서</string>
+  <string name="cityquiz">도시 퀴즈</string>
+  <string name="present_quest">선물 찾기</string>
+  <string name="santa_snap">산타 셀카</string>
+  <string name="present_throw">선물 던지기</string>
+  <string name="jetpack">제트 추진 엘프</string>
+  <string name="web_airport">북극 공항</string>
+  <string name="web_boatload">새총으로 선물 날리기</string>
+  <string name="web_clausdraws">산타 그리기</string>
+  <string name="web_codeboogie">코드와 함께 춤을</string>
+  <string name="web_codelab">코드 실험실</string>
+  <string name="web_gumball">풍선껌 기울이기</string>
+  <string name="web_jamband">엘프 즉석밴드</string>
+  <string name="web_penguindash">펭귄 질주</string>
+  <string name="web_presentbounce">선물 튕기기</string>
+  <string name="web_presentdrop">선물 떨구기</string>
+  <string name="web_racer">루돌프 경주</string>
+  <string name="web_runner">사슴 달리기</string>
+  <string name="web_santasearch">산타 찾기</string>
+  <string name="web_santaselfie">산타 셀카</string>
+  <string name="web_seasonofgiving">나눔의 계절</string>
+  <string name="web_elfski">엘프 스키</string>
+  <string name="web_snowball">맹공의 눈싸움</string>
+  <string name="web_snowflake">눈송이 코드</string>
+  <string name="web_speedsketch">빨리 그리기</string>
+  <string name="web_wrapbattle">선물 포장 시합</string>
+  <string name="web_elfmaker">엘프 만들기</string>
+  <string name="video_santa_is_back">산타가 돌아옵니다</string>
+  <string name="video_office_prank">사무실 장난</string>
+  <string name="video_carpool">카풀</string>
 </resources>

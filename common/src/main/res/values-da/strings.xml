@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">Tilbage til kortet</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">Tilbage til landsbyen</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">Denne version af Følg julemanden er forældet. Gå til Play Butik for at opdatere til den nyeste version.</string>
+  <string name="back_to_map">Tilbage til kortet</string>
+  <string name="back_to_village">Tilbage til landsbyen</string>
+  <string name="go_to_play_store">Denne version af Følg julemanden er forældet. Gå til Play Butik for at opdatere til den nyeste version.</string>
+  <string name="game_over">Spillet er slut</string>
+  <string name="loading_screen">Indlæsningsskærm</string>
+  <string name="menu_resume">Genoptag</string>
+  <string name="menu_replay">Spil videre</string>
+  <string name="menu_home">Gå til start</string>
+  <string name="menu_share">Del</string>
+  <string name="error_fetch_module">Der opstod en fejl under download af %1$s. Er din netværksforbindelse i orden?</string>
 </resources>

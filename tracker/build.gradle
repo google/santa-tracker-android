@@ -1,0 +1,105 @@
+/*
+ * Copyright 2019. Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.tools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'protobuf.meta'
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    configurations.all {
+        // Required by playServicesCastFramework
+        resolutionStrategy.force rootProject.ext.mediaRouter
+    }
+}
+
+dependencies {
+    implementation project(':common')
+
+    // Kotlin
+    implementation rootProject.ext.kotlinRuntime
+
+    // Support Libraries
+    implementation rootProject.ext.appCompat
+    implementation rootProject.ext.design
+    implementation rootProject.ext.coreKtx
+
+    // Architecture Components
+    implementation rootProject.ext.archLifecycleRuntime
+    implementation rootProject.ext.archLifecycleExtentions
+    kapt rootProject.ext.archLifecycleCompiler
+    implementation rootProject.ext.archRoomRuntime
+    kapt rootProject.ext.archRoomCompiler
+    testImplementation rootProject.ext.archRoomTesting
+
+    // Play Services
+    implementation rootProject.ext.androidMapsUtils
+    implementation rootProject.ext.playServicesMaps
+    implementation rootProject.ext.playServicesCastFramework
+
+    // Firebase
+    implementation rootProject.ext.firebaseStorage
+    implementation rootProject.ext.firebaseCore
+    implementation rootProject.ext.firebaseMessaging
+
+    // GSON for JSON parsing
+    implementation rootProject.ext.gson
+
+    // Dagger
+    implementation rootProject.ext.daggerCore
+    implementation rootProject.ext.daggerAndroid
+    implementation rootProject.ext.daggerAndroidSupport
+    kapt rootProject.ext.daggerAndroidProcessor
+    kapt rootProject.ext.daggerCompiler
+
+    implementation rootProject.ext.glide
+
+    implementation rootProject.ext.truetime
+
+    // Testing
+    testImplementation rootProject.ext.junit
+    testImplementation rootProject.ext.leakCanaryNoOp
+    testImplementation rootProject.ext.mockitoAndroid
+    testImplementation rootProject.ext.robolectric
+    androidTestImplementation rootProject.ext.espressoCore
+    androidTestImplementation rootProject.ext.testingSupportRunner
+    androidTestImplementation rootProject.ext.mockitoAndroid
+    androidTestImplementation rootProject.ext.firebaseConfig
+}

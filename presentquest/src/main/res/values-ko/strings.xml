@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">게임하기</string>
-  <string name="level" translation_description="Label shown under the user's current level">레벨</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">작업공방</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">%1$d레벨부터 이용 가능</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">산타가 선물을 떨구었습니다.</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">선물이 너무 멀리 있습니다.</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">작업공방이 너무 멀리 있습니다.</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">먼저 선물을 모으세요.</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">가방이 꽉 찼습니다.</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">작업공방을 이동했습니다.</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">이동이 취소되었습니다.</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">오늘 이미 이 작업공방을 이동했습니다. 내일 다시 시도해 주세요.</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">여기로 이동하세요.</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">산타의 선물을 찾으려면 선물 찾기 게임에 위치 액세스 권한이 필요합니다.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">권한 필요</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">위치 액세스 권한이 없으면 선물 찾기 게임이 작동하지 않습니다. 설정에서 위치 권한을 사용 설정하세요.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">필요한 권한이 누락되었습니다.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">다음</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">산타의 썰매에서\n선물이 떨어지고 있습니다.</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">진짜 선물을 잡으려면\n선물 핀으로 이동하세요.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">가방이 꽉 차면 작업공방\n으로 이동해 가방을 비우세요.</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">게임 시작</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">근처에 선물이 있습니다.</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">가방이 거의 꽉 찼습니다.</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">작업공방에서 가방을 비우세요.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">새로운 작업공방을 이용할 수 있습니다.</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">선물을 집으려면 클릭하세요.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">선물 가방을 비우려면 작업공방을 클릭하세요.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">/12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">채워짐</string>
+  <string name="play">게임하기</string>
+  <string name="level">레벨</string>
+  <string name="workshops">작업공방</string>
+  <string name="unlock_at_level">%1$d레벨부터 이용 가능</string>
+  <string name="present_dropped">산타가 선물을 떨구었습니다.</string>
+  <string name="present_too_far">선물이 너무 멀리 있습니다.</string>
+  <string name="workshop_too_far">작업공방이 너무 멀리 있습니다.</string>
+  <string name="no_presents_collected">먼저 선물을 모으세요.</string>
+  <string name="bag_is_full">가방이 꽉 찼습니다.</string>
+  <string name="workshop_moved">작업공방을 이동했습니다.</string>
+  <string name="move_canceled">이동이 취소되었습니다.</string>
+  <string name="workshop_move_too_soon">오늘 이미 이 작업공방을 이동했습니다. 내일 다시 시도해 주세요.</string>
+  <string name="go_here">여기로 이동하세요.</string>
+  <string name="perm_location_rationale">산타의 선물을 찾으려면 선물 찾기 게임에 위치 액세스 권한이 필요합니다.</string>
+  <string name="perm_required">권한 필요</string>
+  <string name="perm_go_to_settings">위치 액세스 권한이 없으면 선물 찾기 게임이 작동하지 않습니다. 설정에서 위치 권한을 사용 설정하세요.</string>
+  <string name="required_permissions_missing">필요한 권한이 누락되었습니다.</string>
+  <string name="next">다음</string>
+  <string name="onboarding_msg_1">산타의 썰매에서\n선물이 떨어지고 있습니다.</string>
+  <string name="onboarding_msg_2">진짜 선물을 잡으려면\n선물 핀으로 이동하세요.</string>
+  <string name="onboarding_msg_3">가방이 꽉 차면 작업공방\n으로 이동해 가방을 비우세요.</string>
+  <string name="onboarding_msg_4">게임 시작</string>
+  <string name="msg_present_nearby">근처에 선물이 있습니다.</string>
+  <string name="msg_bag_almost_full">가방이 거의 꽉 찼습니다.</string>
+  <string name="msg_unload_bag">작업공방에서 가방을 비우세요.</string>
+  <string name="msg_unlocked_workshop">새로운 작업공방을 이용할 수 있습니다.</string>
+  <string name="msg_click_present">선물을 집으려면 클릭하세요.</string>
+  <string name="msg_click_workshop">선물 가방을 비우려면 작업공방을 클릭하세요.</string>
+  <string name="level_denominator">/12</string>
+  <string name="full">채워짐</string>
+  <string name="distraction_warning">게임할 때 주변 환경에 유의하세요.</string>
 </resources>

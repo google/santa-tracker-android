@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">മാപ്പിലേക്ക് മടങ്ങുക</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">ഗ്രാമത്തിലേക്ക് മടങ്ങുക</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">ഈ സാന്ത ട്രാക്കർ പതിപ്പ് കാലഹരണപ്പെട്ടതാണ്. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ്‌ഡേറ്റ് ചെയ്യാൻ \'പ്ലേ സ്റ്റോർ\' സന്ദർശിക്കുക.</string>
+  <string name="back_to_map">മാപ്പിലേക്ക് മടങ്ങുക</string>
+  <string name="back_to_village">ഗ്രാമത്തിലേക്ക് മടങ്ങുക</string>
+  <string name="go_to_play_store">ഈ സാന്ത ട്രാക്കർ പതിപ്പ് കാലഹരണപ്പെട്ടതാണ്. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ്‌ഡേറ്റ് ചെയ്യാൻ \'പ്ലേ സ്റ്റോർ\' സന്ദർശിക്കുക.</string>
+  <string name="game_over">ഗെയിം കഴിഞ്ഞു</string>
+  <string name="loading_screen">സ്‌ക്രീൻ ലോഡ് ചെയ്യുന്നു</string>
+  <string name="menu_resume">പുനരാരംഭിക്കുക</string>
+  <string name="menu_replay">വീണ്ടും പ്ലേ ചെയ്യുക</string>
+  <string name="menu_home">ഹോം</string>
+  <string name="menu_share">പങ്കിടുക</string>
+  <string name="error_fetch_module">%1$s ഡൗൺലോഡ് ചെയ്യുമ്പോൾ പിശകുണ്ടായി. നിങ്ങളുടെ നെറ്റ്‌വര്‍ക്ക് കണക്ഷന്‍ പ്രവർത്തനക്ഷമമാണോ?</string>
 </resources>
