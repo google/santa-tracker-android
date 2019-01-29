@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Ziemassvētku vecīša informācijas panelis</string>
+  <string name="current_location">PAŠREIZĒJĀ ATRAŠANĀS VIETA</string>
+  <string name="presents_delivered">PIEGĀDĀTĀS DĀVANAS</string>
+  <string name="santa_status">ZIEMASSVĒTKU VECĪŠA STATUSS</string>
+  <string name="arriving_in">IERADĪSIES PĒC</string>
+  <string name="departing_in">DOSIES PROM PĒC</string>
+  <string name="localtime">IERADĀS</string>
+  <string name="population">IEDZĪVOTĀJU SKAITS</string>
+  <string name="next_destination">NĀKAMAIS GALAMĒRĶIS</string>
+  <string name="arriving_at">IERODAS</string>
+  <string name="arrived_at">IERADĀS</string>
+  <string name="in_transit">Šobrīd ceļā</string>
+  <string name="follow_santa">Sekot Ziemassvētku vecītim</string>
+  <string name="lost_contact_with_santa">Neizdevās sazināties ar Ziemassvētku vecīti</string>
+  <string name="notification_nearby">Ziemassvētku vecītis ir tepat netālu!</string>
+  <string name="notification_takeoff">Ziemassvētku vecītis ir devies ceļā!</string>
+  <string name="notification_unlock_video">Ir pieejams jauns videoklips!</string>
+  <string name="notification_unlock_game">Ir pieejama jauna spēle!</string>
+  <string name="santa_arrives_in_your_area_in">ZIEMASSVĒTKU VECĪTIS IERADĪSIES JŪSU VALSTĪ PĒC:</string>
+  <string name="santa_is_approximately">ZIEMASSVĒTKU VECĪTIS IR ŠĀDĀ ATTĀLUMĀ NO JUMS:</string>
+  <string name="distance_km_away">%1$,d km%2$s</string>
+  <string name="distance_optional_miles">\u0020(%,d jūdzes)</string>
+  <string name="distance_mi_away">%1$,d jūdzes</string>
+  <string name="did_you_know">INTERESANTA INFORMĀCIJA</string>
+  <string name="watch_movie">FILMU SKATĪŠANĀS</string>
+  <string name="santa_update">JAUNUMI NO ZIEMASSVĒTKU VECĪŠA</string>
+  <string name="elapsed_time">PAGĀJUŠAIS LAIKS</string>
+  <string name="wikipedia">Vikipēdija</string>
+  <string name="arrival">IERAŠANĀS</string>
+  <string name="weather">LAIKAPSTĀKĻI</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">Pasaules fakti (nodrošina National Geographic Bee)</string>
+  <string name="photo">Fotoattēls</string>
+  <string name="photos">Fotoattēli</string>
+  <string name="street_view">IELAS ATTĒLS</string>
+  <string name="back_to_santa_cam">ATGRIEZTIES ZIEMASSVĒTKU VECĪŠA KAMERAS SKATĀ</string>
+  <string name="update_from_santa">Jaunumi no Ziemassvētku vecīša</string>
+  <string name="trivia_from_santa">Interesanta informācija no Ziemassvētku vecīša</string>
+  <string name="photo_from_santa">Fotoattēli no Ziemassvētku vecīša</string>
+  <string name="video_from_santa">Videoklips no Ziemassvētku vecīša</string>
+  <string name="show_history">Rādīt vēsturi</string>
+  <string name="see_best_moments">Skatīt visus labākos mirkļus no Ziemassvētku vecīša ceļojuma</string>
+  <string name="return_to_map">Atgriezties kartē</string>
+  <string name="santa_is_now_arriving_in_x">Ziemassvētku vecītis tūlīt ieradīsies šajā vietā: %s</string>
+  <string name="santa_has_handed_out_x_presents">Ziemassvētku vecītis ir izsniedzis %s dāvanas</string>
+  <string name="new_update_from_santa">Jaunas ziņas no Ziemassvētku vecīša</string>
+  <string name="new_trivia_from_santa">Jauna interesanta informācija no Ziemassvētku vecīša</string>
+  <string name="new_video_from_santa">Jauns videoklips no Ziemassvētku vecīša</string>
+  <string name="new_photo_from_santa">Jauns fotoattēls no Ziemassvētku vecīša</string>
+  <string name="cast_overlay_text">Sekojiet Ziemassvētku vecītim uz lielā ekrāna!\nPieskarieties šai pogai, lai skatītu Ziemassvētku vecīša ceļojumu televizorā, izmantojot Chromecast.</string>
+  <string name="menu_media_router_title">Apraides poga</string>
+</resources>

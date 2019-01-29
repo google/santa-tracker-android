@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Theo chân ông già Noel</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Theo chân\nông già Noel</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Ông già Noel sẽ cất cánh lúc</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Ông già Noel đang bận rộn chuẩn bị cho năm tiếp theo.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Xem các điểm dừng chân của năm 2014</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Cố gắng tiếp cận ông già Noel</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Vẫn đang cố gắng tiếp cận ông già Noel</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">Ngày</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">Giờ</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">Phút</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">Giây</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Chia sẻ</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Chia sẻ với bạn bè</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Nút Truyền</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Pháp lý &amp; bảo mật</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Thông báo pháp lý</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Chính sách bảo mật</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Điều khoản dịch vụ</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Giấy phép mã nguồn mở</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Giấy phép nguồn mở cho dịch vụ Google Play</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Santa trên GitHub</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Pie Noon trên GitHub</string>
-  <string name="scene_not_available" translation_description="Not available yet">Vẫn chưa khả dụng</string>
+  <string name="track_santa">Theo chân ông già Noel</string>
+  <string name="track_santa_two_lines">Theo chân\nông già Noel</string>
+  <string name="santa_takes_off_in">Ông già Noel sẽ cất cánh lúc</string>
+  <string name="santa_is_busy_preparing_for_next_year">Ông già Noel đang bận rộn chuẩn bị cho năm tiếp theo.</string>
+  <string name="view_old_stops">Xem các điểm dừng chân của năm 2014</string>
+  <string name="contacting_santa">Cố gắng tiếp cận ông già Noel</string>
+  <string name="still_trying_to_reach_santa">Vẫn đang cố gắng tiếp cận ông già Noel</string>
+  <string name="days">Ngày</string>
+  <string name="hrs">Giờ</string>
+  <string name="min">Phút</string>
+  <string name="sec">Giây</string>
+  <string name="menu_share">Chia sẻ</string>
+  <string name="menu_share_friends">Chia sẻ với bạn bè</string>
+  <string name="legal_notice">Pháp lý &amp; bảo mật</string>
+  <string name="legal_notice_text">Thông báo pháp lý</string>
+  <string name="privacy_policy">Chính sách bảo mật</string>
+  <string name="terms_of_service">Điều khoản dịch vụ</string>
+  <string name="open_source_licenses">Giấy phép mã nguồn mở</string>
+  <string name="open_source_repo_santa">Santa trên GitHub</string>
+  <string name="scene_not_available">Vẫn chưa khả dụng</string>
   <string name="sign_out">Đăng xuất</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Cho đến khi khởi hành</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d / %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d điểm</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Địa điểm này ở đâu?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Ảnh của: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Theo chân ông già Noel trên màn hình lớn!\nNhấn nút này để xem hành trình của ông già Noel trên TV bằng Chromecast.</string>
+  <string name="until_takeoff">Cho đến khi khởi hành</string>
+  <string name="web_scene_error">Rất tiếc, không thể tải cảnh.</string>
+  <string name="check_back_daily">Hãy quay lại hàng ngày để xem trò chơi mới!</string>
+  <string name="new_games">Trò chơi mới</string>
+  <string name="new_card">Mới</string>
+  <string name="tracker_opens_date">Mở %1$s</string>
+  <string name="time">THỜI GIAN</string>
+  <string name="download_dialog_title">Tải %1$s</string>
+  <string name="download_dialog_message">Chúng tôi cần tải trò chơi xuống từ Cửa hàng Play trước khi bạn có thể chơi. Thiết bị này hiện đang kết nối với mạng Internet có đồng hồ đo lưu lượng sử dụng, có thể tính phí chuyển dữ liệu.\n\nBạn có muốn tiếp tục không?</string>
+  <string name="elf_maker_write_success">Đã lưu hình ảnh</string>
+  <string name="elf_maker_write_fail">Đã xảy ra lỗi khi lưu hình ảnh vào thiết bị của bạn</string>
 </resources>

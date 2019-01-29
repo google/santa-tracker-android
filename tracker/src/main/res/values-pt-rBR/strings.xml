@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Painel do Papai Noel</string>
+  <string name="current_location">LOCAL ATUAL</string>
+  <string name="presents_delivered">PRESENTES ENTREGUES</string>
+  <string name="santa_status">STATUS DO PAPAI NOEL</string>
+  <string name="arriving_in">CHEGANDO EM</string>
+  <string name="departing_in">PARTINDO EM</string>
+  <string name="localtime">CHEGOU A</string>
+  <string name="population">POPULAÇÃO</string>
+  <string name="next_destination">PRÓXIMO DESTINO</string>
+  <string name="arriving_at">CHEGANDO A</string>
+  <string name="arrived_at">CHEGOU A</string>
+  <string name="in_transit">A caminho</string>
+  <string name="follow_santa">Siga o Papai Noel</string>
+  <string name="lost_contact_with_santa">O contato com o Papai Noel foi perdido</string>
+  <string name="notification_nearby">Papai Noel está por perto!</string>
+  <string name="notification_takeoff">O Papai Noel decolou!</string>
+  <string name="notification_unlock_video">Um novo vídeo está disponível.</string>
+  <string name="notification_unlock_game">Um novo jogo está disponível.</string>
+  <string name="santa_arrives_in_your_area_in">O PAPAI NOEL CHEGARÁ NA SUA ÁREA EM</string>
+  <string name="santa_is_approximately">O PAPAI NOEL ESTÁ A APROXIMADAMENTE</string>
+  <string name="distance_km_away">%1$,d km%2$s de distância</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d milhas de distância</string>
+  <string name="did_you_know">VOCÊ SABIA</string>
+  <string name="watch_movie">ASSISTIR FILME</string>
+  <string name="santa_update">ATUALIZAÇÃO SOBRE O PAPAI NOEL</string>
+  <string name="elapsed_time">TEMPO DECORRIDO</string>
+  <string name="wikipedia">Wikipédia</string>
+  <string name="arrival">CHEGADA</string>
+  <string name="weather">CLIMA</string>
+  <string name="weather_format">%1$s °C / %2$s °F</string>
+  <string name="did_you_know_attribution">Informações mundiais fornecidas pela National Geographic Bee</string>
+  <string name="photo">Foto</string>
+  <string name="photos">Fotos</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">VOLTAR PARA A CÂMERA DO PAPAI NOEL</string>
+  <string name="update_from_santa">Atualizações sobre o Papai Noel</string>
+  <string name="trivia_from_santa">Curiosidades do Papai Noel</string>
+  <string name="photo_from_santa">Foto do Papai Noel</string>
+  <string name="video_from_santa">Vídeo do Papai Noel</string>
+  <string name="show_history">Mostrar histórico</string>
+  <string name="see_best_moments">Veja todos os melhores momentos da viagem do Papai Noel</string>
+  <string name="return_to_map">Retornar ao mapa</string>
+  <string name="santa_is_now_arriving_in_x">O Papai Noel está chegando agora em %s</string>
+  <string name="santa_has_handed_out_x_presents">O Papai Noel distribuiu %s presentes</string>
+  <string name="new_update_from_santa">Nova atualização sobre o Papai Noel</string>
+  <string name="new_trivia_from_santa">Novas curiosidades do Papai Noel</string>
+  <string name="new_video_from_santa">Novo vídeo do Papai Noel</string>
+  <string name="new_photo_from_santa">Nova foto do Papai Noel</string>
+  <string name="cast_overlay_text">Siga o Papai Noel em uma tela grande!\nToque neste botão para ver a jornada dele na sua TV com o Chromecast.</string>
+  <string name="menu_media_router_title">Botão Transmitir</string>
+</resources>

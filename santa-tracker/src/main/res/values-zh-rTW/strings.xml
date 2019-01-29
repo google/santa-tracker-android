@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">追蹤聖誕老人</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">追蹤\n聖誕老人</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">距離聖誕老人出發時間還有</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">聖誕老人正忙著為來年做準備。</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">查看 2014 年的送禮地點</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">正在嘗試聯絡聖誕老人</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">仍在嘗試聯絡聖誕老人</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">天</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">小時</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">分鐘</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">秒</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">分享</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">與好友分享</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">投放按鈕</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">法律聲明與隱私權</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">法律聲明</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">隱私權政策</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">服務條款</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">開放原始碼授權</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Google Play 服務的開放原始碼授權</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">GitHub 上的 Santa</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">GitHub 上的 Pie Noon</string>
-  <string name="scene_not_available" translation_description="Not available yet">尚未提供</string>
+  <string name="track_santa">追蹤聖誕老人</string>
+  <string name="track_santa_two_lines">追蹤\n聖誕老人</string>
+  <string name="santa_takes_off_in">距離聖誕老人出發時間還有</string>
+  <string name="santa_is_busy_preparing_for_next_year">聖誕老人正忙著為來年做準備。</string>
+  <string name="view_old_stops">查看 2014 年的送禮地點</string>
+  <string name="contacting_santa">正在嘗試聯絡聖誕老人</string>
+  <string name="still_trying_to_reach_santa">仍在嘗試聯絡聖誕老人</string>
+  <string name="days">天</string>
+  <string name="hrs">小時</string>
+  <string name="min">分鐘</string>
+  <string name="sec">秒</string>
+  <string name="menu_share">分享</string>
+  <string name="menu_share_friends">與好友分享</string>
+  <string name="legal_notice">法律聲明與隱私權</string>
+  <string name="legal_notice_text">法律聲明</string>
+  <string name="privacy_policy">隱私權政策</string>
+  <string name="terms_of_service">服務條款</string>
+  <string name="open_source_licenses">開放原始碼授權</string>
+  <string name="open_source_repo_santa">GitHub 上的 Santa</string>
+  <string name="scene_not_available">尚未提供</string>
   <string name="sign_out">登出</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">啟程倒數計時</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">第 %1$d 回合 (共 %2$d 回合)</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d 分</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">這是哪裡？</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">拍攝者：%1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">在大螢幕上追蹤聖誕老人的蹤跡！\n只要輕觸這個按鈕，就能透過 Chromecast 在電視上查看聖誕老人的蹤跡。</string>
+  <string name="until_takeoff">啟程倒數計時</string>
+  <string name="web_scene_error">很抱歉，無法載入場景。</string>
+  <string name="check_back_daily">歡迎每天回來看看我們推出的新遊戲！</string>
+  <string name="new_games">最新遊戲</string>
+  <string name="new_card">最新</string>
+  <string name="tracker_opens_date">開啟日期：%1$s</string>
+  <string name="time">時間</string>
+  <string name="download_dialog_title">下載「%1$s」</string>
+  <string name="download_dialog_message">你必須先透過 Play 商店下載這個遊戲，才能開始使用。這部裝置目前是連至按用量計費的網路，因此你可能需要支付數據傳輸費用。\n\n確定要繼續嗎？</string>
+  <string name="elf_maker_write_success">圖片已儲存至您的相片</string>
+  <string name="elf_maker_write_fail">將圖片儲存至裝置相片時發生錯誤</string>
 </resources>

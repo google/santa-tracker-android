@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,32 +17,23 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="SantaTheme" parent="@style/Theme.AppCompat">
+    <style name="SantaTheme" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="android:textAppearanceSmall">@style/TextAppearance.Small</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
 
         <item name="colorPrimary">@color/brandSantaTracker</item>
         <item name="colorPrimaryDark">@color/brandSantaTrackerBlue</item>
 
-        <item name="alertDialogTheme">@style/SantaDialogTheme</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-
-    <style name="SantaThemeMap" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/trackerPrimary</item>
-        <item name="colorPrimaryDark">@color/trackerPrimaryDark</item>
-        <item name="colorAccent">@color/trackerAccent</item>
-        <item name="colorControlActivated">@android:color/black</item>
-
-        <item name="alertDialogTheme">@style/SantaDialogTheme</item>
-    </style>
-
-    <!-- Use the main Santa Tracker brand colors for all dialogs -->
-    <style name="SantaDialogTheme" parent="@style/AlertDialog.AppCompat">
-        <item name="colorPrimary">@color/brandSantaTracker</item>
-        <item name="colorPrimaryDark">@color/brandSantaTrackerBlue</item>
+    <style name="Theme.SantaTracker.Splash" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <!--
+          These attributes should be defined this way in the parent theme, but apparently that's
+          not the case on some devices.
+        -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 
 </resources>

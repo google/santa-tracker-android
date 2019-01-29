@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">Ika-cast sa %s</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">I-cast sa ...</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">Pindutin upang i-cast ang Santa Tracker sa iyong TV</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">Pansamantalang nawala ang koneksyon sa cast device</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">Na-recover ang koneksyon sa cast device</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">I-cast ang controller ng laro</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">lumipat ng mode mula dpad papuntang trackpad</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">kanan</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">taas</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">baba</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">enter</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">kaliwa</string>
+  <string name="media_route_casting_on">Ika-cast sa %s</string>
+  <string name="media_route_menu_title">I-cast sa ...</string>
+  <string name="touch_to_cast">Pindutin upang i-cast ang Santa Tracker sa iyong TV</string>
+  <string name="connection_temp_lost">Pansamantalang nawala ang koneksyon sa cast device</string>
+  <string name="connection_recovered">Na-recover ang koneksyon sa cast device</string>
+  <string name="cast_game_controller">I-cast ang controller ng laro</string>
+  <string name="content_desc_mode_switch">lumipat ng mode mula dpad papuntang trackpad</string>
+  <string name="content_desc_right_button">kanan</string>
+  <string name="content_desc_up_button">taas</string>
+  <string name="content_desc_down_button">baba</string>
+  <string name="content_desc_enter_button">enter</string>
+  <string name="content_desc_left_button">kaliwa</string>
 </resources>

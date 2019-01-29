@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Tabloul de bord al lui Moș Crăciun</string>
+  <string name="current_location">UNDE E ACUM</string>
+  <string name="presents_delivered">CADOURI LIVRATE</string>
+  <string name="santa_status">CE MAI SPUNE MOȘ CRĂCIUN</string>
+  <string name="arriving_in">SOSEȘTE ÎN</string>
+  <string name="departing_in">PLEACĂ ÎN</string>
+  <string name="localtime">A SOSIT LA</string>
+  <string name="population">POPULAȚIE</string>
+  <string name="next_destination">DESTINAȚIA URMĂTOARE</string>
+  <string name="arriving_at">VA AJUNGE LA</string>
+  <string name="arrived_at">A AJUNS LA</string>
+  <string name="in_transit">E pe drum</string>
+  <string name="follow_santa">Urmărește-l pe Moș Crăciun</string>
+  <string name="lost_contact_with_santa">S-a pierdut contactul cu Moș Crăciun</string>
+  <string name="notification_nearby">Moș Crăciun e pe-aproape!</string>
+  <string name="notification_takeoff">Moș Crăciun a pornit!</string>
+  <string name="notification_unlock_video">Este disponibil un nou videoclip!</string>
+  <string name="notification_unlock_game">Este disponibil un joc nou!</string>
+  <string name="santa_arrives_in_your_area_in">MOȘ CRĂCIUN AJUNGE ÎN ZONA TA ÎN</string>
+  <string name="santa_is_approximately">MOȘ CRĂCIUN ESTE LA APROXIMATIV</string>
+  <string name="distance_km_away">%1$,d km%2$s distanță</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d (de) mile distanță</string>
+  <string name="did_you_know">ȘTIAȚI CĂ</string>
+  <string name="watch_movie">VIZIONEAZĂ FILMUL</string>
+  <string name="santa_update">NOUTĂȚI DE LA MOȘ CRĂCIUN</string>
+  <string name="elapsed_time">TIMP SCURS</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">SOSIRE</string>
+  <string name="weather">CONDIȚII METEO</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">Informații despre lume prezentate de National Geographic Bee</string>
+  <string name="photo">Fotografie</string>
+  <string name="photos">Fotografii</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">ÎNAPOI LA IMAGINEA VIDEO A LUI MOȘ CRĂCIUN</string>
+  <string name="update_from_santa">Noutăți de la Moș Crăciun</string>
+  <string name="trivia_from_santa">Informații de la Moș Crăciun</string>
+  <string name="photo_from_santa">Fotografie de la Moș Crăciun</string>
+  <string name="video_from_santa">Videoclip de la Moș Crăciun</string>
+  <string name="show_history">Vezi istoricul</string>
+  <string name="see_best_moments">Vezi cele mai bune momente din călătoria lui Moș Crăciun</string>
+  <string name="return_to_map">Înapoi la hartă</string>
+  <string name="santa_is_now_arriving_in_x">Moș Crăciun sosește acum la %s</string>
+  <string name="santa_has_handed_out_x_presents">Moș Crăciun a împărțit %s (de) cadouri</string>
+  <string name="new_update_from_santa">Alte noutăți de la Moș Crăciun</string>
+  <string name="new_trivia_from_santa">Informații noi de la Moș Crăciun</string>
+  <string name="new_video_from_santa">Videoclip nou de la Moș Crăciun</string>
+  <string name="new_photo_from_santa">Fotografie nouă de la Moș Crăciun</string>
+  <string name="cast_overlay_text">Urmărește-l pe Moș Crăciun pe marele ecran!\nAtinge acest buton pentru a vedea călătoria Moșului la televizor, folosind Chromecast.</string>
+  <string name="menu_media_router_title">Butonul de proiecție</string>
+</resources>

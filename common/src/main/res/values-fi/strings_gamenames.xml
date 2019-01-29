@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Gumball</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Muistipeli</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Tontturakettireppu</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Rocket Sleigh</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Dasher Dancer</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Snowdown</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">Kaupunkivisa</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">Lahjaseikkailu</string>
+  <string name="gumball">Gumball</string>
+  <string name="memory">Muistipeli</string>
+  <string name="elf_jetpack">Tontturakettireppu</string>
+  <string name="rocket">Rocket Sleigh</string>
+  <string name="dancer">Dasher Dancer</string>
+  <string name="cityquiz">Kaupunkivisa</string>
+  <string name="present_quest">Lahjaseikkailu</string>
+  <string name="santa_snap">Pukin pikakuvat</string>
+  <string name="present_throw">Lahjanheitto</string>
+  <string name="jetpack">Tonttu-jetpack</string>
+  <string name="web_airport">Korvatunturin lentokenttä</string>
+  <string name="web_boatload">Lahjalinko</string>
+  <string name="web_clausdraws">Pukin piirustuspaja</string>
+  <string name="web_codeboogie">Kooditanssi</string>
+  <string name="web_codelab">Koodauslabra</string>
+  <string name="web_gumball">Purkkapallo</string>
+  <string name="web_jamband">Tonttujen bilebändi</string>
+  <string name="web_penguindash">Pingviinikilpa</string>
+  <string name="web_presentbounce">Pomppivat paketit</string>
+  <string name="web_presentdrop">Lahjapudotus</string>
+  <string name="web_racer">Petterin kilpa-ajo</string>
+  <string name="web_runner">Porojuoksu</string>
+  <string name="web_santasearch">Pukkihaku</string>
+  <string name="web_santaselfie">Pukin selfie</string>
+  <string name="web_seasonofgiving">Antamisen aika</string>
+  <string name="web_elfski">Tonttuslalom</string>
+  <string name="web_snowball">Lumisota</string>
+  <string name="web_snowflake">Koodaa lumihiutale</string>
+  <string name="web_speedsketch">Pikapiirros</string>
+  <string name="web_wrapbattle">Paketointikilpa</string>
+  <string name="web_elfmaker">Tontuntekijä</string>
+  <string name="video_santa_is_back">Työt kutsuvat</string>
+  <string name="video_office_prank">Toimistojekku</string>
+  <string name="video_carpool">Kimppakyyti</string>
 </resources>

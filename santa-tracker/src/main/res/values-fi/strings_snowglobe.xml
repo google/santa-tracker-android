@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,10 +15,10 @@
   -->
 
 <resources>
-  <string name="snowglobe_processing_message" translation_description="In-progress message on dialog shown when a customised snow globe/ornament is being created on the device.">Koristettasi valmistellaan!</string>
-  <string name="snowglobe_take_picture_button" translation_description="Label for button that opens the camera to take a photo. Short 1-2 word string">Ota kuva</string>
-  <string name="snowglobe_retry_picture_button" translation_description="Label for button that takes a new photo and discards the old one. Short 1-2 word string">Yritä uudelleen</string>
-  <string name="snowglobe_exit_button" translation_description="Content description for button that exists a screen">Poistu</string>
-  <string name="snowglobe_share_title" translation_description="Title for share dialog from which a user generated snow globe can be shared.">Jaa lumisadepallo:</string>
-  <string name="snowglobe_share_message" translation_description="Label for button that starts processing of the customised snow globe into a sharable image">Kuvaasi valmistellaan!</string>
+  <string name="snowglobe_processing_message">Koristettasi valmistellaan!</string>
+  <string name="snowglobe_take_picture_button">Ota kuva</string>
+  <string name="snowglobe_retry_picture_button">Yritä uudelleen</string>
+  <string name="snowglobe_exit_button">Poistu</string>
+  <string name="snowglobe_share_title">Jaa lumisadepallo:</string>
+  <string name="snowglobe_share_message">Kuvaasi valmistellaan!</string>
 </resources>

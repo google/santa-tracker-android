@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="trackerPrimary">#16cc82</color>
+    <color name="trackerPrimaryHighlight">#1DC07D</color>
+    <color name="trackerPrimaryDark">#109f65</color>
+    <color name="trackerAccent">#87d745</color>
+    <color name="card_text">#ffffff</color>
+    <color name="destination_button_normal">#89000000</color>
+    <color name="overlayDestinationCardFilter">#b2138e61</color>
+
+    <color name="card_background_destination">#139538</color>
+    <color name="card_background_photo">@color/trackerPrimary</color>
+    <color name="card_background_movie">#FF5722</color>
+    <color name="card_background_update">@color/trackerPrimary</color>
+    <color name="santacamDashboardText">#9affb4</color>
+    <color name="SantaBlueDark">#283593</color>
+    <color name="SantaWhite">#FFFFFF</color>
+
+    <color name="memory_match_splash_screen_background">#789088</color>
+    <color name="gumball_tilt_splash_screen_background">#885090</color>
+    <color name="speed_sketch_splash_screen_background">#80A058</color>
+    <color name="wrap_battle_splash_screen_background">#786880</color>
+    <color name="code_boogie_splash_screen_background">#686890</color>
+    <color name="elf_snowboarding_splash_screen_background">#6898B0</color>
+    <color name="santa_selfie_splash_screen_background">#A87880</color>
+    <color name="track_santa_splash_screen_background">#4898A0</color>
+    <color name="reindeer_runner_splash_screen_background">#6890A8</color>
+    <color name="present_drop_splash_screen_background">#588090</color>
+    <color name="rocket_sleigh_splash_screen_background">#A8A8B0</color>
+    <color name="present_quest_splash_screen_background">#7860A0</color>
+    <color name="dasher_dancer_splash_screen_background">#7f3d86</color>
+    <color name="elf_jamband_splash_screen_background">#58A060</color>
+    <color name="snowball_run_splash_screen_background">#708088</color>
+    <color name="gift_slingshot_splash_screen_background">#B05068</color>
+    <color name="penguin_swim_splash_screen_background">#90C8C0</color>
+    <color name="present_bounce_splash_screen_background">#509870</color>
+    <color name="city_quiz_splash_screen_background">#68A8A8</color>
+    <color name="code_lab_splash_screen_background">#9850A0</color>
+    <color name="airport_splash_screen_background">#88A0A8</color>
+    <color name="penguin_dash_splash_screen_background">#8888A8</color>
+    <color name="snowball_storm_splash_screen_background">#408080</color>
+    <color name="rudolph_racer_splash_screen_background">#60B080</color>
+    <color name="santa_search_splash_screen_background">#605060</color>
+    <color name="claus_draws_splash_screen_background">#504888</color>
+    <color name="season_of_giving_splash_screen_background">#50A868</color>
+    <color name="elf_jetpack_splash_screen_background">#A098A8</color>
+    <color name="santa_snap_splash_screen_background">#60B060</color>
+    <color name="present_throw_splash_screen_background">#FB8C00</color>
+    <color name="elf_maker_splash_screen_background">#9E4A20</color>
+
+    <color name="loading_web_background_blue">#ff00c3ea</color>
+
+</resources>

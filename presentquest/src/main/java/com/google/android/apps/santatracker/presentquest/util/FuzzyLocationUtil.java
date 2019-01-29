@@ -15,16 +15,11 @@
  */
 package com.google.android.apps.santatracker.presentquest.util;
 
-import android.util.Log;
-
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.Random;
 
-/**
- * Utility class to slightly fuzz locations
- */
+/** Utility class to slightly fuzz locations */
 public class FuzzyLocationUtil {
 
     private static final double MIN_FUZZ = 0.0001f;
@@ -47,5 +42,4 @@ public class FuzzyLocationUtil {
             return -1.0 * randOffset;
         }
     }
-
 }

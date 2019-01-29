@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -23,7 +23,7 @@
                 tools:context="com.google.android.apps.santatracker.TakeoffActivity"
                 tools:deviceIds="wear_round">
 
-    <com.google.android.apps.santatracker.village.VillageView
+    <com.google.android.apps.santatracker.customviews.VillageView
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/villageView"
             android:layout_width="fill_parent"
@@ -60,7 +60,7 @@
                             android:layout_height="wrap_content"
                             android:layout_width="match_parent"
                             android:text="Santa has taken off TESTING"
-                            android:textColor="@color/black"
+                            android:textColor="@color/darken_background"
                             android:textSize="18sp"/>
 
                 </LinearLayout>

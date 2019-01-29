@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Jogar</string>
-  <string name="level" translation_description="Label shown under the user's current level">NÍVEL</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Oficinas</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Desbloqueie no nível %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">O Papai Noel trouxe um presente!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">O presente está muito longe!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">A oficina está muito longe!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Colete alguns presentes primeiro!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Sua sacola está cheia!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Oficina transferida</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Transferência cancelada</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Essa oficina já foi transferida hoje. Tente novamente amanhã.</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Venha até aqui!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">O jogo Caça ao presente precisa acessar sua localização para ajudar você a encontrar os presentes do Papai Noel.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Permissão necessária</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">O jogo Caça ao presente não funciona sem acesso à sua localização. Ative as permissões de localização nas Configurações.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Permissões necessárias ausentes.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Próxima</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Os presentes estão caindo\ndo trenó do Papai Noel!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Caminhe até as marcações no mundo\nreal para pegar os presentes.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Quando sua sacola estiver cheia,\ncaminhe até uma oficina para esvaziá-la</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Vamos lá!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">Há um presente por perto!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Sua sacola está quase cheia!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Esvazie sua sacola em uma oficina.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Você desbloqueou uma nova oficina!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Clique no presente para pegá-lo.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Clique na sua oficina para descarregar os presentes.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">de 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">CHEIA</string>
+  <string name="play">Jogar</string>
+  <string name="level">NÍVEL</string>
+  <string name="workshops">Oficinas</string>
+  <string name="unlock_at_level">Desbloqueie no nível %1$d</string>
+  <string name="present_dropped">O Papai Noel trouxe um presente!</string>
+  <string name="present_too_far">O presente está muito longe!</string>
+  <string name="workshop_too_far">A oficina está muito longe!</string>
+  <string name="no_presents_collected">Colete alguns presentes primeiro!</string>
+  <string name="bag_is_full">Sua sacola está cheia!</string>
+  <string name="workshop_moved">Oficina transferida</string>
+  <string name="move_canceled">Transferência cancelada</string>
+  <string name="workshop_move_too_soon">Essa oficina já foi transferida hoje. Tente novamente amanhã.</string>
+  <string name="go_here">Venha até aqui!</string>
+  <string name="perm_location_rationale">O jogo Caça ao presente precisa acessar sua localização para ajudar você a encontrar os presentes do Papai Noel.</string>
+  <string name="perm_required">Permissão necessária</string>
+  <string name="perm_go_to_settings">O jogo Caça ao presente não funciona sem acesso à sua localização. Ative as permissões de localização nas Configurações.</string>
+  <string name="required_permissions_missing">Permissões necessárias ausentes.</string>
+  <string name="next">Próxima</string>
+  <string name="onboarding_msg_1">Os presentes estão caindo\ndo trenó do Papai Noel!</string>
+  <string name="onboarding_msg_2">Caminhe até as marcações no mundo\nreal para pegar os presentes.</string>
+  <string name="onboarding_msg_3">Quando sua sacola estiver cheia,\ncaminhe até uma oficina para esvaziá-la</string>
+  <string name="onboarding_msg_4">Vamos lá!</string>
+  <string name="msg_present_nearby">Há um presente por perto!</string>
+  <string name="msg_bag_almost_full">Sua sacola está quase cheia!</string>
+  <string name="msg_unload_bag">Esvazie sua sacola em uma oficina.</string>
+  <string name="msg_unlocked_workshop">Você desbloqueou uma nova oficina!</string>
+  <string name="msg_click_present">Clique no presente para pegá-lo.</string>
+  <string name="msg_click_workshop">Clique na sua oficina para descarregar os presentes.</string>
+  <string name="level_denominator">de 12</string>
+  <string name="full">CHEIA</string>
+  <string name="distraction_warning">Não se esqueça de olhar à sua volta durante o jogo.</string>
 </resources>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -18,4 +18,11 @@
 <resources>
   <string name="watch_face_elf">[Éļƒ one]</string>
   <string name="watch_face_santa">[Šåñţå one]</string>
+  <string name="countdown_complication_label">[Çöûñţðöŵñ ţö Šåñţå one two three]</string>
+  <string name="short_christmas_greeting">[Ţöðåý¡ one]</string>
+  <string name="long_christmas_greeting">[Méŕŕý Çĥŕîšţmåš¡ 🎅 one two three]</string>
+  <string name="desc_logo_for_santa_tracker">[Ļöĝö ƒöŕ Šåñţå Ţŕåçķéŕ one two three four five]</string>
+  <string name="desc_right_complication_config">[Ŕîĝĥţ Çömþļîçåţîöñ one two three]</string>
+  <string name="desc_lower_complication_config">[Бöţţöm çömþļîçåţîöñ one two three]</string>
+  <string name="desc_left_complication_config">[Ļéƒţ Çömþļîçåţîöñ one two three]</string>
 </resources>

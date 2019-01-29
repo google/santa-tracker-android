@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Играть</string>
-  <string name="level" translation_description="Label shown under the user's current level">УРОВЕНЬ</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Мастерские</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Доступно на уровне %1$d.</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">На карте новый подарок!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Подарок слишком далеко</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Склад слишком далеко.</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Сначала соберите подарки.</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Мешок заполнен!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Склад перемещен</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Действие отменено</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Вы уже перемещали этот склад сегодня, попробуйте завтра</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Перейдите сюда</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">Разрешите отслеживать ваше местоположение, и вы сможете искать подарки Санты.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Требуется разрешение</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">Разрешите отслеживать ваше местоположение в настройках, и вы сможете искать подарки Санты.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Отсутствуют необходимые разрешения.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Далее</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Из саней Санты\nпадают подарки.</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Выпавшие подарки отмечены на карте.\nВаша задача – их собирать.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Когда у вас накопится целый мешок\nподарков, доставьте их в мастерскую.</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Поехали!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">Где-то рядом есть подарок!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Мешок почти заполнен!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Доставьте подарки в мастерскую</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Вы открыли новую мастерскую!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Чтобы взять подарок, нажмите на него.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Чтобы оставить подарки в мастерской, нажмите на нее.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">из 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">МЕСТА В МЕШКЕ ЗАНЯТО</string>
+  <string name="play">Играть</string>
+  <string name="level">УРОВЕНЬ</string>
+  <string name="workshops">Мастерские</string>
+  <string name="unlock_at_level">Доступно на уровне %1$d.</string>
+  <string name="present_dropped">На карте новый подарок!</string>
+  <string name="present_too_far">Подарок слишком далеко</string>
+  <string name="workshop_too_far">Склад слишком далеко.</string>
+  <string name="no_presents_collected">Сначала соберите подарки.</string>
+  <string name="bag_is_full">Мешок заполнен!</string>
+  <string name="workshop_moved">Склад перемещен</string>
+  <string name="move_canceled">Действие отменено</string>
+  <string name="workshop_move_too_soon">Вы уже перемещали этот склад сегодня, попробуйте завтра</string>
+  <string name="go_here">Перейдите сюда</string>
+  <string name="perm_location_rationale">Разрешите отслеживать ваше местоположение, и вы сможете искать подарки Санты.</string>
+  <string name="perm_required">Требуется разрешение</string>
+  <string name="perm_go_to_settings">Разрешите отслеживать ваше местоположение в настройках, и вы сможете искать подарки Санты.</string>
+  <string name="required_permissions_missing">Отсутствуют необходимые разрешения.</string>
+  <string name="next">Далее</string>
+  <string name="onboarding_msg_1">Из саней Санты\nпадают подарки.</string>
+  <string name="onboarding_msg_2">Выпавшие подарки отмечены на карте.\nВаша задача – их собирать.</string>
+  <string name="onboarding_msg_3">Когда у вас накопится целый мешок\nподарков, доставьте их в мастерскую.</string>
+  <string name="onboarding_msg_4">Поехали!</string>
+  <string name="msg_present_nearby">Где-то рядом есть подарок!</string>
+  <string name="msg_bag_almost_full">Мешок почти заполнен!</string>
+  <string name="msg_unload_bag">Доставьте подарки в мастерскую</string>
+  <string name="msg_unlocked_workshop">Вы открыли новую мастерскую!</string>
+  <string name="msg_click_present">Чтобы взять подарок, нажмите на него.</string>
+  <string name="msg_click_workshop">Чтобы оставить подарки в мастерской, нажмите на нее.</string>
+  <string name="level_denominator">из 12</string>
+  <string name="full">МЕСТА В МЕШКЕ ЗАНЯТО</string>
+  <string name="distraction_warning">Во время игры не теряйте бдительность и следите за тем, что происходит вокруг вас.</string>
 </resources>

@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">Đang truyền trên %s</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">Truyền trên...</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">Chạm để truyền Theo chân ông già Noel vào truyền hình của bạn</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">Kết nối với thiết bị truyền tạm thời bị mất</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">Kết nối với thiết bị truyền được hồi phục</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">Công cụ điều khiển trò chơi truyền</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">chế độ chuyển đổi từ dpad sang trackpad</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">phải</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">lên</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">xuống</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">nhập</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">trái</string>
+  <string name="media_route_casting_on">Đang truyền trên %s</string>
+  <string name="media_route_menu_title">Truyền trên...</string>
+  <string name="touch_to_cast">Chạm để truyền Theo chân ông già Noel vào truyền hình của bạn</string>
+  <string name="connection_temp_lost">Kết nối với thiết bị truyền tạm thời bị mất</string>
+  <string name="connection_recovered">Kết nối với thiết bị truyền được hồi phục</string>
+  <string name="cast_game_controller">Công cụ điều khiển trò chơi truyền</string>
+  <string name="content_desc_mode_switch">chế độ chuyển đổi từ dpad sang trackpad</string>
+  <string name="content_desc_right_button">phải</string>
+  <string name="content_desc_up_button">lên</string>
+  <string name="content_desc_down_button">xuống</string>
+  <string name="content_desc_enter_button">nhập</string>
+  <string name="content_desc_left_button">trái</string>
 </resources>

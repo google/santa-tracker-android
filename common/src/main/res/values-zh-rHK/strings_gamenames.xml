@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Gumball</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Memory</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">小精靈飛行背包</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">火箭雪橇</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">猛衝‧跳舞</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Snowdown</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">城市問答</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">禮物尋寶</string>
+  <string name="gumball">Gumball</string>
+  <string name="memory">Memory</string>
+  <string name="elf_jetpack">小精靈飛行背包</string>
+  <string name="rocket">火箭雪橇</string>
+  <string name="dancer">猛衝‧跳舞</string>
+  <string name="cityquiz">城市問答</string>
+  <string name="present_quest">禮物尋寶</string>
+  <string name="santa_snap">聖誕老人快照</string>
+  <string name="present_throw">禮物拋拋樂</string>
+  <string name="jetpack">小精靈一飛衝天</string>
+  <string name="web_airport">北極機場</string>
+  <string name="web_boatload">禮物彈弓手</string>
+  <string name="web_clausdraws">聖誕老人畫畫</string>
+  <string name="web_codeboogie">編碼熱舞</string>
+  <string name="web_codelab">編碼實驗室</string>
+  <string name="web_gumball">口香糖遊戲機</string>
+  <string name="web_jamband">小精靈 Jam 歌夾 Band</string>
+  <string name="web_penguindash">企鵝衝衝衝</string>
+  <string name="web_presentbounce">禮物彈彈跳</string>
+  <string name="web_presentdrop">禮物從天降</string>
+  <string name="web_racer">聖誕馴鹿競賽</string>
+  <string name="web_runner">馴鹿狂奔接大禮</string>
+  <string name="web_santasearch">尋找聖誕老人</string>
+  <string name="web_santaselfie">聖誕老人自拍</string>
+  <string name="web_seasonofgiving">奉獻的季節</string>
+  <string name="web_elfski">小精靈高山滑雪</string>
+  <string name="web_snowball">雪球大戰</string>
+  <string name="web_snowflake">編碼雪花樂</string>
+  <string name="web_speedsketch">極速繪畫</string>
+  <string name="web_wrapbattle">聖誕禮物密密包</string>
+  <string name="web_elfmaker">小精靈製造器</string>
+  <string name="video_santa_is_back">聖誕老人復工了</string>
+  <string name="video_office_prank">辦公室惡作劇</string>
+  <string name="video_carpool">一起坐車</string>
 </resources>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Gumball</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Memória</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Elf Jetpack</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Trenó-foguete</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Dançarino Veloz</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Snowdown</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">Questionário de cidades</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">Caça aos presentes</string>
+  <string name="gumball">Pastilha elástica</string>
+  <string name="memory">Memória</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Trenó-foguete</string>
+  <string name="dancer">Dançarino veloz</string>
+  <string name="cityquiz">Questionário de cidades</string>
+  <string name="present_quest">Caça aos presentes</string>
+  <string name="santa_snap">Foto com o Pai Natal</string>
+  <string name="present_throw">Lançamento de presentes</string>
+  <string name="jetpack">Elfos com propulsores a jato</string>
+  <string name="web_airport">Aeroporto do Polo Norte</string>
+  <string name="web_boatload">Fisga de presentes</string>
+  <string name="web_clausdraws">Desenhos festivos</string>
+  <string name="web_codeboogie">Baile de código</string>
+  <string name="web_codelab">Laboratório de Códigos</string>
+  <string name="web_gumball">Flipper dos rebuçados</string>
+  <string name="web_jamband">Banda dos gnomos</string>
+  <string name="web_penguindash">Corrida do pinguim</string>
+  <string name="web_presentbounce">Salto dos presentes</string>
+  <string name="web_presentdrop">Lançamento de presentes</string>
+  <string name="web_racer">Piloto Rodolfo</string>
+  <string name="web_runner">Corrida da rena</string>
+  <string name="web_santasearch">Procura do Pai Natal</string>
+  <string name="web_santaselfie">Selfie do Pai Natal</string>
+  <string name="web_seasonofgiving">Tempo de dar</string>
+  <string name="web_elfski">Elfos esquiadores</string>
+  <string name="web_snowball">Tempestade de bolas de neve</string>
+  <string name="web_snowflake">Codifique um floco de neve</string>
+  <string name="web_speedsketch">Esboços rápidos</string>
+  <string name="web_wrapbattle">Toca a embrulhar</string>
+  <string name="web_elfmaker">Criador de elfos</string>
+  <string name="video_santa_is_back">De volta ao trabalho</string>
+  <string name="video_office_prank">Praxe no escritório</string>
+  <string name="video_carpool">Partilha de carro</string>
 </resources>

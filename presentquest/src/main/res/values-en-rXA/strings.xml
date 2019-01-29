@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">[Þļåý one]</string>
-  <string name="level" translation_description="Label shown under the user's current level">[ĻÉVÉĻ one]</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">[Ŵöŕķšĥöþš one two]</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">[Ûñļöçķ åţ ļévéļ ᐅ%1$dᐊ one two three four]</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">[Šåñţå ðŕöþþéð å þŕéšéñţ¡ one two three four five]</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">[Þŕéšéñţ ţöö ƒåŕ åŵåý¡ one two three four five]</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">[Ŵöŕķšĥöþ ţöö ƒåŕ åŵåý¡ one two three four five]</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">[Çöļļéçţ šömé þŕéšéñţš ƒîŕšţ¡ one two three four five six]</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">[Ýöûŕ бåĝ îš ƒûļļ¡ one two three four]</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">[Ŵöŕķšĥöþ mövéð one two]</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">[Mövé çåñçéļéð one two]</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">[Åļŕéåðý mövéð ţĥîš ŵöŕķšĥöþ ţöðåý, ţŕý åĝåîñ ţömöŕŕöŵ one two three four five six seven eight nine ten eleven]</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">[Ĝö ĥéŕé¡ one]</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">[Þŕéšéñţ Qûéšţ ñééðš åççéšš ţö ýöûŕ ļöçåţîöñ ţö ĥéļþ ýöû ƒîñð Šåñţå\'š þŕéšéñţš. one two three four five six seven eight nine ten eleven twelve thirteen fourteen]</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">[Þéŕmîššîöñ Ŕéqûîŕéð one two three]</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">[Þŕéšéñţ Qûéšţ ŵöñ\'ţ ŵöŕķ ŵîţĥöûţ åççéšš ţö ýöûŕ ļöçåţîöñ. Þļéåšé éñåбļé Ļöçåţîöñ þéŕmîššîöñš îñ Šéţţîñĝš. one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen]</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">[Ŕéqûîŕéð þéŕmîššîöñš mîššîñĝ. one two three four]</string>
-  <string name="next" translation_description="Button text to advance through tutorial">[Ñéxţ one]</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">[Þŕéšéñţš åŕé ƒåļļîñĝ\ñöûţ öƒ Šåñţå\'š šļéîĝĥ¡ one two three four five six seven eight nine]</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">[Ŵåļķ ţö ţĥé þŕéšéñţ þîñš îñ\ñŕéåļ ļîƒé ţö çåţçĥ ţĥém. one two three four five six seven eight nine ten eleven]</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">[Öñçé ýöûŕ бåĝ îš ƒûļļ,\ñŵåļķ ţö å ŵöŕķšĥöþ ţö ûñļöåð one two three four five six seven eight nine ten eleven]</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">[Ļéţ\'š Ĝö¡ one two]</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">[Ţĥéŕé\'š å þŕéšéñţ ñéåŕбý¡ one two three four five six]</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">[Ýöûŕ бåĝ îš åļmöšţ ƒûļļ¡ one two three four five]</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">[Ûñļöåð ýöûŕ бåĝ åţ å ŵöŕķšĥöþ. one two three four five six seven]</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">[Ýöû ûñļöçķéð å ñéŵ ŵöŕķšĥöþ¡ one two three four five six]</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">[Çļîçķ öñ å þŕéšéñţ ţö þîçķ îţ ûþ. one two three four five six seven]</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">[Çļîçķ öñ ýöûŕ ŵöŕķšĥöþ ţö ûñļöåð þŕéšéñţš. one two three four five six seven eight nine]</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">[öƒ 12 one]</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">[FÛĻĻ one]</string>
+  <string name="play">[Þļåý one]</string>
+  <string name="level">[ĻÉVÉĻ one]</string>
+  <string name="workshops">[Ŵöŕķšĥöþš one two]</string>
+  <string name="unlock_at_level">[Ûñļöçķ åţ ļévéļ ᐅ%1$dᐊ one two three four]</string>
+  <string name="present_dropped">[Šåñţå ðŕöþþéð å þŕéšéñţ¡ one two three four five]</string>
+  <string name="present_too_far">[Þŕéšéñţ ţöö ƒåŕ åŵåý¡ one two three four five]</string>
+  <string name="workshop_too_far">[Ŵöŕķšĥöþ ţöö ƒåŕ åŵåý¡ one two three four five]</string>
+  <string name="no_presents_collected">[Çöļļéçţ šömé þŕéšéñţš ƒîŕšţ¡ one two three four five six]</string>
+  <string name="bag_is_full">[Ýöûŕ бåĝ îš ƒûļļ¡ one two three four]</string>
+  <string name="workshop_moved">[Ŵöŕķšĥöþ mövéð one two]</string>
+  <string name="move_canceled">[Mövé çåñçéļéð one two]</string>
+  <string name="workshop_move_too_soon">[Åļŕéåðý mövéð ţĥîš ŵöŕķšĥöþ ţöðåý, ţŕý åĝåîñ ţömöŕŕöŵ one two three four five six seven eight nine ten eleven]</string>
+  <string name="go_here">[Ĝö ĥéŕé¡ one]</string>
+  <string name="perm_location_rationale">[Þŕéšéñţ Qûéšţ ñééðš åççéšš ţö ýöûŕ ļöçåţîöñ ţö ĥéļþ ýöû ƒîñð Šåñţå\'š þŕéšéñţš. one two three four five six seven eight nine ten eleven twelve thirteen fourteen]</string>
+  <string name="perm_required">[Þéŕmîššîöñ Ŕéqûîŕéð one two three]</string>
+  <string name="perm_go_to_settings">[Þŕéšéñţ Qûéšţ ŵöñ\'ţ ŵöŕķ ŵîţĥöûţ åççéšš ţö ýöûŕ ļöçåţîöñ. Þļéåšé éñåбļé Ļöçåţîöñ þéŕmîššîöñš îñ Šéţţîñĝš. one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen]</string>
+  <string name="required_permissions_missing">[Ŕéqûîŕéð þéŕmîššîöñš mîššîñĝ. one two three four]</string>
+  <string name="next">[Ñéxţ one]</string>
+  <string name="onboarding_msg_1">[Þŕéšéñţš åŕé ƒåļļîñĝ\ñöûţ öƒ Šåñţå\'š šļéîĝĥ¡ one two three four five six seven eight nine]</string>
+  <string name="onboarding_msg_2">[Ŵåļķ ţö ţĥé þŕéšéñţ þîñš îñ\ñŕéåļ ļîƒé ţö çåţçĥ ţĥém. one two three four five six seven eight nine ten eleven]</string>
+  <string name="onboarding_msg_3">[Öñçé ýöûŕ бåĝ îš ƒûļļ,\ñŵåļķ ţö å ŵöŕķšĥöþ ţö ûñļöåð one two three four five six seven eight nine ten eleven]</string>
+  <string name="onboarding_msg_4">[Ļéţ\'š Ĝö¡ one two]</string>
+  <string name="msg_present_nearby">[Ţĥéŕé\'š å þŕéšéñţ ñéåŕбý¡ one two three four five six]</string>
+  <string name="msg_bag_almost_full">[Ýöûŕ бåĝ îš åļmöšţ ƒûļļ¡ one two three four five]</string>
+  <string name="msg_unload_bag">[Ûñļöåð ýöûŕ бåĝ åţ å ŵöŕķšĥöþ. one two three four five six seven]</string>
+  <string name="msg_unlocked_workshop">[Ýöû ûñļöçķéð å ñéŵ ŵöŕķšĥöþ¡ one two three four five six]</string>
+  <string name="msg_click_present">[Çļîçķ öñ å þŕéšéñţ ţö þîçķ îţ ûþ. one two three four five six seven]</string>
+  <string name="msg_click_workshop">[Çļîçķ öñ ýöûŕ ŵöŕķšĥöþ ţö ûñļöåð þŕéšéñţš. one two three four five six seven eight nine]</string>
+  <string name="level_denominator">[öƒ 12 one]</string>
+  <string name="full">[FÛĻĻ one]</string>
+  <string name="distraction_warning">[Þļéåšé бé åŵåŕé öƒ ýöûŕ šûŕŕöûñðîñĝš ŵĥéñ þļåýîñĝ. one two three four five six seven eight nine ten eleven]</string>
 </resources>

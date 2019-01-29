@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Gumball</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Memory</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Elf Jetpack</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Sania-rachetă</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Dansează cu Dasher</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Bulgăreală</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">Găsește orașul</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">În căutarea cadourilor</string>
+  <string name="gumball">Gumball</string>
+  <string name="memory">Memory</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Sania-rachetă</string>
+  <string name="dancer">Dansează cu Dasher</string>
+  <string name="cityquiz">Găsește orașul</string>
+  <string name="present_quest">În căutarea cadourilor</string>
+  <string name="santa_snap">Sesiune foto</string>
+  <string name="present_throw">Aruncarea cadourilor</string>
+  <string name="jetpack">Elf zburător</string>
+  <string name="web_airport">Aeroportul de la Polul Nord</string>
+  <string name="web_boatload">Praștia pentru cadouri</string>
+  <string name="web_clausdraws">Desenează cu Moș Crăciun</string>
+  <string name="web_codeboogie">Dans codificat</string>
+  <string name="web_codelab">Laborator de programare</string>
+  <string name="web_gumball">Direct la țintă</string>
+  <string name="web_jamband">Orchestra elfilor</string>
+  <string name="web_penguindash">Goana pinguinului</string>
+  <string name="web_presentbounce">Cadouri săltărețe</string>
+  <string name="web_presentdrop">Împărțirea cadourilor</string>
+  <string name="web_racer">Cursa lui Rudolph</string>
+  <string name="web_runner">Aleargă cu renii</string>
+  <string name="web_santasearch">Unde este Moș Crăciun?</string>
+  <string name="web_santaselfie">Moș Crăciun la frizer</string>
+  <string name="web_seasonofgiving">Anotimpul cadourilor</string>
+  <string name="web_elfski">Elfi schiori</string>
+  <string name="web_snowball">Furtună cu bulgări de zăpadă</string>
+  <string name="web_snowflake">Scrie codul unui fulg de zăpadă</string>
+  <string name="web_speedsketch">Ghicitori desenate</string>
+  <string name="web_wrapbattle">Bătălia de împachetat cadouri</string>
+  <string name="web_elfmaker">Creator de elfi</string>
+  <string name="video_santa_is_back">Înapoi la treabă</string>
+  <string name="video_office_prank">Farsă în birou</string>
+  <string name="video_carpool">În drum spre petrecere</string>
 </resources>

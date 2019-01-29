@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,7 +16,7 @@
   -->
 
 <resources>
-  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">Mời bạn bè theo dõi ông già Noel với Google</string>
-  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">Hãy dùng thử công cụ Theo chân ông già Noel và xem ông già Noel bay khắp thế giới!</string>
-  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">Tôi đã ghi %1$d khi chơi trò %2$s với các chú lùn trong công cụ Theo chân ông già Noel của Google, bạn có thể đánh bại số điểm đó không?</string>
+  <string name="invite_title">Mời bạn bè theo dõi ông già Noel với Google</string>
+  <string name="invite_message_generic">Hãy dùng thử công cụ Theo chân ông già Noel và xem ông già Noel bay khắp thế giới!</string>
+  <string name="invite_message_game_fmt">Tôi đã ghi %1$d khi chơi trò %2$s với các chú lùn trong công cụ Theo chân ông già Noel của Google, bạn có thể đánh bại số điểm đó không?</string>
 </resources>

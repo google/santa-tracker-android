@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">12월 24일에 산타를 추적해 보세요.</string>
+  <string name="present_quest_locked">선물 찾기 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="santa_snap_locked">산타 셀카가 곧 제공됩니다.</string>
+  <string name="gumball_locked">풍선껌 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="memory_locked">기억력 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="rocket_locked">로켓 썰매 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="dancer_locked">대셔 댄서 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="city_quiz_locked">도시 퀴즈 게임은 12월 1일부터 즐길 수 있습니다.</string>
+  <string name="generic_game_disabled">현재 %1$s 게임을 할 수 없습니다.</string>
+  <string name="generic_game_locked">%1$s은(는) 아직 사용할 수 없습니다. 나중에 다시 확인해 주세요.</string>
+  <string name="video">동영상</string>
+  <string name="video_locked">동영상 잠금은 12월 %1$d일에 해제됩니다.</string>
+  <string name="video_disabled">현재 동영상을 시청할 수 없습니다.</string>
+  <string name="play">게임하기</string>
+  <string name="watch">보기</string>
+</resources>

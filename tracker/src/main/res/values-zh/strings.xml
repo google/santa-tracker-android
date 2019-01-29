@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">圣诞老人行踪面板</string>
+  <string name="current_location">当前位置</string>
+  <string name="presents_delivered">送出的礼物数</string>
+  <string name="santa_status">圣诞老人状态</string>
+  <string name="arriving_in">抵达倒计时</string>
+  <string name="departing_in">出发倒计时</string>
+  <string name="localtime">已经抵达</string>
+  <string name="population">人口</string>
+  <string name="next_destination">下一个目的地</string>
+  <string name="arriving_at">即将抵达的目的地</string>
+  <string name="arrived_at">已经抵达的目的地</string>
+  <string name="in_transit">飞驰中</string>
+  <string name="follow_santa">追踪圣诞老人</string>
+  <string name="lost_contact_with_santa">与圣诞老人失去联系</string>
+  <string name="notification_nearby">圣诞老人就在附近！</string>
+  <string name="notification_takeoff">圣诞老人已经出发了！</string>
+  <string name="notification_unlock_video">新视频解锁啦！</string>
+  <string name="notification_unlock_game">新游戏解锁啦！</string>
+  <string name="santa_arrives_in_your_area_in">圣诞老人到达您所在区域的时间：</string>
+  <string name="santa_is_approximately">圣诞老人距离您大约</string>
+  <string name="distance_km_away">%1$,d 千米（%2$s）</string>
+  <string name="distance_optional_miles">\u0020（%,d 英里）</string>
+  <string name="distance_mi_away">%1$,d 英里</string>
+  <string name="did_you_know">您知道吗</string>
+  <string name="watch_movie">观看影片</string>
+  <string name="santa_update">圣诞老人最新行踪</string>
+  <string name="elapsed_time">经过时间</string>
+  <string name="wikipedia">维基百科</string>
+  <string name="arrival">到达时间</string>
+  <string name="weather">天气</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">世界小知识由 National Geographic Bee 提供</string>
+  <string name="photo">照片</string>
+  <string name="photos">照片</string>
+  <string name="street_view">街景</string>
+  <string name="back_to_santa_cam">返回圣诞老人追拍模式</string>
+  <string name="update_from_santa">圣诞老人动态</string>
+  <string name="trivia_from_santa">圣诞老人琐事</string>
+  <string name="photo_from_santa">圣诞老人照片</string>
+  <string name="video_from_santa">圣诞老人视频</string>
+  <string name="show_history">显示历史记录</string>
+  <string name="see_best_moments">查看圣诞老人旅途中的所有美好瞬间</string>
+  <string name="return_to_map">返回地图</string>
+  <string name="santa_is_now_arriving_in_x">圣诞老人即将到达%s</string>
+  <string name="santa_has_handed_out_x_presents">圣诞老人已送出 %s 份礼物</string>
+  <string name="new_update_from_santa">圣诞老人的最新动态</string>
+  <string name="new_trivia_from_santa">圣诞老人的最新花絮</string>
+  <string name="new_video_from_santa">圣诞老人的最新视频</string>
+  <string name="new_photo_from_santa">圣诞老人的最新照片</string>
+  <string name="cast_overlay_text">在大屏幕上追踪圣诞老人的足迹！\n点按此按钮，即可借助 Chromecast 在电视上查看圣诞老人的行程。</string>
+  <string name="menu_media_router_title">投射按钮</string>
+</resources>

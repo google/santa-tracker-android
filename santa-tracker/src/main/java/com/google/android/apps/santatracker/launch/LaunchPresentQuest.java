@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2016 Google Inc. All Rights Reserved.
+ * Copyright 2019. Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,38 +17,48 @@ package com.google.android.apps.santatracker.launch;
 
 import android.content.Intent;
 import android.view.View;
-
-import com.google.android.apps.santatracker.games.SplashActivity;
-import com.google.android.apps.santatracker.presentquest.MapsActivity;
-
 import com.google.android.apps.santatracker.R;
+import com.google.android.apps.santatracker.games.SplashActivity;
 
-/**
- * Launcher to launch the Present Quest game.
- */
-
-public class LaunchPresentQuest extends AbstractLaunch {
+/** Launcher to launch the Present Quest game. */
+public class LaunchPresentQuest extends AbstractFeatureModuleLaunch {
 
     /**
      * Constructs a new Present Quest launch (marker).
      *
-     * @param context   The application (Santa) context
+     * @param context The application (Santa) context
      */
     public LaunchPresentQuest(SantaContext context, LauncherDataChangedCallback adapter) {
-        super(context, adapter, R.string.present_quest, R.drawable.android_game_cards_present_quest);
+        super(
+                context,
+                adapter,
+                R.string.present_quest,
+                R.drawable.android_game_cards_present_quest);
+    }
+
+    @Override
+    public int getFeatureModuleNameId() {
+        return R.string.feature_present_quest;
     }
 
     @Override
     public void onClick(View v) {
-        switch (mState) {
+        switch (getState()) {
             case STATE_READY:
             case STATE_FINISHED:
-                Intent intent = SplashActivity.getIntent(mContext.getActivityContext(),
-                        R.drawable.android_game_cards_present_quest,
-                        R.string.present_quest,
-                        false /* portrait */,
-                        MapsActivity.class);
-                mContext.launchActivity(intent);
+                Intent intent =
+                        SplashActivity.getIntent(
+                                mContext.getActivity(),
+                                getCardDrawableRes(),
+                                R.string.present_quest,
+                                getFeatureModuleNameId(),
+                                R.color.present_quest_splash_screen_background,
+                                false /* portrait */,
+                                getTitle(),
+                                getImageView(),
+                                mContext.getApplicationContext().getPackageName(),
+                                "com.google.android.apps.santatracker.presentquest.ui.map.MapsActivity");
+                mContext.launchActivity(intent, getActivityOptions());
                 break;
             case STATE_DISABLED:
                 notify(mContext.getApplicationContext(), getDisabledString(R.string.present_quest));
@@ -62,7 +72,7 @@ public class LaunchPresentQuest extends AbstractLaunch {
 
     @Override
     public boolean onLongClick(View v) {
-        switch (mState) {
+        switch (getState()) {
             case STATE_READY:
             case STATE_FINISHED:
                 notify(mContext.getApplicationContext(), R.string.present_quest);
@@ -80,7 +90,7 @@ public class LaunchPresentQuest extends AbstractLaunch {
 
     @Override
     public boolean handleVoiceAction(Intent intent) {
-        return clickIfMatchesDescription(intent, VoiceAction.ACTION_PLAY_GAME,
-                VoiceAction.ACTION_PLAY_GAME_EXTRA);
+        return clickIfMatchesDescription(
+                intent, VoiceAction.ACTION_PLAY_GAME, VoiceAction.ACTION_PLAY_GAME_EXTRA);
     }
 }

@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Sekot Ziemassvētku vecītim</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Sekot\nZiemassvētku vecītim</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Ziemassvētku vecītis dosies ceļā pēc</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Ziemassvētku vecītis ir aizņemts, gatavojoties nākamajam gadam.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">Skatīt 2014. gada galamērķus</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Tiek mēģināts sazināties ar Ziemassvētku vecīti.</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Vēl joprojām tiek mēģināts sazināties ar Ziemassvētku vecīti.</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">d</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">h</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">min.</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">s</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Kopīgot</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Kopīgot ar draugiem</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">Apraides poga</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Juridiskie paziņojumi un konfidencialitāte</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">Juridiskais paziņojums</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">Konfidencialitātes politika</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">Pakalpojumu sniegšanas noteikumi</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">Atklātā pirmkoda licences</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Atklātā pirmkoda licences Google Play pakalpojumiem</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Lietotne Santa vietnē GitHub</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">Spēle Pie Noon vietnē GitHub</string>
-  <string name="scene_not_available" translation_description="Not available yet">Vēl nav pieejams.</string>
+  <string name="track_santa">Sekot Ziemassvētku vecītim</string>
+  <string name="track_santa_two_lines">Sekot\nZiemassvētku vecītim</string>
+  <string name="santa_takes_off_in">Ziemassvētku vecītis dosies ceļā pēc</string>
+  <string name="santa_is_busy_preparing_for_next_year">Ziemassvētku vecītis ir aizņemts, gatavojoties nākamajam gadam.</string>
+  <string name="view_old_stops">Skatīt 2014. gada galamērķus</string>
+  <string name="contacting_santa">Tiek mēģināts sazināties ar Ziemassvētku vecīti.</string>
+  <string name="still_trying_to_reach_santa">Vēl joprojām tiek mēģināts sazināties ar Ziemassvētku vecīti.</string>
+  <string name="days">d</string>
+  <string name="hrs">h</string>
+  <string name="min">min.</string>
+  <string name="sec">s</string>
+  <string name="menu_share">Kopīgot</string>
+  <string name="menu_share_friends">Kopīgot ar draugiem</string>
+  <string name="legal_notice">Juridiskie paziņojumi un konfidencialitāte</string>
+  <string name="legal_notice_text">Juridiskais paziņojums</string>
+  <string name="privacy_policy">Konfidencialitātes politika</string>
+  <string name="terms_of_service">Pakalpojumu sniegšanas noteikumi</string>
+  <string name="open_source_licenses">Atklātā pirmkoda licences</string>
+  <string name="open_source_repo_santa">Lietotne Santa vietnē GitHub</string>
+  <string name="scene_not_available">Vēl nav pieejams.</string>
   <string name="sign_out">Izrakstīties</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Laiks līdz pacelšanās brīdim</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d no %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d punkti</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">Kur tas atrodas?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">Fotoattēla autors: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">Sekojiet Ziemassvētku vecītim uz lielā ekrāna!\nPieskarieties šai pogai, lai skatītu Ziemassvētku vecīša ceļojumu televizorā, izmantojot Chromecast.</string>
+  <string name="until_takeoff">Laiks līdz pacelšanās brīdim</string>
+  <string name="web_scene_error">Diemžēl nevarēja ielādēt ainu.</string>
+  <string name="check_back_daily">Jaunas spēles katru dienu.</string>
+  <string name="new_games">Jaunas spēles</string>
+  <string name="new_card">Jauns</string>
+  <string name="tracker_opens_date">Sākuma datums: %1$s</string>
+  <string name="time">LAIKS</string>
+  <string name="download_dialog_title">Lejupielādējiet %1$s</string>
+  <string name="download_dialog_message">Spēle ir jālejupielādē no Play veikala, pirms varat to spēlēt. Pašlaik šī ierīce ir savienota ar maksas tīklu, kas no jums var iekasēt maksu par pārsūtītajiem datiem.\n\nVai vēlaties turpināt?</string>
+  <string name="elf_maker_write_success">Attēls ir saglabāts pie jūsu fotoattēliem</string>
+  <string name="elf_maker_write_fail">Radās kļūda, saglabājot attēlu jūsu ierīces fotoattēlos</string>
 </resources>

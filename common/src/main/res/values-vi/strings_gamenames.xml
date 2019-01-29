@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Trò chơi Gumball</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Trò chơi Trí nhớ</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Trò chơi Elf Jetpack</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Rocket Sleigh</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Dasher Dancer</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Snowdown</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">Đoán tên thành phố</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">Săn tìm quà tặng</string>
+  <string name="gumball">Trò chơi Gumball</string>
+  <string name="memory">Trò chơi Trí nhớ</string>
+  <string name="elf_jetpack">Trò chơi Elf Jetpack</string>
+  <string name="rocket">Rocket Sleigh</string>
+  <string name="dancer">Dasher Dancer</string>
+  <string name="cityquiz">Đoán tên thành phố</string>
+  <string name="present_quest">Săn tìm quà tặng</string>
+  <string name="santa_snap">Santa Snap</string>
+  <string name="present_throw">Tung quà</string>
+  <string name="jetpack">Ba lô phản lực của chú lùn</string>
+  <string name="web_airport">Sân bay Bắc Cực</string>
+  <string name="web_boatload">Súng bắn quà</string>
+  <string name="web_clausdraws">Vẽ tranh ông già Noel</string>
+  <string name="web_codeboogie">Vũ điệu của mã</string>
+  <string name="web_codelab">Phòng thí nghiệm mã</string>
+  <string name="web_gumball">Nghiêng Gumball</string>
+  <string name="web_jamband">Ban nhạc của chú lùn</string>
+  <string name="web_penguindash">Chim cánh cụt nhặt quà</string>
+  <string name="web_presentbounce">Trò chơi nảy quà</string>
+  <string name="web_presentdrop">Thả quà</string>
+  <string name="web_racer">Tay đua Rudolph</string>
+  <string name="web_runner">Người cưỡi tuần lộc</string>
+  <string name="web_santasearch">Tìm kiếm ông già Noel</string>
+  <string name="web_santaselfie">Ảnh tự chụp của ông già Noel</string>
+  <string name="web_seasonofgiving">Mùa trao tặng</string>
+  <string name="web_elfski">Yêu tinh trượt tuyết</string>
+  <string name="web_snowball">Bão bóng tuyết</string>
+  <string name="web_snowflake">Viết mã cho bông tuyết</string>
+  <string name="web_speedsketch">Ký họa nhanh</string>
+  <string name="web_wrapbattle">Wrap Battle</string>
+  <string name="web_elfmaker">Công cụ tạo chú lùn</string>
+  <string name="video_santa_is_back">Quay lại làm việc</string>
+  <string name="video_office_prank">Trò đùa ở văn phòng</string>
+  <string name="video_carpool">Đi chung xe</string>
 </resources>

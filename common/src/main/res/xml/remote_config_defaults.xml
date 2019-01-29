@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,11 +17,35 @@
 
 <defaultsMap>
     <entry>
-        <key>DisableCastButton</key>
+        <key>DisableSanta</key>
         <value>false</value>
     </entry>
     <entry>
+        <key>DisableCastButton</key>
+        <value>true</value>
+    </entry>
+    <entry>
         <key>DisableDestinationPhoto</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>DisablePresentQuest</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>FeaturePresentQuest</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>FeatureCityQuiz</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>DisableCityQuiz</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>FeatureGumballGame</key>
         <value>false</value>
     </entry>
     <entry>
@@ -29,7 +53,15 @@
         <value>false</value>
     </entry>
     <entry>
+        <key>FeatureJetpackGame</key>
+        <value>false</value>
+    </entry>
+    <entry>
         <key>DisableJetpackGame</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>FeatureMemoryGame</key>
         <value>false</value>
     </entry>
     <entry>
@@ -37,7 +69,15 @@
         <value>false</value>
     </entry>
     <entry>
+        <key>FeatureRocketGame</key>
+        <value>false</value>
+    </entry>
+    <entry>
         <key>DisableRocketGame</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>FeatureDancerGame</key>
         <value>false</value>
     </entry>
     <entry>
@@ -45,7 +85,7 @@
         <value>false</value>
     </entry>
     <entry>
-        <key>DisableSnowdownGame</key>
+        <key>FeatureSwimmingGame</key>
         <value>false</value>
     </entry>
     <entry>
@@ -53,11 +93,23 @@
         <value>false</value>
     </entry>
     <entry>
+        <key>FeatureBmxGame</key>
+        <value>false</value>
+    </entry>
+    <entry>
         <key>DisableBmxGame</key>
         <value>false</value>
     </entry>
     <entry>
+        <key>FeatureRunningGame</key>
+        <value>true</value>
+    </entry>
+    <entry>
         <key>DisableRunningGame</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>FeatureTennisGame</key>
         <value>false</value>
     </entry>
     <entry>
@@ -65,8 +117,20 @@
         <value>false</value>
     </entry>
     <entry>
+        <key>FeatureWaterpoloGame</key>
+        <value>false</value>
+    </entry>
+    <entry>
         <key>DisableWaterpoloGame</key>
         <value>false</value>
+    </entry>
+    <entry>
+        <key>FeatureSantaSnap</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>DisableSantaSnap</key>
+        <value>true</value>
     </entry>
     <entry>
         <key>Video1</key>
@@ -79,6 +143,50 @@
     <entry>
         <key>Video23</key>
         <value>h83b1lWPuvQ</value>
+    </entry>
+    <entry>
+        <key>SantaTakeoff</key>
+        <value>1545645600</value><!-- Dec 24th 2018, 10:00:00GMT (SECONDS) -->
+    </entry>
+    <entry>
+        <key>SantaArrival</key>
+        <value>1545778800</value><!-- Dec 25th 2018, 11:00:00GMT (SECONDS) -->
+    </entry>
+    <entry>
+        <key>UnlockGumball</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>UnlockMemory</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>UnlockJetpack</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>UnlockRocket</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>UnlockDancer</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>UnlockRocket</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>UnlockVideo1</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>UnlockVideo15</key>
+        <value>1544832000000</value><!-- Dec 15 2018, 00:00:00 GMT (MILLIS)-->
+    </entry>
+    <entry>
+        <key>UnlockVideo23</key>
+        <value>1545523200000</value><!-- Dec 23 2018 00:00:00 GMT (MILLIS) -->
     </entry>
     <entry>
         <key>CityQuizRoundCount</key>
@@ -139,5 +247,103 @@
     <entry>
         <key>SwimmingObstacleDensity</key>
         <value>0.10</value>
+    </entry>
+    <entry>
+        <key>WebAirportDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>WebBoatloadDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>WebClausdrawsDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>WebCodeboogieDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>WebCodelabDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>WebElfskiDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <entry>
+            <key>WebGumballDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebJambandDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebJetpackDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebPenguindashDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebPresentbounceDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebPresentdropDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebRacerDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebRunnerDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebSantasearchDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebSantaselfieDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebSantasnapDisabled</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>WebSeasonofgivingDisabled</key>
+            <value>true</value>
+        </entry>
+        <key>WebSnowballDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>WebSnowflakeDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>WebSpeedsketchDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>WebWrapbattleDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>WebElfMakerDisabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>StickersConfigUrl</key>
+        <value>
+            https://firebasestorage.googleapis.com/v0/b/santa-tracker-firebase.appspot.com/o/stickers%2Fstickers.json?alt=media&amp;token=aa113740-b356-4012-9a22-179c7650ce72
+        </value>
     </entry>
 </defaultsMap>

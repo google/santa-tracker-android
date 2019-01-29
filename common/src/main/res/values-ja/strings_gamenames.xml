@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Gumball</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Memory</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Elf Jetpack</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Rocket Sleigh</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Dasher Dancer</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Snowdown</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">都市クイズ</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">プレゼント クエスト</string>
+  <string name="gumball">ガムボール</string>
+  <string name="memory">記憶ゲーム</string>
+  <string name="elf_jetpack">ジェットパック</string>
+  <string name="rocket">ロケットそり</string>
+  <string name="dancer">ダッシャー ダンサー</string>
+  <string name="cityquiz">都市クイズ</string>
+  <string name="present_quest">プレゼント クエスト</string>
+  <string name="santa_snap">サンタのスナップ写真</string>
+  <string name="present_throw">プレゼントトス</string>
+  <string name="jetpack">ジェットパック</string>
+  <string name="web_airport">北極空港</string>
+  <string name="web_boatload">ギフト スリングショット</string>
+  <string name="web_clausdraws">サンタのお絵かき</string>
+  <string name="web_codeboogie">コードブギ</string>
+  <string name="web_codelab">コードラボ</string>
+  <string name="web_gumball">ガムボール ティルト</string>
+  <string name="web_jamband">Elf Jamband</string>
+  <string name="web_penguindash">ペンギン ダッシュ</string>
+  <string name="web_presentbounce">プレゼント バウンス</string>
+  <string name="web_presentdrop">プレゼント ドロップ</string>
+  <string name="web_racer">赤鼻のトナカイのレース</string>
+  <string name="web_runner">トナカイ ランナー</string>
+  <string name="web_santasearch">サンタさんを探す</string>
+  <string name="web_santaselfie">サンタの自撮り写真</string>
+  <string name="web_seasonofgiving">プレゼントの季節</string>
+  <string name="web_elfski">妖精のスキー</string>
+  <string name="web_snowball">雪球の嵐</string>
+  <string name="web_snowflake">雪の結晶を描こう</string>
+  <string name="web_speedsketch">スピード スケッチ</string>
+  <string name="web_wrapbattle">妖精のプレゼント ラッピング</string>
+  <string name="web_elfmaker">妖精メーカー</string>
+  <string name="video_santa_is_back">サンタさんが戻ってくる</string>
+  <string name="video_office_prank">オフィスでのいたずら</string>
+  <string name="video_carpool">みんなで相乗り</string>
 </resources>

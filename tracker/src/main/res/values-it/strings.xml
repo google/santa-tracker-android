@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Quadro comandi di Babbo Natale</string>
+  <string name="current_location">POSIZIONE ATTUALE</string>
+  <string name="presents_delivered">REGALI CONSEGNATI</string>
+  <string name="santa_status">STATO DI BABBO NATALE</string>
+  <string name="arriving_in">ARRIVO TRA</string>
+  <string name="departing_in">PARTENZA TRA</string>
+  <string name="localtime">ORA DI ARRIVO</string>
+  <string name="population">POPOLAZIONE</string>
+  <string name="next_destination">DESTINAZIONE SUCCESSIVA</string>
+  <string name="arriving_at">ARRIVA A</string>
+  <string name="arrived_at">ARRIVATO A</string>
+  <string name="in_transit">In viaggio</string>
+  <string name="follow_santa">Segui Babbo Natale</string>
+  <string name="lost_contact_with_santa">Connessione persa con Babbo Natale</string>
+  <string name="notification_nearby">Babbo Natale si sta avvicinando!</string>
+  <string name="notification_takeoff">Babbo Natale è decollato.</string>
+  <string name="notification_unlock_video">È disponibile un nuovo video.</string>
+  <string name="notification_unlock_game">È disponibile un nuovo gioco.</string>
+  <string name="santa_arrives_in_your_area_in">BABBO NATALE ARRIVERÀ NELLA TUA ZONA ENTRO</string>
+  <string name="santa_is_approximately">BABBO NATALE È A CIRCA</string>
+  <string name="distance_km_away">%1$,d km%2$s</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d mi</string>
+  <string name="did_you_know">LO SAPEVI CHE</string>
+  <string name="watch_movie">GUARDA IL FILM</string>
+  <string name="santa_update">AGGIORNAMENTO DA BABBO NATALE</string>
+  <string name="elapsed_time">TEMPO TRASCORSO</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">ARRIVO</string>
+  <string name="weather">METEO</string>
+  <string name="weather_format">%1$s °C/%2$s °F</string>
+  <string name="did_you_know_attribution">Notizie estere dal National Geographic Bee</string>
+  <string name="photo">Foto</string>
+  <string name="photos">Foto</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">TORNA ALLA BABBO-TELECAMERA</string>
+  <string name="update_from_santa">Aggiornamento da Babbo Natale</string>
+  <string name="trivia_from_santa">Curiosità da Babbo Natale</string>
+  <string name="photo_from_santa">Foto da Babbo Natale</string>
+  <string name="video_from_santa">Video da Babbo Natale</string>
+  <string name="show_history">Mostra cronologia</string>
+  <string name="see_best_moments">Guarda i momenti  migliori del viaggio di Babbo Natale</string>
+  <string name="return_to_map">Torna alla mappa</string>
+  <string name="santa_is_now_arriving_in_x">Babbo Natale è in arrivo fra %s</string>
+  <string name="santa_has_handed_out_x_presents">Babbo Natale ha consegnato %s regali</string>
+  <string name="new_update_from_santa">Nuovo aggiornamento da Babbo Natale</string>
+  <string name="new_trivia_from_santa">Nuova curiosità da Babbo Natale</string>
+  <string name="new_video_from_santa">Nuovo video da Babbo Natale</string>
+  <string name="new_photo_from_santa">Nuova foto da Babbo Natale</string>
+  <string name="cast_overlay_text">Segui Babbo Natale sullo schermo di casa.\nTocca questo pulsante per seguire il suo viaggio sul televisore con Chromecast.</string>
+  <string name="menu_media_router_title">Pulsante Trasmetti</string>
+</resources>

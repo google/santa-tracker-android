@@ -1,20 +1,18 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
-  -->
-
-<resources>
+  --><resources>
   <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Seguir a Santa</string>
   <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Santa despegará en</string>
   <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Santa está ocupado preparándose para el próximo año.</string>
@@ -25,7 +23,6 @@
   <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">H</string>
   <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">Min</string>
   <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">S</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Compartir</string>
   <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Aspectos legales y privacidad</string>
   <string name="legal_notice_text" translation_description="Link for legal notices">Aviso legal</string>
   <string name="privacy_policy" translation_description="Link for privacy policy">Política de privacidad</string>

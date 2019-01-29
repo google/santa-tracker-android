@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,12 +16,38 @@
   -->
 
 <resources>
-  <string name="gumball" translation_description="Name of a game. Player has to tilt phone to drop gumballs on a target.">Gumball</string>
-  <string name="memory" translation_description="Name of a game. Player has to complete a memory matching task">Memory</string>
-  <string name="elf_jetpack" translation_description="Name of a game. Player is an elf flying with a jetpack.">Elf Jetpack</string>
-  <string name="rocket" translation_description="Name of a game. Player is an elf riding a rocket-powered sleigh.">Rocket Sleigh</string>
-  <string name="dancer" translation_description="Name of a game. Dasher is the name of Santa's reindeer. Player can make him dance. The name benefits from rhyming.">Dasher Dancer</string>
-  <string name="snowdown" translation_description="Name of a game. Snowdown is a play on words based on Showdown, with snow.">Snowdown</string>
-  <string name="cityquiz" translation_description="Name of a game. Player is shown pictures of cities and asked to select the correct location on a map.">City Quiz</string>
-  <string name="present_quest" translation_description="Name of a gane. Player walks around the real world looking for presents.">Present Quest</string>
+  <string name="gumball">Gumball</string>
+  <string name="memory">Memory</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Rocket Sleigh</string>
+  <string name="dancer">Dasher Dancer</string>
+  <string name="cityquiz">City Quiz</string>
+  <string name="present_quest">Present Quest</string>
+  <string name="santa_snap">Santa Snap</string>
+  <string name="present_throw">Present Toss</string>
+  <string name="jetpack">Elf Jetpack</string>
+  <string name="web_airport">North Pole Airport</string>
+  <string name="web_boatload">Gift Slingshot</string>
+  <string name="web_clausdraws">Claus Draws</string>
+  <string name="web_codeboogie">Code Boogie</string>
+  <string name="web_codelab">Code Lab</string>
+  <string name="web_gumball">Gumball Tilt</string>
+  <string name="web_jamband">Elf Jam Band</string>
+  <string name="web_penguindash">Penguin Dash</string>
+  <string name="web_presentbounce">Present Bounce</string>
+  <string name="web_presentdrop">Present Drop</string>
+  <string name="web_racer">Rudolph Racer</string>
+  <string name="web_runner">Reindeer Runner</string>
+  <string name="web_santasearch">Santa Search</string>
+  <string name="web_santaselfie">Santa Selfie</string>
+  <string name="web_seasonofgiving">Season of Giving</string>
+  <string name="web_elfski">Elf Ski</string>
+  <string name="web_snowball">Snowball Storm</string>
+  <string name="web_snowflake">Code a Snowflake</string>
+  <string name="web_speedsketch">Speed Sketch</string>
+  <string name="web_wrapbattle">Wrap Battle</string>
+  <string name="web_elfmaker">Elf Maker</string>
+  <string name="video_santa_is_back">Back to Work</string>
+  <string name="video_office_prank">Office Prank</string>
+  <string name="video_carpool">Carpool</string>
 </resources>

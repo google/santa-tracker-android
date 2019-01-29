@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">சான்டாவைப் பின்தொடர்</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">சான்டாவைப்\nபின்தொடர்</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">சான்டா புறப்படுவதற்கான கவுண்ட்டவுன்</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">அடுத்த ஆண்டுக்குத் தயாராவதில் பிஸியாக உள்ளார் சான்டா.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">2014 பயணித்த இடங்களைப் பார்க்கவும்</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">சான்டாவைத் தொடர்புகொள்ள முயற்சிக்கிறது</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">தொடர்ந்து சான்டாவைத் தொடர்புகொள்ள முயற்சிக்கிறது</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">நாட்கள்</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">ம</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">நி</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">வி</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">பகிர்</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">நண்பர்களுடன் பகிர்</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">அனுப்புதல் பொத்தான்</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">சட்டம் &amp; தனியுரிமை</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">சட்ட அறிவிப்பு</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">தனியுரிமைக் கொள்கை</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">சேவை விதிமுறைகள்</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">ஓப்பன் சோர்ஸ் உரிமங்கள்</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Google Play சேவைகளுக்கான ஓப்பன் சோர்ஸ் உரிமங்கள்</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">GitHub இல் Santa</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">GitHub இல் Pie Noon</string>
-  <string name="scene_not_available" translation_description="Not available yet">இன்னும் கிடைக்கவில்லை</string>
+  <string name="track_santa">சான்டாவைப் பின்தொடர்</string>
+  <string name="track_santa_two_lines">சான்டாவைப்\nபின்தொடர்</string>
+  <string name="santa_takes_off_in">சான்டா புறப்படுவதற்கான கவுண்ட்டவுன்</string>
+  <string name="santa_is_busy_preparing_for_next_year">அடுத்த ஆண்டுக்குத் தயாராவதில் பிஸியாக உள்ளார் சான்டா.</string>
+  <string name="view_old_stops">2014 பயணித்த இடங்களைப் பார்க்கவும்</string>
+  <string name="contacting_santa">சான்டாவைத் தொடர்புகொள்ள முயற்சிக்கிறது</string>
+  <string name="still_trying_to_reach_santa">தொடர்ந்து சான்டாவைத் தொடர்புகொள்ள முயற்சிக்கிறது</string>
+  <string name="days">நாட்கள்</string>
+  <string name="hrs">ம</string>
+  <string name="min">நி</string>
+  <string name="sec">வி</string>
+  <string name="menu_share">பகிர்</string>
+  <string name="menu_share_friends">நண்பர்களுடன் பகிர்</string>
+  <string name="legal_notice">சட்டம் &amp; தனியுரிமை</string>
+  <string name="legal_notice_text">சட்ட அறிவிப்பு</string>
+  <string name="privacy_policy">தனியுரிமைக் கொள்கை</string>
+  <string name="terms_of_service">சேவை விதிமுறைகள்</string>
+  <string name="open_source_licenses">ஓப்பன் சோர்ஸ் உரிமங்கள்</string>
+  <string name="open_source_repo_santa">GitHub இல் Santa</string>
+  <string name="scene_not_available">இன்னும் கிடைக்கவில்லை</string>
   <string name="sign_out">வெளியேறு</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">புறப்படும் வரை உள்ள நேரம்</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%1$d / %2$d</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d புள்ளிகள்</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">இந்த இடம் எங்கே உள்ளது?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">படமெடுத்தவர்: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">சான்டாவைப் பெரிய திரையில் பின்தொடருங்கள்!\nChromecast மூலம் உங்கள் டிவியில் சான்டாவின் பயணத்தைப் பார்க்க, இந்தப் பொத்தானைத் தட்டவும்.</string>
+  <string name="until_takeoff">புறப்படும் வரை உள்ள நேரம்</string>
+  <string name="web_scene_error">காட்சியை ஏற்ற முடியவில்லை.</string>
+  <string name="check_back_daily">புதிய கேம்களுக்கு, தினமும் பார்க்கவும்!</string>
+  <string name="new_games">புதிய கேம்கள்</string>
+  <string name="new_card">புதியவை</string>
+  <string name="tracker_opens_date">திறக்கும் நாள்: %1$s</string>
+  <string name="time">நேரம்</string>
+  <string name="download_dialog_title">%1$sஐப் பதிவிறக்கவும்</string>
+  <string name="download_dialog_message">விளையாடுவதற்கு முன்பு, Play ஸ்டோரிலிருந்து நாம் விளையாட்டை பதிவிறக்க வேண்டும். இந்தச் சாதனம் தற்போது தரவு ஏதேனும் இடமாற்றப்பட்டால் கட்டணம் வசூலிக்கப்படும் வகையில் கட்டணத்திற்குட்பட்ட நெட்வொர்க்குடன் இணைக்கப்பட்டுள்ளது.\n\nதொடர விரும்புகிறீர்களா?</string>
+  <string name="elf_maker_write_success">படம் உங்கள் புகைப்படங்களில் சேமிக்கப்பட்டது</string>
+  <string name="elf_maker_write_fail">படத்தை உங்கள் சாதனப் புகைப்படங்களில் சேமிக்கும் போது ஒரு பிழை ஏற்பட்டது</string>
 </resources>

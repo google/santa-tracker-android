@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,7 +16,7 @@
   -->
 
 <resources>
-  <string name="invite_title" translation_description="Title shown when user is inviting friends to download this app.">邀請好友與 Google 一起追蹤聖誕老人</string>
-  <string name="invite_message_generic" translation_description="Message sent to friend when inviting them to download Santa Tracker app.">快來體驗聖誕老人追蹤器，和聖誕老人一起遨遊世界！</string>
-  <string name="invite_message_game_fmt" translation_description="Invitation body describing game progress, ex: I scored 42 in Rocket Sleigh!...">我在 Google 聖誕老人追蹤器中與小精靈一起玩「%2$s」遊戲，獲得 %1$d 分！你能打敗我嗎？</string>
+  <string name="invite_title">邀請好友與 Google 一起追蹤聖誕老人</string>
+  <string name="invite_message_generic">快來體驗聖誕老人追蹤器，和聖誕老人一起遨遊世界！</string>
+  <string name="invite_message_game_fmt">我在 Google 聖誕老人追蹤器中與小精靈一起玩「%2$s」遊戲，獲得 %1$d 分！你能打敗我嗎？</string>
 </resources>

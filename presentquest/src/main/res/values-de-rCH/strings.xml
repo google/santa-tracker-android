@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Spielen</string>
-  <string name="level" translation_description="Label shown under the user's current level">LEVEL</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Werkstätten</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Bei Level %1$d freischalten</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Der Weihnachtsmann hat ein Geschenk verloren!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Das Geschenk ist zu weit weg!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Der Workshop ist zu weit weg!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Sammle zuerst ein paar Geschenke ein.</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Deine Tasche ist voll.</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Workshop verschoben</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Verschieben abgebrochen</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Dieser Workshop wurde heute schon verschoben. Versuche es morgen noch einmal</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Gehe dahin!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">Present Quest muss auf deinen Standort zugreifen, um dir bei der Suche nach den Geschenken des Weihnachtsmanns zu helfen.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Berechtigung erforderlich</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">Present Quest funktioniert ohne den Zugriff auf deinen Standort nicht. Aktiviere unter \"Einstellungen\" die Standortberechtigungen.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Die erforderlichen Berechtigungen wurden nicht gefunden.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Weiter</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Vom Schlitten des Weihnachtsmanns\nfallen Geschenke!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Benutze dein Smartphone, um sie\nan den markierten Orten einzusammeln.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Ist deine Tasche voll,\ngehe zurück zur Werkstatt.</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Los geht\'s!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">Es gibt ein Geschenk in deiner Nähe.</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Deine Tasche ist fast voll.</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Bring deine Tasche zur Werkstatt.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Du hast eine neue Werkstatt freigeschaltet.</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Klicke auf ein Geschenk, um es einzusammeln.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Klicke auf deine Werkstatt, um deine Geschenke dort abzuliefern.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">von 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">VOLL</string>
+  <string name="play">Spielen</string>
+  <string name="level">LEVEL</string>
+  <string name="workshops">Werkstätten</string>
+  <string name="unlock_at_level">Bei Level %1$d freischalten</string>
+  <string name="present_dropped">Der Weihnachtsmann hat ein Geschenk verloren!</string>
+  <string name="present_too_far">Das Geschenk ist zu weit weg!</string>
+  <string name="workshop_too_far">Der Workshop ist zu weit weg!</string>
+  <string name="no_presents_collected">Sammle zuerst ein paar Geschenke ein.</string>
+  <string name="bag_is_full">Deine Tasche ist voll.</string>
+  <string name="workshop_moved">Workshop verschoben</string>
+  <string name="move_canceled">Verschieben abgebrochen</string>
+  <string name="workshop_move_too_soon">Dieser Workshop wurde heute schon verschoben. Versuche es morgen noch einmal</string>
+  <string name="go_here">Gehe dahin!</string>
+  <string name="perm_location_rationale">Present Quest muss auf deinen Standort zugreifen, um dir bei der Suche nach den Geschenken des Weihnachtsmanns zu helfen.</string>
+  <string name="perm_required">Berechtigung erforderlich</string>
+  <string name="perm_go_to_settings">Present Quest funktioniert ohne den Zugriff auf deinen Standort nicht. Aktiviere unter \"Einstellungen\" die Standortberechtigungen.</string>
+  <string name="required_permissions_missing">Die erforderlichen Berechtigungen wurden nicht gefunden.</string>
+  <string name="next">Weiter</string>
+  <string name="onboarding_msg_1">Vom Schlitten des Weihnachtsmanns\nfallen Geschenke!</string>
+  <string name="onboarding_msg_2">Benutze dein Smartphone, um sie\nan den markierten Orten einzusammeln.</string>
+  <string name="onboarding_msg_3">Ist deine Tasche voll,\ngehe zurück zur Werkstatt.</string>
+  <string name="onboarding_msg_4">Los geht\'s!</string>
+  <string name="msg_present_nearby">Es gibt ein Geschenk in deiner Nähe.</string>
+  <string name="msg_bag_almost_full">Deine Tasche ist fast voll.</string>
+  <string name="msg_unload_bag">Bring deine Tasche zur Werkstatt.</string>
+  <string name="msg_unlocked_workshop">Du hast eine neue Werkstatt freigeschaltet.</string>
+  <string name="msg_click_present">Klicke auf ein Geschenk, um es einzusammeln.</string>
+  <string name="msg_click_workshop">Klicke auf deine Werkstatt, um deine Geschenke dort abzuliefern.</string>
+  <string name="level_denominator">von 12</string>
+  <string name="full">VOLL</string>
+  <string name="distraction_warning">Achte beim Spielen auf deine Umgebung.</string>
 </resources>

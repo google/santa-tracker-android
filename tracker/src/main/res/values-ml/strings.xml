@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">സാന്തയുടെ ഡാഷ്‌ബോർഡ്</string>
+  <string name="current_location">ഇപ്പോഴത്തെ ലൊക്കേഷൻ</string>
+  <string name="presents_delivered">വിതരണം ചെയ്ത സമ്മാനങ്ങൾ</string>
+  <string name="santa_status">സാന്തയുടെ നില</string>
+  <string name="arriving_in">എത്തുന്നത്</string>
+  <string name="departing_in">പുറപ്പെടുന്നത്</string>
+  <string name="localtime">എത്തിച്ചേർന്നത്</string>
+  <string name="population">ജനസംഖ്യ</string>
+  <string name="next_destination">അടുത്ത ലക്ഷ്യസ്ഥാനം</string>
+  <string name="arriving_at">എത്തിച്ചേരുന്നത്</string>
+  <string name="arrived_at">എത്തിച്ചേർന്നത്</string>
+  <string name="in_transit">യാത്രയിൽ</string>
+  <string name="follow_santa">സാന്തയെ പിന്തുടരുക</string>
+  <string name="lost_contact_with_santa">സാന്തയുമായുള്ള ബന്ധം നഷ്ടമായി</string>
+  <string name="notification_nearby">സാന്ത വിളിപ്പാടരികെ!</string>
+  <string name="notification_takeoff">സാന്ത പുറപ്പെട്ടു!</string>
+  <string name="notification_unlock_video">ഒരു പുതിയ വീഡിയോ ലഭ്യമാണ്!</string>
+  <string name="notification_unlock_game">ഒരു പുതിയ ഗെയിം ലഭ്യമാണ്!</string>
+  <string name="santa_arrives_in_your_area_in">സാന്ത നിങ്ങളുടെ സ്ഥലത്ത് എത്തുന്നത്</string>
+  <string name="santa_is_approximately">സാന്ത നിങ്ങളിൽ നിന്ന്</string>
+  <string name="distance_km_away">%1$,d കിമീ.%2$s അകലെയാണ്</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d മൈൽ അകലെ</string>
+  <string name="did_you_know">നിങ്ങൾക്ക് അറിയാമോ</string>
+  <string name="watch_movie">മൂവി കാണുക</string>
+  <string name="santa_update">സാന്തയിൽ നിന്നുള്ള പുതുവിവരം</string>
+  <string name="elapsed_time">കഴിഞ്ഞ സമയം</string>
+  <string name="wikipedia">വിക്കീപീഡിയ</string>
+  <string name="arrival">എത്തിച്ചേരുന്ന സമയം</string>
+  <string name="weather">കാലാവസ്ഥ</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">ലോകത്തെ കുറിച്ച് നാഷണൽ ജിയോഗ്രാഫിക്ക് ബീ നൽകുന്ന രസകര വിവരങ്ങൾ</string>
+  <string name="photo">ഫോട്ടോ</string>
+  <string name="photos">ഫോട്ടോകൾ</string>
+  <string name="street_view">സ്‌ട്രീറ്റ് കാഴ്‌ച</string>
+  <string name="back_to_santa_cam">സാന്താ കാമിലേക്ക് മടങ്ങുക</string>
+  <string name="update_from_santa">സാന്തയിൽ നിന്നുള്ള വിശേഷം</string>
+  <string name="trivia_from_santa">സാന്തയിൽ നിന്നുള്ള രസികൻ വിവരങ്ങൾ</string>
+  <string name="photo_from_santa">സാന്തയിൽ നിന്നുള്ള ഫോട്ടോ</string>
+  <string name="video_from_santa">സാന്തയിൽ നിന്നുള്ള വീഡിയോ</string>
+  <string name="show_history">ചരിത്രം കാണിക്കുക</string>
+  <string name="see_best_moments">സാന്തയുടെ യാത്രയിലെ എല്ലാ മികച്ച മുഹൂർത്തങ്ങളും കാണുക</string>
+  <string name="return_to_map">മാപ്പിലേക്ക് മടങ്ങുക</string>
+  <string name="santa_is_now_arriving_in_x">സാന്ത ഇപ്പോൾ %s-ൽ എത്തിച്ചേർന്നുകൊണ്ടിരിക്കുന്നു</string>
+  <string name="santa_has_handed_out_x_presents">സാന്ത %s സമ്മാനങ്ങൾ നൽകി</string>
+  <string name="new_update_from_santa">സാന്തയിൽ നിന്നുള്ള പുതിയ വിശേഷം</string>
+  <string name="new_trivia_from_santa">സാന്തയിൽ നിന്നുള്ള പുതിയ രസികൻ വിവരങ്ങൾ</string>
+  <string name="new_video_from_santa">സാന്തയിൽ നിന്നുള്ള പുതിയ വീഡിയോ</string>
+  <string name="new_photo_from_santa">സാന്തയിൽ നിന്നുള്ള പുതിയ ഫോട്ടോ</string>
+  <string name="cast_overlay_text">സാന്തയെ വലിയ സ്‌ക്രീനിൽ പിന്തുടരുക!\nസാന്തയുടെ സഞ്ചാരം Chromecast ഉപയോഗിച്ച് നിങ്ങളുടെ ടിവിയിൽ കാണുന്നതിന് ഈ ബട്ടൺ ടാപ്പുചെയ്യുക.</string>
+  <string name="menu_media_router_title">കാസ്റ്റ് ബട്ടൺ</string>
+</resources>

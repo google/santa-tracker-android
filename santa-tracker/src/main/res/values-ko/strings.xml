@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,36 @@
   -->
 
 <resources>
-  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">산타 추적</string>
-  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">산타\n추적</string>
-  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">산타 출발까지 남은 시간</string>
-  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">산타가 분주하게 내년을 위해 준비하고 있습니다.</string>
-  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">2014년에 방문한 위치 보기</string>
-  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">산타와 연결 시도 중</string>
-  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">산타와 계속 연결 시도 중</string>
-  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">일</string>
-  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">시간</string>
-  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">분</string>
-  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">초</string>
-  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">공유</string>
-  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">친구와 공유</string>
-  <string name="menu_media_router_title" translation_description="Cast menu item. Item in the menu that contains an icon that enables and disables Chromecast-functionality">전송 버튼</string>
-  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">법적 고지 및 개인정보 보호</string>
-  <string name="legal_notice_text" translation_description="Link for legal notices">법적 고지</string>
-  <string name="privacy_policy" translation_description="Link for privacy policy">개인정보처리방침</string>
-  <string name="terms_of_service" translation_description="Link for terms of services">서비스 약관</string>
-  <string name="open_source_licenses" translation_description="Licenses for open source components">오픈소스 라이선스</string>
-  <string name="open_source_licenses_play_services" translation_description="Licenses for open source components used by Google Play Services">Google Play 서비스의 오픈소스 라이선스</string>
-  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">GitHub의 산타 앱</string>
-  <string name="open_source_repo_pie_noon" translation_description="Web link to find the source code for the Pie Noon game on the 'GitHub' site">GitHub의 파이 던지기 게임</string>
-  <string name="scene_not_available" translation_description="Not available yet">아직 사용할 수 없음</string>
+  <string name="track_santa">산타 추적</string>
+  <string name="track_santa_two_lines">산타\n추적</string>
+  <string name="santa_takes_off_in">산타 출발까지 남은 시간</string>
+  <string name="santa_is_busy_preparing_for_next_year">산타가 분주하게 내년을 위해 준비하고 있습니다.</string>
+  <string name="view_old_stops">2014년에 방문한 위치 보기</string>
+  <string name="contacting_santa">산타와 연결 시도 중</string>
+  <string name="still_trying_to_reach_santa">산타와 계속 연결 시도 중</string>
+  <string name="days">일</string>
+  <string name="hrs">시간</string>
+  <string name="min">분</string>
+  <string name="sec">초</string>
+  <string name="menu_share">공유</string>
+  <string name="menu_share_friends">친구와 공유</string>
+  <string name="legal_notice">법적 고지 및 개인정보 보호</string>
+  <string name="legal_notice_text">법적 고지</string>
+  <string name="privacy_policy">개인정보처리방침</string>
+  <string name="terms_of_service">서비스 약관</string>
+  <string name="open_source_licenses">오픈소스 라이선스</string>
+  <string name="open_source_repo_santa">GitHub의 산타 앱</string>
+  <string name="scene_not_available">아직 사용할 수 없음</string>
   <string name="sign_out">로그아웃</string>
-  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">출발까지 남은 시간</string>
-  <string formatted="false" name="round_count_fmt" translation_description="Counter of rounds, ex: 1 of 5. These are rounds in a quiz game where each round represents a question the user must answer.">%2$d회 중 %1$d회</string>
-  <string formatted="false" name="game_score_fmt" translation_description="Points so far in game, ex: 5 points">%1$d점</string>
-  <string name="what_city" translation_description="Prompt directing the user to guess the location on the map">여기가 어디인가요?</string>
-  <string name="photo_by" translation_description="To give credit to the photographor that took an image we display.">사진: %1$s</string>
-  <string name="cast_overlay_text" translation_description="Displayed on overlay screen pointing to the Cast button explaining that this button enables Chromecast-functionality.">대형 화면에서 산타를 추적해 보세요.\n이 버튼을 탭하여 Chromecast를 통해 TV에서 산타의 여정을 확인할 수 있습니다.</string>
+  <string name="until_takeoff">출발까지 남은 시간</string>
+  <string name="web_scene_error">장면을 로드할 수 없습니다.</string>
+  <string name="check_back_daily">매일 새로운 게임을 확인하세요!</string>
+  <string name="new_games">새 게임</string>
+  <string name="new_card">신규</string>
+  <string name="tracker_opens_date">시작: %1$s</string>
+  <string name="time">시간</string>
+  <string name="download_dialog_title">%1$s 다운로드</string>
+  <string name="download_dialog_message">Play 스토어에서 게임을 다운로드해야 플레이할 수 있습니다. 현재 기기가 요금이 부과되는 네트워크에 연결되어 있으므로 전송되는 데이터에 대한 요금이 청구될 수 있습니다.\n\n계속 진행하시겠어요?</string>
+  <string name="elf_maker_write_success">사진에 이미지를 저장했습니다.</string>
+  <string name="elf_maker_write_fail">기기 사진에 이미지를 저장하는 도중 오류가 발생했습니다.</string>
 </resources>

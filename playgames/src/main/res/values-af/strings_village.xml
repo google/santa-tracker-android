@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">Volg Kersvader op 24 Desember.</string>
+  <string name="present_quest_locked">Geskenksoektog sal op 1 Desember beskikbaar wees.</string>
+  <string name="santa_snap_locked">Kersvader-kiekie sal binnekort beskikbaar wees.</string>
+  <string name="gumball_locked">Gumball sal op 1 Desember beskikbaar wees.</string>
+  <string name="memory_locked">Memory sal op 1 Desember beskikbaar wees.</string>
+  <string name="rocket_locked">Vuurpylslee sal op 1 Desember beskikbaar wees.</string>
+  <string name="dancer_locked">Dasher-danser sal op 1 Desember beskikbaar wees.</string>
+  <string name="city_quiz_locked">Stadvasvra sal op 1 Desember beskikbaar wees.</string>
+  <string name="generic_game_disabled">%1$s is nie tans beskikbaar nie.</string>
+  <string name="generic_game_locked">%1$s is nog nie beskikbaar nie. Kom kyk later weer!</string>
+  <string name="video">Video</string>
+  <string name="video_locked">Video sal op %1$d Desember ontsluit word.</string>
+  <string name="video_disabled">Video is tans onbeskikbaar.</string>
+  <string name="play">Speel</string>
+  <string name="watch">Kyk</string>
+</resources>

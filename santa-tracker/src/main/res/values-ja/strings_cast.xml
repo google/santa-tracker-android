@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">%sでキャストしています</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">キャスト…</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">タップして「サンタを追いかけよう」を自分のテレビにキャスト</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">キャストデバイスへの接続が一時的に切断されています</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">キャストデバイスへの接続が復旧しました</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">キャストゲームのコントローラ</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">十字キーからトラックパッドへモードの切り替え</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">→</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">↑</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">↓</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">Enter</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">←</string>
+  <string name="media_route_casting_on">%sでキャストしています</string>
+  <string name="media_route_menu_title">キャスト…</string>
+  <string name="touch_to_cast">タップして「サンタを追いかけよう」を自分のテレビにキャスト</string>
+  <string name="connection_temp_lost">キャストデバイスへの接続が一時的に切断されています</string>
+  <string name="connection_recovered">キャストデバイスへの接続が復旧しました</string>
+  <string name="cast_game_controller">キャストゲームのコントローラ</string>
+  <string name="content_desc_mode_switch">十字キーからトラックパッドへモードの切り替え</string>
+  <string name="content_desc_right_button">→</string>
+  <string name="content_desc_up_button">↑</string>
+  <string name="content_desc_down_button">↓</string>
+  <string name="content_desc_enter_button">Enter</string>
+  <string name="content_desc_left_button">←</string>
 </resources>

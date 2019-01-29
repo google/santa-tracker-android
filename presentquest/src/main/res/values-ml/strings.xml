@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">പ്ലേ ചെയ്യുക</string>
-  <string name="level" translation_description="Label shown under the user's current level">ലെവൽ</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">വർക്ക്ഷോപ്പുകൾ</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">ലെവൽ %1$d-ൽ അൺലോക്ക് ചെയ്യുക</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">സാന്ത ഒരു സമ്മാനം ഇട്ടിട്ടുണ്ട്!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">സമ്മാനം വളരെ ദൂരെയാണ്!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">വർക്ക്ഷോപ്പ് വളരെ ദൂരെയാണ്!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">ആദ്യം ഏതാനും സമ്മാനങ്ങൾ ശേഖരിക്കുക!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">നിങ്ങളുടെ ബാഗ് നിറഞ്ഞു!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">വർക്ക്ഷോപ്പ് നീക്കി</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">നീക്കൽ റദ്ദാക്കി</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">ഇന്ന് ഈ വർക്ക്ഷോപ്പ് ഇതിനകം നീക്കിയിട്ടുണ്ട്, നാളെ വീണ്ടും ശ്രമിക്കുക</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">ഇവിടേക്ക് പോകുക!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">സാന്തയുടെ സമ്മാനങ്ങൾ കണ്ടെത്താൻ നിങ്ങളെ സഹായിക്കുന്നതിന് Present Quest-ന് നിങ്ങളുടെ ലൊക്കേഷനിലേക്കുള്ള ആ‌ക്‌സസ് ആവശ്യമാണ്.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">അനുമതി ആവശ്യമാണ്</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">നിങ്ങളുടെ ലൊക്കേഷനിലേക്കുള്ള ആ‌ക്‌സസ് ഇല്ലാതെ Present Quest പ്രവർത്തിക്കില്ല. ക്രമീകരണം എന്നതിൽ ലൊക്കേഷൻ അനുമതികൾ പ്രവർത്തനക്ഷമമാക്കുക.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">ആവശ്യമായ അനുമതികൾ നൽകിയിട്ടില്ല.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">അടുത്തത്</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">സാന്തയുടെ ഹിമവണ്ടിയിൽ\nവീണുകിടക്കുന്ന സമ്മാനങ്ങൾ!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">അവ സ്വന്തമാക്കാൻ യഥാർത്ഥ ജീവിതത്തിലെ\nസമ്മാന പിന്നുകളിലേക് നടക്കുക.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">നിങ്ങളുടെ ബാഗ് നിറഞ്ഞാൽ,\nഇറക്കിവയ്ക്കാൻ വർക്ക്‌ഷോപ്പിലേക്ക് പോകുക</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">മുന്നോട്ട് പോകാം!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">വിളിപ്പാടരികെ ഒരു സമ്മാനമുണ്ട്!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">നിങ്ങളുടെ ബാഗ് ഏകദേശം നിറഞ്ഞു!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">നിങ്ങളുടെ ബാഗ് വർക്ക്‌ഷോപ്പിൽ വയ്ക്കുക.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">നിങ്ങൾ ഒരു പുതിയ വർക്ക്‌ഷോപ്പ് അൺലോക്കുചെയ്തു!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">ഒരു സമ്മാനമെടുക്കാൻ അതിൽ ക്ലിക്കുചെയ്യുക.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">സമ്മാനങ്ങൾ വയ്ക്കാൻ നിങ്ങളുടെ വർക്ക്‌ഷോപ്പിൽ ക്ലിക്കുചെയ്യുക.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">/12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">നിറഞ്ഞു</string>
+  <string name="play">പ്ലേ ചെയ്യുക</string>
+  <string name="level">ലെവൽ</string>
+  <string name="workshops">വർക്ക്ഷോപ്പുകൾ</string>
+  <string name="unlock_at_level">ലെവൽ %1$d-ൽ അൺലോക്ക് ചെയ്യുക</string>
+  <string name="present_dropped">സാന്ത ഒരു സമ്മാനം ഇട്ടിട്ടുണ്ട്!</string>
+  <string name="present_too_far">സമ്മാനം വളരെ ദൂരെയാണ്!</string>
+  <string name="workshop_too_far">വർക്ക്ഷോപ്പ് വളരെ ദൂരെയാണ്!</string>
+  <string name="no_presents_collected">ആദ്യം ഏതാനും സമ്മാനങ്ങൾ ശേഖരിക്കുക!</string>
+  <string name="bag_is_full">നിങ്ങളുടെ ബാഗ് നിറഞ്ഞു!</string>
+  <string name="workshop_moved">വർക്ക്ഷോപ്പ് നീക്കി</string>
+  <string name="move_canceled">നീക്കൽ റദ്ദാക്കി</string>
+  <string name="workshop_move_too_soon">ഇന്ന് ഈ വർക്ക്ഷോപ്പ് ഇതിനകം നീക്കിയിട്ടുണ്ട്, നാളെ വീണ്ടും ശ്രമിക്കുക</string>
+  <string name="go_here">ഇവിടേക്ക് പോകുക!</string>
+  <string name="perm_location_rationale">സാന്തയുടെ സമ്മാനങ്ങൾ കണ്ടെത്താൻ നിങ്ങളെ സഹായിക്കുന്നതിന് Present Quest-ന് നിങ്ങളുടെ ലൊക്കേഷനിലേക്കുള്ള ആ‌ക്‌സസ് ആവശ്യമാണ്.</string>
+  <string name="perm_required">അനുമതി ആവശ്യമാണ്</string>
+  <string name="perm_go_to_settings">നിങ്ങളുടെ ലൊക്കേഷനിലേക്കുള്ള ആ‌ക്‌സസ് ഇല്ലാതെ Present Quest പ്രവർത്തിക്കില്ല. ക്രമീകരണം എന്നതിൽ ലൊക്കേഷൻ അനുമതികൾ പ്രവർത്തനക്ഷമമാക്കുക.</string>
+  <string name="required_permissions_missing">ആവശ്യമായ അനുമതികൾ നൽകിയിട്ടില്ല.</string>
+  <string name="next">അടുത്തത്</string>
+  <string name="onboarding_msg_1">സാന്തയുടെ ഹിമവണ്ടിയിൽ\nവീണുകിടക്കുന്ന സമ്മാനങ്ങൾ!</string>
+  <string name="onboarding_msg_2">അവ സ്വന്തമാക്കാൻ യഥാർത്ഥ ജീവിതത്തിലെ\nസമ്മാന പിന്നുകളിലേക് നടക്കുക.</string>
+  <string name="onboarding_msg_3">നിങ്ങളുടെ ബാഗ് നിറഞ്ഞാൽ,\nഇറക്കിവയ്ക്കാൻ വർക്ക്‌ഷോപ്പിലേക്ക് പോകുക</string>
+  <string name="onboarding_msg_4">മുന്നോട്ട് പോകാം!</string>
+  <string name="msg_present_nearby">വിളിപ്പാടരികെ ഒരു സമ്മാനമുണ്ട്!</string>
+  <string name="msg_bag_almost_full">നിങ്ങളുടെ ബാഗ് ഏകദേശം നിറഞ്ഞു!</string>
+  <string name="msg_unload_bag">നിങ്ങളുടെ ബാഗ് വർക്ക്‌ഷോപ്പിൽ വയ്ക്കുക.</string>
+  <string name="msg_unlocked_workshop">നിങ്ങൾ ഒരു പുതിയ വർക്ക്‌ഷോപ്പ് അൺലോക്കുചെയ്തു!</string>
+  <string name="msg_click_present">ഒരു സമ്മാനമെടുക്കാൻ അതിൽ ക്ലിക്കുചെയ്യുക.</string>
+  <string name="msg_click_workshop">സമ്മാനങ്ങൾ വയ്ക്കാൻ നിങ്ങളുടെ വർക്ക്‌ഷോപ്പിൽ ക്ലിക്കുചെയ്യുക.</string>
+  <string name="level_denominator">/12</string>
+  <string name="full">നിറഞ്ഞു</string>
+  <string name="distraction_warning">ഗെയിം കളിക്കുമ്പോൾ നിങ്ങളുടെ ചുറ്റുപാടുകളെ കുറിച്ച് അവബോധം ഉണ്ടായിരിക്കണം.</string>
 </resources>

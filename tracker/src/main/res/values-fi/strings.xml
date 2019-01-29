@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Joulupukin hallintapaneeli</string>
+  <string name="current_location">NYKYINEN SIJAINTI</string>
+  <string name="presents_delivered">TOIMITETUT LAHJAT</string>
+  <string name="santa_status">JOULUPUKIN TILA</string>
+  <string name="arriving_in">SAAPUU:</string>
+  <string name="departing_in">LÄHTEE:</string>
+  <string name="localtime">SAAPUI KOHTEESEEN</string>
+  <string name="population">VÄKILUKU</string>
+  <string name="next_destination">SEURAAVA MÄÄRÄNPÄÄ</string>
+  <string name="arriving_at">SAAPUU KOHTEESEEN</string>
+  <string name="arrived_at">SAAPUI KOHTEESEEN</string>
+  <string name="in_transit">Matkalla</string>
+  <string name="follow_santa">Seuraa joulupukkia</string>
+  <string name="lost_contact_with_santa">Yhteys joulupukkiin menetettiin</string>
+  <string name="notification_nearby">Joulupukki on lähellä!</string>
+  <string name="notification_takeoff">Joulupukki on lähtenyt matkaan!</string>
+  <string name="notification_unlock_video">Uusi video on saatavana!</string>
+  <string name="notification_unlock_game">Uusi peli on saatavana!</string>
+  <string name="santa_arrives_in_your_area_in">JOULUPUKIN SAAPUMISEEN SEUDULLESI</string>
+  <string name="santa_is_approximately">JOULUPUKKI ON NOIN</string>
+  <string name="distance_km_away">%1$,d km:n%2$s päässä</string>
+  <string name="distance_optional_miles">\u0020(%,d mailia)</string>
+  <string name="distance_mi_away">%1$,d mailin päässä</string>
+  <string name="did_you_know">TIESITKÖ?</string>
+  <string name="watch_movie">KATSO ELOKUVA</string>
+  <string name="santa_update">JOULUPUKIN PÄIVITYS</string>
+  <string name="elapsed_time">KULUNUT AIKA</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">SAAPUMINEN</string>
+  <string name="weather">SÄÄ</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">Tietoja maailmasta tarjoaa National Geographic Bee</string>
+  <string name="photo">Valokuva</string>
+  <string name="photos">Kuvat</string>
+  <string name="street_view">KATUNÄKYMÄ</string>
+  <string name="back_to_santa_cam">TAKAISIN JOULUPUKIN KAMERAAN</string>
+  <string name="update_from_santa">Päivitys joulupukilta</string>
+  <string name="trivia_from_santa">Joulupukin tiedonjyviä</string>
+  <string name="photo_from_santa">Valokuva joulupukilta</string>
+  <string name="video_from_santa">Video joulupukilta</string>
+  <string name="show_history">Näytä historia</string>
+  <string name="see_best_moments">Katso parhaat hetket joulupukin matkalta</string>
+  <string name="return_to_map">Takaisin karttaan</string>
+  <string name="santa_is_now_arriving_in_x">Joulupukin seuraava sijainti on %s</string>
+  <string name="santa_has_handed_out_x_presents">Joulupukki on jakanut %s lahjaa</string>
+  <string name="new_update_from_santa">Uusi päivitys joulupukilta</string>
+  <string name="new_trivia_from_santa">Uusi tiedonjyvä joulupukilta</string>
+  <string name="new_video_from_santa">Uusi video joulupukilta</string>
+  <string name="new_photo_from_santa">Uusi valokuva joulupukilta</string>
+  <string name="cast_overlay_text">Seuraa pukin matkaa suurelta näytöltä!\nNäytä pukin matka televisiossa Chromecastin kautta napauttamalla tätä painiketta.</string>
+  <string name="menu_media_router_title">Cast-painike</string>
+</resources>

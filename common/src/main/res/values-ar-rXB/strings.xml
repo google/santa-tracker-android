@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,7 +15,14 @@
   -->
 
 <resources>
-  <string name="back_to_map" translation_description="Button text to take user back to map view.">‏‮Back‬‏ ‏‮to‬‏ ‏‮map‬‏</string>
-  <string name="back_to_village" translation_description="Button text to take user back to the village.">‏‮Back‬‏ ‏‮to‬‏ ‏‮village‬‏</string>
-  <string name="go_to_play_store" translation_description="Prompt telling the user to upgrade the app">‏‮This‬‏ ‏‮version‬‏ ‏‮of‬‏ ‏‮Santa‬‏ ‏‮Tracker‬‏ ‏‮is‬‏ ‏‮out‬‏ ‏‮of‬‏ ‏‮date‬‏. ‏‮Please‬‏ ‏‮visit‬‏ ‏‮the‬‏ ‏‮Play‬‏ ‏‮Store‬‏ ‏‮to‬‏ ‏‮update‬‏ ‏‮to‬‏ ‏‮the‬‏ ‏‮latest‬‏ ‏‮version‬‏.</string>
+  <string name="back_to_map">‏‮Back‬‏ ‏‮to‬‏ ‏‮map‬‏</string>
+  <string name="back_to_village">‏‮Back‬‏ ‏‮to‬‏ ‏‮village‬‏</string>
+  <string name="go_to_play_store">‏‮This‬‏ ‏‮version‬‏ ‏‮of‬‏ ‏‮Santa‬‏ ‏‮Tracker‬‏ ‏‮is‬‏ ‏‮out‬‏ ‏‮of‬‏ ‏‮date‬‏. ‏‮Please‬‏ ‏‮visit‬‏ ‏‮the‬‏ ‏‮Play‬‏ ‏‮Store‬‏ ‏‮to‬‏ ‏‮update‬‏ ‏‮to‬‏ ‏‮the‬‏ ‏‮latest‬‏ ‏‮version‬‏.</string>
+  <string name="game_over">‏‮Game‬‏ ‏‮Over‬‏</string>
+  <string name="loading_screen">‏‮Loading‬‏ ‏‮screen‬‏</string>
+  <string name="menu_resume">‏‮Resume‬‏</string>
+  <string name="menu_replay">‏‮Replay‬‏</string>
+  <string name="menu_home">‏‮Home‬‏</string>
+  <string name="menu_share">‏‮Share‬‏</string>
+  <string name="error_fetch_module">‏‮An‬‏ ‏‮error‬‏ ‏‮occurred‬‏ ‏‮while‬‏ ‏‮downloading‬‏ %1$s. ‏‮Is‬‏ ‏‮your‬‏ ‏‮network‬‏ ‏‮connection‬‏ ‏‮working‬‏?</string>
 </resources>

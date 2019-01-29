@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,34 +15,35 @@
   -->
 
 <resources>
-  <string name="play" translation_description="Action text for button to play a game">Chơi</string>
-  <string name="level" translation_description="Label shown under the user's current level">CẤP ĐỘ</string>
-  <string name="workshops" translation_description="Label shown above the list of the user's workshops. A workshop is where the user's elf character delivers presents.">Nhà xưởng</string>
-  <string name="unlock_at_level" translation_description="Label placed over something to be unlocked later.  Ex: Unlock at level 5.">Mở khóa cấp độ %1$d</string>
-  <string name="present_dropped" translation_description="Message displayed when a new present is available on the map">Ông già Noel đã thả một món quà!</string>
-  <string name="present_too_far" translation_description="Message displayed when the user tries to click a present that's too far away">Món quà cách quá xa!</string>
-  <string name="workshop_too_far" translation_description="Message displayed when the user tries to click a workshop that's too far away">Nhà xưởng cách quá xa!</string>
-  <string name="no_presents_collected" translation_description="Message displayed when the user tries to click a workshop but they have not yet collected any presents">Thu thập một vài món quà trước tiên!</string>
-  <string name="bag_is_full" translation_description="Message displayed when user tries to collect presents but their bag is full">Túi của bạn đã đầy!</string>
-  <string name="workshop_moved" translation_description="Message displayed when the user successfully changes the location of their workshop on the map.">Xưởng đã di chuyển</string>
-  <string name="move_canceled" translation_description="Message displayed when the user cancels a workshop move">Đã hủy di chuyển</string>
-  <string name="workshop_move_too_soon" translation_description="Message displayed when the user tries to move a workshop they have already moved today">Đã di chuyển xưởng này hôm nay. Hãy thử lại vào ngày mai</string>
-  <string name="go_here" translation_description="Label displayed on a map marker to direct the user to a specific location. This should be an imperative statement, and should be translated as 'Go there' not 'Come here' in languages where this is significant.">Vào đây!</string>
-  <string name="perm_location_rationale" translation_description="Rationale shown to users to explain why Present Quest needs location permissions">Săn tìm quà tặng cần quyền truy cập vị trí của bạn để giúp bạn tìm được món quà của ông già Noel.</string>
-  <string name="perm_required" translation_description="Title of a dialog shown to users when they have rejected a required permission">Cần sự cho phép</string>
-  <string name="perm_go_to_settings" translation_description="Content of a dialog asking the user to go to the Settings screen and enable the Location permission">Săn tìm quà tặng sẽ không hoạt động khi chưa có quyền truy cập vị trí của bạn. Vui lòng cho phép truy cập Vị trí trong Cài đặt.</string>
-  <string name="required_permissions_missing" translation_description="Message shown to user if they reject all attempts to enable the Location permission">Thiếu quyền cần thiết.</string>
-  <string name="next" translation_description="Button text to advance through tutorial">Tiếp</string>
-  <string name="onboarding_msg_1" translation_description="Tutorial message explaining why there are presents on the map. Two lines.">Quà tặng đang rơi ra\nkhỏi xe trượt tuyết của ông già Noel!</string>
-  <string name="onboarding_msg_2" translation_description="Tutorial message explaining how to collect a present. Two lines.">Đi bộ tới các điểm quà tặng trong\nđời thực để lấy quà.</string>
-  <string name="onboarding_msg_3" translation_description="Tutorial message explaining how to bring presents to workshop. Two lines.">Khi túi của bạn đã đầy,\nhãy đi tới xưởng để dỡ quà</string>
-  <string name="onboarding_msg_4" translation_description="Final tutorial message, the player is about to begin the game.">Hãy bắt đầu!</string>
-  <string name="msg_present_nearby" translation_description="Message displayed when there is a nearby present.">Có một món quà gần đây!</string>
-  <string name="msg_bag_almost_full" translation_description="Message displayed when the user's bag of presents collected in the game is almost full.">Túi của bạn sắp đầy rồi!</string>
-  <string name="msg_unload_bag" translation_description="Message displayed when the user needs to go to a workshop.">Dỡ túi của bạn tại xưởng.</string>
-  <string name="msg_unlocked_workshop" translation_description="Message displayed when the user gains an additional workshop available for use.">Bạn đã mở khóa một xưởng mới!</string>
-  <string name="msg_click_present" translation_description="Message displayed to tell the user to click a present to attempt to put it in their bag.">Nhấp vào món quà để nhặt quà.</string>
-  <string name="msg_click_workshop" translation_description="Message displayed to tell the user to click a workshop to use it.">Nhấp vào xưởng của bạn để dỡ quà.</string>
-  <string name="level_denominator" translation_description="Second half of a label showing the users level. For example, could be presented as 1 of 12 or 5 of 12.">/ 12</string>
-  <string name="full" translation_description="Label displayed under the user's bag fullness. Preceded by a percentage, so it reads as X percent FULL.">ĐẦY</string>
+  <string name="play">Chơi</string>
+  <string name="level">CẤP ĐỘ</string>
+  <string name="workshops">Nhà xưởng</string>
+  <string name="unlock_at_level">Mở khóa cấp độ %1$d</string>
+  <string name="present_dropped">Ông già Noel đã thả một món quà!</string>
+  <string name="present_too_far">Món quà cách quá xa!</string>
+  <string name="workshop_too_far">Nhà xưởng cách quá xa!</string>
+  <string name="no_presents_collected">Thu thập một vài món quà trước tiên!</string>
+  <string name="bag_is_full">Túi của bạn đã đầy!</string>
+  <string name="workshop_moved">Xưởng đã di chuyển</string>
+  <string name="move_canceled">Đã hủy di chuyển</string>
+  <string name="workshop_move_too_soon">Đã di chuyển xưởng này hôm nay. Hãy thử lại vào ngày mai</string>
+  <string name="go_here">Vào đây!</string>
+  <string name="perm_location_rationale">Săn tìm quà tặng cần quyền truy cập vị trí của bạn để giúp bạn tìm được món quà của ông già Noel.</string>
+  <string name="perm_required">Cần sự cho phép</string>
+  <string name="perm_go_to_settings">Săn tìm quà tặng sẽ không hoạt động khi chưa có quyền truy cập vị trí của bạn. Vui lòng cho phép truy cập Vị trí trong Cài đặt.</string>
+  <string name="required_permissions_missing">Thiếu quyền cần thiết.</string>
+  <string name="next">Tiếp</string>
+  <string name="onboarding_msg_1">Quà tặng đang rơi ra\nkhỏi xe trượt tuyết của ông già Noel!</string>
+  <string name="onboarding_msg_2">Đi bộ tới các điểm quà tặng trong\nđời thực để lấy quà.</string>
+  <string name="onboarding_msg_3">Khi túi của bạn đã đầy,\nhãy đi tới xưởng để dỡ quà</string>
+  <string name="onboarding_msg_4">Hãy bắt đầu!</string>
+  <string name="msg_present_nearby">Có một món quà gần đây!</string>
+  <string name="msg_bag_almost_full">Túi của bạn sắp đầy rồi!</string>
+  <string name="msg_unload_bag">Dỡ túi của bạn tại xưởng.</string>
+  <string name="msg_unlocked_workshop">Bạn đã mở khóa một xưởng mới!</string>
+  <string name="msg_click_present">Nhấp vào món quà để nhặt quà.</string>
+  <string name="msg_click_workshop">Nhấp vào xưởng của bạn để dỡ quà.</string>
+  <string name="level_denominator">/ 12</string>
+  <string name="full">ĐẦY</string>
+  <string name="distraction_warning">Hãy lưu ý đến môi trường xung quanh khi bạn chơi game.</string>
 </resources>

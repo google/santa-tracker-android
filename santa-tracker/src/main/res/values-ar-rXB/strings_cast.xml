@@ -1,11 +1,11 @@
 <!--
-  ~ Copyright (C) 2016 Google Inc. All Rights Reserved.
+  ~ Copyright 2019. Google LLC
   ~
-  ~  Licensed under the Apache License, Version 2.0 (the "License");
-  ~  you may not use this file except in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~     https://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,16 +15,16 @@
   -->
 
 <resources>
-  <string name="media_route_casting_on" translation_description="Casting on selected Chromecast device">‏‮Casting‬‏ ‏‮on‬‏ %s</string>
-  <string name="media_route_menu_title" translation_description="A button allowing users to select which media device the video should appear on. eg. Cast on TV | Upstairs Television">‏‮Cast‬‏ ‏‮on‬‏…</string>
-  <string name="touch_to_cast" translation_description="Touch the Cast icon to cast Santa Tracker to your TV">‏‮Touch‬‏ ‏‮to‬‏ ‏‮cast‬‏ ‏‮Santa‬‏ ‏‮Tracker‬‏ ‏‮to‬‏ ‏‮your‬‏ ‏‮TV‬‏</string>
-  <string name="connection_temp_lost" translation_description="Connection to the cast device is temporarily lost">‏‮Connection‬‏ ‏‮to‬‏ ‏‮the‬‏ ‏‮cast‬‏ ‏‮device‬‏ ‏‮is‬‏ ‏‮temporarily‬‏ ‏‮lost‬‏</string>
-  <string name="connection_recovered" translation_description="Connection to the cast device is recovered">‏‮Connection‬‏ ‏‮to‬‏ ‏‮the‬‏ ‏‮cast‬‏ ‏‮device‬‏ ‏‮is‬‏ ‏‮recovered‬‏</string>
-  <string name="cast_game_controller" translation_description="Cast game controller which allows a user to control games on the TV using directional buttons or gestures. Displayed on a dialog to allow the user to navigate to the Cast game controller screen">‏‮Cast‬‏ ‏‮game‬‏ ‏‮controller‬‏</string>
-  <string name="content_desc_mode_switch" translation_description="Switch mode from dpad to trackpad. The dpad or directional pad displays buttons for sending up/down/left/right directional commands to the game on the TV.">‏‮switch‬‏ ‏‮mode‬‏ ‏‮from‬‏ ‏‮dpad‬‏ ‏‮to‬‏ ‏‮trackpad‬‏</string>
-  <string name="content_desc_right_button" translation_description="Accessibility content description for the directional pad right button">‏‮right‬‏</string>
-  <string name="content_desc_up_button" translation_description="Accessibility content description for the directional pad up button">‏‮up‬‏</string>
-  <string name="content_desc_down_button" translation_description="Accessibility content description for the directional pad down button">‏‮down‬‏</string>
-  <string name="content_desc_enter_button" translation_description="Accessibility content description for the directional pad enter button">‏‮enter‬‏</string>
-  <string name="content_desc_left_button" translation_description="Accessibility content description for the directional pad left button">‏‮left‬‏</string>
+  <string name="media_route_casting_on">‏‮Casting‬‏ ‏‮on‬‏ %s</string>
+  <string name="media_route_menu_title">‏‮Cast‬‏ ‏‮on‬‏…</string>
+  <string name="touch_to_cast">‏‮Touch‬‏ ‏‮to‬‏ ‏‮cast‬‏ ‏‮Santa‬‏ ‏‮Tracker‬‏ ‏‮to‬‏ ‏‮your‬‏ ‏‮TV‬‏</string>
+  <string name="connection_temp_lost">‏‮Connection‬‏ ‏‮to‬‏ ‏‮the‬‏ ‏‮cast‬‏ ‏‮device‬‏ ‏‮is‬‏ ‏‮temporarily‬‏ ‏‮lost‬‏</string>
+  <string name="connection_recovered">‏‮Connection‬‏ ‏‮to‬‏ ‏‮the‬‏ ‏‮cast‬‏ ‏‮device‬‏ ‏‮is‬‏ ‏‮recovered‬‏</string>
+  <string name="cast_game_controller">‏‮Cast‬‏ ‏‮game‬‏ ‏‮controller‬‏</string>
+  <string name="content_desc_mode_switch">‏‮switch‬‏ ‏‮mode‬‏ ‏‮from‬‏ ‏‮dpad‬‏ ‏‮to‬‏ ‏‮trackpad‬‏</string>
+  <string name="content_desc_right_button">‏‮right‬‏</string>
+  <string name="content_desc_up_button">‏‮up‬‏</string>
+  <string name="content_desc_down_button">‏‮down‬‏</string>
+  <string name="content_desc_enter_button">‏‮enter‬‏</string>
+  <string name="content_desc_left_button">‏‮left‬‏</string>
 </resources>

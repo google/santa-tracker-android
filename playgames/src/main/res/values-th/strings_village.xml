@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">ติดตามซานต้าในวันที่ 24 ธันวาคม</string>
+  <string name="present_quest_locked">Present Quest จะเปิดให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="santa_snap_locked">ซานต้าเซลฟีจะพร้อมใช้งานในเร็วๆ นี้</string>
+  <string name="gumball_locked">Gumball จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="memory_locked">Memory จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="rocket_locked">Rocket Sleigh จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="dancer_locked">Dasher Dancer จะมีให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="city_quiz_locked">เกม City Quiz จะเปิดให้เล่นในวันที่ 1 ธันวาคม</string>
+  <string name="generic_game_disabled">%1$s ยังไม่สามารถเล่นได้ในขณะนี้</string>
+  <string name="generic_game_locked">%1$s ยังไม่พร้อมใช้งาน กลับมาดูใหม่ในภายหลัง</string>
+  <string name="video">วิดีโอ</string>
+  <string name="video_locked">วิดีโอจะปลดล็อกในวันที่ %1$d ธันวาคม</string>
+  <string name="video_disabled">ตอนนี้วิดีโอยังไม่สามารถดูได้</string>
+  <string name="play">เล่น</string>
+  <string name="watch">ดู</string>
+</resources>

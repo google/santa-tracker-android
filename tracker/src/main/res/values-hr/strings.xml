@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Djedova nadzorna ploča</string>
+  <string name="current_location">TRENUTAČNA LOKACIJA</string>
+  <string name="presents_delivered">DOSTAVLJENI DAROVI</string>
+  <string name="santa_status">STATUS DJEDA BOŽIĆNJAKA</string>
+  <string name="arriving_in">STIŽE ZA</string>
+  <string name="departing_in">POLAZI ZA</string>
+  <string name="localtime">STIGAO JE NA LOKACIJU</string>
+  <string name="population">BROJ STANOVNIKA</string>
+  <string name="next_destination">SLJEDEĆE MU JE ODREDIŠTE</string>
+  <string name="arriving_at">STIŽE NA LOKACIJU</string>
+  <string name="arrived_at">STIGAO JE NA LOKACIJU</string>
+  <string name="in_transit">U prolazu</string>
+  <string name="follow_santa">Prati Djeda Božićnjaka</string>
+  <string name="lost_contact_with_santa">Prekinuta je veza s Djedom</string>
+  <string name="notification_nearby">Djedica je u blizini!</string>
+  <string name="notification_takeoff">Djedica je krenuo!</string>
+  <string name="notification_unlock_video">Dostupan je novi videozapis!</string>
+  <string name="notification_unlock_game">Dostupna je nova igra!</string>
+  <string name="santa_arrives_in_your_area_in">DJED STIŽE U TVOJE MJESTO ZA</string>
+  <string name="santa_is_approximately">DJED JE UDALJEN OTPRILIKE</string>
+  <string name="distance_km_away">%1$,d km%2$s</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d mi</string>
+  <string name="did_you_know">ZNAŠ LI OVO?</string>
+  <string name="watch_movie">POGLEDAJTE FILM</string>
+  <string name="santa_update">NOVOSTI OD DJEDICE</string>
+  <string name="elapsed_time">PROTEKLO VRIJEME</string>
+  <string name="wikipedia">Wikipedija</string>
+  <string name="arrival">DOLAZAK</string>
+  <string name="weather">VREMENSKI UVJETI</string>
+  <string name="weather_format">%1$s °C/%2$s °F</string>
+  <string name="did_you_know_attribution">Činjenice o svijetu donosi National Geographic Bee</string>
+  <string name="photo">Fotografija</string>
+  <string name="photos">Fotografije</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">NATRAG NA DJEDOVU KAMERU</string>
+  <string name="update_from_santa">Djedove vijesti</string>
+  <string name="trivia_from_santa">Zanimljivosti o Djedu</string>
+  <string name="photo_from_santa">Djedova fotografija</string>
+  <string name="video_from_santa">Djedov videozapis</string>
+  <string name="show_history">Prikaži povijest</string>
+  <string name="see_best_moments">Pogledaj najbolje trenutke Djedova puta</string>
+  <string name="return_to_map">Natrag na kartu</string>
+  <string name="santa_is_now_arriving_in_x">Djed upravo stiže u sljedeće mjesto: %s</string>
+  <string name="santa_has_handed_out_x_presents">Djed je podijelio sljedeći broj darova: %s</string>
+  <string name="new_update_from_santa">Nove Djedove vijesti</string>
+  <string name="new_trivia_from_santa">Nova zanimljivost o Djedu</string>
+  <string name="new_video_from_santa">Novi Djedov videozapis</string>
+  <string name="new_photo_from_santa">Nova Djedova fotografija</string>
+  <string name="cast_overlay_text">Slijedi Djeda Božićnjaka na velikom zaslonu!\nDodirni ovaj gumb i gledaj Djedino putovanje na TV-u s Chromecastom.</string>
+  <string name="menu_media_router_title">Gumb za emitiranje</string>
+</resources>

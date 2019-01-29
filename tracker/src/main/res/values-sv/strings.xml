@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Jultomtens instrumentpanel</string>
+  <string name="current_location">AKTUELL POSITION</string>
+  <string name="presents_delivered">LEVERERADE PAKET</string>
+  <string name="santa_status">JULTOMTENS STATUS</string>
+  <string name="arriving_in">KOMMER OM</string>
+  <string name="departing_in">ÅKER OM</string>
+  <string name="localtime">KOM FRAM</string>
+  <string name="population">BEFOLKNING</string>
+  <string name="next_destination">NÄSTA DESTINATION</string>
+  <string name="arriving_at">KOMMER FRAM TILL</string>
+  <string name="arrived_at">KOM FRAM TILL</string>
+  <string name="in_transit">På väg</string>
+  <string name="follow_santa">Följ tomten</string>
+  <string name="lost_contact_with_santa">Vi har förlorat kontakten med jultomten</string>
+  <string name="notification_nearby">Tomten är i närheten!</string>
+  <string name="notification_takeoff">Tomten har lyft!</string>
+  <string name="notification_unlock_video">Det finns en ny video!</string>
+  <string name="notification_unlock_game">Det finns ett nytt spel!</string>
+  <string name="santa_arrives_in_your_area_in">JULTOMTEN KOMMER TILL DIG OM</string>
+  <string name="santa_is_approximately">JULTOMTEN ÄR CIRKA</string>
+  <string name="distance_km_away">%1$,d km%2$s bort</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d miles bort</string>
+  <string name="did_you_know">VISSTE DU</string>
+  <string name="watch_movie">TITTA PÅ FILMEN</string>
+  <string name="santa_update">UPPDATERING FRÅN TOMTEN</string>
+  <string name="elapsed_time">TID SOM GÅTT</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">ANKOMST</string>
+  <string name="weather">VÄDER</string>
+  <string name="weather_format">%1$s °C/%2$s °F</string>
+  <string name="did_you_know_attribution">Fakta om världen från National Geographic Bee</string>
+  <string name="photo">Foto</string>
+  <string name="photos">Foton</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">GÅ TILLBAKA TILL JULTOMTENS KAMERA</string>
+  <string name="update_from_santa">Uppdatering från jultomten</string>
+  <string name="trivia_from_santa">Fakta från jultomten</string>
+  <string name="photo_from_santa">Foto från jultomten</string>
+  <string name="video_from_santa">Video från jultomten</string>
+  <string name="show_history">Visa historik</string>
+  <string name="see_best_moments">Se höjdpunkterna från jultomtens resa</string>
+  <string name="return_to_map">Tillbaka till kartan</string>
+  <string name="santa_is_now_arriving_in_x">Jultomten kommer om %s</string>
+  <string name="santa_has_handed_out_x_presents">Jultomten har delat ut %s klappar</string>
+  <string name="new_update_from_santa">Ny uppdatering från jultomten</string>
+  <string name="new_trivia_from_santa">Ny fakta från jultomten</string>
+  <string name="new_video_from_santa">Ny video från jultomten</string>
+  <string name="new_photo_from_santa">Nytt foto från jultomten</string>
+  <string name="cast_overlay_text">Följ tomten på en stor skärm!\nTryck på knappen så kan du se jultomtens resa på TV:n med Chromecast.</string>
+  <string name="menu_media_router_title">Cast-knappen</string>
+</resources>
