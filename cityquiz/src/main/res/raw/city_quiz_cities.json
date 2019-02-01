@@ -450,7 +450,7 @@
   {
     "default_name": "Quito, Ecuador",
     "name": "quito_ecuador_city",
-    "lat": "-0/1807",
+    "lat": -0.1807,
     "lng": -78.4678,
     "image_name": "quito_ecuador_city.jpg",
     "image_author": "Diego Delso"
