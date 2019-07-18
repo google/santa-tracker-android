@@ -151,5 +151,7 @@ dependencies {
     androidTestImplementation rootProject.ext.testingSupportRules
 }
 
-apply plugin: 'com.google.gms.google-services'
+if (project.file('google-services.json').exists()) {
+    apply plugin: 'com.google.gms.google-services'
+}
 apply plugin: 'com.google.android.gms.oss-licenses-plugin'
