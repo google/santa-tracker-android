@@ -24,8 +24,8 @@ It's simple. Plug your phone in (or fire up an emulator) and run:
 Alternatively, import the source code into Android Studio (File, Import Project).
 
 ## License
-All image and audio files (including *.png, *.jpg, *.svg, *.mp3, *.wav 
-and *.ogg) are licensed under the CC-BY-NC license. All other files are 
+All image and audio files (including *.png, *.jpg, *.svg, *.mp3, *.wav
+and *.ogg) are licensed under the CC-BY license. All other files are
 licensed under the Apache 2 license. See the LICENSE file for details.
 
 
