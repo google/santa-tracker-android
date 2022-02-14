@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">ตามติดซานต้า</string>
+  <string name="track_santa_two_lines">ตามติดซานต้า</string>
+  <string name="santa_takes_off_in">ซานต้าจะออกเดินทางใน</string>
+  <string name="santa_is_busy_preparing_for_next_year">ซานต้ากำลังยุ่งกับการเตรียมของขวัญของปีหน้า</string>
+  <string name="view_old_stops">ดูจุดแวะในปี 2014</string>
+  <string name="contacting_santa">กำลังพยายามติดต่อซานต้า</string>
+  <string name="still_trying_to_reach_santa">ยังคงพยายามติดต่อซานต้า</string>
+  <string name="days">วัน</string>
+  <string name="hrs">ชั่วโมง</string>
+  <string name="min">นาที</string>
+  <string name="sec">วินาที</string>
+  <string name="menu_share">แชร์</string>
+  <string name="menu_share_friends">แชร์กับเพื่อน</string>
+  <string name="legal_notice">กฎหมายและความเป็นส่วนตัว</string>
+  <string name="legal_notice_text">ประกาศทางกฎหมาย</string>
+  <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+  <string name="terms_of_service">ข้อกำหนดในการให้บริการ</string>
+  <string name="open_source_licenses">ใบอนุญาตโอเพนซอร์ส</string>
+  <string name="open_source_repo_santa">Santa บน GitHub</string>
+  <string name="scene_not_available">ยังไม่พร้อมใช้งาน</string>
+  <string name="sign_out">ออกจากระบบ</string>
+  <string name="until_takeoff">จนกว่าจะออกเดินทาง</string>
+  <string name="web_scene_error">ขออภัย โหลดฉากไม่ได้</string>
+  <string name="check_back_daily">กลับมาดูเกมใหม่ๆ ได้ทุกวัน</string>
+  <string name="new_games">เกมใหม่</string>
+  <string name="new_card">ใหม่</string>
+  <string name="tracker_opens_date">เปิดในวันที่ %1$s</string>
+  <string name="time">เวลา</string>
+  <string name="download_dialog_title">ดาวน์โหลด %1$s</string>
+  <string name="download_dialog_message">เราจำเป็นต้องดาวน์โหลดเกมจาก Play Store ก่อนที่คุณจะเล่นได้ อุปกรณ์นี้กำลังเชื่อมต่อไปยังเครือข่ายที่มีการตรวจวัดซึ่งอาจมีการเรียกเก็บเงินจากคุณสำหรับข้อมูลที่ถ่ายโอน\n\nคุณต้องการดำเนินการต่อไหม</string>
+  <string name="elf_maker_write_success">บันทึกรูปภาพไปยัง Photos แล้ว</string>
+  <string name="elf_maker_write_fail">เราพบข้อผิดพลาดขณะบันทึกรูปภาพไปยัง Photos ของอุปกรณ์</string>
+</resources>

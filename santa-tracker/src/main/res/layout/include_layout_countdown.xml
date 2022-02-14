@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/layout_startup">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+
+        <!-- DAYS -->
+        <FrameLayout
+            android:id="@+id/countdown_container_days"
+            style="@style/container_countdown_iceblock_end"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countdown_days_1"
+                style="@style/textview_countdown_digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="16"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countdown_days_2"
+                style="@style/textview_countdown_digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+        <!-- DAYS LABEL -->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textview_countdown_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/countdown_container_days"
+            android:layout_alignRight="@+id/countdown_container_days"
+            android:layout_below="@+id/countdown_container_days"
+            android:contentDescription="@string/days"
+            android:text="@string/days"
+            app:textAllCaps="true" />
+
+        <!-- HOURS -->
+        <FrameLayout
+            android:id="@+id/countdown_container_hours"
+            style="@style/container_countdown_iceblock_end"
+            android:layout_toRightOf="@+id/countdown_container_days">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countdown_hours_1"
+                style="@style/textview_countdown_digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="12"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countdown_hours_2"
+                style="@style/textview_countdown_digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+        </FrameLayout>
+
+        <!-- HOURS LABEL -->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textview_countdown_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/countdown_container_hours"
+            android:layout_alignRight="@+id/countdown_container_hours"
+            android:layout_below="@+id/countdown_container_hours"
+            android:contentDescription="@string/hrs"
+            android:text="@string/hrs"
+            app:textAllCaps="true" />
+
+
+        <!-- MINUTES -->
+        <FrameLayout
+            android:id="@+id/countdown_container_minutes"
+            style="@style/container_countdown_iceblock_end"
+            android:layout_toRightOf="@+id/countdown_container_hours">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countdown_minutes_1"
+                style="@style/textview_countdown_digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="59"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countdown_minutes_2"
+                style="@style/textview_countdown_digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+        </FrameLayout>
+
+        <!-- MINUTES LABEL -->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textview_countdown_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/countdown_container_minutes"
+            android:layout_alignRight="@+id/countdown_container_minutes"
+            android:layout_below="@+id/countdown_container_minutes"
+            android:contentDescription="@string/min"
+            android:text="@string/min"
+            app:textAllCaps="true" />
+
+        <!-- SECONDS -->
+        <FrameLayout
+            android:id="@+id/countdown_container_seconds"
+            style="@style/container_countdown_iceblock_end"
+            android:layout_toRightOf="@+id/countdown_container_minutes">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countdown_seconds_1"
+                style="@style/textview_countdown_digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="33"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countdown_seconds_2"
+                style="@style/textview_countdown_digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+        </FrameLayout>
+
+        <!-- SECONDS LABEL -->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textview_countdown_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/countdown_container_seconds"
+            android:layout_alignRight="@+id/countdown_container_seconds"
+            android:layout_below="@+id/countdown_container_seconds"
+            android:contentDescription="@string/sec"
+            android:text="@string/sec"
+            app:textAllCaps="true" />
+
+    </RelativeLayout>
+</merge>

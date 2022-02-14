@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">[Þļåý one]</string>
+  <string name="level">[ĻÉVÉĻ one]</string>
+  <string name="workshops">[Ŵöŕķšĥöþš one two]</string>
+  <string name="unlock_at_level">[Ûñļöçķ åţ ļévéļ ᐅ%1$dᐊ one two three four]</string>
+  <string name="present_dropped">[Šåñţå ðŕöþþéð å þŕéšéñţ¡ one two three four five]</string>
+  <string name="present_too_far">[Þŕéšéñţ ţöö ƒåŕ åŵåý¡ one two three four five]</string>
+  <string name="workshop_too_far">[Ŵöŕķšĥöþ ţöö ƒåŕ åŵåý¡ one two three four five]</string>
+  <string name="no_presents_collected">[Çöļļéçţ šömé þŕéšéñţš ƒîŕšţ¡ one two three four five six]</string>
+  <string name="bag_is_full">[Ýöûŕ бåĝ îš ƒûļļ¡ one two three four]</string>
+  <string name="workshop_moved">[Ŵöŕķšĥöþ mövéð one two]</string>
+  <string name="move_canceled">[Mövé çåñçéļéð one two]</string>
+  <string name="workshop_move_too_soon">[Åļŕéåðý mövéð ţĥîš ŵöŕķšĥöþ ţöðåý, ţŕý åĝåîñ ţömöŕŕöŵ one two three four five six seven eight nine ten eleven]</string>
+  <string name="go_here">[Ĝö ĥéŕé¡ one]</string>
+  <string name="perm_location_rationale">[Þŕéšéñţ Qûéšţ ñééðš åççéšš ţö ýöûŕ ļöçåţîöñ ţö ĥéļþ ýöû ƒîñð Šåñţå\'š þŕéšéñţš. one two three four five six seven eight nine ten eleven twelve thirteen fourteen]</string>
+  <string name="perm_required">[Þéŕmîššîöñ Ŕéqûîŕéð one two three]</string>
+  <string name="perm_go_to_settings">[Þŕéšéñţ Qûéšţ ŵöñ\'ţ ŵöŕķ ŵîţĥöûţ åççéšš ţö ýöûŕ ļöçåţîöñ. Þļéåšé éñåбļé Ļöçåţîöñ þéŕmîššîöñš îñ Šéţţîñĝš. one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen]</string>
+  <string name="required_permissions_missing">[Ŕéqûîŕéð þéŕmîššîöñš mîššîñĝ. one two three four]</string>
+  <string name="next">[Ñéxţ one]</string>
+  <string name="onboarding_msg_1">[Þŕéšéñţš åŕé ƒåļļîñĝ\ñöûţ öƒ Šåñţå\'š šļéîĝĥ¡ one two three four five six seven eight nine]</string>
+  <string name="onboarding_msg_2">[Ŵåļķ ţö ţĥé þŕéšéñţ þîñš îñ\ñŕéåļ ļîƒé ţö çåţçĥ ţĥém. one two three four five six seven eight nine ten eleven]</string>
+  <string name="onboarding_msg_3">[Öñçé ýöûŕ бåĝ îš ƒûļļ,\ñŵåļķ ţö å ŵöŕķšĥöþ ţö ûñļöåð one two three four five six seven eight nine ten eleven]</string>
+  <string name="onboarding_msg_4">[Ļéţ\'š Ĝö¡ one two]</string>
+  <string name="msg_present_nearby">[Ţĥéŕé\'š å þŕéšéñţ ñéåŕбý¡ one two three four five six]</string>
+  <string name="msg_bag_almost_full">[Ýöûŕ бåĝ îš åļmöšţ ƒûļļ¡ one two three four five]</string>
+  <string name="msg_unload_bag">[Ûñļöåð ýöûŕ бåĝ åţ å ŵöŕķšĥöþ. one two three four five six seven]</string>
+  <string name="msg_unlocked_workshop">[Ýöû ûñļöçķéð å ñéŵ ŵöŕķšĥöþ¡ one two three four five six]</string>
+  <string name="msg_click_present">[Çļîçķ öñ å þŕéšéñţ ţö þîçķ îţ ûþ. one two three four five six seven]</string>
+  <string name="msg_click_workshop">[Çļîçķ öñ ýöûŕ ŵöŕķšĥöþ ţö ûñļöåð þŕéšéñţš. one two three four five six seven eight nine]</string>
+  <string name="level_denominator">[öƒ 12 one]</string>
+  <string name="full">[FÛĻĻ one]</string>
+  <string name="distraction_warning">[Þļéåšé бé åŵåŕé öƒ ýöûŕ šûŕŕöûñðîñĝš ŵĥéñ þļåýîñĝ. one two three four five six seven eight nine ten eleven]</string>
+</resources>

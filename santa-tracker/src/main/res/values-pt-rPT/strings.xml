@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Localizar Pai Natal</string>
+  <string name="track_santa_two_lines">Localizar\nPai Natal</string>
+  <string name="santa_takes_off_in">O Pai Natal vai levantar voo daqui a</string>
+  <string name="santa_is_busy_preparing_for_next_year">O Pai Natal está a preparar-se para o próximo ano.</string>
+  <string name="view_old_stops">Ver paragens de 2014</string>
+  <string name="contacting_santa">A tentar contactar o Pai Natal</string>
+  <string name="still_trying_to_reach_santa">Ainda a tentar contactar o Pai Natal</string>
+  <string name="days">Dias</string>
+  <string name="hrs">Hrs.</string>
+  <string name="min">Min.</string>
+  <string name="sec">Seg.</string>
+  <string name="menu_share">Partilhar</string>
+  <string name="menu_share_friends">Partilhar com amigos</string>
+  <string name="legal_notice">Leis e privacidade</string>
+  <string name="legal_notice_text">Aviso legal</string>
+  <string name="privacy_policy">Política de Privacidade</string>
+  <string name="terms_of_service">Termos de Utilização</string>
+  <string name="open_source_licenses">Licenças de código aberto</string>
+  <string name="open_source_repo_santa">Pai Natal no GitHub</string>
+  <string name="scene_not_available">Ainda não disponível</string>
+  <string name="sign_out">Terminar sessão</string>
+  <string name="until_takeoff">Até à descolagem</string>
+  <string name="web_scene_error">Não foi possível carregar a cena.</string>
+  <string name="check_back_daily">Volte diariamente para encontrar novos jogos!</string>
+  <string name="new_games">Novos jogos</string>
+  <string name="new_card">Novo</string>
+  <string name="tracker_opens_date">Abre a %1$s</string>
+  <string name="time">TEMPO RESTANTE</string>
+  <string name="download_dialog_title">Transferir %1$s</string>
+  <string name="download_dialog_message">Para poder jogar, é necessário transferir o jogo da Play Store. Atualmente, este dispositivo está ligado a uma rede de acesso limitado que lhe pode cobrar por quaisquer dados transferidos.\n\nPretende continuar?</string>
+  <string name="elf_maker_write_success">Imagem guardada nas suas fotos.</string>
+  <string name="elf_maker_write_fail">Ocorreu um erro ao guardar a sua imagem nas fotos do dispositivo.</string>
+</resources>

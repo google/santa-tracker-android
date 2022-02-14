@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scene_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/view_loading_game"
+        app:layout_constraintTop_toBottomOf="@id/scorebar_background" />
+
+    <View
+        android:id="@+id/scorebar_background"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/purple_button"
+        android:elevation="@dimen/toolbar_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scorebar_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/toolbar_elevation"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/SantaWhite"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/scorebar_score_title"
+        app:layout_constraintEnd_toEndOf="@+id/scorebar_score_title"
+        app:layout_constraintStart_toStartOf="@+id/scorebar_score_title"
+        app:layout_constraintTop_toTopOf="@id/scorebar_background"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="432" />
+
+    <TextView
+        android:id="@+id/scorebar_score_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:elevation="@dimen/toolbar_elevation"
+        android:gravity="center_horizontal"
+        android:minWidth="60dp"
+        android:text="@string/score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/SantaWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/scorebar_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scorebar_score" />
+
+    <ImageView
+        android:id="@+id/scorebar_time_background"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginStart="12dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:elevation="@dimen/toolbar_elevation"
+        app:layout_constraintStart_toEndOf="@+id/score_barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/scorebar_time_background" />
+
+    <TextView
+        android:id="@+id/scorebar_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/toolbar_elevation"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/purple_button"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/scorebar_time_title"
+        app:layout_constraintEnd_toEndOf="@id/scorebar_time_background"
+        app:layout_constraintStart_toStartOf="@id/scorebar_time_background"
+        app:layout_constraintTop_toTopOf="@+id/scorebar_time_background"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="12:34" />
+
+    <TextView
+        android:id="@+id/scorebar_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/toolbar_elevation"
+        android:text="@string/time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/purple_button"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/scorebar_background"
+        app:layout_constraintEnd_toEndOf="@id/scorebar_time_background"
+        app:layout_constraintStart_toStartOf="@id/scorebar_time_background"
+        app:layout_constraintTop_toBottomOf="@+id/scorebar_time" />
+
+    <TextView
+        android:id="@+id/scorebar_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/toolbar_elevation"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="16sp"
+        android:textColor="@color/SantaWhite"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/scorebar_level_title"
+        app:layout_constraintEnd_toEndOf="@+id/scorebar_level_title"
+        app:layout_constraintStart_toStartOf="@+id/scorebar_level_title"
+        app:layout_constraintTop_toTopOf="@id/scorebar_background"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="4 / 9"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/scorebar_level_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:elevation="@dimen/toolbar_elevation"
+        android:gravity="center"
+        android:minWidth="60dp"
+        android:text="@string/mmg_level"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/SantaWhite"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/scorebar_background"
+        app:layout_constraintStart_toEndOf="@+id/scorebar_time_background"
+        app:layout_constraintTop_toBottomOf="@id/scorebar_level"
+        tools:visibility="visible" />
+
+    <com.google.android.apps.santatracker.common.CheckableImageButton
+        android:id="@+id/overlay_mute_button"
+        style="@style/Santa.ImageButton.Mute"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="@+id/scorebar_background"
+        app:layout_constraintTop_toTopOf="@+id/scorebar_background" />
+
+    <com.google.android.apps.santatracker.common.CheckableImageButton
+        android:id="@+id/scorebar_mute_button"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:elevation="@dimen/toolbar_elevation"
+        android:src="@drawable/mute_icon"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintBottom_toBottomOf="@+id/scorebar_background"
+        app:layout_constraintEnd_toEndOf="@+id/scorebar_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Loading game view -->
+    <com.google.android.apps.santatracker.games.LoadingSceneView
+        android:id="@+id/view_loading_game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+    <com.google.android.apps.santatracker.customviews.WebPauseView
+        android:id="@+id/view_pause"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+    <com.google.android.apps.santatracker.games.EndOfGameView
+        android:id="@+id/view_endgame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="scorebar_score_title,scorebar_score" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="scorebar_time,scorebar_time_title,scorebar_time_background" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="scorebar_level,scorebar_level_title" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/score_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="scorebar_score,scorebar_score_title" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/pause_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/pause"
+        android:src="@drawable/ic_pause_black_24dp"
+        android:tint="@color/SantaWhite"
+        app:backgroundTint="@color/SantaGreenDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

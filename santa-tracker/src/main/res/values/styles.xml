@@ -1,0 +1,237 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="TextAppearance.Small" parent="@android:style/TextAppearance.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="TextAppearance.Large" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Map Toolbar -->
+    <style name="MapToolbar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@android:color/black</item>
+    </style>
+
+    <!-- Dashboard -->
+    <style name="DashboardLabel" parent="@style/TextAppearance.Small">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DashboardLabelShadowed" parent="@style/DashboardLabel">
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">1.5</item>
+        <item name="android:shadowDy">1.5</item>
+        <item name="android:shadowRadius">1.5</item>
+    </style>
+
+    <style name="DashboardText" parent="@style/TextAppearance.Medium">
+        <item name="android:textColor">@color/santacamDashboardText</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="DashboardTextFeatured" parent="@style/TextAppearance.Large">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DashboardTextMain" parent="@style/DashboardTextFeatured">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DashboardTextFeaturedShadowed" parent="@style/DashboardTextFeatured">
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">1.5</item>
+        <item name="android:shadowDy">1.5</item>
+        <item name="android:shadowRadius">1.5</item>
+    </style>
+
+    <style name="DashboardIcon">
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+    <style name="DashboardDelimiter">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">#6fff</item>
+    </style>
+
+    <style name="DashboardDelimiterVertical">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:background">#6fff</item>
+    </style>
+
+    <style name="DashboardViewSwitcher" />
+
+    <style name="DashboardViewSwitcher.Location" />
+
+    <!-- Info Window -->
+    <style name="infowindow_label" parent="@style/DashboardLabel" />
+
+    <style name="infowindow_text" parent="@style/DashboardText" />
+
+    <!-- ActionBar title text -->
+    <style name="ActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/SantaWhite</item>
+        <!-- The textColor property is backward compatible with the Support Library -->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NavDrawerItemName" parent="@style/TextAppearance.Medium">
+        <item name="android:textColor">@color/SantaWhite</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CountdownStatus" parent="@style/TextAppearance.Medium">
+        <item name="android:textColor">#FF555555</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardBorderlessButton.Base" parent="Widget.AppCompat.Button.Borderless" />
+
+    <style name="CardButtonBorderless" parent="CardBorderlessButton.Base">
+        <item name="android:textAppearance">@style/TextAppearance.Small</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:paddingLeft">@dimen/santacamDashboardPadding</item>
+        <item name="android:paddingRight">@dimen/santacamDashboardPadding</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DestinationCopyright" parent="@style/TextAppearance.Small">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorLink">@android:color/white</item>
+        <item name="android:background">@drawable/bg_copyright</item>
+    </style>
+
+    <style name="DestinationCardButton" parent="CardButtonBorderless">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="MovieCardButton" parent="CardButtonBorderless" />
+
+    <style name="CountdownColon">
+        <item name="android:layout_marginLeft">@dimen/countdown_colon_margin</item>
+        <item name="android:layout_marginRight">@dimen/countdown_colon_margin</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">#FF555555</item>
+    </style>
+
+    <style name="textview_countdown_digits">
+        <item name="android:textColor">@color/SantaWhite</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="textview_countdown_label">
+        <item name="android:textColor">@color/SantaWhite</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">-11dp</item>
+    </style>
+
+    <style name="container_countdown_iceblock">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+    </style>
+
+    <style name="container_countdown_iceblock_end" parent="container_countdown_iceblock">
+        <item name="android:background">@drawable/countdown_box_end</item>
+    </style>
+
+    <style name="container_countdown_iceblock_middle" parent="container_countdown_iceblock">
+        <item name="android:background">@drawable/countdown_box_middle</item>
+    </style>
+
+    <style name="RedButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textColor">@color/SantaWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/track_santa_btn</item>
+        <item name="android:padding">@dimen/button_side_padding</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="RedButtonTv" parent="android:Widget.Button">
+        <item name="android:textColor">@color/SantaWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/track_santa_btn</item>
+        <item name="android:padding">@dimen/button_side_padding</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="TopButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/bg_top</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation" tools:targetApi="lollipop">2dp</item>
+    </style>
+
+    <style name="TvBigVerbText">
+        <item name="android:textColor">@color/SantaWhite</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:shadowColor">#AA000000</item>
+        <item name="android:shadowDx">3</item>
+        <item name="android:shadowDy">3</item>
+        <item name="android:shadowRadius">1.5</item>
+        <item name="android:rotation">-5</item>
+        <item name="android:textAppearance">@style/TextAppearance.Santa.Lobster</item>
+    </style>
+
+    <style name="TvCardTitleText">
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:textColor">@color/SantaWhite</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LauncherCard">
+        <item name="android:foreground">@drawable/card_ripple</item>
+    </style>
+
+    <style name="CategoryButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/category_button_background</item>
+        <item name="android:foreground">@drawable/category_button_ripple</item>
+    </style>
+
+    <style name="CityQuizProgressBar" parent="Base.Widget.AppCompat.ProgressBar">
+    </style>
+
+</resources>

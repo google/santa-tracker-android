@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">Гамбол</string>
+  <string name="memory">Згадати все</string>
+  <string name="elf_jetpack">Реактивні ельфи</string>
+  <string name="rocket">Реактивні санчата</string>
+  <string name="dancer">Олені</string>
+  <string name="cityquiz">Угадай місто</string>
+  <string name="present_quest">Знайди подарунок</string>
+  <string name="santa_snap">Знімок для Діда Мороза</string>
+  <string name="present_throw">Подарунковий бум</string>
+  <string name="jetpack">Реактивні ельфи</string>
+  <string name="web_airport">Аеропорт Північного полюса</string>
+  <string name="web_boatload">Подарункова рогатка</string>
+  <string name="web_clausdraws">Малюнок для Діда Мороза</string>
+  <string name="web_codeboogie">Бугі-вугі</string>
+  <string name="web_codelab">Пазли</string>
+  <string name="web_gumball">Перекоти кульку</string>
+  <string name="web_jamband">Музичний гурт помічників Діда Мороза</string>
+  <string name="web_penguindash">Біг пінгвіна</string>
+  <string name="web_presentbounce">Підкидання подарунків</string>
+  <string name="web_presentdrop">Кидання подарунків</string>
+  <string name="web_racer">Гонщик Рудольф</string>
+  <string name="web_runner">Олень-бігун</string>
+  <string name="web_santasearch">Пошук Діда Мороза</string>
+  <string name="web_santaselfie">Селфі Діда Мороза</string>
+  <string name="web_seasonofgiving">Сезон подарунків</string>
+  <string name="web_elfski">Ельф на лижах</string>
+  <string name="web_snowball">Бій сніжками</string>
+  <string name="web_snowflake">Створення сніжинки</string>
+  <string name="web_speedsketch">Швидка замальовка</string>
+  <string name="web_wrapbattle">Пакування подарунків</string>
+  <string name="web_elfmaker">Мій власний ельф</string>
+  <string name="video_santa_is_back">Знову до роботи</string>
+  <string name="video_office_prank">Офісна витівка</string>
+  <string name="video_carpool">Підготовка до вечірки</string>
+</resources>

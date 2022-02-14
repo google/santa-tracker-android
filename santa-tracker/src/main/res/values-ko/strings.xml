@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">산타 추적</string>
+  <string name="track_santa_two_lines">산타\n추적</string>
+  <string name="santa_takes_off_in">산타 출발까지 남은 시간</string>
+  <string name="santa_is_busy_preparing_for_next_year">산타가 분주하게 내년을 위해 준비하고 있습니다.</string>
+  <string name="view_old_stops">2014년에 방문한 위치 보기</string>
+  <string name="contacting_santa">산타와 연결 시도 중</string>
+  <string name="still_trying_to_reach_santa">산타와 계속 연결 시도 중</string>
+  <string name="days">일</string>
+  <string name="hrs">시간</string>
+  <string name="min">분</string>
+  <string name="sec">초</string>
+  <string name="menu_share">공유</string>
+  <string name="menu_share_friends">친구와 공유</string>
+  <string name="legal_notice">법적 고지 및 개인정보 보호</string>
+  <string name="legal_notice_text">법적 고지</string>
+  <string name="privacy_policy">개인정보처리방침</string>
+  <string name="terms_of_service">서비스 약관</string>
+  <string name="open_source_licenses">오픈소스 라이선스</string>
+  <string name="open_source_repo_santa">GitHub의 산타 앱</string>
+  <string name="scene_not_available">아직 사용할 수 없음</string>
+  <string name="sign_out">로그아웃</string>
+  <string name="until_takeoff">출발까지 남은 시간</string>
+  <string name="web_scene_error">장면을 로드할 수 없습니다.</string>
+  <string name="check_back_daily">매일 새로운 게임을 확인하세요!</string>
+  <string name="new_games">새 게임</string>
+  <string name="new_card">신규</string>
+  <string name="tracker_opens_date">시작: %1$s</string>
+  <string name="time">시간</string>
+  <string name="download_dialog_title">%1$s 다운로드</string>
+  <string name="download_dialog_message">Play 스토어에서 게임을 다운로드해야 플레이할 수 있습니다. 현재 기기가 요금이 부과되는 네트워크에 연결되어 있으므로 전송되는 데이터에 대한 요금이 청구될 수 있습니다.\n\n계속 진행하시겠어요?</string>
+  <string name="elf_maker_write_success">사진에 이미지를 저장했습니다.</string>
+  <string name="elf_maker_write_fail">기기 사진에 이미지를 저장하는 도중 오류가 발생했습니다.</string>
+</resources>

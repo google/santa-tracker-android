@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">ลูกบอลหรรษา</string>
+  <string name="memory">เกมความจำ</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">เลื่อนจรวด</string>
+  <string name="dancer">คริสต์มาสแดนซ์</string>
+  <string name="cityquiz">ทายเมือง</string>
+  <string name="present_quest">ตามล่าของขวัญ</string>
+  <string name="santa_snap">ซานต้าเซลฟี</string>
+  <string name="present_throw">โยนของขวัญ</string>
+  <string name="jetpack">เจ็ตแพ็คของเอลฟ์</string>
+  <string name="web_airport">สนามบินขั้วโลกเหนือ</string>
+  <string name="web_boatload">โยนของขวัญด้วยหนังสติ๊ก</string>
+  <string name="web_clausdraws">วาดรูปซานตาคลอส</string>
+  <string name="web_codeboogie">โค้ดเต้นรำ</string>
+  <string name="web_codelab">ห้องทดลองโค้ด</string>
+  <string name="web_gumball">เอียง Gumball</string>
+  <string name="web_jamband">วงแจมแบนด์ของชาวเอลฟ์</string>
+  <string name="web_penguindash">เพนกวินแดช</string>
+  <string name="web_presentbounce">โยนของขวัญ</string>
+  <string name="web_presentdrop">หย่อนของขวัญ</string>
+  <string name="web_racer">รูดอล์ฟนักวิ่งแข่ง</string>
+  <string name="web_runner">นักวิ่งเรนเดียร์</string>
+  <string name="web_santasearch">ค้นหาซานต้า</string>
+  <string name="web_santaselfie">ซานต้าเซลฟี</string>
+  <string name="web_seasonofgiving">เทศกาลแห่งการให้</string>
+  <string name="web_elfski">เอลฟ์เล่นสกี</string>
+  <string name="web_snowball">ศึกปาลูกบอลหิมะ</string>
+  <string name="web_snowflake">สร้างเกล็ดหิมะ</string>
+  <string name="web_speedsketch">สเก็ตช์ภาพอย่างเร็ว</string>
+  <string name="web_wrapbattle">แข่งห่อของขวัญ</string>
+  <string name="web_elfmaker">เครื่องผลิตเอลฟ์</string>
+  <string name="video_santa_is_back">ซานต้าแจกของ</string>
+  <string name="video_office_prank">แกล้งกันเล่น</string>
+  <string name="video_carpool">คาร์พูล</string>
+</resources>

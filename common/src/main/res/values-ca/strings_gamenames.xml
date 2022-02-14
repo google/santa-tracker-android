@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">Gumball</string>
+  <string name="memory">Memory</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Rocket Sleigh</string>
+  <string name="dancer">Dasher Dancer</string>
+  <string name="cityquiz">Joc de les ciutats</string>
+  <string name="present_quest">Recerca de regals</string>
+  <string name="santa_snap">Fotos nadalenques</string>
+  <string name="present_throw">Llançament de regals</string>
+  <string name="jetpack">Elf amb motxilla propulsora</string>
+  <string name="web_airport">Aeroport del Pol Nord</string>
+  <string name="web_boatload">Joc de tirar regals</string>
+  <string name="web_clausdraws">Dibuixos de Nadal</string>
+  <string name="web_codeboogie">El ball del codi</string>
+  <string name="web_codelab">Laboratori de programació</string>
+  <string name="web_gumball">Joc de guiar els caramels</string>
+  <string name="web_jamband">La banda dels elfs</string>
+  <string name="web_penguindash">Carrera de pingüins</string>
+  <string name="web_presentbounce">Joc de rebotar regals</string>
+  <string name="web_presentdrop">Joc de repartir regals</string>
+  <string name="web_racer">La cursa de trineus de Rudolf</string>
+  <string name="web_runner">Ren a la carrera</string>
+  <string name="web_santasearch">On és el Pare Noel?</string>
+  <string name="web_santaselfie">La selfie del Pare Noel</string>
+  <string name="web_seasonofgiving">Temps de regals</string>
+  <string name="web_elfski">Els elfs van a esquiar</string>
+  <string name="web_snowball">Tempesta de boles de neu</string>
+  <string name="web_snowflake">Crea un floc de neu amb codi</string>
+  <string name="web_speedsketch">Esbós ràpid</string>
+  <string name="web_wrapbattle">Batalla d\'embolicar regals</string>
+  <string name="web_elfmaker">Creador d\'elfs</string>
+  <string name="video_santa_is_back">Tornada a la feina</string>
+  <string name="video_office_prank">Broma a l\'oficina</string>
+  <string name="video_carpool">Cotxe compartit</string>
+</resources>

@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‏‎‎‎‎‎‏‏‎‎‎‎‎‎‏‏‎‎‎‏‎‎‏‏‎‏‎‎‏‏‎‎‎‏‎‏‏‏‎‏‎‏‏‎‎‎‏‎‎‏‏‎‏‏‎‏‏‎‎‎Play‎‏‎‎‏‎</string>
+  <string name="level">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‎‏‎‏‏‎‎‎‏‎‎‏‏‏‎‏‎‎‏‎‎‎‏‏‎‎‎‏‏‏‏‎‏‏‏‎‎‏‏‏‎‏‏‏‏‎‎‏‎‏‎‎‏‎‏‎‎‏‎LEVEL‎‏‎‎‏‎</string>
+  <string name="workshops">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‏‎‏‎‎‎‏‎‏‎‎‎‏‎‏‏‏‎‏‏‏‏‏‎‏‎‏‏‎‏‏‏‏‏‏‎‎‎‏‏‏‎‏‏‏‎‎‎‎‏‏‎‏‎‎‏‎‏‎‎Workshops‎‏‎‎‏‎</string>
+  <string name="unlock_at_level">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‏‏‏‎‏‏‏‏‏‎‏‏‎‎‏‎‎‏‎‏‎‏‏‎‎‏‎‎‎‏‎‏‎‎‎‏‏‏‏‏‎‎‎‎‎‏‏‎‎‎‎‏‎‎‎‎‎‎‏‎Unlock at level ‎‏‎‎‏‏‎%1$d‎‏‎‎‏‏‏‎‎‏‎‎‏‎</string>
+  <string name="present_dropped">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‏‏‎‏‏‎‎‎‏‏‎‎‎‎‎‏‏‏‎‏‎‎‎‎‏‎‎‏‎‏‏‏‎‎‏‎‎‎‎‎‎‎‏‎‏‏‏‎‎‏‏‎‎‏‏‎‏‎‎Santa dropped a present!‎‏‎‎‏‎</string>
+  <string name="present_too_far">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‎‏‏‏‎‏‎‎‏‎‎‏‏‏‏‎‏‎‎‏‏‎‎‎‎‏‎‏‏‏‎‏‏‎‏‏‏‏‎‏‎‎‏‎‎‏‏‎‏‎‏‎‎‎‎‏‏‎‎‏‏‎‏‎Present too far away!‎‏‎‎‏‎</string>
+  <string name="workshop_too_far">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‏‏‎‎‎‎‏‎‏‏‏‎‏‎‏‎‎‎‎‎‏‏‎‏‎‎‎‎‎‏‎‎‎‎‏‎‏‎‎‎‏‏‏‎‎‎‏‏‎‏‏‏‏‏‎‎‏‏‏‎Workshop too far away!‎‏‎‎‏‎</string>
+  <string name="no_presents_collected">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‏‎‏‏‏‎‎‎‎‏‏‏‏‏‏‏‎‎‏‎‎‏‏‏‏‎‏‏‏‏‏‎‏‏‏‎‏‎‏‏‏‏‎‏‎‏‏‏‏‎‏‏‎‏‎‎‎‎‎Collect some presents first!‎‏‎‎‏‎</string>
+  <string name="bag_is_full">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‎‏‏‎‎‏‏‏‎‏‏‎‎‎‎‏‎‎‎‎‎‎‏‏‎‏‏‏‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‎‏‏‎‎‎‎‎‏‎‎‏‏‏‎‏‎Your bag is full!‎‏‎‎‏‎</string>
+  <string name="workshop_moved">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‎‏‏‏‏‏‎‏‏‎‎‏‏‎‎‏‎‎‏‏‎‏‏‏‎‏‏‎‏‎‎‏‏‎‏‏‎‏‎‎‎‎‏‏‎‎‎‏‏‎‎‎‎‏‏‏‎‏‏‎Workshop moved‎‏‎‎‏‎</string>
+  <string name="move_canceled">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‏‎‎‏‏‎‏‎‏‎‎‎‎‎‎‎‏‏‏‏‏‏‎‏‏‏‏‏‏‎‏‏‏‏‏‏‎‏‏‎‎‎‎‎‎‏‎‏‏‎‏‏‏‏‏‏‏‏‎‎Move canceled‎‏‎‎‏‎</string>
+  <string name="workshop_move_too_soon">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‎‏‎‎‎‎‎‏‏‏‏‎‎‎‏‎‏‏‏‎‏‎‏‏‎‏‏‏‎‎‎‎‏‏‏‎‎‏‏‎‏‏‏‏‏‎‏‎‏‎‎‎‏‎‏‎‏‎‎‎Already moved this workshop today, try again tomorrow‎‏‎‎‏‎</string>
+  <string name="go_here">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‎‏‎‎‎‏‎‏‎‎‎‏‎‎‏‎‏‏‏‎‏‏‏‏‎‎‎‎‏‏‎‎‏‎‏‎‏‏‏‎‎‎‎‎‏‏‏‎‎‏‏‏‎‎‎‏‏‏‎‎Go here!‎‏‎‎‏‎</string>
+  <string name="perm_location_rationale">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‎‎‏‏‎‏‎‏‏‎‏‎‏‏‏‎‎‏‏‏‎‎‎‏‎‎‎‏‎‏‏‏‎‏‏‏‏‎‎‏‎‎‏‎‏‎‎‏‏‎‎‏‏‎‏‎‎‏‎Present Quest needs access to your location to help you find Santa\'s presents.‎‏‎‎‏‎</string>
+  <string name="perm_required">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‎‏‎‏‏‏‎‏‎‏‎‎‎‎‏‏‎‎‏‎‏‏‏‏‎‎‏‏‎‏‎‏‎‏‎‏‎‏‎‎‎‎‎‎‏‎‎‎‏‏‏‏‏‎‎‏‏‎‎Permission Required‎‏‎‎‏‎</string>
+  <string name="perm_go_to_settings">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‎‏‏‏‎‎‎‏‏‏‏‎‎‎‎‏‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‏‎‎‎‎‏‏‎‎‏‏‏‎‎‏‎‎‏‎‏‎‎‎‎‎‎‏‎‏‎‎‏‎Present Quest won\'t work without access to your location. Please enable Location permissions in Settings.‎‏‎‎‏‎</string>
+  <string name="required_permissions_missing">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‏‏‎‎‏‏‎‎‏‎‎‏‏‏‏‏‏‎‎‎‏‎‏‏‏‏‏‎‎‏‏‎‎‏‏‏‏‏‏‏‏‏‏‎‎‏‏‏‏‎‎‏‎‎‎‏‎‏‎‎Required permissions missing.‎‏‎‎‏‎</string>
+  <string name="next">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‎‎‏‏‏‏‎‏‎‎‏‏‎‎‎‏‏‎‏‏‎‎‎‏‎‏‏‏‏‏‎‎‎‏‎‎‏‎‏‎‏‎‎‎‎‏‏‎‏‎‎‏‏‏‏‏‏‎‎Next‎‏‎‎‏‎</string>
+  <string name="onboarding_msg_1">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‎‏‏‎‎‏‎‏‎‎‏‏‏‎‎‏‏‎‏‎‎‏‏‎‎‎‎‎‎‏‎‏‎‏‏‏‏‏‏‏‏‎‏‎‏‎‎‎‎‎‎‎‎‏‎‎‎‎‎‎‎‏‏‎Presents are falling\nout of Santa\'s sleigh!‎‏‎‎‏‎</string>
+  <string name="onboarding_msg_2">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‎‏‏‎‏‏‎‏‏‎‎‏‎‎‎‏‎‏‎‎‏‎‎‎‏‏‎‎‎‏‏‏‏‎‏‎‎‏‏‎‎‎‏‏‎‏‎‎‎‎‎‏‎‏‎‎‎‎‏‎Walk to the present pins in\nreal life to catch them.‎‏‎‎‏‎</string>
+  <string name="onboarding_msg_3">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‎‏‎‎‎‏‏‎‏‏‎‎‏‏‏‏‏‏‎‏‎‎‎‏‎‎‎‏‎‎‏‎‏‎‎‎‏‎‏‎‎‎‏‎‏‎‏‎‎‎‏‎‏‎‏‏‎‎‏‎Once your bag is full,\nwalk to a workshop to unload‎‏‎‎‏‎</string>
+  <string name="onboarding_msg_4">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‎‎‎‎‎‏‏‎‎‎‏‎‎‏‎‎‏‎‎‏‏‏‎‎‎‏‎‎‏‏‏‏‎‏‎‎‎‎‎‎‏‎‏‎‏‎‏‎‎‏‎‎‏‎‎‏‏‏‎Let\'s Go!‎‏‎‎‏‎</string>
+  <string name="msg_present_nearby">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‎‎‏‏‏‏‏‎‏‎‏‏‎‏‏‏‎‏‎‏‎‏‏‎‎‎‎‏‎‏‎‎‎‏‏‎‎‏‎‏‏‏‏‏‏‎‎‏‏‏‎‎‏‏‏‏‎‎‏‏‎‏‎There\'s a present nearby!‎‏‎‎‏‎</string>
+  <string name="msg_bag_almost_full">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‎‏‏‏‎‎‎‏‎‎‎‏‎‎‎‏‏‏‎‎‏‏‎‎‏‏‏‎‏‎‏‎‏‎‏‏‏‏‎‏‏‎‎‎‏‎‎‎‎‎‏‏‏‏‎‎‎‏‏‎Your bag is almost full!‎‏‎‎‏‎</string>
+  <string name="msg_unload_bag">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‎‏‏‎‎‎‎‎‏‏‎‎‎‏‎‎‎‎‏‏‎‏‏‏‏‎‏‏‏‎‏‏‏‎‏‏‏‏‎‏‎‏‏‏‏‎‏‎‎‎‏‎‏‎‎‏‎‎‎‎Unload your bag at a workshop.‎‏‎‎‏‎</string>
+  <string name="msg_unlocked_workshop">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‎‎‏‎‏‏‏‎‎‏‎‎‎‎‏‎‎‎‏‏‏‎‎‎‏‎‎‏‏‏‎‎‏‏‎‏‏‏‎‎‎‏‎‏‎‏‎‏‎‎‎‏‎‎‏‎‎‎‎You unlocked a new workshop!‎‏‎‎‏‎</string>
+  <string name="msg_click_present">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‏‏‏‎‎‏‏‏‎‎‎‎‎‎‏‏‏‏‏‏‎‏‎‏‏‏‎‏‏‎‏‏‏‎‎‏‎‎‎‏‎‏‏‎‏‏‏‏‏‏‎‏‎‎‏‎‏‎‎Click on a present to pick it up.‎‏‎‎‏‎</string>
+  <string name="msg_click_workshop">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‎‎‎‎‎‎‏‏‏‎‏‏‏‏‎‎‏‎‎‏‎‏‎‏‏‏‎‎‏‏‎‎‎‏‏‎‏‏‏‎‏‏‎‎‏‎‏‏‏‎‏‎‎‎‎‏‏‏‏‎Click on your workshop to unload presents.‎‏‎‎‏‎</string>
+  <string name="level_denominator">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‎‏‎‏‏‎‏‏‏‏‎‎‏‏‏‎‏‎‏‎‏‏‏‎‎‏‏‏‏‎‎‎‎‏‏‎‏‏‎‎‏‎‎‏‏‏‎‏‎‎‎‎‏‎‏‏‏‎‎‎of 12‎‏‎‎‏‎</string>
+  <string name="full">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‎‏‏‎‎‏‎‎‎‎‏‎‎‏‏‏‎‏‎‏‏‎‏‏‎‏‎‏‏‏‎‎‏‏‎‏‎‎‏‎‏‏‎‏‎‏‏‏‏‎‎‏‏‏‏‎‏‎‏‎‏‎‏‎FULL‎‏‎‎‏‎</string>
+  <string name="distraction_warning">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‏‏‎‏‎‏‏‏‏‏‏‏‎‏‏‎‎‏‏‎‏‏‎‏‎‎‏‎‏‏‏‏‏‏‎‎‎‏‎‎‏‏‎‏‏‎‏‎‎‎‏‎‏‎‎‏‎‎‎Please be aware of your surroundings when playing.‎‏‎‎‏‎</string>
+</resources>

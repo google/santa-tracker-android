@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Jälgi jõuluvana teekonda</string>
+  <string name="track_santa_two_lines">Jälgi\njõuluvana teekonda</string>
+  <string name="santa_takes_off_in">Jõuluvana asub teele</string>
+  <string name="santa_is_busy_preparing_for_next_year">Jõuluvana valmistub järgmiseks aastaks.</string>
+  <string name="view_old_stops">2014. a peatuste kuvamine</string>
+  <string name="contacting_santa">Püütakse jõuluvanaga ühendust saada</string>
+  <string name="still_trying_to_reach_santa">Püütakse endiselt jõuluvanaga ühendust saada</string>
+  <string name="days">Päevi</string>
+  <string name="hrs">Tunde</string>
+  <string name="min">Minuteid</string>
+  <string name="sec">Sekundeid</string>
+  <string name="menu_share">Jaga</string>
+  <string name="menu_share_friends">Jagage sõpradega</string>
+  <string name="legal_notice">Õigus- ja privaatsusdokumendid</string>
+  <string name="legal_notice_text">Õigusalane teave</string>
+  <string name="privacy_policy">Privaatsuseeskirjad</string>
+  <string name="terms_of_service">Teenusetingimused</string>
+  <string name="open_source_licenses">Avatud lähtekoodi litsentsid</string>
+  <string name="open_source_repo_santa">Jõuluvana GitHubis</string>
+  <string name="scene_not_available">Pole veel saadaval</string>
+  <string name="sign_out">Logi välja</string>
+  <string name="until_takeoff">jäänud teeleasumiseni</string>
+  <string name="web_scene_error">Stseeni ei õnnestunud laadida.</string>
+  <string name="check_back_daily">Iga päev uued mängud!</string>
+  <string name="new_games">Uued mängud</string>
+  <string name="new_card">Uus</string>
+  <string name="tracker_opens_date">Avatakse %1$s</string>
+  <string name="time">AEG</string>
+  <string name="download_dialog_title">Allalaadimine (%1$s)</string>
+  <string name="download_dialog_message">Enne kui saate mängu mängida, peame selle Play poest alla laadima. Seade on ühendatud mahupõhise võrguga, milles andmete edastamise eest võidakse tasu võtta.\n\nKas soovite jätkata?</string>
+  <string name="elf_maker_write_success">Pilt salvestati teie fotode hulka</string>
+  <string name="elf_maker_write_fail">Pildi salvestamisel seadme fotode hulka ilmnes viga</string>
+</resources>

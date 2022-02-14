@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="msg_city_count">เมือง</string>
+  <string name="provideniya_russia_city">โพรวินเดนิยา รัสเซีย</string>
+  <string name="wellington_new_zealand_city">เวลลิงตัน นิวซีแลนด์</string>
+  <string name="invercargill_new_zealand_city">อินเวอร์คาร์กิลล์ นิวซีแลนด์</string>
+  <string name="honiara_solomon_islands_city">โฮนีอารา หมู่เกาะโซโลมอน</string>
+  <string name="magadan_russia_city">มากาดาน รัสเซีย</string>
+  <string name="andersen_afb_guam_city">ฐานทัพอากาศแอนเดอร์สัน กวม</string>
+  <string name="atlantic_city_usa_city">แอตแลนติกซิตี้ สหรัฐอเมริกา</string>
+  <string name="yosemite_national_park_usa_city">อุทยานแห่งชาติโยเซมิตี สหรัฐอเมริกา</string>
+  <string name="kyoto_japan_city">เกียวโต ญี่ปุ่น</string>
+  <string name="machu_picchu_peru_city">มาชูปิกชู เปรู</string>
+  <string name="florence_italy_city">ฟลอเรนซ์ อิตาลี</string>
+  <string name="reykjavik_iceland_city">เรคยาวิก ไอซ์แลนด์</string>
+  <string name="hanover_germany_city">ฮันโนเวอร์ เยอรมนี</string>
+  <string name="hamburg_germany_city">ฮัมบูร์ก เยอรมนี</string>
+  <string name="mountain_view_usa_city">เมาน์เท็น วิว สหรัฐอเมริกา</string>
+  <string name="banff_canada_city">แบมฟ์ แคนาดา</string>
+  <string name="warsaw_poland_city">วอร์ซอ โปแลนด์</string>
+  <string name="stockholm_sweden_city">สตอกโฮล์ม สวีเดน</string>
+  <string name="budapest_hungary_city">บูดาเปสต์ ฮังการี</string>
+  <string name="paris_france_city">ปารีส ฝรั่งเศส</string>
+  <string name="london_uk_city">ลอนดอน สหราชอาณาจักร</string>
+  <string name="moscow_russia_city">มอสโก รัสเซีย</string>
+  <string name="dubai_uae_city">ดูไบ สหรัฐอาหรับเอมิเรตส์</string>
+  <string name="versailles_france_city">แวร์ซาย ฝรั่งเศส</string>
+  <string name="new_york_city_usa_city">นิวยอร์กซิตี้ สหรัฐอเมริกา</string>
+  <string name="san_francisco_usa_city">ซานฟรานซิสโก สหรัฐอเมริกา</string>
+  <string name="madrid_spain_city">มาดริด สเปน</string>
+  <string name="barcelona_spain_city">บาร์เซโลนา สเปน</string>
+  <string name="mumbai_india_city">มุมไบ อินเดีย</string>
+  <string name="shanghai_china_city">เซี่ยงไฮ้ จีน</string>
+  <string name="ediburgh_scotland_city">เอดินบะระ สกอตแลนด์</string>
+  <string name="port_douglas_australia_city">พอร์ตดักลาส ออสเตรเลีย</string>
+  <string name="istanbul_turkey_city">อิสตันบูล ตุรกี</string>
+  <string name="denaru_island_fiji_city">เกาะเดนารัว ฟิจิ</string>
+  <string name="mexico_city_mexico_city">เม็กซิโกซิตี้ เม็กซิโก</string>
+  <string name="rio_de_janiero_brazil_city">รีโอเดจาเนโร บราซิล</string>
+  <string name="grand_canyon_national_park_za_usa_city">อุทยานแห่งชาติแกรนด์แคนยอน รัฐแอริโซนา สหรัฐอเมริกา</string>
+  <string name="grand_tetons_national_park_wy_usa_city">อุทยานแห่งชาติแกรนด์ทีทอน รัฐไวโอมิง สหรัฐอเมริกา</string>
+  <string name="canyonlands_national_park_ut_usa_city">อุทยานแห่งชาติแคนยอนแลนด์ รัฐยูทาห์ สหรัฐอเมริกา</string>
+  <string name="nashville_tn_usa_city">แนชวิลล์ รัฐเทนเนสซี สหรัฐอเมริกา</string>
+  <string name="new_orleans_la_usa_city">นิวออร์ลีนส์ รัฐหลุยเซียนา สหรัฐอเมริกา</string>
+  <string name="rome_italy_city">โรม อิตาลี</string>
+  <string name="berlin_germany_city">เบอร์ลิน เยอรมนี</string>
+  <string name="washington_dc_usa_city">วอชิงตัน ดี.ซี. สหรัฐอเมริกา</string>
+  <string name="dublin_ireland_city">ดับลิน ไอร์แลนด์</string>
+  <string name="zurich_switzerland_city">ซูริก สวิตเซอร์แลนด์</string>
+  <string name="tokyo_japan_city">โตเกียว ญี่ปุ่น</string>
+  <string name="atlanta_ga_usa_city">แอตแลนต้า รัฐจอร์เจีย สหรัฐอเมริกา</string>
+  <string name="chicago_il_usa_city">ชิคาโก รัฐอิลลินอยส์ สหรัฐอเมริกา</string>
+  <string name="port_of_spain_trinidad_and_tobago_city">พอร์ต-ออฟ-สเปน ตรินิแดดและโตเบโก</string>
+  <string name="kingston_jamaica_city">คิงส์ตัน จาไมก้า</string>
+  <string name="panama_city_panama_city">ปานามาซิตี้ ปานามา</string>
+  <string name="miami_florida_usa_city">ไมอามี รัฐฟลอริด้า สหรัฐอเมริกา</string>
+  <string name="buenos_aires_argentina_city">บัวโนสไอเรส อาร์เจนตินา</string>
+  <string name="sao_paulo_brazil_city">เซาเปาโล บราซิล</string>
+  <string name="bogota_columbia_city">โบโกตา โคลัมเบีย</string>
+  <string name="santiago_chile_city">ซันติอาโก ชิลี</string>
+  <string name="quito_ecuador_city">กีโต เอกวาดอร์</string>
+  <string name="guatemala_city_guatemala_city">กัวเตมาลาซิตี้ กัวเตมาลา</string>
+  <string name="la_paz_bolivia_city">ลาปาซ โบลิเวีย</string>
+  <string name="lagos_nigeria_city">ลากอส ไนจีเรีย</string>
+  <string name="cairo_egypt_city">ไคโร อียิปต์</string>
+  <string name="new_delhi_india_city">นิวเดลี อินเดีย</string>
+  <string name="cape_town_south_africa_city">เคปทาวน์ แอฟริกาใต้</string>
+</resources>

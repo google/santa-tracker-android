@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Spremljaj Božička</string>
+  <string name="track_santa_two_lines">Spremljaj\nBožička</string>
+  <string name="santa_takes_off_in">Božiček odleti čez:</string>
+  <string name="santa_is_busy_preparing_for_next_year">Božiček je že zaposlen s pripravami na naslednje leto.</string>
+  <string name="view_old_stops">Prikaži postanke za leto 2014</string>
+  <string name="contacting_santa">Poskus vzpostavitve stika z Božičkom</string>
+  <string name="still_trying_to_reach_santa">Poskus vzpostavitve stika z Božičkom je še vedno v teku</string>
+  <string name="days">dni</string>
+  <string name="hrs">h</string>
+  <string name="min">min</string>
+  <string name="sec">s</string>
+  <string name="menu_share">Daj v skupno rabo</string>
+  <string name="menu_share_friends">Skupna raba s prijatelji</string>
+  <string name="legal_notice">Pravno in zasebnost</string>
+  <string name="legal_notice_text">Pravno obvestilo</string>
+  <string name="privacy_policy">Pravilnik o zasebnosti</string>
+  <string name="terms_of_service">Pogoji storitve</string>
+  <string name="open_source_licenses">Odprtokodne licence</string>
+  <string name="open_source_repo_santa">Božiček na spletnem mestu GitHub</string>
+  <string name="scene_not_available">Še ni na voljo</string>
+  <string name="sign_out">Odjava</string>
+  <string name="until_takeoff">Do vzleta</string>
+  <string name="web_scene_error">Prizora ni bilo mogoče naložiti.</string>
+  <string name="check_back_daily">Vsak dan preverite, katere nove igre so na voljo.</string>
+  <string name="new_games">Nove igre</string>
+  <string name="new_card">Novo</string>
+  <string name="tracker_opens_date">Začne se %1$s</string>
+  <string name="time">ČAS</string>
+  <string name="download_dialog_title">Prenos %1$s</string>
+  <string name="download_dialog_message">Preden lahko igro igrate, jo morate prenesti iz Trgovine Play. Ta naprava je trenutno povezana z omrežjem z omejenim prenosom podatkov, kar pomeni, da boste morda morali prenos podatkov plačati.\n\nAli želite nadaljevati?</string>
+  <string name="elf_maker_write_success">Slika je bila shranjena med fotografije</string>
+  <string name="elf_maker_write_fail">Med shranjevanjem slike med fotografije v napravi je prišlo do napake</string>
+</resources>

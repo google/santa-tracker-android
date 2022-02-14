@@ -1,0 +1,24 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="snowglobe_processing_message">크리스마스 장식을 꾸미는 중입니다.</string>
+  <string name="snowglobe_take_picture_button">사진 찍기</string>
+  <string name="snowglobe_retry_picture_button">다시 시도</string>
+  <string name="snowglobe_exit_button">종료</string>
+  <string name="snowglobe_share_title">내 스노우글로브 공유하기...</string>
+  <string name="snowglobe_share_message">나만의 스노우글로브 이미지 만들기</string>
+</resources>

@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="media_route_casting_on">Sender på %s</string>
+  <string name="media_route_menu_title">Send på …</string>
+  <string name="touch_to_cast">Trykk for å sende «Følg julenissen» på TV-en din</string>
+  <string name="connection_temp_lost">Tilkoblingen til cast-enheten er midlertidig borte</string>
+  <string name="connection_recovered">Tilkoblingen til cast-enheten er gjenopprettet</string>
+  <string name="cast_game_controller">Kontroll for cast-spillet</string>
+  <string name="content_desc_mode_switch">bytt modus fra retningsflate til styreflate</string>
+  <string name="content_desc_right_button">høyre</string>
+  <string name="content_desc_up_button">opp</string>
+  <string name="content_desc_down_button">ned</string>
+  <string name="content_desc_enter_button">enter</string>
+  <string name="content_desc_left_button">venstre</string>
+</resources>

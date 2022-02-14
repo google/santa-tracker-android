@@ -1,0 +1,232 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.android.apps.santatracker"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions required by the wearable app -->
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Map View 2 START -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <!-- Permissions needed for saving images to MediaStore -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+    <!-- Map View 2 END -->
+
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false"/>
+
+    <!-- For Supporting TV START -->
+    <uses-feature android:name="android.software.leanback"
+        android:required="false" />
+
+    <uses-feature android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <!-- To support TV (portrait is not supported)as Dasher Dancer is a portrait activity" -->
+    <uses-feature android:name="android.hardware.screen.portrait"
+        android:required="false"/>
+
+    <!-- To force usage of leanback support library-->
+    <uses-sdk tools:overrideLibrary="android.support.v17.leanback"/>
+    <!-- For Supporting TV END -->
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher_santa"
+        android:label="@string/app_name_santa"
+        android:name=".SantaApplication"
+        tools:replace="android:allowBackup, icon, label"
+        android:banner="@drawable/santatracker_logo_banner"
+        android:usesCleartextTraffic="false"
+        android:largeHeap="true"
+        android:theme="@style/SantaTheme">
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/config_maps_api_key"/>
+
+        <!-- Google Play Games metadata tags -->
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id"/>
+        <meta-data
+            android:name="com.google.android.gms.appstate.APP_ID"
+            android:value="@string/app_id"/>
+
+        <!-- Play Services Version -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <!-- Google Analytics global configuration -->
+        <meta-data
+            android:name="com.google.android.gms.analytics.globalConfigResource"
+            android:resource="@xml/config_analytics_global" />
+
+        <!-- Google Now Actions grammar -->
+        <meta-data android:name="GoogleNowActions"
+            android:resource="@xml/google_now_actions"/>
+
+        <!-- Cast -->
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.google.android.apps.santatracker.tracker.cast.CastOptionsProvider" />
+
+        <activity
+            android:name=".launch.StartupActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.SHOW_SANTA" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.PLAY_GAME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.santatracker.PLAY_RANDOM_GAME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <!-- Handle URL form Google Now card -->
+            <intent-filter android:label="@string/app_name_santa">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http(s)://www.google.com/santatracker/now" -->
+                <data android:scheme="@string/insecure_scheme"
+                    android:host="@string/host_for_all"
+                    android:path="@string/startup_uri" />
+                <data android:scheme="@string/secure_scheme"
+                    android:host="@string/host_for_all"
+                    android:path="@string/startup_uri" />
+            </intent-filter>
+
+            <!-- Stickers -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="santa"/>
+                <data android:host="sticker"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="santa"/>
+                <data android:host="stickerpack"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".launch.TvStartupActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:theme="@style/Theme.Leanback">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:exported="false"
+            android:name=".NotificationBroadcastReceiver"/>
+
+        <activity
+            android:name=".web.WebSceneActivityLandscape"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+
+
+        <activity
+            android:name=".web.WebSceneActivityPortrait"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+
+        <!-- Common Splash Screen -->
+        <activity
+            android:name=".games.SplashActivity"
+            android:noHistory="true"
+            android:exported="false"
+            android:theme="@style/Theme.SantaTracker.Splash"/>
+
+        <!-- For receiver for FCM -->
+        <service
+            android:name="com.google.android.apps.santatracker.messaging.SantaMessagingService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- App Indexing (used for Gboard sticker packs) -->
+        <service
+            android:name=".AppIndexingUpdateService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name=".AppIndexingReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.APPINDEXING">
+            <intent-filter>
+                <action android:name="com.google.firebase.appindexing.UPDATE_INDEX" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

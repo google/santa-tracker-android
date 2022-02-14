@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Lacak Sinterklas</string>
+  <string name="track_santa_two_lines">Lacak\nSinterklas</string>
+  <string name="santa_takes_off_in">Sinterklas berangkat dalam</string>
+  <string name="santa_is_busy_preparing_for_next_year">Sinterklas sedang sibuk mempersiapkan perjalanan untuk tahun depan.</string>
+  <string name="view_old_stops">Lihat perhentian Sinterklas di tahun 2014</string>
+  <string name="contacting_santa">Mencoba menghubungi Sinterklas</string>
+  <string name="still_trying_to_reach_santa">Masih mencoba menghubungi Sinterklas</string>
+  <string name="days">Hari</string>
+  <string name="hrs">Jam</string>
+  <string name="min">Mnt</string>
+  <string name="sec">Dtk</string>
+  <string name="menu_share">Bagikan</string>
+  <string name="menu_share_friends">Bagikan kepada teman</string>
+  <string name="legal_notice">Hukum &amp; privasi</string>
+  <string name="legal_notice_text">Notifikasi hukum</string>
+  <string name="privacy_policy">Kebijakan privasi</string>
+  <string name="terms_of_service">Persyaratan layanan</string>
+  <string name="open_source_licenses">Lisensi open source</string>
+  <string name="open_source_repo_santa">Sinterklas di GitHub</string>
+  <string name="scene_not_available">Belum tersedia</string>
+  <string name="sign_out">Keluar</string>
+  <string name="until_takeoff">SAMPAI SANTA DATANG</string>
+  <string name="web_scene_error">Maaf, tidak dapat memuat adegan.</string>
+  <string name="check_back_daily">Cek game baru setiap hari</string>
+  <string name="new_games">Game Baru</string>
+  <string name="new_card">Baru</string>
+  <string name="tracker_opens_date">Terbuka tanggal %1$s</string>
+  <string name="time">WAKTU</string>
+  <string name="download_dialog_title">Download %1$s</string>
+  <string name="download_dialog_message">Kami harus mendownload game dari Play Store sebelum Anda dapat memainkannya. Perangkat ini saat ini terhubung ke jaringan berkuota, yang dapat mengenakan biaya untuk setiap data yang ditransfer.\n\nApakah Anda ingin melanjutkan?</string>
+  <string name="elf_maker_write_success">Gambar disimpan ke foto Anda</string>
+  <string name="elf_maker_write_fail">Terjadi error saat menyimpan gambar ke foto perangkat</string>
+</resources>

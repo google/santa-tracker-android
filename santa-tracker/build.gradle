@@ -1,0 +1,157 @@
+/*
+ * Copyright 2019. Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+ext.abiList = ['armeabi', 'armeabi-v7a', 'x86']
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.tools
+
+    defaultConfig {
+        applicationId "com.google.android.apps.santatracker"
+
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        wearAppUnbundled true
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    bundle {
+        density {
+            enableSplit = false
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    dynamicFeatures = [
+            ":cityquiz",
+            ":dasherdancer",
+            ":penguinswim",
+            ":presenttoss",
+            ":snowballrun",
+            ":gumball",
+            ":jetpack",
+            ":memory",
+            ":rocketsleigh"
+    ]
+
+    // Disable translation lint checks until we get the translation pipeline running
+    lintOptions {
+        disable 'MissingTranslation', 'ExtraTranslation'
+    }
+}
+
+dependencies {
+    // These are currently libraries, but could be separated out to features
+    implementation project(':tracker')
+
+    api project(':common')
+    api project(':playgames')
+    api project(':doodles-lib')
+
+    api rootProject.ext.kotlinRuntime
+
+    api rootProject.ext.design
+    api rootProject.ext.appCompat
+    api rootProject.ext.design
+    api rootProject.ext.mediaRouter
+    api rootProject.ext.cardView
+    api rootProject.ext.recyclerView
+    api rootProject.ext.customTabs
+    api rootProject.ext.leanback
+    api rootProject.ext.coreKtx
+
+    api rootProject.ext.glide
+    api rootProject.ext.androidMapsUtils
+
+    api rootProject.ext.archLifecycleRuntime
+    api rootProject.ext.archLifecycleExtentions
+    kapt rootProject.ext.archLifecycleCompiler
+    api rootProject.ext.archRoomRuntime
+    kapt rootProject.ext.archRoomCompiler
+    api rootProject.ext.archRoomTesting
+
+    api rootProject.ext.playServicesAnalytics
+    api rootProject.ext.playServicesBase
+    api rootProject.ext.playServicesCastFramework
+    api rootProject.ext.playServicesGames
+    api rootProject.ext.playServicesMaps
+    implementation rootProject.ext.playServicesOssLicenses
+
+    api rootProject.ext.firebaseAppindexing
+    api rootProject.ext.firebaseCore
+    api rootProject.ext.firebaseConfig
+    api rootProject.ext.firebaseCrash
+    api rootProject.ext.firebaseStorage
+    api rootProject.ext.firebaseMessaging
+    api rootProject.ext.firebaseAppinvite
+
+    api rootProject.ext.daggerCore
+    api rootProject.ext.daggerAndroid
+    api rootProject.ext.daggerAndroidSupport
+    kapt rootProject.ext.daggerAndroidProcessor
+    kapt rootProject.ext.daggerCompiler
+
+    api rootProject.ext.constraintLayout
+
+    api rootProject.ext.flexbox
+
+    implementation rootProject.ext.mergeAdapter
+
+    api rootProject.ext.seismic
+
+    api rootProject.ext.gson
+    api rootProject.ext.okhttp
+
+    api rootProject.ext.playCore
+
+    implementation rootProject.ext.leakCanaryNoOp
+    releaseImplementation rootProject.ext.leakCanaryNoOp
+
+    testImplementation rootProject.ext.junit
+    testImplementation rootProject.ext.mockitoCore
+    androidTestImplementation rootProject.ext.espressoCore
+    androidTestImplementation rootProject.ext.espressoContrib
+    androidTestImplementation rootProject.ext.testingSupportRules
+}
+
+if (project.file('google-services.json').exists()) {
+    apply plugin: 'com.google.gms.google-services'
+}
+apply plugin: 'com.google.android.gms.oss-licenses-plugin'

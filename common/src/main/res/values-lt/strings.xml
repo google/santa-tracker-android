@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="back_to_map">Grįžti į žemėlapį</string>
+  <string name="back_to_village">Grįžti į kaimą</string>
+  <string name="go_to_play_store">Ši Kalėdų Senelio kelionės versija pasenusi. Apsilankykite „Play“ parduotuvėje ir atnaujinkite į naujausią versiją.</string>
+  <string name="game_over">Žaidimo pabaiga</string>
+  <string name="loading_screen">Įkeliamas ekranas</string>
+  <string name="menu_resume">Tęsti</string>
+  <string name="menu_replay">Paleisti iš naujo</string>
+  <string name="menu_home">Pagrindinis puslapis</string>
+  <string name="menu_share">Bendrinti</string>
+  <string name="error_fetch_module">Atsisiunčiant „%1$s“ įvyko klaida. Ar esate prisijungę prie tinklo?</string>
+</resources>

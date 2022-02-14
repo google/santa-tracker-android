@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">Mängige</string>
+  <string name="level">TASE</string>
+  <string name="workshops">Töökojad</string>
+  <string name="unlock_at_level">Avaneb tasemel %1$d</string>
+  <string name="present_dropped">Jõuluvana pillas kingituse!</string>
+  <string name="present_too_far">Kingitus on liiga kaugel!</string>
+  <string name="workshop_too_far">Töökoda on liiga kaugel!</string>
+  <string name="no_presents_collected">Koguge kõigepealt mõned kingitused!</string>
+  <string name="bag_is_full">Teie kott on täis!</string>
+  <string name="workshop_moved">Kolisite töökoja mujale</string>
+  <string name="move_canceled">Loobusite kolimisest</string>
+  <string name="workshop_move_too_soon">Olete seda töökoda täna juba kolinud, proovige homme uuesti</string>
+  <string name="go_here">Minge siia!</string>
+  <string name="perm_location_rationale">Kingiseiklus vajab juurdepääsu teie asukohale, et aidata teil jõuluvana kingitusi otsida.</string>
+  <string name="perm_required">Vaja on luba</string>
+  <string name="perm_go_to_settings">Kingiseiklus vajab töötamiseks juurdepääsu teie asukohale. Lubage menüüs Seaded juurdepääs asukohale.</string>
+  <string name="required_permissions_missing">Vajalikke lube ei ole.</string>
+  <string name="next">Järgmine</string>
+  <string name="onboarding_msg_1">Kingitused pudenevad\njõuluvana saanist!</string>
+  <string name="onboarding_msg_2">Kõndige pärismaailmas kingituste\njuurde, et need kinni püüda.</string>
+  <string name="onboarding_msg_3">Kui kott on täis,\nviige see töökotta</string>
+  <string name="onboarding_msg_4">Alustame!</string>
+  <string name="msg_present_nearby">Lähedal on kingitus!</string>
+  <string name="msg_bag_almost_full">Teie kott on peaaegu täis!</string>
+  <string name="msg_unload_bag">Viige kott töökotta.</string>
+  <string name="msg_unlocked_workshop">Saite juurdepääsu uuele töökojale!</string>
+  <string name="msg_click_present">Klikkige kingitusel, et see üles korjata.</string>
+  <string name="msg_click_workshop">Klikkige töökojal, et kingitused sinna panna.</string>
+  <string name="level_denominator">/ 12</string>
+  <string name="full">TÄIDETUD</string>
+  <string name="distraction_warning">Hoidke mängides ka ümbrusel silma peal.</string>
+</resources>

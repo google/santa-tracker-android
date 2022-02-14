@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">Mainkan</string>
+  <string name="level">LEVEL</string>
+  <string name="workshops">Workshop</string>
+  <string name="unlock_at_level">Buka kunci di level %1$d</string>
+  <string name="present_dropped">Sinterklas menjatuhkan hadiah!</string>
+  <string name="present_too_far">Hadiah masih terlalu jauh!</string>
+  <string name="workshop_too_far">Workshop terlalu jauh!</string>
+  <string name="no_presents_collected">Kumpulkan beberapa hadiah terlebih dahulu!</string>
+  <string name="bag_is_full">Tas Anda sudah penuh!</string>
+  <string name="workshop_moved">Workshop dipindahkan</string>
+  <string name="move_canceled">Pindah dibatalkan</string>
+  <string name="workshop_move_too_soon">Workshop ini sudah dipindahkan hari ini, coba lagi besok</string>
+  <string name="go_here">Ke sini!</string>
+  <string name="perm_location_rationale">Present Quest perlu mengakses lokasimu untuk membantu kamu mencari hadiah dari Sinterklas.</string>
+  <string name="perm_required">Perlu Izin</string>
+  <string name="perm_go_to_settings">Tanpa akses ke lokasi Cari Hadiah tidak bisa berfungsi. Aktifkan izin Lokasi di Setelan.</string>
+  <string name="required_permissions_missing">Izin yang diperlukan tidak ada.</string>
+  <string name="next">Berikutnya</string>
+  <string name="onboarding_msg_1">Hadiah terjatuh dari\nkereta salju Santa!</string>
+  <string name="onboarding_msg_2">Berjalanlah ke lokasi pin hadiah\ndi kehidupan nyata untuk mengambilnya.</string>
+  <string name="onboarding_msg_3">Setelah kantung Anda penuh,\nberjalanlah ke workshop untuk membukanya</string>
+  <string name="onboarding_msg_4">Ayo Mulai!</string>
+  <string name="msg_present_nearby">Ada hadiah di sekitar!</string>
+  <string name="msg_bag_almost_full">Kantung Anda hampir penuh!</string>
+  <string name="msg_unload_bag">Buka kantung Anda di workshop.</string>
+  <string name="msg_unlocked_workshop">Anda membuka kunci workshop baru!</string>
+  <string name="msg_click_present">Klik hadiah untuk mengambilnya.</string>
+  <string name="msg_click_workshop">Klik workshop Anda untuk membuka hadiah.</string>
+  <string name="level_denominator">dari 12</string>
+  <string name="full">PENUH</string>
+  <string name="distraction_warning">Perhatikan situasi di sekitar Anda saat bermain.</string>
+</resources>

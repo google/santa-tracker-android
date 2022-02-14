@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="invite_title">Invitez vos amis à suivre le père Noël avec Google</string>
+  <string name="invite_message_generic">Essaie l\'application Sur la piste du père Noël pour suivre la tournée du père Noël à travers le monde !</string>
+  <string name="invite_message_game_fmt">J\'ai atteint un score de %1$d points au jeu %2$s avec les lutins du programme Santa Tracker de Google. Parviendras-tu à me battre ?</string>
+</resources>

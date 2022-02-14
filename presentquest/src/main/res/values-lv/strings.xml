@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">Atskaņot</string>
+  <string name="level">LĪMENIS</string>
+  <string name="workshops">Darbnīcas</string>
+  <string name="unlock_at_level">Var atbloķēt %1$d. līmenī</string>
+  <string name="present_dropped">Ziemassvētku vecītis piegādāja dāvanu.</string>
+  <string name="present_too_far">Dāvana ir pārāk tālu.</string>
+  <string name="workshop_too_far">Darbnīca ir pārāk tālu.</string>
+  <string name="no_presents_collected">Vispirms savāciet dažas dāvanas.</string>
+  <string name="bag_is_full">Soma ir pilna!</string>
+  <string name="workshop_moved">Darbnīca ir pārvietota</string>
+  <string name="move_canceled">Pārvietošana ir atcelta</string>
+  <string name="workshop_move_too_soon">Šodien darbnīca jau ir pārvietota, rīt mēģiniet vēlreiz</string>
+  <string name="go_here">Ejiet tur!</string>
+  <string name="perm_location_rationale">Lai palīdzētu jums atrast Ziemassvētku vecīša dāvanas, spēlei Present Quest nepieciešama piekļuve jūsu atrašanās vietas informācijai.</string>
+  <string name="perm_required">Nepieciešama atļauja</string>
+  <string name="perm_go_to_settings">Present Quest nedarbosies bez piekļuves jūsu atrašanās vietas informācijai. Lūdzu, iespējojiet atrašanās vietas atļaujas iestatījumos.</string>
+  <string name="required_permissions_missing">Trūkst nepieciešamo atļauju.</string>
+  <string name="next">Tālāk</string>
+  <string name="onboarding_msg_1">Dāvanas krīt ārā\nno Ziemassvētku vecīša kamanām!</string>
+  <string name="onboarding_msg_2">Lai tās noķertu, ejiet uz\ndāvanu vietām reālajā dzīvē.</string>
+  <string name="onboarding_msg_3">Kad soma ir pilna,\ndodieties uz darbnīcu to izkrāmēt</string>
+  <string name="onboarding_msg_4">Aiziet!</string>
+  <string name="msg_present_nearby">Tuvumā ir dāvana!</string>
+  <string name="msg_bag_almost_full">Soma ir gandrīz pilna!</string>
+  <string name="msg_unload_bag">Izkrāmējiet somu darbnīcā.</string>
+  <string name="msg_unlocked_workshop">Jūs atslēdzāt jaunu darbnīcu!</string>
+  <string name="msg_click_present">Noklikšķiniet uz dāvanas, lai to paņemtu.</string>
+  <string name="msg_click_workshop">Noklikšķiniet uz darbnīcas, lai izkrāmētu dāvanas.</string>
+  <string name="level_denominator">no 12</string>
+  <string name="full">PILNS</string>
+  <string name="distraction_warning">Lūdzu, ņemiet vērā savu apkārtni spēles laikā.</string>
+</resources>

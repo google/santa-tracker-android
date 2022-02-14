@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Табло за управление на Дядо Коледа</string>
+  <string name="current_location">ТЕКУЩО МЕСТОПОЛОЖЕНИЕ</string>
+  <string name="presents_delivered">ДОСТАВЕНИ ПОДАРЪЦИ</string>
+  <string name="santa_status">СЪСТОЯНИЕ НА ДЯДО КОЛЕДА</string>
+  <string name="arriving_in">ПРИСТИГАНЕ СЛЕД</string>
+  <string name="departing_in">ЗАМИНАВАНЕ СЛЕД</string>
+  <string name="localtime">ПРИСТИГНАЛ В/ЪВ</string>
+  <string name="population">НАСЕЛЕНИЕ</string>
+  <string name="next_destination">СЛЕДВАЩО НАПРАВЛЕНИЕ</string>
+  <string name="arriving_at">ПРИСТИГА В/ЪВ</string>
+  <string name="arrived_at">ПРИСТИГНАЛ В/ЪВ</string>
+  <string name="in_transit">Транзитно преминаване</string>
+  <string name="follow_santa">Къде е Дядо Коледа</string>
+  <string name="lost_contact_with_santa">Загубихме връзка с Дядо Коледа</string>
+  <string name="notification_nearby">Дядо Коледа е наблизо!</string>
+  <string name="notification_takeoff">Дядо Коледа потегли!</string>
+  <string name="notification_unlock_video">Наличен е нов видеоклип!</string>
+  <string name="notification_unlock_game">Налична е нова игра!</string>
+  <string name="santa_arrives_in_your_area_in">ДЯДО КОЛЕДА ПРИСТИГА ПРИ ВАС СЛЕД</string>
+  <string name="santa_is_approximately">ДЯДО КОЛЕДА Е ПРИБЛИЗИТЕЛНО НА</string>
+  <string name="distance_km_away">%1$,d км%2$s</string>
+  <string name="distance_optional_miles">\u0020(%,d мили)</string>
+  <string name="distance_mi_away">%1$,d мили</string>
+  <string name="did_you_know">ЗНАЕТЕ ЛИ, ЧЕ</string>
+  <string name="watch_movie">ГЛЕДАНЕ НА ФИЛМ</string>
+  <string name="santa_update">АКТУАЛНА ИНФОРМАЦИЯ ЗА ДЯДО КОЛЕДА</string>
+  <string name="elapsed_time">ИЗМИНАЛО ВРЕМЕ</string>
+  <string name="wikipedia">Уикипедия</string>
+  <string name="arrival">ПРИСТИГАНЕ</string>
+  <string name="weather">ВРЕМЕТО</string>
+  <string name="weather_format">%1$s°C/%2$s°F</string>
+  <string name="did_you_know_attribution">Световни факти, предоставени от National Geographic Bee</string>
+  <string name="photo">Снимка</string>
+  <string name="photos">Снимки</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">НАЗАД КЪМ КАМЕРАТА НА ДЯДО КОЛЕДА</string>
+  <string name="update_from_santa">Актуализация от Дядо Коледа</string>
+  <string name="trivia_from_santa">Любопитни факти от Дядо Коледа</string>
+  <string name="photo_from_santa">Снимка от Дядо Коледа</string>
+  <string name="video_from_santa">Видеоклип от Дядо Коледа</string>
+  <string name="show_history">Показване на историята</string>
+  <string name="see_best_moments">Преглед на най-добрите моменти от пътуването на Дядо Коледа</string>
+  <string name="return_to_map">Назад към картата</string>
+  <string name="santa_is_now_arriving_in_x">Дядо Коледа сега пристига в/ъв %s</string>
+  <string name="santa_has_handed_out_x_presents">Дядо Коледа раздаде %s подаръка</string>
+  <string name="new_update_from_santa">Нова актуализация от Дядо Коледа</string>
+  <string name="new_trivia_from_santa">Нови любопитни факти от Дядо Коледа</string>
+  <string name="new_video_from_santa">Нов видеоклип от Дядо Коледа</string>
+  <string name="new_photo_from_santa">Нова снимка от Дядо Коледа</string>
+  <string name="cast_overlay_text">Следете Дядо Коледа на големия екран!\nДокоснете този бутон, за да гледате пътуването на белобрадия старец на телевизора си с Chromecast.</string>
+  <string name="menu_media_router_title">Бутон за предаване</string>
+</resources>

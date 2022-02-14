@@ -1,0 +1,104 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="TextAppearance.Small" parent="@android:style/TextAppearance.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="TextAppearance.Large" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Map Toolbar -->
+    <style name="MapToolbar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@android:color/black</item>
+    </style>
+
+    <!-- Dashboard -->
+    <style name="DashboardLabel" parent="@style/TextAppearance.Small">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DashboardText" parent="@style/TextAppearance.Medium">
+        <item name="android:textColor">@color/santacamDashboardText</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="DashboardTextFeatured" parent="@style/TextAppearance.Large">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DashboardTextMain" parent="@style/DashboardTextFeatured">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DashboardViewSwitcher" />
+
+    <style name="DashboardViewSwitcher.Location" />
+
+    <!-- Info Window -->
+
+    <!-- ActionBar title text -->
+
+    <style name="CardBorderlessButton.Base" parent="Widget.AppCompat.Button.Borderless" />
+
+    <style name="CardButtonBorderless" parent="CardBorderlessButton.Base">
+        <item name="android:textAppearance">@style/TextAppearance.Small</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:paddingLeft">@dimen/santacamDashboardPadding</item>
+        <item name="android:paddingRight">@dimen/santacamDashboardPadding</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DestinationCopyright" parent="@style/TextAppearance.Small">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorLink">@android:color/white</item>
+        <item name="android:background">@drawable/bg_copyright</item>
+    </style>
+
+    <style name="DestinationCardButton" parent="CardButtonBorderless">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="MovieCardButton" parent="CardButtonBorderless" />
+
+    <style name="CategoryButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/category_button_background</item>
+        <item name="android:foreground">@drawable/category_button_ripple</item>
+    </style>
+
+    <style name="CityQuizProgressBar" parent="Base.Widget.AppCompat.ProgressBar">
+    </style>
+
+</resources>

@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Sigue a Santa</string>
+  <string name="track_santa_two_lines">Sigue a\nSanta</string>
+  <string name="santa_takes_off_in">Santa despegará en</string>
+  <string name="santa_is_busy_preparing_for_next_year">Santa está ocupado preparándose para el próximo año.</string>
+  <string name="view_old_stops">Ver las paradas de 2014</string>
+  <string name="contacting_santa">Estamos intentando comunicarnos con Santa.</string>
+  <string name="still_trying_to_reach_santa">Aún estamos intentando comunicarnos con Santa.</string>
+  <string name="days">Días</string>
+  <string name="hrs">H</string>
+  <string name="min">Min</string>
+  <string name="sec">S</string>
+  <string name="menu_share">Compartir</string>
+  <string name="menu_share_friends">Compartir con amigos</string>
+  <string name="legal_notice">Aspectos legales y privacidad</string>
+  <string name="legal_notice_text">Aviso legal</string>
+  <string name="privacy_policy">Política de Privacidad</string>
+  <string name="terms_of_service">Condiciones del servicio</string>
+  <string name="open_source_licenses">Licencias de código abierto</string>
+  <string name="open_source_repo_santa">Santa en GitHub</string>
+  <string name="scene_not_available">Aún no está disponible.</string>
+  <string name="sign_out">Salir</string>
+  <string name="until_takeoff">Hasta el despegue</string>
+  <string name="web_scene_error">No se pudo cargar la escena.</string>
+  <string name="check_back_daily">Vuelve todos los días para descubrir juegos nuevos.</string>
+  <string name="new_games">Juegos nuevos</string>
+  <string name="new_card">Nuevas</string>
+  <string name="tracker_opens_date">Se abrirá el %1$s</string>
+  <string name="time">TIEMPO</string>
+  <string name="download_dialog_title">Descarga %1$s</string>
+  <string name="download_dialog_message">Para poder jugar, debes descargar el juego desde Play Store. En este momento, el dispositivo está conectado a una red de uso medido que podría cobrarte por las transferencias de datos.\n\n¿Quieres continuar?</string>
+  <string name="elf_maker_write_success">La imagen se guardó en tus fotos</string>
+  <string name="elf_maker_write_fail">Se produjo un error al guardar la imagen en las fotos del dispositivo</string>
+</resources>

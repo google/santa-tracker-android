@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">പ്ലേ ചെയ്യുക</string>
+  <string name="level">ലെവൽ</string>
+  <string name="workshops">വർക്ക്ഷോപ്പുകൾ</string>
+  <string name="unlock_at_level">ലെവൽ %1$d-ൽ അൺലോക്ക് ചെയ്യുക</string>
+  <string name="present_dropped">സാന്ത ഒരു സമ്മാനം ഇട്ടിട്ടുണ്ട്!</string>
+  <string name="present_too_far">സമ്മാനം വളരെ ദൂരെയാണ്!</string>
+  <string name="workshop_too_far">വർക്ക്ഷോപ്പ് വളരെ ദൂരെയാണ്!</string>
+  <string name="no_presents_collected">ആദ്യം ഏതാനും സമ്മാനങ്ങൾ ശേഖരിക്കുക!</string>
+  <string name="bag_is_full">നിങ്ങളുടെ ബാഗ് നിറഞ്ഞു!</string>
+  <string name="workshop_moved">വർക്ക്ഷോപ്പ് നീക്കി</string>
+  <string name="move_canceled">നീക്കൽ റദ്ദാക്കി</string>
+  <string name="workshop_move_too_soon">ഇന്ന് ഈ വർക്ക്ഷോപ്പ് ഇതിനകം നീക്കിയിട്ടുണ്ട്, നാളെ വീണ്ടും ശ്രമിക്കുക</string>
+  <string name="go_here">ഇവിടേക്ക് പോകുക!</string>
+  <string name="perm_location_rationale">സാന്തയുടെ സമ്മാനങ്ങൾ കണ്ടെത്താൻ നിങ്ങളെ സഹായിക്കുന്നതിന് Present Quest-ന് നിങ്ങളുടെ ലൊക്കേഷനിലേക്കുള്ള ആ‌ക്‌സസ് ആവശ്യമാണ്.</string>
+  <string name="perm_required">അനുമതി ആവശ്യമാണ്</string>
+  <string name="perm_go_to_settings">നിങ്ങളുടെ ലൊക്കേഷനിലേക്കുള്ള ആ‌ക്‌സസ് ഇല്ലാതെ Present Quest പ്രവർത്തിക്കില്ല. ക്രമീകരണം എന്നതിൽ ലൊക്കേഷൻ അനുമതികൾ പ്രവർത്തനക്ഷമമാക്കുക.</string>
+  <string name="required_permissions_missing">ആവശ്യമായ അനുമതികൾ നൽകിയിട്ടില്ല.</string>
+  <string name="next">അടുത്തത്</string>
+  <string name="onboarding_msg_1">സാന്തയുടെ ഹിമവണ്ടിയിൽ\nവീണുകിടക്കുന്ന സമ്മാനങ്ങൾ!</string>
+  <string name="onboarding_msg_2">അവ സ്വന്തമാക്കാൻ യഥാർത്ഥ ജീവിതത്തിലെ\nസമ്മാന പിന്നുകളിലേക് നടക്കുക.</string>
+  <string name="onboarding_msg_3">നിങ്ങളുടെ ബാഗ് നിറഞ്ഞാൽ,\nഇറക്കിവയ്ക്കാൻ വർക്ക്‌ഷോപ്പിലേക്ക് പോകുക</string>
+  <string name="onboarding_msg_4">മുന്നോട്ട് പോകാം!</string>
+  <string name="msg_present_nearby">വിളിപ്പാടരികെ ഒരു സമ്മാനമുണ്ട്!</string>
+  <string name="msg_bag_almost_full">നിങ്ങളുടെ ബാഗ് ഏകദേശം നിറഞ്ഞു!</string>
+  <string name="msg_unload_bag">നിങ്ങളുടെ ബാഗ് വർക്ക്‌ഷോപ്പിൽ വയ്ക്കുക.</string>
+  <string name="msg_unlocked_workshop">നിങ്ങൾ ഒരു പുതിയ വർക്ക്‌ഷോപ്പ് അൺലോക്കുചെയ്തു!</string>
+  <string name="msg_click_present">ഒരു സമ്മാനമെടുക്കാൻ അതിൽ ക്ലിക്കുചെയ്യുക.</string>
+  <string name="msg_click_workshop">സമ്മാനങ്ങൾ വയ്ക്കാൻ നിങ്ങളുടെ വർക്ക്‌ഷോപ്പിൽ ക്ലിക്കുചെയ്യുക.</string>
+  <string name="level_denominator">/12</string>
+  <string name="full">നിറഞ്ഞു</string>
+  <string name="distraction_warning">ഗെയിം കളിക്കുമ്പോൾ നിങ്ങളുടെ ചുറ്റുപാടുകളെ കുറിച്ച് അവബോധം ഉണ്ടായിരിക്കണം.</string>
+</resources>

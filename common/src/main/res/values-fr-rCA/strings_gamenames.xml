@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">Gumball</string>
+  <string name="memory">Memory</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Rocket Sleigh</string>
+  <string name="dancer">Dasher Dancer</string>
+  <string name="cityquiz">Quiz urbain</string>
+  <string name="present_quest">Quête de cadeaux</string>
+  <string name="santa_snap">Des photos avec le père Noël</string>
+  <string name="present_throw">Lancer de cadeaux</string>
+  <string name="jetpack">Le lutin réacté</string>
+  <string name="web_airport">Aéroport du pôle Nord</string>
+  <string name="web_boatload">Lance-cadeaux</string>
+  <string name="web_clausdraws">Dessin de Noël</string>
+  <string name="web_codeboogie">Boogie du code</string>
+  <string name="web_codelab">Labo de code</string>
+  <string name="web_gumball">Boule de gomme en mouvement</string>
+  <string name="web_jamband">Le jam des lutins</string>
+  <string name="web_penguindash">La ruée du pingouin</string>
+  <string name="web_presentbounce">Rebond de cadeaux</string>
+  <string name="web_presentdrop">Lâcher de cadeaux</string>
+  <string name="web_racer">La course avec Rudolphe</string>
+  <string name="web_runner">La course du renne</string>
+  <string name="web_santasearch">À la recherche du père Noël</string>
+  <string name="web_santaselfie">Autoportrait du père Noël</string>
+  <string name="web_seasonofgiving">La saison pour offrir</string>
+  <string name="web_elfski">Le ski des lutins</string>
+  <string name="web_snowball">Tempête de boules de neige</string>
+  <string name="web_snowflake">Coder un flocon de neige</string>
+  <string name="web_speedsketch">Croquis rapide</string>
+  <string name="web_wrapbattle">La bataille de l\'emballage</string>
+  <string name="web_elfmaker">Créateur de lutin</string>
+  <string name="video_santa_is_back">De retour au travail</string>
+  <string name="video_office_prank">Plaisanterie au bureau</string>
+  <string name="video_carpool">Covoiturage</string>
+</resources>

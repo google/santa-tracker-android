@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="media_route_casting_on">Trasmissione su %s</string>
+  <string name="media_route_menu_title">Trasmetti su…</string>
+  <string name="touch_to_cast">Tocca per trasmettere Segui Babbo Natale alla TV</string>
+  <string name="connection_temp_lost">La connessione al dispositivo di trasmissione è temporaneamente interrotta</string>
+  <string name="connection_recovered">La connessione al dispositivo di trasmissione è stata recuperata</string>
+  <string name="cast_game_controller">Schermo di controllo per la trasmissione dei giochi</string>
+  <string name="content_desc_mode_switch">passa dalla modalità dpad alla modalità trackpad</string>
+  <string name="content_desc_right_button">destra</string>
+  <string name="content_desc_up_button">su</string>
+  <string name="content_desc_down_button">giù</string>
+  <string name="content_desc_enter_button">invio</string>
+  <string name="content_desc_left_button">sinistra</string>
+</resources>

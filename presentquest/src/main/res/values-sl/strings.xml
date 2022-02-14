@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">Igranje</string>
+  <string name="level">STOPNJA</string>
+  <string name="workshops">Delavnice</string>
+  <string name="unlock_at_level">Odklene se, ko dosežete %1$d. stopnjo</string>
+  <string name="present_dropped">Božiček je pustil darilo.</string>
+  <string name="present_too_far">Darilo je predaleč.</string>
+  <string name="workshop_too_far">Delavnica je predaleč.</string>
+  <string name="no_presents_collected">Najprej zberite nekaj daril.</string>
+  <string name="bag_is_full">Vaša vreča je polna!</string>
+  <string name="workshop_moved">Delavnico ste premaknili.</string>
+  <string name="move_canceled">Premik je preklican.</string>
+  <string name="workshop_move_too_soon">Delavnico ste danes že premaknili. Poskusite znova jutri.</string>
+  <string name="go_here">Pojdite sem.</string>
+  <string name="perm_location_rationale">Iskanje daril potrebuje dostop do vaše lokacije, da vam pomaga pri iskanju Božičkovih daril.</string>
+  <string name="perm_required">Potrebno je dovoljenje</string>
+  <string name="perm_go_to_settings">Iskanje daril ne bo delovalo brez dostopa do vaše lokacije. V nastavitvah omogočite dovoljenja za lokacijo.</string>
+  <string name="required_permissions_missing">Ni zahtevanih dovoljenj.</string>
+  <string name="next">Naprej</string>
+  <string name="onboarding_msg_1">Darila padajo\niz Božičkovih sani!</string>
+  <string name="onboarding_msg_2">Sprehodite se do žebljičkov, ki označujejo darila\nv resničnem življenju, in jih ujemite.</string>
+  <string name="onboarding_msg_3">Ko je vaša vreča polna,\nse sprehodite do delavnice in jo izpraznite.</string>
+  <string name="onboarding_msg_4">Pa začnimo.</string>
+  <string name="msg_present_nearby">Darilo je v bližini!</string>
+  <string name="msg_bag_almost_full">Vaša vreča je skoraj polna!</string>
+  <string name="msg_unload_bag">Izpraznite vrečo v delavnici.</string>
+  <string name="msg_unlocked_workshop">Odklenili ste novo delavnico!</string>
+  <string name="msg_click_present">Kliknite darilo, da ga poberete.</string>
+  <string name="msg_click_workshop">Kliknite delavnico, da izpraznite vrečo z darili.</string>
+  <string name="level_denominator">od 12</string>
+  <string name="full">POLNO</string>
+  <string name="distraction_warning">Med igranjem bodite pozorni na okolico.</string>
+</resources>

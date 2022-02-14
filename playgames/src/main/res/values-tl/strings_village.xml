@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">Sundan si Santa sa ika-24 ng Disyembre.</string>
+  <string name="present_quest_locked">Magiging available sa ika-1 ng Disyembre ang Present Quest.</string>
+  <string name="santa_snap_locked">Malapit nang maging available ang Santa Snap.</string>
+  <string name="gumball_locked">Magiging available ang Gumball sa ika-1 ng Disyembre.</string>
+  <string name="memory_locked">Magiging available ang Memory sa ika-1 ng Disyembre.</string>
+  <string name="rocket_locked">Magiging available ang Rocket Sleigh sa ika-1 ng Disyembre.</string>
+  <string name="dancer_locked">Magiging available ang Dasher Dancer sa ika-1 ng Disyembre.</string>
+  <string name="city_quiz_locked">Magiging available sa ika-1 ng Disyembre ang larong City Quiz.</string>
+  <string name="generic_game_disabled">Kasalukuyang hindi available ang %1$s.</string>
+  <string name="generic_game_locked">Hindi pa available ang %1$s. Tingnang muli sa ibang pagkakataon!</string>
+  <string name="video">Video</string>
+  <string name="video_locked">Maa-unlock ang video sa Disyembre %1$d.</string>
+  <string name="video_disabled">Kasalukuyang hind available ang video.</string>
+  <string name="play">I-play</string>
+  <string name="watch">Panoorin</string>
+</resources>

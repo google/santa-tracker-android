@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Где Санта?</string>
+  <string name="track_santa_two_lines">Посмотреть,\nгде находится Санта</string>
+  <string name="santa_takes_off_in">Санта отправится в путь через</string>
+  <string name="santa_is_busy_preparing_for_next_year">Санта готовится к следующему Рождеству.</string>
+  <string name="view_old_stops">Посмотреть, какие места Санта посетил в прошлом году</string>
+  <string name="contacting_santa">Ищем Санту...</string>
+  <string name="still_trying_to_reach_santa">Ещё ищем...</string>
+  <string name="days">дн.</string>
+  <string name="hrs">ч.</string>
+  <string name="min">мин.</string>
+  <string name="sec">сек.</string>
+  <string name="menu_share">Поделиться</string>
+  <string name="menu_share_friends">Поделиться с друзьями</string>
+  <string name="legal_notice">Правовая информация и положение о конфиденциальности</string>
+  <string name="legal_notice_text">Юридические уведомления</string>
+  <string name="privacy_policy">Политика конфиденциальности</string>
+  <string name="terms_of_service">Условия использования</string>
+  <string name="open_source_licenses">Лицензии ПО с открытым исходным кодом</string>
+  <string name="open_source_repo_santa">Код приложения в GitHub</string>
+  <string name="scene_not_available">Пока недоступно</string>
+  <string name="sign_out">Выйти</string>
+  <string name="until_takeoff">До взлета</string>
+  <string name="web_scene_error">Не удалось загрузить сцену.</string>
+  <string name="check_back_daily">Новые игры появляются каждый день.</string>
+  <string name="new_games">Новые игры</string>
+  <string name="new_card">Новинка</string>
+  <string name="tracker_opens_date">С %1$s</string>
+  <string name="time">ВРЕМЯ</string>
+  <string name="download_dialog_title">Скачать приложение \"%1$s\"</string>
+  <string name="download_dialog_message">Чтобы начать игру, необходимо скачать приложение из Play Маркета. Ваше устройство подключено к сети с ограниченным трафиком, поэтому за передачу данных может взиматься плата.\n\nСкачать приложение?</string>
+  <string name="elf_maker_write_success">Изображение сохранено.</string>
+  <string name="elf_maker_write_fail">Не удалось сохранить изображение.</string>
+</resources>

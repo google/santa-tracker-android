@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".launch.TvStartupActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/villageBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/village_bg_countdown"
+        android:contentDescription="@null"/>
+
+    <com.google.android.apps.santatracker.customviews.VillageView
+        android:id="@+id/villageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_counter_margin_top"
+        android:layout_gravity="center_horizontal|top">
+
+        <ImageView
+            android:id="@+id/google_logo_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/google_logo" />
+
+        <ImageView
+            android:id="@+id/st_logo_main"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/google_logo_main"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/santatracker_logo_startup" />
+
+        <Button
+            android:id="@+id/launch_button"
+            style="@style/RedButtonTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/st_logo_main"
+            android:layout_centerHorizontal="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:nextFocusDown="@+id/card_list"
+            android:text="@string/track_santa"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/countdown_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/launch_button"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <FrameLayout
+                android:id="@+id/countdown_numbers_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp">
+
+                <include layout="@layout/include_layout_countdown" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/countdown_numbers_container"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/until_takeoff"
+                android:text="@string/until_takeoff"
+                android:textColor="@color/SantaWhite"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:textAllCaps="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.apps.santatracker.customviews.SnowFlakeView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/snowFlakeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top" />
+
+    <androidx.leanback.widget.VerticalGridView
+        style="?attr/rowsVerticalGridStyle"
+        android:id="@+id/santa_markers"
+        android:nextFocusUp ="@id/launch_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="128dp"
+        android:clipToPadding="false"/>
+
+    <View
+        android:id="@+id/content_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/SantaRedDark"
+        android:visibility="invisible"/>
+
+</FrameLayout>

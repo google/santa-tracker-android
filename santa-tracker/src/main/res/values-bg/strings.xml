@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Следене на Дядо Коледа</string>
+  <string name="track_santa_two_lines">Следене на\nДядо Коледа</string>
+  <string name="santa_takes_off_in">Дядо Коледа потегля след</string>
+  <string name="santa_is_busy_preparing_for_next_year">Дядо Коледа е зает в подготовка за следващата година.</string>
+  <string name="view_old_stops">Преглед на посетените места през 2014 г.</string>
+  <string name="contacting_santa">Опитваме се да се свържем с Дядо Коледа</string>
+  <string name="still_trying_to_reach_santa">Все още се опитваме да се свържем с Дядо Коледа</string>
+  <string name="days">Дни</string>
+  <string name="hrs">ч</string>
+  <string name="min">мин</string>
+  <string name="sec">сек</string>
+  <string name="menu_share">Споделяне</string>
+  <string name="menu_share_friends">Споделяне с приятели</string>
+  <string name="legal_notice">Правни въпроси и поверителност</string>
+  <string name="legal_notice_text">Правно съобщение</string>
+  <string name="privacy_policy">Декларация за поверителност</string>
+  <string name="terms_of_service">Общи условия</string>
+  <string name="open_source_licenses">Лицензи за отворен код</string>
+  <string name="open_source_repo_santa">Santa в GitHub</string>
+  <string name="scene_not_available">Все още не е налице</string>
+  <string name="sign_out">Изход</string>
+  <string name="until_takeoff">до излитането</string>
+  <string name="web_scene_error">За съжаление, сцената не можа да се зареди.</string>
+  <string name="check_back_daily">Проверявайте ежедневно за нови игри!</string>
+  <string name="new_games">Нови игри</string>
+  <string name="new_card">Нова</string>
+  <string name="tracker_opens_date">Започва на %1$s</string>
+  <string name="time">ВРЕМЕ</string>
+  <string name="download_dialog_title">Изтегляне на %1$s</string>
+  <string name="download_dialog_message">Трябва да изтеглим играта от Google Play Магазина, за да можете да играете. Понастоящем това устройство е свързано към мрежа с отчитане, която може да ви таксува за прехвърлени данни.\n\nИскате ли да продължите?</string>
+  <string name="elf_maker_write_success">Изображението е запазено в снимките ви</string>
+  <string name="elf_maker_write_fail">При запазването на изображението в снимките на устройството възникна грешка</string>
+</resources>

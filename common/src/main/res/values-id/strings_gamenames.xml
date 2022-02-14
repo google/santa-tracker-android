@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">Bola Permen
+</string>
+  <string name="memory">Cocokkan Gambar</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Seluncur Roket</string>
+  <string name="dancer">Seluncur Roket
+</string>
+  <string name="cityquiz">Kuis Tebak Kota</string>
+  <string name="present_quest">Cari Hadiah</string>
+  <string name="santa_snap">Selfie Sinterklas</string>
+  <string name="present_throw">Lempar Hadiah</string>
+  <string name="jetpack">Jetpack Kurcaci</string>
+  <string name="web_airport">Bandara Kutub Utara</string>
+  <string name="web_boatload">Ketapel Hadiah</string>
+  <string name="web_clausdraws">Menggambar Tema Sinterklas</string>
+  <string name="web_codeboogie">Tarian Kode</string>
+  <string name="web_codelab">Lab Kode</string>
+  <string name="web_gumball">Miringkan Gumball</string>
+  <string name="web_jamband">Kolaborasi Band Kurcaci</string>
+  <string name="web_penguindash">Penguin Dash</string>
+  <string name="web_presentbounce">Pantulan Hadiah</string>
+  <string name="web_presentdrop">Jatuhkan Hadiah</string>
+  <string name="web_racer">Pembalap Rudolph</string>
+  <string name="web_runner">Pelari Rusa Kutub</string>
+  <string name="web_santasearch">Cari Sinterklas</string>
+  <string name="web_santaselfie">Selfie Sinterklas</string>
+  <string name="web_seasonofgiving">Musim Berbagi</string>
+  <string name="web_elfski">Ski Kurcaci</string>
+  <string name="web_snowball">Badai Bola Salju</string>
+  <string name="web_snowflake">Kode Keping Salju</string>
+  <string name="web_speedsketch">Sketsa Cepat</string>
+  <string name="web_wrapbattle">Lomba Bungkus</string>
+  <string name="web_elfmaker">Pembuat Kurcaci</string>
+  <string name="video_santa_is_back">Kembali Bekerja</string>
+  <string name="video_office_prank">Gurauan Kantor</string>
+  <string name="video_carpool">Nebeng</string>
+</resources>

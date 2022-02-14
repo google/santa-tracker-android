@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Śledź trasę Mikołaja</string>
+  <string name="track_santa_two_lines">Śledź\ntrasę Mikołaja</string>
+  <string name="santa_takes_off_in">Święty Mikołaj wyrusza za</string>
+  <string name="santa_is_busy_preparing_for_next_year">Święty Mikołaj jest zajęty przygotowaniami na przyszły rok.</string>
+  <string name="view_old_stops">Zobacz postoje w 2014 r.</string>
+  <string name="contacting_santa">Próbuję nawiązać kontakt ze Świętym Mikołajem</string>
+  <string name="still_trying_to_reach_santa">Nadal próbuję nawiązać kontakt ze Świętym Mikołajem</string>
+  <string name="days">dni</string>
+  <string name="hrs">godz.</string>
+  <string name="min">min</string>
+  <string name="sec">sek.</string>
+  <string name="menu_share">Udostępnij</string>
+  <string name="menu_share_friends">Udostępnij znajomym</string>
+  <string name="legal_notice">Warunki i prywatność</string>
+  <string name="legal_notice_text">Informacje prawne</string>
+  <string name="privacy_policy">Polityka prywatności</string>
+  <string name="terms_of_service">Warunki korzystania z usługi</string>
+  <string name="open_source_licenses">Licencje open source</string>
+  <string name="open_source_repo_santa">Mikołaj na GitHubie</string>
+  <string name="scene_not_available">Jeszcze niedostępne</string>
+  <string name="sign_out">Wyloguj się</string>
+  <string name="until_takeoff">do startu</string>
+  <string name="web_scene_error">Nie udało się wczytać sceny.</string>
+  <string name="check_back_daily">Sprawdzaj codziennie, czy pojawiły się nowe gry.</string>
+  <string name="new_games">Nowe gry</string>
+  <string name="new_card">Nowość</string>
+  <string name="tracker_opens_date">Rusza %1$s</string>
+  <string name="time">CZAS</string>
+  <string name="download_dialog_title">Pobierz grę %1$s</string>
+  <string name="download_dialog_message">Jeśli chcesz grać w tę grę, musisz ją pobrać ze Sklepu Play. To urządzenie obecnie korzysta z sieci mierzącej użycie danych, która może naliczać opłaty za przesył danych.\n\nCzy chcesz kontynuować?</string>
+  <string name="elf_maker_write_success">Obraz został zapisany w Twoich zdjęciach</string>
+  <string name="elf_maker_write_fail">Wystąpił błąd podczas zapisywania obrazu w zdjęciach na urządzeniu</string>
+</resources>

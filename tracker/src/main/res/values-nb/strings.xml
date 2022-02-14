@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Julenissens kontrollpanel</string>
+  <string name="current_location">POSISJONEN NÅ</string>
+  <string name="presents_delivered">ANTALL LEVERTE GAVER</string>
+  <string name="santa_status">JULENISSENS STATUS</string>
+  <string name="arriving_in">KOMMER OM</string>
+  <string name="departing_in">DRAR OM</string>
+  <string name="localtime">ANKOMMET</string>
+  <string name="population">FOLKETALL</string>
+  <string name="next_destination">NESTE STOPP</string>
+  <string name="arriving_at">ANKOMMER</string>
+  <string name="arrived_at">ANKOM</string>
+  <string name="in_transit">På vei</string>
+  <string name="follow_santa">Følg julenissen</string>
+  <string name="lost_contact_with_santa">Mistet kontakten med julenissen</string>
+  <string name="notification_nearby">Julenissen er i nærheten!</string>
+  <string name="notification_takeoff">Julenissen har tatt av!</string>
+  <string name="notification_unlock_video">En ny video er tilgjengelig.</string>
+  <string name="notification_unlock_game">Et nytt spill er tilgjengelig.</string>
+  <string name="santa_arrives_in_your_area_in">JULENISSEN ANKOMMER DITT OMRÅDE OM</string>
+  <string name="santa_is_approximately">JULENISSEN ER CA.</string>
+  <string name="distance_km_away">%1$,d km%2$s unna</string>
+  <string name="distance_optional_miles">\u0020(%,d mile)</string>
+  <string name="distance_mi_away">%1$,d engelske mil unna</string>
+  <string name="did_you_know">VISSTE DU DETTE?</string>
+  <string name="watch_movie">SE FILM</string>
+  <string name="santa_update">OPPDATERING FRA JULENISSEN</string>
+  <string name="elapsed_time">TIDEN SOM ER GÅTT</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">ANKOMST</string>
+  <string name="weather">VÆRET</string>
+  <string name="weather_format">%1$s °C / %2$s °F</string>
+  <string name="did_you_know_attribution">Fakta om verden leveres av National Geographic Bee</string>
+  <string name="photo">Bilde</string>
+  <string name="photos">Bilder</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">TILBAKE TIL JULENISSENS KAMERA</string>
+  <string name="update_from_santa">Oppdatering fra julenissen</string>
+  <string name="trivia_from_santa">Spørrespill fra julenissen</string>
+  <string name="photo_from_santa">Bilde fra julenissen</string>
+  <string name="video_from_santa">Video fra julenissen</string>
+  <string name="show_history">Vis loggen</string>
+  <string name="see_best_moments">Se de beste øyeblikkene fra julenissens reise</string>
+  <string name="return_to_map">Gå tilbake til kartet</string>
+  <string name="santa_is_now_arriving_in_x">Julenissen ankommer nå %s</string>
+  <string name="santa_has_handed_out_x_presents">Julenissen har delt ut %s gaver</string>
+  <string name="new_update_from_santa">Ny oppdatering fra julenissen</string>
+  <string name="new_trivia_from_santa">Nytt spørrespill fra julenissen</string>
+  <string name="new_video_from_santa">Ny video fra julenissen</string>
+  <string name="new_photo_from_santa">Nytt bilde fra julenissen</string>
+  <string name="cast_overlay_text">Følg julenissen på TV-en!\nTrykk på denne knappen for bruke Chromecast til å se julenissens ferd på TV-en.</string>
+  <string name="menu_media_router_title">Cast-ikonet</string>
+</resources>

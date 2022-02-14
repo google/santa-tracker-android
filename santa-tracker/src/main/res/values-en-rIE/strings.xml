@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Track Santa</string>
+  <string name="track_santa_two_lines">Track\nSanta</string>
+  <string name="santa_takes_off_in">Santa takes off in</string>
+  <string name="santa_is_busy_preparing_for_next_year">Santa is busy preparing for next year.</string>
+  <string name="view_old_stops">View 2014 stops</string>
+  <string name="contacting_santa">Trying to reach Santa</string>
+  <string name="still_trying_to_reach_santa">Still trying to reach Santa</string>
+  <string name="days">Days</string>
+  <string name="hrs">Hrs</string>
+  <string name="min">Min</string>
+  <string name="sec">Sec</string>
+  <string name="menu_share">Share</string>
+  <string name="menu_share_friends">Share with friends</string>
+  <string name="legal_notice">Legal &amp; privacy</string>
+  <string name="legal_notice_text">Legal notice</string>
+  <string name="privacy_policy">Privacy Policy</string>
+  <string name="terms_of_service">Terms of service</string>
+  <string name="open_source_licenses">Open-source licences</string>
+  <string name="open_source_repo_santa">Santa on GitHub</string>
+  <string name="scene_not_available">Not available yet</string>
+  <string name="sign_out">Sign out</string>
+  <string name="until_takeoff">Until Take-off</string>
+  <string name="web_scene_error">Sorry, could not load the scene.</string>
+  <string name="check_back_daily">Check back daily for new games!</string>
+  <string name="new_games">New Games</string>
+  <string name="new_card">New</string>
+  <string name="tracker_opens_date">Opens %1$s</string>
+  <string name="time">TIME</string>
+  <string name="download_dialog_title">Download %1$s</string>
+  <string name="download_dialog_message">We need to download the game from the Play Store before you can play. This device is currently connected to a metered network which may charge you for any data transferred.\n\nDo you wish to proceed?</string>
+  <string name="elf_maker_write_success">Image saved to your photos</string>
+  <string name="elf_maker_write_fail">There was an error while saving image to device photos</string>
+</resources>

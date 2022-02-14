@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Stebėti Kalėdų Senelį</string>
+  <string name="track_santa_two_lines">Stebėti\nKalėdų Senelį</string>
+  <string name="santa_takes_off_in">Kalėdų Senelis išvyksta po</string>
+  <string name="santa_is_busy_preparing_for_next_year">Kalėdų Senelis užsiėmęs ruošdamasis kitiems metams.</string>
+  <string name="view_old_stops">Peržiūrėti 2014 m. sustojimus</string>
+  <string name="contacting_santa">Bandoma susisiekti su Kalėdų Seneliu</string>
+  <string name="still_trying_to_reach_santa">Vis dar bandoma susisiekti su Kalėdų Seneliu</string>
+  <string name="days">d.</string>
+  <string name="hrs">val.</string>
+  <string name="min">min.</string>
+  <string name="sec">sek.</string>
+  <string name="menu_share">Bendrinti</string>
+  <string name="menu_share_friends">Bendrinti su draugais</string>
+  <string name="legal_notice">Teisinės nuostatos ir privatumas</string>
+  <string name="legal_notice_text">Teisinė informacija</string>
+  <string name="privacy_policy">Privatumo politika</string>
+  <string name="terms_of_service">Paslaugų teikimo sąlygos</string>
+  <string name="open_source_licenses">Atvirojo šaltinio licencijos</string>
+  <string name="open_source_repo_santa">Kalėdų Senelio kelionės programa svetainėje „GitHub“</string>
+  <string name="scene_not_available">Dar nepasiekiama</string>
+  <string name="sign_out">Atsijungti</string>
+  <string name="until_takeoff">Iki pakilimo liko</string>
+  <string name="web_scene_error">Apgailestaujame, scenos įkelti nepavyko.</string>
+  <string name="check_back_daily">Užsukite kasdien – bus naujų žaidimų!</string>
+  <string name="new_games">Nauji žaidimai</string>
+  <string name="new_card">Nauja</string>
+  <string name="tracker_opens_date">Pradedama %1$s</string>
+  <string name="time">LAIKAS</string>
+  <string name="download_dialog_title">Atsisiųsti „%1$s“</string>
+  <string name="download_dialog_message">Kad galėtumėte žaisti, turime atsisiųsti žaidimą iš „Play“ parduotuvės. Šis įrenginys šiuo metu prijungtas prie matuojamo tinklo, kuris gali pritaikyti mokesčius už bet kokius perduotus duomenis.\n\nNorite tęsti?</string>
+  <string name="elf_maker_write_success">Vaizdas išsaugotas nuotraukų aplanke</string>
+  <string name="elf_maker_write_fail">Išsaugant vaizdą įrenginio nuotraukų aplanke įvyko klaida</string>
+</resources>

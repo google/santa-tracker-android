@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">Gumball</string>
+  <string name="memory">Igra pamćenja</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Rocket Sleigh</string>
+  <string name="dancer">Dasher Dancer</string>
+  <string name="cityquiz">Kviz o gradovima</string>
+  <string name="present_quest">Lov na darove</string>
+  <string name="santa_snap">Djedov fotograf</string>
+  <string name="present_throw">Ubacivanje darova</string>
+  <string name="jetpack">Vilenjačka sprava za letenje</string>
+  <string name="web_airport">Zračna luka na Sjevernom polu</string>
+  <string name="web_boatload">Praćka za darove</string>
+  <string name="web_clausdraws">Djedovi crteži</string>
+  <string name="web_codeboogie">Ples kodova</string>
+  <string name="web_codelab">Laboratorij za pisanje koda</string>
+  <string name="web_gumball">Igra s kuglicama</string>
+  <string name="web_jamband">Vilenjački bend</string>
+  <string name="web_penguindash">Utrka pingvina</string>
+  <string name="web_presentbounce">Skakutanje s darovima</string>
+  <string name="web_presentdrop">Ispuštanje darova</string>
+  <string name="web_racer">Rudolf trkač</string>
+  <string name="web_runner">Utrka sobova</string>
+  <string name="web_santasearch">Potraga za Djedom Božićnjakom</string>
+  <string name="web_santaselfie">Djedičin selfie</string>
+  <string name="web_seasonofgiving">Vrijeme darivanja</string>
+  <string name="web_elfski">Skijalište vilenjaka</string>
+  <string name="web_snowball">Grudalište</string>
+  <string name="web_snowflake">Izrada pahuljice pomoću koda</string>
+  <string name="web_speedsketch">Brzo skiciranje</string>
+  <string name="web_wrapbattle">Dvoboj u zamatanju darova</string>
+  <string name="web_elfmaker">Tvorac vilenjaka</string>
+  <string name="video_santa_is_back">Ponovo na radnom mjestu</string>
+  <string name="video_office_prank">Uredska podvala</string>
+  <string name="video_carpool">Dijeljenje vožnje</string>
+</resources>

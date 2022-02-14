@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">Speel</string>
+  <string name="level">VLAK</string>
+  <string name="workshops">Werkwinkels</string>
+  <string name="unlock_at_level">Ontsluit by vlak %1$d</string>
+  <string name="present_dropped">Kersvader het \'n geskenk laat val!</string>
+  <string name="present_too_far">Geskenk is te ver weg!</string>
+  <string name="workshop_too_far">Werkwinkel is te ver weg!</string>
+  <string name="no_presents_collected">Versamel eers \'n paar geskenke!</string>
+  <string name="bag_is_full">Jou sak is vol!</string>
+  <string name="workshop_moved">Werkswinkel het geskuif</string>
+  <string name="move_canceled">Skuif is gekanselleer</string>
+  <string name="workshop_move_too_soon">Jy het reeds hierdie werkswinkel vandag geskuif; probeer weer môre</string>
+  <string name="go_here">Gaan hierheen!</string>
+  <string name="perm_location_rationale">Geskenksoektog kort toegang tot jou ligging om jou te help om Kersvader se geskenke te vind.</string>
+  <string name="perm_required">Toestemming word vereis</string>
+  <string name="perm_go_to_settings">Geskenksoektog sal nie werk sonder toegang tot jou ligging nie. Aktiveer asseblief liggingtoestemming in instellings.</string>
+  <string name="required_permissions_missing">Vereiste toestemmings ontbreek.</string>
+  <string name="next">Volgende</string>
+  <string name="onboarding_msg_1">Geskenke val uit\nKersvader se slee!</string>
+  <string name="onboarding_msg_2">Stap in die werklike lewe na\ndie geskenkspelde om hulle te vang.</string>
+  <string name="onboarding_msg_3">Sodra jou sak vol is,\nstap na \'n werkswinkel om dit af te laai</string>
+  <string name="onboarding_msg_4">Kom ons begin!</string>
+  <string name="msg_present_nearby">Daar is \'n geskenk naby!</string>
+  <string name="msg_bag_almost_full">Jou sak is amper vol!</string>
+  <string name="msg_unload_bag">Laai jou geskenke by \'n werkswinkel af.</string>
+  <string name="msg_unlocked_workshop">Jy het \'n nuwe werkswinkel ontsluit!</string>
+  <string name="msg_click_present">Klik op \'n geskenk om dit op te tel.</string>
+  <string name="msg_click_workshop">Klik op jou werkswinkel om geskenke af te laai.</string>
+  <string name="level_denominator">van 12</string>
+  <string name="full">VOL</string>
+  <string name="distraction_warning">Wees asseblief bewus van jou omgewing wanneer jy speel.</string>
+</resources>

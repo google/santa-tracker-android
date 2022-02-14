@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">Gumball</string>
+  <string name="memory">Memory</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Rocket Sleigh</string>
+  <string name="dancer">Dasher Dancer</string>
+  <string name="cityquiz">Cuestionario sobre ciudades</string>
+  <string name="present_quest">Busca regalos</string>
+  <string name="santa_snap">Instantáneas navideñas</string>
+  <string name="present_throw">Lanzamiento de regalos</string>
+  <string name="jetpack">Duendes con propulsores</string>
+  <string name="web_airport">Aeropuerto del Polo Norte</string>
+  <string name="web_boatload">Honda de regalos</string>
+  <string name="web_clausdraws">Dibujos navideños con Santa</string>
+  <string name="web_codeboogie">Baile de código</string>
+  <string name="web_codelab">Laboratorio de códigos</string>
+  <string name="web_gumball">Guía las Gumballs</string>
+  <string name="web_jamband">Banda de duendes</string>
+  <string name="web_penguindash">Carrera de pingüinos</string>
+  <string name="web_presentbounce">Rebotes de regalos</string>
+  <string name="web_presentdrop">Entrega de regalos</string>
+  <string name="web_racer">Trineo de carreras de Rudolph</string>
+  <string name="web_runner">Reno corredor</string>
+  <string name="web_santasearch">Búsqueda de Santa</string>
+  <string name="web_santaselfie">Selfies de Santa</string>
+  <string name="web_seasonofgiving">Época de dar</string>
+  <string name="web_elfski">Duendes en esquí</string>
+  <string name="web_snowball">Tormenta de bolas de nieve</string>
+  <string name="web_snowflake">Codifica un copo de nieve</string>
+  <string name="web_speedsketch">Dibujos rápidos</string>
+  <string name="web_wrapbattle">Revuelta de envoltorios</string>
+  <string name="web_elfmaker">Crea tu duende</string>
+  <string name="video_santa_is_back">De vuelta al trabajo</string>
+  <string name="video_office_prank">Broma de oficina</string>
+  <string name="video_carpool">Viaje compartido</string>
+</resources>

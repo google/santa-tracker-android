@@ -1,0 +1,235 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "61975cb0bd1e634445d4f55beafc3312",
+    "entities": [
+      {
+        "tableName": "metadata",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`key` TEXT NOT NULL, `content` TEXT NOT NULL, PRIMARY KEY(`key`))",
+        "fields": [
+          {
+            "fieldPath": "key",
+            "columnName": "key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "key"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "destinations",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `arrival` INTEGER NOT NULL, `departure` INTEGER NOT NULL, `population` INTEGER NOT NULL, `presentsDelivered` INTEGER NOT NULL, `city` TEXT NOT NULL, `region` TEXT NOT NULL, `timezone` INTEGER, `altitude` REAL NOT NULL, `location_lat` REAL NOT NULL, `location_lng` REAL NOT NULL, `weather_url` TEXT, `weather_tempC` REAL, `weather_tempF` REAL, `sv_id` TEXT, `sv_latitude` REAL, `sv_longitude` REAL, `sv_heading` REAL, `gsv_id` TEXT, `gsv_latitude` REAL, `gsv_longitude` REAL, `gsv_heading` REAL, `photo_url` TEXT, `photo_attribution` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arrival",
+            "columnName": "arrival",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "departure",
+            "columnName": "departure",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "population",
+            "columnName": "population",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "presentsDelivered",
+            "columnName": "presentsDelivered",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "region",
+            "columnName": "region",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timezone",
+            "columnName": "timezone",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "altitude",
+            "columnName": "altitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "location.lat",
+            "columnName": "location_lat",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "location.lng",
+            "columnName": "location_lng",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weather.url",
+            "columnName": "weather_url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "weather.tempC",
+            "columnName": "weather_tempC",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "weather.tempF",
+            "columnName": "weather_tempF",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "streetView.id",
+            "columnName": "sv_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "streetView.latitude",
+            "columnName": "sv_latitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "streetView.longitude",
+            "columnName": "sv_longitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "streetView.heading",
+            "columnName": "sv_heading",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gmmStreetView.id",
+            "columnName": "gsv_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gmmStreetView.latitude",
+            "columnName": "gsv_latitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gmmStreetView.longitude",
+            "columnName": "gsv_longitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gmmStreetView.heading",
+            "columnName": "gsv_heading",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "photo.url",
+            "columnName": "photo_url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "photo.attribution",
+            "columnName": "photo_attribution",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "stream_entries",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`timestamp` INTEGER NOT NULL, `type` INTEGER NOT NULL, `notification` INTEGER NOT NULL, `content` TEXT NOT NULL, PRIMARY KEY(`timestamp`))",
+        "fields": [
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notification",
+            "columnName": "notification",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "timestamp"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"61975cb0bd1e634445d4f55beafc3312\")"
+    ]
+  }
+}

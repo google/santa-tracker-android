@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">遊ぶ</string>
+  <string name="level">レベル</string>
+  <string name="workshops">ワークショップ</string>
+  <string name="unlock_at_level">レベル %1$d でロック解除</string>
+  <string name="present_dropped">サンタさんがプレゼントを落としました！</string>
+  <string name="present_too_far">プレゼントの場所が遠すぎます！</string>
+  <string name="workshop_too_far">作業場が遠すぎます！</string>
+  <string name="no_presents_collected">先にいくつかのプレゼントを集めておく必要があります！</string>
+  <string name="bag_is_full">袋がいっぱいです！</string>
+  <string name="workshop_moved">作業場を移動しました</string>
+  <string name="move_canceled">移動を取り消しました</string>
+  <string name="workshop_move_too_soon">今日はもう作業場を移動できません。明日もう一度お試しください。</string>
+  <string name="go_here">ここへ行こう！</string>
+  <string name="perm_location_rationale">サンタさんのプレゼントを発見しやすくするため、プレゼント クエストは位置情報にアクセスする必要があります。</string>
+  <string name="perm_required">アクセス許可が必要</string>
+  <string name="perm_go_to_settings">位置情報にアクセスできないとプレゼント クエストは正しく動作しません。[設定] で位置情報へのアクセス権を有効にしてください。</string>
+  <string name="required_permissions_missing">必要なアクセス権がありません。</string>
+  <string name="next">次へ</string>
+  <string name="onboarding_msg_1">プレゼントがサンタさんの\nソリから落ちてきました。</string>
+  <string name="onboarding_msg_2">ピンがある場所まで実際に\n歩いて、プレゼントを集めましょう。</string>
+  <string name="onboarding_msg_3">袋がいっぱいになったら、\n作業場に行ってプレゼントを袋から出しましょう。</string>
+  <string name="onboarding_msg_4">始める</string>
+  <string name="msg_present_nearby">近くにプレゼントがあります！</string>
+  <string name="msg_bag_almost_full">袋がいっぱいになりそうです！</string>
+  <string name="msg_unload_bag">作業場で袋からプレゼントを出しましょう。</string>
+  <string name="msg_unlocked_workshop">新しい作業場を利用できます！</string>
+  <string name="msg_click_present">プレゼントをクリックして拾いましょう。</string>
+  <string name="msg_click_workshop">作業場をクリックしてプレゼントを袋から出しましょう。</string>
+  <string name="level_denominator">/ 12</string>
+  <string name="full">入っています</string>
+  <string name="distraction_warning">遊ぶときは周囲に注意してください。</string>
+</resources>

@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Följ jultomten</string>
+  <string name="track_santa_two_lines">Följ\njultomten</string>
+  <string name="santa_takes_off_in">Tomten lyfter om</string>
+  <string name="santa_is_busy_preparing_for_next_year">Jultomten har fullt upp med förberedelserna inför nästa år.</string>
+  <string name="view_old_stops">Visa alla etapper för 2014</string>
+  <string name="contacting_santa">Vi försöker nå jultomten</string>
+  <string name="still_trying_to_reach_santa">Vi försöker fortfarande nå jultomten</string>
+  <string name="days">Dagar</string>
+  <string name="hrs">Tim</string>
+  <string name="min">Min</string>
+  <string name="sec">Sek</string>
+  <string name="menu_share">Dela</string>
+  <string name="menu_share_friends">Dela med vänner</string>
+  <string name="legal_notice">Juridik och sekretess</string>
+  <string name="legal_notice_text">Juridiskt meddelande</string>
+  <string name="privacy_policy">Sekretesspolicy</string>
+  <string name="terms_of_service">Användarvillkor</string>
+  <string name="open_source_licenses">Öppen källkod-licenser</string>
+  <string name="open_source_repo_santa">Santa på GitHub</string>
+  <string name="scene_not_available">Inte tillgängligt än</string>
+  <string name="sign_out">Logga ut</string>
+  <string name="until_takeoff">Till avgång</string>
+  <string name="web_scene_error">Det gick inte att läsa in scenen.</string>
+  <string name="check_back_daily">Kom tillbaka varje dag för nya spel!</string>
+  <string name="new_games">Nya spel</string>
+  <string name="new_card">Nytt</string>
+  <string name="tracker_opens_date">Öppnar %1$s</string>
+  <string name="time">TID</string>
+  <string name="download_dialog_title">Ladda ned %1$s</string>
+  <string name="download_dialog_message">Innan du kan spela måste vi ladda ned spelet från Play Butik. Den här enheten är för närvarande ansluten till ett nätverk med datapriser som kan komma att ta betalt för dataöverföring.\n\nVill du fortsätta?</string>
+  <string name="elf_maker_write_success">Bilden sparades till dina foton</string>
+  <string name="elf_maker_write_fail">Ett fel uppstod när bilden skulle sparas till enhetens foton</string>
+</resources>

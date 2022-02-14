@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Segueix el Pare Noel</string>
+  <string name="track_santa_two_lines">Segueix el Pare Noel</string>
+  <string name="santa_takes_off_in">El Pare Noel surt d\'aquí a</string>
+  <string name="santa_is_busy_preparing_for_next_year">El Pare Noel està enfeinat amb els preparatius de l\'any vinent.</string>
+  <string name="view_old_stops">Mostra les parades del 2014</string>
+  <string name="contacting_santa">Estem provant de contactar amb el Pare Noel...</string>
+  <string name="still_trying_to_reach_santa">Encara estem provant de contactar amb el Pare Noel...</string>
+  <string name="days">dies</string>
+  <string name="hrs">h</string>
+  <string name="min">min</string>
+  <string name="sec">s</string>
+  <string name="menu_share">Comparteix</string>
+  <string name="menu_share_friends">Comparteix amb els amics</string>
+  <string name="legal_notice">Informació legal i política de privadesa</string>
+  <string name="legal_notice_text">Avís legal</string>
+  <string name="privacy_policy">Política de privadesa</string>
+  <string name="terms_of_service">Condicions del servei</string>
+  <string name="open_source_licenses">Llicències de programari lliure</string>
+  <string name="open_source_repo_santa">El Pare Noel a GitHub</string>
+  <string name="scene_not_available">Encara no està disponible.</string>
+  <string name="sign_out">Tanca la sessió</string>
+  <string name="until_takeoff">Fins a l\'inici del viatge</string>
+  <string name="web_scene_error">No s\'ha pogut carregar l\'escena.</string>
+  <string name="check_back_daily">Torna cada dia per descobrir jocs nous!</string>
+  <string name="new_games">Jocs nous</string>
+  <string name="new_card">Nova</string>
+  <string name="tracker_opens_date">Data d\'inici: %1$s</string>
+  <string name="time">TEMPS</string>
+  <string name="download_dialog_title">Baixa %1$s</string>
+  <string name="download_dialog_message">Has de baixar el joc de Play Store per poder-hi jugar. Actualment, aquest dispositiu està connectat a una xarxa amb límit de dades i pot ser que s\'apliquin càrrecs per qualsevol dada transferida.\n\nVols continuar?</string>
+  <string name="elf_maker_write_success">S\'ha desat la imatge a la galeria de fotos</string>
+  <string name="elf_maker_write_fail">S\'ha produït un error en desar la imatge a la galeria de fotos del dispositiu</string>
+</resources>

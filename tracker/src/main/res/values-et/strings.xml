@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Jõuluvana juhtpaneel</string>
+  <string name="current_location">PRAEGUNE ASUKOHT</string>
+  <string name="presents_delivered">KOHALETOIMETATUD KINGITUSED</string>
+  <string name="santa_status">JÕULUVANA OLEK</string>
+  <string name="arriving_in">SAABUB KELL</string>
+  <string name="departing_in">LAHKUB KELL</string>
+  <string name="localtime">SAABUS SIHTKOHTA</string>
+  <string name="population">ELANIKKOND</string>
+  <string name="next_destination">JÄRGMINE SIHTKOHT</string>
+  <string name="arriving_at">SAABUB SIHTKOHTA</string>
+  <string name="arrived_at">SAABUS SIHTKOHTA</string>
+  <string name="in_transit">Teel</string>
+  <string name="follow_santa">Jõuluvana jälgimine</string>
+  <string name="lost_contact_with_santa">Ühendus jõuluvanaga katkes</string>
+  <string name="notification_nearby">Jõuluvana on lähedal!</string>
+  <string name="notification_takeoff">Jõuluvana on asunud teele!</string>
+  <string name="notification_unlock_video">Saadaval on uus video.</string>
+  <string name="notification_unlock_game">Saadaval on uus mäng.</string>
+  <string name="santa_arrives_in_your_area_in">JÕULUVANA JÕUAB TEIE PIIRKONDA</string>
+  <string name="santa_is_approximately">JÕULUVANA ON UMBES</string>
+  <string name="distance_km_away">%1$,d km%2$s kaugusel</string>
+  <string name="distance_optional_miles">\u0020(%,d miili)</string>
+  <string name="distance_mi_away">%1$,d miili kaugusel</string>
+  <string name="did_you_know">KAS TEADSITE?</string>
+  <string name="watch_movie">VAADAKE VIDEOT</string>
+  <string name="santa_update">JÕULUVANA UUDISED</string>
+  <string name="elapsed_time">KULUNUD AEG</string>
+  <string name="wikipedia">Wikipeedia</string>
+  <string name="arrival">SAABUMISAEG</string>
+  <string name="weather">ILM</string>
+  <string name="weather_format">%1$s °C / %2$s °F</string>
+  <string name="did_you_know_attribution">Faktid maailma kohta pärinevad võistluselt National Geographic Bee</string>
+  <string name="photo">Foto</string>
+  <string name="photos">Fotod</string>
+  <string name="street_view">TÄNAVAVAADE</string>
+  <string name="back_to_santa_cam">TAGASI JÕULUVANA KAAMERA JUURDE</string>
+  <string name="update_from_santa">Uudis jõuluvanalt</string>
+  <string name="trivia_from_santa">Jõuluvana faktid</string>
+  <string name="photo_from_santa">Jõuluvana foto</string>
+  <string name="video_from_santa">Jõuluvana video</string>
+  <string name="show_history">Kuva ajalugu</string>
+  <string name="see_best_moments">Vaadake jõuluvana teekonna parimaid hetki</string>
+  <string name="return_to_map">Tagasi kaardi juurde</string>
+  <string name="santa_is_now_arriving_in_x">Jõuluvana saabub asukohta %s</string>
+  <string name="santa_has_handed_out_x_presents">Jõuluvana on jaganud %s kingitust</string>
+  <string name="new_update_from_santa">Värske uudis jõuluvanalt</string>
+  <string name="new_trivia_from_santa">Uus fakt jõuluvanalt</string>
+  <string name="new_video_from_santa">Uus video jõuluvanalt</string>
+  <string name="new_photo_from_santa">Uus foto jõuluvanalt</string>
+  <string name="cast_overlay_text">Jälgige jõuluvana suurel ekraanil!\nSeda nuppu puudutades saate jõuluvana teekonda Chromecasti vahendusel teleris vaadata.</string>
+  <string name="menu_media_router_title">Ülekandenupp</string>
+</resources>

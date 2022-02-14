@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="watch_face_elf">Päkapikk</string>
+  <string name="watch_face_santa">Jõuluvana</string>
+  <string name="countdown_complication_label">Jõuludeni jäänud aeg</string>
+  <string name="short_christmas_greeting">Täna!</string>
+  <string name="long_christmas_greeting">Häid jõule!</string>
+  <string name="desc_logo_for_santa_tracker">Jõuluvana teekonna jälgimise logo</string>
+  <string name="desc_right_complication_config">Parem funktsioon</string>
+  <string name="desc_lower_complication_config">Alumine funktsioon</string>
+  <string name="desc_left_complication_config">Vasak funktsioon</string>
+</resources>

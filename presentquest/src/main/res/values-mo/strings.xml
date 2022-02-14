@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">Joacă</string>
+  <string name="level">NIVEL</string>
+  <string name="workshops">Ateliere</string>
+  <string name="unlock_at_level">Se deblochează la nivelul %1$d</string>
+  <string name="present_dropped">Moș Crăciun a lăsat un cadou!</string>
+  <string name="present_too_far">Cadoul este prea departe!</string>
+  <string name="workshop_too_far">Atelierul este prea departe!</string>
+  <string name="no_presents_collected">Strânge câteva cadouri mai întâi!</string>
+  <string name="bag_is_full">Ai sacul plin!</string>
+  <string name="workshop_moved">Atelierul a fost mutat.</string>
+  <string name="move_canceled">Mutarea a fost anulată.</string>
+  <string name="workshop_move_too_soon">Deja ai mutat atelierul astăzi. Încearcă din nou mâine.</string>
+  <string name="go_here">Du-te aici!</string>
+  <string name="perm_location_rationale">În căutarea cadourilor necesită acces la locație pentru a te ajuta să găsești cadourile lui Moș Crăciun.</string>
+  <string name="perm_required">Permisiune necesară</string>
+  <string name="perm_go_to_settings">În căutarea cadourilor nu va funcționa fără acces la locație. Permite accesul la locație în Setări.</string>
+  <string name="required_permissions_missing">Lipsește o permisiune necesară.</string>
+  <string name="next">Înainte</string>
+  <string name="onboarding_msg_1">Cad cadouri\ndin sania Moșului!</string>
+  <string name="onboarding_msg_2">Mergi la punctele cu cadouri\nîn viața reală, pentru a le strânge.</string>
+  <string name="onboarding_msg_3">După ce-ți umpli sacul,\nmergi la atelier pentru a-l goli</string>
+  <string name="onboarding_msg_4">Să începem!</string>
+  <string name="msg_present_nearby">Există un cadou în apropiere!</string>
+  <string name="msg_bag_almost_full">Ai sacul aproape plin!</string>
+  <string name="msg_unload_bag">Golește sacul la un atelier.</string>
+  <string name="msg_unlocked_workshop">Ai deblocat un atelier nou!</string>
+  <string name="msg_click_present">Dă clic pe un cadou pentru a-l lua.</string>
+  <string name="msg_click_workshop">Dă clic pe un atelier pentru a lăsa cadourile.</string>
+  <string name="level_denominator">din 12</string>
+  <string name="full">PLIN</string>
+  <string name="distraction_warning">Fii atent(ă) la ce te înconjoară atunci când te joci.</string>
+</resources>

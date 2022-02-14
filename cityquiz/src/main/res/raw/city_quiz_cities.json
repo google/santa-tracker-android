@@ -1,0 +1,498 @@
+[
+  {
+    "default_name": "Provideniya, Russia",
+    "name": "provideniya_russia_city",
+    "lat": 64.436249,
+    "lng": -173.233337,
+    "image_name": "provideniya_russia_city.jpg",
+    "image_author": "Leo B"
+  },
+  {
+    "default_name": "Wellington, New Zealand",
+    "name": "wellington_new_zealand_city",
+    "lat": -41.28648,
+    "lng": 174.776217,
+    "image_name": "wellington_new_zealand_city.jpg",
+    "image_author": "Vladimir Minakov"
+  },
+  {
+    "default_name": "Invercargill, New Zealand",
+    "name": "invercargill_new_zealand_city",
+    "lat": -46.4131866,
+    "lng": 168.3537731,
+    "image_name": "invercargill_new_zealand_city.jpg",
+    "image_author": "Frank Block"
+  },
+  {
+    "default_name": "Honiara, Solomon Islands",
+    "name": "honiara_solomon_islands_city",
+    "lat": -9.426761,
+    "lng": 159.948735,
+    "image_name": "honiara_solomon_islands_city.jpg",
+    "image_author": "Kiwi Bill"
+  },
+  {
+    "default_name": "Magadan, Russia",
+    "name": "magadan_russia_city",
+    "lat": 59.55632,
+    "lng": 150.81308,
+    "image_name": "magadan_russia_city.jpg",
+    "image_author": "Alexey Gnezdilov"
+  },
+  {
+    "default_name": "Andersen AFB, Guam",
+    "name": "andersen_afb_guam_city",
+    "lat": 13.58505,
+    "lng": 144.93237,
+    "image_name": "andersen_afb_guam_city.jpg",
+    "image_author": "massu"
+  },
+  {
+    "default_name": "Atlantic City, USA",
+    "name": "atlantic_city_usa_city",
+    "lat": 39.3643,
+    "lng": -74.4229,
+    "image_name": "atlantic_city_usa_city.jpg",
+    "image_author": "Marco Verch"
+  },
+  {
+    "default_name": "Yosemite National Park, USA",
+    "name": "yosemite_national_park_usa_city",
+    "lat": 37.8651,
+    "lng": -119.5383,
+    "image_name": "yosemite_national_park_usa_city.jpg",
+    "image_author": "David Iliff"
+  },
+  {
+    "default_name": "Kyoto, Japan",
+    "name": "kyoto_japan_city",
+    "lat": 35.0116,
+    "lng": 135.768,
+    "image_name": "kyoto_japan_city.jpg",
+    "image_author": "Wikipedia"
+  },
+  {
+    "default_name": "Machu Picchu, Peru",
+    "name": "machu_picchu_peru_city",
+    "lat": -13.1631,
+    "lng": -72.545,
+    "image_name": "machu_picchu_peru_city.jpg",
+    "image_author": "Martin St-Amant"
+  },
+  {
+    "default_name": "Florence, Italy",
+    "name": "florence_italy_city",
+    "lat": 43.7696,
+    "lng": 11.2558,
+    "image_name": "florence_italy_city.jpg",
+    "image_author": "Caius Bonus"
+  },
+  {
+    "default_name": "Reykjavik, Iceland",
+    "name": "reykjavik_iceland_city",
+    "lat": 64.126521,
+    "lng": -21.817439,
+    "image_name": "reykjavik_iceland_city.jpg",
+    "image_author": "Bjørn Giesenbauer"
+  },
+  {
+    "default_name": "Hanover, Germany",
+    "name": "hanover_germany_city",
+    "lat": 52.37705,
+    "lng": 9.741665,
+    "image_name": "hanover_germany_city.jpg",
+    "image_author": "Thomas Wolf"
+  },
+  {
+    "default_name": "Hamburg, Germany",
+    "name": "hamburg_germany_city",
+    "lat": 53.550669,
+    "lng": 9.992999,
+    "image_name": "hamburg_germany_city.jpg",
+    "image_author": "Wikipedia"
+  },
+  {
+    "default_name": "Mountain View, USA",
+    "name": "mountain_view_usa_city",
+    "lat": 37.42201,
+    "lng": -122.083758,
+    "image_name": "mountain_view_usa_city.jpg",
+    "image_author": "Jijithecat"
+  },
+  {
+    "default_name": "Banff, Canada",
+    "name": "banff_canada_city",
+    "lat": 51.178363,
+    "lng": -115.570769,
+    "image_name": "banff_canada_city.jpg",
+    "image_author": "Sesivany"
+  },
+  {
+    "default_name": "Warsaw, Poland",
+    "name": "warsaw_poland_city",
+    "lat": 52.229676,
+    "lng": 21.012229,
+    "image_name": "warsaw_poland_city.jpg",
+    "image_author": "Adrian Grycuk"
+  },
+  {
+    "default_name": "Stockholm, Sweden",
+    "name": "stockholm_sweden_city",
+    "lat": 59.329323,
+    "lng": 18.068581,
+    "image_name": "stockholm_sweden_city.jpg",
+    "image_author": "Brorsson"
+  },
+  {
+    "default_name": "Budapest, Hungary",
+    "name": "budapest_hungary_city",
+    "lat": 47.501937,
+    "lng": 19.042439,
+    "image_name": "budapest_hungary_city.jpg",
+    "image_author": "The Photographer"
+  },
+  {
+    "default_name": "Paris, France",
+    "name": "paris_france_city",
+    "lat": 48.8588377,
+    "lng": 2.2775173,
+    "image_name": "paris_france_city.jpg",
+    "image_author": "Benh LIEU SONG"
+  },
+  {
+    "default_name": "London, UK",
+    "name": "london_uk_city",
+    "lat": 51.5285582,
+    "lng": -0.2416809,
+    "image_name": "london_uk_city.jpg",
+    "image_author": "David Liff"
+  },
+  {
+    "default_name": "Moscow, Russia",
+    "name": "moscow_russia_city",
+    "lat": 55.7494733,
+    "lng": 37.3523203,
+    "image_name": "moscow_russia_city.jpg",
+    "image_author": "David Liff"
+  },
+  {
+    "default_name": "Dubai, UAE",
+    "name": "dubai_uae_city",
+    "lat": 25.074096,
+    "lng": 54.9479139,
+    "image_name": "dubai_uae_city.jpg",
+    "image_author": "Joi Ito"
+  },
+  {
+    "default_name": "New York City, USA",
+    "name": "new_york_city_usa_city",
+    "lat": 40.740702,
+    "lng": -73.991751,
+    "image_name": "new_york_city_usa_city.jpg",
+    "image_author": "Cadiomals"
+  },
+  {
+    "default_name": "San Francisco, USA",
+    "name": "san_francisco_usa_city",
+    "lat": 37.799061,
+    "lng": -122.468519,
+    "image_name": "san_francisco_usa_city.jpg",
+    "image_author": "RyanJWilmot"
+  },
+  {
+    "default_name": "Madrid, Spain",
+    "name": "madrid_spain_city",
+    "lat": 40.4168,
+    "lng": -3.7038,
+    "image_name": "madrid_spain_city.jpg",
+    "image_author": "Sebastian Dubiel"
+  },
+  {
+    "default_name": "Barcelona, Spain",
+    "name": "barcelona_spain_city",
+    "lat": 41.3851,
+    "lng": 2.1734,
+    "image_name": "barcelona_spain_city.jpg",
+    "image_author": "Bernard Gagnon"
+  },
+  {
+    "default_name": "Mumbai, India",
+    "name": "mumbai_india_city",
+    "lat": 18.9398259,
+    "lng": 72.8332789,
+    "image_name": "mumbai_india_city.jpg",
+    "image_author": "Joe Ravi"
+  },
+  {
+    "default_name": "Shanghai, China",
+    "name": "shanghai_china_city",
+    "lat": 31.0862279,
+    "lng": 121.4547637,
+    "image_name": "shanghai_china_city.jpg",
+    "image_author": "Henrik Hansson"
+  },
+  {
+    "default_name": "Ediburgh, Scotland",
+    "name": "ediburgh_scotland_city",
+    "lat": 55.9485977,
+    "lng": -3.2021022,
+    "image_name": "ediburgh_scotland_city.jpg",
+    "image_author": "Kim Traynor"
+  },
+  {
+    "default_name": "Port Douglas, Australia",
+    "name": "port_douglas_australia_city",
+    "lat": -16.4876294,
+    "lng": 145.47,
+    "image_name": "port_douglas_australia_city.jpg",
+    "image_author": "Malcolmj"
+  },
+  {
+    "default_name": "Istanbul, Turkey",
+    "name": "istanbul_turkey_city",
+    "lat": 41.008587,
+    "lng": 28.9779863,
+    "image_name": "istanbul_turkey_city.jpg",
+    "image_author": "Arild Vågen"
+  },
+  {
+    "default_name": "Denaru Island, Fiji",
+    "name": "denaru_island_fiji_city",
+    "lat": -17.7732571,
+    "lng": 177.3657703,
+    "image_name": "denaru_island_fiji_city.jpg",
+    "image_author": "Andreas Faessler"
+  },
+  {
+    "default_name": "Mexico City, Mexico",
+    "name": "mexico_city_mexico_city",
+    "lat": 23.6345,
+    "lng": -102.5528,
+    "image_name": "mexico_city_mexico_city.jpg",
+    "image_author": "schlaeger"
+  },
+  {
+    "default_name": "Rio De Janiero, Brazil",
+    "name": "rio_de_janiero_brazil_city",
+    "lat": -22.9068,
+    "lng": -43.1729,
+    "image_name": "rio_de_janiero_brazil_city.jpg",
+    "image_author": "Hailey Pachedo de Olivera"
+  },
+  {
+    "default_name": "Grand Canyon National Park, ZA, USA",
+    "name": "grand_canyon_national_park_za_usa_city",
+    "lat": 36.1128,
+    "lng": -113.9961,
+    "image_name": "grand_canyon_national_park_za_usa_city.jpg",
+    "image_author": "Julius Reque"
+  },
+  {
+    "default_name": "Grand Tetons National Park, WY, USA",
+    "name": "grand_tetons_national_park_wy_usa_city",
+    "lat": 43.7904,
+    "lng": -110.6818,
+    "image_name": "grand_tetons_national_park_wy_usa_city.jpg",
+    "image_author": "Jon Sullivan"
+  },
+  {
+    "default_name": "Canyonlands National Park, UT, USA",
+    "name": "canyonlands_national_park_ut_usa_city",
+    "lat": 38.3269,
+    "lng": -109.8783,
+    "image_name": "canyonlands_national_park_ut_usa_city.jpg",
+    "image_author": "Flickr"
+  },
+  {
+    "default_name": "Nashville, TN, USA",
+    "name": "nashville_tn_usa_city",
+    "lat": 36.1627,
+    "lng": -86.7816,
+    "image_name": "nashville_tn_usa_city.jpg",
+    "image_author": "Kaldari"
+  },
+  {
+    "default_name": "New Orleans, LA, USA",
+    "name": "new_orleans_la_usa_city",
+    "lat": 29.9511,
+    "lng": -90.0715,
+    "image_name": "new_orleans_la_usa_city.jpg",
+    "image_author": "Nowhereman86"
+  },
+  {
+    "default_name": "Rome, Italy",
+    "name": "rome_italy_city",
+    "lat": 41.9028,
+    "lng": 12.4964,
+    "image_name": "rome_italy_city.jpg",
+    "image_author": "David Liff"
+  },
+  {
+    "default_name": "Berlin, Germany",
+    "name": "berlin_germany_city",
+    "lat": 52.52,
+    "lng": 13.405,
+    "image_name": "berlin_germany_city.jpg",
+    "image_author": "Jurgen Matem"
+  },
+  {
+    "default_name": "Washington, DC, USA",
+    "name": "washington_dc_usa_city",
+    "lat": 38.8799,
+    "lng": -77.0365,
+    "image_name": "washington_dc_usa_city.jpg",
+    "image_author": "Matt Wade"
+  },
+  {
+    "default_name": "Dublin, Ireland",
+    "name": "dublin_ireland_city",
+    "lat": 53.3497,
+    "lng": -6.2603,
+    "image_name": "dublin_ireland_city.jpg",
+    "image_author": "Donadlytong"
+  },
+  {
+    "default_name": "Zurich, Switzerland",
+    "name": "zurich_switzerland_city",
+    "lat": 47.3769,
+    "lng": 8.5417,
+    "image_name": "zurich_switzerland_city.jpg",
+    "image_author": "Roland zh"
+  },
+  {
+    "default_name": "Tokyo, Japan",
+    "name": "tokyo_japan_city",
+    "lat": 35.6895,
+    "lng": 139.6917,
+    "image_name": "tokyo_japan_city.jpg",
+    "image_author": "Morio"
+  },
+  {
+    "default_name": "Atlanta, GA, USA",
+    "name": "atlanta_ga_usa_city",
+    "lat": 33.749,
+    "lng": -85.388,
+    "image_name": "atlanta_ga_usa_city.jpg",
+    "image_author": "Mike"
+  },
+  {
+    "default_name": "Chicago, IL, USA",
+    "name": "chicago_il_usa_city",
+    "lat": 41.8781,
+    "lng": -87.6298,
+    "image_name": "chicago_il_usa_city.jpg",
+    "image_author": "mindfrieze"
+  },
+  {
+    "default_name": "Port Of Spain, Trinidad and Tobago",
+    "name": "port_of_spain_trinidad_and_tobago_city",
+    "lat": 10.6617,
+    "lng": -61.5194,
+    "image_name": "port_of_spain_trinidad_and_tobago_city.jpg",
+    "image_author": "Christianwelsh"
+  },
+  {
+    "default_name": "Kingston, Jamaica",
+    "name": "kingston_jamaica_city",
+    "lat": 18.017924,
+    "lng": -76.805464,
+    "image_name": "kingston_jamaica_city.jpg",
+    "image_author": "Wolmadrian"
+  },
+  {
+    "default_name": "Panama City, Panama",
+    "name": "panama_city_panama_city",
+    "lat": 9.1012,
+    "lng": -79.4029,
+    "image_name": "panama_city_panama_city.jpg",
+    "image_author": "123 Hollic"
+  },
+  {
+    "default_name": "Miami Florida, USA",
+    "name": "miami_florida_usa_city",
+    "lat": 25.7617,
+    "lng": -80.1918,
+    "image_name": "miami_florida_usa_city.jpg",
+    "image_author": "D Ramey Logan"
+  },
+  {
+    "default_name": "Buenos Aires, Argentina",
+    "name": "buenos_aires_argentina_city",
+    "lat": -34.6037,
+    "lng": -58.3816,
+    "image_name": "buenos_aires_argentina_city.jpg",
+    "image_author": "Dario Alpern"
+  },
+  {
+    "default_name": "Sao Paulo, Brazil",
+    "name": "sao_paulo_brazil_city",
+    "lat": -23.5505,
+    "lng": -46.6333,
+    "image_name": "sao_paulo_brazil_city.jpg",
+    "image_author": "The Photographer"
+  },
+  {
+    "default_name": "Bogota, Columbia",
+    "name": "bogota_columbia_city",
+    "lat": 4.711,
+    "lng": -74.0721,
+    "image_name": "bogota_columbia_city.jpg",
+    "image_author": "PUTIS"
+  },
+  {
+    "default_name": "Santiago, Chile",
+    "name": "santiago_chile_city",
+    "lat": -33.4489,
+    "lng": -70.6693,
+    "image_name": "santiago_chile_city.jpg",
+    "image_author": "Foncea"
+  },
+  {
+    "default_name": "Quito, Ecuador",
+    "name": "quito_ecuador_city",
+    "lat": "-0/1807",
+    "lng": -78.4678,
+    "image_name": "quito_ecuador_city.jpg",
+    "image_author": "Diego Delso"
+  },
+  {
+    "default_name": "Guatemala City, Guatemala",
+    "name": "guatemala_city_guatemala_city",
+    "lat": 14.6349,
+    "lng": -90.5069,
+    "image_name": "guatemala_city_guatemala_city.jpg",
+    "image_author": "Rigostar"
+  },
+  {
+    "default_name": "La Paz, Bolivia",
+    "name": "la_paz_bolivia_city",
+    "lat": -16.4897,
+    "lng": -68.1193,
+    "image_name": "la_paz_bolivia_city.jpg",
+    "image_author": "Paul Richter"
+  },
+  {
+    "default_name": "Lagos, Nigeria",
+    "name": "lagos_nigeria_city",
+    "lat": 6.5244,
+    "lng": 3.3792,
+    "image_name": "lagos_nigeria_city.jpg",
+    "image_author": "Benji Robertson"
+  },
+  {
+    "default_name": "New Delhi, India",
+    "name": "new_delhi_india_city",
+    "lat": 28.6139,
+    "lng": 77.209,
+    "image_name": "new_delhi_india_city.jpg",
+    "image_author": "Ville Miettinen"
+  },
+  {
+    "default_name": "Cape Town, South Africa",
+    "name": "cape_town_south_africa_city",
+    "lat": -33.9249,
+    "lng": 18.4241,
+    "image_name": "cape_town_south_africa_city.jpg",
+    "image_author": "Warrickball"
+  }
+]

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="invite_title">邀請好友在 Google 追蹤聖誕老人</string>
+  <string name="invite_message_generic">試玩「追蹤聖誕老人」，追看聖誕老人遨遊世界各地！</string>
+  <string name="invite_message_game_fmt">我與小精靈在 Google「追蹤聖誕老人」玩%1$d時得獲得 %2$s 分，您能打敗我嗎？</string>
+</resources>

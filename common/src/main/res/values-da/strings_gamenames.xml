@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">Gumball</string>
+  <string name="memory">Memory</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Raketslædespil</string>
+  <string name="dancer">Julemandens rensdyr</string>
+  <string name="cityquiz">Kortquiz</string>
+  <string name="present_quest">Gavejagten</string>
+  <string name="santa_snap">Julemands-snap</string>
+  <string name="present_throw">Gavekast</string>
+  <string name="jetpack">Nissejetpack</string>
+  <string name="web_airport">Nordpolens lufthavn</string>
+  <string name="web_boatload">Slangebøsse med gaver</string>
+  <string name="web_clausdraws">Julekruseduller</string>
+  <string name="web_codeboogie">Kodeboogie</string>
+  <string name="web_codelab">Kodelaboratorium</string>
+  <string name="web_gumball">Rullende tyggegummikugler</string>
+  <string name="web_jamband">Nissejamband</string>
+  <string name="web_penguindash">Pingvin med fart på</string>
+  <string name="web_presentbounce">Gaveregn</string>
+  <string name="web_presentdrop">Smid gaven</string>
+  <string name="web_racer">Racer-Rudolf</string>
+  <string name="web_runner">Få fat i gaverne med Rudolf</string>
+  <string name="web_santasearch">Find julemanden</string>
+  <string name="web_santaselfie">Julemandsselfie</string>
+  <string name="web_seasonofgiving">Årstiden for gaver</string>
+  <string name="web_elfski">Nisseskiløb</string>
+  <string name="web_snowball">Sneboldkrig</string>
+  <string name="web_snowflake">Lav et snefnug med kode</string>
+  <string name="web_speedsketch">Hurtigtegner</string>
+  <string name="web_wrapbattle">Gaveindpakningens mester</string>
+  <string name="web_elfmaker">Lav en nisse</string>
+  <string name="video_santa_is_back">Tilbage på arbejdet</string>
+  <string name="video_office_prank">Spøg på kontoret</string>
+  <string name="video_carpool">Samkørsel</string>
+</resources>

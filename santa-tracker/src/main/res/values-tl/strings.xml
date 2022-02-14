@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Subaybayan si Santa</string>
+  <string name="track_santa_two_lines">Subaybayan si Santa</string>
+  <string name="santa_takes_off_in">Aalis si Santa sa loob ng</string>
+  <string name="santa_is_busy_preparing_for_next_year">Abala si Santa sa paghahanda para sa susunod na taon.</string>
+  <string name="view_old_stops">Tingnan ang mga naging paghinto noong 2014</string>
+  <string name="contacting_santa">Sinusubukang makaugnayan si Santa</string>
+  <string name="still_trying_to_reach_santa">Sinusubukan pa ring makaugnayan si Santa</string>
+  <string name="days">Mga Araw</string>
+  <string name="hrs">Oras</string>
+  <string name="min">Min</string>
+  <string name="sec">Seg</string>
+  <string name="menu_share">bahagi</string>
+  <string name="menu_share_friends">Ibahagi sa mga kaibigan</string>
+  <string name="legal_notice">Legal at privacy</string>
+  <string name="legal_notice_text">Legal na notification</string>
+  <string name="privacy_policy">Patakaran sa privacy</string>
+  <string name="terms_of_service">Mga tuntunin ng serbisyo</string>
+  <string name="open_source_licenses">Mga linsensya ng open source</string>
+  <string name="open_source_repo_santa">Santa sa GitHub</string>
+  <string name="scene_not_available">Hindi pa available</string>
+  <string name="sign_out">Mag-sign Out</string>
+  <string name="until_takeoff">Hanggang sa Paglipad</string>
+  <string name="web_scene_error">Paumanhin, hindi ma-load ang eksena.</string>
+  <string name="check_back_daily">Tingnang muli araw-araw para sa mga bagong laro!</string>
+  <string name="new_games">Mga Bagong Laro</string>
+  <string name="new_card">Bago</string>
+  <string name="tracker_opens_date">Magbubukas sa %1$s</string>
+  <string name="time">ORAS</string>
+  <string name="download_dialog_title">I-download ang %1$s</string>
+  <string name="download_dialog_message">Kailangan naming i-download ang laro mula sa Play Store bago ka makakapaglaro. Kasalukuyang nakakonekta ang device na ito sa isang metered network na maaaring maningil sa iyo para sa anumang nailipat na data.\n\nNais mo bang magpatuloy?</string>
+  <string name="elf_maker_write_success">Nai-save ang larawan sa iyong mga litrato</string>
+  <string name="elf_maker_write_fail">Nagka-error habang sine-save ang larawan sa mga litrato sa device</string>
+</resources>

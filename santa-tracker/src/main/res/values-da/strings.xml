@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Følg julemanden</string>
+  <string name="track_santa_two_lines">Følg\njulemanden</string>
+  <string name="santa_takes_off_in">Julemanden tager afsted om</string>
+  <string name="santa_is_busy_preparing_for_next_year">Julemanden har travlt med forberedelserne til julen næste år.</string>
+  <string name="view_old_stops">Se, hvilke steder julemanden besøgte i 2014</string>
+  <string name="contacting_santa">Der arbejdes på at oprette forbindelse til julemanden</string>
+  <string name="still_trying_to_reach_santa">Der arbejdes stadig på at oprette forbindelse til julemanden</string>
+  <string name="days">Dage</string>
+  <string name="hrs">Timer</string>
+  <string name="min">Min.</string>
+  <string name="sec">Sek.</string>
+  <string name="menu_share">Del</string>
+  <string name="menu_share_friends">Del med dine venner</string>
+  <string name="legal_notice">Juridisk og privatliv</string>
+  <string name="legal_notice_text">Juridisk meddelelse</string>
+  <string name="privacy_policy">Privatlivspolitik</string>
+  <string name="terms_of_service">Servicevilkår</string>
+  <string name="open_source_licenses">Open source-licenser</string>
+  <string name="open_source_repo_santa">Følg julemanden på GitHub</string>
+  <string name="scene_not_available">Endnu ikke tilgængeligt</string>
+  <string name="sign_out">Log ud</string>
+  <string name="until_takeoff">Indtil afgang</string>
+  <string name="web_scene_error">Scenen kunne ikke indlæses.</string>
+  <string name="check_back_daily">Kig forbi dagligt efter nye spil!</string>
+  <string name="new_games">Nye spil</string>
+  <string name="new_card">Nye</string>
+  <string name="tracker_opens_date">Åbner %1$s</string>
+  <string name="time">TID</string>
+  <string name="download_dialog_title">Download %1$s</string>
+  <string name="download_dialog_message">Du skal downloade spillet fra Play Butik, før du kan spille det. Denne enhed er i øjeblikket tilsluttet et forbrugsafregnet netværk, som kan tage et gebyr for data, du overfører.\n\nVil du fortsætte?</string>
+  <string name="elf_maker_write_success">Billedet er gemt i dine fotos</string>
+  <string name="elf_maker_write_fail">Vi får en fejlmeddelelse under forsøget på at gemme billedet i fotos på enheden</string>
+</resources>

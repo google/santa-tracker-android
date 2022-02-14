@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Widget.Tracker.Button.Top" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/bg_top</item>
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:elevation" tools:targetApi="lollipop">2dp</item>
+    </style>
+
+    <style name="Widget.Tracker.Card.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">@style/TextAppearance.Tracker.Card.Text</item>
+        <item name="android:paddingLeft">@dimen/spacing_large</item>
+        <item name="android:paddingRight">@dimen/spacing_large</item>
+    </style>
+
+    <style name="TextAppearance.Tracker.Card.Label" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Tracker.Card.Text" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="TextAppearance.Tracker.Card.Featured" parent="TextAppearance.Tracker.Card.Text">
+        <item name="android:textColor">@color/santacamDashboardText</item>
+    </style>
+
+    <style name="TextAppearance.Tracker.Card.Body" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/card_text</item>
+    </style>
+
+    <style name="Widget.Tracker.Card.Copyright" parent="android:Widget">
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:textColorLink">@color/card_text</item>
+        <item name="android:paddingLeft">@dimen/spacing_small</item>
+        <item name="android:paddingRight">@dimen/spacing_small</item>
+        <item name="android:background">@drawable/bg_copyright</item>
+    </style>
+
+    <style name="infowindow_heading">
+        <item name="android:fontFamily">"sans-serif-black"</item>
+        <item name="android:textAppearance">@style/TextAppearance.Medium</item>
+        <item name="android:textColor">@color/SantaBlueDark</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+</resources>

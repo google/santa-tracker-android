@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">Suivez le père Noël le 24 décembre.</string>
+  <string name="present_quest_locked">Le jeu Quête de cadeaux sera offert le 1er décembre.</string>
+  <string name="santa_snap_locked">Le jeu Des photos avec le père Noël sera disponible bientôt.</string>
+  <string name="gumball_locked">Gumball sera offert à compter du 1er décembre.</string>
+  <string name="memory_locked">Memory sera offert à compter du 1er décembre.</string>
+  <string name="rocket_locked">Rocket Sleigh sera offert à compter du 1er décembre.</string>
+  <string name="dancer_locked">Dasher Dancer sera offert à compter du 1er décembre.</string>
+  <string name="city_quiz_locked">Le jeu Quiz urbain sera offert le 1er décembre.</string>
+  <string name="generic_game_disabled">Le jeu %1$s n\'est actuellement pas disponible.</string>
+  <string name="generic_game_locked">%1$s n\'est pas encore disponible. Revenez plus tard!</string>
+  <string name="video">Vidéo</string>
+  <string name="video_locked">La vidéo sera déverrouillée à compter du %1$d décembre.</string>
+  <string name="video_disabled">La vidéo n\'est pas disponible actuellement.</string>
+  <string name="play">Lire</string>
+  <string name="watch">Visionner</string>
+</resources>

@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">I-play</string>
+  <string name="level">LEVEL</string>
+  <string name="workshops">Mga Workshop</string>
+  <string name="unlock_at_level">I-unlock sa level %1$d</string>
+  <string name="present_dropped">Naghulog ng regalo si Santa!</string>
+  <string name="present_too_far">Napakalayo ng regalo!</string>
+  <string name="workshop_too_far">Napakalayo ng workshop!</string>
+  <string name="no_presents_collected">Manguha muna ng mga regalo!</string>
+  <string name="bag_is_full">Puno na ang bag mo!</string>
+  <string name="workshop_moved">Nailipat ang workshop</string>
+  <string name="move_canceled">Nakansela ang paglipat</string>
+  <string name="workshop_move_too_soon">Nailipat na ang workshop na ito ngayong araw, subukang muli bukas</string>
+  <string name="go_here">Pumunta rito!</string>
+  <string name="perm_location_rationale">Kailangan ng Present Quest ang access sa iyong lokasyon upang matulungan kang mahanap ang mga regalo ni Santa.</string>
+  <string name="perm_required">Kinakailangan ang Pahintulot</string>
+  <string name="perm_go_to_settings">Hindi gagana ang Present Quest nang walang access sa iyong lokasyon. Paki-enable ang mga pahintulot sa Lokasyon sa Mga Setting.</string>
+  <string name="required_permissions_missing">Wala ang mga kinakailangang pahintulot.</string>
+  <string name="next">Susunod</string>
+  <string name="onboarding_msg_1">Nahuhulog ang mga regalo\nmula sa sleigh ni Santa!</string>
+  <string name="onboarding_msg_2">Maglakad tungo sa mga pin ng regalo sa\ntotoong buhay upang masalo ang mga ito.</string>
+  <string name="onboarding_msg_3">Kapag puno na ang iyong bag,\nmaglakad tungo sa isang workshop upang alisin ang laman</string>
+  <string name="onboarding_msg_4">Tara Na!</string>
+  <string name="msg_present_nearby">May regalo sa malapit!</string>
+  <string name="msg_bag_almost_full">Halos puno na ang bag mo!</string>
+  <string name="msg_unload_bag">Alisin ang laman ng iyong bag sa isang workshop.</string>
+  <string name="msg_unlocked_workshop">Nakapag-unlock ka ng bagong workshop!</string>
+  <string name="msg_click_present">Mag-click sa isang regalo upang makuha ito.</string>
+  <string name="msg_click_workshop">Mag-click sa iyong workshop upang mag-alis ng mga regalo.</string>
+  <string name="level_denominator">ng 12</string>
+  <string name="full">BUO</string>
+  <string name="distraction_warning">Magkaroon ng kamalayan sa iyong paligid kapag nagpe-play.</string>
+</resources>

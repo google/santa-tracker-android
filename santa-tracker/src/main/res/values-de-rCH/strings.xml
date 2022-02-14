@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Weihnachtsmann orten</string>
+  <string name="track_santa_two_lines">Weihnachtsmann\norten</string>
+  <string name="santa_takes_off_in">Der Weihnachtsmann startet in</string>
+  <string name="santa_is_busy_preparing_for_next_year">Der Weihnachtsmann bereitet sich auf das nächste Jahr vor.</string>
+  <string name="view_old_stops">Stationen im Jahr 2014 ansehen</string>
+  <string name="contacting_santa">Verbindung zum Weihnachtsmann wird hergestellt...</string>
+  <string name="still_trying_to_reach_santa">Noch keine Verbindung zum Weihnachtsmann. Wir versuchen es weiter...</string>
+  <string name="days">Tage</string>
+  <string name="hrs">Std.</string>
+  <string name="min">Min.</string>
+  <string name="sec">Sek.</string>
+  <string name="menu_share">Teilen</string>
+  <string name="menu_share_friends">Mit Freunden teilen</string>
+  <string name="legal_notice">Rechtliches und Datenschutz</string>
+  <string name="legal_notice_text">Rechtliche Hinweise</string>
+  <string name="privacy_policy">Datenschutzerklärung</string>
+  <string name="terms_of_service">Nutzungsbedingungen</string>
+  <string name="open_source_licenses">Open Source-Lizenzen</string>
+  <string name="open_source_repo_santa">Santa auf GitHub</string>
+  <string name="scene_not_available">Noch nicht verfügbar</string>
+  <string name="sign_out">Abmelden</string>
+  <string name="until_takeoff">Bis zum Abflug</string>
+  <string name="web_scene_error">Diese Szene konnte nicht geladen werden.</string>
+  <string name="check_back_daily">Schau wieder vorbei, die Wichtel haben täglich neue Spiele auf Lager!</string>
+  <string name="new_games">Neue Spiele</string>
+  <string name="new_card">Neu</string>
+  <string name="tracker_opens_date">Das Dorf öffnet am %1$s</string>
+  <string name="time">VERBLEIBENDE ZEIT</string>
+  <string name="download_dialog_title">%1$s herunterladen</string>
+  <string name="download_dialog_message">Das Spiel muss zuerst aus dem Play Store heruntergeladen werden. Dieses Gerät ist aktuell mit einem Netzwerk verbunden, bei dem für Datenübertragungen Kosten anfallen können.\n\nMöchten Sie fortfahren?</string>
+  <string name="elf_maker_write_success">Bild in \"Meine Fotos\" gespeichert</string>
+  <string name="elf_maker_write_fail">Beim Speichern des Bildes auf dem Gerät ist ein Fehler aufgetreten</string>
+</resources>

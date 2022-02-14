@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="watch_face_elf">精灵</string>
+  <string name="watch_face_santa">圣诞老人</string>
+  <string name="countdown_complication_label">迎接圣诞老人倒计时</string>
+  <string name="short_christmas_greeting">今天！</string>
+  <string name="long_christmas_greeting">圣诞节快乐！</string>
+  <string name="desc_logo_for_santa_tracker">追踪圣诞老人徽标</string>
+  <string name="desc_right_complication_config">右侧复杂功能区</string>
+  <string name="desc_lower_complication_config">底部复杂功能区</string>
+  <string name="desc_left_complication_config">左侧复杂功能区</string>
+</resources>

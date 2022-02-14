@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="media_route_casting_on">Transmisión en %s</string>
+  <string name="media_route_menu_title">Transmitir en…</string>
+  <string name="touch_to_cast">Toca el ícono de transmisión para jugar a Sigue a Santa en tu TV.</string>
+  <string name="connection_temp_lost">Se interrumpió temporalmente la conexión al dispositivo de transmisión.</string>
+  <string name="connection_recovered">Se recuperó la conexión al dispositivo de transmisión.</string>
+  <string name="cast_game_controller">Controlador del juego en TV</string>
+  <string name="content_desc_mode_switch">Cambiar del modo dpad al modo trackpad</string>
+  <string name="content_desc_right_button">Derecha</string>
+  <string name="content_desc_up_button">Arriba</string>
+  <string name="content_desc_down_button">Abajo</string>
+  <string name="content_desc_enter_button">Intro</string>
+  <string name="content_desc_left_button">Izquierda</string>
+</resources>

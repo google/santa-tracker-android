@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Kalėdų Senelio informacijos suvestinė</string>
+  <string name="current_location">DABARTINĖ VIETA</string>
+  <string name="presents_delivered">PRISTATYTOS DOVANOS</string>
+  <string name="santa_status">KALĖDŲ SENELIO BŪSENA</string>
+  <string name="arriving_in">ATVYKSTA PO</string>
+  <string name="departing_in">IŠVYKSTA PO</string>
+  <string name="localtime">ATVYKO Į</string>
+  <string name="population">GYVENTOJŲ SKAIČIUS</string>
+  <string name="next_destination">KITAS KELIONĖS TIKSLAS</string>
+  <string name="arriving_at">ATVYKSTA PO</string>
+  <string name="arrived_at">ATVYKO Į</string>
+  <string name="in_transit">Kelyje</string>
+  <string name="follow_santa">Stebėti Kalėdų Senelį</string>
+  <string name="lost_contact_with_santa">Prarastas ryšys su Kalėdų Seneliu</string>
+  <string name="notification_nearby">Kalėdų Senelis netoliese!</string>
+  <string name="notification_takeoff">Kalėdų Senelis išvyko!</string>
+  <string name="notification_unlock_video">Pasiekiamas naujas vaizdo įrašas!</string>
+  <string name="notification_unlock_game">Pasiekiamas naujas žaidimas!</string>
+  <string name="santa_arrives_in_your_area_in">Kalėdų Senelis atvyks pas jus po</string>
+  <string name="santa_is_approximately">Kalėdų Senelis yra maždaug</string>
+  <string name="distance_km_away">už %1$,d km%2$s</string>
+  <string name="distance_optional_miles">\u0020(%,d myl.)</string>
+  <string name="distance_mi_away">už %1$,d myl.</string>
+  <string name="did_you_know">Ar žinojote</string>
+  <string name="watch_movie">FILMO PERŽIŪRA</string>
+  <string name="santa_update">KALĖDŲ SENELIO BŪSENOS ATNAUJINIMAS</string>
+  <string name="elapsed_time">Likęs laikas</string>
+  <string name="wikipedia">Vikipedija</string>
+  <string name="arrival">ATVYKIMAS</string>
+  <string name="weather">ORAI</string>
+  <string name="weather_format">%1$s °C / %2$s °F</string>
+  <string name="did_you_know_attribution">„National Geographic Bee“ pateikti pasaulio faktai</string>
+  <string name="photo">Nuotrauka</string>
+  <string name="photos">Nuotraukos</string>
+  <string name="street_view">GATVĖS VAIZDAS</string>
+  <string name="back_to_santa_cam">Atgal į Kalėdų Senelio kamerą</string>
+  <string name="update_from_santa">Naujinys iš Kalėdų Senelio</string>
+  <string name="trivia_from_santa">Loginis žaidimas iš Kalėdų Senelio</string>
+  <string name="photo_from_santa">Nuotrauka iš Kalėdų Senelio</string>
+  <string name="video_from_santa">Vaizdo įrašas iš Kalėdų Senelio</string>
+  <string name="show_history">Rodyti istoriją</string>
+  <string name="see_best_moments">Peržiūrėkite visas geriausias Kalėdų Senelio kelionės akimirkas</string>
+  <string name="return_to_map">Grįžti į žemėlapį</string>
+  <string name="santa_is_now_arriving_in_x">Kalėdų Senelis šiuo metu keliauja į %s</string>
+  <string name="santa_has_handed_out_x_presents">Kalėdų senelis išdalijo %s dovan.</string>
+  <string name="new_update_from_santa">Naujas naujinys iš Kalėdų Senelio</string>
+  <string name="new_trivia_from_santa">Naujas loginis žaidimas iš Kalėdų Senelio</string>
+  <string name="new_video_from_santa">Naujas vaizdo įrašas iš Kalėdų Senelio</string>
+  <string name="new_photo_from_santa">Nauja nuotrauka iš Kalėdų Senelio</string>
+  <string name="cast_overlay_text">Kalėdų Senelį stebėkite dideliame ekrane!\nPalieskite šį mygtuką ir, pasitelkę „Chromecast“, Kalėdų Senelio kelionę žiūrėkite per televizorių.</string>
+  <string name="menu_media_router_title">Perdavimo mygtukas</string>
+</resources>

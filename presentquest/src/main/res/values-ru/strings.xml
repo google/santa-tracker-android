@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">Играть</string>
+  <string name="level">УРОВЕНЬ</string>
+  <string name="workshops">Мастерские</string>
+  <string name="unlock_at_level">Доступно на уровне %1$d.</string>
+  <string name="present_dropped">На карте новый подарок!</string>
+  <string name="present_too_far">Подарок слишком далеко</string>
+  <string name="workshop_too_far">Склад слишком далеко.</string>
+  <string name="no_presents_collected">Сначала соберите подарки.</string>
+  <string name="bag_is_full">Мешок заполнен!</string>
+  <string name="workshop_moved">Склад перемещен</string>
+  <string name="move_canceled">Действие отменено</string>
+  <string name="workshop_move_too_soon">Вы уже перемещали этот склад сегодня, попробуйте завтра</string>
+  <string name="go_here">Перейдите сюда</string>
+  <string name="perm_location_rationale">Разрешите отслеживать ваше местоположение, и вы сможете искать подарки Санты.</string>
+  <string name="perm_required">Требуется разрешение</string>
+  <string name="perm_go_to_settings">Разрешите отслеживать ваше местоположение в настройках, и вы сможете искать подарки Санты.</string>
+  <string name="required_permissions_missing">Отсутствуют необходимые разрешения.</string>
+  <string name="next">Далее</string>
+  <string name="onboarding_msg_1">Из саней Санты\nпадают подарки.</string>
+  <string name="onboarding_msg_2">Выпавшие подарки отмечены на карте.\nВаша задача – их собирать.</string>
+  <string name="onboarding_msg_3">Когда у вас накопится целый мешок\nподарков, доставьте их в мастерскую.</string>
+  <string name="onboarding_msg_4">Поехали!</string>
+  <string name="msg_present_nearby">Где-то рядом есть подарок!</string>
+  <string name="msg_bag_almost_full">Мешок почти заполнен!</string>
+  <string name="msg_unload_bag">Доставьте подарки в мастерскую</string>
+  <string name="msg_unlocked_workshop">Вы открыли новую мастерскую!</string>
+  <string name="msg_click_present">Чтобы взять подарок, нажмите на него.</string>
+  <string name="msg_click_workshop">Чтобы оставить подарки в мастерской, нажмите на нее.</string>
+  <string name="level_denominator">из 12</string>
+  <string name="full">МЕСТА В МЕШКЕ ЗАНЯТО</string>
+  <string name="distraction_warning">Во время игры не теряйте бдительность и следите за тем, что происходит вокруг вас.</string>
+</resources>

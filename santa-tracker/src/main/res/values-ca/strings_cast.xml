@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="media_route_casting_on">S\'està emetent a %s</string>
+  <string name="media_route_menu_title">Emet a…</string>
+  <string name="touch_to_cast">Toca per emetre Segueix el Para Noel al televisor</string>
+  <string name="connection_temp_lost">En aquest moment s\'ha perdut la connexió amb el dispositiu d\'emissió.</string>
+  <string name="connection_recovered">S\'ha recuperat la connexió amb el dispositiu d\'emissió.</string>
+  <string name="cast_game_controller">Comandament per a l\'emissió de jocs</string>
+  <string name="content_desc_mode_switch">canvia el mode de creu direccional a ratolí tàctil</string>
+  <string name="content_desc_right_button">dreta</string>
+  <string name="content_desc_up_button">amunt</string>
+  <string name="content_desc_down_button">avall</string>
+  <string name="content_desc_enter_button">retorn</string>
+  <string name="content_desc_left_button">esquerra</string>
+</resources>

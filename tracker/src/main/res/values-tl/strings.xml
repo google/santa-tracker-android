@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Dashboard ni Santa</string>
+  <string name="current_location">KASALUKUYANG LOKASYON</string>
+  <string name="presents_delivered">MGA NAIHATID NA REGALO</string>
+  <string name="santa_status">STATUS NI SANTA</string>
+  <string name="arriving_in">PAPARATING SA</string>
+  <string name="departing_in">AALIS SA</string>
+  <string name="localtime">DUMATING SA</string>
+  <string name="population">POPULASYON</string>
+  <string name="next_destination">SUSUNOD NA DESTINASYON</string>
+  <string name="arriving_at">DARATING SA</string>
+  <string name="arrived_at">DUMATING SA</string>
+  <string name="in_transit">Naglalakbay</string>
+  <string name="follow_santa">Subaybayan si Santa</string>
+  <string name="lost_contact_with_santa">Nawala ang ugnayan kay Santa</string>
+  <string name="notification_nearby">Malapit lang si Santa!</string>
+  <string name="notification_takeoff">Lumipad na si Santa!</string>
+  <string name="notification_unlock_video">Available ang isang bagong video!</string>
+  <string name="notification_unlock_game">Available ang isang bagong laro!</string>
+  <string name="santa_arrives_in_your_area_in">DARATING SI SANTA SA INYONG LUGAR SA LOOB NG</string>
+  <string name="santa_is_approximately">SI SANTA AY HUMIGIT-KUMULANG</string>
+  <string name="distance_km_away">%1$,d (na) km%2$s ang layo</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d (na) mi ang layo</string>
+  <string name="did_you_know">ALAM MO BA</string>
+  <string name="watch_movie">PANOORIN ANG PELIKULA</string>
+  <string name="santa_update">UPDATE KAY SANTA</string>
+  <string name="elapsed_time">LUMIPAS NA ORAS</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">PAGDATING</string>
+  <string name="weather">PANAHON</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">Ibinigay ng National Geographic Bee ang mga impormasyon tungkol sa mundo</string>
+  <string name="photo">Larawan</string>
+  <string name="photos">Mga Larawan</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">BUMALIK SA SANTA CAM</string>
+  <string name="update_from_santa">Update mula kay Santa</string>
+  <string name="trivia_from_santa">Trivia mula kay Santa</string>
+  <string name="photo_from_santa">Larawan mula kay Santa</string>
+  <string name="video_from_santa">Video mula kay Santa</string>
+  <string name="show_history">Ipakita ang history</string>
+  <string name="see_best_moments">Tingnan ang lahat ng pinakamagandang sandali ng paglalakbay ni Santa</string>
+  <string name="return_to_map">Bumalik sa mapa</string>
+  <string name="santa_is_now_arriving_in_x">Darating na ngayon si Santa sa %s</string>
+  <string name="santa_has_handed_out_x_presents">Namigay si Santa ng %s (na) regalo</string>
+  <string name="new_update_from_santa">Bagong update mula kay Santa</string>
+  <string name="new_trivia_from_santa">Bagong trivia mula kay Santa</string>
+  <string name="new_video_from_santa">Bagong video mula kay Santa</string>
+  <string name="new_photo_from_santa">Bagong larawan mula kay Santa</string>
+  <string name="cast_overlay_text">Sundan si Santa sa malaking screen!\nI-tap ang button na ito upang matingnan ang paglalakbay ni Santa sa iyong TV gamit ang Chromecast.</string>
+  <string name="menu_media_router_title">Button na I-cast</string>
+</resources>

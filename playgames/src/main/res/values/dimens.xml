@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- Santa Dimensions -->
+    <item format="float" type="dimen" name="santa_scale">1.0</item>
+    <dimen name="arm_margin_right">100dp</dimen>
+    <dimen name="arm_margin_bottom">30dp</dimen>
+    <dimen name="body_margin_bottom">-60dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="mm_card_width">82dp</dimen>
+    <dimen name="mm_card_height">120dp</dimen>
+    <dimen name="mm_inner_item_padding">25dp</dimen>
+    <dimen name="mm_door_item_padding">19dp</dimen>
+    <dimen name="mm_door_item_padding_bottom">20dp</dimen>
+    <dimen name="mm_door_item_padding_top">22dp</dimen>
+    <dimen name="play_again_margin">2dp</dimen>
+
+    <!-- Santa Tracker logo -->
+    <!-- (action bar height - logo height) / 2 = (56dp - 32dp) / 2 -->
+    <!-- from Material design spec -->
+
+    <!-- Cast ShowCaseView -->
+
+    <dimen name="main_menu_button_padding">10dp</dimen>
+
+    <!-- Padding between days/hours/minutes/seconds in layout/countdown.xml -->
+
+    <dimen name="gplus_sign_in_text_margin_left">46dp</dimen>
+
+    <dimen name="section_elevation">8dp</dimen>
+    <dimen name="fab_elevation">8dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="santaMarginBottom">0dp</dimen>
+    <dimen name="santaMarginRight">0dp</dimen>
+
+    <dimen name="overscan_padding_width">48dp</dimen>
+    <dimen name="overscan_padding_height">27dp</dimen>
+    <dimen name="tv_separator_height">12dp</dimen>
+
+    <dimen name="card_lock_size">75dp</dimen>
+    <dimen name="card_padding_big_verb_text">20dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="end_game_score_overlap">-43dp</dimen>
+    <dimen name="end_game_game_over_size">48sp</dimen>
+</resources>

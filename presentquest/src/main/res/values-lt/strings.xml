@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">Leisti</string>
+  <string name="level">LYGIS</string>
+  <string name="workshops">Dirbtuvės</string>
+  <string name="unlock_at_level">Atrakinkite %1$d lygyje</string>
+  <string name="present_dropped">Kalėdų Senelis paliko dovaną!</string>
+  <string name="present_too_far">Dovana per toli!</string>
+  <string name="workshop_too_far">Dirbtuvės per toli!</string>
+  <string name="no_presents_collected">Pirma surinkite dovanų!</string>
+  <string name="bag_is_full">Jūsų maišas pilnas!</string>
+  <string name="workshop_moved">Dirbtuvės perkeltos</string>
+  <string name="move_canceled">Perkėlimas atšauktas</string>
+  <string name="workshop_move_too_soon">Šios dirbtuvės šiandien jau perkeltos, bandykite dar kartą rytoj</string>
+  <string name="go_here">Eikite čia!</string>
+  <string name="perm_location_rationale">„Dovanų ieškynėms“ reikia prieigos prie jūsų vietovės, kad lengviau rastumėte Kalėdų Senelio dovanas.</string>
+  <string name="perm_required">Reikia leidimo</string>
+  <string name="perm_go_to_settings">„Dovanų ieškynės“ neveiks be prieigos prie jūsų vietovės. Įgalinkite vietovės leidimus nustatymuose.</string>
+  <string name="required_permissions_missing">Trūksta reikalingų leidimų.</string>
+  <string name="next">Kitas</string>
+  <string name="onboarding_msg_1">Dovanos krinta\niš Kalėdų Senelio rogių!</string>
+  <string name="onboarding_msg_2">Prieikite prie dovanų smeigtukų\nrealybėje, kad jas pagautumėte.</string>
+  <string name="onboarding_msg_3">Pripildę maišą,\nneškite į dirbtuves ir iškraukite</string>
+  <string name="onboarding_msg_4">Pradėkime!</string>
+  <string name="msg_present_nearby">Netoliese yra dovana!</string>
+  <string name="msg_bag_almost_full">Jūsų maišas beveik pilnas!</string>
+  <string name="msg_unload_bag">Iškraukite maišą dirbtuvėse.</string>
+  <string name="msg_unlocked_workshop">Atrakinote naujas dirbtuves!</string>
+  <string name="msg_click_present">Norėdami paimti dovaną, spustelėkite ją.</string>
+  <string name="msg_click_workshop">Norėdami iškrauti dovanas, spustelėkite dirbtuves,</string>
+  <string name="level_denominator">iš 12</string>
+  <string name="full">PILNAS</string>
+  <string name="distraction_warning">Žaisdami stebėkite aplinką.</string>
+</resources>

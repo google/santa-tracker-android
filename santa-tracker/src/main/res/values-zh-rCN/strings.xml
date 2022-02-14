@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">追踪圣诞老人</string>
+  <string name="track_santa_two_lines">追踪\n圣诞老人</string>
+  <string name="santa_takes_off_in">圣诞老人出发倒计时</string>
+  <string name="santa_is_busy_preparing_for_next_year">圣诞老人正在为下一年做准备。</string>
+  <string name="view_old_stops">查看 2014 年的经停地点</string>
+  <string name="contacting_santa">正在尝试与圣诞老人联系</string>
+  <string name="still_trying_to_reach_santa">仍在尝试与圣诞老人联系</string>
+  <string name="days">天</string>
+  <string name="hrs">小时</string>
+  <string name="min">分钟</string>
+  <string name="sec">秒</string>
+  <string name="menu_share">分享</string>
+  <string name="menu_share_friends">与朋友分享</string>
+  <string name="legal_notice">法律和隐私权信息</string>
+  <string name="legal_notice_text">法律声明</string>
+  <string name="privacy_policy">隐私权政策</string>
+  <string name="terms_of_service">服务条款</string>
+  <string name="open_source_licenses">开放源代码许可</string>
+  <string name="open_source_repo_santa">GitHub 上的 Santa</string>
+  <string name="scene_not_available">尚未推出</string>
+  <string name="sign_out">退出</string>
+  <string name="until_takeoff">启程倒计时</string>
+  <string name="web_scene_error">抱歉，无法加载此场景。</string>
+  <string name="check_back_daily">记得每天回来看看新游戏哦！</string>
+  <string name="new_games">新游戏</string>
+  <string name="new_card">新</string>
+  <string name="tracker_opens_date">%1$s开放</string>
+  <string name="time">时间</string>
+  <string name="download_dialog_title">下载%1$s</string>
+  <string name="download_dialog_message">我们需要先从 Play 商店下载该游戏，然后您才能开始玩。此设备当前连接到的是按流量计费的网络（可能会对传输的所有数据收费）。\n\n要继续吗？</string>
+  <string name="elf_maker_write_success">图片已保存到您的相册中</string>
+  <string name="elf_maker_write_fail">在将图片保存到设备相册时出现了错误</string>
+</resources>

@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="media_route_casting_on">%s சாதனத்தில் அனுப்புகிறது</string>
+  <string name="media_route_menu_title">இந்தச் சாதனத்துக்கு அனுப்பு…</string>
+  <string name="touch_to_cast">சான்டா டிராக்கரை உங்கள் தொலைக்காட்சிக்கு அனுப்ப, தொடவும்</string>
+  <string name="connection_temp_lost">அனுப்பும் சாதனத்துக்கான இணைப்பு தற்காலிகமாக இல்லை</string>
+  <string name="connection_recovered">அனுப்பும் சாதனத்துக்கான இணைப்பு மீண்டும் வந்தது</string>
+  <string name="cast_game_controller">காஸ்ட் கேம் கட்டுப்படுத்தி</string>
+  <string name="content_desc_mode_switch">திசைப்பலகையில் இருந்து ட்ராக் பலகைக்கு மாற்றவும்</string>
+  <string name="content_desc_right_button">வலது</string>
+  <string name="content_desc_up_button">மேலே</string>
+  <string name="content_desc_down_button">கீழே</string>
+  <string name="content_desc_enter_button">enter</string>
+  <string name="content_desc_left_button">இடது</string>
+</resources>

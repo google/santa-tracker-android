@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="back_to_map">Natrag na kartu</string>
+  <string name="back_to_village">Natrag u selo</string>
+  <string name="go_to_play_store">Ova verzija igre Slijedi Djeda Božićnjaka zastarjela je. Posjeti Trgovinu Play i nadogradi je na najnoviju verziju.</string>
+  <string name="game_over">Igra je gotova</string>
+  <string name="loading_screen">Učitavanje zaslona</string>
+  <string name="menu_resume">Nastavi</string>
+  <string name="menu_replay">Ponovna igra</string>
+  <string name="menu_home">Početna</string>
+  <string name="menu_share">Dijeli</string>
+  <string name="error_fetch_module">Došlo je do pogreške pri preuzimanju%1$s. Radi li tvoja mreža pravilno?</string>
+</resources>

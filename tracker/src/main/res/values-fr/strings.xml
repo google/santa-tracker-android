@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Tableau de bord du père Noël</string>
+  <string name="current_location">POSITION ACTUELLE</string>
+  <string name="presents_delivered">CADEAUX DISTRIBUÉS</string>
+  <string name="santa_status">PETIT MOT DU PÈRE NOËL</string>
+  <string name="arriving_in">ARRIVÉE PRÉVUE DANS</string>
+  <string name="departing_in">DÉPART DANS</string>
+  <string name="localtime">ARRIVÉ À</string>
+  <string name="population">POPULATION</string>
+  <string name="next_destination">DESTINATION SUIVANTE</string>
+  <string name="arriving_at">ARRIVÉE À</string>
+  <string name="arrived_at">ARRIVÉ À</string>
+  <string name="in_transit">En vol</string>
+  <string name="follow_santa">Suivre le père Noël</string>
+  <string name="lost_contact_with_santa">Le contact a été perdu avec le père Noël.</string>
+  <string name="notification_nearby">Le père Noël est près de chez vous !</string>
+  <string name="notification_takeoff">Le père Noël vient de s\'envoler !</string>
+  <string name="notification_unlock_video">Une nouvelle vidéo est disponible !</string>
+  <string name="notification_unlock_game">Un nouveau jeu est disponible !</string>
+  <string name="santa_arrives_in_your_area_in">Le père Noël arrive chez vous dans</string>
+  <string name="santa_is_approximately">Le père Noël se trouve à environ</string>
+  <string name="distance_km_away">%1$,d km %2$s d\'ici.</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d miles d\'ici.</string>
+  <string name="did_you_know">Le saviez-vous ?</string>
+  <string name="watch_movie">REGARDER UN FILM</string>
+  <string name="santa_update">MESSAGE DU PÈRE NOËL</string>
+  <string name="elapsed_time">Temps écoulé</string>
+  <string name="wikipedia">Wikipédia</string>
+  <string name="arrival">ARRIVÉE</string>
+  <string name="weather">MÉTÉO</string>
+  <string name="weather_format">%1$s °C/%2$s °F</string>
+  <string name="did_you_know_attribution">Informations culturelles sur le monde, fournies par National Geographic Bee</string>
+  <string name="photo">Photo</string>
+  <string name="photos">Photos</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">Revenir à la caméra du père Noël</string>
+  <string name="update_from_santa">Message du père Noël</string>
+  <string name="trivia_from_santa">Anecdote du père Noël</string>
+  <string name="photo_from_santa">Photo du père Noël</string>
+  <string name="video_from_santa">Vidéo du père Noël</string>
+  <string name="show_history">Afficher l\'historique</string>
+  <string name="see_best_moments">Découvrez tous les meilleurs moments de la tournée du père Noël.</string>
+  <string name="return_to_map">Retour à la carte</string>
+  <string name="santa_is_now_arriving_in_x">Le père Noël arrive maintenant à sa nouvelle destination : %s.</string>
+  <string name="santa_has_handed_out_x_presents">Le père Noël a déjà livré %s cadeau(x).</string>
+  <string name="new_update_from_santa">Nouveau message du père Noël</string>
+  <string name="new_trivia_from_santa">Nouvelle anecdote du père Noël</string>
+  <string name="new_video_from_santa">Nouvelle vidéo du père Noël</string>
+  <string name="new_photo_from_santa">Nouvelle photo du père Noël</string>
+  <string name="cast_overlay_text">Suivez le père Noël sur grand écran !\nAppuyez sur ce bouton pour voir le parcours du père Noël sur votre téléviseur avec Chromecast.</string>
+  <string name="menu_media_router_title">Bouton Cast</string>
+</resources>

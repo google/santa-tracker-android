@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">Dem Weihnachtsmann ab 24. Dezember folgen</string>
+  <string name="present_quest_locked">Present Quest steht ab dem 1. Dezember zur Verfügung.</string>
+  <string name="santa_snap_locked">Weihnachtsmann-Selfie ist bald verfügbar.</string>
+  <string name="gumball_locked">Gumball ist ab dem 1. Dezember verfügbar.</string>
+  <string name="memory_locked">Memory ist ab dem 1. Dezember verfügbar.</string>
+  <string name="rocket_locked">Das Spiel \"Raketenflug\" ist ab dem 1. Dezember verfügbar.</string>
+  <string name="dancer_locked">Dasher Dancer ist ab dem 1. Dezember verfügbar.</string>
+  <string name="city_quiz_locked">City Quiz steht ab dem 1. Dezember zur Verfügung.</string>
+  <string name="generic_game_disabled">%1$s ist zurzeit nicht verfügbar.</string>
+  <string name="generic_game_locked">%1$s ist noch nicht verfügbar. Schau später noch einmal vorbei.</string>
+  <string name="video">Video</string>
+  <string name="video_locked">Dieses Video wird am %1$d freigegeben.</string>
+  <string name="video_disabled">Dieses Video ist derzeit nicht verfügbar.</string>
+  <string name="play">Spielen</string>
+  <string name="watch">Ansehen</string>
+</resources>

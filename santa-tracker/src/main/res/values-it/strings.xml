@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Segui Babbo Natale</string>
+  <string name="track_santa_two_lines">Segui\nBabbo Natale</string>
+  <string name="santa_takes_off_in">Babbo Natale decolla tra</string>
+  <string name="santa_is_busy_preparing_for_next_year">Babbo Natale è occupato a prepararsi per il prossimo anno.</string>
+  <string name="view_old_stops">Visualizza tutte le fermate del 2014</string>
+  <string name="contacting_santa">Tentativo di contattare Babbo Natale in corso</string>
+  <string name="still_trying_to_reach_santa">Stiamo ancora tentando di contattare Babbo Natale</string>
+  <string name="days">Giorni</string>
+  <string name="hrs">ore</string>
+  <string name="min">Min</string>
+  <string name="sec">Sec</string>
+  <string name="menu_share">Condividi</string>
+  <string name="menu_share_friends">Condividi con gli amici</string>
+  <string name="legal_notice">Termini e privacy</string>
+  <string name="legal_notice_text">Note legali</string>
+  <string name="privacy_policy">Norme sulla privacy</string>
+  <string name="terms_of_service">Termini di servizio</string>
+  <string name="open_source_licenses">Licenze open source</string>
+  <string name="open_source_repo_santa">Babbo Natale su GitHub</string>
+  <string name="scene_not_available">Non ancora disponibile</string>
+  <string name="sign_out">Esci</string>
+  <string name="until_takeoff">Al decollo</string>
+  <string name="web_scene_error">Impossibile caricare la scena.</string>
+  <string name="check_back_daily">Torna ogni giorno per trovare nuovi giochi.</string>
+  <string name="new_games">Nuovi giochi</string>
+  <string name="new_card">Nuova</string>
+  <string name="tracker_opens_date">Apre il giorno %1$s</string>
+  <string name="time">TEMPO</string>
+  <string name="download_dialog_title">Scarica %1$s</string>
+  <string name="download_dialog_message">Dobbiamo scaricare il gioco dal Play Store per permetterti di giocare. Questo dispositivo è attualmente collegato a una rete a consumo che potrebbe addebitare all\'utente l\'eventuale traffico dati.\n\nVuoi procedere?</string>
+  <string name="elf_maker_write_success">Immagine salvata nelle tue foto.</string>
+  <string name="elf_maker_write_fail">Si è verificato un errore durante il salvataggio dell\'immagine nelle foto del dispositivo.</string>
+</resources>

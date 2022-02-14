@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">Pelaa</string>
+  <string name="level">TASO</string>
+  <string name="workshops">Työpajat</string>
+  <string name="unlock_at_level">Avautuu tasolla %1$d</string>
+  <string name="present_dropped">Pukki pudotti lahjan.</string>
+  <string name="present_too_far">Lahja on liian kaukana!</string>
+  <string name="workshop_too_far">Työpaja on liian kaukana!</string>
+  <string name="no_presents_collected">Kerää ensin lahjoja!</string>
+  <string name="bag_is_full">Säkkisi on täynnä!</string>
+  <string name="workshop_moved">Työpaja siirretty</string>
+  <string name="move_canceled">Siirto peruutettu</string>
+  <string name="workshop_move_too_soon">Olet jo siirtänyt tämän työpajan tänään. Kokeile uudelleen huomenna.</string>
+  <string name="go_here">Siirry tänne!</string>
+  <string name="perm_location_rationale">Pukin lahjojen paikantaminen edellyttää, että Lahjaseikkailulle myönnetään sijainnin käyttöoikeudet.</string>
+  <string name="perm_required">Lupa tarvitaan</string>
+  <string name="perm_go_to_settings">Lahjaseikkailua ei voi käyttää ilman sijaintitietoja. Salli sijainnin käyttöoikeudet asetuksissa.</string>
+  <string name="required_permissions_missing">Vaaditut käyttöoikeudet puuttuvat.</string>
+  <string name="next">Seuraava</string>
+  <string name="onboarding_msg_1">Joulupukin reestä\nputoaa lahjoja!</string>
+  <string name="onboarding_msg_2">Nappaa lahjat liikkumalla\noikeassa elämässä lahjojen luo.</string>
+  <string name="onboarding_msg_3">Kun säkkisi on täynnä,\nvoit tyhjentää sen pajaan.</string>
+  <string name="onboarding_msg_4">Aloitetaan!</string>
+  <string name="msg_present_nearby">Lähellä on lahja!</string>
+  <string name="msg_bag_almost_full">Säkkisi on lähes täynnä!</string>
+  <string name="msg_unload_bag">Tyhjennä säkkisi pajalla.</string>
+  <string name="msg_unlocked_workshop">Uusi paja avattu!</string>
+  <string name="msg_click_present">Poimi lahja klikkaamalla.</string>
+  <string name="msg_click_workshop">Tyhjennä säkki klikkaamalla pajaa.</string>
+  <string name="level_denominator">/ 12</string>
+  <string name="full">TÄYNNÄ</string>
+  <string name="distraction_warning">Älä unohda havainnoida ympäristöäsi pelaamisen aikana.</string>
+</resources>

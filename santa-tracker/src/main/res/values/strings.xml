@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  --><resources>
+  <string name="track_santa" translation_description="Button text for to start tracking Santa on a Map">Track Santa</string>
+  <string name="track_santa_two_lines" translation_description="Button text to start tracking Santa on a Map">Track\nSanta</string>
+  <string name="santa_takes_off_in" translation_description="How much time until Christmas Eve, when Santa starts his journey to deliver presents">Santa takes off in</string>
+  <string name="santa_is_busy_preparing_for_next_year" translation_description="Santa has finished delivering this years' presents and he's preparing for next year.">Santa is busy preparing for next year.</string>
+  <string name="view_old_stops" translation_description="Santa's journey is complete but you can see where he stopped off last year">View 2014 stops</string>
+  <string name="contacting_santa" translation_description="Lets users know that the app is trying to get in touch with Santa">Trying to reach Santa</string>
+  <string name="still_trying_to_reach_santa" translation_description="Having trouble reaching Santa but still trying">Still trying to reach Santa</string>
+  <string name="days" translation_description="Part of the countdown to take off - Days left. Please keep this string short.">Days</string>
+  <string name="hrs" translation_description="Part of the countdown to take off - Hours left. Please keep this string short.">Hrs</string>
+  <string name="min" translation_description="Part of the countdown to take off - Minutes left. Please keep this string short.">Min</string>
+  <string name="sec" translation_description="Part of the countdown to take off - Seconds left. Please keep this string short.">Sec</string>
+  <string name="menu_share" translation_description="Share menu item. Will likely be high scores but could be others">Share</string>
+  <string name="menu_share_friends" translation_description="Share menu item. Will likely be a prompt to get a friend to install the app.">Share with friends</string>
+  <string name="legal_notice" translation_description="Takes users to a list of legal privacy documents">Legal &amp; privacy</string>
+  <string name="legal_notice_text" translation_description="Link for legal notices">Legal notice</string>
+  <string name="privacy_policy" translation_description="Link for privacy policy">Privacy policy</string>
+  <string name="terms_of_service" translation_description="Link for terms of services">Terms of service</string>
+  <string name="open_source_licenses" translation_description="Licenses for open source components">Open source licenses</string>
+  <string name="open_source_repo_santa" translation_description="Web link to find the source code for this Santa app on the 'GitHub' site">Santa on GitHub</string>
+  <string name="scene_not_available" translation_description="Not available yet">Not available yet</string>
+  <string name="sign_out">Sign Out</string>
+  <string name="until_takeoff" translation_description="Label under countdown for time until Santa takes off.">Until Takeoff</string>
+  <string name="web_scene_error" translation_description="Short error message displayed on screen when a scene could not be loaded.">Sorry, could not load the scene.</string>
+  <string name="check_back_daily" translation_description="Label to inform users to check back every day for new games.">Check back daily for new games!</string>
+  <string name="new_games" translation_description="Header label above the prompt to check back daily for new games.">New Games</string>
+  <string name="new_card" translation_description="Label for cards that are set to be 'new'.">New</string>
+  <string name="tracker_opens_date" translation_description="Label for tracker card, stating the tracker's opening date.">Opens %1$s</string>
+  <string name="time" translation_description="Label for the remaining time of a game.">TIME</string>
+  <string name="download_dialog_title" translation_description="Title for a dialog asking the user whether to download a game.">Download %1$s</string>
+  <string name="download_dialog_message" translation_description="Message for a dialog asking the user whether to download a game when they are on a metered network.">We need to download the game from the Play Store before you can play. This device is currently connected to a metered network which may charge you for any data transferred.\n\nDo you wish to proceed?</string>
+  <!-- Elf Maker Saving -->
+  <string name="elf_maker_write_success" translation_description="Success message shown when the image has been saved">Image saved to your photos</string>
+  <string name="elf_maker_write_fail" translation_description="Error message shown when a problem was hit when saving the image">We hit an error while saving image to device photos</string>
+</resources>

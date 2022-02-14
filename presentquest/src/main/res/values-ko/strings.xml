@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">게임하기</string>
+  <string name="level">레벨</string>
+  <string name="workshops">작업공방</string>
+  <string name="unlock_at_level">%1$d레벨부터 이용 가능</string>
+  <string name="present_dropped">산타가 선물을 떨구었습니다.</string>
+  <string name="present_too_far">선물이 너무 멀리 있습니다.</string>
+  <string name="workshop_too_far">작업공방이 너무 멀리 있습니다.</string>
+  <string name="no_presents_collected">먼저 선물을 모으세요.</string>
+  <string name="bag_is_full">가방이 꽉 찼습니다.</string>
+  <string name="workshop_moved">작업공방을 이동했습니다.</string>
+  <string name="move_canceled">이동이 취소되었습니다.</string>
+  <string name="workshop_move_too_soon">오늘 이미 이 작업공방을 이동했습니다. 내일 다시 시도해 주세요.</string>
+  <string name="go_here">여기로 이동하세요.</string>
+  <string name="perm_location_rationale">산타의 선물을 찾으려면 선물 찾기 게임에 위치 액세스 권한이 필요합니다.</string>
+  <string name="perm_required">권한 필요</string>
+  <string name="perm_go_to_settings">위치 액세스 권한이 없으면 선물 찾기 게임이 작동하지 않습니다. 설정에서 위치 권한을 사용 설정하세요.</string>
+  <string name="required_permissions_missing">필요한 권한이 누락되었습니다.</string>
+  <string name="next">다음</string>
+  <string name="onboarding_msg_1">산타의 썰매에서\n선물이 떨어지고 있습니다.</string>
+  <string name="onboarding_msg_2">진짜 선물을 잡으려면\n선물 핀으로 이동하세요.</string>
+  <string name="onboarding_msg_3">가방이 꽉 차면 작업공방\n으로 이동해 가방을 비우세요.</string>
+  <string name="onboarding_msg_4">게임 시작</string>
+  <string name="msg_present_nearby">근처에 선물이 있습니다.</string>
+  <string name="msg_bag_almost_full">가방이 거의 꽉 찼습니다.</string>
+  <string name="msg_unload_bag">작업공방에서 가방을 비우세요.</string>
+  <string name="msg_unlocked_workshop">새로운 작업공방을 이용할 수 있습니다.</string>
+  <string name="msg_click_present">선물을 집으려면 클릭하세요.</string>
+  <string name="msg_click_workshop">선물 가방을 비우려면 작업공방을 클릭하세요.</string>
+  <string name="level_denominator">/12</string>
+  <string name="full">채워짐</string>
+  <string name="distraction_warning">게임할 때 주변 환경에 유의하세요.</string>
+</resources>

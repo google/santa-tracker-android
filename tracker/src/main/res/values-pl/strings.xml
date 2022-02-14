@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Panel Świętego Mikołaja</string>
+  <string name="current_location">BIEŻĄCA LOKALIZACJA</string>
+  <string name="presents_delivered">DOSTARCZONE PREZENTY</string>
+  <string name="santa_status">OPIS ŚW. MIKOŁAJA</string>
+  <string name="arriving_in">PRZYBĘDZIE ZA</string>
+  <string name="departing_in">WYRUSZY ZA</string>
+  <string name="localtime">PRZYBYŁ DO</string>
+  <string name="population">LICZBA MIESZKAŃCÓW</string>
+  <string name="next_destination">NASTĘPNY PRZYSTANEK</string>
+  <string name="arriving_at">PRZYBYWA DO</string>
+  <string name="arrived_at">PRZYBYŁ DO</string>
+  <string name="in_transit">W drodze</string>
+  <string name="follow_santa">Śledź trasę Św. Mikołaja</string>
+  <string name="lost_contact_with_santa">Utracono kontakt ze Świętym Mikołajem</string>
+  <string name="notification_nearby">Święty Mikołaj jest tuż-tuż!</string>
+  <string name="notification_takeoff">Święty Mikołaj już wyruszył!</string>
+  <string name="notification_unlock_video">Dostępny jest nowy film</string>
+  <string name="notification_unlock_game">Dostępna jest nowa gra</string>
+  <string name="santa_arrives_in_your_area_in">ŚWIĘTY MIKOŁAJ ODWIEDZI CIĘ ZA</string>
+  <string name="santa_is_approximately">ŚWIĘTY MIKOŁAJ JEST OKOŁO</string>
+  <string name="distance_km_away">%1$,d km%2$s od Ciebie</string>
+  <string name="distance_optional_miles">\u0020(%,d mi)</string>
+  <string name="distance_mi_away">%1$,d mil od Ciebie</string>
+  <string name="did_you_know">CZY WIESZ, ŻE...</string>
+  <string name="watch_movie">OBEJRZYJ FILM</string>
+  <string name="santa_update">CO SŁYCHAĆ U MIKOŁAJA</string>
+  <string name="elapsed_time">UPŁYNĘŁO</string>
+  <string name="wikipedia">Wikipedia</string>
+  <string name="arrival">PRZYLOT</string>
+  <string name="weather">POGODA</string>
+  <string name="weather_format">%1$s°C / %2$s°F</string>
+  <string name="did_you_know_attribution">Informacje o świecie z programu National Geographic Bee</string>
+  <string name="photo">Zdjęcie</string>
+  <string name="photos">Zdjęcia</string>
+  <string name="street_view">STREET VIEW</string>
+  <string name="back_to_santa_cam">WRÓĆ DO KAMERY ŚWIĘTEGO MIKOŁAJA</string>
+  <string name="update_from_santa">Informacje od Świętego Mikołaja</string>
+  <string name="trivia_from_santa">Ciekawostki od Świętego Mikołaja</string>
+  <string name="photo_from_santa">Zdjęcie od Świętego Mikołaja</string>
+  <string name="video_from_santa">Film od Świętego Mikołaja</string>
+  <string name="show_history">Pokaż historię</string>
+  <string name="see_best_moments">Zobacz najciekawsze chwile z podróży Świętego Mikołaja</string>
+  <string name="return_to_map">Wróć do mapy</string>
+  <string name="santa_is_now_arriving_in_x">Święty Mikołaj dojeżdża do: %s</string>
+  <string name="santa_has_handed_out_x_presents">Prezenty rozdane przez Świętego Mikołaja: %s</string>
+  <string name="new_update_from_santa">Nowe informacje od Świętego Mikołaja</string>
+  <string name="new_trivia_from_santa">Nowa ciekawostka od Świętego Mikołaja</string>
+  <string name="new_video_from_santa">Nowy film od Świętego Mikołaja</string>
+  <string name="new_photo_from_santa">Nowe zdjęcie od Świętego Mikołaja</string>
+  <string name="cast_overlay_text">Śledź Mikołaja na dużym ekranie!\nDotknij tego przycisku, aby obserwować podróż Mikołaja na telewizorze za pomocą urządzenia Chromecast.</string>
+  <string name="menu_media_router_title">Przycisk Cast</string>
+</resources>

@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="play">玩遊戲</string>
+  <string name="level">關卡</string>
+  <string name="workshops">工作坊</string>
+  <string name="unlock_at_level">將在第 %1$d 關解鎖</string>
+  <string name="present_dropped">聖誕老人送來好禮！</string>
+  <string name="present_too_far">禮物所在地太遠！</string>
+  <string name="workshop_too_far">工作坊太遠！</string>
+  <string name="no_presents_collected">請先收集幾樣禮物！</string>
+  <string name="bag_is_full">你的背包滿了！</string>
+  <string name="workshop_moved">已移動工作室位置</string>
+  <string name="move_canceled">已取消移動</string>
+  <string name="workshop_move_too_soon">你今天移動過這個工作室了，請明天再試</string>
+  <string name="go_here">前往這裡！</string>
+  <string name="perm_location_rationale">「禮物尋寶」需要存取你的位置資訊，才能帶你找到聖誕老人的禮物。</string>
+  <string name="perm_required">權限不足</string>
+  <string name="perm_go_to_settings">「禮物尋寶」必須取得你的位置資訊才能正常運作。請前往「設定」啟用 [位置] 存取權限。</string>
+  <string name="required_permissions_missing">未提供必要的權限。</string>
+  <string name="next">繼續</string>
+  <string name="onboarding_msg_1">聖誕老人雪橇上的禮物\n從天上掉下來了！</string>
+  <string name="onboarding_msg_2">請前往真實世界中的\n標示地點收集禮物。</string>
+  <string name="onboarding_msg_3">背包裝滿禮物後，\n可前往工作坊取出禮物。</string>
+  <string name="onboarding_msg_4">我們出發吧！</string>
+  <string name="msg_present_nearby">附近有禮物！</string>
+  <string name="msg_bag_almost_full">你的背包快裝滿了！</string>
+  <string name="msg_unload_bag">請前往工作坊清空背包，取出禮物。</string>
+  <string name="msg_unlocked_workshop">你解除鎖定了新的工作坊！</string>
+  <string name="msg_click_present">點選禮物即可撿拾禮物。</string>
+  <string name="msg_click_workshop">點選工作坊即可卸下禮物。</string>
+  <string name="level_denominator">/12</string>
+  <string name="full">滿袋</string>
+  <string name="distraction_warning">請留意周遭環境，以免遊戲時發生危險。</string>
+</resources>

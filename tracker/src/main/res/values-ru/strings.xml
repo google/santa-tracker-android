@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santaDashboard">Журнал поездок Санты</string>
+  <string name="current_location">ТЕКУЩЕЕ МЕСТО</string>
+  <string name="presents_delivered">ДОСТАВЛЕНО ПОДАРКОВ</string>
+  <string name="santa_status">СТАТУС</string>
+  <string name="arriving_in">САНТА ПРИБУДЕТ ЧЕРЕЗ</string>
+  <string name="departing_in">САНТА УЕДЕТ ЧЕРЕЗ</string>
+  <string name="localtime">САНТА ПРИБЫЛ В</string>
+  <string name="population">НАСЕЛЕНИЕ</string>
+  <string name="next_destination">СЛЕДУЮЩЕЕ МЕСТО</string>
+  <string name="arriving_at">САНТА ПРИБУДЕТ В</string>
+  <string name="arrived_at">САНТА ПРИБЫЛ В</string>
+  <string name="in_transit">В пути</string>
+  <string name="follow_santa">Где Санта?</string>
+  <string name="lost_contact_with_santa">Не удается найти Санту.</string>
+  <string name="notification_nearby">Санта находится рядом с вами.</string>
+  <string name="notification_takeoff">Путешествие Санты началось!</string>
+  <string name="notification_unlock_video">Новое видео!</string>
+  <string name="notification_unlock_game">Новая игра!</string>
+  <string name="santa_arrives_in_your_area_in">САНТА ПРИБУДЕТ К ВАМ ЧЕРЕЗ</string>
+  <string name="santa_is_approximately">ДО ВАШЕГО НАСЕЛЕННОГО ПУНКТА ОСТАЛОСЬ ОКОЛО</string>
+  <string name="distance_km_away">%1$,d км (расстояние в милях: %2$s)</string>
+  <string name="distance_optional_miles">\u0020 (расстояние в милях: %,d)</string>
+  <string name="distance_mi_away">%1$,d м.</string>
+  <string name="did_you_know">ЭТО ИНТЕРЕСНО</string>
+  <string name="watch_movie">ВИДЕО</string>
+  <string name="santa_update">НОВОСТИ ОТ САНТЫ</string>
+  <string name="elapsed_time">ПРОШЛО ВРЕМЕНИ</string>
+  <string name="wikipedia">Википедия</string>
+  <string name="arrival">ПРИБЫТИЕ</string>
+  <string name="weather">ПОГОДА</string>
+  <string name="weather_format">%1$s °C (%2$s °F)</string>
+  <string name="did_you_know_attribution">Факты об окружающем мире из викторины National Geographic Bee</string>
+  <string name="photo">Фото</string>
+  <string name="photos">Фото</string>
+  <string name="street_view">ПРОСМОТР УЛИЦ</string>
+  <string name="back_to_santa_cam">Назад к Сантавизору</string>
+  <string name="update_from_santa">Новости</string>
+  <string name="trivia_from_santa">Любопытные факты</string>
+  <string name="photo_from_santa">Фото</string>
+  <string name="video_from_santa">Видео</string>
+  <string name="show_history">Показать историю</string>
+  <string name="see_best_moments">Посмотрите лучшие моменты из путешествия Санты</string>
+  <string name="return_to_map">Перейти к карте</string>
+  <string name="santa_is_now_arriving_in_x">Следующий пункт в маршруте Санты – %s</string>
+  <string name="santa_has_handed_out_x_presents">Доставлено подарков: %s</string>
+  <string name="new_update_from_santa">Свежая новость</string>
+  <string name="new_trivia_from_santa">Новый любопытный факт</string>
+  <string name="new_video_from_santa">Новое видео</string>
+  <string name="new_photo_from_santa">Новое фото</string>
+  <string name="cast_overlay_text">Теперь следить за путешествием Санты можно и на экране телевизора.\nПросто подключите устройство Chromecast и нажмите эту кнопку.</string>
+  <string name="menu_media_router_title">Режим для Google Cast</string>
+</resources>

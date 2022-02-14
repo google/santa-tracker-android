@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="media_route_casting_on">Se proiectează pe %s</string>
+  <string name="media_route_menu_title">Trimite pe...</string>
+  <string name="touch_to_cast">Atinge pentru a proiecta Pe urmele lui Moș Crăciun pe televizor</string>
+  <string name="connection_temp_lost">S-a pierdut temporar conexiunea la dispozitivul de proiecție</string>
+  <string name="connection_recovered">S-a restabilit conexiunea la dispozitivul de proiecție</string>
+  <string name="cast_game_controller">Proiectează controlerul de jocuri</string>
+  <string name="content_desc_mode_switch">comută din modul D-pad în modul trackpad</string>
+  <string name="content_desc_right_button">dreapta</string>
+  <string name="content_desc_up_button">sus</string>
+  <string name="content_desc_down_button">jos</string>
+  <string name="content_desc_enter_button">enter</string>
+  <string name="content_desc_left_button">stânga</string>
+</resources>

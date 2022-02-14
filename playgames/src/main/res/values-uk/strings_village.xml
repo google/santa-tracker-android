@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="santa_locked">Стежте за Дідом Морозом 24 грудня.</string>
+  <string name="present_quest_locked">Гра \"Знайди подарунок\" вийде 1 грудня.</string>
+  <string name="santa_snap_locked">Гра \"Фотоквест від Діда Мороза\" буде доступна незабаром.</string>
+  <string name="gumball_locked">Гра \"Жувальна гумка\" буде доступна з 1 грудня.</string>
+  <string name="memory_locked">Гра \"Пам’ять\" буде доступна з 1 грудня.</string>
+  <string name="rocket_locked">Гра \"Реактивні санчата\" буде доступна з 1 грудня.</string>
+  <string name="dancer_locked">Гра \"Олені\" буде доступна з 1 грудня.</string>
+  <string name="city_quiz_locked">Гра \"Угадай місто\" вийде 1 грудня.</string>
+  <string name="generic_game_disabled">Гра \"%1$s\" ще не доступна.</string>
+  <string name="generic_game_locked">Гра \"%1$s\" ще не доступна. Спробуйте пізніше.</string>
+  <string name="video">Відео</string>
+  <string name="video_locked">Відео можна буде переглянути %1$d грудня.</string>
+  <string name="video_disabled">Відео зараз недоступне.</string>
+  <string name="play">Грати</string>
+  <string name="watch">Дивитися</string>
+</resources>

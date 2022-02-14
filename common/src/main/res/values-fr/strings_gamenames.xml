@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">Le flipper bonbons</string>
+  <string name="memory">Memory</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Le traîneau-fusée</string>
+  <string name="dancer">La disco de Noël</string>
+  <string name="cityquiz">Le quiz des villes</string>
+  <string name="present_quest">La quête des cadeaux</string>
+  <string name="santa_snap">Selfie d\'elfe</string>
+  <string name="present_throw">Lancer de cadeaux</string>
+  <string name="jetpack">Fusée du lutin</string>
+  <string name="web_airport">L\'aéroport du pôle Nord</string>
+  <string name="web_boatload">Le lance-cadeaux</string>
+  <string name="web_clausdraws">Dessine avec le père Noël</string>
+  <string name="web_codeboogie">La danse du code</string>
+  <string name="web_codelab">L\'atelier de programmation</string>
+  <string name="web_gumball">Boules de chewing-gum en balade</string>
+  <string name="web_jamband">Le groupe des lutins</string>
+  <string name="web_penguindash">La promenade du pingouin</string>
+  <string name="web_presentbounce">Le cadeau rebondissant</string>
+  <string name="web_presentdrop">Le lâcher de cadeaux</string>
+  <string name="web_racer">La course de Rudolphe</string>
+  <string name="web_runner">La course du renne</string>
+  <string name="web_santasearch">Où est le père Noël</string>
+  <string name="web_santaselfie">Le selfie du père Noël</string>
+  <string name="web_seasonofgiving">La saison des fêtes</string>
+  <string name="web_elfski">La descente en skis de l\'elfe</string>
+  <string name="web_snowball">Tempête de boules de neige</string>
+  <string name="web_snowflake">Code un flocon de neige</string>
+  <string name="web_speedsketch">Esquisse rapide</string>
+  <string name="web_wrapbattle">Concours d\'emballage de cadeaux</string>
+  <string name="web_elfmaker">Créateur de lutin</string>
+  <string name="video_santa_is_back">La reprise du travail</string>
+  <string name="video_office_prank">La farce au bureau</string>
+  <string name="video_carpool">Le covoiturage</string>
+</resources>

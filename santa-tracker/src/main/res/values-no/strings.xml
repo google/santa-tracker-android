@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Følg julenissen</string>
+  <string name="track_santa_two_lines">Følg\njulenissen</string>
+  <string name="santa_takes_off_in">Julenissen tar av om</string>
+  <string name="santa_is_busy_preparing_for_next_year">Julenissen er travelt opptatt med forberedelsene til neste år.</string>
+  <string name="view_old_stops">Se stoppestedene i 2014</string>
+  <string name="contacting_santa">Forsøker å kontakte julenissen ...</string>
+  <string name="still_trying_to_reach_santa">Forsøker fremdeles å kontakte julenissen ...</string>
+  <string name="days">dager</string>
+  <string name="hrs">timer</string>
+  <string name="min">min.</string>
+  <string name="sec">sek</string>
+  <string name="menu_share">Del</string>
+  <string name="menu_share_friends">Del med venner</string>
+  <string name="legal_notice">Juridisk og personvern</string>
+  <string name="legal_notice_text">Juridiske merknader</string>
+  <string name="privacy_policy">Personvernregler</string>
+  <string name="terms_of_service">Vilkår for bruk</string>
+  <string name="open_source_licenses">Lisenser for åpen kildekode</string>
+  <string name="open_source_repo_santa">Julenissen på GitHub</string>
+  <string name="scene_not_available">Ikke tilgjengelig ennå</string>
+  <string name="sign_out">Logg av</string>
+  <string name="until_takeoff">Igjen til avreise</string>
+  <string name="web_scene_error">Kunne dessverre ikke laste inn scenen.</string>
+  <string name="check_back_daily">Kom tilbake hver dag for å spille nye spill.</string>
+  <string name="new_games">Nye spill</string>
+  <string name="new_card">Nytt</string>
+  <string name="tracker_opens_date">Åpner %1$s</string>
+  <string name="time">TID</string>
+  <string name="download_dialog_title">Last ned %1$s</string>
+  <string name="download_dialog_message">Spillet må lastes ned fra Play-butikken før du kan spille det. Enheten din er koblet til et nettverk, og det kan påløpe kostnader fra dette nettverket for overføring av data.\n\nVil du fortsette?</string>
+  <string name="elf_maker_write_success">Bildet er lagret i bildene dine</string>
+  <string name="elf_maker_write_fail">Det oppsto en feil da bildet skulle lagres i bildene på enheten din</string>
+</resources>

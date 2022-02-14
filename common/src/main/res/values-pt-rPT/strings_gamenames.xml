@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="gumball">Pastilha elástica</string>
+  <string name="memory">Memória</string>
+  <string name="elf_jetpack">Elf Jetpack</string>
+  <string name="rocket">Trenó-foguete</string>
+  <string name="dancer">Dançarino veloz</string>
+  <string name="cityquiz">Questionário de cidades</string>
+  <string name="present_quest">Caça aos presentes</string>
+  <string name="santa_snap">Foto com o Pai Natal</string>
+  <string name="present_throw">Lançamento de presentes</string>
+  <string name="jetpack">Elfos com propulsores a jato</string>
+  <string name="web_airport">Aeroporto do Polo Norte</string>
+  <string name="web_boatload">Fisga de presentes</string>
+  <string name="web_clausdraws">Desenhos festivos</string>
+  <string name="web_codeboogie">Baile de código</string>
+  <string name="web_codelab">Laboratório de Códigos</string>
+  <string name="web_gumball">Flipper dos rebuçados</string>
+  <string name="web_jamband">Banda dos gnomos</string>
+  <string name="web_penguindash">Corrida do pinguim</string>
+  <string name="web_presentbounce">Salto dos presentes</string>
+  <string name="web_presentdrop">Lançamento de presentes</string>
+  <string name="web_racer">Piloto Rodolfo</string>
+  <string name="web_runner">Corrida da rena</string>
+  <string name="web_santasearch">Procura do Pai Natal</string>
+  <string name="web_santaselfie">Selfie do Pai Natal</string>
+  <string name="web_seasonofgiving">Tempo de dar</string>
+  <string name="web_elfski">Elfos esquiadores</string>
+  <string name="web_snowball">Tempestade de bolas de neve</string>
+  <string name="web_snowflake">Codifique um floco de neve</string>
+  <string name="web_speedsketch">Esboços rápidos</string>
+  <string name="web_wrapbattle">Toca a embrulhar</string>
+  <string name="web_elfmaker">Criador de elfos</string>
+  <string name="video_santa_is_back">De volta ao trabalho</string>
+  <string name="video_office_prank">Praxe no escritório</string>
+  <string name="video_carpool">Partilha de carro</string>
+</resources>

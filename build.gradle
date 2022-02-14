@@ -1,0 +1,177 @@
+/*
+ * Copyright 2019. Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ext {
+    versionName = "5.3.1"
+    versionCode = 53010005
+
+    minSdkVersion = 21
+    compileSdkVersion = 28
+    targetSdkVersion = 27
+
+    tools = '28.0.3'
+
+    supportAnnotations = "androidx.annotation:annotation:1.0.1"
+    appCompat = "androidx.appcompat:appcompat:1.0.2"
+    design = "com.google.android.material:material:1.0.0"
+    mediaRouter = "androidx.mediarouter:mediarouter:1.0.0"
+    wear = "androidx.wear:wear:1.0.0"
+    cardView = "androidx.cardview:cardview:1.0.0"
+    recyclerView = "androidx.recyclerview:recyclerview:1.0.0"
+    leanback = "androidx.leanback:leanback:1.0.0"
+    percent = "androidx.percentlayout:percentlayout:1.0.0"
+    customTabs = "androidx.browser:browser:1.0.0"
+    constraintLayout = 'androidx.constraintlayout:constraintlayout:1.1.3'
+    coreKtx = 'androidx.core:core-ktx:1.0.1'
+
+    supportWearable = "com.google.android.support:wearable:2.3.0"
+    providedWear = "com.google.android.wearable:wearable:2.3.0"
+
+    archLifecycle = '2.0.0'
+    archLifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:$archLifecycle"
+    archLifecycleExtentions = "androidx.lifecycle:lifecycle-extensions:$archLifecycle"
+    archLifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:$archLifecycle"
+
+    archRoom = "2.0.0"
+    archRoomRuntime = "androidx.room:room-runtime:$archRoom"
+    archRoomCompiler = "androidx.room:room-compiler:$archRoom"
+    archRoomTesting = "androidx.room:room-testing:$archRoom"
+
+    // https://developers.google.com/android/guides/releases
+    playServicesAnalytics = 'com.google.android.gms:play-services-analytics:16.0.4'
+    playServicesBase = 'com.google.android.gms:play-services-base:16.0.1'
+    playServicesCastFramework = 'com.google.android.gms:play-services-cast-framework:16.0.3'
+    playServicesGames = 'com.google.android.gms:play-services-games:16.0.0'
+    playServicesMaps = 'com.google.android.gms:play-services-maps:16.0.0'
+    playServicesNearby = 'com.google.android.gms:play-services-nearby:16.0.0'
+    playServicesWearable = 'com.google.android.gms:play-services-wearable:16.0.1'
+    playServicesPlaces = 'com.google.android.gms:play-services-places:16.0.0'
+    playServicesLocation = 'com.google.android.gms:play-services-location:16.0.0'
+    playServicesOssLicenses = 'com.google.android.gms:play-services-oss-licenses:16.0.1'
+
+    // https://firebase.google.com/support/release-notes/android
+    firebaseCore = 'com.google.firebase:firebase-core:16.0.4'
+    firebaseAppindexing = 'com.google.firebase:firebase-appindexing:16.0.1'
+    firebaseAppinvite = 'com.google.firebase:firebase-invites:16.0.4'
+    firebaseConfig = 'com.google.firebase:firebase-config:16.0.1'
+    firebaseCrash = 'com.google.firebase:firebase-crash:16.2.1'
+    firebaseMessaging = 'com.google.firebase:firebase-messaging:17.3.3'
+    firebaseStorage = 'com.google.firebase:firebase-storage:16.0.1'
+
+    dagger = '2.17'
+    daggerCore = "com.google.dagger:dagger:$dagger"
+    daggerAndroid = "com.google.dagger:dagger-android:$dagger"
+    daggerAndroidSupport = "com.google.dagger:dagger-android-support:$dagger"
+    daggerAndroidProcessor = "com.google.dagger:dagger-android-processor:$dagger"
+    daggerCompiler = "com.google.dagger:dagger-compiler:$dagger"
+
+    gson = 'com.google.code.gson:gson:2.8.5'
+
+    okhttp = 'com.squareup.okhttp3:okhttp:3.12.0'
+
+    androidMapsUtils = 'com.google.maps.android:android-maps-utils:0.5'
+
+    kotlinRuntime = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin"
+
+    leakCanary = 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    leakCanaryNoOp = 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+
+    junit = 'junit:junit:4.12'
+
+    espresso = '3.1.1'
+    espressoCore = "androidx.test.espresso:espresso-core:$espresso"
+    espressoContrib = "androidx.test.espresso:espresso-contrib:$espresso"
+    espressoIntents = "androidx.test.espresso:espresso-intents:$espresso"
+    espressoAccessibility = "androidx.test.espresso:espresso-accessibility:$espresso"
+    esspressoWeb = "androidx.test.espresso:espresso-web:$espresso"
+    espressoConcurrent = "androidx.test.espresso.idling:idling-concurrent:$espresso"
+    espressoIdlingResource = "androidx.test.espresso:espresso-idling-resource:$espresso"
+
+    test = '1.1.1'
+    testingSupportRunner = "androidx.test:runner:$test"
+    testingSupportRules = "androidx.test:rules:$test"
+
+    seismic = 'com.squareup:seismic:1.0.2'
+
+    glide = 'com.github.bumptech.glide:glide:4.8.0'
+
+    truetime = 'com.github.instacart.truetime-android:library:3.4'
+
+    flexbox = 'com.google.android:flexbox:1.0.0'
+
+    easypermissions = 'pub.devrel:easypermissions:1.0.1'
+
+    mockitoAndroid = 'org.mockito:mockito-android:2.22.0'
+    mockitoCore = 'org.mockito:mockito-core:2.22.0'
+
+    robolectric = 'org.robolectric:robolectric:3.8'
+
+    playCore = 'com.google.android.play:core:1.3.6'
+
+    mergeAdapter = 'me.mvdw.recyclerviewmergeadapter:recyclerviewmergeadapter:2.1.0'
+}
+
+buildscript {
+    ext.kotlin = '1.3.11'
+    ext.spotless = '3.15.0'
+    ext.ktlint = '0.28.0'
+    ext.googlejavaformat = '1.6'
+
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.0'
+        classpath 'com.google.gms:google-services:4.2.0'
+        classpath 'com.google.android.gms:oss-licenses-plugin:0.9.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin"
+        classpath "com.diffplug.spotless:spotless-plugin-gradle:$spotless"
+    }
+}
+
+subprojects {
+    apply plugin: "com.diffplug.gradle.spotless"
+    spotless {
+        java {
+            target '**/*.java'
+            googleJavaFormat(rootProject.ext.googlejavaformat).aosp()
+            // This is a workaround to suppress the following:
+            // You have a misbehaving rule which can't make up its mind.
+            // This means that spotlessCheck will fail even after spotlessApply has run.
+            //
+            // This is a bug in a formatting rule, not Spotless itself, but Spotless can
+            // work around this bug and generate helpful bug reports for the broken rule
+            // if you add 'paddedCell()' to your build.gradle as such:
+            // See https://github.com/diffplug/spotless/blob/master/PADDEDCELL.md for more details
+            paddedCell()
+        }
+        kotlin {
+            target '**/*.kt'
+            ktlint(rootProject.ext.ktlint)
+        }
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" } // Needed for truetime
+    }
+}
+

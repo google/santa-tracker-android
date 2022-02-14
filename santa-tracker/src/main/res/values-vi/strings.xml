@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Theo chân ông già Noel</string>
+  <string name="track_santa_two_lines">Theo chân\nông già Noel</string>
+  <string name="santa_takes_off_in">Ông già Noel sẽ cất cánh lúc</string>
+  <string name="santa_is_busy_preparing_for_next_year">Ông già Noel đang bận rộn chuẩn bị cho năm tiếp theo.</string>
+  <string name="view_old_stops">Xem các điểm dừng chân của năm 2014</string>
+  <string name="contacting_santa">Cố gắng tiếp cận ông già Noel</string>
+  <string name="still_trying_to_reach_santa">Vẫn đang cố gắng tiếp cận ông già Noel</string>
+  <string name="days">Ngày</string>
+  <string name="hrs">Giờ</string>
+  <string name="min">Phút</string>
+  <string name="sec">Giây</string>
+  <string name="menu_share">Chia sẻ</string>
+  <string name="menu_share_friends">Chia sẻ với bạn bè</string>
+  <string name="legal_notice">Pháp lý &amp; bảo mật</string>
+  <string name="legal_notice_text">Thông báo pháp lý</string>
+  <string name="privacy_policy">Chính sách bảo mật</string>
+  <string name="terms_of_service">Điều khoản dịch vụ</string>
+  <string name="open_source_licenses">Giấy phép mã nguồn mở</string>
+  <string name="open_source_repo_santa">Santa trên GitHub</string>
+  <string name="scene_not_available">Vẫn chưa khả dụng</string>
+  <string name="sign_out">Đăng xuất</string>
+  <string name="until_takeoff">Cho đến khi khởi hành</string>
+  <string name="web_scene_error">Rất tiếc, không thể tải cảnh.</string>
+  <string name="check_back_daily">Hãy quay lại hàng ngày để xem trò chơi mới!</string>
+  <string name="new_games">Trò chơi mới</string>
+  <string name="new_card">Mới</string>
+  <string name="tracker_opens_date">Mở %1$s</string>
+  <string name="time">THỜI GIAN</string>
+  <string name="download_dialog_title">Tải %1$s</string>
+  <string name="download_dialog_message">Chúng tôi cần tải trò chơi xuống từ Cửa hàng Play trước khi bạn có thể chơi. Thiết bị này hiện đang kết nối với mạng Internet có đồng hồ đo lưu lượng sử dụng, có thể tính phí chuyển dữ liệu.\n\nBạn có muốn tiếp tục không?</string>
+  <string name="elf_maker_write_success">Đã lưu hình ảnh</string>
+  <string name="elf_maker_write_fail">Đã xảy ra lỗi khi lưu hình ảnh vào thiết bị của bạn</string>
+</resources>

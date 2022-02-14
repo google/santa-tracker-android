@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2019. Google LLC
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+  <string name="track_santa">Volg Kersvader se spoor</string>
+  <string name="track_santa_two_lines">Volg\nKersvader se spoor</string>
+  <string name="santa_takes_off_in">Kersvader vertrek oor</string>
+  <string name="santa_is_busy_preparing_for_next_year">Kersvader maak nou vir volgende jaar gereed.</string>
+  <string name="view_old_stops">Bekyk 2014 se stilhouplekke</string>
+  <string name="contacting_santa">Probeer Kersvader tans bereik</string>
+  <string name="still_trying_to_reach_santa">Probeer steeds om Kersvader te bereik</string>
+  <string name="days">Dae</string>
+  <string name="hrs">Uur</string>
+  <string name="min">Min.</string>
+  <string name="sec">Sek.</string>
+  <string name="menu_share">Deel</string>
+  <string name="menu_share_friends">Deel met vriende</string>
+  <string name="legal_notice">Wetlik en privaatheid</string>
+  <string name="legal_notice_text">Regskennisgewing</string>
+  <string name="privacy_policy">Privaatheidsbeleid</string>
+  <string name="terms_of_service">Diensbepalings</string>
+  <string name="open_source_licenses">Oopbronlisensies</string>
+  <string name="open_source_repo_santa">Santa op GitHub</string>
+  <string name="scene_not_available">Nog nie beskikbaar nie</string>
+  <string name="sign_out">Meld af</string>
+  <string name="until_takeoff">Tot vertrek</string>
+  <string name="web_scene_error">Jammer, kon nie die toneel laai nie.</string>
+  <string name="check_back_daily">Kom kyk daagliks vir nuwe speletjies!</string>
+  <string name="new_games">Nuwe speletjies</string>
+  <string name="new_card">Nuut</string>
+  <string name="tracker_opens_date">Maak %1$s oop</string>
+  <string name="time">TYD</string>
+  <string name="download_dialog_title">Laai %1$s af</string>
+  <string name="download_dialog_message">Ons moet die speletjie by die Play Winkel aflaai voordat jy kan speel. Dié toestel is tans aan \'n beperkte netwerk verbind wat \'n koste teen jou rekening kan hef vir enige data wat gebruik word.\n\nWil jy voortgaan?</string>
+  <string name="elf_maker_write_success">Prent is na jou foto\'s gestoor</string>
+  <string name="elf_maker_write_fail">Ons kon nie die prent na die toestelfoto\'s stoor nie</string>
+</resources>
