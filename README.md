@@ -43,9 +43,8 @@ Note: You'll need Android SDK version 28. If you're unsure about this, use
 Android Studio and tick the appropriate boxes in the SDK Manager.
 
 ## License
-
 All image and audio files (including *.png, *.jpg, *.svg, *.mp3, *.wav, *.ogg, *.m4a, *.webp) are
-licensed under the CC-BY-NC license. All other files are licensed under the Apache 2 license.
+licensed under the CC-BY license. All other files are licensed under the Apache 2 license.
 See the LICENSE file for details.
 
     Copyright 2019 Google LLC
